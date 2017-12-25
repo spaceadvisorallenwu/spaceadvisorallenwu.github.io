@@ -18,7 +18,7 @@
 				<li><a href="">成為場地主</a></li>
 			</ul>
 		</nav>
-		<a href="#menu" data-ajax="false" class="menu-mobile"></a>
+		<a href="#menu" data-ajax="false" class="menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		<div class="search">
 			<i id="search" class="fa fa-search" aria-hidden="true"></i>
 			<div class="search-box"><input type="text" name="textfield" id="textfield" placeholder="請輸入關鍵字" /><a href="">搜尋</a></div>

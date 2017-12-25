@@ -13,16 +13,6 @@ $(document).ready(function() {
         pauseOnHover: false,
     });
     /*用縮圖*/
-        // $(".pic").imgLiquid();
-        /*預定切換*/
-	    $('.example').on('click',function(){
-	    	
-	    	if( ! $(this).hasClass('active')){
-	    		$(this).addClass('active');
-	    	}else{
-	    		$(this).removeClass('active');
-	    	}
-	    });
 	    /*更多條件開關*/
 
 	    $('.search.mapBox .conditions').on('click',function(event){
