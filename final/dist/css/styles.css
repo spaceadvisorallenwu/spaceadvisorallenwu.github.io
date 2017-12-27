@@ -1,3 +1,6 @@
+body {
+    color: #4e5059;
+}
 .btn {
     letter-spacing: 0 !important;
     border-radius: 5px !important;
@@ -191,17 +194,6 @@ main {
     border-radius: 5px;
     max-width: unset;
 }
-/*
-.custodyBtn a,
-.ab_item4 .custodyBtn a {
-    font-size: 17px;
-    padding: 11px;
-    width: 150px;
-    letter-spacing: 0;
-    border-radius: 5px;
-    text-decoration: none;
-}
-*/
 .qaLink a {
 	font-size: 15px;
 }
@@ -1468,6 +1460,7 @@ footer .bottom li a img:hover {
 }
 /** END Search **/
 
+
 /** BEGIN mapSearch **/
 .search.mapBox .search-box {
     padding: 20px 10%;
@@ -1547,6 +1540,7 @@ footer .bottom li a img:hover {
 }
 /** END mapSearch **/
 
+
 /** BEGIN Space **/
 .meeting .banner._boxStyle {
     width: 80%;
@@ -1554,7 +1548,6 @@ footer .bottom li a img:hover {
     overflow: hidden;
 }
 .meeting .banner .banner-box {
-    /*border-radius: 5px;*/
     overflow: hidden;
 }
 .meeting .banner .banner-nav {
@@ -1599,7 +1592,6 @@ footer .bottom li a img:hover {
     position: absolute;
 }
 .meeting .anchor .nav {
-    /*background: #fff;*/
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #ddd;
     padding: 0;
@@ -1992,6 +1984,365 @@ footer .bottom li a img:hover {
     text-align: center;
 }
 /** END Space **/
+
+
+/** BEGIN orderStep **/
+.bookList._notOnline ._rfp,
+.bookList:not(._notOnline) ._online {
+    display: none !important;
+}
+.orderstep._boxStyle {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 1px;
+    overflow: hidden;
+}
+.orderstep ul {
+    display: flex;
+}
+.orderstep ul li {
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    font-size: 21px;
+    line-height: normal;
+    color: #4f6da2;
+    opacity: .75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderstep ul li.active {
+    background: #4f6ea2;
+    color: #fff;
+    opacity: 1;
+}
+.orderstep ul li b {
+    margin-right: 5px;
+}
+.orderstep ul li:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.orderstep ul li:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.stepPhoto._boxStyle {
+    padding: 0;
+    height: 80px;
+    width: 50%;
+    margin-top: 40px;
+}
+.stepPhoto._boxStyle img {
+    height: 100%;
+    padding: 5px;
+}
+.buyContent._boxStyle {
+    padding-top: 20px;
+}
+.buyContent .title {
+    margin: 20px 0;
+}
+.buyContent .title h2 {
+    letter-spacing: 0;
+    background: #fff;
+    padding: 9px;
+    font-size: 30px;
+    color: #4e5059;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+.buyContent .title h2 i {
+    margin-right: 9px;
+}
+.buyContent .title .titTxt {
+    width: 100%;
+    line-height: normal;
+    font-size: 13px;
+    text-align: left;
+    padding: 0 9px;
+}
+.buyContent .title .titTxt i {
+    margin-right: 3px;
+}
+.buyContent .bookList {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.buyContent .bookList .bookTitle {
+    background: #fff;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.buyContent .bookList .bookTitle h2 {
+    font-size: 21px;
+}
+.buyContent .bookList .bookTitle ._bookStats {
+    margin-left: 11px;
+}
+.bookTitle .fa-flash:before,
+.bookTitle .fa-bolt:before {
+    font-size: 15px;
+}
+.bookTitle .status {
+    font-size: 12px;
+    padding: 0;
+    border: 0;
+}
+.bookTitle .status span {
+    padding: 1px 5px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+    margin-left: -2px;
+    background: #fff;
+    border-color: #4e5059;
+    color: #4e5059;
+}
+.bookTitle .status ._online {
+    background: #ffdf00;
+    border: 0;
+}
+.bookList .detailTable {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.detailTable-heading .detailTable-cell {
+    font-size: 13px;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f3f3f3;
+    color: gray;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
+    background: #f3f3f3;
+    font-size: 13px;
+    letter-spacing: 0;
+    border-bottom-color: #f3f3f3;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div {
+    background: #fff;
+    border: 1px solid #d75f50;
+    color: #d75f50;
+    display: inline-block;
+    line-height: normal;
+    padding: 1px 9px;
+    border-radius: 5px;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div._expired {
+    background: #fff;
+    border: 1px solid #435059;
+    color: #435059;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal span {
+    margin-left: 3px;
+}
+.sitePhoto-pic .sitePo {
+    background: #fff;
+    padding: 5px;
+}
+.sitePhoto-pic .sitePo img {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+}
+.detailTable-row.detailTable-content .detailTable-cell {
+    text-align: center;
+}
+.detailTable-left,
+.detailTable-row.detailTable-content .detailTable-cell,
+.detailTable-row.detailTable-content .detailTable-cell:last-child,
+.detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+    border-width: 2px;
+    border-color: #f3f3f3;
+}
+.detailTable-row.detailTable-content .detailTable-cell {
+    padding: 9px 20px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a {
+    width: 70px;
+    display: flex !important;
+    font-size: 12px;
+    align-items: center;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 3px 9px;
+    margin: 5px 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a:hover {
+    background: #fff;
+    color: #4e5059 !important;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a span {
+    margin-left: 3px;
+}
+.buyBox .detailTable-row.detailTable-content .detailTable-cell:last-child {
+    padding-right: 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
+    padding-left: 20px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .tableTxt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .sarebate {
+    background: #d76050;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 9px;
+    font-size: 12px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span {
+    margin-top: 3px;
+    color: #4e5059;
+}
+.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) .sarebate,
+.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) ._price .original {
+    display: none;
+}
+.detailTable-cell .tableTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.detailTable-cell .tableTxt .currency {
+    margin-right: 9px;
+}
+.detailTable-cell .buyIcon a span {
+    text-indent: unset;
+    display: block;
+}
+.detailTable-cell .buyIcon a span i {
+    font-size: 12px;
+    margin-right: 3px;
+}
+.detailTable-cell .buyIcon a.composeBtn:before,
+.detailTable-cell .buyIcon a.detailBtn:before {
+    content: unset;
+}
+.detailTable-left .detailTable-cell.recipBox .tableTxt,
+.detailTable-cell .tableTxt span,
+.detailTable-cell .tableTxt span,
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+    font-size: 13px;
+}
+.bookList .demand {
+    width: 100%;
+    margin: 9px 0;
+    background: #fff;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 9px 9px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+.bookList .demand h4,
+.bookList .demand .deTxt {
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+}
+.bookList .demand h4 {
+    font-weight: bold;
+}
+.bookList .demand .deTxt {
+    color: gray;
+}
+.bookList:not(._haveEquipment) .demand {
+    display: none;
+}
+.buyprice {
+    width: 100%;
+    margin: 9px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.stepBox .price {
+    font-size: 15px;
+    width: 25%;
+    background: #f3f3f3;
+    border-radius: 5px;
+    padding: 15px 9px;
+}
+.stepBox .price li,
+.stepBox .price .total {
+    padding: 0;
+    margin-bottom: 9px;
+    float: unset;
+    display: flex;
+    justify-content: flex-end;
+    line-height: normal;
+}
+.stepBox .price .total {
+    background: transparent;
+    border-top: 1px solid #ddd;
+    padding-top: 9px;
+    margin-bottom: 0;
+}
+.stepBox .price .total b,
+.stepBox .price .total span,
+.stepBox .price .total span:nth-child(3) {
+    font-size: 15px;
+}
+.stepBox .price li .valuaBox {
+    float: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.stepBox .price b {
+    width: 45%;
+}
+.stepBox .price li .valuaBox span {
+    width: 25%;
+}
+.stepBox .price li .valuaBox span:last-child {
+    width: 30%;
+}
+.buyBox .custodyBtn {
+    margin: 0;
+    width: 100%;
+}
+.custodyBtn a {
+    background: transparent;
+    padding: 0;
+    width: 25%;
+}
+.custodyBtn a span {
+    width: 100%;
+}
+.bookList.expired .detailTable-left,
+.bookList.expired .detailTable-cell,
+.bookList.expired .detailTable-cell span,
+.bookList.expired .detailTable-row .detailTable-cell:last-child {
+    opacity: .7;
+}
+.bookList.expired .detailTable-left .detailTable-row.detailTable-heading .detailTable-cell:nth-child(2),
+.bookList.expired .detailTable-row.detailTable-heading .detailTable-cell:last-child {
+    font-size: 13px;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f3f3f3 !important;
+    color: gray;
+}
+.bookList.expired .detailTable-inner,
+.bookList.expired .detailTable-left .detailTable-cell.recipBox {
+    background: #fff !important;
+}
+.bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+    border-left: 2px solid #f3f3f3;
+}
+/** END orderStep **/
+
 
 
 @media (min-width: 1200px){}
@@ -2895,5 +3246,154 @@ footer .bottom li a img:hover {
         border-radius: 5px;
     }
     /** END Space **/
+
+
+    /** BEGIN orderStep **/
+    .orderstep ul li {
+        font-size: 15px;
+        padding: 9px 11px;
+        border-bottom: 0;
+        text-align: center;
+    }
+    .orderstep li:last-child {
+        border-bottom: 0;
+    }
+    .orderstep span:nth-child(3) {
+        margin-left: 0;
+    }
+    .orderstep ul li span {
+        text-align: left;
+    }
+    .buyContent .title {
+        margin-top: 0;
+    }
+    .bookList .detailTable {
+        border: 0;
+        border-radius: 0;
+    }
+    .buyContent .bookList {
+        border: 1px solid #ddd;
+    }
+    .buyContent .bookList .bookTitle {
+        padding: 9px;
+    }
+    .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .buyBox .detailTable-left .detailTable-cell.recipBox h4 {
+        border-top: 1px solid #ddd;
+        letter-spacing: 0;
+        font-size: 17px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .detailTable-left .detailTable-cell.recipBox .tableTxt,
+    .detailTable-cell .tableTxt span,
+    .detailTable-cell .tableTxt span,
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+        width: 100%;
+        padding-left: 40px;
+        font-size: 15px;
+    }
+    .detailTable-left .detailTable-cell.recipBox .tableTxt {
+        margin: 0;
+        padding: 9px !important;
+        border-bottom-width: 1px;
+    }
+    .buyBox .detailTable-row.detailTable-content {
+        padding: 0;
+        width: 90% !important;
+        margin: 20px auto;
+        background: #f3f3f3;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell {
+        display: flex;
+        align-items: center;
+        padding: 9px 0;
+        width: 100% !important;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .detailTable-row.detailTable-content:last-child .detailTable-cell {
+        padding: 9px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .detailTable-cell h4 {
+        text-align: right;
+        width: 35%;
+        margin-right: 9px;
+        font-size: 15px;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell .tableTxt {
+        text-align: left;
+        border-left: 1px solid #ddd;
+        width: 65%;
+    }
+    .detailTable .original,
+    .detailTable .special {
+        display: flex;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
+        padding: 9px 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span,
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .original span {
+        padding: 0;
+        margin-top: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell .tableTxt.buyIcon {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a {
+        margin-right: 20px;
+        width: 30%;
+        padding: 9px;
+        text-align: center;
+        background: #fff;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a:last-child {
+        margin-right: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
+        padding-left: 0;
+        font-size: 13px;
+    }
+    .stepBox .price {
+        width: 100%;
+        border-radius: 0;
+    }
+    .custodyBtn a {
+        width: 100%;
+        padding: 9px;
+    }
+    .bookList .demand {
+        padding: 9px !important;
+        margin: 0;
+    }
+    .buyprice {
+        margin: 0;
+    }
+    .stepBox .price {
+        padding: 9px;
+    }
+    .bookList.expired .detailTable {
+        border: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+        padding: 0;
+        width: auto;
+    }
+    .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+        border: 0;
+    }
+    /** END orderStep **/
 
 }
