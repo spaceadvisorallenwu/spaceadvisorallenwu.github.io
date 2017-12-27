@@ -195,10 +195,10 @@ $(function(){
 
 //場地列表 i標籤點擊變色
 $(function(){
-	$('i.heart').click(function(){
+	$('i.heart, .meeting .day-plan ._others .heart').click(function(){
 		$(this).toggleClass('this');
 	});
-	$('i.add').click(function(){
+	$('i.add, .meeting .day-plan ._others .add').click(function(){
 		$(this).toggleClass('this');
 	});
 });
@@ -206,7 +206,7 @@ $(function(){
 //meeting 點選打開
 $(function(){
 	$('.price-plan > .content > .content-720 > .box > ul > li > div > p.program > i').click(function(){
-		$(this).parent().parent().siblings().slideToggle();
+		$(this).parent().parent().siblings().toggle();
 	});
 	$('.box > a.more').click(function(){
 		$(this).siblings('.add').css("height", "auto");
@@ -269,7 +269,7 @@ $(function(){
 	$(".mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
 	$(".mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
 
-	$('.mobile-plan > a.first').click(function() {
+	$('.mobile-plan a.first').click(function() {
 		$(this).toggleClass('this');
 		if($(this).hasClass('this')){
 			$(this).find('i').html('確定方案');
@@ -278,10 +278,10 @@ $(function(){
 			$(this).find('i').html('選擇方案');
 			$('body').css({'height':'auto'});
 		}
-		$('.mobile-plan > .plan-box').slideToggle();
+		$('.mobile-plan > .plan-box').toggle();
 	});
 	$('.mobile-plan > .plan-box > .scroll > ul > li > div > i').click(function() {
-		$(this).parent().siblings('.text').slideToggle();
+		$(this).parent().siblings('.text').toggle();
 	});
     $(window).on('resize', function() {
 		var windowHeight = $(window).height();
