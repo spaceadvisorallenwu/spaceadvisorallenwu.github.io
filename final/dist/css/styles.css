@@ -1,3 +1,4 @@
+@charset 'UTF-8';
 body {
     color: #4e5059;
 }
@@ -539,7 +540,7 @@ main {
 }
 .app_stepBox h4 {
 	font-size: 15px;
-    line-height: 24px;
+    line-height: normal;
     width: 145px;
     margin-right: 20px;
     text-align: justify;
@@ -558,11 +559,10 @@ main {
 .app_stepBox textarea {
 	color: #4e5059;
 	font-size: 15px;
-	border-width: 1px;
-    border-color: #999;
+    border: 1px solid #ddd;
 }
 .applicationBox main h2 {
-	font-size: 20px;
+	font-size: 21px;
 }
 .applicationBox main h2:before {
 	/*content: '';*/
@@ -1986,9 +1986,12 @@ footer .bottom li a img:hover {
 /** END Space **/
 
 
-/** BEGIN orderStep **/
+/** BEGIN order_cart **/
 .bookList._notOnline ._rfp,
-.bookList:not(._notOnline) ._online {
+.bookList:not(._notOnline) ._online,
+.bookList.expired ._rfp,
+.bookList.expired ._online,
+.bookList:not(.expired) ._expired {
     display: none !important;
 }
 .orderstep._boxStyle {
@@ -2030,9 +2033,11 @@ footer .bottom li a img:hover {
     height: 80px;
     width: 50%;
     margin-top: 40px;
+    overflow: hidden;
 }
 .stepPhoto._boxStyle img {
-    height: 100%;
+    width: 100%;
+    height: auto;
     padding: 5px;
 }
 .buyContent._boxStyle {
@@ -2063,22 +2068,20 @@ footer .bottom li a img:hover {
 .buyContent .title .titTxt i {
     margin-right: 3px;
 }
-.buyContent .bookList {
-    border-radius: 5px;
-    overflow: hidden;
+.bookList {
     margin-bottom: 20px;
 }
-.buyContent .bookList .bookTitle {
+.bookList .bookTitle {
     background: #fff;
     padding: 5px 9px;
     display: flex;
     align-items: center;
     margin: 0;
 }
-.buyContent .bookList .bookTitle h2 {
+.bookList .bookTitle h2 {
     font-size: 21px;
 }
-.buyContent .bookList .bookTitle ._bookStats {
+.bookList .bookTitle ._bookStats {
     margin-left: 11px;
 }
 .bookTitle .fa-flash:before,
@@ -2161,9 +2164,10 @@ footer .bottom li a img:hover {
     padding: 9px 20px;
 }
 .detailTable-row.detailTable-content .detailTable-cell:last-child a {
-    width: 70px;
+    width: 80px;
     display: flex !important;
     font-size: 12px;
+    justify-content: center;
     align-items: center;
     background: #f3f3f3;
     border: 1px solid #ddd;
@@ -2177,8 +2181,9 @@ footer .bottom li a img:hover {
 }
 .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
     margin-left: 3px;
+    color: #4e5059;
 }
-.buyBox .detailTable-row.detailTable-content .detailTable-cell:last-child {
+.detailTable-row.detailTable-content .detailTable-cell:last-child {
     padding-right: 0;
 }
 .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
@@ -2212,6 +2217,10 @@ footer .bottom li a img:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    font-size: 15px;
+}
+.detailTable-cell .tableTxt.siteName {
     padding: 0;
 }
 .detailTable-cell .tableTxt .currency {
@@ -2313,12 +2322,12 @@ footer .bottom li a img:hover {
     margin: 0;
     width: 100%;
 }
-.custodyBtn a {
+.bookList .custodyBtn a {
     background: transparent;
     padding: 0;
     width: 25%;
 }
-.custodyBtn a span {
+.bookList .custodyBtn a span {
     width: 100%;
 }
 .bookList.expired .detailTable-left,
@@ -2341,9 +2350,445 @@ footer .bottom li a img:hover {
 .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
     border-left: 2px solid #f3f3f3;
 }
-/** END orderStep **/
+.bookList.expired .buyprice,
+.bookList.expired .custodyBtn {
+    display: none;
+}
+.buyBox.mm-page .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: table-cell;
+}
+/** END order_cart **/
 
+/** BEGIN order_complete **/
+.stepContainer._boxStyle {
+    margin-top: 20px;
+}
+.stepContainer .stepConTxt {
+    background-image: unset;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.stepContainer .stepConTxt > div {
+    width: 100%;
+}
+.stepContainer .stepConTxt i {
+    font-size: 50px;
+    color: #4baf4f;
+    margin-right: 9px;
+}
+.stepContainer .stepConTxt h2 {
+    font-size: 21px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+.stepContainer .stepConTxt .number {
+    font-size: 17px;
+    display: inline-block;
+    color: #d76050;
+    margin-top: 9px;
+}
+.stepContainer .stepConTxt .number span {
+    font-weight: bold;
+    border-bottom: 1px solid #d76050;
+}
+.paymentInformation_card h3,
+.paymentInformation_atm h3 {
+    font-size: 15px;
+    background: #ddd;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 9px;
+    line-height: normal;
+}
+.paymentInformation_card,
+.paymentInformation_atm {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+}
+.paymentInformation_card ul,
+.paymentInformation_atm ul {
+    margin: 20px 0;
+}
+.paymentInformation_card li,
+.paymentInformation_atm li {
+    display: flex;
+    align-items: center;
+    color: #4e5059;
+}
+.paymentInformation_card h4,
+.paymentInformation_atm h4 {
+    margin-right: 0;
+    border-right: 1px solid #ddd;
+    padding: 3px 0;
+    width: 15%;
+    max-width: 150px;
+    line-height: normal;
+}
+.paymentInformation_card p,
+.paymentInformation_atm p {
+    width: 85%;
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: normal;
+}
+.paymentInformation_card .wutuv,
+.paymentInformation_atm .wutuv {
+    line-height: normal;
+    color: gray;
+    font-size: 13px;
+}
+.paymentInformation_card .cutoff b,
+.paymentInformation_atm .cutoff b {
+    color: #d76050;
+    font-size: 15px;
+    margin-left: 9px;
+    text-decoration: underline;
+}
+.detailTable-left .detailTable-inner .detailTable-row.detailTable-heading {
+    background: #f3f3f3;
+}
+.detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn a {
+    letter-spacing: 0;
+    padding: 0;
+    background: unset;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn a:first-child {
+    margin-right: 9px;
+}
+/** END order_complete **/
 
+/** BEGIN order_form **/
+.stepBox.fill_box.mm-page .writeContent .writeInput li .col {
+    font-size: 15px;
+    margin-top: 25px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2 {
+    font-size: 21px;
+    letter-spacing: 0;
+    color: #4e5059;
+    border-bottom-color: #ddd;
+    display: flex;
+    align-items: center;
+    padding: 5px 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2:before {
+    content: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2 i {
+    margin-right: 9px;
+    font-size: 17px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3,
+.stepBox.fill_box.mm-page .writeContent .writeInformation4,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 {
+    margin-bottom: 40px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput li {
+    margin-right: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput li:last-child {
+    margin-right: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li h4 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput small {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #4e5059;
+}
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=checkbox]+label:before,
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=checkbox]+label:after {
+    margin-right: 0;
+    top: 1px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput .info {
+    margin-top: 3px;
+    font-size: 13px;
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput .info p {
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess {
+    margin: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label:before {
+    top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label span {
+    line-height: normal;
+    margin-left: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent input,
+.stepBox.fill_box.mm-page .writeContent select,
+.stepBox.fill_box.mm-page .writeContent textarea,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li input,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li select {
+    color: #4e5059;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    height: 40px;
+    padding: 9px;
+    top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput {
+    flex-direction: column;
+    border-radius: 5px;
+    background: #f3f3f3;
+    padding: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    margin-bottom: 9px;
+    padding: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li h4 {
+    margin: 0 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 .amount_input, .writeInput.part3 .amount_select {
+    border: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li h4,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_input,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_select,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+    display: flex;
+    align-items: center;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li i {
+    top: unset;
+    padding: 0 5px;
+    margin-right: 3px;
+    height: 80%;
+    align-items: center;
+    display: flex;
+    background: #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+    background: #d76050;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 13px;
+    border: 1px solid #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .increase:after {
+    content: unset;
+    background-image: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .increase {
+    font-size: 15px;
+    padding: 0;
+    font-weight: normal;
+    background: #4f6ea2;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: 1px solid #4f6ea2;
+}
+.stepBox.fill_box.mm-page .writeContent .increase i {
+    margin-left: 5px;
+    color: #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .increase:hover,
+.stepBox.fill_box.mm-page .writeContent .increase:hover i {
+    background: #fff;
+    color: #4f6ea2;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li {
+    margin-bottom: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess .col_content,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess .col_content {
+    margin-left: 9px;
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess .col_content > div,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess .col_content > div {
+    display: flex;
+    align-content: center;
+    padding: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content h4,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content h4 {
+    line-height: normal;
+    font-size: 15px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content img,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content img {
+    top: 0;
+    margin-left: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content p,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content p {
+    line-height: normal;
+    margin-top: 3px;
+    font-size: 13px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    padding: 3px 9px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess input[type=checkbox]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess input[type=checkbox]+label:after {
+    top: 6px;
+    left: 3px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment {
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 9px;
+    background: #fff;
+    padding: 1px;
+    overflow: hidden;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
+    border-right: 1px solid #ddd;
+    background: #f3f3f3;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 h2 {
+    background-image: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput {
+    flex-direction: column;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .assess input[type=checkbox]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .assess input[type=checkbox]+label:after {
+    top: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField {
+    border-radius: 5px;
+    font-size: 15px;
+    width: 95%;
+    left: 33px;
+    margin: 5px 0 0 0;
+    padding: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col {
+    display: flex;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col b {
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col label input {
+    display: block;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
+    top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
+    top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess {
+    flex-direction: column;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
+    display: flex;
+    align-items: center;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
+    width: 38%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn a {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn a span {
+    margin: 0;
+    width: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn > span {
+    font-size: 13px;
+    line-height: normal;
+    width: unset;
+    margin-left: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn > span a {
+    font-size: 13px;
+    padding: 0 3px;
+}
+/** END order_form **/
 
 @media (min-width: 1200px){}
 
@@ -3248,7 +3693,7 @@ footer .bottom li a img:hover {
     /** END Space **/
 
 
-    /** BEGIN orderStep **/
+    /** BEGIN order_cart **/
     .orderstep ul li {
         font-size: 15px;
         padding: 9px 11px;
@@ -3267,14 +3712,18 @@ footer .bottom li a img:hover {
     .buyContent .title {
         margin-top: 0;
     }
+    .bookList {
+        border-radius: 5px;
+        overflow: hidden;
+    }
     .bookList .detailTable {
         border: 0;
         border-radius: 0;
     }
-    .buyContent .bookList {
+    .bookList {
         border: 1px solid #ddd;
     }
-    .buyContent .bookList .bookTitle {
+    .bookList .bookTitle {
         padding: 9px;
     }
     .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
@@ -3302,7 +3751,7 @@ footer .bottom li a img:hover {
         padding: 9px !important;
         border-bottom-width: 1px;
     }
-    .buyBox .detailTable-row.detailTable-content {
+    .detailTable-row.detailTable-content {
         padding: 0;
         width: 90% !important;
         margin: 20px auto;
@@ -3370,7 +3819,7 @@ footer .bottom li a img:hover {
         width: 100%;
         border-radius: 0;
     }
-    .custodyBtn a {
+    .bookList .custodyBtn a {
         width: 100%;
         padding: 9px;
     }
@@ -3394,6 +3843,64 @@ footer .bottom li a img:hover {
     .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
         border: 0;
     }
-    /** END orderStep **/
+    /** END order_cart **/
 
+    /** BEGIN order_complete **/
+    .stepContainer._boxStyle {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .stepContainer .stepConTxt {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .stepContainer .stepConTxt i {
+        font-size: 80px;
+        margin-right: 0;
+        margin-bottom: 9px;
+    }
+    .stepContainer .stepConTxt h2 {
+        font-size: 17px;
+    }
+    .paymentInformation_card,
+    .paymentInformation_atm {
+        padding: 9px;
+    }
+    .paymentInformation_card li,
+    .paymentInformation_atm li {
+        margin-bottom: 0;
+    }
+    .paymentInformation_card h4,
+    .paymentInformation_atm h4 {
+        width: 30%;
+        padding: 15px 0;
+    }
+    .paymentInformation_card p,
+    .paymentInformation_atm p {
+        width: 90%;
+        margin-left: 15px;
+    }
+    .paymentInformation_card .cutoff p,
+    .paymentInformation_atm .cutoff p {
+        width: 90%;
+    }
+    .paymentInformation_card .cutoff b,
+    .paymentInformation_atm .cutoff b {
+        margin-left: 0;
+        font-size: 13px;
+    }
+    .detailTable-heading .detailTable-cell {
+        color: #435059;
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        flex-direction: column;
+    }
+    .detailTable-cell .tableTxt.siteName {
+        border-bottom-width: 1px;
+        margin: 9px 0 0;
+    }
+    /** END order_complete **/
 }
