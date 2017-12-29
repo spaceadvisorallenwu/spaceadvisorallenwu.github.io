@@ -59,8 +59,8 @@ $(document).ready(function() {
 //meeting 手機 價格方案用
 
 		var windowHeight = $(window).height();
-		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
-		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
+		// $(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
+		// $(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
 
 		$('.stepBox .mobile-plan-stecla > a.first').click(function() {
 			$(this).toggleClass('this');

@@ -2852,7 +2852,7 @@ footer .bottom li a img:hover {
 }
 .stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content,
 .stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content {
-    width: 100%;
+    width: 97%;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content h4,
 .stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content h4 {
@@ -2890,6 +2890,9 @@ footer .bottom li a img:hover {
     background: #fff;
     padding: 1px;
     overflow: hidden;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span {
+    line-height: normal;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
     border-right: 1px solid #ddd;
@@ -2934,6 +2937,10 @@ footer .bottom li a img:hover {
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
     top: 5px;
 }
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
+    border-radius: 5px;
+}
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
     background: transparent !important;
     top: 3px;
@@ -2945,6 +2952,7 @@ footer .bottom li a img:hover {
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess input[type=radio]+label:before {
     top: 2px;
@@ -2966,19 +2974,25 @@ footer .bottom li a img:hover {
     height: auto;
     padding: 3px;
     text-align: center;
+    margin-top: 0;
     margin-right: 5px;
+    border-radius: 5px;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input input:last-child {
     margin-right: 0;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
     top: 0;
+    margin-right: 5px;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
     width: 100%;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input input {
     margin-top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .ground {
+    margin-bottom: 9px;
 }
 .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .lnvoiceField .insele {
     border: 0;
@@ -3244,6 +3258,9 @@ footer .bottom li a img:hover {
 @media only screen and (max-width: 320px) and (max-height: 568px){ /** i5 **/ }
 
 @media only screen and (max-width: 980px) {
+    .gotop {
+        bottom: 16%;
+    }
     .pagebox._boxStyle {
         padding: 0;
     }
@@ -4050,7 +4067,6 @@ footer .bottom li a img:hover {
     }
     .meeting .mobile-plan {
         box-shadow: unset;
-        top: 0;
     }
     .meeting .mobile-plan a.first {
         padding: 9px 5%;
@@ -4405,6 +4421,101 @@ footer .bottom li a img:hover {
     .stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
         font-size: 15px;
         padding: 5px 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span {
+        padding: 5px 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
+        width: 45%;
+        margin-right: 5px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField {
+        padding: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
+        flex-direction: column;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
+        width: 100%;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
+        margin-left: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
+        top: -4px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .ground {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content, .stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content {
+        width: 93%;
+    }
+    .mobile-plan-stecla {
+        box-shadow: unset;
+    }
+    .fill_box footer {
+        margin-bottom: 0;
+    }
+    .mobile-plan-stecla a.first {
+        padding: 9px 5%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        border-top: 1px solid #ddd;
+    }
+    .mobile-plan-stecla a.first div {
+        width: 75%;
+        padding: 0;
+    }
+    .mobile-plan-stecla a.first div p {
+        line-height: normal;
+        font-size: 13px;
+    }
+    .mobile-plan-stecla a.first i,
+    .mobile-plan-stecla a.first i:hover {
+        border-color: #4f6ea2;
+        background: #fff !important;
+        color: #4f6ea2 !important;
+        width: 25%;
+        top: 0;
+        right: 0;
+        font-weight: normal;
+    }
+    .mobile-plan-stecla a.first.this i {
+        border: 0;
+        background: #4f6ea2 !important;
+        color: #fff !important;
+    }
+    .mobile-plan-stecla a.reservation,
+    .mobile-plan-stecla a.ref_btn {
+        font-size: 15px;
+        width: 100%;
+        padding: 0;
+        background: #fff;
+    }
+    .mobile-plan-stecla a.reservation span,
+    .mobile-plan-stecla a.ref_btn span {
+        width: 100%;
+        border-radius: 0 !important;
+        padding: 9px !important;
+    }
+    .mobile-plan-stecla a.reservation span i,
+    .mobile-plan-stecla a.ref_btn span i {
+        margin-left: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span {
+        margin-left: 0;
+        font-size: 15px;
+        text-align: left;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span a {
+        font-size: 15px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span p {
+        margin-bottom: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span p:last-child {
+        margin-bottom: 0;
     }
     /** END order_form **/
 }

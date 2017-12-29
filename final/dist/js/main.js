@@ -266,17 +266,17 @@ $(function(){
 //meeting 手機 價格方案用
 $(function(){
 	var windowHeight = $(window).height();
-	$(".mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
-	$(".mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
+	$(".mobile-plan.mobile > .plan-box").css({ height: windowHeight + 'px' });
+	$(".mobile-plan.mobile > .plan-box > .scroll").css({ height: windowHeight + 'px' });
 
 	$('.mobile-plan a.first').click(function() {
 		$(this).toggleClass('this');
 		if($(this).hasClass('this')){
 			$(this).find('i').html('確定方案');
-			$('body').css({'height': 0});
+			$('body,html').css({'overflow': 'hidden'});
 		}else{
 			$(this).find('i').html('選擇方案');
-			$('body').css({'height':'auto'});
+			$('body,html').css({'overflow': ''});
 		}
 		$('.mobile-plan > .plan-box').toggle();
 	});

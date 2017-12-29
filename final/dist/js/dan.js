@@ -72,8 +72,8 @@ $(document).ready(function() {
 //meeting 手機 價格方案用
 
 		var windowHeight = $(window).height();
-		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
-		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
+		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 88 + 'px' });
+		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 128 + 'px' });
 
 		$('.stepBox .mobile-plan-stecla > a.first').click(function() {
 			$(this).toggleClass('this');
@@ -84,7 +84,7 @@ $(document).ready(function() {
 				$(this).find('i').html('查看明細');
 				$('body,html').css({'overflow': ''});
 			}
-			$('.stepBox .mobile-plan-stecla > .plan-box').slideToggle();
+			$('.stepBox .mobile-plan-stecla > .plan-box').toggle();
 		});
 		$('.stepBox .mobile-plan-stecla > .plan-box > .scroll > ul > li > div > i').click(function() {
 			$(this).parent().siblings('.text').slideToggle();
