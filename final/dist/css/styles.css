@@ -908,7 +908,7 @@ footer .bottom li a img:hover {
     width: 80%;
     margin: 20px 10%;
     padding: 20px 0;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(253, 253, 253, .9);
 }
 .index .flexslider .search .search-box .search_item,
 .index .flexslider .search input,
@@ -917,6 +917,10 @@ footer .bottom li a img:hover {
 }
 .index .flexslider .search .search-box .search_item.day input {
     border: 0;
+}
+.index .flexslider .search .search-box .search_item_detail.have .search_item_open,
+.index .flexslider .search .search-box .search_item_detail > .search_item_open {
+    border-color: #ccc;
 }
 .index .flexslider .search .search-box .search_item_detail {
     border-radius: 0 5px 5px 5px;
@@ -1338,8 +1342,15 @@ footer .bottom li a img:hover {
     border-radius: 0 5px 5px 5px;
     border-color: #ccc;
 }
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_open {
+    border-color: #ccc;
+}
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
-    left: 264px;
+    left: 295px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area p.title {
+    font-size: 15px;
+    font-weight: normal;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
@@ -3598,7 +3609,7 @@ footer .bottom li a img:hover {
         border-radius: 0;
         bottom: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, .65);
+        background-color: rgba(253, 253, 253, .8);
     }
     .index .flexslider .search input.input {
         width: 100%;
