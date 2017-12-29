@@ -104,8 +104,8 @@
 						<div class="writeInformation1">
 							<h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i>訂購人資訊</h2>
 							<ul class="writeInput">
-								<!-- 警示狀態 -->
-								<li class="">
+								<!-- 錯誤時請加上 class warning_error -->
+								<li class="warning_error">
 									<h4>國籍：</h4>
 									<select>
 										<option>台灣</option>
@@ -162,7 +162,7 @@
 										<option>請選擇</option>
 									</select>
 								</li>
-								<li>
+								<li class="">
 									<h4>科別：</h4>
 									<select>
 										<option>請選擇</option>
@@ -322,27 +322,34 @@
 									<div class="lnvoiceField">
 										<div class="col">
 											<span class="assess">
-												<input type="radio" value="1" id="e2" name="vehicle" >
-												<label for="e2" class="p lang_31">
-													<b>會員載具</b>
-												</label>
+												<div>
+													<input type="radio" value="1" id="e2" name="vehicle" >
+													<label for="e2" class="p lang_31">
+														<b>會員載具</b>
+													</label>
+												</div>
 											</span>
 										</div>
 										<div class="col">
 											<span class="assess">
-												<input type="radio" value="1" id="e3" name="vehicle">
-												<label for="e3" class="p lang_31">
-													<b>手機條碼載具</b>
-													<input type="text" placeholder="請輸入手機條碼載具(限大寫英數字)">
-												</label>
+												<div>
+													<input type="radio" value="1" id="e3" name="vehicle">
+													<label for="e3" class="p lang_31">
+														<b>手機條碼載具</b>
+													</label>
+												</div>
+												<input type="text" placeholder="請輸入手機條碼載具(限大寫英數字)">
 											</span>
 										</div>
 										<div class="col">
 											<span class="assess">
-												<input type="radio" value="1" id="e4" name="vehicle">
-												<label for="e4" class="p lang_31">
-													<b>自然人憑證載具</b><input type="text" placeholder="請輸入自然人憑證載具(限英文數字)">
-												</label>
+												<div>
+													<input type="radio" value="1" id="e4" name="vehicle">
+													<label for="e4" class="p lang_31">
+														<b>自然人憑證載具</b>
+													</label>
+													<input type="text" placeholder="請輸入自然人憑證載具(限英文數字)">
+												</div>
 											</span>
 										</div>
 									</div>
@@ -370,18 +377,18 @@
 										</div>
 										<div class="col paper">
 											<span class="assess">
-												<input type="radio" value="1" id="e6" name="paper">
+												<input type="checkbox" value="1" id="e6" name="paper">
 												<label for="e6" class="p lang_31">
 													<b>索取紙本發票</b>
 												</label>
 												<div>
 													<div class="exact_input">
-														<input type="text">
-														<input type="text">
-														<input type="text">
+														<input type="text" maxlength="1">
+														<input type="text" maxlength="1">
+														<input type="text" maxlength="1">
 														<span>-</span>
-														<input type="text">
-														<input type="text">
+														<input type="text" maxlength="1">
+														<input type="text" maxlength="1">
 													</div>
 													<div class="add_input">
 														<input type="text" placeholder="請輸入收件地址">
@@ -405,15 +412,11 @@
 									<div class="lnvoiceField">
 										<div class="col">
 											<span class="assess">
-												<input type="radio" value="1" id="e8" name="paper">
-												<label for="e8" class="p lang_31">
-													<b>手機條碼載具</b>
-													<div class="insele">
-														<select>
-															<option>請選擇</option>
-														</select>
-													</div>
-												</label>
+												<div class="insele">
+													<select>
+														<option>請選擇</option>
+													</select>
+												</div>
 											</span>
 										</div>
 									</div>
@@ -441,109 +444,131 @@
 								<div class="app_text">藝文推廣中心三樓會議室（一）</div>
 							</div>
 							<div class="appointment_detail">
-								<div class="appointment_deta">
-									<i></i>
-									<time>2017/04/26 (三)</time>
-								</div>
-								<div class="deta_box">
-									<div  class="deta_content">
-										<time>08:00~12:00 </time>
-										<span class="discount">TWD 3,000</span>
-										<div class="rebate">TWD 2,100</div>
+								<div class="appointment_item">
+									<div class="appointment_deta">
+										<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+										<time>2017/04/26 (三)</time>
 									</div>
-									<div class="program">
-										<b>場地租金方案</b>
-										<div class="formula">
-											<span class="sarebate">7折</span>
+									<div class="deta_boxs">
+										<div class="deta_box _haveDiscount">
+											<div  class="deta_content">
+												<div class="program">
+													<div class="time"><time>08:00-12:00</time></div>
+													<div class="name"><span>場地租金方案</span></div>
+												</div>
+												<div class="_prices">
+													<div class="discount"><span>TWD 3,000</span></div>
+													<div class="rebate"><span>TWD 2,100</span></div>
+													<div class="sarebate"><span>7折</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="deta_box">
+											<div  class="deta_content">
+												<div class="program">
+													<div class="time"><time>12:00-13:30</time></div>
+													<div class="name"><span>連續時段贈送一小時</span></div>
+												</div>
+												<div class="_prices">
+													<div class="discount"><span></span></div>
+													<div class="rebate"><span>TWD 0</span></div>
+													<div class="sarebate"><span></span></div>
+												</div>
+											</div>
+										</div>
+										<div class="deta_box">
+											<div  class="deta_content">
+												<div class="program">
+													<div class="time"><time>13:30-17:00</time></div>
+													<div class="name"><span>一生一世方案/30桌</span></div>
+												</div>
+												<div class="_prices">
+													<div class="discount"><span></span></div>
+													<div class="rebate"><span>TWD 30,000</span></div>
+													<div class="sarebate"><span></span></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<hr>
-								<div class="deta_box">
-									<div  class="deta_content">
-										<time>12:00~13:30 </time>
-										<div class="rebate">TWD 0</div>
+								<div class="appointment_item">
+									<div class="appointment_deta">
+										<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+										<time>2017/04/26 (三)</time>
 									</div>
-									<div class="program">
-										<b>免費-超值贈送一小時</b>
-										<div class="formula">
-										</div>
-									</div>
-								</div>
-								<hr>
-								<div class="deta_box">
-									<div  class="deta_content">
-										<time>13:30~17:00 </time>
-										<span>TWD 3,0000</span>
-									</div>
-									<div class="program">
-										<b>一生一世方案/30桌</b>
-										<div class="formula">
-										</div>
-									</div>
-								</div>
-								<div class="appointment_deta">
-									<i></i>
-									<time>2017/04/30 (三)</time>
-								</div>
-								<div class="deta_box">
-									<div  class="deta_content">
-										<time>08:00~12:00 </time>
-										<span>TWD 3,000</span>
-									</div>
-									<div class="program">
-										<b>場地租金方案</b>
-										<div class="formula">
-										</div>
-									</div>
-								</div>
-								<hr>
-								<!-- 設備需求 -->
-								<div class="demand">
-									<h4>設備需求：</h4>
-									<ul class="deTxt">
-										<li><span>設施設施設施設施x100 </span></li>
-										<li><span>設施設施設施設施x100 </span></li>
-										<li><span>設施設施設施設施x100 </span></li>
-									</ul>
-								</div>
-								<!-- 總價 -->
-								<div class="priceBox">
-									<div class="valuation">
-										<b>小計</b>
-										<div>
-											<span>TWD</span>
-											<span>21,000</span>
-										</div>
-									</div>
-									<div class="valuation">
-										<b>服務費</b>
-										<div>
-											<span>TWD</span>
-											<span>3,000</span>
-										</div>
-									</div>
-									<div class="valuation">
-										<b>折扣 <sup>4/30</sup></b>
-										<div>
-											<span class="allowance">-TWD</span>
-											<span>3,000</span>
-										</div>
-									</div>
-									<div class="allValuation">
-										<b>總價</b>
-										<div>
-											<span>TWD</span>
-											<span>19,100</span>
+									<div class="deta_boxs">
+										<div class="deta_box">
+											<div  class="deta_content">
+												<div class="program">
+													<div class="time"><time>08:00-12:00</time></div>
+													<div class="name"><span>場地租金方案</span></div>
+												</div>
+												<div class="_prices">
+													<div class="discount"><span>TWD 3,000</span></div>
+													<div class="rebate"><span>TWD 2,100</span></div>
+													<div class="sarebate"><span>7折</span></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- 設備需求 -->
+							<div class="demand">
+								<h4>設備需求</h4>
+								<ul class="deTxt">
+									<li><span>設施設施設施設施x100 </span></li>
+									<li><span>設施設施設施設施x100 </span></li>
+									<li><span>設施設施設施設施x100 </span></li>
+								</ul>
+							</div>
+							<!-- 總價 -->
+							<div class="priceBox">
+								<ul class="price">
+									<li class="valuation">
+										<div class="valuaBox">
+											<b>小計</b>
+											<div>
+												<span>TWD</span>
+												<span>21,000</span>
+											</div>
+										</div>
+									</li>
+									<li class="valuation">
+										<div class="valuaBox">
+											<b>服務費</b>
+											<div>
+												<span>+TWD</span>
+												<span>3,000</span>
+											</div>
+										</div>
+									</li>
+									<li class="valuation">
+										<div class="valuaBox">
+											<b>04/30 折扣</b>
+											<div>
+												<span>-TWD</span>
+												<span>3,000</span>
+											</div>
+										</div>
+									</li>
+									<li class="total">
+										<div class="valuaBox">
+											<b>總價</b>
+											<div>
+												<span>TWD</span>
+												<span>24,000</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 						<!-- 即時預定 -->
 						<div class="instant">
-							<h3>即時預定</h3>
-							<p>不需要獲得廠地主批准就可以直接預定，一旦訂單送出並完成付款，即代表已預定成功</p>
+							<h3>即時預定<i class="fa fa-bolt _online" aria-hidden="true"></i></h3>
+							<p>不需要獲得廠地主批准就可以直接預定，訂單送出並完成付款，即代表已預定成功。</p>
 						</div>
 					</div>
 				</div>
