@@ -3032,7 +3032,7 @@ footer .bottom li a img:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 0;
-    background: #fff;
+    background: #f3f3f3;
     overflow: hidden;
 }
 .appointment_Result.result_pc .appointment_Content > div {
@@ -3068,6 +3068,7 @@ footer .bottom li a img:hover {
 }
 .appointment_detail .appointment_item {
     border: 1px solid #ddd;
+    background: #fff;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 9px;
@@ -3076,7 +3077,7 @@ footer .bottom li a img:hover {
     margin-bottom: 0;
 }
 .appointment_detail .appointment_deta {
-    background: #f3f3f3;
+    background: #fff;
     border-bottom: 1px solid #ddd;
     font-size: 15px;
     font-weight: bold;
@@ -3166,7 +3167,7 @@ footer .bottom li a img:hover {
 .appointment_Result .appointment_Content .demand {
     margin: 0;
     padding: 9px;
-    background: #f3f3f3;
+    background: #fff;
     border-top: 1px solid #ddd;
 }
 .appointment_Result .appointment_Content .demand h4 {
@@ -4530,6 +4531,9 @@ footer .bottom li a img:hover {
     }
     .stepBox.fill_box.mm-page .appointment_Content {
         padding-top: 9px;
+    }
+    .stepBox.fill_box.mm-page .appointment_detail .appointment_deta {
+        background: #f3f3f3;
     }
     .stepBox.fill_box.mm-page .appointment_detail .deta_box {
         padding: 20px 9px;
