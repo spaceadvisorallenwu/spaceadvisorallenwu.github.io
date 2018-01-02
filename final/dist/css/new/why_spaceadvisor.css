@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+/** BEGIN why_spaceadvisor **/
+.advantageTag {
+    display: inline-block;
+    margin: 0 auto;
+    background: rgba(78, 80, 89, .5);
+    border-radius: 9px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: unset;
+}
+.advantageTag .adtagImg {
+	width: 60px;
+    margin: 9px auto;
+}
+.advantageTag ul li img {
+    width: 100%;
+}
+.advantageTag ul li.active,
+.advantageTag ul li:hover {
+	background: #4f6ea2;
+}
+.advantageTag ul li.active:first-child,
+.advantageTag ul li:hover:first-child {
+	border-radius: 9px 0 0 9px;
+}
+.advantageTag ul li.active:last-child,
+.advantageTag ul li:hover:last-child {
+	border-radius: 0 9px 9px 0;
+}
+.advantageContent {
+	margin: 40px auto;
+}
+.advantageContent li {
+	font-size: 17px;
+}
+
+@media only screen and (max-width: 980px) {
+    .appAdvantage {
+        margin: 40px auto;
+    }
+    .advantageTag {
+        width: 90%;
+    }
+    .advantageTag .adtagImg {
+        width: 40px;
+    }
+    .advantageTag ul li {
+        padding: 13px 15px 19px;
+    }
+    .adtagImg {
+        margin: 0;
+    }
+    .adtagTxt {
+        font-size: 13px;
+    }
+    .advantageContent {
+        margin: 40px auto;
+        padding: 0;
+    }
+}
+/** END why_spaceadvisor **/

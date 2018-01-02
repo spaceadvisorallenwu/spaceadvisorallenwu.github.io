@@ -1,0 +1,349 @@
+@charset 'UTF-8';
+/** BEGIN space_signup **/
+.applicationStep {
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 80px auto;
+    max-width: unset;
+    border: 1px solid #ddd;
+    padding: 2px;
+    border-radius: 9px;
+}
+.applicationStep ul {
+    text-align: center;
+    width: 100%;
+    border-radius: 9px;
+    background: #f3f3f3;
+    padding: 40px 20px;
+}
+.applicationStep li {
+	font-size: 17px;
+    width: 100px;
+    font-weight: normal;
+}
+.applicationStep li img {
+    width: 100%;
+}
+.appAdvantage {
+	margin: 80px auto;
+	padding: 40px 0;
+}
+.addAdvaContent .addadImg {
+    width: 70px;
+    margin: 20px auto;
+}
+.addAdvaContent .addadImg img {
+	width: 100%;
+}
+.addAdvaContent ul {
+	display: flex;
+}
+.addAdvaContent li {
+	width: 25%;
+}
+.addAdvaContent .addadTxt h3 {
+	font-size: 21px;
+	font-weight: bold;
+}
+.addAdvaContent .addadTxt p {
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 31px;
+}
+.addAdvaVenue h3 {
+	font-size: 21px;
+	font-weight: bold;
+}
+.addAdvaVenue p {
+	font-size: 15px;
+}
+.addvaBrand .addvaBrandList {
+	margin: 0 auto;
+}
+.addvaBrand .addvaBrandList ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.addvaBrand .addvaBrandList li {
+    max-width: unset;
+    margin: 20px 4%;
+    padding: 20px 0;
+}
+.appSynopsis {
+	-webkit-filter: grayscale(50%);
+    filter: gray;
+    height: 250px;
+    border: 1px solid #ddd;
+}
+.appSynopsis .appSynopsisTxt h3 {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 42px;
+}
+.appSynopsis .appSynopsisTxt p{
+	font-size: 21px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
+}
+.application_explanation {
+	padding: 40px;
+	margin-top: 80px;
+}
+.sumber>li .sumTitle span,
+.sumber>li .sumContent span {
+	font-weight: normal;
+}
+.applicationBox .twzipcode {
+	display: flex;
+    margin: 9px 0;
+}
+.applicationBox .app_stepItem2 .apInput5 input,
+.applicationBox .app_stepItem3 .apInput3 input {
+	width: 100%;
+	max-width: unset;
+}
+.applicationBox .twzipcode > select,
+.applicationBox .twzipcode > input {
+	width: 100% !important;
+	margin-right: 9px !important;
+}
+.applicationBox .twzipcode > input {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.app_stepBox {
+	padding: 0;
+}
+.app_stepBox .warning_error:before {
+	content: unset;
+}
+.app_stepBox .warning_error h4:before {
+    content: "\f06a";
+    color: #d76050;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-right: 5px;
+    width: 25px;
+}
+.app_stepBox li {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-flow: wrap;
+}
+.app_stepBox h4 {
+	font-size: 15px;
+    line-height: normal;
+    width: 145px;
+    margin-right: 20px;
+    text-align: justify;
+}
+.app_stepBox input,
+.app_stepBox select,
+.apInput2 select:nth-child(2),
+.app_stepItem4 li:nth-child(2) select {
+	width: 30%;
+	max-width: 300px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.app_stepBox input,
+.app_stepBox select,
+.app_stepBox textarea {
+	color: #4e5059;
+	font-size: 15px;
+    border: 1px solid #ddd;
+}
+.applicationBox main h2 {
+	font-size: 21px;
+}
+.applicationBox main h2:before {
+	/*content: '';*/
+}
+.app_step2 .application_explanation {
+    margin: 0 auto;
+    letter-spacing: 0;
+}
+.app_step2 .application_explanation {
+	padding: 40px;
+}
+.app_step2 .custodyBtn {
+    margin: 40px auto 0;
+    text-align: center;
+}
+.app_stepItem1,
+.app_stepItem2,
+.app_stepItem3,
+.app_stepItem4,
+.app_stepItem5 {
+	margin-bottom: 40px;
+	color: #4e5059;
+}
+.app_stepItem2 .apInput4 select,
+.app_stepItem3 .apInput2 select:nth-child(2),
+.app_stepItem4 li:nth-child(3) select,
+.app_stepItem4 li:nth-child(3) .inp2,
+.app_stepItem4 li:nth-child(4) select {
+	width: 10%;
+	max-width: 81px;
+    margin-right: 9px;
+}
+.app_stepItem2 .apInput4 input,
+.app_stepItem3 .apInput2 input,
+.app_stepItem4 li:nth-child(3) .inp1,
+.app_stepItem4 li:nth-child(4) input {
+	width: 20%;
+	max-width: 210px;
+	margin-left: 0;
+}
+.app_stepItem2 .apInput5,
+.app_stepItem3 .apInput3 {
+	display: block;
+}
+.app_stepItem4 li:nth-child(3) .inp1 {
+	margin-right: 9px;
+}
+.app_stepItem5 .aqlink {
+	vertical-align: unset;
+}
+.col .assess {
+    font-size: 15px;
+}
+.apInput2 select {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 980px) {
+	.appAdvantage {
+		margin: 40px auto;
+	}
+	.applicationStep {
+		margin: 20px auto;
+		padding: 0;
+	}
+	.applicationStep li {
+	    width: 55px;
+	}
+	.applicationStep li {
+	    font-size: 17px;
+	    line-height: 21px;
+	    width: 53px;
+	}
+	.applicationStep span {
+	    top: -28px;
+	}
+	.addAdvaContent ul {
+		flex-direction: column;
+	}
+	.addAdvaContent li {
+		width: 100%;
+	    border-bottom: 1px solid #ddd;
+	    padding-bottom: 40px;
+	}
+	.addAdvaContent li:last-child {
+		border: 0;
+		padding-bottom: 0;
+	}
+	.appSynopsis {
+		width: 100%;
+	    border-radius: 0;
+	    border: 0;
+	    margin: 40px 0;
+	}
+	.appSynopsis .appSynopsisTxt h3 {
+	    font-size: 25px;
+	}
+	.appSynopsis .appSynopsisTxt p {
+		font-size: 15px;
+	    line-height: 25px;
+	}
+
+	.application_explanation {
+		padding: 20px;
+		margin: 20px auto;
+	}
+	.application_sent {
+		font-size: 21px;
+    	padding: 40px 0;
+	}
+	.applicationStep ul {
+		padding: 20px;
+	}
+	.app_stepItem2 .apInput4 select,
+	.app_stepItem3 .apInput2 select:nth-child(2),
+	.app_stepItem4 li:nth-child(3) select,
+	.app_stepItem4 li:nth-child(3) .inp2,
+	.app_stepItem4 li:nth-child(4) select {
+		width: 100%;
+		max-width: unset;
+	    margin-right: 0;
+	}
+	.app_stepItem2 .apInput4 input,
+	.app_stepItem3 .apInput2 input,
+	.app_stepItem4 li:nth-child(3) .inp1,
+	.app_stepItem4 li:nth-child(4) input {
+		width: 100%;
+		max-width: unset;
+		margin-left: 0;
+	}
+	.app_stepBox input,
+	.app_stepBox select,
+	.apInput2 select:nth-child(2),
+	.app_stepItem4 li:nth-child(2) select {
+		width: 100%;
+		max-width: unset;
+	}
+	.app_stepBox .warning_error h4 {
+		padding-left: 0;
+		/*width: calc(100% - 25px);*/
+	}
+	.app_stepBox h4,
+	.app_stepBox input,
+	.app_stepBox select,
+	.app_stepBox textarea {
+		margin-bottom: 0;
+	}
+	.app_stepBox .app_stepItem5 h4 {
+		margin-right: 0;
+	}
+	.app_stepBox li {
+		margin-bottom: 0;
+		flex-direction: column;
+		flex-flow: wrap;
+	}
+	.applicationBox .twzipcode._app1,
+	.applicationBox .twzipcode._app2,
+	.app_stepItem5 li {
+		flex-direction: column;
+	    margin-left: 0;
+	    width: 100%;
+	    margin-top: 0;
+	}
+	.app_stepBox li,
+	.app_stepItem2 .apInput4 select,
+	.app_stepItem3 .apInput2 select,
+	.app_stepItem4 .apInput3 select,
+	.app_stepItem4 .apInput3 .inp1,
+	.app_stepItem4 .apInput4 select,
+	.applicationBox .twzipcode select {
+		margin-bottom: 13px;
+	}
+	.app_stepItem3 .apInput2 input {
+		margin-left: 0;
+	}
+	.app_stepBox .app_stepItem5 li > div {
+		width: 100%;
+	}
+	.app_step2 .application_explanation {
+		padding: 20px;
+	}
+}
+/** END space_signup **/

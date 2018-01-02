@@ -1,0 +1,1521 @@
+@charset 'UTF-8';
+/** BEGIN all_order **/
+.orderstep._boxStyle {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 1px;
+    overflow: hidden;
+}
+.orderstep ul {
+    display: flex;
+}
+.orderstep ul li {
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    font-size: 21px;
+    line-height: normal;
+    color: #4f6da2;
+    opacity: .75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderstep ul li.active {
+    background: #4f6ea2;
+    color: #fff;
+    opacity: 1;
+}
+.orderstep ul li b {
+    margin-right: 5px;
+}
+.orderstep ul li:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.orderstep ul li:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.stepPhoto._boxStyle {
+    padding: 0;
+    height: 80px;
+    width: 50%;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.stepPhoto._boxStyle img {
+    width: 90%;
+    height: auto;
+    padding: 5px;
+}
+.bookList._notOnline ._rfp,
+.bookList:not(._notOnline) ._online,
+.bookList.expired ._rfp,
+.bookList.expired ._online,
+.bookList:not(.expired) ._expired {
+    display: none !important;
+}
+
+
+/** BEGIN order_cart **/
+.buyContent._boxStyle {
+    padding-top: 20px;
+}
+.buyContent .title {
+    margin: 20px 0;
+}
+.buyContent .title h2 {
+    letter-spacing: 0;
+    background: #fff;
+    padding: 5px 9px;
+    font-size: 21px;
+    color: #4e5059;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+.buyContent .title h2 i {
+    margin-right: 9px;
+}
+.buyContent .title .titTxt {
+    width: 100%;
+    line-height: normal;
+    font-size: 13px;
+    text-align: left;
+    padding: 0 9px;
+}
+.buyContent .title .titTxt i {
+    margin-right: 3px;
+}
+.bookList {
+    margin-bottom: 20px;
+}
+.bookList .bookTitle {
+    background: #fff;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.bookList .bookTitle h2 {
+    font-size: 21px;
+}
+.bookList .bookTitle ._bookStats {
+    margin-left: 11px;
+}
+.bookTitle .fa-flash:before,
+.bookTitle .fa-bolt:before {
+    font-size: 15px;
+}
+.bookTitle .status {
+    font-size: 12px;
+    padding: 0;
+    border: 0;
+}
+.bookTitle .status span {
+    padding: 1px 5px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+    margin-left: -2px;
+    background: #fff;
+    border-color: #4e5059;
+    color: #4e5059;
+}
+.bookTitle .status ._online {
+    background: #ffdf00;
+    border: 0;
+}
+.bookList .detailTable {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.detailTable-heading .detailTable-cell {
+    font-size: 13px;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f3f3f3;
+    color: gray;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
+    background: #f3f3f3;
+    font-size: 13px;
+    letter-spacing: 0;
+    border-bottom-color: #f3f3f3;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div {
+    background: #fff;
+    border: 1px solid #d75f50;
+    color: #d75f50;
+    display: inline-block;
+    line-height: normal;
+    padding: 1px 9px;
+    border-radius: 5px;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div._expired {
+    background: #fff;
+    border: 1px solid #435059;
+    color: #435059;
+}
+.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal span {
+    margin-left: 3px;
+}
+.sitePhoto-pic .sitePo {
+    background: #fff;
+    padding: 5px;
+}
+.sitePhoto-pic .sitePo img {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+}
+.detailTable-row.detailTable-content .detailTable-cell {
+    text-align: center;
+    padding: 5px 20px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a {
+    width: 80px;
+    display: flex !important;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 3px 9px;
+    margin: 3px 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a:hover {
+    background: #f3f3f3;
+    color: #4e5059 !important;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child a span {
+    margin-left: 3px;
+    color: #4e5059;
+    font-size: 12px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:last-child {
+    padding-right: 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
+    padding-left: 20px;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .tableTxt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .sarebate {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #d76050;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 9px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 0 5px;
+    opacity: .8;
+}
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span {
+    margin-top: 3px;
+    color: #4e5059;
+}
+.detailTable-row.detailTable-content .detailTable-cell .original {
+    color: #ccc;
+}
+.detailTable-left,
+.detailTable-row.detailTable-content .detailTable-cell,
+.detailTable-row.detailTable-content .detailTable-cell:last-child,
+.detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+    border-width: 2px;
+    border-color: #f3f3f3;
+}
+.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) .sarebate,
+.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) ._price .original {
+    display: none;
+}
+.detailTable-cell .tableTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 15px;
+}
+.detailTable-cell .tableTxt.siteName {
+    padding: 0;
+}
+.detailTable-cell .tableTxt .currency {
+    margin-right: 9px;
+}
+.detailTable-cell .buyIcon a span {
+    text-indent: unset;
+    display: block;
+}
+.detailTable-cell .buyIcon a span i {
+    font-size: 12px;
+    margin-right: 3px;
+}
+.detailTable-cell .buyIcon a.composeBtn:before,
+.detailTable-cell .buyIcon a.detailBtn:before {
+    content: unset;
+}
+.detailTable-left .detailTable-cell.recipBox .tableTxt,
+.detailTable-cell .tableTxt span,
+.detailTable-cell .tableTxt span,
+.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+    font-size: 13px;
+}
+.bookList .demand {
+    width: 100%;
+    margin: 9px 0;
+    background: #fff;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 3px 9px 9px;
+    border-radius: 0;
+}
+.bookList .demand h4,
+.bookList .demand .deTxt {
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+}
+.bookList .demand h4 {
+    font-weight: bold;
+}
+.bookList .demand .deTxt {
+    color: gray;
+}
+.bookList:not(._haveEquipment) .demand {
+    display: none;
+}
+.buyprice {
+    width: 100%;
+    margin: 9px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.stepBox .price {
+    font-size: 15px;
+    width: 25%;
+    background: #f3f3f3;
+    border-radius: 5px;
+    padding: 15px 9px;
+}
+.stepBox .price li,
+.stepBox .price .total {
+    padding: 0;
+    margin-bottom: 9px;
+    float: unset;
+    display: flex;
+    justify-content: flex-end;
+    line-height: normal;
+}
+.stepBox .price .total {
+    background: transparent;
+    border-top: 1px solid #ddd;
+    padding-top: 9px;
+    margin-bottom: 0;
+}
+.stepBox .price .total b,
+.stepBox .price .total span,
+.stepBox .price .total span:nth-child(3) {
+    font-size: 15px;
+}
+.stepBox .price li .valuaBox {
+    float: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.stepBox .price b {
+    width: 60%;
+}
+.stepBox .price li .valuaBox > div {
+    width: 100%;
+}
+.stepBox .price li .valuaBox > div span {
+    width: auto;
+}
+.stepBox .price li .valuaBox > div span:nth-child(1) {
+    margin-right: 9px;
+}
+.stepBox .price li .valuaBox > div span:nth-child(2) {
+    width: 40%;
+}
+/*.stepBox .price li .valuaBox span:last-child {
+    width: 30%;
+}*/
+.buyBox .custodyBtn {
+    margin: 0;
+    width: 100%;
+}
+.bookList .custodyBtn a {
+    background: transparent;
+    padding: 0;
+    width: 25%;
+}
+.bookList .custodyBtn a span {
+    width: 100%;
+}
+.bookList.expired .detailTable-left,
+.bookList.expired .detailTable-cell,
+.bookList.expired .detailTable-cell span,
+.bookList.expired .detailTable-row .detailTable-cell:last-child {
+    opacity: .7;
+}
+.bookList.expired .detailTable-left .detailTable-row.detailTable-heading .detailTable-cell:nth-child(2),
+.bookList.expired .detailTable-row.detailTable-heading .detailTable-cell:last-child {
+    font-size: 13px;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f3f3f3 !important;
+    color: gray;
+}
+.bookList.expired .detailTable-inner,
+.bookList.expired .detailTable-left .detailTable-cell.recipBox {
+    background: #fff !important;
+}
+.bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+    border-left: 2px solid #f3f3f3;
+}
+.bookList.expired .buyprice,
+.bookList.expired .custodyBtn {
+    display: none;
+}
+.buyBox.mm-page .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: table-cell;
+}
+/** END order_cart **/
+
+/** BEGIN order_form **/
+.stepBox.fill_box.mm-page .writeContent .writeInput li .col {
+    font-size: 15px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2 {
+    font-size: 21px;
+    letter-spacing: 0;
+    color: #4e5059;
+    border-bottom-color: #ddd;
+    display: flex;
+    align-items: center;
+    padding: 5px 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2:before {
+    content: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .writeContainer h2 i {
+    margin-right: 9px;
+    font-size: 17px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3,
+.stepBox.fill_box.mm-page .writeContent .writeInformation4,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 {
+    margin-bottom: 40px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li.warning_error h4 {
+    margin-bottom: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li.warning_error h4:before {
+    content: "\f06a";
+    color: #d76050;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-right: 5px;
+    width: 25px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput li {
+    margin-right: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput li:last-child {
+    margin-right: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput li h4 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput small {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #4e5059;
+    top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=checkbox]+label:before,
+.stepBox.fill_box.mm-page .writeContent .col .assess input[type=checkbox]+label:after {
+    margin-right: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .col {
+    margin-bottom: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .col:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess > input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess > input[type=checkbox]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess > input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess > input[type=checkbox]+label:before {
+    top: 2px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .col .assess > input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .col .assess > input[type=checkbox]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .col .assess > input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .col .assess > input[type=checkbox]+label:before {
+    top: 6px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .instalment,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .instalment {
+    margin-left: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput .info {
+    margin-top: 3px;
+    font-size: 13px;
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput .info p {
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess {
+    margin: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label {
+    display: flex;
+    align-items: center;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label:before {
+    top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label span {
+    line-height: normal;
+    margin-left: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent input,
+.stepBox.fill_box.mm-page .writeContent select,
+.stepBox.fill_box.mm-page .writeContent textarea,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li input,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li select {
+    color: #4e5059;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    height: 40px;
+    padding: 9px;
+    top: 0;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput {
+    flex-direction: column;
+    border-radius: 5px;
+    background: #f3f3f3;
+    padding: 9px;
+    margin-bottom: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    margin-bottom: 9px;
+    padding: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li h4 {
+    margin: 0 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 .amount_input, .writeInput.part3 .amount_select {
+    border: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li h4,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_input,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_select,
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+    display: flex;
+    align-items: center;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li i {
+    top: unset;
+    padding: 0 5px;
+    margin-right: 3px;
+    height: 80%;
+    align-items: center;
+    display: flex;
+    background: #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+    background: #d76050;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 13px;
+    border: 1px solid #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .increase {
+    font-size: 15px;
+    padding: 0;
+    font-weight: normal;
+    background: #fff;
+    color: #4f6ea2;
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: 1px solid #4f6ea2;
+}
+.stepBox.fill_box.mm-page .writeContent .increase:after {
+    content: unset;
+    background-image: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .increase i {
+    margin-left: 5px;
+    color: #4f6ea2;
+}
+.stepBox.fill_box.mm-page .writeContent .increase:hover,
+.stepBox.fill_box.mm-page .writeContent .increase:hover i {
+    background: #4f6ea2;;
+    color: #fff;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput {
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li {
+    margin-bottom: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li:last-child,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li:last-child {
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .staging {
+    margin: 15px 0 0 30px;
+}
+
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess label,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess label {
+    display: flex;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess .col_content,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess .col_content {
+    margin-left: 9px;
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .col .assess .col_content > div,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col .assess .col_content > div {
+    display: flex;
+    align-content: center;
+    padding: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content {
+    width: 97%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content h4,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content h4 {
+    line-height: normal;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content img,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content img {
+    top: 0;
+    margin-left: 5px;
+    max-height: 22px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content p,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content p {
+    line-height: normal;
+    font-size: 13px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    padding: 3px 9px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col .assess input[type=checkbox]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col .assess input[type=checkbox]+label:after {
+    top: 5px;
+    left: 3px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 1px;
+    overflow: hidden;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span {
+    line-height: normal;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
+    border-right: 1px solid #ddd;
+    background: #f3f3f3;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 h2 {
+    background-image: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput {
+    flex-direction: column;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part4 .staging .assess input[type=checkbox]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part5 .staging .assess input[type=checkbox]+label:after {
+    top: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField {
+    border-radius: 5px;
+    font-size: 15px;
+    left: 27px;
+    width: calc(100% - 27px);
+    margin: 5px 0 0 0;
+    padding: 20px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col {
+    display: flex;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col b {
+    line-height: normal;
+    margin-left: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col label input {
+    display: block;
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
+    top: 2px
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:after,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
+    top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label:before,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
+    border-radius: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
+    background: transparent !important;
+    top: 3px;
+    left: 2px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess {
+    flex-direction: column;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess input[type=radio]+label:before {
+    top: 2px;
+    margin-right: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col input,
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .lnvoiceField input {
+    margin-top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
+    width: 30%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input input {
+    padding: 0;
+    height: auto;
+    padding: 3px;
+    text-align: center;
+    margin-top: 0;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input input:last-child {
+    margin-right: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
+    top: 0;
+    margin-right: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
+    width: 100%;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input input {
+    margin-top: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .ground {
+    margin-bottom: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .lnvoiceField .insele {
+    border: 0;
+    width: 100%;
+    margin-top: 5px;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn a {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn a span {
+    margin: 0;
+    width: unset;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn > span {
+    font-size: 13px;
+    line-height: normal;
+    width: unset;
+    margin-left: 9px;
+}
+.stepBox.fill_box.mm-page .writeContent .custodyBtn > span a {
+    font-size: 13px;
+    padding: 0 3px;
+}
+.appointment_Result.result_pc .appointment_Content {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0;
+    background: #f3f3f3;
+    overflow: hidden;
+}
+.appointment_Result.result_pc .appointment_Content > div {
+
+}
+.appointment_Content .appointment_photo {
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #f3f3f3;
+}
+.appointment_Content .appointment_photo .app_pic {
+    margin-right: 9px;
+    width: 38%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1px;
+}
+.appointment_Content .appointment_photo .app_pic img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.appointment_Content .appointment_photo .app_text {
+    font-size: 21px;
+    line-height: normal;
+    width: 100%;
+    letter-spacing: 0;
+}
+.appointment_detail {
+    padding: 9px;
+}
+.appointment_detail .appointment_item {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 9px;
+}
+.appointment_detail .appointment_item:last-child {
+    margin-bottom: 0;
+}
+.appointment_detail .appointment_deta {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 11px 9px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.appointment_detail .appointment_deta i {
+    margin-right: 9px;
+    font-size: 15px;
+}
+.appointment_detail .deta_boxs {
+    padding: 9px;
+}
+.appointment_detail .deta_boxs .deta_box {
+    padding: 9px 0;
+    border-bottom: 1px solid #ddd;
+}
+.appointment_detail .deta_boxs .deta_box:first-child {
+    padding-top: 0;
+}
+
+.appointment_detail .deta_boxs .deta_box:last-child {
+    border: 0;
+    padding-bottom: 0;
+}
+.appointment_detail .deta_boxs .deta_box .deta_content {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    line-height: normal;
+    font-size: 15px;
+}
+.appointment_detail .deta_boxs .deta_box .program {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.appointment_detail .deta_boxs .deta_box .program .time time {
+
+}
+.appointment_detail .deta_boxs .deta_box .program .name span {
+    width: unset;
+    text-align: unset;
+    font-size: 13px;
+}
+.appointment_detail .deta_boxs .deta_box ._prices {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.appointment_detail .deta_content ._prices > div {
+    display: flex;
+    justify-content: flex-end;
+}
+.appointment_detail .deta_content ._prices > div span {
+    width: auto;
+    text-align: unset;
+}
+.appointment_detail .deta_content ._prices .discount {
+    color: #ccc;
+    margin: 0;
+}
+.appointment_detail .deta_content ._prices .rebate {
+    color: #4e5059;
+}
+.appointment_detail .deta_content ._prices .sarebate span {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #d76050;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 9px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 0 5px;
+    margin-right: 0;
+    opacity: .8;
+}
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content ._prices .discount,
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content ._prices .sarebate {
+    display: none;
+}
+.appointment_Result .appointment_Content .demand {
+    margin: 0;
+    padding: 9px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+.appointment_Result .appointment_Content .demand h4 {
+    margin: 0;
+    font-weight: bold;
+    line-height: normal;
+}
+.appointment_Result .appointment_Content .demand .deTxt {
+    line-height: normal;
+}
+.appointment_Result .appointment_Content .demand .deTxt li {
+    margin-bottom: 3px;
+}
+.appointment_Result .appointment_Content .demand .deTxt li span {
+    float: unset;
+    width: 100%;
+}
+.appointment_Result .appointment_Content .priceBox {
+    line-height: normal;
+    border-top: 1px solid #ddd;
+}
+.appointment_Result .appointment_Content .priceBox b,
+.appointment_Result .appointment_Content .priceBox span {
+    font-size: 15px;
+}
+.stepBox.fill_box .appointment_Result .price {
+    width: 100%;
+    background: #fff;
+}
+.appointment_Result.result_pc .instant {
+    border-radius: 5px;
+    padding: 9px;
+    font-size: 13px;
+    line-height: normal;
+}
+.appointment_Result.result_pc .instant h3 {
+    margin-bottom: 5px;
+}
+.appointment_Result.result_pc .instant h3:after {
+    content: unset;
+}
+.appointment_Result.result_pc .instant h3 i {
+    font-size: 15px;
+    margin-left: 9px;
+    color: #ffde00;
+}
+.appointment_Result.result_pc .instant p {
+    line-height: normal;
+}
+
+.stepBox.fill_box .price li,
+.stepBox.fill_box .price .total {
+    padding: 0 9px;
+}
+.stepBox.fill_box .price li:nth-last-child(2) {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #ddd;
+}
+.stepBox.fill_box .price .total {
+    padding-top: 9px;
+    margin-bottom: 0;
+    background: #4f6ea2;
+    color: #fff;
+    padding-bottom: 9px;
+    border-radius: 5px;
+}
+/** END order_form **/
+
+/** BEGIN order_complete **/
+.stepContainer._boxStyle {
+    margin-top: 20px;
+}
+.stepContainer .stepConTxt {
+    background-image: unset;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.stepContainer .stepConTxt > div {
+    width: 100%;
+}
+.stepContainer .stepConTxt i {
+    font-size: 50px;
+    color: #4baf4f;
+    margin-right: 9px;
+}
+.stepContainer .stepConTxt h2 {
+    font-size: 21px;
+    margin-bottom: 0;
+    text-align: justify;
+}
+.stepContainer .stepConTxt .number {
+    font-size: 17px;
+    display: inline-block;
+    color: #d76050;
+    margin-top: 9px;
+}
+.stepContainer .stepConTxt .number span {
+    font-weight: bold;
+    border-bottom: 1px solid #d76050;
+}
+.paymentInformation_card h3,
+.paymentInformation_atm h3 {
+    font-size: 15px;
+    background: #ddd;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 9px;
+    line-height: normal;
+}
+.paymentInformation_card,
+.paymentInformation_atm {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+}
+.paymentInformation_card ul,
+.paymentInformation_atm ul {
+    margin: 20px 0;
+}
+.paymentInformation_card li,
+.paymentInformation_atm li {
+    display: flex;
+    align-items: center;
+    color: #4e5059;
+}
+.paymentInformation_card h4,
+.paymentInformation_atm h4 {
+    margin-right: 0;
+    border-right: 1px solid #ddd;
+    padding: 3px 0;
+    width: 15%;
+    max-width: 150px;
+    line-height: normal;
+}
+.paymentInformation_card p,
+.paymentInformation_atm p {
+    width: 85%;
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: normal;
+}
+.paymentInformation_card .wutuv,
+.paymentInformation_atm .wutuv {
+    line-height: normal;
+    color: gray;
+    font-size: 13px;
+}
+.paymentInformation_card .cutoff b,
+.paymentInformation_atm .cutoff b {
+    color: #d76050;
+    font-size: 15px;
+    margin-left: 9px;
+    text-decoration: underline;
+}
+.detailTable-left .detailTable-inner .detailTable-row.detailTable-heading {
+    background: #f3f3f3;
+}
+.detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn a {
+    letter-spacing: 0;
+    padding: 0;
+    background: unset;
+}
+.stepBox.mm-page .stepContainer > .custodyBtn a:first-child {
+    margin-right: 9px;
+}
+/** END order_complete **/
+
+@media only screen and (max-width: 980px) {
+    .orderstep ul li {
+        font-size: 15px;
+        padding: 9px 11px;
+        border-bottom: 0;
+        text-align: center;
+    }
+    .orderstep li:last-child {
+        border-bottom: 0;
+    }
+    .orderstep span:nth-child(3) {
+        margin-left: 0;
+    }
+    .orderstep ul li span {
+        text-align: left;
+    }
+
+
+    /** BEGIN order_cart **/
+    .buyContent .title {
+        margin-top: 0;
+    }
+    .bookList {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .bookList .detailTable {
+        border: 0;
+        border-radius: 0;
+    }
+    .bookList {
+        border: 1px solid #ddd;
+    }
+    .bookList .bookTitle {
+        padding: 9px;
+    }
+    .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .buyBox .detailTable-left .detailTable-cell.recipBox h4 {
+        border-top: 1px solid #ddd;
+        letter-spacing: 0;
+        font-size: 17px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .detailTable-left .detailTable-cell.recipBox .tableTxt,
+    .detailTable-cell .tableTxt span,
+    .detailTable-cell .tableTxt span,
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+        width: 100%;
+        padding-left: 40px;
+        font-size: 15px;
+    }
+    .detailTable-left .detailTable-cell.recipBox .tableTxt {
+        margin: 0;
+        padding: 9px !important;
+        border-bottom-width: 1px;
+    }
+    .buyBox .detailTable-row.detailTable-content {
+        padding: 0;
+        width: calc(100% - 18px) !important;
+        margin: 9px auto;
+        background: #f3f3f3;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell {
+        display: flex;
+        align-items: center;
+        padding: 9px 0;
+        width: 100% !important;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .detailTable-row.detailTable-content:last-child .detailTable-cell {
+        padding: 9px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .detailTable-cell h4 {
+        text-align: right;
+        width: 35%;
+        margin-right: 9px;
+        font-size: 15px;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell .tableTxt {
+        text-align: left;
+        border-left: 1px solid #ddd;
+        width: 65%;
+    }
+    .detailTable .original,
+    .detailTable .special {
+        display: flex;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
+        padding: 9px 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span,
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .original span {
+        padding: 0;
+        margin-top: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell .tableTxt.buyIcon {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a {
+        margin-right: 20px;
+        width: 30%;
+        padding: 9px;
+        text-align: center;
+        background: #fff;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a:last-child {
+        margin-right: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
+        padding-left: 0;
+        font-size: 13px;
+    }
+    .stepBox .price {
+        width: 100%;
+        padding: 9px;
+        border-radius: 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .stepBox .price b {
+        width: 100%;
+    }
+    .bookList .custodyBtn a {
+        width: 100%;
+        padding: 9px;
+    }
+    .bookList .demand {
+        padding: 9px !important;
+        margin: 0;
+        border-bottom: 0;
+    }
+    .buyprice {
+        margin: 0;
+    }
+    .bookList.expired .detailTable {
+        border: 0;
+    }
+    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+        padding: 0;
+        width: auto;
+    }
+    .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
+        border: 0;
+    }
+    .buyBox.mm-page .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        display: unset;
+    }
+    /** END order_cart **/
+
+    /** BEGIN order_form **/
+    .stepBox.fill_box .writeContent._boxStyle {
+        padding-top: 20px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInput {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li,
+    .stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInput li h4 {
+        margin-bottom: 5px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput li .col {
+        margin-top: 0;
+    }.stepBox.fill_box.mm-page .writeContent .writeInformation1 .writeInput:last-child li:last-child,
+    .stepBox.fill_box.mm-page .writeContent .writeInformation2 .writeInput:last-child li:last-child {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li{
+        flex-direction: column;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li h4 {
+        margin: 0;
+        width: 100%;
+        padding: 3px 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+        font-size: 15px;
+        padding: 5px 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span {
+        padding: 5px 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
+        width: 45%;
+        margin-right: 5px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput .lnvoiceField {
+        padding: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
+        flex-direction: column;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
+        width: 100%;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
+        margin-left: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
+        top: -4px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInformation5 .writeInput li .ground {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .writeContent .writeInput.part4 .col_content, .stepBox.fill_box.mm-page .writeContent .writeInput.part5 .col_content {
+        width: 93%;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn {
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+    }
+    .fill_box footer {
+        margin-bottom: 0;
+    }
+
+
+    .mobile-plan-stecla {
+        box-shadow: unset;
+    }
+    .mobile-plan-stecla a.first {
+        padding: 9px 5%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        border-top: 1px solid #ddd;
+    }
+    .mobile-plan-stecla a.first div {
+        width: 75%;
+        padding: 0;
+    }
+    .mobile-plan-stecla a.first div p {
+        line-height: normal;
+        font-size: 13px;
+    }
+    .mobile-plan-stecla a.first i,
+    .mobile-plan-stecla a.first i:hover {
+        border-color: #4f6ea2;
+        background: #fff !important;
+        color: #4f6ea2 !important;
+        width: 25%;
+        top: 0;
+        right: 0;
+        font-weight: normal;
+    }
+    .mobile-plan-stecla a.first.this i {
+        border: 0;
+        background: #4f6ea2 !important;
+        color: #fff !important;
+    }
+    .mobile-plan-stecla a.reservation,
+    .mobile-plan-stecla a.ref_btn {
+        font-size: 15px;
+        width: 100%;
+        padding: 0;
+        background: #fff;
+    }
+    .mobile-plan-stecla a.reservation span,
+    .mobile-plan-stecla a.ref_btn span {
+        width: 100%;
+        border-radius: 0 !important;
+        padding: 9px !important;
+    }
+    .mobile-plan-stecla a.reservation span i,
+    .mobile-plan-stecla a.ref_btn span i {
+        margin-left: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span {
+        margin-left: 0;
+        font-size: 15px;
+        text-align: left;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span a {
+        font-size: 15px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span p {
+        margin-bottom: 9px;
+    }
+    .stepBox.fill_box.mm-page .writeContent .custodyBtn > span p:last-child {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .appointment_Content {
+        padding-top: 9px;
+    }
+    .stepBox.fill_box.mm-page .appointment_detail .appointment_deta {
+        background: #f3f3f3;
+    }
+    .stepBox.fill_box.mm-page .appointment_detail .deta_box {
+        padding: 20px 9px;
+    }
+    .stepBox.fill_box.mm-page .appointment_detail .program {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .priceBox,
+    .stepBox.fill_box.mm-page .instant,
+    .stepBox.fill_box.mm-page .demands {
+        padding: 20px 5% !important;
+    }
+    .stepBox.fill_box.mm-page .mobile-plan-stecla .plan-box .scroll li:last-child,
+    .stepBox.fill_box.mm-page .priceBox .valuation:last-child {
+        margin-bottom: 0;
+    }
+    .stepBox.fill_box.mm-page .demands {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    /** END order_form **/
+
+    /** BEGIN order_complete **/
+    .stepContainer._boxStyle {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .stepContainer .stepConTxt {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .stepContainer .stepConTxt i {
+        font-size: 80px;
+        margin-right: 0;
+        margin-bottom: 9px;
+    }
+    .stepContainer .stepConTxt h2 {
+        font-size: 17px;
+    }
+    .paymentInformation_card,
+    .paymentInformation_atm {
+        padding: 9px;
+    }
+    .paymentInformation_card li,
+    .paymentInformation_atm li {
+        margin-bottom: 0;
+    }
+    .paymentInformation_card h4,
+    .paymentInformation_atm h4 {
+        width: 30%;
+        padding: 15px 0;
+    }
+    .paymentInformation_card p,
+    .paymentInformation_atm p {
+        width: 90%;
+        margin-left: 15px;
+    }
+    .paymentInformation_card .cutoff p,
+    .paymentInformation_atm .cutoff p {
+        width: 90%;
+    }
+    .paymentInformation_card .cutoff b,
+    .paymentInformation_atm .cutoff b {
+        margin-left: 0;
+        font-size: 13px;
+    }
+    .detailTable-heading .detailTable-cell {
+        color: #435059;
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        flex-direction: column;
+    }
+    .detailTable-cell .tableTxt.siteName {
+        border-bottom-width: 1px;
+        margin: 9px 0 0;
+    }
+    /** END order_complete **/
+}
+/** END all_order **/

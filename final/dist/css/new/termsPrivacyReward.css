@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+/** BEGIN terms\privacy\reward **/
+.termsLink a {
+    padding: 0px 30px 9px;
+    font-size: 21px;
+}
+.tremsContent {
+	padding: 0;
+}
+.tremsContent p,
+.tremsContent li {
+	font-size: 15px;
+}
+.tremsContent h2,
+.tremsContent h3 {
+	font-size: 17px;
+}
+
+@media only screen and (max-width: 980px) {
+	.termsLink {
+		margin: 40px auto 0;
+		width: 90%;
+		padding: 0;
+	}
+	.termsLink a {
+		padding: 0 0 9px;
+    	font-size: 15px;
+	}
+	.tremsContent {
+		margin: 40px auto 20px auto;
+		padding: 0;
+	}
+}
+/** END terms\privacy\reward **/

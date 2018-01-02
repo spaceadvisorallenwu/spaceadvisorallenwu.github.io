@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+/** BEGIN about_us **/
+.ab_item1 h2,
+.ab_item2 h2,
+.ab_item3 h2,
+.ab_item4 h2,
+.ab_item1,
+.ab_item2,
+.ab_item3,
+.ab_item4 {
+	letter-spacing: 0;
+}
+.ab_item1 h2,
+.ab_item2 h2,
+.ab_item3 h2,
+.ab_item4 h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.abContent {
+	font-size: 15px;
+    line-height: 31px;
+    width: 90%;
+}
+.ab_item2,
+.ab_item3 {
+	margin: 40px auto;
+}
+.ab_item3 small {
+	margin-top: 20px;
+}
+
+@media only screen and (max-width: 980px) {
+	.ab_item3,
+	.ab_item1 {
+		padding: 0;
+	}
+}
+/** END about_us **/

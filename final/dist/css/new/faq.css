@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+/** BEGIN topBox **/
+.top_Search,
+.fill_question {
+	display: none;
+}
+.topBox .qaBox {
+	border-top: 0;
+	width: 60%;
+}
+.topBox .qaBox ul > li.active .qaTitle:before {
+	content: "-";
+}
+.topBox .sumber > li .sumTitle:before {
+	top: -5px;
+	font-size: 15px;
+    line-height: 30px;
+}
+.topBox .sumber > li .sumContent:before {
+	font-size: 15px;
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 980px) {
+	.topBox .qaBox._boxStyle {
+	    padding: 20px 0 0;
+        width: 90%;
+	}
+}
+/** END topBox **/

@@ -1,0 +1,644 @@
+@charset 'UTF-8';
+/** BEGIN search **/
+.search main > .search-box {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.search main > .search-box .first {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 9px 20px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+.search main > .search-box .first .input {
+    margin: 0;
+}
+.search main > .search-box .first .input a {
+    font-size: 15px;
+}
+.search main > .search-box .first .popular p,
+.search main > .search-box .first .popular a {
+    font-size: 13px;
+}
+.search main > .search-box .first a.add {
+    font-size: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0 9px;
+}
+.search main > .search-box .first a.add i {
+    font-size: 15px;
+}
+.search main > .search-box .first .popular {
+    margin-left: 9px;
+    width: calc(50% - 100px);
+}
+.search main >.search-box .search_bar > .content > ul {
+    width: 50%;
+}
+.search main >.search-box .search_bar > .content > ul > li {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.search main > .search-box .search_bar > .content > ul > li > p {
+    font-size: 15px;
+    font-weight: normal;
+    border-right: 1px solid #ddd;
+    margin-right: 20px;
+    padding: 5px 0;
+    width: 55px;
+}
+.search main > .search-box .search_bar > .content > ul > li select,
+.search main > .search-box .search_bar > .content > ul > li > input,
+.search main > .search-box .search_bar > .content > ul > li .search_item,
+.search.mapBox .search-box.searchPopup .content li.detatime input,
+.search.mapBox .search-box.searchPopup .content > ul > li input {
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_pepole,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_area {
+    left: 74px;
+}
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_place {
+    left: -187px;
+}
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_facility {
+    left: -72px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail {
+    left: 75px;
+    border-radius: 0 5px 5px 5px;
+    border-color: #ccc;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_open {
+    border-color: #ccc;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
+    left: 295px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area p.title {
+    font-size: 15px;
+    font-weight: normal;
+}
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
+    left: 190px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_area,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_pepole,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_preferential {
+    left: 190px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_plan {
+    left: 305px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_place {
+    left: -186px;
+    border-radius: 5px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_facility {
+    left: -76px;
+    border-radius: 5px;
+}
+.search .site-list {
+    /*border-bottom: 1px solid #ddd;*/
+    margin-bottom: 40px;
+    border-radius: 0;
+}
+.search .sequence {
+    background: unset;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding: 0 0 9px;
+}
+.search .sequence .content {
+    width: 100%;
+    max-width: unset;
+}
+.search .sequence .sequence-select,
+.search .sequence .sequence-click a {
+    border-color: #4e6e9d;
+    background: #fff;
+}
+.search .sequence .sequence-select li select {
+    font-size: 15px;
+    line-height: normal;
+    height: 35px;
+    background-size: 10%;
+}
+.search .sequence .sequence-click {
+    padding: 1px;
+    height: 35px;
+}
+.search .sequence .sequence-click a {
+    border-color: rgba(78, 110, 157, .8);
+    font-size: 15px;
+    line-height: 31px;
+    height: 31px;
+}
+.search .sequence .sequence-click a:hover {
+    background-color: rgba(78, 110, 157, .5);
+}
+.search .sequence .sequence-click a:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+.search .sequence .sequence-click a:nth-child(4) {
+    border-radius: 0 5px 5px 0;
+}
+.search .sequence .sequence-click a.this {
+    border-right: 1px solid #fff;
+    background: #dce2ec;
+    color: #4e6e9d;
+}
+.search .search-list ul {
+    background: rgba(0, 0, 0, .01);
+}
+.search .search-list > ul > li {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.search .search-list li .place .showbox-all .showbox img {
+    border-radius: 5px;
+}
+.search .search-list li .place {
+    width: 100%;
+    max-width: unset;
+    padding: 20px 9px;
+}
+.search .search-list li .place .text a.title {
+    font-size: 25px;
+    width: 100%;
+    margin-bottom: 9px;
+}
+.search .search-list li .place .text p.no {
+    font-size: 13px;
+    color: gray;
+    width: 100%;
+    margin-bottom: 9px;
+}
+.search .search-list li .place .text .chosen i {
+    font-size: 18px;
+    padding: 5px;
+}
+.search .search-list li .place .text .chosen span {
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: #4E5059;
+    font-size: 13px;
+}
+.search .search-list li .place .text .three {
+    height: unset;
+    line-height: unset;
+}
+.search .search-list li .place .text .three span {
+    font-size: 15px;
+    height: unset;
+    line-height: normal;
+    padding-right: 9px;
+}
+.search .search-list li .place .text .three span i {
+    margin-right: 3px;
+}
+.search .search-list li .place .text span.star {
+    width: 100%;
+    font-size: 15px;
+    line-height: normal;
+}
+.search .search-list li .place .text span.price {
+    width: 100%;
+    font-size: 15px;
+}
+.search .search-list li .place .text span.price .sarebate {
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+.search .search-list li .place .text span.price b b {
+    font-size: 30px;
+}
+.search .search-list li .place .text i.plan {
+    display: inline-block;
+    margin-top: 0;
+    font-size: 15px;
+}
+.search .search-list li .place .down {
+    padding-top: 0;
+}
+.search .search-list li .place .down .plan li {
+    padding: 9px;
+}
+.search .search-list li .place .down .plan li p.title {
+    font-size: 15px;
+    line-height: normal;
+    height: unset;
+}
+.search .search-list li .place .down .plan li p.price b b {
+    font-size: 15px;
+}
+.search .search-list li .place .down .plan ul a:last-child li {
+    border: 0;
+}
+.search .search-list li .place .evt_icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 55px 55px 0 0;
+}
+.search .search-list li .place .showbox-all .evt_icon:before {
+    content: '';
+    width: 20px;
+    height: 22px;
+    display: inline-block;
+    position: absolute;
+    top: -48px;
+    left: 6px;
+}
+.search .search-list li .place._lastTime .showbox-all .evt_icon:before {
+    background: url(../images/eve_icon1.png) top left no-repeat;
+}
+.search .search-list li .place._earlyBird .showbox-all .evt_icon:before {
+    background: url(../images/eve_icon2.png) top left no-repeat;
+}
+.search .search-list li .place._lastTime .evt_icon {
+    border-color: rgba(214, 95, 79, 0.8) transparent transparent transparent;
+}
+.search .search-list li .place._earlyBird .evt_icon {
+    border-color: rgba(78, 110, 159, 0.8) transparent transparent transparent;
+}
+.search .search-list li .place .ecentTime_box .evt {
+    display: none;
+    margin-top: 9px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.search .search-list li .place._lastTime .ecentTime_box .evt {
+    background: #d65f4f;
+}
+.search .search-list li .place._earlyBird .ecentTime_box .evt {
+    background: #4e6e9d;
+}
+
+.search .search-list li .place:not(._featured) .no .chosen .featured,
+.search .search-list li .place:not(._onlineBooking) .no .chosen i.fa-bolt {
+    display: none;
+}
+.search .search-list li .place._lastTime .evt_icon,
+.search .search-list li .place._earlyBird .evt_icon,
+.search .search-list li .place._lastTime .ecentTime_box .evt,
+.search .search-list li .place._earlyBird .ecentTime_box .evt {
+    display: inline-block;
+}
+.search main>.search-box .search_bar>.content>ul>li input.price {
+    border-radius: 0;
+}
+
+
+/** BEGIN mapSearch **/
+.search.mapBox .search-box {
+    padding: 20px 10%;
+}
+.search.mapBox .search-box.searchPopup {
+    top: 172px;
+    width: 65%;
+    padding-left: 10%;
+    border-radius: 0;
+}
+.search.mapBox .search-box.searchPopup .confirmBtn {
+    padding-top: 9px;
+    width: 93%;
+}
+.search.mapBox .search-box.searchPopup .search_bar>.content>ul {
+    width: 45%;
+}
+.search.mapBox .search-box.searchPopup .search_bar>.content>ul:first-child {
+    width: 55%;
+}
+.search.mapBox .search-box.searchPopup .first {
+    border: 0;
+    padding: 20px 7% 20px 0;
+}
+.mapBox .map {
+    top: 92px;
+}
+.mapBox .map a.search_item {
+    max-width: unset;
+    height: unset;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+.mapBox .map_plac {
+    padding-left: 10%;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.mapBox .placeBox {
+    width: 60%;
+}
+.mapBox .placeBox>ul>li {
+    width: calc(100% / 2);
+    padding-right: 9px;
+}
+.mapBox .map {
+    width: 35%;
+}
+.placeList {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.placeList:hover {
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all .4s;
+}
+.search.mapBox main>.search-box .first .input {
+    width: 100%;
+}
+.placeList .text .info_1 {
+    padding: 0;
+}
+.placeList .text .info_1 span {
+    font-size: 15px;
+}
+.mapBox .pageList .listTxt {
+    display: none;
+}
+.search.mapBox .search-box .search_bar>.content>ul>li .search_item.conditions {
+    border: 1px solid #ddd;
+}
+.search.mapBox .search-box.searchPopup .content li.detatime input {
+    width: 180px;
+}
+.placeList .text {
+    border: 0;
+    text-align: left;
+}
+.placeList .text p.title,
+.placeList .text .info_1 {
+    padding: 3px 0;
+    margin-bottom: 9px;
+    line-height: unset;
+    height: unset;
+    overflow: visible;
+    text-overflow: none;
+    display: block;
+    -webkit-line-clamp: unset;
+}
+.placeList .text .info_1 {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 5px;
+}
+.placeList .text .info_1 span {
+    display: inline-block;
+    overflow: hidden;
+    padding-right: 9px;
+    font-size: 13px;
+    color: #4e5059;
+}
+.placeList .text .info_1 span:last-child {
+    padding-right: 0;
+}
+.placeList .text .info_1 span i {
+    margin-right: 5px;
+}
+.placeList .text .info_2 {
+    display: inline-flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+}
+.placeList .text .info_2 span.star,
+.placeList .text .info_2 span.price {
+    line-height: normal;
+    height: auto;
+    width: 50%;
+    letter-spacing: 0;
+    font-size: 13px;
+}
+.placeList .text .info_2 span.price {
+    text-align: right;
+}
+.placeList .text span.price {
+    line-height: 15px;
+}
+/** END mapSearch **/
+
+@media only screen and (max-width: 1200px){
+    .placeList .text .info_1 span {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1128px) and (max-width: 1680px) {
+    .mapBox .map {
+        display: block;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .search .breadcrumb {
+        top: 44px;
+    }
+    .search .search-mobile {
+        top: 91px;
+    }
+    .search .search-mobile .search_menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f3f3f3;
+        padding: 5px 9px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .search .search-mobile .search_menu a {
+        padding: 9px;
+        margin: 0 9px;
+        border-bottom: 0;
+        width: 50%;
+        overflow: hidden;
+        font-size: 15px;
+        font-weight: normal;
+        color: #4e5059;
+        text-decoration: none;
+        text-align: center;
+    }
+    .search .search-mobile .search_menu a i {
+        margin-left: 9px;
+    }
+    .search .search-mobile .search_menu a:first-child {
+        border-right: 1px solid #ddd;
+    }
+    .search .search-condition {
+        padding: 20px 5%;
+    }
+    .search .search-condition .first {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .search .search-condition .first .input input {
+        font-size: 15px;
+        width: 100%;
+    }
+    .search .search-condition .first .input a {
+        display: none;
+    }
+    .search .search-condition .first .popular {
+        margin: 20px 0;
+        font-size: 15px;
+    }
+    .search .search-condition .search_bar>ul>li,
+    .search .search-condition .search_bar>ul>li:first-child {
+        border-color: #f3f3f3;
+    }
+    .search .search-condition .search_bar>ul>li:last-child {
+        border-bottom: 0;
+    }
+    .search .search-condition .search_bar>ul>li>p {
+        margin: 9px 0;
+        padding: 3px 9px;
+        border-radius: 9px;
+        background: #f3f3f3;
+        font-size: 15px;
+    }
+    .search .search-condition .search_bar>ul>li>p.this {
+        border-bottom: 0;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail {
+        width: 100%;
+        padding: 0 9px;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li {
+        font-size: 15px;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li p {
+        font-size: 15px;
+        padding-bottom: 0;
+        margin-bottom: 9px;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li span {
+        margin-bottom: 9px;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li span input[type="checkbox"]+label {
+        font-size: 13px;
+        border-color: #ccc;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li span input[type="checkbox"]:checked+label {
+        background: #4f6ea2;
+        border-color: #4f6ea2;
+    }
+    .search .search-condition .search_bar>ul>li .search_item_detail li select {
+        line-height: normal;
+        font-size: 15px;
+        height: 35px;
+    }
+    .search .search-send {
+        padding: 20px 5%;
+        box-shadow: none;
+        border-top: 1px solid #ddd;
+    }
+    .search .search-send .search-send-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .search .search-send a {
+        margin: 0 9px;
+        width: unset;
+        height: unset;
+        width: 50%;
+    }
+    .search .search-send a:first-child {
+        background: inherit;
+    }
+    .search .search-condition .search_bar>ul>li select {
+        height: unset;
+        margin: 9px 0;
+    }
+    .search .site-list {
+        margin-bottom: 0;
+        padding-top: 20px;
+    }
+    .search .search-list {
+        border-radius: 0;
+    }
+    .search .search-list li .place {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 9px;
+    }
+    .search .search-list li .place .text i.plan {
+        display: none;
+    }
+    .search .search-list li .place .text .three span,
+    .search .search-list li .place .text span.star,
+    .search .search-list li .place .ecentTime_box .evt,
+    .search .search-list li .place .text span.price {
+        font-size: 13px;
+    }
+    .search .search-list li .place .text {
+        margin-top: 9px;
+    }
+    .search .search-list li .place .text p.no,
+    .search .search-list li .place .text a.title {
+        margin-bottom: 5px;
+    }
+    .search .search-list li .place .ecentTime_box .evt,
+    .search .search-list li .place .text span.price {
+        margin-top: 5px;
+    }
+    .search .search-list li .place .text span.price b b {
+        font-size: 25px;
+    }
+
+
+    /** BEGIN mapSearch **/
+    .mapBox .map {
+        display: none;
+    }
+    .placeList .text .info_1 span {
+        font-size: 12px;
+    }
+    .map .search .site-list {
+        padding: 20px 5%;
+    }
+    .mapBox .placeBox {
+        width: 100%;
+    }
+    .placeList .text {
+        padding: 9px;
+    }
+    .placeList .text .info_1,
+    .placeList .text .info_2 {
+        flex-direction: column;
+        height: unset;
+    }
+    .placeList .text p.title {
+        line-height: normal;
+    }
+    .placeList .text .info_1 span,
+    .placeList .text .info_2 span.star,
+    .placeList .text .info_2 span.price {
+        width: 100%;
+        line-height: unset;
+        text-align: left;
+        margin-bottom: 9px;
+    }
+    /** END mapSearch **/
+}
+/** END Search **/

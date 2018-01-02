@@ -1,0 +1,124 @@
+@charset 'UTF-8';
+/** BEGIN how_it_works **/
+.instructionsBox .qaBox,
+.applicationBox .qaBox {
+	margin: 80px auto;
+}
+.instructionStep {
+	max-width: 770px;
+}
+.instructionStep ul {
+	display: flex;
+}
+.instructionStep li {
+	margin: 0 5% 0 0;
+}
+.instructionStep li,
+.instructionStep li:nth-child(3) {
+	width: 33%;
+}
+.instructionStep .insLine {
+    left: 50%;
+    top: 43%;
+    max-width: 600px;
+    height: 9px;
+}
+.instructionFlow {
+	margin: 40px auto;
+}
+.instructionFlow_Box > ul {
+    display: flex;
+}
+.instructionFlow_Box>ul>li {
+	width: 100%;
+}
+.instructionFlow_Box .infoarrw {
+	margin: 0 5px;
+}
+.instructionFlow_Box .instrPhoto {
+    width: 90px;
+    max-height: 90px;
+    overflow: hidden;
+}
+.instructionFlow_Box .initem2 .instrPhoto {
+	width: 170px;
+}
+.instructionFlow_Box .instrPhoto img {
+	width: 100%;
+}
+.instructionFlow_Box .instrTxt h3 {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+.instructionFlow_Box .instrTxt li {
+	margin-bottom: 9px;
+	font-size: 15px;
+	padding-left: 19px;
+}
+.instructionsBox main h3,
+.instructionStep h3 b {
+	font-weight: bold;
+}
+.instructionStep h3 b {
+	margin-right: 9px;
+}
+.instructionsBox .qaLink a {
+	font-size: 15px;
+}
+
+@media only screen and (max-width: 980px) {
+	.instructionsBox main h2,
+	.instructionsBox main h3 {
+		font-size: 21px;
+	}
+	.instructionStep {
+		padding: 0;
+	}
+	.instructionStep h3 b {
+		margin-right: 3px;
+	}
+	.instructionsBox .qaBox,
+	.applicationBox .qaBox {
+		margin: 60px auto;
+	}
+	.instructionStep .in_iconImg {
+		max-width: 80px;
+	}
+	.instructionFlow_Box .instrPhoto {
+	    width: 50px;
+		max-height: 48px;
+		margin-bottom: 9px;
+	}
+	.instructionFlow_Box .initem2 .instrPhoto {
+		width: 87px;
+	}
+	.instructionFlow_Box .instrTxt h3 {
+		font-size: 15px;
+	}
+	.instructionFlow_Box > ul {
+		height: 80px;
+	}
+	.instructionFlow_Box .infoarrw {
+    	width: 25px;
+    	height: 50px;
+    	top: 16px;
+	}
+	.instructionFlow_Box .infoarrw:nth-child(2) {
+		left: -10px;
+	}
+	.instructionFlow_Box .infoarrw:nth-child(4) {
+		left: 10px;
+	}
+	.instructionStep .insLine {
+		top: 48%;
+		height: 5px;
+	}
+	.initem3 .instrPhoto {
+		left: 7px;
+	}
+	.ab_item4 .abContent {
+	    padding: 9px 0;
+	}
+}
+/** END how_it_works **/
