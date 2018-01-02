@@ -810,16 +810,17 @@ footer .top li a {
 	font-size: 13px;
     margin-bottom: 5px;
     /*color: #4e5059;*/
-    color: #f3f3f3;
+    color: #ccc;
 }
 footer .top li p {
 	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 20px;
+    color: #fff;
 }
 footer .top li a:hover {
 	/*color: #4e5059;*/
-    color: #ccc;
+    color: #fff;
 	text-decoration: underline;
 }
 
