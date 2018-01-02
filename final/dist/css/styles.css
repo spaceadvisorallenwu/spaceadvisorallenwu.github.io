@@ -2,6 +2,9 @@
 body {
     color: #4e5059;
 }
+._display_none {
+    display: none;
+}
 .btn {
     letter-spacing: 0 !important;
     border-radius: 5px !important;
@@ -912,10 +915,10 @@ footer .bottom li a img:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
 }
 .index .flexslider .search {
-    width: 80%;
-    margin: 20px 10%;
+    /*width: 80%;*/
+    /*margin: 20px 10%;*/
     padding: 20px 0;
-    background-color: rgba(253, 253, 253, .7);
+    background-color: rgba(0,0,0,0.4););
 }
 .index .flexslider .search .search-box .search_item,
 .index .flexslider .search input,
@@ -942,7 +945,8 @@ footer .bottom li a img:hover {
 .index .flexslider .search .other a.advanced {
     margin: 0 9px;
     font-size: 15px;
-    color: #4e5059;
+    /*color: #4e5059;*/
+    color: #f3f3f3;
 }
 .index .flexslider .search .other i {
     margin-right: 3px;
@@ -1240,12 +1244,6 @@ footer .bottom li a img:hover {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.64) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
 }
-.index .information-list .information .text {
-    border: 1px solid #ddd;
-    border-top: 0;
-    border-radius: 0 0 5px 5px;
-    background: #fff;
-}
 .index .information-list .information:hover span.pic p {
     transition: all .4s;
 }
@@ -1262,6 +1260,29 @@ footer .bottom li a img:hover {
 }
 .index .information-list a.more:hover {
     color: #4e5059;
+}
+.index .information-list .information span.pic p {
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-line-clamp: unset;
+    bottom: 0;
+    height: auto;
+    line-height: normal;
+    padding: 5px 9px;
+    font-size: 17px;
+}
+.index .information-list .information .text {
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+    padding: 9px;
+    margin-bottom: 9px;
+}
+.index .information-list .information .text p {
+    line-height: normal;
+    height: 55px;
+    -webkit-line-clamp: 3;
+    font-size: 13px;
 }
 .index .brand-list {
     width: 80%;
