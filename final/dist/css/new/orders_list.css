@@ -64,10 +64,29 @@
 }
 .bookList .bookTitle ._left .recstate span {
     margin-left: 9px;
-    border: 1px solid #b61e1a;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    color: #b61e1a;
+    color: #ccc;
     font-size: 13px;
+}
+.bookList[data-stat="checking"] .bookTitle ._left .recstate span,
+.bookList[data-stat="notyetpay"] .bookTitle ._left .recstate span {
+    color: #b61e1a;
+    border-color: #b61e1a;
+}
+.bookList[data-stat="paid"] .bookTitle ._left .recstate span {
+    color: #4baf4f;
+    border-color: #4baf4f;
+}
+.bookList[data-stat="done"] .bookTitle ._left .recstate span {
+    color: #4e5059;
+    border-color: #4e5059;
+}
+.bookList[data-stat="reject"] .bookTitle ._left .recstate span,
+.bookList[data-stat="expired"] .bookTitle ._left .recstate span,
+.bookList[data-stat="cancel"] .bookTitle ._left .recstate span, {
+    color: #ccc;
+    border-color: #ccc;
 }
 .bookList .bookTitle ._right {
     text-align: right;
@@ -87,59 +106,6 @@
     margin-right: 0;
 }
 
-
-/* 付款資訊 */
-.pay-information {
-    display: none;
-    background-color: #f3f3f3;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    color: #4e5059;
-}
-.pay-information p {
-    font-size: 21px;
-    margin-bottom: 20px;
-}
-.pay-information .pay-info-detail {
-    display: flex;
-    flex-wrap: wrap;
-    line-height: normal;
-    letter-spacing: 0;
-}
-.pay-information .pay-info-detail div:nth-child(2n+1) {
-    width: 100px;
-    padding-bottom: 9px;
-    border-right: 1px solid #ddd;
-    margin-right: 20px;
-}
-.pay-information .pay-info-detail div:nth-child(2n+2) {
-    width: calc(100% - 144px);
-}
-.pay-information .pay-info-detail div:nth-child(2n+2) span {
-    display: inline-block;
-    margin-right: 1em;
-}
-.pay-information a {
-    display: inline-block;
-    font-size: 15px;
-    color: #4f6ea2;
-}
-.pay-information a:hover {
-    color: #2d5392;
-    border-bottom: 1px solid #2d5392;
-}
-@media (max-width:640px) {
-    .pay-information .pay-info-detail div:nth-child(2n+1) {
-        width: 100%;
-        font-weight: bold;
-    }
-    .pay-information .pay-info-detail div:nth-child(2n+2) {
-        width: 100%;
-    }
-}
-
 /* 取消訂單 */
 .orderrec .orderlist .cancel .caseno .promote {
     color: #b6b6b6;
@@ -147,7 +113,8 @@
 
 /* 前往評價 */
 .orders_list_rfp .bookList {
-    padding-bottom: 120px;
+    padding-bottom: 40px;
+    overflow: visible;
 }
 .bookList .buttons .comment {
     display: inline-block;
@@ -156,8 +123,8 @@
 .bookList .buttons .comment .comment_list {
     display: none;
     position: absolute;
-    top: 33px;
-    border-top: 3px solid #4f6ea1;
+    top: 35px;
+    border-top: 4px solid #4f6ea1;
     box-sizing: border-box;
 }
 .bookList .buttons .comment .comment_list div {
@@ -180,6 +147,86 @@
 }
 .bookList .buttons .comment .comment_list div a:hover {
     background-color: #b9c5da;
+}
+
+
+/* 付款資訊 */
+.paymentInformation {
+    display: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+    background: #f3f3f3;
+    margin-bottom: 40px;
+}
+.paymentInformation h3 {
+    font-size: 15px;
+    background: #ddd;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 9px;
+    line-height: normal;
+}
+.paymentInformation ul {
+    margin: 20px 0;
+}
+.paymentInformation li {
+    display: flex;
+    align-items: center;
+    color: #4e5059;
+}
+.paymentInformation h4 {
+    margin-right: 0;
+    border-right: 1px solid #ddd;
+    padding: 5px 0;
+    width: 15%;
+    max-width: 150px;
+    line-height: normal;
+}
+.paymentInformation p {
+    width: 85%;
+    margin-left: 20px;
+    font-weight: bold;
+    line-height: normal;
+}
+.paymentInformation .cutoff b {
+    color: #d76050;
+    font-size: 15px;
+    margin-left: 9px;
+    text-decoration: underline;
+}
+.paymentInformation a {
+    color: #4f6ea2;
+    text-decoration: none;
+    cursor: pointer;
+}
+.paymentInformation a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 980px) {
+    .paymentInformation {
+        padding: 9px;
+    }
+    .paymentInformation li {
+        margin-bottom: 0;
+    }
+    .paymentInformation h4 {
+        width: 30%;
+        padding: 15px 0;
+    }
+    .paymentInformation p {
+        width: 90%;
+        margin-left: 15px;
+    }
+    .paymentInformation .cutoff p {
+        width: 90%;
+    }
+    .paymentInformation .cutoff b {
+        margin-left: 0;
+        font-size: 13px;
+    }
 }
 
 /** END orders_list **/

@@ -11,12 +11,20 @@
     margin: 0 auto;
     max-width: none;
 }
+.index .theme-list li p.text {
+    max-height: 77px;
+    width: 75%;
+    text-align: justify;
+}
 .index .time-limit li:hover,
 .index .theme-list li:hover {
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: all .4s;
+}
+.index .theme-list li:hover i.mark {
+    background-color: rgba(0, 0, 0, 0.75);
 }
 .flexslider .slides li a {
     opacity: 1;
@@ -189,6 +197,9 @@
 }
 .index .theme-list li:hover p.title {
     top: 55%;
+}
+.index .theme-list li:hover p.text {
+    top: 70%;
 }
 .index .theme-list li p.text {
     font-size: 15px;
@@ -381,17 +392,17 @@
         background: #fff;
     }
     .index .theme-list li i.mark {
-        background-color: rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .55);
     }
     .index .theme-list li p.title {
         height: 30px;
-        top: 40%;
+        top: 30%;
         font-size: 21px;
     }
     .index .theme-list li p.text {
         font-size: 13px;
         max-height: fit-content;
-        top: 70%;
+        top: 65%;
     }
     .index .theme-list li span.pic {
         height: 180px;

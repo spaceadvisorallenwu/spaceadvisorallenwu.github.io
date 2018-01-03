@@ -100,7 +100,7 @@
 					<div class="tab-content">
 						<!-- 審核中訂單 -->
 						<div role="tabpanel" class="tab-pane active" id="checkorder">
-							<div class="bookList" data-id="1">
+							<div class="bookList" data-id="1" data-stat="checking">
 								<div class="bookTitle">
 									<div class="_left">
 										<div class="recno">訂單編號<span>113504103</span></div>
@@ -228,29 +228,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div class="buttons">
-									<ul class="evaluate">
-										<li><a class="usable"><span class="btn btn-c-2 btn-m">前往評價</span></a>
-											<ul>
-												<li><a href="#">紫艷宴會廳</a></li>
-												<li><a href="#">The Kitchen Table</a></li>
-											</ul>
-										</li>
-									</ul>
-									<a id="style-open1" class="usable"><span class="btn btn-c-2 btn-m">付款資訊</span></a>
-									<a href="#" class="usable"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
-								</div>
-								<div class="pay-information style-other1">
-									<p>您選擇的付款方式為信用卡線上刷卡，以下為付款資訊：</p>
-									<div class="pay-info-detail">
-										<div>Master Card</div><div>**** **** **** **** 0984</div>
-										<div>付款方式</div><div><span>國泰世華銀行</span><span>信用卡6期-0利率</span><span>每期10,000元x6期</span></div>
-										<div>付款日期</div><div>2017/03/20 (五)</div>
-										<div>付款總額</div><div>TWD 60,000</div>
-									</div>
-									<a href="#">查看發票</a>
-								</div> -->
-
 								<div class="buttons">
 									<div class="comment">
 										<span class="btn btn-c-2 btn-m">前往評價</span>
@@ -266,18 +243,30 @@
 										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
 									</div>
 								</div>
-								<div class="pay-information">
-									<p>您選擇的付款方式為信用卡線上刷卡，以下為付款資訊：</p>
-									<div class="pay-info-detail">
-										<div>Master Card</div><div>**** **** **** **** 0984</div>
-										<div>付款方式</div><div><span>國泰世華銀行</span><span>信用卡6期-0利率</span><span>每期10,000元x6期</span></div>
-										<div>付款日期</div><div>2017/03/20 (五)</div>
-										<div>付款總額</div><div>TWD 60,000</div>
-									</div>
+								<div class="paymentInformation _card">
+									<h3>以下為您的付款資訊</h3>
+									<ul>
+										<li>
+											<h4>信用卡</h4>
+											<p>**** **** **** **** 0984</p>
+										</li>
+										<li>
+											<h4>付款方式</h4>
+											<p>國泰世華銀行 信用卡6期-0利率 每期3167元x6期</p>
+										</li>
+										<li>
+											<h4>付款日期</h4>
+											<p>2017/03/19(五)</p>
+										</li>
+										<li>
+											<h4>付款總額</h4>
+											<p>TWD 1,9000</p>
+										</li>
+									</ul>
 									<a href="#">查看發票</a>
 								</div>
 							</div>
-							<div class="bookList" data-id="2">
+							<div class="bookList" data-id="2" data-stat="notyetpay">
 								<div class="bookTitle">
 									<div class="_left">
 										<div class="recno">訂單編號<span>113504103</span></div>
@@ -406,9 +395,737 @@
 									</div>
 								</div>
 								<div class="buttons">
-									<a href="javascript:;" class="disable"><span class="btn btn-c-2 btn-m">前往評價</span></a>
-									<a href="javascript:;" class="disable"><span class="btn btn-c-2 btn-m">付款資訊</span></a>
-									<a href="javascript:;" class="disable"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment">
+										<span class="btn btn-c-2 btn-m">立即付款</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="bookList" data-id="3" data-stat="paid">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>已付款</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+									</div>
+								</div>
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">操作</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment">
+										<span class="btn btn-c-2 btn-m">付款資訊</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
+								</div>
+								<div class="paymentInformation _atm">
+									<h3>以下為您的付款資訊</h3>
+									<ul>
+										<li>
+											<h4>轉帳銀行</h4>
+											<p>國泰世華(013)</p>
+										</li>
+										<li>
+											<h4>轉帳帳號</h4>
+											<p>311561748960032</p>
+										</li>
+										<li>
+											<h4>付款日期</h4>
+											<p>2017/03/19(五)</p>
+										</li>
+										<li>
+											<h4>付款總額</h4>
+											<p>TWD 1,9000</p>
+										</li>
+									</ul>
+									<a href="#">已寄送紙本發票</a>
+								</div>
+							</div>
+							<div class="bookList" data-id="4" data-stat="done">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>已結束</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+									</div>
+								</div>
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">操作</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment disable">
+										<span class="btn btn-c-2 btn-m">付款資訊</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="bookList" data-id="5" data-stat="reject">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>訂單不成立，場地已滿</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+									</div>
+								</div>
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">操作</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment disable">
+										<span class="btn btn-c-2 btn-m">付款資訊</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="bookList" data-id="6" data-stat="expired">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>未付款，已過期</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+									</div>
+								</div>
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">操作</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment disable">
+										<span class="btn btn-c-2 btn-m">付款資訊</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="bookList" data-id="7" data-stat="cancel">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>取消訂單</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+									</div>
+								</div>
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">操作</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="連結">
+													<div class="tableTxt buyIcon">
+														<a href="javascript:;" class="composeBtn">
+															<span>超值加購</span>
+														</a>
+														<a href="javascript:;" class="detailBtn">
+															<span>場地管理</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="buttons">
+									<div class="comment disable">
+										<span class="btn btn-c-2 btn-m">前往評價</span>
+									</div>
+									<div class="payment disable">
+										<span class="btn btn-c-2 btn-m">付款資訊</span>
+									</div>
+									<div class="">
+										<a href="javascript:;"><span class="btn btn-c-2 btn-m">聯繫場地主</span></a>
+									</div>
 								</div>
 							</div>
 							<!-- 頁碼 -->

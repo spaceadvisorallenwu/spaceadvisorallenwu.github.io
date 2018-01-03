@@ -11,19 +11,20 @@
 }
 .orderstep ul li {
     border-right: 1px solid #ddd;
-    padding: 20px;
+    padding: 11px;
     font-size: 21px;
     line-height: normal;
     color: #4f6da2;
-    opacity: .75;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: .55;
 }
 .orderstep ul li.active {
     background: #4f6ea2;
     color: #fff;
     opacity: 1;
+    border: 0;
 }
 .orderstep ul li b {
     margin-right: 5px;
@@ -747,8 +748,11 @@
     font-weight: bold;
     border-bottom: 1px solid #d76050;
 }
-.paymentInformation_card h3,
-.paymentInformation_atm h3 {
+.paymentInformation {
+    background: #f3f3f3;
+    margin-bottom: 40px;
+}
+.paymentInformation h3 {
     font-size: 15px;
     background: #ddd;
     display: inline-block;
@@ -756,47 +760,40 @@
     padding: 9px;
     line-height: normal;
 }
-.paymentInformation_card,
-.paymentInformation_atm {
+.paymentInformation {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     font-size: 15px;
 }
-.paymentInformation_card ul,
-.paymentInformation_atm ul {
+.paymentInformation ul {
     margin: 20px 0;
 }
-.paymentInformation_card li,
-.paymentInformation_atm li {
+.paymentInformation li {
     display: flex;
     align-items: center;
     color: #4e5059;
 }
-.paymentInformation_card h4,
-.paymentInformation_atm h4 {
+.paymentInformation h4 {
     margin-right: 0;
     border-right: 1px solid #ddd;
-    padding: 3px 0;
+    padding: 5px 0;
     width: 15%;
     max-width: 150px;
     line-height: normal;
 }
-.paymentInformation_card p,
-.paymentInformation_atm p {
+.paymentInformation p {
     width: 85%;
     margin-left: 20px;
     font-weight: bold;
     line-height: normal;
 }
-.paymentInformation_card .wutuv,
-.paymentInformation_atm .wutuv {
+.paymentInformation .wutuv {
     line-height: normal;
     color: gray;
     font-size: 13px;
 }
-.paymentInformation_card .cutoff b,
-.paymentInformation_atm .cutoff b {
+.paymentInformation .cutoff b {
     color: #d76050;
     font-size: 15px;
     margin-left: 9px;
@@ -1027,30 +1024,24 @@
     .stepContainer .stepConTxt h2 {
         font-size: 17px;
     }
-    .paymentInformation_card,
-    .paymentInformation_atm {
+    .paymentInformation {
         padding: 9px;
     }
-    .paymentInformation_card li,
-    .paymentInformation_atm li {
+    .paymentInformation li {
         margin-bottom: 0;
     }
-    .paymentInformation_card h4,
-    .paymentInformation_atm h4 {
+    .paymentInformation h4 {
         width: 30%;
         padding: 15px 0;
     }
-    .paymentInformation_card p,
-    .paymentInformation_atm p {
+    .paymentInformation p {
         width: 90%;
         margin-left: 15px;
     }
-    .paymentInformation_card .cutoff p,
-    .paymentInformation_atm .cutoff p {
+    .paymentInformation .cutoff p {
         width: 90%;
     }
-    .paymentInformation_card .cutoff b,
-    .paymentInformation_atm .cutoff b {
+    .paymentInformation .cutoff b {
         margin-left: 0;
         font-size: 13px;
     }
