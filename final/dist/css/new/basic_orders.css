@@ -9,7 +9,7 @@
 }
 .menubar ul {
     height: 44px;
-    width: 100%;
+    width: 80%;
     padding: 0;
     margin: 0 auto;
     max-width: 1100px;
@@ -39,6 +39,63 @@
 /* 訂單管理 */
 main.order {
 	margin-top: 88px;
+}
+
+.orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+.orders_list_new .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+.orders_list_past .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+.orders_list_cancel .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+.orders_space .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
+}
+.bookList .bookTitle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 15px;
+    line-height: normal;
+    color: gray;
+}
+.bookList .bookTitle span {
+    padding: 0 5px;
+}
+.bookList .bookTitle ._left,
+.bookList .bookTitle ._right {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.bookList .bookTitle ._left .recstate span {
+    margin-left: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ccc;
+    font-size: 13px;
+}
+.bookList[data-stat="checking"] .bookTitle ._left .recstate span,
+.bookList[data-stat="notyetpay"] .bookTitle ._left .recstate span {
+    color: #b61e1a;
+    border-color: #b61e1a;
+}
+.bookList[data-stat="paid"] .bookTitle ._left .recstate span {
+    color: #4baf4f;
+    border-color: #4baf4f;
+}
+.bookList[data-stat="done"] .bookTitle ._left .recstate span {
+    color: #4e5059;
+    border-color: #4e5059;
+}
+.bookList[data-stat="reject"] .bookTitle ._left .recstate span,
+.bookList[data-stat="expired"] .bookTitle ._left .recstate span,
+.bookList[data-stat="cancel"] .bookTitle ._left .recstate span, {
+    color: #ccc;
+    border-color: #ccc;
+}
+.bookList .bookTitle ._right {
+    text-align: right;
+    justify-content: flex-end;
 }
 
 

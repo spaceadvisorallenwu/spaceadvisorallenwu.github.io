@@ -266,10 +266,10 @@
     left: 6px;
 }
 .search .search-list li .place._lastTime .showbox-all .evt_icon:before {
-    background: url(../images/eve_icon1.png) top left no-repeat;
+    background: url(../../images/eve_icon1.png) top left no-repeat;
 }
 .search .search-list li .place._earlyBird .showbox-all .evt_icon:before {
-    background: url(../images/eve_icon2.png) top left no-repeat;
+    background: url(../../images/eve_icon2.png) top left no-repeat;
 }
 .search .search-list li .place._lastTime .evt_icon {
     border-color: rgba(214, 95, 79, 0.8) transparent transparent transparent;

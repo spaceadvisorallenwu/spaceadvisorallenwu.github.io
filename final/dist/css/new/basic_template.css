@@ -106,6 +106,7 @@
 .bookList {
     margin-bottom: 20px;
     overflow: hidden;
+    line-height: normal;
 }
 .bookList .bookTitle {
     background: #fff;
@@ -148,6 +149,9 @@
     border: 1px solid #ddd;
     overflow: hidden;
 }
+.bookList .detailTable .original {
+    margin-bottom: 0;
+}
 .bookList .detailTable-heading .detailTable-cell {
     font-size: 13px;
     border-bottom: 1px solid #f3f3f3;
@@ -188,7 +192,7 @@
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell {
     text-align: center;
-    padding: 5px 20px;
+    padding: 9px 20px;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a {
     width: 80px;
@@ -239,7 +243,6 @@
     opacity: .8;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span {
-    margin-top: 3px;
     color: #4e5059;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell .original {

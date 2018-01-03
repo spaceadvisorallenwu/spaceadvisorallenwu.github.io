@@ -1136,18 +1136,7 @@
 					else{
 						$cart.removeClass('_fixed');
 						// 還原 #cart 的座標系統為 absolute
-						$cart.css({
-							position: 'absolute',
-							top: _top
-						});
-						$nav.css({
-							position: 'absolute',
-							top: 0
-						});
-						$calendar.css({
-							position: 'absolute',
-							top: 0
-						});
+						$('.day-plan, .nav, .anchor').removeAttr( 'style' );
 					}
 				});
 			});//桌機用
@@ -1168,6 +1157,7 @@
 							position: 'absolute',
 							top: _top
 						});
+						$('.day-plan,.nav,.anchor').removeAttr( 'style' );
 					}
 				});
 			});//手機用
