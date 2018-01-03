@@ -26,7 +26,8 @@
 		<link href="dist/css/main_dan.css" rel="stylesheet" type="text/css" media=""/>
 
 		<!-- STYLES -->
-		<link href="dist/css/new/_basic.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/new/basic_template.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/space.css" rel="stylesheet" type="text/css" media=""/>
 	</head>
 	<body>
@@ -1154,8 +1155,6 @@
 			$(function(){
 				var $cart = $('.anchor-mobile'),
 					_top = $cart.offset().top;
-					console.log(_top);
-					console.log(_allH);
 				var $win = $(window).scroll(function(){
 					if($win.scrollTop() >= _top){
 						if($cart.css('position')!='fixed'){

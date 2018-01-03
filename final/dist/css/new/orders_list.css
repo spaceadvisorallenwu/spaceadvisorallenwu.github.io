@@ -1,0 +1,185 @@
+@charset 'UTF-8';
+/** BEGIN orders_list **/
+
+/* Nav tabs */
+.order-management .nav-tabs {
+    margin: 20px 0 60px;
+}
+.order-management .nav-tabs>li>a {
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    color: #4c5059;
+    border-bottom: 3px solid #d5d6d4;
+    text-align: center;
+    padding: 9px 30px;
+    font-size: 17px;
+    line-height: normal;
+    font-weight: normal;
+}
+.order-management .nav-tabs>li.active>a,
+.order-management .nav-tabs>li>a:hover {
+    background-color: transparent;
+    color: #4f6ea1;
+    border: none;
+    border-bottom: 3px solid #4f6ea1;
+    font-weight: bold;
+}
+.order-management .pagebox {
+    margin: 0;
+    width: 100%;
+}
+@media screen and (max-width:540px) {
+    .order-management .nav-tabs>li {
+        width: 33.33%;
+    }
+    .order-management .nav-tabs>li>a {
+        padding: 10px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+.orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
+}
+.bookList .bookTitle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 15px;
+    line-height: normal;
+    color: gray;
+}
+.bookList .bookTitle span {
+    padding: 0 5px;
+}
+.bookList .bookTitle ._left,
+.bookList .bookTitle ._right {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+.bookList .bookTitle ._left .recstate span {
+    margin-left: 9px;
+    border: 1px solid #b61e1a;
+    border-radius: 5px;
+    color: #b61e1a;
+    font-size: 13px;
+}
+.bookList .bookTitle ._right {
+    text-align: right;
+    justify-content: flex-end;
+}
+.bookList .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    margin: 20px auto;
+}
+.bookList .buttons > div {
+    margin-right: 9px;
+}
+.bookList .buttons > div:last-child {
+    margin-right: 0;
+}
+
+
+/* 付款資訊 */
+.pay-information {
+    display: none;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    color: #4e5059;
+}
+.pay-information p {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.pay-information .pay-info-detail {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: normal;
+    letter-spacing: 0;
+}
+.pay-information .pay-info-detail div:nth-child(2n+1) {
+    width: 100px;
+    padding-bottom: 9px;
+    border-right: 1px solid #ddd;
+    margin-right: 20px;
+}
+.pay-information .pay-info-detail div:nth-child(2n+2) {
+    width: calc(100% - 144px);
+}
+.pay-information .pay-info-detail div:nth-child(2n+2) span {
+    display: inline-block;
+    margin-right: 1em;
+}
+.pay-information a {
+    display: inline-block;
+    font-size: 15px;
+    color: #4f6ea2;
+}
+.pay-information a:hover {
+    color: #2d5392;
+    border-bottom: 1px solid #2d5392;
+}
+@media (max-width:640px) {
+    .pay-information .pay-info-detail div:nth-child(2n+1) {
+        width: 100%;
+        font-weight: bold;
+    }
+    .pay-information .pay-info-detail div:nth-child(2n+2) {
+        width: 100%;
+    }
+}
+
+/* 取消訂單 */
+.orderrec .orderlist .cancel .caseno .promote {
+    color: #b6b6b6;
+}
+
+/* 前往評價 */
+.orders_list_rfp .bookList {
+    padding-bottom: 120px;
+}
+.bookList .buttons .comment {
+    display: inline-block;
+    position: relative;
+}
+.bookList .buttons .comment .comment_list {
+    display: none;
+    position: absolute;
+    top: 33px;
+    border-top: 3px solid #4f6ea1;
+    box-sizing: border-box;
+}
+.bookList .buttons .comment .comment_list div {
+    position: relative;
+    background-color: #fff;
+}
+.bookList .buttons .comment .comment_list div a {
+    display: inline-block;
+    padding: 9px 0;
+    width: 112px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #fff;
+    color: #4e5059;
+    border-radius: 0;
+    border: 1px solid #4e5059;
+    border-top: 0;
+    margin-bottom: 0;
+}
+.bookList .buttons .comment .comment_list div a:hover {
+    background-color: #b9c5da;
+}
+
+/** END orders_list **/

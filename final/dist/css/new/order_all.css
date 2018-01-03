@@ -46,13 +46,6 @@
     height: auto;
     padding: 5px;
 }
-.bookList._notOnline ._rfp,
-.bookList:not(._notOnline) ._online,
-.bookList.expired ._rfp,
-.bookList.expired ._online,
-.bookList:not(.expired) ._expired {
-    display: none !important;
-}
 
 
 /** BEGIN order_cart **/
@@ -78,315 +71,11 @@
     width: 100%;
     line-height: normal;
     font-size: 13px;
-    text-align: left;
+    text-align: right;
     padding: 0 9px;
 }
 .buyContent .title .titTxt i {
     margin-right: 3px;
-}
-.bookList {
-    margin-bottom: 20px;
-}
-.bookList .bookTitle {
-    background: #fff;
-    padding: 5px 9px;
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
-.bookList .bookTitle h2 {
-    font-size: 21px;
-}
-.bookList .bookTitle ._bookStats {
-    margin-left: 11px;
-}
-.bookTitle .fa-flash:before,
-.bookTitle .fa-bolt:before {
-    font-size: 15px;
-}
-.bookTitle .status {
-    font-size: 12px;
-    padding: 0;
-    border: 0;
-}
-.bookTitle .status span {
-    padding: 1px 5px;
-    border-radius: 5px;
-    border: 1px solid #f3f3f3;
-    margin-left: -2px;
-    background: #fff;
-    border-color: #4e5059;
-    color: #4e5059;
-}
-.bookTitle .status ._online {
-    background: #ffdf00;
-    border: 0;
-}
-.bookList .detailTable {
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    overflow: hidden;
-}
-.detailTable-heading .detailTable-cell {
-    font-size: 13px;
-    border-bottom: 1px solid #f3f3f3;
-    background: #f3f3f3;
-    color: gray;
-}
-.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
-    background: #f3f3f3;
-    font-size: 13px;
-    letter-spacing: 0;
-    border-bottom-color: #f3f3f3;
-}
-.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div {
-    background: #fff;
-    border: 1px solid #d75f50;
-    color: #d75f50;
-    display: inline-block;
-    line-height: normal;
-    padding: 1px 9px;
-    border-radius: 5px;
-}
-.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal > div._expired {
-    background: #fff;
-    border: 1px solid #435059;
-    color: #435059;
-}
-.bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal span {
-    margin-left: 3px;
-}
-.sitePhoto-pic .sitePo {
-    background: #fff;
-    padding: 5px;
-}
-.sitePhoto-pic .sitePo img {
-    display: block;
-    border-radius: 5px;
-    border: 1px solid #f3f3f3;
-}
-.detailTable-row.detailTable-content .detailTable-cell {
-    text-align: center;
-    padding: 5px 20px;
-}
-.detailTable-row.detailTable-content .detailTable-cell:last-child a {
-    width: 80px;
-    display: flex !important;
-    font-size: 12px;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 3px 9px;
-    margin: 3px 0;
-}
-.detailTable-row.detailTable-content .detailTable-cell:last-child a:hover {
-    background: #f3f3f3;
-    color: #4e5059 !important;
-}
-.detailTable-row.detailTable-content .detailTable-cell:last-child a span {
-    margin-left: 3px;
-    color: #4e5059;
-    font-size: 12px;
-}
-.detailTable-row.detailTable-content .detailTable-cell:last-child {
-    padding-right: 0;
-}
-.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
-    padding-left: 20px;
-}
-.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .tableTxt {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-}
-.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .sarebate {
-    position: relative;
-    top: 0;
-    left: 0;
-    background: #d76050;
-    color: #fff;
-    border-radius: 5px;
-    margin-right: 9px;
-    font-size: 12px;
-    line-height: normal;
-    padding: 0 5px;
-    opacity: .8;
-}
-.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span {
-    margin-top: 3px;
-    color: #4e5059;
-}
-.detailTable-row.detailTable-content .detailTable-cell .original {
-    color: #ccc;
-}
-.detailTable-left,
-.detailTable-row.detailTable-content .detailTable-cell,
-.detailTable-row.detailTable-content .detailTable-cell:last-child,
-.detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
-    border-width: 2px;
-    border-color: #f3f3f3;
-}
-.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) .sarebate,
-.detailTable-row.detailTable-content:not(._haveDiscount) .detailTable-cell:nth-child(3) ._price .original {
-    display: none;
-}
-.detailTable-cell .tableTxt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    font-size: 15px;
-}
-.detailTable-cell .tableTxt.siteName {
-    padding: 0;
-}
-.detailTable-cell .tableTxt .currency {
-    margin-right: 9px;
-}
-.detailTable-cell .buyIcon a span {
-    text-indent: unset;
-    display: block;
-}
-.detailTable-cell .buyIcon a span i {
-    font-size: 12px;
-    margin-right: 3px;
-}
-.detailTable-cell .buyIcon a.composeBtn:before,
-.detailTable-cell .buyIcon a.detailBtn:before {
-    content: unset;
-}
-.detailTable-left .detailTable-cell.recipBox .tableTxt,
-.detailTable-cell .tableTxt span,
-.detailTable-cell .tableTxt span,
-.detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
-    font-size: 13px;
-}
-.bookList .demand {
-    width: 100%;
-    margin: 9px 0;
-    background: #fff;
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid #ddd;
-    padding: 3px 9px 9px;
-    border-radius: 0;
-}
-.bookList .demand h4,
-.bookList .demand .deTxt {
-    width: 100%;
-    text-align: justify;
-    font-size: 15px;
-}
-.bookList .demand h4 {
-    font-weight: bold;
-}
-.bookList .demand .deTxt {
-    color: gray;
-}
-.bookList:not(._haveEquipment) .demand {
-    display: none;
-}
-.buyprice {
-    width: 100%;
-    margin: 9px 0;
-    display: flex;
-    justify-content: flex-end;
-}
-.stepBox .price {
-    font-size: 15px;
-    width: 25%;
-    background: #f3f3f3;
-    border-radius: 5px;
-    padding: 15px 9px;
-}
-.stepBox .price li,
-.stepBox .price .total {
-    padding: 0;
-    margin-bottom: 9px;
-    float: unset;
-    display: flex;
-    justify-content: flex-end;
-    line-height: normal;
-}
-.stepBox .price .total {
-    background: transparent;
-    border-top: 1px solid #ddd;
-    padding-top: 9px;
-    margin-bottom: 0;
-}
-.stepBox .price .total b,
-.stepBox .price .total span,
-.stepBox .price .total span:nth-child(3) {
-    font-size: 15px;
-}
-.stepBox .price li .valuaBox {
-    float: unset;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.stepBox .price b {
-    width: 60%;
-}
-.stepBox .price li .valuaBox > div {
-    width: 100%;
-}
-.stepBox .price li .valuaBox > div span {
-    width: auto;
-}
-.stepBox .price li .valuaBox > div span:nth-child(1) {
-    margin-right: 9px;
-}
-.stepBox .price li .valuaBox > div span:nth-child(2) {
-    width: 40%;
-}
-/*.stepBox .price li .valuaBox span:last-child {
-    width: 30%;
-}*/
-.buyBox .custodyBtn {
-    margin: 0;
-    width: 100%;
-}
-.bookList .custodyBtn a {
-    background: transparent;
-    padding: 0;
-    width: 25%;
-}
-.bookList .custodyBtn a span {
-    width: 100%;
-}
-.bookList.expired .detailTable-left,
-.bookList.expired .detailTable-cell,
-.bookList.expired .detailTable-cell span,
-.bookList.expired .detailTable-row .detailTable-cell:last-child {
-    opacity: .7;
-}
-.bookList.expired .detailTable-left .detailTable-row.detailTable-heading .detailTable-cell:nth-child(2),
-.bookList.expired .detailTable-row.detailTable-heading .detailTable-cell:last-child {
-    font-size: 13px;
-    border-bottom: 1px solid #f3f3f3;
-    background: #f3f3f3 !important;
-    color: gray;
-}
-.bookList.expired .detailTable-inner,
-.bookList.expired .detailTable-left .detailTable-cell.recipBox {
-    background: #fff !important;
-}
-.bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
-    border-left: 2px solid #f3f3f3;
-}
-.bookList.expired .buyprice,
-.bookList.expired .custodyBtn {
-    display: none;
-}
-.buyBox.mm-page .detailTable-left .detailTable-row:last-child .detailTable-cell {
-    display: table-cell;
 }
 /** END order_cart **/
 
@@ -1116,21 +805,21 @@
 .detailTable-left .detailTable-inner .detailTable-row.detailTable-heading {
     background: #f3f3f3;
 }
-.detailTable-left .detailTable-row:last-child .detailTable-cell {
+.order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
     display: flex;
 }
-.stepBox.mm-page .stepContainer > .custodyBtn {
+.order_complete .stepContainer > .custodyBtn {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.stepBox.mm-page .stepContainer > .custodyBtn a {
+.order_complete .stepContainer > .custodyBtn a {
     letter-spacing: 0;
     padding: 0;
     background: unset;
 }
-.stepBox.mm-page .stepContainer > .custodyBtn a:first-child {
+.order_complete .stepContainer > .custodyBtn a:first-child {
     margin-right: 9px;
 }
 /** END order_complete **/
@@ -1156,144 +845,6 @@
     /** BEGIN order_cart **/
     .buyContent .title {
         margin-top: 0;
-    }
-    .bookList {
-        border-radius: 5px;
-        overflow: hidden;
-    }
-    .bookList .detailTable {
-        border: 0;
-        border-radius: 0;
-    }
-    .bookList {
-        border: 1px solid #ddd;
-    }
-    .bookList .bookTitle {
-        padding: 9px;
-    }
-    .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
-        font-size: 15px;
-        line-height: normal;
-        padding: 9px 0;
-    }
-    .buyBox .detailTable-left .detailTable-cell.recipBox h4 {
-        border-top: 1px solid #ddd;
-        letter-spacing: 0;
-        font-size: 17px;
-        line-height: normal;
-        padding: 9px 0;
-    }
-    .detailTable-left .detailTable-cell.recipBox .tableTxt,
-    .detailTable-cell .tableTxt span,
-    .detailTable-cell .tableTxt span,
-    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
-        width: 100%;
-        padding-left: 40px;
-        font-size: 15px;
-    }
-    .detailTable-left .detailTable-cell.recipBox .tableTxt {
-        margin: 0;
-        padding: 9px !important;
-        border-bottom-width: 1px;
-    }
-    .buyBox .detailTable-row.detailTable-content {
-        padding: 0;
-        width: calc(100% - 18px) !important;
-        margin: 9px auto;
-        background: #f3f3f3;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        overflow: hidden;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell {
-        display: flex;
-        align-items: center;
-        padding: 9px 0;
-        width: 100% !important;
-        margin: 0;
-        border-bottom: 1px solid #ddd;
-    }
-    .detailTable-row.detailTable-content:last-child .detailTable-cell {
-        padding: 9px 0;
-        border-bottom: 1px solid #ddd;
-    }
-    .detailTable-cell h4 {
-        text-align: right;
-        width: 35%;
-        margin-right: 9px;
-        font-size: 15px;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell .tableTxt {
-        text-align: left;
-        border-left: 1px solid #ddd;
-        width: 65%;
-    }
-    .detailTable .original,
-    .detailTable .special {
-        display: flex;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
-        padding: 9px 0;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .special span,
-    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .original span {
-        padding: 0;
-        margin-top: 0;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell .tableTxt.buyIcon {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        border: 0;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:last-child a {
-        margin-right: 20px;
-        width: 30%;
-        padding: 9px;
-        text-align: center;
-        background: #fff;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:last-child a:last-child {
-        margin-right: 0;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
-        padding-left: 0;
-        font-size: 13px;
-    }
-    .stepBox .price {
-        width: 100%;
-        padding: 9px;
-        border-radius: 0;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-    }
-    .stepBox .price b {
-        width: 100%;
-    }
-    .bookList .custodyBtn a {
-        width: 100%;
-        padding: 9px;
-    }
-    .bookList .demand {
-        padding: 9px !important;
-        margin: 0;
-        border-bottom: 0;
-    }
-    .buyprice {
-        margin: 0;
-    }
-    .bookList.expired .detailTable {
-        border: 0;
-    }
-    .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
-        padding: 0;
-        width: auto;
-    }
-    .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
-        border: 0;
-    }
-    .buyBox.mm-page .detailTable-left .detailTable-row:last-child .detailTable-cell {
-        display: unset;
     }
     /** END order_cart **/
 
@@ -1503,16 +1054,16 @@
         margin-left: 0;
         font-size: 13px;
     }
-    .detailTable-heading .detailTable-cell {
+    .order_complete .bookList .detailTable-heading .detailTable-cell {
         color: #435059;
         font-size: 15px;
         line-height: normal;
         padding: 9px 0;
     }
-    .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    .order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
         flex-direction: column;
     }
-    .detailTable-cell .tableTxt.siteName {
+    .order_complete .bookList .detailTable-cell .tableTxt.siteName {
         border-bottom-width: 1px;
         margin: 9px 0 0;
     }
