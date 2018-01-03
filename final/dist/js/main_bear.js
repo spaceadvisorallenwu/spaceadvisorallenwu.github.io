@@ -1,18 +1,11 @@
 //index 類型收合用
 $(function(){
-	$('#style-open').click(function() {
-		$('.style-other').slideToggle(900);
+	$('.bookList .buttons .payment .btn').click(function() {
+		$(this).parents('.bookList').find('.paymentInformation').toggle();
 	});
-		$('.bookList .buttons .payment .btn').click(function() {
-			$(this).parents('.bookList').find('.paymentInformation').toggle();
-		});
-	$('#style-open2').click(function() {
-		$('.style-other2').slideToggle(0);
+	$('.bookList .buttons .comment .btn').click(function(){
+		$('.bookList .buttons .comment .comment_list').toggle();
 	});
-		$('.bookList .buttons .comment .btn').click(function(){
-			$('.bookList .buttons .comment .comment_list').toggle();
-		});
-
 	$('[name="payselect"]').each(function(idx,obj){
 		$(obj).on('click',function(event){
 			$('.payment .pay-select:visible').not($(event.target).parentsUntil('li').parent().find('.pay-select')).slideToggle(0);

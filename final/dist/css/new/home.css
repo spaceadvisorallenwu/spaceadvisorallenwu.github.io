@@ -41,7 +41,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
 }
 .index .flexslider .search {
-    /*width: 80%;*/
+    max-width: unset;
     /*margin: 20px 10%;*/
     padding: 20px 0;
     background-color: rgba(0,0,0,0.4););
@@ -136,7 +136,6 @@
     color: #4f6ea2;
     border-radius: 5px;
     margin-right: 5px;
-    padding: 0 5px;
 }
 .index .style .style-other li a:hover span {
     text-decoration: underline;
@@ -181,7 +180,7 @@
     width: 250px;
 }
 .index .theme-list li span.pic img {
-    margin-left: -15px;
+    margin-left: -12px;
 }
 .index .theme-list li p.title {
     width: 100%;
@@ -328,6 +327,7 @@
     height: 55px;
     -webkit-line-clamp: 3;
     font-size: 13px;
+    text-align: left;
 }
 .index .brand-list {
     width: 80%;
@@ -443,12 +443,16 @@
     }
     .index .information-list .information span.pic img {
         width: 100%;
+        height: auto;
     }
     .index .information-list .information span.pic p {
         font-size: 25px;
         line-height: unset;
         height: unset;
     }
+    /*.index .information-list .information .text p {
+        height: fit-content;
+    }*/
     .index .brand-list .brand a {
         width: 120px;
         height: 120px;

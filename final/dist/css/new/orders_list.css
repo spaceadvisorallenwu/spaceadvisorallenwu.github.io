@@ -1,43 +1,44 @@
 @charset 'UTF-8';
 /** BEGIN orders_list **/
-
-/* Nav tabs */
 .order-management .nav-tabs {
-    margin: 20px 0 60px;
+    margin: 40px 0 80px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0;
 }
-.order-management .nav-tabs>li>a {
+.order-management .nav-tabs > li {
+    border-bottom: 3px solid #ddd;
+    background-color: transparent;
+}
+.order-management .nav-tabs > li > a {
+    color: gray;
+    border: 0;
     letter-spacing: normal;
     word-spacing: normal;
     display: inline-block;
-    color: #4c5059;
-    border-bottom: 3px solid #d5d6d4;
     text-align: center;
     padding: 9px 30px;
     font-size: 17px;
     line-height: normal;
     font-weight: normal;
-}
-.order-management .nav-tabs>li.active>a,
-.order-management .nav-tabs>li>a:hover {
     background-color: transparent;
+    margin-right: 0;
+    border-radius: 0;
+}
+.order-management .nav-tabs > li.active > a,
+.order-management .nav-tabs > li:hover > a {
     color: #4f6ea1;
-    border: none;
-    border-bottom: 3px solid #4f6ea1;
-    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+}
+.order-management .nav-tabs > li.active,
+.order-management .nav-tabs > li:hover {
+    border-bottom-color: #4f6ea1;
 }
 .order-management .pagebox {
     margin: 0;
+    padding: 0;
     width: 100%;
-}
-@media screen and (max-width:540px) {
-    .order-management .nav-tabs>li {
-        width: 33.33%;
-    }
-    .order-management .nav-tabs>li>a {
-        padding: 10px 0;
-        font-size: 16px;
-        text-align: center;
-    }
 }
 
 .orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
@@ -106,14 +107,8 @@
     margin-right: 0;
 }
 
-/* 取消訂單 */
-.orderrec .orderlist .cancel .caseno .promote {
-    color: #b6b6b6;
-}
-
-/* 前往評價 */
 .orders_list_rfp .bookList {
-    padding-bottom: 40px;
+    margin-bottom: 80px;
     overflow: visible;
 }
 .bookList .buttons .comment {
@@ -206,8 +201,85 @@
 }
 
 @media only screen and (max-width: 980px) {
+    .orders_list_rfp .order-management .nav-tabs > li {
+        width: 100%;
+        text-align: center;
+        border-width: 2px;
+    }
+    .orders_list_rfp .order-management .nav-tabs > li > a {
+        padding: 5px 0;
+        font-size: 13px;
+    }
+    .orders_list_rfp .order-management .nav-tabs {
+        margin: 0 0 40px;
+    }
+    .orders_list_rfp .bookList {
+        margin-bottom: 40px;
+    }
+    .orders_list_rfp .bookList .bookTitle {
+        flex-direction: column;
+        padding: 9px;
+        font-size: 13px;
+    }
+    .orders_list_rfp .bookList .bookTitle ._left,
+    .orders_list_rfp .bookList .bookTitle ._right {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .orders_list_rfp .bookList .bookTitle ._left {
+        flex-direction: column-reverse;
+    }
+    .orders_list_rfp .bookList .bookTitle ._left > div {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .orders_list_rfp .bookList .bookTitle ._left .recstate span {
+        margin-left: 0;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 3px;
+    }
+    .orders_list_rfp .bookList .detailTable-heading .detailTable-cell {
+        color: #435059;
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        flex-direction: column;
+    }
+    .orders_list_rfp .bookList .detailTable-cell .tableTxt.siteName {
+        border-bottom-width: 1px;
+    }
+    .orders_list_rfp .bookList .buttons {
+        border-top: 1px solid #ddd;
+        padding: 20px 9px;
+        margin-bottom: 0;
+    }
+    .orders_list_rfp .bookList .buttons .comment,
+    .orders_list_rfp .bookList .buttons .payment,
+    .orders_list_rfp .bookList .buttons .contact {
+        width: 100%;
+    }
+    .orders_list_rfp .bookList .buttons .comment > span,
+    .orders_list_rfp .bookList .buttons .payment > span,
+    .orders_list_rfp .bookList .buttons .contact > a span {
+        width: 100%;
+    }
+    .orders_list_rfp .bookList .buttons .comment .comment_list {
+        top: 25px;
+    }
+    .bookList .buttons .comment .comment_list div a {
+        width: 100px;
+        font-size: 13px;
+        padding: 5px 0;
+    }
     .paymentInformation {
         padding: 9px;
+        margin: 9px;
+        border: 0;
     }
     .paymentInformation li {
         margin-bottom: 0;
