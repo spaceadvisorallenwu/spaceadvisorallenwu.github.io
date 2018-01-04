@@ -553,7 +553,7 @@ footer .bottom li a img:hover {
     .breadcrumb {
         padding: 15px 5%;
     }
-    /** END Header **/
+    /** BEGIN Header **/
 	header .content {
 		padding-right: 0;
 	    width: auto;
@@ -717,6 +717,10 @@ footer .bottom li a img:hover {
         }
         /** END isLogin **/
 	/** END Header **/
+
+    main {
+        min-height: calc(100vh - 200px);
+    }
 
 	/** BEGIN Footer **/
 	footer .bottom ul {
