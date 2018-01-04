@@ -224,47 +224,50 @@
 					<div class="site_activity">
 						<div class="site_activity-left">
 							<div class="site_form-main _floor1">
-								<div class="site_project_title">活動名稱 / 歡迎指引牌名稱：</div>
+								<div class="site_project_title">活動名稱 / 歡迎指引牌名稱</div>
 								<div class="site_project_content"><input type="text" placeholder="此處文字將顯示於場地的電子看板或平面看板" class="site_field"></div>
 							</div>
 							<div class="site_form-main _floor2">
 								<div class="site_project_part">
-									<div class="site_project_title">現場聯繫人姓名：</div>
+									<div class="site_project_title">現場聯繫人姓名</div>
 									<div class="site_project_content"><input type="text" placeholder="內建會員姓名" class="site_field"></div>
 								</div>
 								<div class="site_project_part">
-									<div class="site_project_title">現場聯繫人電話：</div>
+									<div class="site_project_title">現場聯繫人電話</div>
 									<div class="site_project_content"><input type="text" placeholder="09593326353" class="site_field"></div>
 								</div>
 							</div>
 							<div class="site_form-main _floor3">
-								<div class="site_project_title">上傳檔案給場地主：<span class="site_project_font">(會議流程/賓客名單/座位表)</span></div>
+								<div class="site_project_title">上傳檔案給場地主<span class="site_project_font">(會議流程/賓客名單/座位表)</span></div>
 								<div class="site_project_content">
-									<input type="text" placeholder="Ｄ:/資料夾2/管理/表格/流程圖表.PDF" class="site_field02">
-									<div class="site_button01"><a href="#"><span class="btn btn-c-2 btn-s">瀏覽檔案</span></a></div>
+									<input type="file" class="site_field02 _display_none" name="file[]">
+									<!-- <div class="site_button01"><a href="#"><span class="btn btn-c-2 btn-s">選擇檔案</span></a></div> -->
 								</div>
 							</div>
-							<div class="site_button02"><a href="#"><span class="btn btn-c-3 btn-sm">確認上傳</span></a></div>
+							<div class="site_button02"><a href="#"><span class="btn btn-c-3 btn-m">確認上傳</span></a></div>
 						</div>
 						<div class="site_activity-right">
 							<div class="site-description">
 								<div class="site-description-indormation">
-									<div class="site-description-title">舉辦公司：</div>
+									<div class="site-description-title">舉辦公司</div>
 									<div class="site-description-contect">台鹽生物科技醫藥</div>
 								</div>
 								<div class="site-description-indormation">
-									<div class="site-description-title">活動性質：</div>
+									<div class="site-description-title">活動性質</div>
 									<div class="site-description-contect">會議與培訓</div>
 								</div>
 								<div class="site-description-indormation">
-									<div class="site-description-title">產業別：</div>
+									<div class="site-description-title">產業別</div>
 									<div class="site-description-contect">醫療產業</div>
 								</div>
 								<div class="site-description-indormation">
-									<div class="site-description-title">科別：</div>
+									<div class="site-description-title">科別</div>
 									<div class="site-description-contect">內科</div>
 								</div>
-								<div class="site-description03"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> 貼心提醒：當天同一時段有其他整型外科會議於此舉辦</div>
+								<div class="site-description03">
+									<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+									<span>貼心提醒：當天同一時段有其他整型外科會議於此舉辦</span>
+								</div>
 							</div>
 							<!--上傳紀錄 -->
 							<div class="site-upload-record">
@@ -281,25 +284,25 @@
 											<div class="upload-title01">2017/09/16</div>
 											<div class="upload-list01">日程表（下午）.jpg</div>
 											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><img src="dist/images/d-icon.png"/></div>
+											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
 										</li>
 										<li>
 											<div class="upload-title01">2017/09/18</div>
 											<div class="upload-list01">座位表.jpg</div>
 											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><img src="dist/images/d-icon.png"/></div>
+											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
 										</li>
 										<li>
 											<div class="upload-title01">2017/09/18</div>
 											<div class="upload-list01">賓客名單.pdf</div>
 											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><img src="dist/images/d-icon.png"/></div>
+											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
 										</li>
 										<li>
 											<div class="upload-title01">2017/09/20</div>
 											<div class="upload-list01">贊助商名單.pdf</div>
 											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><img src="dist/images/d-icon.png"/></div>
+											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
 										</li>
 									</div>
 								</ul>
@@ -1488,7 +1491,7 @@
 						var am = $(event.target).parentsUntil('ul').last().toggleClass('active-f');
 					});
 				});
-				$('.site-upload-record img[src="dist/images/d-icon.png"]').each(function(idx,obj){
+				$('.site-upload-record span.delete').each(function(idx,obj){
 					$(obj).on('click',function(event){
 						var vmobj = $(event.target).parentsUntil('div.upload-block02').last().parent();
 						if (vmobj.find('li').length<=1) vmobj.append('<li><div class="site-upload-record-no">尚未上傳任何檔案</div></li>');
@@ -1503,6 +1506,125 @@
 					});
 				});
 			});
+		</script>
+		<script type="text/javascript">
+			//Reference: 
+			//https://www.onextrapixel.com/2012/12/10/how-to-create-a-custom-file-input-with-jquery-css3-and-php/
+			(function($) {
+				// Browser supports HTML5 multiple file?
+			  	var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
+      				isIE = /msie/i.test( navigator.userAgent );
+					$.fn.customFile = function() {
+						return this.each(function() {
+							var $file = $(this).addClass('custom-file-upload-hidden'), // the original file input
+							$wrap = $('<div class="file-upload-wrapper">'),
+							$input = $('<input type="text" class="file-upload-input" placeholder="Ｄ:/資料夾2/管理/表格/流程圖表.PDF" />'),
+							// Button that will be used in non-IE browsers
+							$button = $('<button type="button" class="file-upload-button btn btn-c-2 btn-s">選擇檔案</button>'),
+							// Hack for IE
+							$label = $('<label class="file-upload-button btn btn-c-2 btn-s" for="'+ $file[0].id +'">選擇檔案</label>');
+
+					      	// Hide by shifting to the left so we
+					      	// can still trigger events
+					      	$file.css({
+					        	position: 'absolute',
+					        	left: '-9999px'
+					      	});
+
+					      	$wrap.insertAfter( $file ).append( $file, $input, ( isIE ? $label : $button ) );
+
+					      	// Prevent focus
+					      	$file.attr('tabIndex', -1);
+					      	$button.attr('tabIndex', -1);
+
+					      	$button.click(function () {
+					        	$file.focus().click(); // Open dialog
+					      	});
+
+					      	$file.change(function() {
+					        	var files = [], fileArr, filename;
+
+						        // If multiple is supported then extract
+						        // all filenames from the file array
+						        if ( multipleSupport ) {
+						          	fileArr = $file[0].files;
+						          	for ( var i = 0, len = fileArr.length; i < len; i++ ) {
+						            	files.push( fileArr[i].name );
+						          	}
+						          	filename = files.join(', ');
+
+						        // If not supported then just take the value
+						        // and remove the path to just show the filename
+						        } else {
+						          	filename = $file.val().split('\\').pop();
+						        }
+
+						        $input.val( filename ) // Set the value
+								.attr('title', filename) // Show filename in title tootlip
+						        .focus(); // Regain focus
+				      		});
+
+					      	$input.on({
+						        blur: function() { $file.trigger('blur'); },
+						        keydown: function( e ) {
+						          	if ( e.which === 13 ) { // Enter
+						            	if ( !isIE ) { $file.trigger('click'); }
+						          	} else if ( e.which === 8 || e.which === 46 ) { // Backspace & Del
+								            // On some browsers the value is read-only
+								            // with this trick we remove the old input and add
+								            // a clean clone with all the original events attached
+								            $file.replaceWith( $file = $file.clone( true ) );
+								            $file.trigger('change');
+								            $input.val('');
+						          	} else if ( e.which === 9 ){ // TAB
+							            	return;
+						          	} else { // All other keys
+								            return false;
+						          	}
+					        	}
+					      	});
+			    		});
+			  		};
+
+				  	// Old browser fallback
+				  	if ( !multipleSupport ) {
+				    	$( document ).on('change', 'input.customfile', function() {
+
+				      		var $this = $(this),
+				          	// Create a unique ID so we
+				          	// can attach the label to the input
+				          	uniqId = 'customfile_'+ (new Date()).getTime(),
+				          	$wrap = $this.parent(),
+
+				          	// Filter empty input
+				          	$inputs = $wrap.siblings().find('.file-upload-input')
+				            	.filter(function(){ return !this.value }),
+
+				          	$file = $('<input type="file" id="'+ uniqId +'" name="'+ $this.attr('name') +'"/>');
+
+					      	// 1ms timeout so it runs after all other events
+					      	// that modify the value have triggered
+					      	setTimeout(function() {
+					        	// Add a new input
+					        	if ( $this.val() ) {
+						          	// Check for empty fields to prevent
+						          	// creating new inputs when changing files
+						          	if ( !$inputs.length ) {
+						            	$wrap.after( $file );
+						            	$file.customFile();
+						          	}
+						        	// Remove and reorganize inputs
+						        } else {
+					          		$inputs.parent().remove();
+					          		// Move the input so it's always last on the list
+					          		$wrap.appendTo( $wrap.parent() );
+					          		$wrap.find('input').focus();
+				        		}
+					      	}, 1);
+					    });
+				  	}
+			}(jQuery));
+			$('input.site_field02[type=file]').customFile();
 		</script>
 	</body>
 </html>

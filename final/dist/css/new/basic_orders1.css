@@ -590,61 +590,6 @@ input.form_ok:hover {
 	color: #d76050;
 }
 
-/* 超值加購 */
-.site-value-add {}
-.site-value-add-width {
-	width: 100%;
-	max-width: 1040px;
-	margin: 0 auto;
-}
-.site-value-add-contect {
-	line-height: 1.6em;
-	margin: 10px 0;
-}
-.value-add-list .site-value-add-vatitle {
-	display: flex;
-	margin-bottom: 0px;
-	padding: 4px 0;
-	line-height: 20px;
-}
-.value-add-list-background {
-	background-color: #dadbdc;
-	color: #4e5059;
-}
-.value-add-list .valist .site-value-add-wrapper {
-	background: #f3f3f3;
-	padding: 10px 20px;
-}
-.item-hidden {
-	display: none!important;
-}
-.value-add .value-add-list-wrapper {
-	padding: 10px 3%;
-}
-@media (max-width:640px) {
-	.value-add-list .site-value-add-vatitle {}
-	.value-add-list .site-value-add-vatitle .purchase_value-add-wrapper {
-		display: flex;
-	}
-	.value-add-list .site-value-add-vatitle .item {
-		display: block;
-		padding-right: 0;
-		width: 100%;
-		font-size: large;
-		line-height: 2em;
-	}
-	.value-add-list .site-value-add-vatitle .amount {
-		display: none;
-	}
-	.value-add-list .site-value-add-vatitle .price {
-		display: block;
-		width: 50%;
-		font-size: large;
-		line-height: 2em;
-		text-align: right;
-	}
-}
-
 
 /* 場地取消訂單 */
 .site-cancel-title {

@@ -27,7 +27,7 @@ body {
 
 
 ._display_none {
-    display: none;
+    display: none !important;
 }
 .btn {
     letter-spacing: 0 !important;
