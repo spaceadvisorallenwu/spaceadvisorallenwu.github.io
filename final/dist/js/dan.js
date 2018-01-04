@@ -7,12 +7,12 @@ $(document).ready(function() {
         autoplaySpeed: 3500,
         infinite: true,
         speed: 600,
-        
         cssEase: 'ease',
         //vertical: true,
         pauseOnHover: false,
     });
     /*用縮圖*/
+    $(".popuImg,.informationBox .theme-list .pic,.similarImg").imgLiquid();
 	    /*更多條件開關*/
 
 	    $('.search.mapBox .conditions').on('click',function(event){
@@ -31,15 +31,7 @@ $(document).ready(function() {
 	    	}
 	    });
 
-	// $('body').not('.search.mapBox .search_item.conditions.open').on('click',function() {
-	// 		console.info($(this));
-	//     		$('body,html').css({'overflow':''});	
-	//     		$('.search-box.searchPopup').removeClass('on');
-	//     		$('.search_item_detail').removeClass('open');
-	//     		$('.search-box.searchPopup').fadeOut();
 
-
-	// });
 	$('.contclose').on('click',function(){
 	    		$('body,html').css({'overflow':''});	
 	    		$('.search-box.searchPopup').removeClass('on');
@@ -93,7 +85,6 @@ $(document).ready(function() {
 		var windowHeight = $(window).height();
 		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
 		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
-   		
     });
     windowWidth = $(window).width();
 	$(window).resize(function() {

@@ -3,32 +3,78 @@ body {
     color: #4e5059;
 }
 
+.__mb {
+    display: none;
+}
+
 /* 主色 */
-.color_01{color:#b61e1a;}
-.color_01:hover{color:#c63e2b;}
-.color_02{color:#4f6ea2;}
-.color_02:hover{color:#2d5392;}
-.color_03{color:#d76050;}
-.color_03:hover{color:#9d0704;}
-.color_04{color:#f3f3f3;}
-.color_04:hover{color:#f3f3f3;}
-.color_05{color:#4e5059;}
-.color_05:hover{color:#4e5059;}
-.bg_color_01{background-color:#b61e1a;}
-.bg_color_01:hover{background-color:#c63e2b;}
-.bg_color_02{background-color:#4f6ea2;}
-.bg_color_02:hover{background-color:#2d5392;}
-.bg_color_03{background-color:#d76050;}
-.bg_color_03:hover{background-color:#9d0704;}
-.bg_color_04{background-color:#f3f3f3;}
-.bg_color_04:hover{background-color:#f3f3f3;}
-.bg_color_05{background-color:#4e5059;}
-.bg_color_05:hover{background-color:#4e5059;}
+.color_01 {
+    color:#b61e1a;
+}
+.color_01:hover {
+    color:#c63e2b;
+}
+.color_02 {
+    color:#4f6ea2;
+}
+.color_02:hover {
+    color:#2d5392;
+}
+.color_03 {
+    color:#d76050;
+}
+.color_03:hover {
+    color:#9d0704;
+}
+.color_04 {
+    color:#f3f3f3;
+}
+.color_04:hover {
+    color:#f3f3f3;
+}
+.color_05 {
+    color:#4e5059;
+}
+.color_05:hover {
+    color:#4e5059;
+}
+.bg_color_01 {
+    background-color:#b61e1a;
+}
+.bg_color_01:hover {
+    background-color:#c63e2b;
+}
+.bg_color_02 {
+    background-color:#4f6ea2;
+}
+.bg_color_02:hover {
+    background-color:#2d5392;
+}
+.bg_color_03 {
+    background-color:#d76050;
+}
+.bg_color_03:hover {
+    background-color:#9d0704;
+}
+.bg_color_04 {
+    background-color:#f3f3f3;
+}
+.bg_color_04:hover {
+    background-color:#f3f3f3;
+}
+.bg_color_05 {
+    background-color:#4e5059;
+}
+.bg_color_05:hover {
+    background-color:#4e5059;
+}
 
 
 ._display_none {
     display: none !important;
 }
+
+/** BEGIN btn **/
 .btn {
     letter-spacing: 0 !important;
     border-radius: 5px !important;
@@ -96,6 +142,9 @@ body {
     cursor: default !important;
     background: #4E5059 !important;
 }
+/** END btn **/
+
+/** BEGIN star **/
 span._star:before {
     color: #f9d53d;
     display: inline-block;
@@ -135,6 +184,9 @@ span._star._star_4h:before {
 span._star._star_5:before {
     content: "\f005 \f005 \f005 \f005 \f005 ";
 }
+/** END star **/
+
+
 .assess input[type=checkbox]+label {
     color: #4e5059;
 }
@@ -146,10 +198,15 @@ span._star._star_5:before {
 }
 
 
+body.isLogin ._notLogin,
+body:not(.isLogin) ._isLogin {
+    display: none;
+}
 
 /** BEGIN Header **/
 header {
     border-bottom: 1px solid #eee;
+    z-index: 9;
 }
 header .content {
     width: 80%;
@@ -166,8 +223,10 @@ header nav li {
 }
 header nav li a,
 header a.cart,
-header a.mail {
+header a.mail,
+header .login_info a {
 	font-size: 15px;
+    color: #4e5059;
 }
 header a.cart,
 header a.mail {
@@ -180,7 +239,8 @@ header a.mail i {
 }
 header nav li a:hover,
 header a.cart:hover,
-header a.mail:hover {
+header a.mail:hover,
+header .login_info a:hover {
     font-weight: normal;
     color: unset;
     text-decoration: underline;
@@ -191,7 +251,7 @@ header a.mail b {
     transform: scale(.85);
 }
 header a.member {
-    margin: 9px 0 0 9px;
+    margin: 0;
     width: 28px;
     height: 28px;
     border: 0;
@@ -211,7 +271,60 @@ header a.activity,
 .mm-list > li.activity {
 	display: none;
 }
+
+/** BEGIN notLogin **/
+.login_info {
+    position: relative;
+    float: right;
+    margin-top: 14px;
+}
+.login_info a {
+    padding: 0 5px;
+}
+/** END notLogin **/
+
+/** BEGIN isLogin **/
+header .memberClick {
+    height: unset;
+    padding: 9px;
+}
+header .memberClick .memberMenu {
+    width: 200px;
+    top: 44px;
+    right: 40px;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 10px rgba(0, 0, 0, .35);
+    padding: 9px 20px;
+}
+header .memberClick .memberMenu a {
+    width: 100%;
+    display: block;
+    padding: 13px 0;
+    font-size: 15px;
+    color: #4e5059;
+    border-bottom: 1px solid #f3f3f3;
+}
+header .memberClick .memberMenu ul li a:hover {
+    border-bottom: 1px solid #f3f3f3;
+    text-decoration: underline;
+}
+header .memberClick .memberMenu ul li:last-child a:hover {
+    border-bottom: 0;
+}
+header .memberClick .memberMenu ul li a b {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: -4px;
+}
+/** END isLogin **/
+
 /** END Header **/
+
+
 
 /** BEGIN Main **/
 h2 {
@@ -291,6 +404,7 @@ main {
     right: 5%;
     opacity: .8;
     transition: .4s;
+    z-index: 8;
 }
 .gotop:hover {
 	border-right: 1px solid #ddd;
@@ -420,6 +534,12 @@ footer .bottom li a img:hover {
 @media only screen and (max-width: 320px) and (max-height: 568px){ /** i5 **/ }
 
 @media only screen and (max-width: 980px) {
+    .__mb {
+        display: initial;
+    }
+    .__pc {
+        display: none;
+    }
     ._boxStyle {
         padding: 40px 0;
         width: 90%;
@@ -464,7 +584,6 @@ footer .bottom li a img:hover {
 	    width: 100%;
 	    background: #fff;
 	    border: 0;
-	    border-bottom: 1px solid #eee;
 	}
 	header .search-open i {
 		line-height: 34px;
@@ -475,41 +594,128 @@ footer .bottom li a img:hover {
 	header .search-open .search-box {
 		background: transparent;
 	    width: calc(100% - 30px);
+        display: flex;
+        align-items: center;
 	}
 	header .search-open .search-box input {
         font-size: 15px;
+        width: calc(100% - 65px);
     	border-radius: 3px;
-	    height: 34px;
+        margin-right: 9px;
 	    border: 1px solid #eee;
 	}
 	header .search-open .search-box a {
-	    font-size: 15px;
-	    border-radius: 3px;
-	    line-height: 34px;
+        font-weight: normal;
+        color: #fff;
+        float: right;
+        width: unset;
+        line-height: normal;
+        border-radius: unset;
+        background-color: unset;
+        font-size: unset;
 	}
+
 	.mm-menu > .mm-panel.mm-opened {
-		padding: 0 9px;
+		padding: 20px 9px;
 	}
-	.mm-list > li {
+	.mm-list li {
 	    padding: 9px;
+        font-size: 15px;
+        border-bottom: 1px solid #f3f3f3;
 	}
-	.mm-list > li.member {
-		padding-top: 20px;
-		padding-bottom: 20px;
+    .mm-list li > a,
+    .mm-list li > span {
+        font-weight: normal;
+        color: #4e5059;
+    }
+    .mm-list li > a {
+        width: 100%;
+        display: block;
+        padding: 9px 0;
+    }
+	.mm-list li.member {
+        display: flex;
+        flex-direction: column-reverse;
+        border-bottom: 1px solid #ddd;
 	}
-	.mm-list > li.member p {
-		font-size: 17px;
-		width: 50%;
-    	display: block;
-	}
-	.mm-list > li > a,
-	.mm-list > li > span {
-		font-size: 15px;
-		font-weight: normal;
-	}
-	.mm-list > li.member a.pic {
-		border: 0;
-	}
+    .mm-list li.member .signup,
+    .mm-list li.member .signin {
+        background: #f3f3f3;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 9px;
+        text-align: center;
+    }
+    .mm-list li.member a:first-child {
+        margin-bottom: 20px;
+    }
+    .mm-list .language,
+    .mm-list .activity {
+        display: none;
+    }
+
+
+        /** BEGIN isLogin **/
+        .mm-list ._isLogin li.member {
+            flex-direction: row;
+            align-items: center;
+        }
+    	.mm-list ._isLogin li.member a.pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-size: 100% auto;
+            float: left;
+            margin: 0 20px 0 0;
+    	}
+        .mm-list ._isLogin li.member p {
+            font-size: 17px;
+            width: 100%;
+            max-width: 140px;
+            display: block;
+            word-wrap: break-word;
+            margin-right: 20px;
+        }
+        .mm-list ._isLogin li.member a.mail {
+            display: block;
+            position: relative;
+            padding: 0;
+            float: right;
+            width: auto;
+        }
+        .mm-list ._isLogin li.member a.mail i {
+            font-size: 23px;
+        }
+        .mm-list ._isLogin li.member a.mail b {
+            width: 18px;
+            height: 18px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #fff;
+            line-height: normal;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #d76050;
+            position: absolute;
+            top: -5px;
+            right: -12px;
+        }
+        .mm-list ._isLogin li.compare b {
+            width: 18px;
+            height: 18px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #fff;
+            line-height: normal;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #d76050;
+            text-align: center;
+            display: inline-block;
+            margin-left: 4px;
+            margin-top: -5px;
+        }
+        /** END isLogin **/
 	/** END Header **/
 
 	/** BEGIN Footer **/

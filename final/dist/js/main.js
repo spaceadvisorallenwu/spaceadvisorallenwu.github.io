@@ -1,5 +1,4 @@
 $(function(){
-	$('nav#menu').mmenu();
 //top
 	$(".gotop").click(function() {
 		$("html,body").animate({ scrollTop: 0 }, 1000);
@@ -7,6 +6,18 @@ $(function(){
 	});
 });
 
+$(function(){
+  $("#menu").mmenu({
+               "extensions": [
+                  "fx-menu-zoom",
+                  "fx-panels-zoom",
+                  "pagedim-black"
+               ],
+               "offCanvas": {
+                  "position": "right"
+               }
+  });
+});
 
 //mobile頭部搜尋用
 $(function(){
@@ -20,8 +31,8 @@ $(function(){
 	// 		}
 	// 	}
 	// });
-	$('i#search').click(function() {
-		$('header > .content > .search').toggleClass('search-open');
+	$('header .__mb .search #search').click(function() {
+		$('header .__mb .search').toggleClass('search-open');
 	});
 });
 

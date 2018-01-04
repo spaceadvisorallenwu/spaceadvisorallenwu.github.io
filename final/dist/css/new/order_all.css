@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     opacity: .55;
+    border-radius: 2px;
 }
 .orderstep ul li.active {
     background: #4f6ea2;
@@ -27,7 +28,7 @@
     border: 0;
 }
 .orderstep ul li b {
-    margin-right: 5px;
+    margin-right: 3px;
 }
 .orderstep ul li:first-child {
     border-radius: 5px 0 0 5px;
@@ -699,19 +700,43 @@
 
 .stepBox.fill_box .price li,
 .stepBox.fill_box .price .total {
-    padding: 0 9px;
+    padding: 0 18px;
 }
 .stepBox.fill_box .price li:nth-last-child(2) {
     padding-bottom: 9px;
     border-bottom: 1px solid #ddd;
 }
 .stepBox.fill_box .price .total {
-    padding-top: 9px;
-    margin-bottom: 0;
-    background: #4f6ea2;
-    color: #fff;
-    padding-bottom: 9px;
+    padding: 0 9px;
+    background: unset;
+}
+.stepBox.fill_box .price .total .valuaBox {
+    background: rgba(79, 110, 162, .3);
+    color: #4f6ea2;
     border-radius: 5px;
+    padding: 9px;
+}
+.stepBox.fill_box .price li {
+    margin-bottom: 9px;
+}
+.stepBox.fill_box .price li:first-child {
+    margin-top: 9px;
+}
+.stepBox.fill_box .price li .valuaBox {
+    display: flex;
+    flex-direction: row;
+    float: unset;
+    width: unset;
+}
+.stepBox.fill_box .price li .valuaBox > b {
+    width: 55%;
+}
+.stepBox.fill_box .price li .valuaBox > div {
+    width: 45%;
+    text-align: right;
+}
+.stepBox.fill_box .price li .valuaBox span {
+    width: unset;
 }
 /** END order_form **/
 
@@ -823,8 +848,8 @@
 
 @media only screen and (max-width: 980px) {
     .orderstep ul li {
-        font-size: 15px;
-        padding: 9px 11px;
+        font-size: 13px;
+        padding: 9px 5px;
         border-bottom: 0;
         text-align: center;
     }

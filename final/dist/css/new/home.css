@@ -81,7 +81,7 @@
     width: auto;
     max-width: unset;
     height: unset;
-    background-color: none;
+    background-color: unset;
     text-align: center;
     font-weight: normal;
 }
@@ -344,22 +344,22 @@
         border-radius: 0;
         bottom: 0;
         margin: 0;
-        background-color: rgba(253, 253, 253, .8);
     }
     .index .flexslider .search input.input {
         width: 100%;
         margin: 0 auto 9px;
         font-size: 15px;
-        height: 50px;
+        height: 44px;
     }
     .index .flexslider .search .other {
         margin-top: 9px;
     }
-    .index .flexslider .search a.next {
+    .index .flexslider .search a.next,
+    .index .flexslider .search a.next span {
         width: 100%;
     }
     .index .flexslider .search .other a.advanced {
-        color: #4E5059;
+        color: #f3f3f3;
         font-size: 15px;
     }
     .index .style {
