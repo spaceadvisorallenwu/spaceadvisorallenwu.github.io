@@ -54,7 +54,7 @@
     margin-right: 0;
 }
 
-.orders_list_rfp .bookList {
+.bookList {
     margin-bottom: 80px;
     overflow: visible;
 }
@@ -148,74 +148,74 @@
 }
 
 @media only screen and (max-width: 980px) {
-    .orders_list_rfp .order-management .nav-tabs > li {
+    .order-management .nav-tabs > li {
         width: 100%;
         text-align: center;
         border-width: 2px;
     }
-    .orders_list_rfp .order-management .nav-tabs > li > a {
+    .order-management .nav-tabs > li > a {
         padding: 5px 0;
         font-size: 13px;
     }
-    .orders_list_rfp .order-management .nav-tabs {
+    .order-management .nav-tabs {
         margin: 0 0 40px;
     }
-    .orders_list_rfp .bookList {
+    .bookList {
         margin-bottom: 40px;
     }
-    .orders_list_rfp .bookList .bookTitle {
+    .bookList .bookTitle {
         flex-direction: column;
         padding: 9px;
         font-size: 13px;
     }
-    .orders_list_rfp .bookList .bookTitle ._left,
-    .orders_list_rfp .bookList .bookTitle ._right {
+    .bookList .bookTitle ._left,
+    .bookList .bookTitle ._right {
         justify-content: flex-start;
         flex-direction: column;
         align-items: flex-start;
     }
-    .orders_list_rfp .bookList .bookTitle ._left {
+    .bookList .bookTitle ._left {
         flex-direction: column-reverse;
     }
-    .orders_list_rfp .bookList .bookTitle ._left > div {
+    .bookList .bookTitle ._left > div {
         margin-bottom: 5px;
         width: 100%;
     }
-    .orders_list_rfp .bookList .bookTitle ._left .recstate span {
+    .bookList .bookTitle ._left .recstate span {
         margin-left: 0;
         width: 100%;
         display: inline-block;
         text-align: center;
         padding: 3px;
     }
-    .orders_list_rfp .bookList .detailTable-heading .detailTable-cell {
+    .bookList .detailTable-heading .detailTable-cell {
         color: #435059;
         font-size: 15px;
         line-height: normal;
         padding: 9px 0;
     }
-    .orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
         flex-direction: column;
     }
-    .orders_list_rfp .bookList .detailTable-cell .tableTxt.siteName {
+    .bookList .detailTable-cell .tableTxt.siteName {
         border-bottom-width: 1px;
     }
-    .orders_list_rfp .bookList .buttons {
+    .bookList .buttons {
         border-top: 1px solid #ddd;
         padding: 20px 9px;
         margin-bottom: 0;
     }
-    .orders_list_rfp .bookList .buttons .comment,
-    .orders_list_rfp .bookList .buttons .payment,
-    .orders_list_rfp .bookList .buttons .contact {
+    .bookList .buttons .comment,
+    .bookList .buttons .payment,
+    .bookList .buttons .contact {
         width: 100%;
     }
-    .orders_list_rfp .bookList .buttons .comment > span,
-    .orders_list_rfp .bookList .buttons .payment > span,
-    .orders_list_rfp .bookList .buttons .contact > a span {
+    .bookList .buttons .comment > span,
+    .bookList .buttons .payment > span,
+    .bookList .buttons .contact > a span {
         width: 100%;
     }
-    .orders_list_rfp .bookList .buttons .comment .comment_list {
+    .bookList .buttons .comment .comment_list {
         top: 25px;
     }
     .bookList .buttons .comment .comment_list div a {

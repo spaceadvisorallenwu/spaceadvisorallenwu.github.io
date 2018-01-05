@@ -40,6 +40,9 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
 }
+.index .flexslider > p {
+    font-size: 30px;
+}
 .index .flexslider .search {
     max-width: unset;
     /*margin: 20px 10%;*/
@@ -61,6 +64,12 @@
 .index .flexslider .search .search-box .search_item_detail {
     border-radius: 0 5px 5px 5px;
 }
+.index .flexslider .search .search-box .search_item.have,
+.index .flexslider .search .search-box .search_item_detail.have,
+.index .flexslider .search .search-box .search_item_detail.have .search_item_open,
+.index .flexslider .search .search-box .search_item_detail.have .search_item_area {
+    background: #f3f3f3;
+}
 .event tr:last-child {
     margin: 0;
 }
@@ -72,7 +81,8 @@
     margin: 0 9px;
     font-size: 15px;
     /*color: #4e5059;*/
-    color: #f3f3f3;
+    /*color: #f3f3f3;*/
+    font-weight: bold;
 }
 .index .flexslider .search .other i {
     margin-right: 3px;
@@ -86,6 +96,7 @@
     font-weight: normal;
 }
 .index .login-box {
+    padding: 0 0 20px;
     background: transparent;
     border: 0;
     border-bottom: 1px solid #ddd;
@@ -97,7 +108,7 @@
 }
 .index .style {
     background-color: rgba(79, 110, 162, .2);
-    border: 1px solid rgba(79, 110, 162, .5);
+    /*border: 1px solid rgba(79, 110, 162, .5);*/
 }
 .index .style > ul.first > li {
     border-color: rgba(79, 110, 162, .3);
@@ -106,6 +117,10 @@
 .index .style .style-other li a b {
     padding: 0 1px;
     font-weight: normal;
+}
+.index .style > ul.first > li a:hover i {
+    color: #d76050;
+    transition: all .4s;
 }
 .index .style > ul.first > li:first-child {
     border-left: 0;
@@ -148,6 +163,14 @@
     border: 0;
     text-align: left;
 }
+.site-list .site span.pic i.ranking {
+    width: 44px;
+    height: 68px;
+    background-repeat: no-repeat;
+}
+.index .time-limit {
+    padding: 20px 0;
+}
 .index .time-limit ul {
     display: flex;
 }
@@ -187,6 +210,7 @@
     height: auto;
     line-height: normal;
     bottom: 20px;
+    font-size: 21px;
 }
 .index .theme-list li:hover a:before,
 .index .theme-list li:hover i.mark,
@@ -206,7 +230,7 @@
 .animentBox a {
     width: auto !important;
     height: auto !important;
-    border: 1px solid #b61d1a;
+    border: 0;
 }
 .animentBox a:after {
     content: none;
@@ -217,6 +241,10 @@
 .animentBox h2,
 .animentBox h3 {
     letter-spacing: 0;
+}
+.index .assure li i {
+    width: 100px;
+    height: 100px;
 }
 .index .assure li a i img {
     bottom: 0;
@@ -229,7 +257,7 @@
 }
 .index .assure li p.title {
     font-size: 21px;
-    margin-bottom: 9px;
+    margin: 9px 0;
     height: unset;
     line-height: normal;
 }
@@ -238,9 +266,8 @@
     height: unset;
     line-height: normal;
 }
-.index .information-list,
-.index .brand-list {
-    padding: 40px 0;
+.index .information-list {
+    padding: 20px 0;
 }
 .index .information-list .content,
 .index .brand-list .content {

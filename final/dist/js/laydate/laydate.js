@@ -211,16 +211,16 @@
          n = {
             cn: {
                weeks: [ "一", "二", "三", "四", "五", "六","日"],
-               time: ["时", "分", "秒"],
-               timeTips: "选择时间",
-               startTime: "开始时间",
-               endTime: "结束时间",
+               time: ["時", "分", "秒"],
+               timeTips: "選擇時間",
+               startTime: "開始時間",
+               endTime: "結束時間",
                dateTips: "返回日期",
                month: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
                tools: {
-                  confirm: "确定",
+                  confirm: "確定",
                   clear: "清空",
-                  now: "现在"
+                  now: "現在"
                }
             },
             en: {
@@ -435,7 +435,7 @@
          };
       return "limit" === e ? (c(o), i) : (l = l || r.value, "string" == typeof l && (l = l.replace(/\s+/g, " ").replace(/^\s|\s$/g, "")), i.startState && !i.endState && (delete i.startState, i.endState = !0), "string" == typeof l && l ? i.EXP_IF.test(l) ? r.range ? (l = l.split(" " + r.range + " "), i.startDate = i.startDate || i.systemDate(), i.endDate = i.endDate || i.systemDate(), r.dateTime = w.extend({}, i.startDate), w.each([i.startDate, i.endDate], function(e, t) {
          m(t, l[e], e)
-      })) : m(o, l) : (i.hint("日期格式不合法<br>必须遵循下述格式：<br>" + (r.range ? r.format + " " + r.range + " " + r.format : r.format) + "<br>已为你重置"), a = !0) : l && l.constructor === Date ? r.dateTime = i.systemDate(l) : (r.dateTime = i.systemDate(), delete i.startState, delete i.endState, delete i.startDate, delete i.endDate, delete i.startTime, delete i.endTime), c(o), a && l && i.setValue(r.range ? i.endDate ? i.parse() : "" : i.parse()), e && e(), i)
+      })) : m(o, l) : (i.hint("日期格式不合法<br>必須遵循下述格式：<br>" + (r.range ? r.format + " " + r.range + " " + r.format : r.format) + "<br>已为你重置"), a = !0) : l && l.constructor === Date ? r.dateTime = i.systemDate(l) : (r.dateTime = i.systemDate(), delete i.startState, delete i.endState, delete i.startDate, delete i.endDate, delete i.startTime, delete i.endTime), c(o), a && l && i.setValue(r.range ? i.endDate ? i.parse() : "" : i.parse()), e && e(), i)
    }, T.prototype.mark = function(e, t) {
       var n, a = this,
          i = a.config;

@@ -329,7 +329,7 @@ header .memberClick .memberMenu ul li a b {
 /** BEGIN Main **/
 h2 {
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 21px;
 }
 .breadcrumb {
     padding: 15px 10%;
@@ -513,6 +513,13 @@ footer .bottom li a img:hover {
 	opacity: 1;
 }
 /** END Footer **/
+
+.layui-laydate .layui-laydate-content td:hover,
+.layui-laydate .layui-laydate-list li:hover,
+.layui-laydate .layui-laydate-content td.laydate-selected {
+    background-color: rgba(215, 96, 80, .3);
+}
+
 
 @media (min-width: 1200px){}
 
