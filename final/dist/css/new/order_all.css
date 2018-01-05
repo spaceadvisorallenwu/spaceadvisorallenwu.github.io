@@ -943,6 +943,7 @@
 
     .mobile-plan-stecla {
         box-shadow: unset;
+        z-index: 10;
     }
     .mobile-plan-stecla a.first {
         padding: 9px 5%;

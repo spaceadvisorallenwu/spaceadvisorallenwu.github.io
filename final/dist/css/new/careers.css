@@ -58,12 +58,9 @@
 	border-top: 1px solid #ddd;
 }
 .membership .membershipList .custodyBtn a {
-    font-size: 17px;
-    padding: 11px;
-    width: 150px;
-    letter-spacing: 0;
-    border-radius: 5px;
-    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: unset
 }
 .vacancylist .vacTitle span {
 	font-size: 17px;
@@ -101,7 +98,7 @@
 }
 .membership {
     background: #f3f3f3;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
 }
 .membership h2 {
 	font-weight: bold;

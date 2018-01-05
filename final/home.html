@@ -506,7 +506,7 @@
 				<div class="time-limit cf _boxStyle">
 					<h2>限時優惠</h2>
 					<ul class="content">
-						<li style="background-image:url(dist/images/time_limit_pic01.png)">
+						<li>
 							<a href="">
 								<span class="mark"></span>
 								<div>
@@ -519,7 +519,7 @@
 								</div>
 							</a>
 						</li>
-						<li style="background-image:url(dist/images/time_limit_pic01.png)">
+						<li>
 							<a href="">
 								<span class="mark"></span>
 								<div>
@@ -607,7 +607,7 @@
 				</div>
 				<!-- /theme-list -->
 				<!-- banner-pic -->
-				<div class="banner-anment _boxStyle">
+				<div class="banner-anment">
 					<div class="animentBox">
 						<div class="bannerTitle">
 							<h2>留下您的評價，立即獲得點數！</h2>
@@ -842,7 +842,7 @@
 					slidesToShow: 3,
 					slidesToScroll: 1,
 					autoplay: false,
-					autoplaySpeed: 3000,
+					autoplaySpeed: 5000,
 					responsive: [
 						{
 							breakpoint: 1250,
@@ -960,7 +960,7 @@
 			});
 			//input change
 			$(".number_change").change(function(){
-				if($(this).val() ==''){
+				if($(this).val() == '' || $(this).val() == '0'){
 					$(this).removeClass('have');
 				}else{
 					$(this).addClass('have');

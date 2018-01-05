@@ -32,8 +32,19 @@
 .advantageContent {
 	margin: 40px auto;
 }
+.advantageContent ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .advantageContent li {
 	font-size: 17px;
+}
+.ab_item4 .custodyBtn a {
+    background: transparent;
+    font-size: unset;
+    padding: 0;
 }
 
 @media only screen and (max-width: 980px) {

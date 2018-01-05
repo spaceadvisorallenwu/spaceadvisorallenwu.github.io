@@ -1661,16 +1661,16 @@
 							<ul>
 								<li>
 									<select name="select" id="select">
-										<option>價錢</option>
-										<option>價格由高到低</option>
-										<option>價格由低到高</option>
+										<option value="0">價錢</option>
+										<option value="1">價格由高到低</option>
+										<option value="2">價格由低到高</option>
 									</select>
 								</li>
 								<li>
 									<select name="select" id="select">
-										<option>星等</option>
-										<option>評價星等由高到低</option>
-										<option>評價星等由低到高</option>
+										<option value="0">星等</option>
+										<option value="1">評價星等由高到低</option>
+										<option value="2">評價星等由低到高</option>
 									</select>
 								</li>
 							</ul>
@@ -2115,9 +2115,9 @@
 					// infinite: false,
 					speed: 300,
 					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToScroll: 1,
 					autoplay: true,
-					autoplaySpeed: 50000,
+					autoplaySpeed: 5000,
 					responsive: [
 						{
 							breakpoint: 1250,
@@ -2235,7 +2235,7 @@
 
 			//input change
 			$(".number_change").change(function(){
-				if($(this).val() ==''){
+				if($(this).val() == '' || $(this).val() == '0'){
 					$(this).removeClass('have');
 				}else{
 					$(this).addClass('have');
@@ -2324,6 +2324,15 @@
 					$(".search_item").find('i').attr("class", "fa fa-angle-down");
 				}
 			});//點擊其他地方關閉
+		</script>
+		<script type="text/javascript">
+			$('.sequence.desk .sequence-select select').on('change', function(){
+				if($(this).val() != '0') {
+					$(this).addClass('have');
+				} else {
+					$(this).removeClass('have');
+				}
+			});
 		</script>
 	</body>
 </html>

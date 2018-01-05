@@ -26,9 +26,40 @@
 }
 .site-list .site i.heart,
 .site-list .site i.add {
-    right: 35px;
+    right: 30px;
     cursor: pointer;
+    /*background-image: unset;*/
+    /*background-color: transparent;*/
+    /*font-size: 25px;*/
+    /*color: #fff;*/
 }
+/*.site-list .site i.heart.this,
+.site-list .site i.add.this {
+    background-image: unset;
+    background-color: transparent;
+    color: #d76050;
+}*/
+.site-list .site i.add {
+    top: 42px;
+}
+/*.site-list .site i.heart:before {
+    content: "\f184";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.site-list .site i.add:before {
+    content: "\f055";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
 .site-list .site .text p.title,
 .site-list .site .text .info_1 {
     padding: 3px 0;

@@ -5,7 +5,7 @@
     border-bottom: 1px solid #ddd;
 }
 .search main > .search-box .first {
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
     margin-bottom: 20px;
     background: #fff;
     padding: 9px 20px;
@@ -45,6 +45,23 @@
     display: flex;
     align-items: center;
 }
+.search main > .search-box .search_bar > .content > ul > li > input,
+.search main > .search-box .search_bar > .content > ul > li > select,
+.search main > .search-box .search_bar > .content > ul > li .search_item,
+.search main > .search-box .search_bar > .content > ul > li .search_item .search_item_name {
+    height: 35px;
+    font-size: 15px;
+    line-height: 35px;
+    color: #9c9c9c;
+}
+.search main > .search-box .search_bar > .content > ul > li .search_item.have .search_item_name,
+.search main>.search-box .search_bar>.content>ul>li>input.have,
+.search main>.search-box .search_bar>.content>ul>li>select.have {
+    color: #4e5059;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area span {
+    font-size: 15px;
+}
 .search main > .search-box .search_bar > .content > ul > li > p {
     font-size: 15px;
     font-weight: normal;
@@ -59,7 +76,7 @@
 .search.mapBox .search-box.searchPopup .content li.detatime input,
 .search.mapBox .search-box.searchPopup .content > ul > li input {
     border: 1px solid #ccc;
-    background: #fff;
+    background-color: #fff;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_pepole,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail,
@@ -146,7 +163,9 @@
     height: 31px;
 }
 .search .sequence .sequence-click a:hover {
-    background-color: rgba(78, 110, 157, .5);
+    /*background-color: rgba(78, 110, 157, .5);*/
+    background: #f3f3f3;
+    color: #4e6e9d;
 }
 .search .sequence .sequence-click a:nth-child(1) {
     border-radius: 5px 0 0 5px;
@@ -156,8 +175,11 @@
 }
 .search .sequence .sequence-click a.this {
     border-right: 1px solid #fff;
-    background: #dce2ec;
+    background: #f3f3f3;
     color: #4e6e9d;
+}
+.search .search-list {
+    padding-top: 20px;
 }
 .search .search-list ul {
     background: rgba(0, 0, 0, .01);
@@ -305,6 +327,29 @@
 }
 .search main>.search-box .search_bar>.content>ul>li input.price {
     border-radius: 0;
+    width: 70px;
+    text-align: center;
+    line-height: normal;
+    padding: 0;
+
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item.have,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail.have,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail.have .search_item_open,
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail.have .search_item_area,
+.search main>.search-box .search_bar>.content>ul>li>input.have,
+.search .search-box.desk li .room.have,
+.search .sequence .sequence-select li select.have {
+    background-color: #f3f3f3;
+}
+.number_change.have {
+    background-color: #f3f3f3 !important;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item>i {
+    top: 9px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_amount {
+    width: 290px;
 }
 
 
@@ -452,11 +497,14 @@
     }
 }
 @media only screen and (max-width: 980px) {
+    .search main {
+        margin-top: 124px;
+    }
     .search .breadcrumb {
         top: 44px;
     }
     .search .search-mobile {
-        top: 91px;
+        top: 79px;
     }
     .search .search-mobile .search_menu {
         display: flex;
