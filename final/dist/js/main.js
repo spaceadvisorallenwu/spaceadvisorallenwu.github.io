@@ -112,6 +112,7 @@ $(function(){
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height();
 	$('#condition').click(function(){
+		$('#sequence').removeClass('this'); // allen
 		if($(this).hasClass('this')){
 			$(this).removeClass('this');
 			$('.search-send').hide();
@@ -127,7 +128,7 @@ $(function(){
 			$('body').css({'height': 0});
 		}
 		$('#sequence-open').hide();
-		$('#condition-open').slideToggle()
+		$('#condition-open').toggle() // allen
 	});//搜尋條件
     windowWidth = $(window).width();
 	$(window).resize(function() {
@@ -136,6 +137,7 @@ $(function(){
 		}
 	});
 	$('#sequence').click(function(){
+		$('#condition').removeClass('this'); // allen
 		if($(this).hasClass('this')){
 			$(this).removeClass('this');
 			$('.search-send').hide();
@@ -151,7 +153,7 @@ $(function(){
 			$('body').css({'height': 0});
 		}
 		$('#condition-open').hide();
-		$('#sequence-open').slideToggle();
+		$('#sequence-open').toggle(); // allen
 	});//搜尋排序
 
 	if($(window).width() >= 980 ){
