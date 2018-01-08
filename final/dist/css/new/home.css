@@ -6,6 +6,16 @@
 .flexslider .slides > li {
     height: 450px;
 }
+.flexslider .slides > li:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(top, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
+}
 .index .content:not(.site-list, .information-list) {
     width: 90%;
     margin: 0 auto;
@@ -38,10 +48,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: -moz-linear-gradient(top, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+    /*background: -moz-linear-gradient(top, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
     background: -webkit-linear-gradient(top, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.7) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a3000000', GradientType=0);*/
 }
 .index .flexslider > p {
     font-size: 30px;
@@ -117,6 +127,9 @@
 .index .login-box,
 .index .fast-select {
     margin: 40px auto;
+}
+.index .fast-select {
+    padding: 0;
 }
 .index .style {
     background-color: rgba(79, 110, 162, .2);
@@ -204,7 +217,7 @@
     transition: all .4s;
 }
 .index .time-limit li:hover {
-    background-size: 110%;
+    background-size: 107%;
 }
 .index .time-limit li span.mark,
 .index .time-limit li:last-child span.mark {
@@ -309,8 +322,15 @@
 .index .brand-list .content .brand-box .slick-next {
     right: -8%;
 }
+.index .brand-list .brand {
+    text-align: center;
+}
+.index .brand-list .brand a {
+    display: inline-block;
+}
 .index .brand-list .brand a img {
     transition: all .4s;
+    border-radius: 50%;
 }
 .index .information-list .information-box .slick-prev {
     left: -3%;
@@ -512,10 +532,14 @@
     .index .brand-list .brand a {
         width: 120px;
         height: 120px;
+        margin: 20px 0;
     }
     .index .brand-list .brand a:hover {
         width: 120px;
         height: 120px;
+    }
+    .index .brand-list .brand a img {
+        padding: 5px;
     }
     .banner-anment {
         width: 100%;

@@ -48,7 +48,9 @@
 .search main > .search-box .search_bar > .content > ul > li > input,
 .search main > .search-box .search_bar > .content > ul > li > select,
 .search main > .search-box .search_bar > .content > ul > li .search_item,
-.search main > .search-box .search_bar > .content > ul > li .search_item .search_item_name {
+.search main > .search-box .search_bar > .content > ul > li .search_item .search_item_name,
+.search.mapBox main > .search-box .search_bar > .content > ul > li .search-map.day,
+.search.mapBox .search-box.searchPopup .content li.detatime input {
     height: 35px;
     font-size: 15px;
     line-height: 35px;
@@ -56,7 +58,8 @@
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item.have .search_item_name,
 .search main>.search-box .search_bar>.content>ul>li>input.have,
-.search main>.search-box .search_bar>.content>ul>li>select.have {
+.search main>.search-box .search_bar>.content>ul>li>select.have,
+.search.mapBox .search-box.searchPopup .content li.detatime .day.have input {
     color: #4e5059;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area span {
@@ -82,6 +85,11 @@
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_area {
+    left: 75px;
+    top: 42px;
+}
+.search.mapBox .search-box.searchPopup .content > ul > li #search_star,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential {
     left: 74px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_place {
@@ -92,28 +100,36 @@
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail {
     left: 75px;
+    top: 42px;
     border-radius: 0 5px 5px 5px;
     border-color: #ccc;
 }
-.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_open {
+.search.mapBox main > .search-box .search_bar .search_in .search-map .search_item_detail {
+    top: 34px;
+}
+.search main>.search-box .search_bar > .content>ul>li .search_item_detail>.search_item_open {
     border-color: #ccc;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
     left: 295px;
 }
+.search.mapBox main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
+    left: 271px;
+}
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area p.title {
     font-size: 15px;
     font-weight: normal;
-}
-.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
-.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
-    left: 190px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_area,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_pepole,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_preferential {
     left: 190px;
+}
+.search.mapBox main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
+.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
+    left: 189px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_plan {
     left: 305px;
@@ -133,7 +149,7 @@
 }
 .search .sequence {
     background: unset;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #f3f3f3;
     border-radius: 0;
     padding: 0 0 9px;
 }
@@ -188,13 +204,14 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
-.search .search-list li .place .showbox-all .showbox img {
-    border-radius: 5px;
-}
 .search .search-list li .place {
     width: 100%;
     max-width: unset;
     padding: 20px 9px;
+    border-bottom-color: #ddd;
+}
+.search .search-list li .place .showbox-all .showbox img {
+    border-radius: 5px;
 }
 .search .search-list li .place .text a.title {
     font-size: 25px;
@@ -325,13 +342,18 @@
 .search .search-list li .place._earlyBird .ecentTime_box .evt {
     display: inline-block;
 }
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area.money p,
+.search.mapBox main>.search-box .search_bar>.content>ul>li .search-map .search_item_area.money p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
 .search main>.search-box .search_bar>.content>ul>li input.price {
     border-radius: 0;
-    width: 70px;
+    width: 74px;
     text-align: center;
     line-height: normal;
     padding: 0;
-
+    font-size: 15px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item.have,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail.have,
@@ -340,10 +362,12 @@
 .search main>.search-box .search_bar>.content>ul>li>input.have,
 .search .search-box.desk li .room.have,
 .search .sequence .sequence-select li select.have {
-    background-color: #f3f3f3;
+    background-color: #ccc;
+    border-color: #fff;
 }
-.number_change.have {
-    background-color: #f3f3f3 !important;
+.number_change.have,
+.search.mapBox .search-box.searchPopup .content li.detatime .day.have input {
+    background-color: #ccc !important;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item>i {
     top: 9px;
@@ -357,11 +381,15 @@
 .search.mapBox .search-box {
     padding: 20px 10%;
 }
+.search.mapBox .sefix {
+    margin-top: 35px;
+}
 .search.mapBox .search-box.searchPopup {
-    top: 172px;
+    top: 168px;
     width: 65%;
     padding-left: 10%;
     border-radius: 0;
+    border-top: 0;
 }
 .search.mapBox .search-box.searchPopup .confirmBtn {
     padding-top: 9px;
@@ -378,7 +406,7 @@
     padding: 20px 7% 20px 0;
 }
 .mapBox .map {
-    top: 92px;
+    top: 80px;
 }
 .mapBox .map a.search_item {
     max-width: unset;
@@ -428,7 +456,12 @@
     border: 1px solid #ddd;
 }
 .search.mapBox .search-box.searchPopup .content li.detatime input {
-    width: 180px;
+    width: 186px;
+}
+.search main>.search-box .search_bar>.content>ul>li input.price::placeholder,
+.search main>.search-box .search_bar>.content>ul>li>input::placeholder,
+.search.mapBox .search-box.searchPopup .content li.detatime input::placeholder {
+    color: #9c9c9c !important;
 }
 .placeList .text {
     border: 0;

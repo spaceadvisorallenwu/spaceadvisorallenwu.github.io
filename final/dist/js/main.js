@@ -214,14 +214,18 @@ $(function(){
 	});
 });
 
-//meeting 點選打開
+//meeting 價格方案 點選打開
 $(function(){
-	$('.price-plan > .content > .content-720 > .box > ul > li > div > p.program > i').click(function(){
-		$(this).parent().parent().siblings().toggle();
+	$('.price-plan > .content > .content-720 > .box > ul > li > div > p.program, .price-plan > .content > .content-720 > .box > ul > li > div > p.price').click(function(){ // allen
+		$(this).parent().siblings().toggle();
 	});
-	$('.box > a.more').click(function(){
-		$(this).siblings('.add').css("height", "auto");
-		$(this).css("display", "none");
+	$('.box a.more').click(function(){ // allen
+		var $this = $(this).parents('.box');
+		if($this.hasClass('open')) {
+			$this.removeClass('open');
+		} else {
+			$this.addClass('open');
+		}
 	});
 });
 

@@ -486,11 +486,11 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<p id="money1">金額</p>
+												<p id="money1">請輸入最低金額和最高金額</p>
 												TWD
-												<input type="number" name="money1" value="" class="price pricemo_min"> -
-												<input type="number" name="money1" value="" class="price pricemo_max">以上
-												<a href="javascript:;" class="price_mo_areaBtn">確認</a>
+												<input type="number" name="money1" value="" min="0" placeholder="最低金額" class="price pricemo_min"> -
+												<input type="number" name="money1" value="" min="0" placeholder="最高金額" class="price pricemo_max">以上
+												<!-- <a href="javascript:;" class="price_mo_areaBtn">確認</a> -->
 											</li>
 											<li>
 												<p>優惠</p>
@@ -1150,9 +1150,10 @@
 										<div id="search_amount" class="search_item_detail">
 											<div class="search_item_open"></div>
 											<div class="search_item_area money">
+												<p>請輸入最低金額和最高金額</p>
 												TWD
-												<input type="number" name="money" value="" class="price price_min" /> -
-												<input type="number" name="money" value="" class="price price_max"/>以上
+												<input type="number" name="money" value="" min="0" class="price price_min" placeholder="最低金額" /> -
+												<input type="number" name="money" value="" min="0" class="price price_max" placeholder="最高金額" />以上
 												<a href="javascript:;" class="price_areaBtn">確認</a>
 											</div>
 										</div>
@@ -1176,7 +1177,7 @@
 					<div class="first">
 						<div class="input">
 							<input type="text" name="textfield" id="textfield" placeholder="輸入關鍵字" />
-							<a href="">搜尋</a>
+							<a href="javascript:;">搜尋</a>
 						</div>
 					</div>
 					<!-- /first -->
@@ -1795,7 +1796,7 @@
 					<!-- map -->
 					<div class="map">
 						<!-- 進階搜尋 -->
-						<a href="search.php" class="search_item profound">
+						<a href="search.html" class="search_item profound">
 							<div class="search_item_name">
 								<span>進階搜尋</span>
 							</div>

@@ -480,9 +480,10 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<p id="money1">金額</p>TWD
-												<input type="number" name="money1" value="" class="price pricemo_min"> -
-												<input type="number" name="money1" value="" class="price pricemo_max">以上
+												<p id="money1">請輸入最低金額和最高金額</p>
+												TWD
+												<input type="number" name="money1" value="" min="0" placeholder="最低金額" class="price pricemo_min"> -
+												<input type="number" name="money1" value="" min="0" placeholder="最高金額" class="price pricemo_max">以上
 												<!-- <a href="javascript:;" class="price_mo_areaBtn">確認</a> -->
 											</li>
 											<li>
@@ -528,7 +529,7 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<input type="number" name="textfield" id="textfield" placeholder="坪數"/>
+												<input type="number" name="textfield" id="textfield" min="0" placeholder="坪數"/>
 											</li>
 											<li>
 												<p>場地數量</p>
@@ -1005,7 +1006,7 @@
 								<li><a href="">家庭聚餐</a></li>
 							</ul>
 						</div>
-						<a href="" class="add"><i class="fa fa-map-marker" aria-hidden="true"></i>地圖搜尋</a>
+						<a href="search_map.html" class="add"><i class="fa fa-map-marker" aria-hidden="true"></i>地圖搜尋</a>
 					</div>
 					<!-- /first -->
 					<div class="search_bar cf">
@@ -1249,9 +1250,10 @@
 										<div id="search_amount" class="search_item_detail">
 											<div class="search_item_open short"></div>
 											<div class="search_item_area money">
+												<p>請輸入最低金額和最高金額</p>
 												TWD
-												<input type="number" name="money" value="" class="price price_min" /> -
-												<input type="number" name="money" value="" class="price price_max"/>以上
+												<input type="number" name="money" value="" class="price price_min" min="0" placeholder="最低金額" /> -
+												<input type="number" name="money" value="" class="price price_max" min="0" placeholder="最高金額" />以上
 												<a href="javascript:;" class="price_areaBtn">確認</a>
 											</div>
 										</div>
@@ -1654,6 +1656,7 @@
 					<a href="" class="more">更多精選場地<i class="fa fa-caret-right" aria-hidden="true"></i></a>
 				</div>
 				<!-- /site-list -->
+
 				<!-- ****桌機用排序**** -->
 				<div class="sequence desk _boxStyle">
 					<div class="content">
@@ -1684,10 +1687,12 @@
 					</div>
 				</div>
 				<!-- /sequence -->
+
 				<!-- 場地列表 -->
 				<div class="search-list _boxStyle">
 					<ul>
-						<li><!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
 							<div class="place _onlineBooking _featured _lastTime">
 								<div class="showbox-all">
 									<i class="heart"></i>
@@ -1770,7 +1775,8 @@
 							</div>
 							<!-- /place -->
 						</li>
-						<li>
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
 							<div class="place _onlineBooking _featured _earlyBird">
 								<div class="showbox-all">
 									<i class="heart"></i>
@@ -1853,7 +1859,8 @@
 							</div>
 							<!-- /place -->
 						</li>
-						<li>
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
 							<div class="place">
 								<div class="showbox-all">
 									<i class="heart"></i>
@@ -1936,7 +1943,176 @@
 							</div>
 							<!-- /place -->
 						</li>
-						<li>
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
+							<div class="place">
+								<div class="showbox-all">
+									<i class="heart"></i>
+									<i class="add"></i>
+									<div class="evt_icon"></div>
+									<div class="showbox"><img id="show-image" src="dist/images/search_pic01.jpg" width="295" height="200" /></div>
+								</div>
+								<div class="text">
+									<a href="" class="title">場地或飯店名稱臺北市藝文推場地或飯店名稱臺北市藝文推</a>
+									<p class="no">
+										<span>場地編號：#PN007998</span>
+										<span class="chosen">
+											<i class="fa fa-bolt" aria-hidden="true"></i>
+											<span class="featured">精選</span>
+										</span>
+									</p>
+									<div class="three">
+										<span><i class="fa fa-user" aria-hidden="true"></i>8000人</span>
+										<span><i class="fa fa-map-marker" aria-hidden="true"></i>台北市信義區</span>
+										<span><i class="fa fa-comment" aria-hidden="true"></i>政府機關</span>
+									</div>
+									<span class="star"><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star-half-o light" aria-hidden="true"></i><b>150 則評價</b></span>
+									<div class="ecentTime_box">
+										<div class="evt">活動期間3/20-4/30</div>
+									</div>
+									<a href=""><span class="price"><span class="sarebate">7折</span>婚宴方案 <b>TWD <b>30,000</b> </b>/ 桌起</span></a>
+									<i class="plan">更多價格方案<i class="fa fa-angle-down" aria-hidden="true"></i></i>
+								</div>
+								<div class="down">
+									<div class="abgne">
+										<a class="pic" href="dist/images/search_pic01.jpg"><img src="dist/images/search_pic01.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic02.jpg"><img src="dist/images/search_pic02.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic03.jpg"><img src="dist/images/search_pic03.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic04.jpg"><img src="dist/images/search_pic04.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic05.jpg"><img src="dist/images/search_pic05.jpg"/></a>
+										<a href=""><img src="dist/images/search_pic06.jpg"/><i>+5</i></a>
+									</div>
+									<div class="plan">
+										<ul>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案一生一世專案一生一世專案一生一世專案一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+										</ul>
+									</div>
+								</div>
+								<!-- /down -->
+							</div>
+							<!-- /place -->
+						</li>
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
+							<div class="place">
+								<div class="showbox-all">
+									<i class="heart"></i>
+									<i class="add"></i>
+									<div class="evt_icon"></div>
+									<div class="showbox"><img id="show-image" src="dist/images/search_pic01.jpg" width="295" height="200" /></div>
+								</div>
+								<div class="text">
+									<a href="" class="title">場地或飯店名稱臺北市藝文推場地或飯店名稱臺北市藝文推</a>
+									<p class="no">
+										<span>場地編號：#PN007998</span>
+										<span class="chosen">
+											<i class="fa fa-bolt" aria-hidden="true"></i>
+											<span class="featured">精選</span>
+										</span>
+									</p>
+									<div class="three">
+										<span><i class="fa fa-user" aria-hidden="true"></i>8000人</span>
+										<span><i class="fa fa-map-marker" aria-hidden="true"></i>台北市信義區</span>
+										<span><i class="fa fa-comment" aria-hidden="true"></i>政府機關</span>
+									</div>
+									<span class="star"><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star light" aria-hidden="true"></i><i class="fa fa-star-half-o light" aria-hidden="true"></i><b>150 則評價</b></span>
+									<div class="ecentTime_box">
+										<div class="evt">活動期間3/20-4/30</div>
+									</div>
+									<a href=""><span class="price"><span class="sarebate">7折</span>婚宴方案 <b>TWD <b>30,000</b> </b>/ 桌起</span></a>
+									<i class="plan">更多價格方案<i class="fa fa-angle-down" aria-hidden="true"></i></i>
+								</div>
+								<div class="down">
+									<div class="abgne">
+										<a class="pic" href="dist/images/search_pic01.jpg"><img src="dist/images/search_pic01.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic02.jpg"><img src="dist/images/search_pic02.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic03.jpg"><img src="dist/images/search_pic03.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic04.jpg"><img src="dist/images/search_pic04.jpg"/></a>
+										<a class="pic" href="dist/images/search_pic05.jpg"><img src="dist/images/search_pic05.jpg"/></a>
+										<a href=""><img src="dist/images/search_pic06.jpg"/><i>+5</i></a>
+									</div>
+									<div class="plan">
+										<ul>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案一生一世專案一生一世專案一生一世專案一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+											<a href="">
+												<li>
+													<p class="title">婚宴方案 - 一生一世專案</p>
+													<p class="price"><b>TWD <b>17,800</b></b>/ 桌起</p>
+												</li>
+											</a>
+										</ul>
+									</div>
+								</div>
+								<!-- /down -->
+							</div>
+							<!-- /place -->
+						</li>
+						<li class="space_item">
+							<!-- _onlineBooking => 控制是否顯示閃電, _featured => 控制是否顯示精選, _lastTime => 控制是否顯示限時優惠, _earlyBird => 控制是否顯示早鳥優惠 -->
 							<div class="place">
 								<div class="showbox-all">
 									<i class="heart"></i>
@@ -2022,6 +2198,7 @@
 					</ul>
 				</div>
 				<!-- /place-list -->
+
 				<div class="pagebox _boxStyle">
 					<dl class="page">
 						<dt><a href="#" class="no"> < </a></dt>

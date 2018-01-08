@@ -11,7 +11,11 @@
 }
 .meberBox .meberDetail h3 {
 	font-size: 21px;
-	margin-bottom: 9px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 9px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 .meberInput input {
 	border: 1px solid #ddd;

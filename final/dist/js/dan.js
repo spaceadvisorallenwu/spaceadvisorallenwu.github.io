@@ -15,7 +15,7 @@ $(document).ready(function() {
     $(".popuImg,.informationBox .theme-list .pic,.similarImg").imgLiquid();
 	    /*更多條件開關*/
 
-	    $('.search.mapBox .conditions').on('click',function(event){
+	    $('.search.mapBox .conditions, .search.mapBox .confirmBtn a').on('click',function(event){ // allen
 	    	event.stopPropagation();
 	    	if(!$('.search-box.searchPopup').hasClass('on')){
 	    		$('.search-box.searchPopup').addClass('on');
@@ -23,7 +23,7 @@ $(document).ready(function() {
 	    		$('.search-box.searchPopup').fadeIn();
 	    		$(this).find('i').attr("class", "fa fa-angle-up");
 	    		}else{
-	    		$('body,html').css({'overflow':''});	
+	    		$('body,html').css({'overflow':''});
 	    		$('.search-box.searchPopup').removeClass('on');
 	    		$('.search_item_detail').removeClass('open');
 	    		$('.search-box.searchPopup').fadeOut();
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
 	$('.contclose').on('click',function(){
-	    		$('body,html').css({'overflow':''});	
+	    		$('body,html').css({'overflow':''});
 	    		$('.search-box.searchPopup').removeClass('on');
 	    		$('.search_item_detail').removeClass('open');
 	    		$('.search-box.searchPopup').fadeOut();
@@ -64,10 +64,10 @@ $(document).ready(function() {
 //meeting 手機 價格方案用
 
 		var windowHeight = $(window).height();
-		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 88 + 'px' });
-		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 128 + 'px' });
+		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 88 + 'px' });  // allen
+		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 128 + 'px' });  // allen
 
-		$('.stepBox .mobile-plan-stecla > a.first').click(function() {
+		$('.stepBox .mobile-plan-stecla > a.first').click(function() { // allen
 			$(this).toggleClass('this');
 			if($(this).hasClass('this')){
 				$(this).find('i').html('確定明細');

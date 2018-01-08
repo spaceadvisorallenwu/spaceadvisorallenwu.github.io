@@ -1,5 +1,9 @@
 @charset 'UTF-8';
 /** BEGIN why_spaceadvisor **/
+.ma_banner .pc_banner img {
+    border-radius: 5px;
+    overflow: hidden;
+}
 .advantageTag {
     display: inline-block;
     margin: 0 auto;
@@ -33,13 +37,17 @@
 	margin: 40px auto;
 }
 .advantageContent ul {
+    width: 77%;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 .advantageContent li {
 	font-size: 17px;
+    margin-right: 9px;
 }
 .ab_item4 .custodyBtn a {
     background: transparent;
@@ -69,6 +77,9 @@
     .advantageContent {
         margin: 40px auto;
         padding: 0;
+    }
+    .advantageContent ul {
+        width: 90%;
     }
 }
 /** END why_spaceadvisor **/

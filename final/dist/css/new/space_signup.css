@@ -3,18 +3,19 @@
 .applicationStep {
     letter-spacing: 1px;
     width: 80%;
-    margin: 80px auto;
+    margin: 40px auto 0;
     max-width: unset;
-    border: 1px solid #ddd;
-    padding: 2px;
-    border-radius: 9px;
+    /*border: 1px solid #ddd;*/
+    /*padding: 2px;*/
+    /*border-radius: 9px;*/
+    padding-bottom: 20px;
 }
 .applicationStep ul {
     text-align: center;
     width: 100%;
     border-radius: 9px;
     background: #f3f3f3;
-    padding: 40px 20px;
+    padding: 20px;
 }
 .applicationStep li {
 	font-size: 17px;
@@ -23,9 +24,11 @@
 }
 .applicationStep li img {
     width: 100%;
+    padding: 9px;
+    margin-bottom: 9px;
 }
 .appAdvantage {
-	margin: 80px auto;
+	margin: 0 auto;
 	padding: 40px 0;
 }
 .addAdvaContent .addadImg {
@@ -71,22 +74,30 @@
     padding: 20px 0;
 }
 .appSynopsis {
-	-webkit-filter: grayscale(50%);
-    filter: gray;
-    height: 250px;
-    border: 1px solid #ddd;
+	/*-webkit-filter: grayscale(50%);*/
+    /*filter: gray;*/
+    height: 180px;
+    /*border: 1px solid #ddd;*/
+    background: unset;
+}
+.appSynopsis .appSynopsisTxt {
+	line-height: normal;
+	letter-spacing: 0;
 }
 .appSynopsis .appSynopsisTxt h3 {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-	font-size: 42px;
+	font-size: 30px;
+    margin-bottom: 20px;
+    line-height: normal;
 }
 .appSynopsis .appSynopsisTxt p{
-	font-size: 21px;
+	font-size: 17px;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
+	line-height: normal;
 }
 .application_explanation {
 	padding: 40px;
-	margin-top: 80px;
+	margin-top: 20px;
 }
 .sumber>li .sumTitle span,
 .sumber>li .sumContent span {
@@ -111,7 +122,7 @@
 	margin-right: 0 !important;
 }
 .app_stepBox {
-	padding: 0;
+	/*padding: 0;*/
 }
 .app_stepBox .warning_error:before {
 	content: unset;
@@ -168,6 +179,14 @@
 .applicationBox main h2:before {
 	/*content: '';*/
 }
+.app_step1 .custodyBtn a,
+.app_step2 .custodyBtn a {
+    letter-spacing: 0;
+    font-size: unset;
+    padding: 0;
+    background: unset;
+    border-radius: unset;
+}
 .app_step2 .application_explanation {
     margin: 0 auto;
     letter-spacing: 0;
@@ -223,19 +242,19 @@
 
 @media only screen and (max-width: 980px) {
 	.appAdvantage {
-		margin: 40px auto;
+		padding: 20px 0;
 	}
 	.applicationStep {
-		margin: 20px auto;
+		margin: 20px auto 0;
 		padding: 0;
 	}
 	.applicationStep li {
-	    width: 55px;
+	    font-size: 15px;
+	    line-height: normal;
+	    width: 47px;
 	}
-	.applicationStep li {
-	    font-size: 17px;
-	    line-height: 21px;
-	    width: 53px;
+	.applicationStep li img {
+		padding: unset;
 	}
 	.applicationStep span {
 	    top: -28px;
@@ -256,7 +275,6 @@
 		width: 100%;
 	    border-radius: 0;
 	    border: 0;
-	    margin: 40px 0;
 	}
 	.appSynopsis .appSynopsisTxt h3 {
 	    font-size: 25px;
