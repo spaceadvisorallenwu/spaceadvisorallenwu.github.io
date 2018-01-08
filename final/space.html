@@ -31,7 +31,7 @@
 		<link href="dist/css/new/space.css" rel="stylesheet" type="text/css" media=""/>
 	</head>
 	<body>
-		<div id="wrapper" class="meeting">
+		<div id="wrapper" class="meeting space">
 			<header class="cf">
 				<div class="content cf">
 					<a href="home.html" class="logo">
@@ -145,6 +145,18 @@
 				<div class="banner">
 					<div class="banner-box">
 						<div class="panorama" style="background-image:url(dist/images/desk_banner_01.jpg)">
+							<div class="guide_box">
+								<div class="guide_btn">導 覽<br>Guide</div>
+								<div class="guide_container">
+									<div class="floorplan"><img src="dist/images/floorplan.png"></div>
+									<div class="options">
+										<span class="active">一樓</span>
+										<span>二樓</span>
+										<span>三樓</span>
+										<span>室外</span>
+									</div>
+								</div>
+							</div>
 							<a href="javascript:;"><img src="dist/images/icon_meeting04.png" alt="" title=""></a>
 							<iframe  src="https://www.youtube.com/embed/m5-KNWdVVc0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 						</div>
@@ -1213,6 +1225,20 @@
 					}
 				});
 			});//手機用
+		</script>
+		<script type="text/javascript">
+			$('.guide_box .guide_btn').on('click', function(){
+				$(this).parents('.guide_box').addClass('open').delay(10).queue(function(next){
+				    $(this).addClass("hover");
+				    next();
+				});
+			})
+			$('.guide_box .guide_container').on('mouseover', function(){
+				$(this).parents('.guide_box').addClass('hover');
+			})
+			$('.guide_box .guide_container').on('mouseout', function(){
+				$(this).parents('.guide_box').removeClass('hover');
+			})
 		</script>
 	</body>
 </html>

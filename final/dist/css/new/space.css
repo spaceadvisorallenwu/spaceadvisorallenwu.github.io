@@ -516,6 +516,81 @@
     text-align: center;
 }
 
+.space .panorama .guide_box {
+
+}
+.space .panorama .guide_box .guide_btn {
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #222;
+    cursor: pointer;
+    overflow: hidden;
+}
+.space .panorama .guide_box .guide_btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transition: all .4s;
+}
+.space .panorama .guide_box.open .guide_btn {
+    display: none;
+}
+.space .panorama .guide_box .guide_container {
+    position: absolute;
+    right: 0;
+    max-width: 450px;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    flex-direction: column;
+    opacity: .6;
+    transform: translateX(80%);
+    transition: .4s;
+}
+.space .panorama .guide_box.open .guide_container {
+    display: flex;
+}
+.space .panorama .guide_box.hover .guide_container {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .4s;
+}
+.space .panorama .guide_box .guide_container .floorplan {
+
+}
+.space .panorama .guide_box .guide_container .floorplan img {
+    height: 385px;
+    min-width: 300px;
+}
+.space .panorama .guide_box .guide_container .options {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.space .panorama .guide_box .guide_container .options span {
+    color: #b3b3b3;
+    margin-right: 9px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.space .panorama .guide_box .guide_container .options span.active,
+.space .panorama .guide_box .guide_container .options span:hover {
+    color: #FFF;
+    text-shadow: 0 0 15px #fff;
+}
+
 @media only screen and (max-width: 980px) {
     .meeting .outline.content,
     .meeting .about.content,
@@ -739,6 +814,10 @@
     .meeting .layui-laydate-static {
         border: 1px solid #ddd;
         border-radius: 5px;
+    }
+
+    .space .panorama .guide_box {
+        display: none;
     }
 }
 /** END Space **/
