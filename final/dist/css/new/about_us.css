@@ -29,6 +29,17 @@
 .ab_item3 small {
 	margin-top: 20px;
 }
+.pc_banner img {
+	border-radius: 5px;
+	overflow: hidden;
+}
+.ab_item4 .custodyBtn a {
+	letter-spacing: 0;
+    padding: 0;
+    font-size: unset;
+    background: unset;
+}
+
 
 @media only screen and (max-width: 980px) {
 	.ab_item3,
