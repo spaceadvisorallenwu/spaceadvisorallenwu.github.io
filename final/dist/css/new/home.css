@@ -343,6 +343,20 @@
 .index .brand-list .brand a img {
     transition: all .4s;
     border-radius: 50%;
+    width: 100%;
+    height: auto;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: .6;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.index .brand-list .brand a:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
 }
 .index .information-list .information-box .slick-prev {
     left: -3%;
