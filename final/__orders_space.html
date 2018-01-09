@@ -31,603 +31,455 @@
 		<div id="wrapper" class="orders_space">
 			<header class="cf">
 				<div class="content cf">
-					<a href="index.php" class="logo">
+					<a href="home.html" class="logo">
 						<img src="dist/svg/logo.svg">
 					</a>
-					<a href="" class="activity">找活動</a>
-					<a href="" class="member" style="background-image:url(dist/images/avator.jpg)"></a>
-					<a href="" class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>收件夾<b>1</b></a>
-					<select name="select" id="select">
-						<option>中文</option>
-						<option>English</option>
-					</select>
-					<a href="" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>購物車(<b>0</b>)</a>
-					<nav>
+					<section class="__pc">
+						<a href="" class="activity">找活動</a>
+						<section class="_notLogin ">
+							<div class="login_info">
+								<a class="signup" href="signup.html">註冊</a>/<a class="signin" href="signin.html">登入</a>
+							</div>
+						</section>
+						<section class="_isLogin">
+							<div class="memberClick">
+								<a href="" class="member" style="background-image:url(dist/images/avator.jpg)"></a>
+								<div class="memberMenu">
+									<ul>
+										<li class="mgmt"><a href="javascript:;">會員資料管理</a></li>
+										<li class="collect"><a href="javascript:;">收藏清單</a></li>
+										<li class="compare"><a href="javascript:;">比較清單<b>2</b></a></li>
+										<li class="orders"><a href="javascript:;">訂單管理</a></li>
+										<li class="points"><a href="javascript:;">點數管理</a></li>
+										<li class="faq"><a href="faq.html">常見問題</a></li>
+										<li class="logout"><a href="javascript:;">登出</a></li>
+									</ul>
+								</div>
+							</div>
+							<a href="" class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i>收件夾<b>1</b></a>
+							<a href="" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>購物車(<b>0</b>)</a>
+						</section>
+						<nav>
+							<ul>
+								<li class="about_us"><a href="about_us.html">關於我們</a></li>
+								<li class="why_spaceadvisor"><a href="why_spaceadvisor.html">平台優勢</a></li>
+								<li class="space_signup"><a href="space_signup_readme.html">成為場地主</a></li>
+							</ul>
+						</nav>
+						<select name="select" id="select">
+							<option>中文</option>
+							<option>English</option>
+						</select>
+					</section>
+					<section class="__mb">
+						<a href="#menu" data-ajax="false" class="menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>
+						<div class="search">
+							<i id="search" class="fa fa-search" aria-hidden="true"></i>
+							<div class="search-box"><input type="text" name="textfield" id="textfield" placeholder="請輸入關鍵字" /><a href="javscript:;"><span class="btn btn-c-3 btn-sm">搜尋</span></a></div>
+						</div>
+					</section>
+				</div>
+				<section class="__mb">
+					<nav id="menu">
 						<ul>
-							<li><a href="">關於我們</a></li>
-							<li><a href="">平台優勢</a></li>
-							<li><a href="">成為場地主</a></li>
+							<section class="_notLogin">
+								<li class="member">
+									<a class="signup" href="signup.html">註冊</a><a class="signin" href="signin.html">登入</a>
+								</li>
+								<li class="faq"><a href="faq.html">常見問題</a></li>
+								<li class="about_us"><a href="about_us.html">關於我們</a></li>
+								<li class="why_spaceadvisor"><a href="why_spaceadvisor.html">平台優勢</a></li>
+								<li class="space_signup"><a href="space_signup_readme.html">成為場地主</a></li>
+								<li class="language">
+									<select name="select" id="select">
+										<option>中文</option>
+										<option>English</option>
+									</select>
+								</li>
+								<li class="activity"><a href="">找活動</a></li>
+							</section>
+							<section class="_isLogin">
+								<li class="member">
+									<a href="" class="pic" style="background-image:url(dist/images/avator.jpg)"></a><p>Hyun</p>
+									<a href="" class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i><b>1</b></a>
+								</li>
+								<li class="mgmt"><a href="javascript:;">會員資料管理</a></li>
+								<li class="collect"><a href="javascript:;">收藏清單</a></li>
+								<li class="compare"><a href="javascript:;">比較清單 <b>2</b></a></li>
+								<li class="orders"><a href="javascript:;">訂單管理</a></li>
+								<li class="points"><a href="javascript:;">點數管理</a></li>
+								<li class="faq"><a href="faq.html">常見問題</a></li>
+								<li class="about_us"><a href="about_us.html">關於我們</a></li>
+								<li class="why_spaceadvisor"><a href="why_spaceadvisor.html">平台優勢</a></li>
+								<li class="space_signup"><a href="space_signup_readme.html">成為場地主</a></li>
+								<li class="logout"><a href="">登出</a></li>
+								<li class="language">
+									<select name="select" id="select">
+										<option>中文</option>
+										<option>English</option>
+									</select>
+								</li>
+								<li class="activity"><a href="">找活動</a></li>
+							</section>
 						</ul>
 					</nav>
-					<a href="#menu" data-ajax="false" class="menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>
-					<div class="search">
-						<i id="search" class="fa fa-search" aria-hidden="true"></i>
-						<div class="search-box"><input type="text" name="textfield" id="textfield" placeholder="請輸入關鍵字" /><a href="">搜尋</a></div>
-					</div>
-				</div>
-				<nav id="menu">
-					<ul>
-						<li class="member">
-							<a href="" class="pic" style="background-image:url(dist/images/avator.jpg)"></a><p>Hyun</p>
-							<a href="" class="mail"><i class="fa fa-envelope-o" aria-hidden="true"></i><b>1</b></a>
-						</li>
-						<li><a href="">關於我們</a></li>
-						<li><a href="">平台優勢</a></li>
-						<li><a href="">成為場地主</a></li>
-						<li>
-							<select name="select" id="select">
-								<option>中文</option>
-								<option>English</option>
-							</select>
-						</li>
-						<li class="activity"><a href="">找活動</a></li>
-					</ul>
-				</nav>
-				<div id="menubar">
-					<div class="menubar">
-						<ul>
-							<li><a href="member.html">會員資料</a></li>
-							<li><a href="inbox-system.html">收件匣</a></li>
-							<li><a href="javascript:;">收藏清單</a></li>
-							<li><a href="compare-site.html">比較清單</a></li>
-							<li><a href="order-management-check.html" class="active">訂單管理</a></li>
-							<li><a href="bonus.html">點數管理</a></li>
-						</ul>
-					</div>
-				</div>
+				</section>
 			</header>
 
 
 			<!--main-->
 			<main class="order">
-				<div class="site-management _boxStyle">
+				<!-- navlist -->
+				<div class="navigation_bar">
+					<ul>
+						<li><a href="javascript:;">會員資料</a></li>
+						<li ><a href="javascript:;">收件匣</a></li>
+						<li><a href="javascript:;">收藏清單</a></li>
+						<li><a href="javascript:;">比較清單</a></li>
+						<li class="active"><a href="javascript:;">訂單管理</a></li>
+						<li><a href="javascript:;">點數管理</a></li>
+					</ul>
+				</div>
+				<div class="site-management">
 					<!-- 場地資訊 -->
-					<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>場地資訊</div>
-					<div class="site">
-						<div class="bookList" data-id="1" data-stat="done">
-							<div class="bookTitle">
-								<div class="_left">
-									<div class="recno">訂單編號<span>113504103</span></div>
-									<div class="recstate"><span>已付款</span></div>
+					<div class="site-information _boxStyle">
+						<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>場地資訊</div>
+						<div class="site">
+							<div class="bookList" data-id="1" data-stat="done">
+								<div class="bookTitle">
+									<div class="_left">
+										<div class="recno">訂單編號<span>113504103</span></div>
+										<div class="recstate"><span>已付款</span></div>
+									</div>
+									<div class="_right">
+										<div class="recdate">下單日期<span>2017年04月12日</span></div>
+										<div class="cancel"><a href="javascript:;">取消訂單</a></div>
+									</div>
 								</div>
-								<div class="_right">
-									<div class="recdate">下單日期<span>2017年04月12日</span></div>
-									<div class="cancel"><a href="javascript:;">取消訂單</a></div>
-								</div>
-							</div>
-							<div class="detailTable">
-								<div class="detailTable-left">
-									<div class="detailTable-inner">
-										<div class="detailTable-row detailTable-heading">
-											<div class="detailTable-cell">場地</div>
-										</div>
-										<div class="detailTable-row">
-											<div class="detailTable-cell" data-title="場地">
-												<div class="tablePhoto sitePhoto">
-													<div class="sitePhoto-pic">
-														<div class="sitePo">
-															<img src="dist/images/step_photo_pc.jpg">
+								<div class="detailTable">
+									<div class="detailTable-left">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">場地</div>
+											</div>
+											<div class="detailTable-row">
+												<div class="detailTable-cell" data-title="場地">
+													<div class="tablePhoto sitePhoto">
+														<div class="sitePhoto-pic">
+															<div class="sitePo">
+																<img src="dist/images/step_photo_pc.jpg">
+															</div>
+														</div>
+													</div>
+													<div class="tableTxt siteName">
+														<div>
+															<div class="siteTxt">台北文藝推廣中心</div>
+															<div class="siteTxt">三樓會議室(一)</div>
 														</div>
 													</div>
 												</div>
-												<div class="tableTxt siteName">
-													<div>
-														<div class="siteTxt">台北文藝推廣中心</div>
-														<div class="siteTxt">三樓會議室(一)</div>
+											</div>
+										</div>
+									</div>
+									<div class="detailTable-mid">
+										<div class="detailTable-inner">
+											<div class="detailTable-row detailTable-heading">
+												<div class="detailTable-cell">時間</div>
+												<div class="detailTable-cell">方案/桌數</div>
+												<div class="detailTable-cell">價位</div>
+												<div class="detailTable-cell">狀態</div>
+											</div>
+											<div class="detailTable-row detailTable-content">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>一生一世方案/30桌</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="狀態">
+													<div class="tableTxt buyIcon">
+														<span>03/10 已送出</span>
+														<span>03/15 草稿</span>
+													</div>
+												</div>
+											</div>
+											<div class="detailTable-row detailTable-content _haveDiscount">
+												<div class="detailTable-cell" data-title="時間">
+													<h4>時間</h4>
+													<div class="tableTxt">
+														<span>2017年04月09日</span>
+														<span>13:00～17:00PM</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="方案/桌數">
+													<h4>方案/桌數</h4>
+													<div class="tableTxt">
+														<span>半天會議室方案</span>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="價位">
+													<h4>價位</h4>
+													<div class="tableTxt">
+														<div class="sarebate">7折</div>
+														<div class="_price">
+															<div class="original">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+															<div class="special">
+																<span class="currency">TWD</span>
+																<span>21,000</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="detailTable-cell" data-title="狀態">
+													<div class="tableTxt buyIcon">
+														<span>尚未編輯</span>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="detailTable-mid">
-									<div class="detailTable-inner">
-										<div class="detailTable-row detailTable-heading">
-											<div class="detailTable-cell">時間</div>
-											<div class="detailTable-cell">方案/桌數</div>
-											<div class="detailTable-cell">價位</div>
-											<div class="detailTable-cell">狀態</div>
-										</div>
-										<div class="detailTable-row detailTable-content">
-											<div class="detailTable-cell" data-title="時間">
-												<h4>時間</h4>
-												<div class="tableTxt">
-													<span>2017年04月09日</span>
-													<span>13:00～17:00PM</span>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="方案/桌數">
-												<h4>方案/桌數</h4>
-												<div class="tableTxt">
-													<span>一生一世方案/30桌</span>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="價位">
-												<h4>價位</h4>
-												<div class="tableTxt">
-													<div class="sarebate">7折</div>
-													<div class="_price">
-														<div class="original">
-															<span class="currency">TWD</span>
-															<span>21,000</span>
-														</div>
-														<div class="special">
-															<span class="currency">TWD</span>
-															<span>21,000</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="狀態">
-												<div class="tableTxt buyIcon">
-													<span>03/10 已送出</span>
-													<span>03/15 草稿</span>
-												</div>
-											</div>
-										</div>
-										<div class="detailTable-row detailTable-content _haveDiscount">
-											<div class="detailTable-cell" data-title="時間">
-												<h4>時間</h4>
-												<div class="tableTxt">
-													<span>2017年04月09日</span>
-													<span>13:00～17:00PM</span>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="方案/桌數">
-												<h4>方案/桌數</h4>
-												<div class="tableTxt">
-													<span>半天會議室方案</span>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="價位">
-												<h4>價位</h4>
-												<div class="tableTxt">
-													<div class="sarebate">7折</div>
-													<div class="_price">
-														<div class="original">
-															<span class="currency">TWD</span>
-															<span>21,000</span>
-														</div>
-														<div class="special">
-															<span class="currency">TWD</span>
-															<span>21,000</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="狀態">
-												<div class="tableTxt buyIcon">
-													<span>尚未編輯</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
+							<div class="site-description">請最慢於距離活動<span class="site-description02">10個工作天前</span>填寫場地管理，如無特別需求，將直接<span class="site-description02">套用預設值</span>。<br>以上內容在按下<確認送出>後將由場地主為您安排。祝您活動順利！</div>
 						</div>
-						<div class="site-description">請最慢於距離活動<span class="site-description02">10個工作天前</span>填寫場地管理，如無特別需求，將直接<span class="site-description02">套用預設值</span>。<br>以上內容在按下<確認送出>後將由場地主為您安排。祝您活動順利！</div>
 					</div>
 					<!-- 場地資訊 end -->
 
 					<!-- 活動資訊 -->
-					<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>活動資訊</div>
-					<div class="site_activity">
-						<div class="site_activity-left">
-							<div class="site_form-main _floor1">
-								<div class="site_project_title">活動名稱 / 歡迎指引牌名稱</div>
-								<div class="site_project_content"><input type="text" placeholder="此處文字將顯示於場地的電子看板或平面看板" class="site_field"></div>
-							</div>
-							<div class="site_form-main _floor2">
-								<div class="site_project_part">
-									<div class="site_project_title">現場聯繫人姓名</div>
-									<div class="site_project_content"><input type="text" placeholder="內建會員姓名" class="site_field"></div>
+					<div class="site-activity _boxStyle">
+						<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>活動資訊</div>
+						<div class="site_activity">
+							<div class="site_activity-left">
+								<div class="site_form-main _floor1">
+									<div class="site_project_title">活動名稱 / 歡迎指引牌名稱</div>
+									<div class="site_project_content"><input type="text" placeholder="此處文字將顯示於場地的電子看板或平面看板" class="site_field"></div>
 								</div>
-								<div class="site_project_part">
-									<div class="site_project_title">現場聯繫人電話</div>
-									<div class="site_project_content"><input type="text" placeholder="09593326353" class="site_field"></div>
-								</div>
-							</div>
-							<div class="site_form-main _floor3">
-								<div class="site_project_title">上傳檔案給場地主<span class="site_project_font">(會議流程/賓客名單/座位表)</span></div>
-								<div class="site_project_content">
-									<input type="file" class="site_field02 _display_none" name="file[]">
-									<!-- <div class="site_button01"><a href="#"><span class="btn btn-c-2 btn-s">選擇檔案</span></a></div> -->
-								</div>
-							</div>
-							<div class="site_button02"><a href="#"><span class="btn btn-c-3 btn-m">確認上傳</span></a></div>
-						</div>
-						<div class="site_activity-right">
-							<div class="site-description">
-								<div class="site-description-indormation">
-									<div class="site-description-title">舉辦公司</div>
-									<div class="site-description-contect">台鹽生物科技醫藥</div>
-								</div>
-								<div class="site-description-indormation">
-									<div class="site-description-title">活動性質</div>
-									<div class="site-description-contect">會議與培訓</div>
-								</div>
-								<div class="site-description-indormation">
-									<div class="site-description-title">產業別</div>
-									<div class="site-description-contect">醫療產業</div>
-								</div>
-								<div class="site-description-indormation">
-									<div class="site-description-title">科別</div>
-									<div class="site-description-contect">內科</div>
-								</div>
-								<div class="site-description03">
-									<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-									<span>貼心提醒：當天同一時段有其他整型外科會議於此舉辦</span>
-								</div>
-							</div>
-							<!--上傳紀錄 -->
-							<div class="site-upload-record">
-								<!-- demo-1 -->
-								<ul>
-									<div class="upload-block01">
-										<li>
-											<div class="upload-title01">上傳紀錄</div>
-											<div class="upload-title02">檔案名稱</div>
-										</li>
+								<div class="site_form-main _floor2">
+									<div class="site_project_part">
+										<div class="site_project_title">現場聯繫人姓名</div>
+										<div class="site_project_content"><input type="text" placeholder="內建會員姓名" class="site_field"></div>
 									</div>
-									<div class="upload-block02">
-										<li>
-											<div class="upload-title01">2017/09/16</div>
-											<div class="upload-list01">日程表（下午）.jpg</div>
-											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
-										</li>
-										<li>
-											<div class="upload-title01">2017/09/18</div>
-											<div class="upload-list01">座位表.jpg</div>
-											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
-										</li>
-										<li>
-											<div class="upload-title01">2017/09/18</div>
-											<div class="upload-list01">賓客名單.pdf</div>
-											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
-										</li>
-										<li>
-											<div class="upload-title01">2017/09/20</div>
-											<div class="upload-list01">贊助商名單.pdf</div>
-											<div class="upload-list02"><a href="#">預覽</a></div>
-											<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
-										</li>
+									<div class="site_project_part">
+										<div class="site_project_title">現場聯繫人電話</div>
+										<div class="site_project_content"><input type="text" placeholder="09593326353" class="site_field"></div>
 									</div>
-								</ul>
-								<!-- demo-2 -->
+								</div>
+								<div class="site_form-main _floor3">
+									<div class="site_project_title">上傳檔案給場地主<span class="site_project_font">(會議流程/賓客名單/座位表)</span></div>
+									<div class="site_project_content">
+										<input type="file" class="site_field02 _display_none" name="file[]">
+										<!-- <div class="site_button01"><a href="#"><span class="btn btn-c-2 btn-s">選擇檔案</span></a></div> -->
+									</div>
+								</div>
+								<div class="site_button02"><a href="#"><span class="btn btn-c-3 btn-m">確認上傳</span></a></div>
 							</div>
-							<!--上傳紀錄 end-->
+							<div class="site_activity-right">
+								<div class="site-description">
+									<div class="site-description-indormation">
+										<div class="site-description-title">舉辦公司</div>
+										<div class="site-description-contect">台鹽生物科技醫藥</div>
+									</div>
+									<div class="site-description-indormation">
+										<div class="site-description-title">活動性質</div>
+										<div class="site-description-contect">會議與培訓</div>
+									</div>
+									<div class="site-description-indormation">
+										<div class="site-description-title">產業別</div>
+										<div class="site-description-contect">醫療產業</div>
+									</div>
+									<div class="site-description-indormation">
+										<div class="site-description-title">科別</div>
+										<div class="site-description-contect">內科</div>
+									</div>
+									<div class="site-description03">
+										<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+										<span>貼心提醒：當天同一時段有其他整型外科會議於此舉辦</span>
+									</div>
+								</div>
+								<!--上傳紀錄 -->
+								<div class="site-upload-record">
+									<!-- demo-1 -->
+									<ul>
+										<div class="upload-block01">
+											<li>
+												<div class="upload-title01">上傳紀錄</div>
+												<div class="upload-title02">檔案名稱</div>
+											</li>
+										</div>
+										<div class="upload-block02">
+											<li>
+												<div class="upload-title01">2017/09/16</div>
+												<div class="upload-list01">日程表（下午）.jpg</div>
+												<div class="upload-list02"><a href="#">預覽</a></div>
+												<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
+											</li>
+											<li>
+												<div class="upload-title01">2017/09/18</div>
+												<div class="upload-list01">座位表.jpg</div>
+												<div class="upload-list02"><a href="#">預覽</a></div>
+												<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
+											</li>
+											<li>
+												<div class="upload-title01">2017/09/18</div>
+												<div class="upload-list01">賓客名單.pdf</div>
+												<div class="upload-list02"><a href="#">預覽</a></div>
+												<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
+											</li>
+											<li>
+												<div class="upload-title01">2017/09/20</div>
+												<div class="upload-list01">贊助商名單.pdf</div>
+												<div class="upload-list02"><a href="#">預覽</a></div>
+												<div class="upload-list03"><span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span></div>
+											</li>
+										</div>
+									</ul>
+									<!-- demo-2 -->
+								</div>
+								<!--上傳紀錄 end-->
+							</div>
 						</div>
 					</div>
 					<!-- 活動資訊 end -->
-					<!-- 設備需求 -->
-					<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>設備需求</div>
-					<div class="site_equipment site-width">
-						免費提供：
-						<ul class="site_equipment-background">
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip01" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip01"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip01">投影機與螢幕 (TWD 1,000/組)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" disabled data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip02" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip02"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip02">投影機與螢幕 (TWD 1,000/組)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip03" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip03"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip03">無線麥克風 (TWD 500/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" disabled data-price="500" data-name="無線麥克風 (TWD 500/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip04" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip04"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip04">無線麥克風 (TWD 500/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" data-price="500" data-name="無線麥克風 (TWD 500/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip05" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip05"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip05">有線麥克風 (TWD 100/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" disabled data-price="100" data-name="有線麥克風 (TWD 100/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip06" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip06"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip06">有線麥克風 (TWD 500/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" data-price="500" data-name="有線麥克風 (TWD 500/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip07" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip07"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip07">耳掛式麥克風A (TWD 200/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" disabled data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip08" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip08"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip08">耳掛式麥克風A (TWD 200/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip09" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip09"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip09">耳掛式麥克風B (TWD 100/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" disabled data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-							<!-- 設備 -->
-							<li>
-								<div class="option"><input type="checkbox" id="equip10" class="option-field"></div>
-								<div class="equipment-icon"><label for="equip10"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
-								<div class="equipment-title"><label for="equip10">耳掛式麥克風B (TWD 100/支)</label></div>
-								<div class="quantity wd_form">
-									<select class="quantity-field" data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-							</li>
-							<!-- 設備 end-->
-						</ul>
-						<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
-					</div>
-					<!-- 設備需求 end -->
 					<!-- 超值加購 -->
-					<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>超值加購</div>
-					<div class="value-add site-value-add site-width">
-						<div class="site-value-add-contect">
-							超值加購：
-							<div class="site-description04">
-								超值加購採<span class="site-description02">『單一退換服務』</span>，如您發現加購內容需要修改，或是其他因素欲取消加購，請至
-								<訂單管理>
-								取消加購訂單再重新下標。
+					<div class="site-value _boxStyle">
+						<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>超值加購</div>
+						<div class="value-add site-value-add site-width">
+							<div class="site-value-add-contect">
+								<span>超值加購：</span>
+								<div class="site-description04">超值加購採<span class="site-description02">『單一退換服務』</span>，如您發現加購內容需要修改，或是其他因素欲取消加購，請至<訂單管理>取消加購訂單再重新下標。</div>
 							</div>
-						</div>
-						<!-- 超值加購列表 -->
-						<div class="value-add-list">
-							<div class="site-value-add-vatitle value-add-list-background">
-								<div class="wrapper">
-									<div class="ia-wrapper">
-										<div class="item">超值加購項目</div>
-										<div class="amount">數量</div>
+							<!-- 超值加購列表 -->
+							<div class="value-add-list">
+								<div class="site-value-add-vatitle value-add-list-background">
+									<div class="wrapper">
+										<div class="ia-wrapper">
+											<div class="item">超值加購項目</div>
+											<div class="amount">數量</div>
+										</div>
+										<div class="price">金額</div>
 									</div>
-									<div class="price">金額</div>
 								</div>
-							</div>
-							<div class="valist">
-								<ul class="value-add-list-wrapper site-value-add-width site_equipment-background" total>
-									<!--
-									<li>
-												<div class="ia-wrapper">
-															<div class="item">設備/投影機與螢幕</div>
-															<div class="amount">X 100組</div>
-												</div>
-												<div class="price"><span>TWD</span><span>100,000</span></div></li>
-											<li>
-														<div class="ia-wrapper">
-																	<div class="item">設備/無線麥克風</div>
-																	<div class="amount">X 20支</div>
-														</div>
-														<div class="price"><span>TWD</span><span>10,000</span></div>
-											</li>
-											<li>
-														<div class="ia-wrapper">
-																	<div class="item">設備/耳掛式麥克風Ａ</div>
-																	<div class="amount">X 5支</div>
-														</div>
-														<div class="price"><span>TWD</span><span>1,000</span></div>
-											</li>
-											<li>
-														<div class="ia-wrapper">
-																	<div class="item">餐飲/低卡洛里套餐</div>
-																	<div class="amount">X 300份</div>
-														</div>
-														<div class="price"><span>TWD</span><span>108,000</span></div>
-											</li>
-											<li>
-														<div class="ia-wrapper">
-																	<div class="item">方案/桌數</div>
-																	<div class="amount">X 100份</div>
-														</div>
-														<div class="price"><span>TWD</span><span>18,000</span></div>
-											</li>
-										-->
-								</ul>
-								<div class="font-block">
-									<textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea>
+								<div class="valist">
+									<ul class="value-add-list-wrapper site-value-add-width site_equipment-background" total>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">設備/投影機與螢幕</div>
+												<div class="amount">X 100組</div>
+											</div>
+											<div class="price"><span>TWD</span><span>100,000</span></div></li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">設備/無線麥克風</div>
+												<div class="amount">X 20支</div>
+											</div>
+											<div class="price"><span>TWD</span><span>10,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">設備/耳掛式麥克風Ａ</div>
+												<div class="amount">X 5支</div>
+											</div>
+											<div class="price"><span>TWD</span><span>1,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">餐飲/低卡洛里套餐</div>
+												<div class="amount">X 300份</div>
+											</div>
+											<div class="price"><span>TWD</span><span>108,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">方案/桌數</div>
+												<div class="amount">X 100份</div>
+											</div>
+											<div class="price"><span>TWD</span><span>18,000</span></div>
+										</li>
+									</ul>
+									<div class="font-block">
+										<textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- 超值加購 end -->
 
-					<!-- 場地規劃 -->
-					<div class="site-planning">
+					<div class="site-period">
 						<!-- Nav tabs -->
 						<div class="site_nav-main">
-							<ul class="site_nav site_nav-tabs clearfix" role="tablist">
-								<li role="presentation" class="active"><a href="#neworder" aria-controls="neworder" role="tab" data-toggle="tab">08:00~12:00</a></li>
-								<li role="presentation"><a href="#pastorder" aria-controls="pastorder" role="tab" data-toggle="tab">12:00~13:00</a></li>
-								<li role="presentation"><a href="#cancelorder" aria-controls="cancelorder" role="tab" data-toggle="tab">13:00~17:00</a></li>
+							<ul class="site_nav site_nav-tabs clearfix _boxStyle" role="tablist">
+								<li role="presentation" class="active"><a href="#tab1" aria-controls="neworder" role="tab" data-toggle="tab">08:00~12:00</a></li>
+								<li role="presentation"><a href="#tab2" aria-controls="pastorder" role="tab" data-toggle="tab">12:00~13:00</a></li>
+								<li role="presentation"><a href="#tab3" aria-controls="cancelorder" role="tab" data-toggle="tab">13:00~17:00</a></li>
 							</ul>
 						</div>
-						<!-- Tab panes -->
-						<div class="tab-content tab-content-main">
-							<div class="tab-content-title">場地規劃</div>
-							<!-- 08:00~12:00 -->
-							<div role="tabpanel" class="tab-pane active" id="neworder">
-								<div class="tab-content001">
-									<div class="site_participate">參加人數：<input type="text" placeholder="請輸入阿拉伯數字" class="site_participate-field02"></div>
-									<div class="site_table">
-										桌型排法：
-										<div class="site_table-contect-main">
-											<div class="site_table-menu">
-												<ul>
-													<li class="active-h">
-														<a href="javascript:;" class="table-icon001" id="01">
-															<div class="chosen">已選擇</div>
-															圓桌
-															<div class="seat">
-																<label>
+						<!-- 場地規劃 -->
+						<div class="site-planning">
+							<!-- Tab panes -->
+							<div class="tab-content tab-content-main">
+								<!-- 08:00~12:00 -->
+								<div role="tabpanel" class="tab-pane active" id="tab1">
+									<div class="tab-content001 _boxStyle">
+										<div class="site-title tab-content-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>場地規劃</div>
+										<div class="site_participate"><span>參加人數：</span><input type="number" placeholder="請輸入阿拉伯數字" min="0" class="site_participate-field02"></div>
+										<div class="site_table">
+											<span>桌型排法：</span>
+											<div class="site_table-contect-main">
+												<div class="site_table-menu">
+													<ul>
+														<li style="background-image: url(dist/images/table-icon001.png);" class="active-h" >
+															<a href="javascript:;" class="table-icon001" id="01">
+																<div class="chosen">已選擇</div>
+																<span>圓桌</span>
+																<div class="seat">
+																	<label>
+																		<select class="seat-field">
+																			<option>10</option>
+																			<option>20</option>
+																			<option>30</option>
+																			<option>40</option>
+																			<option>50</option>
+																			<option>60</option>
+																			<option>70</option>
+																			<option>80</option>
+																			<option>90</option>
+																		</select>
+																	</label>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon002.png);">
+															<a href="javascript:;" class="table-icon002" id="02">
+																<div class="chosen">已選擇</div>
+																<span>自助餐式</span>
+																<div class="seat">
 																	<select class="seat-field">
 																		<option>10</option>
 																		<option>20</option>
@@ -639,206 +491,479 @@
 																		<option>80</option>
 																		<option>90</option>
 																	</select>
-																</label>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon002" id="02">
-															<div class="chosen">已選擇</div>
-															自助餐式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon003" id="03">
-															<div class="chosen">已選擇</div>
-															教室型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon004" id="04">
-															<div class="chosen">已選擇</div>
-															分組型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon005" id="05">
-															<div class="chosen">已選擇</div>
-															U字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon006" id="06">
-															<div class="chosen">已選擇</div>
-															雞尾酒式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon007" id="07">
-															<div class="chosen">已選擇</div>
-															戲院式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon008" id="08">
-															<div class="chosen">已選擇</div>
-															口字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon009" id="09">
-															<div class="chosen">已選擇</div>
-															董事會型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon010" id="10">
-															<div class="chosen">已選擇</div>
-															其他
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-												</ul>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon003.png);">
+															<a href="javascript:;" class="table-icon003" id="03">
+																<div class="chosen">已選擇</div>
+																<span>教室型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon004.png);">
+															<a href="javascript:;" class="table-icon004" id="04">
+																<div class="chosen">已選擇</div>
+																<span>分組型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon005.png);">
+															<a href="javascript:;" class="table-icon005" id="05">
+																<div class="chosen">已選擇</div>
+																<span>U字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon006.png);">
+															<a href="javascript:;" class="table-icon006" id="06">
+																<div class="chosen">已選擇</div>
+																<span>雞尾酒式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon007.png);">
+															<a href="javascript:;" class="table-icon007" id="07">
+																<div class="chosen">已選擇</div>
+																<span>戲院式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon008.png);">
+															<a href="javascript:;" class="table-icon008" id="08">
+																<div class="chosen">已選擇</div>
+																<span>口字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon009.png);">
+															<a href="javascript:;" class="table-icon009" id="09">
+																<div class="chosen">已選擇</div>
+																<span>董事會型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon010.png);">
+															<a href="javascript:;" class="table-icon010" id="10">
+																<div class="chosen">已選擇</div>
+																<span>其他</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="site_table-contect">
+													<img src="dist/images/table-contect001.png"/>
+												</div>
 											</div>
-											<div class="site_table-contect">
-												<img src="dist/images/table-contect001.png"/>
+										</div>
+										<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									</div>
+									<!-- 免費設備需求 -->
+									<div class="site-equipment _boxStyle">
+										<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>設備需求</div>
+										<div class="site_equipment site-width">
+											<span>免費提供：</span>
+											<ul class="site_equipment-background">
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip01" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip01"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip01">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip02" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip02"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip02">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip03" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip03"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip03">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip04" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip04"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip04">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip05" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip05"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip05">有線麥克風 (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="有線麥克風 (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip06" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip06"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip06">有線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="有線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip07" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip07"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip07">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip08" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip08"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip08">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip09" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip09"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip09">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip10" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip10"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip10">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+											</ul>
+											<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+										</div>
+									</div>
+									<!-- 免費設備需求 end -->
+									<!-- 餐飲選擇 -->
+									<div class="site-food _boxStyle">
+										<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>餐飲選擇(單選)</div>
+										<div class="site_food">
+											<div class="site_food-main">
+												<div>
+													<div class="site_food-main-title">
+														<span>主餐：請選擇供餐時間</span>
+														<span class="hm-block wd_form">
+															<select class="site_participate-field">
+																<option>時</option>
+															</select>
+															<select class="site_participate-field">
+																<option>分</option>
+															</select>
+														</span>
+													</div>
+													<ul>
+														<li class="active-f">
+															<a href="#" class="clearfix">
+																<div class="food-images"><img src="dist/images/food001.jpg" alt=""/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									<!-- 餐飲選擇 end-->
 								</div>
-							</div>
-							<!-- 12:00~13:00 -->
-							<div role="tabpanel" class="tab-pane" id="pastorder">
-								<div class="tab-content001">
-									<div class="site_participate">參加人數：<input type="text" placeholder="請輸入阿拉伯數字" class="site_participate-field02"></div>
-									<div class="site_table">
-										桌型排法：
-										<div class="site_table-contect-main">
-											<div class="site_table-menu">
-												<ul>
-													<li class="active-h" style="background-image: url(dist/images/table-icon001_h.png);">
-														<a href="javascript:;" class="table-icon001" id="01">
-															<div class="chosen">已選擇</div>
-															圓桌
-															<div class="seat">
-																<label>
+								<!-- 12:00~13:00 -->
+								<div role="tabpanel" class="tab-pane" id="tab2">
+									<div class="tab-content001">
+										<div class="site_participate"><span>參加人數：</span><input type="number" placeholder="請輸入阿拉伯數字" min="0" class="site_participate-field02"></div>
+										<div class="site_table">
+											<span>桌型排法：</span>
+											<div class="site_table-contect-main">
+												<div class="site_table-menu">
+													<ul>
+														<li style="background-image: url(dist/images/table-icon001.png);" class="active-h" >
+															<a href="javascript:;" class="table-icon001" id="01">
+																<div class="chosen">已選擇</div>
+																<span>圓桌</span>
+																<div class="seat">
+																	<label>
+																		<select class="seat-field">
+																			<option>10</option>
+																			<option>20</option>
+																			<option>30</option>
+																			<option>40</option>
+																			<option>50</option>
+																			<option>60</option>
+																			<option>70</option>
+																			<option>80</option>
+																			<option>90</option>
+																		</select>
+																	</label>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon002.png);">
+															<a href="javascript:;" class="table-icon002" id="02">
+																<div class="chosen">已選擇</div>
+																<span>自助餐式</span>
+																<div class="seat">
 																	<select class="seat-field">
 																		<option>10</option>
 																		<option>20</option>
@@ -850,204 +975,520 @@
 																		<option>80</option>
 																		<option>90</option>
 																	</select>
-																</label>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon002" id="02">
-															<div class="chosen">已選擇</div>
-															自助餐式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon003" id="03">
-															<div class="chosen">已選擇</div>
-															教室型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon004" id="04">
-															<div class="chosen">已選擇</div>
-															分組型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon005" id="05">
-															<div class="chosen">已選擇</div>
-															U字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon006" id="06">
-															<div class="chosen">已選擇</div>
-															雞尾酒式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon007" id="07">
-															<div class="chosen">已選擇</div>
-															戲院式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon008" id="08">
-															<div class="chosen">已選擇</div>
-															口字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon009" id="09">
-															<div class="chosen">已選擇</div>
-															董事會型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li>
-														<a href="javascript:;" class="table-icon010" id="10">
-															<div class="chosen">已選擇</div>
-															其他
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-												</ul>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon003.png);">
+															<a href="javascript:;" class="table-icon003" id="03">
+																<div class="chosen">已選擇</div>
+																<span>教室型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon004.png);">
+															<a href="javascript:;" class="table-icon004" id="04">
+																<div class="chosen">已選擇</div>
+																<span>分組型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon005.png);">
+															<a href="javascript:;" class="table-icon005" id="05">
+																<div class="chosen">已選擇</div>
+																<span>U字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon006.png);">
+															<a href="javascript:;" class="table-icon006" id="06">
+																<div class="chosen">已選擇</div>
+																<span>雞尾酒式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon007.png);">
+															<a href="javascript:;" class="table-icon007" id="07">
+																<div class="chosen">已選擇</div>
+																<span>戲院式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon008.png);">
+															<a href="javascript:;" class="table-icon008" id="08">
+																<div class="chosen">已選擇</div>
+																<span>口字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon009.png);">
+															<a href="javascript:;" class="table-icon009" id="09">
+																<div class="chosen">已選擇</div>
+																<span>董事會型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon010.png);">
+															<a href="javascript:;" class="table-icon010" id="10">
+																<div class="chosen">已選擇</div>
+																<span>其他</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="site_table-contect">
+													<img src="dist/images/table-contect001.png"/>
+												</div>
 											</div>
-											<div class="site_table-contect"><img src="dist/images/table-contect001.png"/></div>
+										</div>
+										<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									</div>
+									<!-- 免費設備需求 -->
+									<div class="site-equipment">
+										<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>設備需求</div>
+										<div class="site_equipment site-width">
+											<span>免費提供：</span>
+											<ul class="site_equipment-background">
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip01" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip01"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip01">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip02" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip02"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip02">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip03" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip03"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip03">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip04" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip04"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip04">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip05" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip05"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip05">有線麥克風 (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="有線麥克風 (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip06" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip06"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip06">有線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="有線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip07" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip07"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip07">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip08" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip08"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip08">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip09" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip09"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip09">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip10" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip10"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip10">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+											</ul>
+											<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
 										</div>
 									</div>
-									<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									<!-- 免費設備需求 end -->
+									<!-- 餐飲選擇 -->
+									<div class="site-food">
+										<div class="site-title">餐飲選擇<span class="subheadings">(單選)</span></div>
+										<div class="site_food">
+											<div class="site_food-main">
+												<div>
+													主餐：請選擇供餐時間
+													<span class="hm-block wd_form">
+														<select class="site_participate-field">
+															<option>時</option>
+														</select>
+														<select class="site_participate-field">
+															<option>分</option>
+														</select>
+													</span>
+													<ul>
+														<li class="active-f">
+															<a href="#" class="clearfix">
+																<div class="food-images"><img src="dist/images/food001.jpg" alt=""/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="site_food-main">
+													<div>
+														茶點：請選擇供餐時間
+														<span class="hm-block wd_form">
+															<select class="site_participate-field">
+																<option>時</option>
+															</select>
+															<select class="site_participate-field">
+																<option>分</option>
+															</select>
+														</span>
+													</div>
+													<ul>
+														<li class="active-f">
+															<a href="#" class="clearfix">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 餐飲選擇 end-->
 								</div>
-							</div>
-							<!-- 13:00~17:00 -->
-							<div role="tabpanel" class="tab-pane" id="cancelorder">
-								<div class="tab-content001">
-									<div class="site_participate">參加人數：<input type="text" placeholder="請輸入阿拉伯數字" class="site_participate-field02"></div>
-									<div class="site_table">
-										桌型排法：
-										<div class="site_table-contect-main">
-											<div class="site_table-menu">
-												<ul>
-													<li class="active-h" bg="dist/images/table-icon001_h.png" style="background-image: url(dist/images/table-icon001_h.png);">
-														<a href="javascript:;" class="table-icon001" id="01">
-															<div class="chosen">已選擇</div>
-															圓桌
-															<div class="seat">
-																<label>
+								<!-- 13:00~17:00 -->
+								<div role="tabpanel" class="tab-pane" id="tab3">
+									<div class="tab-content001">
+										<div class="site_participate"><span>參加人數：</span><input type="number" placeholder="請輸入阿拉伯數字" min="0" class="site_participate-field02"></div>
+										<div class="site_table">
+											<span>桌型排法：</span>
+											<div class="site_table-contect-main">
+												<div class="site_table-menu">
+													<ul>
+														<li style="background-image: url(dist/images/table-icon001.png);" class="active-h" >
+															<a href="javascript:;" class="table-icon001" id="01">
+																<div class="chosen">已選擇</div>
+																<span>圓桌</span>
+																<div class="seat">
+																	<label>
+																		<select class="seat-field">
+																			<option>10</option>
+																			<option>20</option>
+																			<option>30</option>
+																			<option>40</option>
+																			<option>50</option>
+																			<option>60</option>
+																			<option>70</option>
+																			<option>80</option>
+																			<option>90</option>
+																		</select>
+																	</label>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon002.png);">
+															<a href="javascript:;" class="table-icon002" id="02">
+																<div class="chosen">已選擇</div>
+																<span>自助餐式</span>
+																<div class="seat">
 																	<select class="seat-field">
 																		<option>10</option>
 																		<option>20</option>
@@ -1059,284 +1500,490 @@
 																		<option>80</option>
 																		<option>90</option>
 																	</select>
-																</label>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon002_h.png">
-														<a href="javascript:;" class="table-icon002" id="02">
-															<div class="chosen">已選擇</div>
-															自助餐式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon003_h.png">
-														<a href="javascript:;" class="table-icon003" id="03">
-															<div class="chosen">已選擇</div>
-															教室型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon004_h.png">
-														<a href="javascript:;" class="table-icon004" id="04">
-															<div class="chosen">已選擇</div>
-															分組型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon005_h.png">
-														<a href="javascript:;" class="table-icon005" id="05">
-															<div class="chosen">已選擇</div>
-															U字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon006_h.png">
-														<a href="javascript:;" class="table-icon006" id="06">
-															<div class="chosen">已選擇</div>
-															雞尾酒式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon007_h.png">
-														<a href="javascript:;" class="table-icon007" id="07">
-															<div class="chosen">已選擇</div>
-															戲院式
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon008_h.png">
-														<a href="javascript:;" class="table-icon008" id="08">
-															<div class="chosen">已選擇</div>
-															口字型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon009_h.png">
-														<a href="javascript:;" class="table-icon009" id="09">
-															<div class="chosen">已選擇</div>
-															董事會型
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-													<li bg="dist/images/table-icon010_h.png">
-														<a href="javascript:;" class="table-icon010" id="10">
-															<div class="chosen">已選擇</div>
-															其他
-															<div class="seat">
-																<select class="seat-field">
-																	<option>10</option>
-																	<option>20</option>
-																	<option>30</option>
-																	<option>40</option>
-																	<option>50</option>
-																	<option>60</option>
-																	<option>70</option>
-																	<option>80</option>
-																	<option>90</option>
-																</select>
-															</div>
-														</a>
-													</li>
-												</ul>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon003.png);">
+															<a href="javascript:;" class="table-icon003" id="03">
+																<div class="chosen">已選擇</div>
+																<span>教室型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon004.png);">
+															<a href="javascript:;" class="table-icon004" id="04">
+																<div class="chosen">已選擇</div>
+																<span>分組型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon005.png);">
+															<a href="javascript:;" class="table-icon005" id="05">
+																<div class="chosen">已選擇</div>
+																<span>U字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon006.png);">
+															<a href="javascript:;" class="table-icon006" id="06">
+																<div class="chosen">已選擇</div>
+																<span>雞尾酒式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon007.png);">
+															<a href="javascript:;" class="table-icon007" id="07">
+																<div class="chosen">已選擇</div>
+																<span>戲院式</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon008.png);">
+															<a href="javascript:;" class="table-icon008" id="08">
+																<div class="chosen">已選擇</div>
+																<span>口字型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon009.png);">
+															<a href="javascript:;" class="table-icon009" id="09">
+																<div class="chosen">已選擇</div>
+																<span>董事會型</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+														<li style="background-image: url(dist/images/table-icon010.png);">
+															<a href="javascript:;" class="table-icon010" id="10">
+																<div class="chosen">已選擇</div>
+																<span>其他</span>
+																<div class="seat">
+																	<select class="seat-field">
+																		<option>10</option>
+																		<option>20</option>
+																		<option>30</option>
+																		<option>40</option>
+																		<option>50</option>
+																		<option>60</option>
+																		<option>70</option>
+																		<option>80</option>
+																		<option>90</option>
+																	</select>
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="site_table-contect">
+													<img src="dist/images/table-contect001.png"/>
+												</div>
 											</div>
-											<div class="site_table-contect"><img src="dist/images/table-contect001.png"/></div>
+										</div>
+										<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									</div>
+									<!-- 免費設備需求 -->
+									<div class="site-equipment">
+										<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>設備需求</div>
+										<div class="site_equipment site-width">
+											<span>免費提供：</span>
+											<ul class="site_equipment-background">
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip01" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip01"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip01">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip02" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip02"><img src="dist/images/equipment-icon001.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip02">投影機與螢幕 (TWD 1,000/組)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="1000" data-name="投影機與螢幕 (TWD 1,000/組)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip03" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip03"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip03">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip04" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip04"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip04">無線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="無線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip05" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip05"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip05">有線麥克風 (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="有線麥克風 (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip06" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip06"><img src="dist/images/equipment-icon002.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip06">有線麥克風 (TWD 500/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="500" data-name="有線麥克風 (TWD 500/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip07" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip07"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip07">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip08" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip08"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip08">耳掛式麥克風A (TWD 200/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="200" data-name="耳掛式麥克風A (TWD 200/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip09" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip09"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip09">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" disabled data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+												<!-- 設備 -->
+												<li>
+													<div class="option"><input type="checkbox" id="equip10" class="option-field"></div>
+													<div class="equipment-icon"><label for="equip10"><img src="dist/images/equipment-icon003.png" alt=""/></label></div>
+													<div class="equipment-title"><label for="equip10">耳掛式麥克風B (TWD 100/支)</label></div>
+													<div class="quantity wd_form">
+														<select class="quantity-field" data-price="100" data-name="耳掛式麥克風B (TWD 100/支)">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+															<option>6</option>
+															<option>7</option>
+															<option>8</option>
+															<option>9</option>
+															<option>10</option>
+														</select>
+													</div>
+												</li>
+												<!-- 設備 end-->
+											</ul>
+											<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
 										</div>
 									</div>
-									<div class="font-block"><textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea></div>
+									<!-- 免費設備需求 end -->
+									<!-- 餐飲選擇 -->
+									<div class="site-food">
+										<div class="site-title">餐飲選擇<span class="subheadings">(單選)</span></div>
+										<div class="site_food">
+											<div class="site_food-main">
+												<div>
+													主餐：請選擇供餐時間
+													<span class="hm-block wd_form">
+														<select class="site_participate-field">
+															<option>時</option>
+														</select>
+														<select class="site_participate-field">
+															<option>分</option>
+														</select>
+													</span>
+													<ul>
+														<li class="active-f">
+															<a href="#" class="clearfix">
+																<div class="food-images"><img src="dist/images/food001.jpg" alt=""/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="site_food-main">
+													<div>
+														茶點：請選擇供餐時間
+														<span class="hm-block wd_form">
+															<select class="site_participate-field">
+																<option>時</option>
+															</select>
+															<select class="site_participate-field">
+																<option>分</option>
+															</select>
+														</span>
+													</div>
+													<ul>
+														<li class="active-f">
+															<a href="#" class="clearfix">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<div class="food-images"><img src="dist/images/food001.jpg"/></div>
+																<div class="food-title">低卡路里套餐</div>
+																<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 餐飲選擇 end-->
 								</div>
 							</div>
 						</div>
+						<!-- 場地規劃 end-->
 					</div>
-					<!-- 場地規劃 end-->
 
-					<!-- 餐飲選擇 -->
-					<div class="site-title">餐飲選擇<span class="subheadings">(單選)</span></div>
-					<div class="site_food">
-						<div class="site_food-main">
-							<div>
-								主餐：請選擇供餐時間
-								<span class="hm-block wd_form">
-									<select class="site_participate-field">
-										<option>時</option>
-									</select>
-									<select class="site_participate-field">
-										<option>分</option>
-									</select>
-								</span>
-								<ul>
-									<li class="active-f">
-										<a href="#" class="clearfix">
-											<div class="food-images"><img src="dist/images/food001.jpg" alt=""/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="site_food-main">
-								<div>
-									茶點：請選擇供餐時間
-									<span class="hm-block wd_form">
-										<select class="site_participate-field">
-											<option>時</option>
-										</select>
-										<select class="site_participate-field">
-											<option>分</option>
-										</select>
-									</span>
-								</div>
-								<ul>
-									<li class="active-f">
-										<a href="#" class="clearfix">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="food-images"><img src="dist/images/food001.jpg"/></div>
-											<div class="food-title">低卡路里套餐</div>
-											<div class="food-information">美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭下，打破以往文化，以自然為食材竹間精緻創立美食天堂。美食天堂，在眾多美食及小吃的競爭。美食天堂，在眾多美食及小吃的競爭。在眾多美食及小吃的競爭。</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- 餐飲選擇 end-->
 					<div class="site-description">
 						請最慢於距離活動<span class="site-description02">10個工作天前</span>填寫場地管理，如無特別需求，將直接<span class="site-description02">套用預設值</span>。<br>
 						以上內容在按下

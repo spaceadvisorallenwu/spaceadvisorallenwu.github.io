@@ -126,10 +126,22 @@
 }
 .index .login-box,
 .index .fast-select {
-    margin: 40px auto;
+    margin: 20px auto;
 }
 .index .fast-select {
     padding: 0;
+}
+.index .fast-select li:nth-child(1) a:hover {
+    background-image: url(../../images/icon_index01.png);
+}
+.index .fast-select li:nth-child(2) a:hover {
+    background-image: url(../../images/icon_index02.png);
+}
+.index .fast-select li:nth-child(3) a:hover {
+    background-image: url(../../images/icon_index03.png);
+}
+.index .fast-select li:nth-child(4) a:hover {
+    background-image: url(../../images/icon_index04.png);
 }
 .index .style {
     background-color: rgba(79, 110, 162, .2);
@@ -223,13 +235,13 @@
 .index .time-limit li:last-child span.mark {
     border-radius: 5px;
     transition: all .4s;
-    background-color: rgba(0, 0, 0, .6);
+    /*background-color: rgba(0, 0, 0, .6);*/
 }
 
 .index .time-limit li:hover span.mark {
     width: 60%;
     height: 45%;
-    background-color: rgba(0, 0, 0, .6);
+    /*background-color: rgba(0, 0, 0, .6);*/
 }
 .index .theme-list li {
     border-radius: 5px;
@@ -406,6 +418,7 @@
 .index .brand-list {
     width: 80%;
     overflow: visible;
+    padding-bottom: 0;
 }
 
 @media only screen and (max-width: 980px) {
