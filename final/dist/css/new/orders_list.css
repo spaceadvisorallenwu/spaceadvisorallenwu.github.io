@@ -166,43 +166,6 @@
     .bookList {
         margin-bottom: 40px;
     }
-    .bookList .bookTitle {
-        flex-direction: column;
-        padding: 9px;
-        font-size: 13px;
-    }
-    .bookList .bookTitle ._left,
-    .bookList .bookTitle ._right {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .bookList .bookTitle ._left {
-        flex-direction: column-reverse;
-    }
-    .bookList .bookTitle ._left > div {
-        margin-bottom: 5px;
-        width: 100%;
-    }
-    .bookList .bookTitle ._left .recstate span {
-        margin-left: 0;
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-        padding: 3px;
-    }
-    .bookList .detailTable-heading .detailTable-cell {
-        color: #435059;
-        font-size: 15px;
-        line-height: normal;
-        padding: 9px 0;
-    }
-    .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
-        flex-direction: column;
-    }
-    .bookList .detailTable-cell .tableTxt.siteName {
-        border-bottom-width: 1px;
-    }
     .bookList .buttons {
         border-top: 1px solid #ddd;
         padding: 20px 9px;

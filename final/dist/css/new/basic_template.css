@@ -611,5 +611,48 @@
     .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
         display: unset;
     }
+
+    .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child {
+        border-width: 0;
+    }
     /** END booklist **/
+    /* BEGIN booklist _style1 */
+    .bookList._style1 .bookTitle {
+        flex-direction: column;
+        padding: 9px;
+        font-size: 13px;
+    }
+    .bookList._style1 .bookTitle ._left,
+    .bookList._style1 .bookTitle ._right {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .bookList._style1 .bookTitle ._left {
+        flex-direction: column-reverse;
+    }
+    .bookList._style1 .bookTitle ._left > div {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .bookList._style1 .bookTitle ._left .recstate span {
+        margin-left: 0;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 3px;
+    }
+    .bookList._style1 .detailTable-heading .detailTable-cell {
+        color: #435059;
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .bookList._style1 .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        flex-direction: column;
+    }
+    .bookList._style1 .detailTable-cell .tableTxt.siteName {
+        border-bottom-width: 1px;
+    }
+    /* END booklist _style1 */
 }

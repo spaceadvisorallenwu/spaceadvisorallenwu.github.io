@@ -3,7 +3,8 @@
 .site-activity._boxStyle,
 .site-value._boxStyle,
 .tab-pane .tab-content001._boxStyle,
-.tab-pane .site-equipment._boxStyle {
+.tab-pane .site-optionsBox._boxStyle,
+.tab-pane .site-food._boxStyle {
 	padding-bottom: 0;
 }
 /* 場地管理 */
@@ -24,6 +25,12 @@
 .bookList {
 	margin-bottom: 9px;
 }
+.bookList .bookTitle ._right .cancel a {
+    color: #4f6ea2;
+}
+.bookList .bookTitle ._right .cancel a:hover {
+	text-decoration: underline;
+}
 .site-description {
 	margin: 0 auto;
 	background: #f3f3f3;
@@ -39,14 +46,19 @@
 	color: #d76050;
 }
 .site-description04 {
-	color: #4e6da1;
+	/*color: #4e6da1;*/
 }
 
 /* 活動資訊 */
 .site_activity {
 	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 	line-height: normal;
+}
+.site_activity-up,
+.site_activity-down {
+	display: flex;
 }
 .site_activity-left {
 	flex: 1;
@@ -99,10 +111,13 @@
     min-height: 40px;
 }
 .site_form-main._floor3 .site_project_content .file-upload-input {
-	width: 100%;
+	width: 84%;
 	margin-right: 9px;
 	border: 1px #ddd solid;
     padding: 3px 9px;
+}
+.site_form-main._floor3 .site_project_content .file-upload-wrapper .btn {
+	width: 16%;
 }
 .site-description-indormation {
     display: flex;
@@ -142,6 +157,8 @@
 .site-upload-record ul li {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
 	font-size: 13px;
 	color: #4e5059;
 	padding: 9px;
@@ -150,43 +167,78 @@
 .site-upload-record ul li:hover {
 	background: #f3f3f3;
 }
+.site-upload-record ul li a {
+	color: #4e5059;
+	font-size: 12px;
+	opacity: .9;
+}
+.site-upload-record ul li a i {
+	margin-right: 3px;
+}
+.site-upload-record .upload-block02._noData:before {
+	content: "尚未上傳任何檔案";
+	display: inline-block;
+	font-size: 15px;
+	color: #333;
+	padding: 9px;
+}
+.site-upload-record .upload-block02._noData li {
+	display: none;
+}
+.site-upload-record .upload-block02 li ._info,
+.site-upload-record .upload-block02 li ._function {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.site-upload-record .upload-block02 li ._info {
+	/*width: 100%;*/
+}
+.site-upload-record .upload-block02 li ._function {
+	width: 21%;
+    justify-content: space-around;
+}
 .site-upload-record .upload-block02 li:last-child {
 	border-bottom: 0;
 }
+.site-upload-record ul li .upload-title01,
+.site-upload-record ul li .upload-time {
+    width: 110px;
+}
 .site-upload-record ul li .upload-title01 {
-	flex: 3.2;
-	padding: 0 10px 0 0;
+	padding-right: 9px;
 }
 .site-upload-record ul li .upload-title02 {
 	display: flex;
 	flex: 6.5;
 }
-.site-upload-record ul li .upload-list01 {
-	flex: 4.3;
+.site-upload-record ul li .upload-file {
+	/*flex: 4.3;*/
 }
-.site-upload-record ul li .upload-list02 {
-	flex: 1.1;
-	text-align: center;
+.site-upload-record ul li .upload-preview {
+	/*flex: 1.1;
+	text-align: center;*/
 }
-.site-upload-record ul li .upload-list02 a:hover {
+.site-upload-record ul li a:hover {
 	text-decoration: underline;
+	opacity: 1;
 }
-.site-upload-record ul li .upload-list03 {
-	flex: 1.1;
-	text-align: center;
+.site-upload-record ul li .upload-delete {
+	/*flex: 1.1;
+	text-align: center;*/
 }
-.site-upload-record ul li .upload-list03 span {
-	width: 100%;
+.site-upload-record ul li .upload-delete span {
+	/*width: 100%;
 	display: block;
-	cursor: pointer;
+	cursor: pointer;*/
 }
 
-.site-upload-record-no {
+/*.site-upload-record-no {
 	text-align: center;
 	font-size: 16px;
 	color: #333;
 	padding: 10px 0;
-}
+}*/
 .upload-title-list01 {
 	flex: 4;
 }
@@ -208,7 +260,7 @@
 
 
 /* 設備需求 */
-.site_equipment {
+.site_optionsBox {
 	color: #4e5059;
 	font-size: 16px;
 	line-height: 1.6em;
@@ -218,7 +270,7 @@
 	/*max-width: 1040px;*/
 	margin: 0 auto;
 }
-.site_equipment ul {
+.site_optionsBox ul {
 	list-style: none;
 	/*margin: 5px 0;*/
 	padding: 9px;
@@ -226,10 +278,11 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-.site_equipment-background {
+.site_equipment-background,
+.site_optionsBox-background {
 	background: #f3f3f3;
 }
-.site_equipment ul li {
+.site_optionsBox ul li {
 	padding: 0;
 	margin: 0 1% 0 3%;
 	flex-basis: 46%;
@@ -237,16 +290,16 @@
 	align-items: center;
 	justify-content: center;
 }
-.site_equipment ul li:nth-child(odd) {
-	margin: 3px 3% 3px 1%;
+.site_optionsBox ul li {
+	margin: 5px 9px;
 }
-.site_equipment ul li .option {
+.site_optionsBox ul li .option {
 	width: 20px;
 	font-size: 16px;
 	color: #4e5059;
 	margin: 0 10px 0 0;
 }
-.site_equipment ul li .option-field {
+.site_optionsBox ul li .option-field {
 	width: 16px;
 	height: auto;
 	border: 1px #4e5059 solid;
@@ -254,19 +307,19 @@
 	font-size: 16px;
 	background: #f3f3f3;
 }
-.site_equipment ul li .equipment-icon {
+.site_optionsBox ul li .optionsBox-icon {
 	display: block;
 	width: 30px;
 	min-height: 25px;
 }
-.site_equipment ul li .equipment-title {
+.site_optionsBox ul li .optionsBox-title {
 	flex: 1;
 	font-size: 15px;
 	color: #4e5059;
 	background-position: center left;
 	background-repeat: no-repeat;
 }
-.site_equipment ul li .quantity {
+.site_optionsBox ul li .quantity {
 	width: 50px;
 }
 .quantity-field {
@@ -276,6 +329,7 @@
 	font-size: 15px;
 	background: none;
 	height: 30px;
+	width: 100%;
 }
 .quantity-field02 {
 	border: none;
@@ -299,7 +353,8 @@
 .site_field::placeholder,
 .font-block-field::placeholder,
 .site_participate-field::placeholder,
-.site_participate-field02::placeholder {
+.site_participate-field02::placeholder,
+.site_form-main._floor3 .site_project_content .file-upload-input::placeholder {
 	font-size: 15px;
 	color: #9c9c9c !important;
 }
@@ -314,7 +369,7 @@
 	width: 100%;
 	/*max-width: 990px;*/
 	margin: 0 auto;
-	padding: 0 3%;
+	padding: 5px 20px;
 }
 .value-add .wrapper .ia-wrapper {
 	display: inline-flex;
@@ -399,6 +454,9 @@
 	/*width: 90%;*/
 	/*max-width: 1040px;*/
 	/*margin: 20px auto;*/
+	border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 .tab-content-title {
 	/*background: url(../../images/site-title-icon.png) no-repeat left 13px;*/
@@ -420,6 +478,9 @@
 	display: flex;
 	align-items: center;
 }
+.site_participate .site_participate-field02 {
+	width: 180px;
+}
 .site_participate-field {
 	/*display: inline-block;
 	background-color: #f3f3f3;
@@ -433,6 +494,9 @@
 .site_participate-field02 {
 	font-size: 15px;
 	border: 1px solid #ccc;
+	height: 30px;
+	line-height: normal;
+	width: 100px;
 }
 .site_table {
 	margin: 10px 0;
@@ -460,6 +524,7 @@
 }
 .site_table-menu ul li {
 	flex: 1;
+	min-width: 98px;
 	text-align: center;
 	font-size: 15px;
 	position: relative;
@@ -496,6 +561,7 @@
 	background-position: center 37px;
 	background-size: 55px;
 	height: 100%;
+	color: #4f6ea2;
 }
 .site_table-menu ul li a:hover {
 }
@@ -510,7 +576,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px #f3f3f3 solid;
+    /*border-bottom: 1px #f3f3f3 solid;*/
 	visibility: hidden;
 }
 .site_table-menu ul li .seat {
@@ -529,6 +595,7 @@
     width: calc(100% - 10px);
     margin: 9px 5px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .seat-field option {
 	padding: 5px;
@@ -547,6 +614,8 @@
 .site_table-contect img {
 	max-width: 100%;
 	max-height: 100%;
+	border-radius: 5px;
+	overflow: hidden;
 }
 
 /* 餐飲選擇 */
@@ -559,15 +628,26 @@
 	letter-spacing: 1px;
 }*/
 .site_food-main {}
+.site_food-main .site_food-main-title {
+    display: flex;
+    align-items: center;
+}
+.site_food-main .site_food-main-title .hm-block {
+	display: inline-flex;
+	margin-left: 9px;
+}
+.site_food-main .site_food-main-title .hm-block .site_participate-field:first-child {
+	margin-right: 9px;
+}
 .site_food-main ul {
 	list-style: none;
 	padding: 0;
-	margin: 20px 0 60px 0;
+	margin: 20px 0 0;
 }
 .site_food-main ul li {
 	width: 100%;
 	color: #4e5059;
-	font-family: "微軟正黑體";
+	margin-bottom: 5px;
 }
 .site_food-main ul .active {
 	background: #4f6ea2;
@@ -587,7 +667,7 @@
 	height: 25px;
 	line-height: 25px;
 	background: #4f6ea2;
-	font-size: 14px;
+	font-size: 13px;
 	color: #fff;
 	position: absolute;
 	bottom: 15px;
@@ -597,34 +677,41 @@
 	display: block;
 	color: #4e5059;
 	padding: 15px;
+	display: flex;
+	align-items: center;
 }
 .site_food-main ul li a:hover {
 	background: #efeff0;
 }
+.site_food-main ul li a ._left {
+
+}
+.site_food-main ul li a ._right {
+	margin-left: 20px;
+}
 .site_food-main ul li .food-images {
-	width: 230px;
-	height: 142.27px;
-	overflow: hidden;
-	float: left;
+    width: 230px;
+    height: auto;
+    max-height: 145px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 .site_food-main ul li .food-images img {
 	width: 100%;
 }
 .site_food-main ul li .food-title {
-	display: inline-block;
+	/*display: inline-block;
 	width: calc(100% - 230px);
-	font-size: 20px;
+	font-size: 17px;
 	line-height: 1.6em;
 	margin: 0 0 5px 0;
-	padding: 0 0 0 15px;
+	padding: 0 0 0 15px;*/
+    font-size: 17px;
+    font-weight: bold;
 }
 .site_food-main ul li .food-information {
 	display: inline-block;
-	width: calc(100% - 230px);
-	padding: 0 0 0 15px;
-	font-size: 14px;
-	line-height: 1.4em;
-	height: 95px;
+	font-size: 15px;
 	overflow: hidden;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -651,20 +738,29 @@
 .site-cross {
 	font-size: 20px;
 }
+.site-management-button {
+	display: flex;
+	align-items: center;
+	/*font-size: 24px;
+	color: #fff;
+	width: 90%;
+	max-width: 1040px;
+	margin: 40px auto 140px auto;
+	text-align: center;*/
+}
 .site-management-button-p {
 	font-size: 24px;
 	color: #fff;
 	width: 180px;
 	margin: 50px auto;
 }
-.site-management-button {
-	font-size: 24px;
-	color: #fff;
-	width: 90%;
-	max-width: 1040px;
-	margin: 40px auto 140px auto;
-	text-align: center;
+.site-management-button01,
+.site-management-button02,
+.site-management-button03 {
+	margin-right: 9px;
+	cursor: pointer;
 }
+/*
 .site-management-button01 {
 	float: left;
 	margin: 0 10px 0 0;
@@ -698,32 +794,24 @@
 	background-color: #c63e2b;
 	color: #fff;
 	border-radius: 5px;
-}
+}*/
 .site-management-button03 {
-	float: left;
+	/*float: left;*/
 }
 .site-management-button03 a {
 	display: block;
 	width: 48px;
 	height: 48px;
-	font-size: 24px;
 	background-size: 25px;
 	background-color: #fff;
 	background-image: url(../../images/pdf-icon.png);
 	background-repeat: no-repeat;
 	background-position: center center;
-	border-radius: 50px;
+	border-radius: 5px;
 }
 .site-management-button03 a:hover {
-	display: block;
-	width: 48px;
-	height: 48px;
-	background-size: 25px;
 	background-color: #4f6ea1;
 	background-image: url(../../images/pdf-icon_h.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	border-radius: 50px;
 }
 .site-management-button04 {
 	display: inline-block;
@@ -753,20 +841,16 @@
 
 /* form樣式 */
 .wd_form select {
-	border: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	padding: 0 30px 0 10px;
 	background-image: url(../../images/down-arrow.png);
 	background-repeat: no-repeat;
 	background-position: calc(100% - 10px) center;
 	background-size: 10px;
 	background-color: #fff;
-	border: 1px solid #ccc;
 	cursor: pointer;
-	color: #4e5059;
-	opacity: 1;
+	border: 1px solid #ccc;
 }
 .wd_form select::-ms-expand {
 	display: none;
@@ -919,85 +1003,87 @@
     color: #4e5059;
 }
 
-.value-add-list .vatitle{
-    display:flex;
-    margin-bottom:20px;
-    padding:4px 0;
-    background-color:#f3f3f3;
-    line-height:20px;
+.value-add-list .vatitle {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 4px 0;
+    background-color: #f3f3f3;
+    line-height: 20px;
 }
-.value-add-list .vatitle .wrapper{
+.value-add-list .vatitle .wrapper {
     display:flex;
     padding:0 20px;
 }
-.value-add-list .item{
-    display:inline-block;
-    width:250px;
-    padding-right:2em;
+.value-add-list .item {
+    display: inline-block;
+    width: 250px;
+    padding-right: 9px;
 }
-.value-add-list .amount{
-    display:inline-block;
-    width:calc(100% - 250px);
-    padding-right:2em;
+.value-add-list .amount {
+    display: inline-block;
+    width: calc(100% - 250px);
+    padding-right: 9px;
 }
-.value-add-list .price{
-    display:inline-block;
-    width:25%;
+.value-add-list .price {
+    display: inline-block;
+    width: 25%;
 }
-.value-add-list .valist{
+.value-add-list .valist {
     /*margin-bottom:15px;*/
-    line-height: 20px;
+    line-height: normal;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
 }
-.value-add-list .valist .wrapper{
+.value-add-list .valist .wrapper {
     display: block;
     width: 94%;
     max-width: 990px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.value-add-list .valist ul.purchase_value-add-wrapper{
+.value-add-list .valist ul.purchase_value-add-wrapper {
     width: 94%;
     max-width: 990px;
     margin: 0 auto;
 }
-.value-add-list .valist ul li{
+.value-add-list .valist ul li {
     display: flex;
     padding: 4px 0;
 }
-.value-add-list .valist ul li div.ia-wrapper{
+.value-add-list .valist ul li div.ia-wrapper {
     display: flex;
     width: 75%;
 }
-.value-add-list .valist ul li div.mobile{
+.value-add-list .valist ul li div.mobile {
     display: none;
 }
-.value-add-list .valist ul li div span{
+.value-add-list .valist ul li div span {
     display: inline-block;
 }
-.value-add-list .valist ul li div span:nth-child(1){
+.value-add-list .valist ul li div span:nth-child(1) {
     width: 40px;
 }
-.value-add-list .valist ul li div span:nth-child(2){
+.value-add-list .valist ul li div span:nth-child(2) {
     width: calc(100% - 40px);
     text-align: right;
 }
-.value-add-list .vasum{
+.value-add-list .vasum {
     background-color: #dce2ec;
 }
-.value-add-list .vasum .wrapper{
+.value-add-list .vasum .wrapper {
     display: block;
     padding: 20px;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 2px;
 }
-.value-add-list .vasum span{
+.value-add-list .vasum span {
     font-size: 16px;
 }
-.value-add-list .vasum div.thead{
+.value-add-list .vasum div.thead {
     float: left;
 }
-.value-add-list .vasum div.tamount{
+.value-add-list .vasum div.tamount {
     font-size: 24px;
     float: right;
 }
@@ -1011,15 +1097,18 @@
 	margin: 0 auto;
 }
 .site-value-add-contect {
-	line-height: 1.6em;
-	margin: 10px 0;
+	line-height: normal;
+	margin-bottom: 9px;
+}
+.site-value-add-contect span,
+.site-value-add-contect .site-description04 {
+	font-size: 15px;
 }
 .value-add-list .site-value-add-vatitle {
 	display: flex;
     font-size: 15px;
-	margin-bottom: 0px;
-	padding: 5px 0;
 	line-height: normal;
+	border-radius: 5px 5px 0 0;
 }
 .value-add-list-background {
 	background-color: #ddd;
@@ -1033,360 +1122,264 @@
 	display: none!important;
 }
 .value-add .value-add-list-wrapper {
-	padding: 9px 3%;
+	padding: 9px 20px;
 }
 
+
+/* 餐飲加價購 */
+.purchase_food{padding:5px 0 10px 0;}
+.purchase_food-none{display:none;}
+.site_food-main ul li.active-f .purchase_food-none{display:block; font-size:16px; color:#4e5059; background-color:#fff;}
+.site_food-main ul li.active-f {
+	background: #4f6ea2;
+	position: relative;
+	color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.site_food-main ul li a {
+	position: relative;
+}
+.site_food-main ul li a:after {
+	content: "點此選擇餐飲";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 9px;
+    line-height: normal;
+    border-radius: 5px;
+    font-size: 13px;
+    background: #ccc;
+    color: #4e5059;
+}
+.site_food-main ul li.active-f a,
+.site_food-main ul li.active-f a:hover {
+	background-color: #4f6ea2;
+	color: #fff;
+}
+.site_food-main ul li.active-f a:after {
+    content: "已選擇";
+    background: #4f6ea2;
+    color: #fff;
+}
+.site_food-participate {
+	line-height: 40px;
+	margin: 0;
+}
+.purchase_food-price {
+	font-size: 15px;
+	display: inline-block;
+	padding: 0 10px;
+}
 
 
 
 
 @media (max-width:980px) {
-	.site_equipment ul li {
-		margin: 0;
-		flex-basis: 100%;
+	.site-information._boxStyle {
+		padding-top: 20px;
 	}
-	.site_equipment ul li:nth-child(odd) {
-		margin: 0;
+	.bookList .detailTable-row.detailTable-content .detailTable-cell .tableTxt.buyIcon span {
+		padding-left: 0;
+		text-align: center;
 	}
-}
-@media (max-width:980px) {
-	.site_activity-left {
-		flex: 1;
-		padding: 0;
+	.site_form-main {
+		margin-bottom: 9px;
 	}
-	.site_activity {
-		display: block;
-	}
-	.site_button02 {
-		margin: 20px 0 40px 0;
-	}
-}
-@media screen and (max-width:770px) {
-	.hm-block {
-		display: flex;
-	}
-	.site_participate-field {
+	.site_form-main._floor3 .site_project_content .file-upload-wrapper .btn {
 		width: 30%;
 	}
-	.site_participate-field02 {
-		width: 40%;
+
+	/** BEGIN site_activity **/
+	.site_activity-up,
+	.site_activity-down {
+		flex-direction: column;
 	}
-}
-@media screen and (max-width:650px) {
-	.site_food-main ul li .food-images {
-		width: 180px;
-		height: 115px;
+	.site_activity-down {
+		border-top: 1px solid #ddd;
+		margin-top: 20px;
+		padding-top: 20px;
 	}
-	.site_food-main ul li .food-title {
-		width: calc(100% - 180px);
+	.site_button02 {
+		margin: 20px 0;
 	}
-	.site_food-main ul li .food-information {
-		width: calc(100% - 180px);
-		height: 78px;
+	.site-upload-record ul li a {
+		font-size: 13px;
 	}
-}
-@media (max-width:640px){
-    .value-add-list .valist ul li div span:nth-child(2){
-        width: auto;
-        padding-left: 10px;
-        text-align: right;
-    }
-    .value-add-list .vasum .wrapper{
-        text-align: center;
-    }
-    .value-add-list .vasum span{
-        display: block;
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-    .value-add-list .vasum div.thead{
-        float: none;
-    }
-    .value-add-list .vasum div.tamount{
-        float: none;
-    }
-}
-@media (max-width:640px) {
-	.value-add-list .site-value-add-vatitle {}
-	.value-add-list .site-value-add-vatitle .purchase_value-add-wrapper {
-		display: flex;
+	.site-upload-record ul li .upload-title01 {
+		flex: 110px;
 	}
-	.value-add-list .site-value-add-vatitle .item {
-		display: block;
-		padding-right: 0;
-		width: 100%;
-		font-size: large;
-		line-height: 2em;
+	.site-upload-record ul li .upload-title02 {
+		display: none;
+	}
+	.site-upload-record ul li .upload-file {
+		/*flex: calc(100% - 110px);*/
+	}
+	.upload-block02 {
+		height: auto;
+	}
+	.site-upload-record .upload-block02 li ._info,
+	.site-upload-record .upload-block02 li ._function {
+		width: 50%;
+	}
+	.site-upload-record .upload-block02 li ._info {
+		flex-direction: column;
+		justify-content: start;
+	}
+	.site-upload-record .upload-block02 li ._function {
+		justify-content: center;
+	}
+	.site-upload-record ul li .upload-time,
+	.site-upload-record ul li .upload-file {
+	    width: 100%;
+	}
+	.site-upload-record .upload-block02 li ._function {
+
+	}
+	.site-upload-record ul li .upload-preview,
+	.site-upload-record ul li .upload-delete {
+	    background: #f3f3f3;
+	    border: 1px solid #ddd;
+	    border-radius: 5px;
+	    padding: 1px 9px;
+	}
+	.site-upload-record ul li .upload-delete {
+		margin-left: 9px;
+	}
+	/** END site_activity **/
+
+
+	/** BEGIN value-add **/
+	.value-add .wrapper,
+	.value-add .value-add-list-wrapper {
+		padding: 5px 9px;
+	}
+	.value-add .wrapper .ia-wrapper,
+	.value-add-list .valist ul li div.ia-wrapper {
+	    width: 65%;
+	}
+	.value-add-list .price {
+		width: 35%;
 	}
 	.value-add-list .site-value-add-vatitle .amount {
 		display: none;
 	}
-	.value-add-list .site-value-add-vatitle .price {
-		display: block;
-		width: 50%;
-		font-size: large;
-		line-height: 2em;
-		text-align: right;
+	.value-add-list .valist ul li div.ia-wrapper {
+		flex-direction: column;
 	}
-}
-@media (max-width:640px){
-    .value-add-list .valist{
-        line-height: 1.6em;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    .value-add-list .valist .wrapper{
-        padding: 0;
-    }
-    .value-add-list .valist ul li{
-        display: flex;
-        margin-bottom: 10px;
-        padding: 4px 0;
-        border-bottom: 1px dotted #d6d6d6;
-    }
-    .value-add-list .valist ul li:last-child{
-        margin-bottom: 0;
-    }
-    .value-add-list .valist ul li div{
-    }
-    .value-add-list .valist ul li div.ia-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        width: 50%;
-    }
-    .value-add-list .valist ul li div.mobile{
-        display: block;
-        width: 30%;
-    }
-}
-@media (max-width:640px){
-    .value-add-list{
-        font-size:large;
-    }
-    .value-add-list .vatitle{
-        background-color:#dce2ec;
-        font-size:large;
-        line-height:2em;
-    }
-    .value-add-list .vatitle .amount{
-        display:none;
-    }
-}
-@media (max-width:640px){
-    .value-add-list .item{
-        display:block;
-        width:100%;
-    }
-    .value-add-list .amount{
-        display:block;
-        width:70%;
-    }
-    .value-add-list .price{
-        display:block;
-        width:50%;
-        text-align:right;
-    }
-}
-@media (max-width:640px) {
-	.value-add {
-		font-size: large;
+	.value-add-list .amount {
+		width: 100%;
+		font-size: 13px;
 	}
-	.value-add h1 .wrapper {
-		display: block;
+	.value-add-list .item {
+	    width: 100%;
 	}
-	.value-add .wrapper .ia-wrapper {
-		width: 50%;
-	}
-}
-@media (max-width:600px) {
-	.site-upload-record ul li .upload-title01 {
-		flex: 110px;
-		padding: 0 10px 0 0;
-	}
-	.site-upload-record ul li .upload-title02 {
-		display: flex;
-		flex: calc(100% - 110px);
-	}
-	.site-upload-record ul li .upload-list01 {
-		flex: calc(100% - 110px);
-	}
-	.site-upload-record ul li .upload-list02 {
-		flex: 50px;
-		text-align: left;
-		padding: 15px 0;
-	}
-	.site-upload-record ul li .upload-list03 {
-		flex: calc(100% - 50px);
-		text-align: left;
-		padding: 15px 0;
-	}
-	.upload-block02 {
-		height: auto;
-	}
-}
-@media screen and (max-width:580px) {
-	.site_nav-main {
-		border-bottom: 14px #4f6ea2 solid;
-	}
-	.site-period .site_nav-tabs>li>a {}
+	/** END value-add **/
+
+	/** BEGIN period **/
 	.site-period .site_nav-tabs {
-		margin: 45px auto 0px auto;
+	    margin: 20px auto 0;
+    	width: 100%;
+    	justify-content: space-between;
 	}
-}
-@media (max-width:550px) {
-	.site_nav li {
-		width: calc(100% / 3);
+	.site-period .site_nav-tabs li {
+		width: 33%;
 	}
-	.site-period .site_nav-tabs>li>a {
+	.site-period .site_nav-tabs > li > a {
 		background: none;
-		background-color: #efeff0;
-		padding: 8px 0 2px;
-		font-size: 16px;
-		letter-spacing: 1px;
-		border: 1px solid #fff;
-		border-bottom: 0;
-		border-radius: 10px 10px 0 0;
-		text-align: center;
+	    background-color: #efefef;
+	    border-radius: 5px 5px 0 0;
+	    font-size: 15px;
+	    padding-bottom: 5px;
 	}
-	.site-period .site_nav-tabs>li.active>a,
-	.site-period .site_nav-tabs>li>a:hover {
-		background: none;
-		background-color: #4f6ea2;
+	.site-period .site_nav-tabs > li.active > a,
+	.site-period .site_nav-tabs > li > a:hover {
+	    background-color: #4f6ea2;
 	}
-}
-@media screen and (max-width:500px) {
-	.site_participate-field {
-		width: calc(50% - 5px);
+	.site_nav-main {
+	    border-bottom: 14px #4f6ea2 solid;
+	}
+	.tab-pane .tab-content001._boxStyle {
+		padding-top: 20px;
+	}
+	/** END period **/
+
+	/** BEGIN site_optionsBox **/
+	.site_optionsBox ul li {
+	    width: 100%;
+	    flex-basis: 100%;
+	    justify-content: flex-start;
+	}
+	.site_optionsBox ul li .optionsBox-title {
+		font-size: 13px;
+	}
+	.site_optionsBox ul li {
 		margin: 5px 0;
 	}
-	.site_participate-field02 {
-		width: 100%;
-		margin: 5px 0;
+	/** END site_optionsBox **/
+
+	/** BEGIN site_food **/
+	.site_food-main .site_food-main-title {
+		flex-direction: column;
 	}
-}
-@media (max-width:500px) {
-	.site_form-main {
-		margin: 0;
-	}
-	.site_form-main02 {
-		display: block;
-		margin: 0;
-	}
-	.site_form-main03 {
-		margin: 0;
-	}
-	.site_project02 {
-		padding: 5px 0;
-	}
-	.site_project03 {
-		padding: 5px 0;
-	}
-	.site_project04 {
-		display: block;
-	}
-	.site_field02 {
-		margin: 0 0 15px 0;
+	.site_food-main .site_food-main-title span {
 		width: 100%;
 	}
-	.site-upload-record ul li .upload-title02 {
-		display: flex;
-		flex-wrap: wrap;
-		flex: 2.2;
+	.site_food-main .site_food-main-title .hm-block {
+		margin-left: 0;
+		margin-top: 9px;
 	}
-	.upload-title-list01 {
-		flex-basis: 100%;
-		padding: 0 0 20px 0;
+	.site_food-main .site_food-main-title .hm-block select {
+		width: 50%;
 	}
-	.upload-title-list02 {
-		flex-basis: 20%;
+	.site_food-main ul li {
+		border: 1px solid #ddd;
+		border-radius: 5px;
 	}
-	.upload-block02 {
-		height: auto;
-		overflow-x: hidden;
-		overflow-y: auto;
-	}
-}
-@media screen and (max-width:500px) {
-	.site-management-button-p {
-		font-size: 20px;
-		width: 120px;
-	}
-	.site-management-button01 a {
-		font-size: 20px;
-		padding: 6px 10px;
-	}
-	.site-management-button02 {
-		margin: 0 10px;
-	}
-	.site-management-button02 a {
-		font-size: 20px;
-		padding: 6px 10px;
-	}
-	.site-management-button03 a {
-		display: block;
-		width: 42px;
-		height: 42px;
-		background-size: 20px;
-		background-color: #fff;
-		background-image: url(../../images/pdf-icon.png);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-	.site-management-button03 a:hover {
-		display: block;
-		width: 42px;
-		height: 42px;
-		background-size: 20px;
-		background-color: #4f6ea1;
-		background-image: url(../../images/pdf-icon_h.png);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-	.site-management-button04 {
-		font-size: 20px;
-		padding: 9.5px 10px;
-		margin: -6px 10px 0 0;
-	}
-}
-@media screen and (max-width:500px) {
 	.site_food-main ul li a {
-		display: flex;
-		flex-wrap: wrap;
-		border: 1px solid #eee;
-		margin-top: 10px;
+		flex-direction: column;
 	}
 	.site_food-main ul li .food-images {
-		width: 50%;
-		height: auto;
-		display: block;
+        width: 90%;
+	    height: auto;
+	    max-height: 200px;
+	    margin: 0 auto;
+	}
+	.site_food-main ul li a ._right {
+		margin-left: 0;
+		margin-top: 9px;
 	}
 	.site_food-main ul li .food-title {
-		width: 50%;
-		margin: 0;
-		align-self: center;
+		font-size: 21px;
+	    border-bottom: 1px solid #fff;
+	    text-align: center;
+	    padding-bottom: 9px;
+	    margin-bottom: 9px;
 	}
 	.site_food-main ul li .food-information {
-		width: 100%;
-		height: auto;
-		margin-top: 15px;
-		padding: 0;
+		font-size: 13px;
 	}
-	.site_food-main ul .active:after {
-		content: "已選擇";
-		position: absolute;
-		bottom: inherit;
-		top: 0;
-		left: 0;
+	.site_food-main ul li a:after {
+		bottom: auto;
+		top: 5px;
+		left: 5px;
+		padding: 9px;
 	}
-}
-@media (max-width:400px) {
-	.site-period .site_nav-tabs>li>a {
+	.purchase_food-price {
 		font-size: 15px;
-		letter-spacing: 0;
+		display: block;
+		padding: 0;
+		width: 100%;
 	}
-}
-@media (max-width:350px) {
-	.site-period .site_nav-tabs>li>a {
-		font-size: 12px;
+	.site_table-contect-main {
+		padding: 9px;
 	}
+	.site_table-menu ul li {
+		min-width: 90px;
+	}
+	/** END site_food **/
 }
+
+
+
