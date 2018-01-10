@@ -103,6 +103,7 @@
     background-color: #ddd;
     color: #4e5059;
     padding: 0 15px;
+    transition: background-color .3s;
 }
 .meeting .anchor._fixed .day-plan {
     padding-bottom: 20px;
@@ -258,8 +259,8 @@
 }
 .meeting .content-720 .box {
     width: 80%;
-    border-left: 1px solid #ddd;
-    padding: 5px 0 5px 20px;
+    /*border-left: 1px solid #ddd;*/
+    padding: 0 0 5px 20px;
     font-size: 15px;
     line-height: normal;
 }
@@ -362,8 +363,17 @@
     line-height: normal;
     border-radius: 5px;
     background: #f3f3f3;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
     margin: 3px 0 9px;
+}
+.meeting .mobile-plan .plan-box .scroll li .text a,
+.meeting .price-plan ul li .text a {
+    display: block;
+    margin-top: 5px;
+    color: #4f6ea2;
+}
+.meeting .price-plan ul li .text a:hover {
+    text-decoration: underline;
 }
 .meeting .price-plan ul li ._pp-info {
         display: flex;
@@ -411,11 +421,12 @@
 }
 .meeting .comment .star li p {
     font-size: 15px;
+    width: 30%;
     /*border: 1px solid #ddd;*/
     /*background: #f3f3f3;*/
     /*border-radius: 5px;*/
     /*padding: 1px 9px;*/
-    text-align: center;
+    text-align: left;
     margin-right: 9px;
 }
 .meeting .comment .comment-list {
@@ -425,7 +436,7 @@
 .meeting .comment .comment-list li {
     margin: 20px 9px;
     padding-top: 0;
-    border-bottom: 1px dashed #ddd;
+    /*border-bottom: 1px dashed #ddd;*/
 }
 .meeting .comment .comment-list li:last-child {
     border-bottom: 0;
@@ -434,8 +445,9 @@
 .meeting .comment .comment-list li .other {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 9px;
-    border-bottom: 1px solid #ddd;
+    margin-top: 9px;
+    /*padding-bottom: 9px;*/
+    /*border-bottom: 1px solid #ddd;*/
 }
 .meeting .comment .comment-list li .other span.star {
     font-size: 15px;
@@ -462,12 +474,13 @@
 }
 .meeting .comment .comment-list li p.text {
     margin-left: 80px;
-    margin-top: 9px;
+    /*margin-top: 9px;*/
     padding: 0;
     /*background: #f3f3f3;*/
     /*border: 1px solid #ddd;*/
     /*border-radius: 5px;*/
     display: inline-block;
+    text-align: justify;
 }
 .meeting .comment .something {
     width: 100%;
@@ -601,7 +614,7 @@
     .meeting .clause .content,
     .meeting .comment.content {
         width: 90%;
-        margin: 20px auto;
+        margin: 0 auto 20px;
     }
     .meeting .outline span.brand {
         margin: 11px 0;

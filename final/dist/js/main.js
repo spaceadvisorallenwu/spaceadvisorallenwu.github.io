@@ -265,18 +265,18 @@ $(function(){
 //meeting 價格方案 選擇
 $(function(){
 	$('.box > ul > li > div > a.select').click(function(){
-		$('#cart').css('background-color','#5b5b5d');
+		$('#cart').css('background-color','gray');
 		function first(){
-			$('#cart').css('background-color','#464649');
+			$('#cart').css('background-color','#ddd');
 		};
-		setTimeout(first,500);
+		setTimeout(first, 500);
 	});//桌機
 });
 
 //meeting 手機 評論
 $(function(){
 	$('.comment > .content-720 > .star > p > a.more').click(function(){
-		$(this).parent().siblings().slideToggle();
+		$(this).parent().siblings().toggle();
 	});
 });
 
@@ -297,7 +297,7 @@ $(function(){
 		}
 		$('.mobile-plan > .plan-box').toggle();
 	});
-	$('.mobile-plan > .plan-box > .scroll > ul > li > div > i').click(function() {
+	$('.mobile-plan > .plan-box > .scroll > ul > li > div > i, .mobile-plan > .plan-box > .scroll > ul > li > div > .price').click(function() {
 		$(this).parent().siblings('.text').toggle();
 	});
     $(window).on('resize', function() {

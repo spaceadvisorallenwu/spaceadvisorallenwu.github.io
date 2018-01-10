@@ -71,6 +71,9 @@
     display: block;
     -webkit-line-clamp: unset;
 }
+.site-list .site._noRanking .ranking {
+    display: none !important;
+}
 .site-list .site .text .info_1 {
     display: flex;
     justify-content: flex-start;
