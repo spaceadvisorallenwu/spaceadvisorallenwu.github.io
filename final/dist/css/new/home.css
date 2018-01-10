@@ -1,7 +1,12 @@
 @charset 'UTF-8';
 /** BEGIN Home **/
 .index h2 {
-    margin-bottom: 20px;
+    margin-bottom: 9px;
+    font-size: 21px;
+}
+.animentBox h3 {
+    font-size: 15px;
+    font-weight: normal;
 }
 .flexslider .slides > li {
     height: 450px;
@@ -123,6 +128,8 @@
     border: 0;
     border-bottom: 1px solid #ddd;
     border-radius: 0;
+    font-size: 15px;
+    font-weight: normal;
 }
 .index .login-box,
 .index .fast-select {
@@ -130,6 +137,12 @@
 }
 .index .fast-select {
     padding: 0;
+}
+.index .fast-select a {
+    font-size: 15px;
+    padding-left: 38px;
+    line-height: 33px;
+    background-size: 31px auto;
 }
 .index .fast-select li:nth-child(1) a:hover {
     background-image: url(../../images/icon_index01.png);
