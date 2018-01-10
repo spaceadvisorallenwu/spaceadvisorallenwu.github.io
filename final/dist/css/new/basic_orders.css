@@ -32,16 +32,9 @@
 
 /* 訂單管理 */
 main.order {
-	margin-top: 88px;
+    margin-top: 88px;
 }
 
-.orders_list_rfp .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
-.orders_list_new .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
-.orders_list_past .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
-.orders_list_cancel .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
-.orders_space .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
-    display: flex;
-}
 .bookList .bookTitle {
     display: flex;
     align-items: center;
@@ -53,7 +46,7 @@ main.order {
     color: gray;
 }
 .bookList .bookTitle span {
-    padding: 0 5px;
+    padding-left: 5px;
 }
 .bookList .bookTitle ._left,
 .bookList .bookTitle ._right {
@@ -67,6 +60,7 @@ main.order {
     border-radius: 5px;
     color: #ccc;
     font-size: 13px;
+    padding: 0 5px;
 }
 .bookList[data-stat="checking"] .bookTitle ._left .recstate span,
 .bookList[data-stat="notyetpay"] .bookTitle ._left .recstate span {

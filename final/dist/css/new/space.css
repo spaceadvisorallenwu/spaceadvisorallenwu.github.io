@@ -147,16 +147,46 @@
     display: flex;
     justify-content: space-around;
     width: 90%;
+    margin: 0 auto;
 }
-.meeting .anchor .day-plan ._others a {
+/*.meeting .anchor .day-plan ._others a {
     margin: 0;
     font-size: 15px;
     background-size: 15px;
     padding-left: 20px;
+}*/
+.meeting .outline .link > div,
+.meeting .anchor .day-plan ._others > div {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
 }
-.meeting .anchor .day-plan span a.heart {
-    margin: 0;
+#wrapper i.heart,
+#wrapper i.add {
+    color: #4e5059;
+    border-color: #4e5059;
+    border-width: 3px;
+    transform: scale(.5);
+    -ms-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -webkit-transform: scale(.5);
+    -o-transform: scale(.5);
+    margin-left: -5px;
+    margin-right: -3px;
 }
+#wrapper.meeting .anchor .day-plan ._others > div:hover i,
+#wrapper.meeting .outline .link > div:hover i,
+.meeting .anchor .day-plan ._others > div:hover span,
+.meeting .outline .link > div:hover span,
+#wrapper.meeting .anchor .day-plan ._others > div.this i,
+#wrapper.meeting .outline .link > div.this i,
+.meeting .anchor .day-plan ._others > div.this i + span,
+.meeting .outline .link > div.this i + span {
+    color: #d76050;
+    border-color: #d76050;
+}
+
 .meeting .outline.content {
     overflow: hidden;
     margin-top: 60px;
@@ -634,13 +664,10 @@
         margin-left: 9px;
     }
     .meeting .outline.content {
-        /*margin-top: 40px;*/
+        margin-top: 41px;
     }
     .meeting .anchor {
         height: 41px;
-    }
-    .meeting .content-720 {
-        padding: 20px 0;
     }
     .meeting .banner .banner-nav {
         /*padding: 15px;*/
@@ -653,7 +680,7 @@
         width: calc(100% / 3);
     }
     .meeting .outline .content-720 {
-        padding-bottom: 20px;
+        padding: 9px 0;
     }
     .meeting .anchor .nav {
         padding: 0 5%;

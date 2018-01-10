@@ -208,10 +208,10 @@ $(function(){
 
 //場地列表 i標籤點擊變色
 $(function(){
-	$('i.heart, .meeting .day-plan ._others .heart').click(function(){
+	$('i.heart, .meeting .day-plan ._others .heart, .meeting .outline .link .heart').click(function(){
 		$(this).toggleClass('this');
 	});
-	$('i.add, .meeting .day-plan ._others .add').click(function(){
+	$('i.add, .meeting .day-plan ._others .add, .meeting .outline .link .add').click(function(){
 		$(this).toggleClass('this');
 	});
 });

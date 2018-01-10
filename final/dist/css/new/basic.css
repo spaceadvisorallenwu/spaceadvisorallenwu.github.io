@@ -131,14 +131,14 @@ body {
 .btn.btn-c-4:hover {
     background: #f3f3f3 !important;
 }
-.disable .btn,
+.disable > .btn,
 .btn.btn-c-disable {
     cursor: default !important;
     background: #4E5059 !important;
     color: #fff !important;
     opacity: .35 !important;
 }
-.disable .btn:hover,
+.disable > .btn:hover,
 .btn.btn-c-disable:hover {
     cursor: default !important;
     background: #4E5059 !important;

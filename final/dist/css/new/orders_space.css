@@ -27,6 +27,7 @@
 }
 .bookList .bookTitle ._right .cancel a {
     color: #4f6ea2;
+    padding-left: 5px;
 }
 .bookList .bookTitle ._right .cancel a:hover {
 	text-decoration: underline;

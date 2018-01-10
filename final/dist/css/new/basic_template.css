@@ -24,42 +24,72 @@
     border-radius: 5px;
     overflow: hidden;
 }
+
+
+
 .site-list .site i.heart,
 .site-list .site i.add {
     right: 30px;
     cursor: pointer;
-    /*background-image: unset;*/
-    /*background-color: transparent;*/
+    background-image: unset;
+    background-color: transparent;
     /*font-size: 25px;*/
     /*color: #fff;*/
 }
-/*.site-list .site i.heart.this,
+.site-list .site i.heart.this,
 .site-list .site i.add.this {
     background-image: unset;
     background-color: transparent;
+    /*color: #d76050;*/
+}
+#wrapper i.heart,
+#wrapper i.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 13px;
+    width: 31px;
+    height: 31px;
+    color: #fff;
+    border: 4px solid #fff;
+    color: #fff;
+    opacity: 0.8;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2), 0px 0px 1px 1px rgba(0,0,0,0.2) inset;
+}
+#wrapper i.heart:before,
+#wrapper i.add:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#wrapper i.heart.this,
+#wrapper i.add.this,
+#wrapper i:hover {
     color: #d76050;
-}*/
-.site-list .site i.add {
-    top: 42px;
+    border-color: #d76050;
 }
-/*.site-list .site i.heart:before {
-    content: "\f184";
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+#wrapper i.heart:before {
+    content: "\f004";
 }
-.site-list .site i.add:before {
-    content: "\f055";
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}*/
+#wrapper i.add:before {
+    content: "\f067";
+}
+#wrapper i.heart {
+    top: 9px;
+}
+#wrapper i.add {
+    top: 47px;
+    font-size: 17px;
+}
+
+
+
 .site-list .site .text p.title,
 .site-list .site .text .info_1 {
     padding: 3px 0;
@@ -71,7 +101,17 @@
     display: block;
     -webkit-line-clamp: unset;
 }
-.site-list .site._noRanking .ranking {
+.site-list .site span.pic .flag {
+    display: block;
+    width: auto;
+    max-width: 45px;
+    height: 65px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.site-list .site._noFlag .flag {
     display: none !important;
 }
 .site-list .site .text .info_1 {
@@ -144,7 +184,7 @@
 }
 .bookList .bookTitle {
     background: #fff;
-    padding: 5px 9px;
+    padding: 0 0 3px;
     display: flex;
     align-items: center;
     margin: 0;
@@ -300,6 +340,7 @@
     align-items: center;
     padding: 0;
     font-size: 15px;
+    line-height: normal;
 }
 .bookList .detailTable-cell .tableTxt.siteName {
     padding: 0;
@@ -444,6 +485,9 @@
 }
 .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
     display: table-cell;
+}
+.bookList._style1 .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
 }
 /** END booklist **/
 
