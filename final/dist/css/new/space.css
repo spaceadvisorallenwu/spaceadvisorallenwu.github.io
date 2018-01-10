@@ -333,6 +333,10 @@
 .meeting .anchor .day-plan span a.add {
     background-image: url("../../images/icon_add_black.png");
 }
+.meeting .device .content-720 .box span {
+    display: block;
+    margin-bottom: 9px;
+}
 
 .meeting .array .content-720 {
     padding-bottom: 20px;
