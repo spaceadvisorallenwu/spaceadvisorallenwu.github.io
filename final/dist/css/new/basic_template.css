@@ -523,7 +523,6 @@
     width: 20px;
     font-size: 15px;
     color: #4e5059;
-    margin: 0 9px 0 0;
 }
 .site_optionsBox ul li .option-field {
     width: 16px;
@@ -534,9 +533,12 @@
     background: #f3f3f3;
 }
 .site_optionsBox ul li .optionsBox-icon {
-    display: block;
-    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
     min-height: 25px;
+    margin-right: 5px;
 }
 .site_optionsBox ul li .optionsBox-title {
     flex: 1;
@@ -875,4 +877,54 @@
         border-bottom-width: 1px;
     }
     /* END booklist _style1 */
+
+    /** BEGIN site_optionsBox **/
+    .site_optionsBox ul li {
+        width: 100%;
+        flex-basis: 100%;
+        justify-content: flex-start;
+    }
+    .site_optionsBox ul li .optionsBox-title {
+        font-size: 13px;
+    }
+    .site_optionsBox ul li {
+        margin: 5px 0;
+    }
+    /** END site_optionsBox **/
+
+    /** BEGIN site_food **/
+    .site_food-main ul li {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .site_food-main ul li a {
+        flex-direction: column;
+    }
+    .site_food-main ul li .food-images {
+        width: 90%;
+        height: auto;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .site_food-main ul li a ._right {
+        margin-left: 0;
+        margin-top: 9px;
+    }
+    .site_food-main ul li .food-title {
+        font-size: 21px;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        padding-bottom: 9px;
+        margin-bottom: 9px;
+    }
+    .site_food-main ul li .food-information {
+        font-size: 13px;
+    }
+    .site_food-main ul li a:after {
+        bottom: auto;
+        top: 5px;
+        left: 5px;
+        padding: 9px;
+    }
+    /** END site_food **/
 }

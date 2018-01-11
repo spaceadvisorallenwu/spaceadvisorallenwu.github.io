@@ -227,6 +227,11 @@
     top: 0;
     width: 100%;
 }
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li input,
+.stepBox.fill_box.mm-page .writeContent .writeInput.part3 li select {
+    height: 30px;
+    padding: 0 9px;
+}
 .stepBox.fill_box.mm-page .writeContent .writeInformation3 .writeInput {
     flex-direction: column;
     border-radius: 5px;
@@ -282,7 +287,8 @@
     background: #fff;
     color: #4f6ea2;
     border-radius: 5px;
-    padding: 5px 20px;
+    display: inline-block;
+    padding: 3px 20px;
     border: 1px solid #4f6ea2;
 }
 .stepBox.fill_box.mm-page .writeContent .increase:after {

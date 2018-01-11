@@ -1,0 +1,603 @@
+@charset 'UTF-8';
+/*@-webkit-keyframes accordionIn {
+	0% {
+		opacity: 0;
+		rotateX(-60deg);
+		rotateX(-60deg);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0;
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes accordionIn {
+	0% {
+		opacity: 0;
+		rotateX(-60deg);
+		rotateX(-60deg);
+		-webkit-transform-origin: 50% 0;
+		transform-origin: 50% 0;
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes accordionOut {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		rotateX(-60deg);
+		rotateX(-60deg);
+	}
+}
+@keyframes accordionOut {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		rotateX(-60deg);
+		rotateX(-60deg);
+	}
+}*/
+
+
+/* 加購列表 */
+.purchase_value-add {
+	font-size: 15px;
+}
+.purchase_value-add h1 {
+    background-color: #4f6ea1;
+    font-size: 21px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+.purchase_value-add h1 span {
+    display: block;
+    padding: 9px 0 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+.purchase_value-add h1 i {
+	color: #fff;
+	margin-left: 5px;
+}
+.purchase_value-add .value-add-list {
+    border: 1px solid #ddd;
+    background: #f3f3f3;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.purchase_value-add-list-title {
+	background-color: #f3f3f3;
+	padding: 13px 0;
+}
+.accordionTitle,
+.accordion__Heading {
+    border-left: 5px rgba(79, 110, 162, .5) solid;
+    margin: 0 20px;
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0 5px 9px;
+    display: block;
+    text-decoration: none;
+    color: #4e5059;
+    font-size: 17px;
+    -webkit-transition: background-color 0s ease-in-out;
+    transition: background-color 0s ease-in-out;
+}
+.accordionTitle:hover,
+.accordion__Heading:hover {
+	color: #4f6ea2;
+}
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+	/*background-color: #dce2ec;*/
+}
+.accordion dd,
+.accordion__panel {
+	background-color: #fff;
+	line-height: normal;
+	border-bottom: 1px solid #ccc;
+}
+.accordion dl:last-child dd {
+	border-bottom: 0;
+}
+.accordionTitle:before,
+.accordion__Heading:before {
+	content: "\f106";
+	float: right;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 21px;
+    font-weight: bold;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+	/*-webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;*/
+}
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.purchase_program select {
+	border: 1px solid #ccc;
+	height: 30px;
+	line-height: normal;
+	cursor: pointer;
+}
+.purchase_program select:disabled {
+	background-color: #ddd;
+	cursor: default;
+}
+
+
+
+/* 加購列表展開 */
+/*.accordion dl,
+.accordion-list {
+	background-color: #fff;
+}*/
+/*.accordion p {
+	padding: 1em 2em 1em 2em;
+}*/
+.accordion {
+	position: relative;
+}
+.accordionItem {
+	height: auto;
+	overflow: hidden;
+	max-height: 2000em;
+	-webkit-transition: max-height 0s;
+	transition: max-height 0s;
+}
+.accordionItem.is-collapsed {
+	max-height: 0;
+}
+.no-js .accordionItem.is-collapsed {
+	max-height: auto;
+}
+/*.animateIn {
+	-webkit-animation: accordionIn 0s normal ease-in-out both 1;
+	animation: accordionIn 0s normal ease-in-out both 1;
+}
+.animateOut {
+	-webkit-animation: accordionOut 0s alternate ease-in-out both 1;
+	animation: accordionOut 0s alternate ease-in-out both 1;
+}*/
+/** END 加購列表展開 **/
+
+/** BEGIN 方案加價購 **/
+.purchase_program-main {
+    margin: 20px;
+}
+.purchase_program-main .purchase_program {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 9px;
+}
+.purchase_program-main .purchase_program:last-child {
+	margin-bottom: 0;
+}
+.purchase_program .purchase_program-left {
+	flex: 1;
+	display: flex;
+}
+.purchase_program .purchase_program-left .purchase_program-title001 {
+	flex: 1;
+	text-align: left;
+	max-width: 220px;
+	/*margin: 0 5px;*/
+}
+.purchase_program .purchase_program-left .purchase_program-title002 {
+	flex: 1.4;
+	text-align: left;
+	/*margin: 0 5px;*/
+}
+.purchase_program .purchase_program-left .purchase_program-title003 {
+	flex: 1.4;
+	text-align: left;
+	/*margin: 0 5px;*/
+}
+.purchase_program .purchase_program-right {
+	float: right;
+	max-width: 110px;
+}
+/** END 方案加價購 **/
+
+/** BEGIN 時間加價購 **/
+.purchase_program .purchase_time-right {
+	float: right;
+	max-width: 410px;
+}
+.purchase_program-main .increase {
+    font-size: 15px;
+    padding: 0;
+    font-weight: normal;
+    background: #fff;
+    color: #4f6ea2;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 20px;
+    border: 1px solid #4f6ea2;
+}
+.purchase_program-main .increase i {
+    margin-left: 5px;
+    color: #4f6ea2;
+}
+.purchase_program-main .increase:hover,
+.purchase_program-main .increase:hover i {
+    background: #4f6ea2;
+    color: #fff;
+}
+/** END 時間加價購 **/
+
+/** BEGIN 設備加價購 **/
+.site_optionsBox ul {
+	padding: 0;
+}
+.wd_form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(../../images/down-arrow.png);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 10px) center;
+	background-size: 10px;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	padding: 0 30px 0 10px;
+}
+.wd_form select::-ms-expand {
+	display: none;
+}
+.wd_form select[disabled] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/*background: url(../../images/down-arrow-disable.png) no-repeat calc(100% - 10px) center;*/
+	/*background-size: 10px;*/
+	border-color: #ddd;
+	background-color: #ddd;
+	cursor: default;
+	opacity: .7;
+}
+.quantity-field {
+    border: none;
+    /* color: #4f6ea2; */
+    color: #4e5059;
+    font-size: 15px;
+    background: none;
+    height: 30px;
+    width: 100%;
+}
+/** END 設備加價購 **/
+
+
+/** BEGIN 餐飲加價購 **/
+.site_food-main ul li.active-f {
+	margin-bottom: 20px;
+}
+.site_food-main ul li .purchase_food {
+	display: none;
+	padding-top: 5px;
+	align-items: center;
+    color: #4e5059;
+    background-color: #fff;
+}
+.site_food-main ul li.active-f .purchase_food {
+    display: flex;
+}
+.site_food-main ul li .purchase_food input {
+	border: 1px solid #ccc;
+	height: 30px;
+    line-height: normal;
+    padding: 0 9px;
+    max-width: 155px;
+}
+.site_food-main ul li .purchase_food input::placeholder {
+	color: #c7c9c8 !important;
+}
+.site_food-main ul li .site_food-participate {
+    line-height: normal;
+    margin: 0;
+}
+.site_food-main ul li .purchase_food-price {
+	font-size: 15px;
+	display: inline-block;
+	padding: 0 10px;
+}
+/** END 餐飲加價購 **/
+
+/** BEGIN 超值加購-總表 **/
+.site-value-add {
+	margin-bottom: 20px;
+}
+/*.site-value-add:before {
+	content: '購物車';
+	display: inline-block;
+	font-size: 15px;
+	margin-bottom: 5px;
+}*/
+.site-value-add-vatitle .purchase_value-add-wrapper {
+	display: flex;
+	width: 100%;
+	/*max-width: 990px;*/
+	margin: 0 auto;
+    padding: 9px 20px;
+    line-height: normal;
+}
+.purchase_value-add-wrapper .ia-wrapper {
+	display: inline-flex;
+	width: 75%;
+}
+.purchase_value-add-background {
+	background-color: #4f6ea1;
+	color: #fff;
+}
+.value-add-cart {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.value-add-cart .item {
+    display: inline-block;
+    width: 250px;
+    padding-right: 9px;
+}
+.value-add-cart .amount {
+    display: inline-block;
+    width: calc(100% - 250px);
+    padding-right: 9px;
+}
+.value-add-cart .price {
+    display: inline-block;
+    width: 25%;
+}
+.value-add-cart .valist {
+    /*line-height: normal;*/
+}
+.value-add-cart .valist .wrapper {
+    display: block;
+    width: 94%;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.value-add-cart .valist ul.purchase_value-add-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.value-add-cart:not(._have) .valist ul:before {
+	content: '尚未加入任何加購';
+	display: block;
+	padding: 5px 0;
+}
+.value-add-cart .valist ul li {
+    display: flex;
+    padding: 5px 0;
+}
+.value-add-cart .valist ul li div.ia-wrapper {
+    display: flex;
+    width: 75%;
+}
+.value-add-cart .valist ul li div.ia-wrapper .item {
+	line-height: normal;
+}
+.value-add-cart .valist ul li div.mobile {
+    display: none;
+}
+.value-add-cart .valist ul li div span {
+    display: inline-block;
+}
+.value-add-cart .valist ul li div span:nth-child(1) {
+    width: 40px;
+}
+.value-add-cart .valist ul li div span:nth-child(2) {
+    width: calc(100% - 40px);
+    text-align: right;
+}
+.value-add-cart .vasum {
+    background-color: #dce2ec;
+}
+.value-add-cart .vasum .wrapper {
+    display: block;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+.value-add-cart .vasum span {
+    font-size: 16px;
+}
+.value-add-cart .vasum div.thead {
+    float: left;
+}
+.value-add-cart .vasum div.tamount {
+    font-size: 24px;
+    float: right;
+}
+/** 加購總金額 **/
+.value-add-cart:not(._have) .purchase_vasum {
+	display: none;
+}
+.value-add-cart .purchase_vasum {
+	background-color: #4f6ea1;
+}
+.value-add-cart .purchase_vasum .wrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 21px;
+    color: #fff;
+    width: 100%;
+}
+.value-add-cart .purchase_vasum span {
+	font-size: 15px;
+}
+.value-add-cart .purchase_vasum div.thead {
+	float: left;
+}
+.value-add-cart .purchase_vasum div.tamount {
+	font-size: 24px;
+	float: right;
+}
+.value-add-cart .purchase_vasum div.tamount mn {
+	margin-left: 5px;
+}
+/** 加購總金額 **/
+/** END 超值加購-總表 **/
+
+
+.site-management-button-p {
+	text-align: center;
+	margin: 40px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:980px) {
+	.purchase_value-add._boxStyle {
+		/*width: 100%;*/
+	}
+	.purchase_value-add h1 {
+		padding: 15px 9px;
+	}
+	.accordionTitle, .accordion__Heading {
+		margin: 0 9px;
+	}
+	.purchase_program-main {
+		margin: 0;
+	}
+	.purchase_program-main .purchase_program {
+		flex-direction: column;
+	    border-bottom: 1px solid #ddd;
+	    padding: 11px 9px;
+	    /*padding-bottom: 20px;*/
+	    margin-bottom: 0;
+	}
+	.purchase_program-main .purchase_program:last-child {
+		border-bottom: 0;
+		margin-bottom: 0;
+	}
+	.purchase_program .purchase_program-left {
+		width: 100%;
+		flex-direction: column;
+		font-size: 15px;
+	}
+	.purchase_program .purchase_program-left .purchase_program-title001 {
+		max-width: 100%;
+	}
+	.purchase_program .purchase_program-right,
+	.purchase_program .purchase_time-right {
+	    max-width: 100%;
+    	width: 100%;
+    	margin-top: 5px;
+	}
+	.wd_form select {
+		font-size: 13px;
+	}
+	.increase_btn {
+		padding: 9px;
+	}
+
+	.site_optionsBox ul {
+		padding: 9px;
+	}
+
+	.site_food-main {
+		/*padding: 9px;*/
+	}
+	.site_food-main ul {
+		margin-top: 0;
+	}
+	.site_food-main ul li {
+		border: 0;
+		border-radius: 0;
+	    border-bottom: 15px solid #f3f3f3;
+	    margin-bottom: 0;
+	}
+	.site_food-main ul li a {
+		border-radius: 0;
+	}
+	.site_food-main ul li a:hover {
+		background-color: unset;
+	}
+	.site_food-main ul li.active-f {
+		margin-bottom: 0;
+	}
+	.site_food-main ul li:last-child,
+	.site_food-main ul li:last-child.active-f .purchase_food {
+		border-bottom: 0;
+	}
+	.site_food-main ul li.active-f .purchase_food {
+		padding: 9px;
+		border-bottom: 1px solid #ddd;
+	}
+	.value-add-cart .site-value-add-vatitle .amount {
+		display: none;
+	}
+	.site-value-add-vatitle .purchase_value-add-wrapper {
+		padding: 9px;
+	}
+	.value-add-cart .price {
+		text-align: right;
+	}
+	.value-add-cart .valist ul.purchase_value-add-wrapper {
+		padding: 9px;
+	}
+	.value-add-cart .valist ul li div.ia-wrapper {
+		flex-direction: column;
+	}
+	.value-add-cart .valist ul li div.ia-wrapper .item {
+		width: 100%;
+	}
+	.value-add-cart .amount {
+		width: 100%;
+	}
+
+
+    .purchase_food-price {
+        font-size: 15px;
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    .accordionItem {
+		max-height: 2000em;
+		-webkit-transition: max-height 0s;
+		transition: max-height 0s;
+	}
+
+}

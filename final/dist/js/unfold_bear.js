@@ -33,7 +33,7 @@
 	};
 //function
 switchAccordion = function(e) {
-	console.log("triggered");
+	// console.log("triggered");
 	e.preventDefault();
 	var thisAnswer = e.target.parentNode.nextElementSibling;
 	var thisQuestion = e.target;
