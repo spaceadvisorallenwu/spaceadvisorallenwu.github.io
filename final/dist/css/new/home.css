@@ -92,6 +92,7 @@
     background-color: #f3f3f3 !important;
 }
 .index .flexslider .search .search-box .search_item .search_item_name {
+    font-size: 15px;
     color: #9c9c9c;
 }
 .index .flexslider .search .search-box .search_item.have .search_item_name {
@@ -121,6 +122,7 @@
     background-color: unset;
     text-align: center;
     font-weight: normal;
+    line-height: normal;
 }
 .index .login-box {
     padding: 0 0 20px;

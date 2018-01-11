@@ -70,7 +70,8 @@
 }
 #wrapper i.heart.this,
 #wrapper i.add.this,
-#wrapper i:hover {
+#wrapper i.heart:hover,
+#wrapper i.add:hover {
     color: #d76050;
     border-color: #d76050;
 }
@@ -490,6 +491,178 @@
     display: flex;
 }
 /** END booklist **/
+
+
+/** BEGIN 設備需求顯示 **/
+.site_optionsBox {
+    color: #4e5059;
+    font-size: 15px;
+    line-height: normal;
+}
+.site_optionsBox ul {
+    list-style: none;
+    /*margin: 5px 0;*/
+    padding: 9px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.site_optionsBox ul li {
+    padding: 0;
+    margin: 5px;
+    flex-basis: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*.site_optionsBox ul li:nth-child(even) {
+    margin-right: 0;
+}*/
+.site_optionsBox ul li .option {
+    width: 20px;
+    font-size: 15px;
+    color: #4e5059;
+    margin: 0 9px 0 0;
+}
+.site_optionsBox ul li .option-field {
+    width: 16px;
+    height: auto;
+    border: 1px #4e5059 solid;
+    color: #4f6ea2;
+    font-size: 15px;
+    background: #f3f3f3;
+}
+.site_optionsBox ul li .optionsBox-icon {
+    display: block;
+    width: 30px;
+    min-height: 25px;
+}
+.site_optionsBox ul li .optionsBox-title {
+    flex: 1;
+    font-size: 15px;
+    color: #4e5059;
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+.site_optionsBox ul li .quantity {
+    width: 50px;
+}
+/** END 設備需求顯示 **/
+
+/** BEGIN 餐飲選擇顯示 **/
+.site_food-main ul li.active-f {
+    /*background: #4f6ea2;*/
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+.site_food-main ul li.active-f a,
+.site_food-main ul li.active-f a:hover {
+    background-color: #4f6ea2;
+    color: #fff;
+}
+.site_food-main ul li.active-f a:after {
+    content: "已選擇";
+    background: #4f6ea2;
+    color: #fff;
+}
+.site_food-main ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+.site_food-main ul li {
+    width: 100%;
+    color: #4e5059;
+    margin-bottom: 5px;
+}
+.site_food-main ul .active {
+    background: #4f6ea2;
+    position: relative;
+    color: #fff;
+}
+.site_food-main ul .active a {
+    color: #fff;
+}
+.site_food-main ul .active a:hover {
+    background-color: #4f6ea2;
+    color: #fff;
+}
+.site_food-main ul .active:after {
+    content: "已選擇";
+    width: 52px;
+    height: 25px;
+    line-height: 25px;
+    background: #4f6ea2;
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.site_food-main ul li a {
+    display: block;
+    color: #4e5059;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.site_food-main ul li a:after {
+    content: "點此選擇餐飲";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 9px;
+    line-height: normal;
+    border-radius: 5px;
+    font-size: 13px;
+    background: #ccc;
+    color: #4e5059;
+}
+.site_food-main ul li a:hover {
+    background: #efeff0;
+}
+.site_food-main ul li a ._left {
+
+}
+.site_food-main ul li a ._right {
+    margin-left: 20px;
+}
+.site_food-main ul li .food-images {
+    width: 230px;
+    height: auto;
+    max-height: 145px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.site_food-main ul li .food-images img {
+    width: 100%;
+}
+.site_food-main ul li .food-title {
+    /*display: inline-block;
+    width: calc(100% - 230px);
+    font-size: 17px;
+    line-height: 1.6em;
+    margin: 0 0 5px 0;
+    padding: 0 0 0 15px;*/
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.site_food-main ul li .food-information {
+    display: inline-block;
+    font-size: 15px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/** END 餐飲選擇顯示 **/
+
 
 
 
