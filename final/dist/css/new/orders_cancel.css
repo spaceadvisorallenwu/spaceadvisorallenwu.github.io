@@ -46,11 +46,21 @@
     line-height: normal;
     font-size: 15px;
 }
-.site_remark-main > span {
-	color: #d65f4f;
+.site_remark-main p {
+	line-height: normal;
 }
-.site_remark-main span b {
+.site_remark-main p:first-child {
+    color: #b61e1a;
+    margin-bottom: 5px;
+}
+.site_remark-main b,
+.site_remark-main span {
 	font-weight: normal;
+	color: #d76050;
+	padding: 0 5px;
+}
+.site_remark-main b {
+	text-decoration: underline;
 }
 .site_confirm {
     margin-bottom: 20px;

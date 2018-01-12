@@ -266,21 +266,38 @@
 .meeting .outline .star b {
     margin-left: 0;
 }
+.meeting .outline .three {
+    display: inline-flex;
+    align-items: center;
+    float: unset;
+}
 .meeting .outline .star,
 .meeting .outline .three span {
-    padding-right: 20px;
+    padding-right: 15px;
     font-size: 13px;
-    height: unset;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     line-height: normal;
 }
 .meeting .outline .three span:last-child {
     padding-right: 0;
 }
+.meeting .outline .three ._area b {
+    margin-top: -5px;
+}
 .meeting .outline .share {
     width: unset;
+    display: flex;
+    align-items: center;
+    height: 23px;
 }
 .meeting .outline .share a {
     border-radius: 5px;
+}
+.meeting .outline .share a:first-child {
+    margin-right: 5px;
 }
 .meeting .content-720 .title-box {
     width: 20%;
@@ -439,6 +456,8 @@
 }
 .meeting .comment .star > p {
     font-size: 15px;
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 .meeting .comment .star > p ._star {
     margin-left: 9px;
@@ -683,6 +702,10 @@
         padding: 37px 9px 11px;
         width: calc(100% / 3);
     }
+    .meeting .outline .three {
+        align-items: flex-start;
+        flex-direction: column;
+    }
     .meeting .outline .content-720 {
         padding: 9px 0;
     }
@@ -759,6 +782,7 @@
     }
     .meeting .mobile-plan {
         box-shadow: unset;
+        z-index: 11;
     }
     .meeting .mobile-plan a.first {
         padding: 9px 5%;

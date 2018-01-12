@@ -1,4 +1,35 @@
 @charset 'UTF-8';
+/** BEGIN navigation_bar **/
+.navigation_bar {
+    top: 44px;
+    z-index: 9;
+    height: unset;
+    letter-spacing: 0;
+}
+.navigation_bar ul {
+    height: 44px;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+}
+.navigation_bar ul li {
+    margin-right: 0;
+    padding-right: 20px;
+    line-height: normal;
+}
+.navigation_bar ul li a {
+    font-size: 15px;
+    color: #a6a8b1;
+    word-break: keep-all;
+}
+.navigation_bar ul li.active a {
+    color: #fff;
+}
+/** END navigation_bar **/
+
 
 /** BEGIN site-list **/
 .site-list .site-box .slick-prev {
@@ -6,9 +37,6 @@
 }
 .site-list .site-box .slick-next {
     right: -5%;
-}
-.site-list .site span.pic {
-    background: #f3f3f3;
 }
 
 .site-list .site .text {
@@ -26,9 +54,8 @@
 }
 
 
-
-.site-list .site i.heart,
-.site-list .site i.add {
+#wrapper i.heart,
+#wrapper i.add {
     right: 30px;
     cursor: pointer;
     background-image: unset;
@@ -36,8 +63,8 @@
     /*font-size: 25px;*/
     /*color: #fff;*/
 }
-.site-list .site i.heart.this,
-.site-list .site i.add.this {
+#wrapper i.heart.this,
+#wrapper i.add.this {
     background-image: unset;
     background-color: transparent;
     /*color: #d76050;*/
@@ -90,7 +117,12 @@
 }
 
 
-
+.site-list .site .all {
+    position: relative;
+}
+.site-list .site .text {
+    width: 100%;
+}
 .site-list .site .text p.title,
 .site-list .site .text .info_1 {
     padding: 3px 0;
@@ -102,15 +134,25 @@
     display: block;
     -webkit-line-clamp: unset;
 }
+.site-list .site span.pic {
+    background: #f3f3f3;
+    width: 100%;
+    height: auto;
+}
 .site-list .site span.pic .flag {
     display: block;
     width: auto;
-    max-width: 45px;
-    height: 65px;
+    height: 80px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 0;
+    margin-top: -7px;
+    opacity: .9;
+}
+.site-list .site span.pic img:first-child {
+    width: 100%;
+    height: auto;
 }
 .site-list .site._noFlag .flag {
     display: none !important;
@@ -230,7 +272,7 @@
 .bookList .detailTable-heading .detailTable-cell {
     font-size: 13px;
     border-bottom: 1px solid #f3f3f3;
-    background: #f3f3f3;
+    background: #e9e9e9;
     color: gray;
 }
 .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
@@ -666,10 +708,32 @@
 /** END 餐飲選擇顯示 **/
 
 
-
+/** BEGIN termsLink terms.html/privacy.html/reward.html/collection_space.html **/
+.termsLink a {
+    padding: 9px 30px;
+    font-size: 17px;
+    font-weight: normal;
+    color: gray;
+    border-bottom: 3px solid #ddd;
+}
+.termsLink a:hover,
+.termsLink a.active {
+    font-weight: bold;
+    color: #4f6da2;
+    border-bottom: 3px solid #4f6da2;
+}
+/** BEGIN termsLink **/
 
 
 @media only screen and (max-width: 980px) {
+    /** BEGIN navigation_bar **/
+    .navigation_bar ul {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+    }
+    /** END navigation_bar **/
+
     /** BEGIN site-list **/
     .site-list .site a {
         width: 90%;

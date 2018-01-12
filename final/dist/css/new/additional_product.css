@@ -571,7 +571,7 @@
 		padding: 9px;
 	}
 	.value-add-cart .price {
-		text-align: right;
+		line-height: normal;
 	}
 	.value-add-cart .valist ul.purchase_value-add-wrapper {
 		padding: 9px;
@@ -584,6 +584,20 @@
 	}
 	.value-add-cart .amount {
 		width: 100%;
+	}
+	.value-add-cart .purchase_vasum .wrapper {
+		padding: 9px;
+	}
+	.value-add-cart .purchase_vasum div.thead,
+	.value-add-cart .purchase_vasum div.tamount,
+	.value-add-cart .purchase_vasum span {
+		float: unset;
+		line-height: normal;
+		font-size: 15px;
+	}
+	.value-add-cart .purchase_vasum div.tamount {
+		font-size: 17px;
+		margin-top: 5px;
 	}
 
 

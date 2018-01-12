@@ -1,16 +1,5 @@
 @charset 'UTF-8';
 /** BEGIN terms\privacy\reward **/
-.termsLink a {
-    padding: 9px 30px;
-    font-size: 17px;
-    font-weight: normal;
-    color: gray;
-    border-bottom: 3px solid #ddd;
-}
-.termsLink a:hover,
-.termsLink a.active {
-	font-weight: bold;
-}
 .tremsContent {
 	padding: 0;
 }

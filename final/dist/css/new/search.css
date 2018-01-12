@@ -217,6 +217,11 @@
     background-image: unset;
     background-color: transparent;
 }
+
+#wrapper.search .search-list li .place .showbox-all i.heart,
+#wrapper.search .search-list li .place .showbox-all i.add {
+    right: 15px;
+}
 .search .search-list li .place .showbox-all .showbox img {
     border-radius: 5px;
 }

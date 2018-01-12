@@ -174,7 +174,11 @@
     border: 1px solid #ddd;
 }
 .applicationBox main h2 {
-	font-size: 21px;
+    font-size: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    padding: 9px 0;
+    margin-bottom: 20px;
 }
 .applicationBox main h2:before {
 	/*content: '';*/

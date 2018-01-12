@@ -110,27 +110,45 @@
     padding: 3px 9px;
     line-height: normal;
 }
-.paymentInformation ul {
+.paymentInformation > div {
+    display: flex;
+}
+.paymentInformation > div ul {
+    width: 37%;
     margin: 9px 0;
 }
-.paymentInformation li {
+.paymentInformation > div ul:last-child {
+    width: 63%;
+}
+.paymentInformation > div ul li {
     display: flex;
     align-items: center;
     color: #4e5059;
+}
+.paymentInformation > div ul:last-child li {
+    align-items: flex-start;
 }
 .paymentInformation h4 {
     margin-right: 0;
     border-right: 1px solid #ddd;
     padding: 5px 0;
-    width: 15%;
+    /*width: 15%;*/
+    min-width: 80px;
     max-width: 150px;
     line-height: normal;
 }
 .paymentInformation p {
-    width: 85%;
-    margin-left: 20px;
+    width: 100%;
+    padding-right: 20px;
+    margin-left: 15px;
     font-weight: bold;
     line-height: normal;
+}
+.paymentInformation > div ul:last-child li p {
+    padding-right: 0;
+}
+.paymentInformation > div ul:last-child li p span {
+    display: block;
 }
 .paymentInformation .cutoff b {
     color: #d76050;
@@ -194,6 +212,19 @@
         margin: 9px;
         border: 0;
     }
+    .paymentInformation > div {
+        flex-direction: column;
+    }
+    .paymentInformation > div ul,
+    .paymentInformation > div ul:last-child {
+        width: 100%;
+    }
+    .paymentInformation > div ul:first-child {
+        margin-bottom: 0;
+    }
+    .paymentInformation > div ul:last-child {
+        margin-top: 0;
+    }
     .paymentInformation li {
         margin-bottom: 0;
     }
@@ -204,6 +235,7 @@
     .paymentInformation p {
         width: 90%;
         margin-left: 15px;
+        padding-right: 0;
     }
     .paymentInformation .cutoff p {
         width: 90%;

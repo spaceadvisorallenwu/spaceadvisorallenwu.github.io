@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.event_item2,
+.event_item3,
+.event_item4 {
+	margin: 0;
+}
+.event_item2,
+.event_item3,
+.event_item4,
+.event_item5 {
+	padding: 80px 0;
+}
+.event_item2 h2,
+.event_item3 h2,
+.event_item4 h2 {
+	background-image: url(../../images/campaign/2018/1/starbucks/title_bg.png);
+}
+.event_item2 .custodyBtn,
+.event_item3 .custodyBtn,
+.event_item4 .custodyBtn {
+	margin: 40px 0 0;
+}
+.event_item2 .custodyBtn a,
+.event_item3 .custodyBtn a,
+.event_item4 .custodyBtn a {
+	background: unset;
+	font-size: unset;
+	padding: 0;
+	letter-spacing: 0;
+}
+.event_item2 .custodyBtn a span,
+.event_item3 .custodyBtn a span,
+.event_item4 .custodyBtn a span {
+	margin: 0;
+	top: 0;
+    transform: rotate(0);
+}
+.event_item1 p,
+.event_item5 li {
+	line-height: normal;
+	margin-bottom: 20px;
+}
+.event_item5 h2 {
+	margin-bottom: 40px;
+}
+footer {
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 980px) {
+	.event_item1 h2 {
+	    font-size: 21px;
+	    margin-bottom: 20px;
+	}
+	.event_item2 h2,
+	.event_item3 h2,
+	.event_item4 h2 {
+	    padding-top: 6px;
+	    font-size: 19px;
+	}
+	.event_item1 img {
+		width: 80%;
+	}
+	.event_item2 li .itemIconTxt,
+	.event_item3 li .itemIconTxt,
+	.event_item4 li .itemIconTxt {
+		width: 74%;
+	}
+}
