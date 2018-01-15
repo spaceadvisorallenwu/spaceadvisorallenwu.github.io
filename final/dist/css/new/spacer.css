@@ -61,6 +61,37 @@
 }
 
 
+.spacer .vanueTag._media .site-album {
+    width: calc(100% / 3);
+    padding: 0 9px;
+}
+.spacer .vanueTag._media .site-list:last-child {
+	margin-top: 40px;
+}
+.spacer .vanueTag._media .site-album .media {
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-flex;
+    width: 100%;
+}
+.spacer .vanueTag._media .site-album .media iframe,
+.spacer .vanueTag._media .site-album .media img {
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.spacer .vanueTag._media .site-album .title {
+	margin-top: 9px;
+	text-align: center;
+}
+.spacer .vanueTag._media .site-album .title a {
+	font-size: 15px;
+	color: #4e5059;
+	letter-spacing: 0;
+}
+.spacer .vanueTag._media .site-album .title a:hover {
+	text-decoration: underline;
+}
 
 .spacer .vanueTag {
 	border-radius: 5px;
@@ -311,6 +342,14 @@
 	.spacer .priContent,
 	.spacer .hotelPhoto {
 		padding-left: 0;
+	}
+
+	.spacer .vanueTag._media .site-album {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.spacer .vanueTag._media .site-album:last-child {
+		margin-bottom: 0;
 	}
 
 	.spacer .vanueTag .vanueBox {
