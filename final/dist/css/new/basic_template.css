@@ -1071,6 +1071,7 @@
         flex-direction: column;
         padding: 9px;
         font-size: 13px;
+        border-radius: 5px;
     }
     .bookList._style1 .bookTitle ._left,
     .bookList._style1 .bookTitle ._right {

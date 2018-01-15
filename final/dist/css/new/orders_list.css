@@ -102,37 +102,34 @@
     background: #f3f3f3;
     margin-bottom: 40px;
 }
+.paymentInformation section {
+    display: flex;
+}
 .paymentInformation h3 {
     font-size: 15px;
     background: #ddd;
     display: inline-block;
+    width: fit-content;
     border-radius: 5px;
     padding: 3px 9px;
     line-height: normal;
 }
-.paymentInformation > div {
+.paymentInformation section > div {
     display: flex;
+    flex-direction: column;
 }
-.paymentInformation > div ul {
-    width: 37%;
+.paymentInformation section > div ul {
     margin: 9px 0;
 }
-.paymentInformation > div ul:last-child {
-    width: 63%;
-}
-.paymentInformation > div ul li {
+.paymentInformation section > div ul li {
     display: flex;
     align-items: center;
     color: #4e5059;
-}
-.paymentInformation > div ul:last-child li {
-    align-items: flex-start;
 }
 .paymentInformation h4 {
     margin-right: 0;
     border-right: 1px solid #ddd;
     padding: 5px 0;
-    /*width: 15%;*/
     min-width: 80px;
     max-width: 150px;
     line-height: normal;
@@ -144,10 +141,23 @@
     font-weight: bold;
     line-height: normal;
 }
-.paymentInformation > div ul:last-child li p {
+.paymentInformation .list_info {
+    width: 40%;
+}
+.paymentInformation .list_cancel {
+    margin-left: 20px;
+}
+.paymentInformation .list_cancel h3,
+.paymentInformation .list_cancel li p {
+    margin-left: 20px;
+}
+.paymentInformation .list_cancel li {
+    border-left: 1px solid #ddd;
+}
+.paymentInformation section > div ul:last-child li p {
     padding-right: 0;
 }
-.paymentInformation > div ul:last-child li p span {
+.paymentInformation section > div ul:last-child li p span {
     display: block;
 }
 .paymentInformation .cutoff b {
@@ -212,17 +222,39 @@
         margin: 9px;
         border: 0;
     }
-    .paymentInformation > div {
+    .paymentInformation section {
         flex-direction: column;
     }
-    .paymentInformation > div ul,
-    .paymentInformation > div ul:last-child {
+    .paymentInformation section h3 {
+        margin-bottom: 9px;
+    }
+    .paymentInformation .list_info {
         width: 100%;
     }
-    .paymentInformation > div ul:first-child {
+    .paymentInformation .list_cancel {
+        margin-left: 0;
+    }
+    .paymentInformation .list_cancel h3,
+    .paymentInformation .list_cancel li p {
+        margin-left: 0;
+    }
+    .paymentInformation .list_cancel h3 {
+        margin-top: 20px;
+    }
+    .paymentInformation .list_cancel li {
+        border-left: 0;
+    }
+    .paymentInformation section > div {
+        flex-direction: column;
+    }
+    .paymentInformation section > div ul,
+    .paymentInformation section > div ul:last-child {
+        width: 100%;
+    }
+    .paymentInformation section > div ul:first-child {
         margin-bottom: 0;
     }
-    .paymentInformation > div ul:last-child {
+    .paymentInformation section > div ul:last-child {
         margin-top: 0;
     }
     .paymentInformation li {
