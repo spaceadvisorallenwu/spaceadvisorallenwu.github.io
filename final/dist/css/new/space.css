@@ -320,19 +320,6 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-.meeting .content-720 .box.open .add {
-    height: auto;
-    display: block;
-}
-.meeting .content-720 .box a.more {
-    margin-top: 5px;
-}
-.meeting .content-720 .box:not(.needmore) a.more {
-    display: none;
-}
-.meeting .content-720 .box.open a.more i:before {
-    content: "\f0d8";
-}
 .meeting .device .content-720,
 .meeting .about .content-720,
 .meeting .comment .star > p,
@@ -455,15 +442,8 @@
     border-bottom: 0;
 }
 .meeting .comment .star > p {
-    font-size: 15px;
     border-bottom: 0;
     padding-bottom: 0;
-}
-.meeting .comment .star > p ._star {
-    margin-left: 9px;
-}
-.meeting .comment .star ul {
-    padding: 20px 0;
 }
 .meeting .comment .star li {
     padding-left: 89px;
@@ -482,59 +462,8 @@
     text-align: left;
     margin-right: 9px;
 }
-.meeting .comment .comment-list {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-}
-.meeting .comment .comment-list li {
-    margin: 20px 9px;
-    padding-top: 0;
-    /*border-bottom: 1px dashed #ddd;*/
-}
-.meeting .comment .comment-list li:last-child {
-    border-bottom: 0;
-    margin-bottom: 0;
-}
-.meeting .comment .comment-list li .other {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 9px;
-    /*padding-bottom: 9px;*/
-    /*border-bottom: 1px solid #ddd;*/
-}
-.meeting .comment .comment-list li .other span.star {
-    font-size: 15px;
-    line-height: normal;
-}
-.meeting .comment .comment-list li .other span.left {
-    font-size: unset;
-    padding: 0;
-    line-height: normal;
-}
-.meeting .comment .comment-list li .other span.left p {
-    height: unset;
-    font-size: 15px;
-    background: #fff;
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 5px;*/
-    /*padding: 0 9px;*/
-    display: inline-flex;
-}
-.meeting .comment .comment-list li .other span.left time {
-    font-size: 13px;
-    display: block;
-    color: gray;
-}
-.meeting .comment .comment-list li p.text {
-    margin-left: 80px;
-    /*margin-top: 9px;*/
-    padding: 0;
-    /*background: #f3f3f3;*/
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 5px;*/
-    display: inline-block;
-    text-align: justify;
-}
+
+
 .meeting .comment .something {
     width: 100%;
     float: unset;
@@ -738,27 +667,6 @@
     .meeting .device li {
         line-height: normal;
         font-size: 15px;
-    }
-    .meeting .comment .star li,
-    .meeting .comment .star li:nth-last-child(1),
-    .meeting .comment .star li:nth-last-child(2) {
-        padding-left: 0;
-        margin-bottom: 9px;
-    }
-    .meeting .comment .star li:last-child {
-        margin-bottom: 0;
-    }
-    .meeting .comment .comment-list li {
-        margin: 20px 0;
-    }
-    .meeting .comment .comment-list li .other {
-        border-bottom: 0;
-    }
-    .meeting .comment .comment-list li p.text {
-        margin-left: 0;
-        font-size: 15px;
-        text-align: justify;
-        margin-top: 9px;
     }
     .meeting .comment .something {
         flex-direction: column;

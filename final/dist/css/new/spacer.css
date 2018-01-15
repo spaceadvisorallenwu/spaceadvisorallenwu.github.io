@@ -1,0 +1,371 @@
+@charset 'UTF-8';
+
+.spacer .vanueHeader {
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+.spacer .banner .hotelImg,
+.spacer .vanueHeader .region {
+	margin-bottom: 20px;
+}
+.spacer .banner .hotelImg {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    width: 150px;
+    height: 150px;
+}
+.spacer .vanueHeader h3,
+.spacer .vanueHeader .assess {
+	margin-bottom: 9px;
+}
+.spacer .vanueHeader h3 {
+	font-size: 30px;
+}
+.spacer .vanueHeader .region,
+.spacer .vanueHeader .assess {
+	font-size: 15px;
+}
+.spacer .vanueHeader .region i {
+	margin: 0 5px;
+}
+.spacer .vanueHeader .region {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer .description h2,
+.spacer .pricePlan h2,
+.spacer .synthesis h2 {
+	font-size: 21px;
+    letter-spacing: 0;
+    margin: 9px 0;
+}
+.spacer .synthesis .syn_item2 > span {
+    display: block;
+	margin: 9px 0;
+}
+.spacer .vanueContenter._boxStyle {
+	padding-bottom: 0;
+}
+
+.spacer .vanueContenter .add {
+	font-size: 15px;
+}
+
+.spacer .vanueContenter .description {
+    width: 100%;
+    max-width: unset;
+}
+
+
+
+.spacer .vanueTag {
+	border-radius: 5px;
+	margin: 20px 0 40px;
+}
+.spacer .vanueTag .vanueBox {
+    width: 100%;
+    max-width: unset;
+    padding: 20px;
+}
+.spacer .vanueTag .vanueBox .vanueList li {
+	letter-spacing: 0;
+	margin-bottom: 20px;
+	margin-right: 20px;
+    font-size: 21px;
+}
+.spacer .vanueTag .vanueContent {
+	padding: 0;
+}
+
+.spacer .placeBox .site-list {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.spacer .placeBox .site-list .site {
+    margin-bottom: 20px;
+    padding-right: 9px;
+    width: calc(100% / 3);
+}
+.spacer .vanueTag .vanueContent .tdTitle {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.spacer .vanueTag .vanueContent .tdTitle b {
+	padding: 3px 9px;
+}
+.spacer .vanueTag .vanueContent .tableBox .table_title th,
+.spacer .vanueTag .vanueContent .tableBox .tableList td {
+    font-size: 15px;
+}
+.spacer .pricePlan {
+    width: 100%;
+    max-width: unset;
+}
+.spacer .pricePlan h2 {
+	border-radius: 5px;
+    overflow: hidden;
+}
+.spacer .priTitle span {
+	font-size: 15px;
+    /*display: flex;*/
+    /*align-items: center;*/
+}
+.spacer .pricePlan ul {
+	border-radius: 5px;
+	overflow: hidden;
+    background-color: #E9EAE9;
+    padding: 9px 20px;
+}
+.spacer .pricePlan .priTitle {
+    padding: 15px 0;
+}
+.spacer .pricePlan ul li {
+	border-bottom: 1px solid #ddd;
+}
+.spacer .pricePlan ul li:last-child {
+	border-bottom: 0;
+}
+.spacer .pricePlan .priTitle .svg.icon {
+	height: 17px;
+	top: 0;
+}
+.spacer .pricePlan .priContent {
+	left: 0;
+	padding-top: 0;
+}
+
+
+.spacer .syn_item1,
+.spacer .syn_item2,
+.spacer .syn_item3,
+.spacer .syn_item4 {
+	width: 100%;
+	max-width: unset;
+}
+.spacer .synthesis {
+	margin: 40px 0;
+    border-radius: 5px;
+    padding: 20px;
+}
+.spacer .synthesis h3 {
+	font-size: 15px;
+}
+
+.spacer .syn_item3 .meal_icon1,
+.spacer .syn_item3 .meal_icon2 {
+    font-size: 15px;
+    line-height: normal;
+    margin-right: 0;
+    padding-left: 25px;
+}
+.spacer .syn_item3 .meal_icon1 {
+    background-image: url(../../images/spacer_plan/meal_icon.png);
+    margin-right: 20px;
+}
+.spacer .syn_item3 .meal_icon2 {
+    background-image: url(../../images/spacer_plan/meal_icon2.png);
+    padding-left: 20px;
+}
+.spacer .syn_item3 .mealBtn {
+	margin: 9px 0;
+}
+.spacer .syn_item3 .box {
+	font-size: 15px;
+	line-height: normal;
+}
+.spacer .syn_item4 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.spacer .syn_item4 ul {
+	border-radius: 5px;
+	overflow: hidden;
+}
+.spacer .syn_item4 ul li {
+	border-bottom: 1px solid #ddd;
+}
+.spacer .syn_item4 ul li:last-child {
+	border-bottom: 0;
+}
+.spacer .syn_item4 ul li .priTitle {
+	padding: 9px;
+}
+.spacer .syn_item4 .priContent {
+	padding: 20px;
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+	/*justify-content: space-between;*/
+}
+.spacer .syn_item4 .priContent img {
+	overflow: hidden;
+	/*padding: 5px;*/
+	border-radius: 5px;
+}
+
+.spacer .comment {
+	width: 100%;
+	max-width: unset;
+}
+.spacer .comment .star {
+	border-bottom: 1px solid #ddd;
+}
+.spacer .comment .star > p {
+	border-bottom: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    padding-bottom: 0;
+}
+.spacer .comment .star ul {
+	padding: 9px 0 0;
+}
+.spacer .comment .star li {
+	margin-bottom: 9px;
+	font-size: 15px;
+}
+.spacer .comment .star li p {
+	font-size: 15px;
+}
+.spacer .comment .comment-list li {
+	padding: 20px 0;
+	border-bottom: 1px solid #ddd;
+}
+.spacer .comment .comment-list li .other span.left {
+	font-size: 15px;
+    padding: 0;
+    line-height: normal;
+}
+.spacer .comment .comment-list li p.text {
+	font-size: 15px;
+	padding-top: 9px;
+    line-height: normal;
+}
+.spacer .comment .comment-list li .other span.left time {
+    font-size: 13px;
+    display: block;
+    color: gray;
+}
+.spacer .comment .comment-list li span.pic {
+    background-image: url(../../images/avator.jpg);
+    background-size: contain;
+}
+.spacer .comment .comment-list li span.pic img {
+    width: 100%;
+    height: auto;
+}
+#wrapper .comment .comment-list li {
+	margin: 20px 0;
+}
+
+.spacer .position {
+	padding: 20px;
+	border-radius: 5px;
+}
+.spacer .position .content {
+    width: 100%;
+    max-width: unset;
+}
+.spacer .position .content h2 {
+    font-size: 21px;
+    margin-bottom: 9px;
+    letter-spacing: 0;
+}
+.spacer .position .box {
+	margin-bottom: 20px;
+}
+.spacer .position iframe {
+	border-radius: 5px;
+	overflow: hidden;
+}
+.spacer .position .add {
+	height: 170px;
+}
+
+
+@media only screen and (max-width: 980px) {
+	.spacer .banner .hotelImg {
+		width: 120px;
+		height: 120px;
+	}
+	.spacer .pc_banner {
+	    height: 200px;
+	    display: flex;
+	    justify-content: center;
+	}
+	.spacer .banner img {
+	    width: auto;
+	    height: 100%;
+	}
+	.spacer .vanueHeader .vanueContent {
+		padding-top: 0;
+	}
+	.spacer .vanueHeader {
+		margin-bottom: 20px;
+	}
+	.spacer .vanueContent.active,
+	.spacer .priContent,
+	.spacer .hotelPhoto {
+		padding-left: 0;
+	}
+
+	.spacer .vanueTag .vanueBox {
+		padding: 20px 9px;
+	}
+	.spacer .placeBox .site-list .site {
+		width: 100%;
+		padding: 0;
+	}
+
+	.spacer .pricePlan ul {
+	    padding: 9px;
+	}
+	.spacer .pricePlan .priTitle {
+	    width: 100%;
+	}
+	.spacer .synthesis {
+		padding: 20px 9px;
+	}
+	.spacer .syn_item1 .add {
+	    height: 190px;
+	}
+	.spacer .vanueList,
+	.spacer .priTitle,
+	.spacer .syn_item4 .priContent {
+		width: 100%;
+	}
+	.spacer .syn_item4 .priContent {
+		padding: 9px;
+	}
+	.spacer .syn_item4 .priContent img {
+	    width: 49%;
+	}
+	.spacer .syn_item4 ul li .priTitle {
+		/*padding: 9px 3px;*/
+	}
+
+
+    .spacer .comment .star {
+    	border-bottom: 0;
+    }
+
+    .spacer .position {
+    	padding: 20px 9px;
+    }
+    .spacer .position .box {
+    	margin-bottom: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+

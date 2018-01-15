@@ -275,7 +275,7 @@ $(function(){
 
 //meeting 手機 評論
 $(function(){
-	$('.comment > .content-720 > .star > p > a.more').click(function(){
+	$('.comment .star > p > a.more').click(function(){
 		$(this).parent().siblings().toggle();
 	});
 });
