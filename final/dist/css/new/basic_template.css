@@ -882,7 +882,12 @@
 }
 /** END sequence **/
 
-
+/** BEGIN _tip **/
+#wrapper span._tip {
+    display: inline-block;
+    cursor: pointer;
+}
+/** END _tip **/
 
 @media only screen and (max-width: 980px) {
     /** BEGIN navigation_bar **/
