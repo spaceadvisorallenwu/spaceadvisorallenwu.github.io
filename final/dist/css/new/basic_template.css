@@ -732,6 +732,9 @@
 .box a.more {
     margin-top: 5px;
     font-size: 15px;
+    display: table;
+    color: #4e6e9d;
+    cursor: pointer;
 }
 .box:not(.needmore) a.more {
     display: none;

@@ -418,7 +418,7 @@ main {
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-    z-index: 10;
+    z-index: 11;
 }
 .gotop:hover {
 	border-right: 1px solid #ddd;
