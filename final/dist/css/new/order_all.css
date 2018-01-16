@@ -194,17 +194,40 @@
     opacity: .7;
 }
 #wrapper.order_time .assess input[type=checkbox] {
-    display: inline-block;
+    /*display: inline-block;*/
     width: unset;
     height: unset;
+    display: none;
 }
 #wrapper.order_time .equipment .col .assess input[type=checkbox]+label {
     display: flex;
     align-items: center;
 }
+.period_content li .assess input[type=checkbox]+label {
+    width: 100%;
+    /*display: inline-flex;*/
+    /*align-items: center;*/
+}
 #wrapper.order_time .assess input[type=checkbox]+label:before,
 #wrapper.order_time .assess input[type=checkbox]+label:after {
-    content: unset;
+    /*content: unset;*/
+    /*top: 0;*/
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+#wrapper.order_time .assess input[type=checkbox]+label:after {
+    content: "\f00c";
+    position: absolute;
+    top: 25px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font: normal normal normal 20px/20px FontAwesome;
+    text-align: center;
+    color: #fff;
+    transition: 0.2s;
+    font-weight: normal;
 }
 .order_time .equipment .col .assess i {
     margin: 0 9px;
@@ -289,12 +312,6 @@
     width: 100%;
     font-size: 15px;
 }
-.order_time .order_timeList li:nth-child(2) {
-    padding-left: 9px;
-}
-.order_time .order_timeList li:nth-child(3) {
-    padding-left: 18px;
-}
 .order_time .order_tiemBox .order_timeContent li {
     border-bottom: 1px solid #ddd;
 }
@@ -338,6 +355,13 @@
     margin: 9px 0;
 }
 /************************************/
+
+.order_time.order_time_period .order_timeList li:nth-child(2) {
+    padding-left: 9px;
+}
+.order_time.order_time_period .order_timeList li:nth-child(3) {
+    padding-left: 18px;
+}
 .order_time_period .caseSelect{
     margin-bottom:55px;
 }
@@ -452,7 +476,7 @@
 .preiodBox .plan {
     padding-left: 0;
 }
-.period_content .rebates .prices {
+.period_content .period_content .prices {
     padding-left: 0;
     display: inline-flex;
     align-items: center;
@@ -479,7 +503,7 @@
 }
 .period_content .preiodBox {
     letter-spacing: 0;
-    width: 100%;
+    width: calc(100% - 38px);
 }
 .period_content .preiodBox .plan {
     margin: 0 20px 0 30px;
@@ -526,19 +550,20 @@
     align-items: center;
 }
 .period_content .rebates .sub label div:nth-child(1){
-    width:33%; position:relative; padding-left:50px;
+    width:33%; position:relative; padding-left:90px;
     display: flex;
     align-items: center;
 }
 .period_content .rebates .sub label div:nth-child(1) b{font-weight:normal;}
-/*.period_content .rebates .sub label div:nth-child(1) b:before{content:""; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; border:1px solid #4e5059; background-color:#4e5059;}*/
-/*.period_content .rebates .sub label div:nth-child(1) b:after{content:"\f00c"; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; font:normal normal normal 20px/20px FontAwesome; text-align:center; color:#fff; transition:0.2s; opacity:0; font-weight:normal;}*/
+.period_content .rebates .sub label div:nth-child(1) b:before{content:""; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; border:1px solid #4e5059; background-color:#4e5059;}
+.period_content .rebates .sub label div:nth-child(1) b:after{content:"\f00c"; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; font:normal normal normal 20px/20px FontAwesome; text-align:center; color:#fff; transition:0.2s; opacity:0; font-weight:normal;}
 .period_content .rebates .sub label div:nth-child(1) input[type="checkbox"]:checked+b:after{opacity:1;}
 .period_content .rebates .sub label div:nth-child(2){width:35%;}
 .period_content .rebates .sub label div input[type="checkbox"]{
     border:0;
     width: unset;
     height: unset;
+    display: none;
 }
 .period_content .rebates .sub label div:nth-child(3){padding-left:32px;}
 
@@ -1443,10 +1468,46 @@
         margin: 3px 0 9px;
     }
     .order_time .orderInformation3 .equipment .box .add {
-        height: calc(70px * 6);
+        height: calc(68px * 6);
     }
     #wrapper.order_time .writeContent .custodyBtn > span {
         width: 100%;
+    }
+    .order_time_period .col .assess .plan select[disabled] {
+        margin: 0;
+    }
+    .order_time_period .period_content .preiodBox .plan {
+        margin: 0 20px;
+        width: auto;
+    }
+    .order_time_period .period_content .rebates .sub label div:nth-child(1),
+    .order_time_period .period_content .rebates .sub label div:nth-child(2),
+    .order_time_period .period_content .rebates .sub label div:nth-child(3){width:100%; text-align:left; padding-left:80px;}
+    .order_time_period ul.period_content li{border-bottom:0;}
+    .order_time_period ul.period_content li:last-child{border-bottom: 1px solid #959595;}
+    .order_time_period .period_content .rebates .sub{padding:9px 0; background: #f3f3f3;}
+    .order_time_period .period_content .rebates .sub label div:nth-child(1) b:before,
+    .order_time_period .period_content .rebates .sub label div:nth-child(1) b:after{left:50px;}
+    .order_time_period .period_content .rebates .sub li {
+        border:0; margin:0; padding:0;
+        margin-bottom: 5px;
+    }
+    .order_time_period .period_content .rebates .sub li:last-child {
+        margin-bottom: 0;
+    }
+    .order_time_period .order_timeList li{width:calc(100% / 3);}
+    .order_time_period .order_timeList li:last-child{width:calc(100% / 3);}
+
+    .order_time_period .caseSelect .flexbox {
+        flex-direction: column;
+    }
+    .order_time_period .caseSelect .flexbox .caseList{width:100%;}
+    .order_time_period .caseSelect .flexbox .caseRem{width:calc(100%); margin-left:0;}
+    .order_time_period .caseSelect .flexbox .caseList ul li {
+        font-size: 13px;
+    }
+    .order_time_period .period_timeList li {
+        display: none;
     }
     /** BEGIN order_time **/
 

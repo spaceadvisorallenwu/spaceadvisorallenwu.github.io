@@ -1,14 +1,13 @@
 ﻿<ul class="period_content">
 						<!-- 狀態1 折扣狀態 -->
-						<li class="order_timeContent rebates" data-id="2018-01-20(六)">
+						<li class="rebates">
 							<div class="col">
 								<span class="assess">
 									<input type="checkbox" id="per1">
 									<label for="per1">
 										<div class="preiodBox">
 											<h4>時段計費</h4><time class="lightning">08:00~12:00</time>
-											<h4>價格方案</h4>
-											<div class="plan">
+											<h4>價格方案</h4><div class="plan">
 												<div class="planSelect">
 													<select data-name="A場地租金方案" data-decode="7折" data-odate="08:00~12:00" data-bprice="3000" data-select="1" disabled="disabled">
 														<option value="0">請選擇場地租金方案</option>
@@ -21,7 +20,7 @@
 													</select>				
 												</div>
 											</div>
-											<h4>價格</h4><div class="prices"><span class="rebate">7折</span><b>TWD 2,100</b></div>
+											<h4>價格</h4><div class="prices"><span class="rebate">7折</span>TWD 2,100</div>
 										</div>
 									</label>
 								</span>
@@ -33,7 +32,7 @@
 							</ul>
 						</li>
 						<!-- 狀態2 可選擇 -->
-						<li class="order_timeContent" data-id="2018-01-20(六)">
+						<li>
 							<div class="col">
 								<span class="assess">
 									<input type="checkbox"  id="per2">
@@ -64,7 +63,7 @@
 	                        </div>
 						</li>
 						<!-- 狀態3 不可選擇 -->
-						<li class="order_timeContent not_choose" data-id="2018-01-20(六)">
+						<li class="not_choose">
 							<div class="col">
 								<span class="assess">
 									<input type="checkbox" disabled="disabled" id="per4">

@@ -8,7 +8,7 @@
 	    <meta name="copyright" content="本網頁著作SpaceAdvisor所有">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	    <link href="dist/images/icon.ico" type="image/x-icon" rel="shortcut icon" />
-	    <title>訂購-選擇時間-小時</title>
+	    <title>訂購-選擇時間-時段</title>
 	    <link href="dist/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="" />
 	    <link href="dist/css/main.css" rel="stylesheet" type="text/css" media="" />
 	    <link href="dist/css/banner.css" rel="stylesheet" type="text/css" media="" />
@@ -31,8 +31,9 @@
 	    <link href="dist/css/new/order_all.css" rel="stylesheet" type="text/css" media="" />
 	    <!-- <link href="dist/css/new/order_step1__bear.css" rel="stylesheet" type="text/css" media="" /> -->
 	</head>
+
 	<body>
-	    <div id="wrapper" class="stepBox fill_box order_time order_time_hour">
+	    <div id="wrapper" class="stepBox fill_box order_time order_time_period">
 	        <header class="cf">
 	            <div class="content cf">
 	                <a href="home.html" class="logo">
@@ -135,7 +136,7 @@
 
 	        <!--main-->
 	        <main>
-	            <!-- breadcrumb -->
+             	<!-- breadcrumb -->
 	            <div class="breadcrumb">
 	                <ul>
 	                    <li><a href="">首頁</a></li>
@@ -159,111 +160,115 @@
 
 	            <div class="writeContent _boxStyle">
 	                <!-- 左邊 -->
-	                <div class="orderContainer ">
-	                    <div id="sec1" class="orderInformation1">
-	                        <h2>選擇日期</h2>
-	                        <div class="calendar">
-	                            <div class="monweek">
-	                                <div class="month">
-	                                    <a href="javascript:;"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                                        <p>2017 四月</p>
-                                        <a href="javascript:;"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	                                </div>
-	                                <ul class="week">
-	                                    <li>日</li>
-	                                    <li>一</li>
-	                                    <li>二</li>
-	                                    <li>三</li>
-	                                    <li>四</li>
-	                                    <li>五</li>
-	                                    <li>六</li>
+	                <div class="orderContainer">
+	                    <div class="caseSelect">
+	                        <h2>選擇方案</h2>
+	                        <div class="flexbox">
+	                            <div class="caseList">
+	                                <ul>
+	                                    <li class="active">場地租金</li>
+	                                    <li>全日會議
+	                                        <br>專案</li>
+	                                    <li>半日會議
+	                                        <br>專案</li>
+	                                    <li>餐飲低消</li>
+	                                    <li>婚宴</li>
+	                                    <li>尾牙春酒</li>
+	                                    <li>謝師宴</li>
+	                                    <li>生日派對</li>
 	                                </ul>
 	                            </div>
+	                            <div class="caseRem">
+	                                <ul>
+	                                    <li class="active">
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 場地租金
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 全日會議專案
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 半日會議專案
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 餐飲低消
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 婚宴
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 尾牙春酒
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 謝師宴
+	                                        </p>
+	                                    </li>
+	                                    <li>
+	                                        <p>備註：
+	                                            <br> 以租金計算費用
+	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <br> 生日派對
+	                                        </p>
+	                                    </li>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="orderInformation1">
+	                        <h2>選擇日期</h2>
 
-	                            <ul class="day">
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no">1</li>
-	                                <li class="no">2</li>
-	                                <li class="no">3</li>
-	                                <li class="no">4</li>
-	                                <li class="no">5</li>
-	                                <li class="no">6</li>
-	                                <li class="no">7</li>
-	                                <li class="no">8</li>
-	                                <li class="no">9</li>
-	                                <li class="no">10</li>
-	                                <li class="no">11</li>
-	                                <li class="no">12</li>
-	                                <li class="no">13</li>
-	                                <li class="no">14</li>
-	                                <li class="no">15</li>
-	                                <li class="no">16</li>
-	                                <li class="no">17</li>
-	                                <li class="no">18</li>
-	                                <li class="no">19</li>
-	                                <li class="no">20</li>
-	                                <!-- 點擊狀態是會加一個active的class  能點擊的只有可選取的部分-->
-	                                <!-- 一般狀態 -->
-									<li class="general">21<div class="money">$3,000</div></li>
-									<li class="general">22<div class="money">$3,000</div></li>
-									<li class="general">23<div class="money">$3,000</div></li>
-									<li class="general">24<i class="lightning"></i><div class="money">$70,000</div></li>
-									<!-- 折扣狀態 -->
-									<li class="fold">25<span>7折</span><div class="money">$2,100</div></li>
-									<li class="fold">26<span>7折</span><i class="lightning"></i><div class="money">$100,000</div></li>
-									<li class="fold">27<span>7折</span><div class="money">$2,100</div></li>
-									<li class="fold">28<i class="lightning"></i><span>7折</span><div class="money">$2,100</div></li>
-									<!-- 一般狀態 -->
-									<li class="general">29<i class="lightning"></i><div class="money">$3,000</div></li>
-									<li class="general">30<i class="lightning"></i><div class="money">$70,000</div></li>
-									<!-- 無 -->
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                            </ul>
+	                        <div class="calendar">
+
 	                        </div>
 	                        <!-- /calendar -->
+
 	                        <div class="instant-tip">
-	                            <h1>即時預訂<i class="fa fa-bolt" aria-hidden="true"></i></h1>
-	                            <p>
-	                            	<span>如果該場地已開啟即時預訂功能，那麼您不需要獲得場地主的批准就可以預訂。</span><br>
-	                                <span>一旦訂單送出並完成付款，即代表已預定成功。</span><br>
-	                                <span>訂單成立後，您可以在收件匣的問答通知與場地主討論活動相關事宜。</span>
+	                            <h1>即時預訂<img src="dist/images/lightning.png" alt=""/></h1>
+	                            <p>如果該場地已開啟即時預訂功能，那麼您不需要獲得場地主的批准就可以預訂。
+	                                <br> 一旦訂單送出並完成付款，即代表已預定成功。
+	                                <br> 訂單成立後，您可以在收件匣的問答通知與場地主討論活動相關事宜。
 	                            </p>
 	                        </div>
 	                    </div>
-	                    <div id="sec2" class="orderInformation2 _none">
+	                    <div class="orderInformation2 _none">
 	                        <h2>選擇時段</h2>
-	                        <ul class="order_timeList">
-	                            <li class="active">
-	                                <a href="javascript:;">
-	                                    <div class="oder_mo"></div>
-	                                    <span>上午</span>
-	                                </a>
-	                            </li>
-	                            <li>
-	                                <a href="javascript:;">
-	                                    <div class="oder_mo"></div>
-	                                    <span>下午</span>
-	                                </a>
-	                            </li>
-	                            <li>
-	                                <a href="javascript:;">
-	                                    <div class="oder_mo"></div>
-	                                    <span>傍晚</span>
-	                                </a>
-	                            </li>
+	                        <ul class="period_timeList">
+	                            <li><span>時段計費</span></li>
+	                            <li><span>價格方案</span></li>
+	                            <li><span>價格</span></li>
 	                        </ul>
-	                        <div class="order_tiemBox">
-	                            <!-- 預設 不可能選擇狀態 -->
+	                        <mn ajx_event_obj>
+	                        </mn>
+	                        <div class="notice_txt">
+	                            <ul>
+	                                <li><i class="fa fa-exclamation-circle error" aria-hidden="true"></i>請注意！您所選擇的兩個時段方案不同，中間可能有換場佈所需的時間，請於訂單成立後與場地主再次確認。</li>
+	                                <li><i class="fa fa-exclamation-circle error" aria-hidden="true"></i>請依據<a href="spacer_plan.html" target="_blank">場地容納表</a>選擇人數，付款後無法減少人數/桌數，若須增加數量，請於訂單成立後，於訂單管理中加購。</li>
+	                            </ul>
 	                        </div>
 	                    </div>
 	                    <div class="orderInformation3">
@@ -460,17 +465,23 @@
 	                    </div>
 	                    <div class="orderInformation4">
 	                        <h2>取消條款</h2>
-	                        <p>我們執行退訂政策是為了保障房客和房東雙方的利益。極嚴退訂政策適用於特殊情況，且僅限受邀房東使用。我們網站上的每個房源和預訂都會清楚說明退訂政策。透過點擊相應預訂上的「取消」按鈕來取消預訂。<a href="#"><退訂政策></a></p>
+	                        <p>我們執行退訂政策是為了保障房客和房東雙方的利益。極嚴退訂政策適用於特殊情況，且僅限受邀房東使用。我們網站上的每個房源和預訂都會清楚說明退訂政策。透過點擊相應預訂上的「取消」按鈕來取消預訂。
+	                            <a href="#">
+	                                <退訂政策>
+	                            </a>
+	                        </p>
 	                        <div class="col">
 	                            <span class="assess">
-									<input type="checkbox" id="read">
-									<label for="read">我已閱讀並且完全同意<退訂政策>之內容</label>
-								</span>
+								<input type="checkbox"  id="read">
+								<label for="read">
+									我已閱讀並且完全同意<退訂政策>之內容
+								</label>
+							</span>
 	                        </div>
 	                    </div>
 	                    <div class="orderInformation5">
 	                        <h2>備註內容</h2>
-	                        <p>詳細的場地規劃需求，可於訂單成立後，至訂單頁面進行編修及加購更多<b>超值加價購</b>，您所填寫的資料將會同步場地業主進行安排。</p>
+	                        <p>詳細的場地規劃需求，可於訂單成立後，至訂單頁面進行編修及加購更多超值加價購，您所填寫的資料將會同步場地業主進行安排。</p>
 	                        <textarea placeholder="請在這裡輸入備註內容，訂單成立後會由場地主與您聯絡..."></textarea>
 	                    </div>
 	                    <!-- 前往購買 -->
@@ -493,13 +504,11 @@
 	                    <div class="custodyBtn rftBtn">
 	                        <a href="#"><span class="btn btn-c-3 btn-m">提出申請</span></a>
 	                        <span>
-								<p>您的選購中包含無法即時確認的項目，將會一起提出申請，需等待回覆。<br>
-									場地主將於1-2工作天內回覆您的需求。</p>
+								<p>場地業主將於1-2工作天內回覆您的需求</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
 							</span>
 	                    </div>
 	                </div>
-
 
 	                <!-- 右邊 -->
 	                <div class="appointment_Result result_pc">
@@ -510,7 +519,17 @@
 								</div>
 								<div class="app_text">藝文推廣中心三樓會議室（一）</div>
 							</div>
-	                        <div class="appointment_detail"></div>
+	                        <div class="appointment_detail">
+	                        	<div class="appointment_item" data-id="">
+	                        		<div class="appointment_deta">
+	                        			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+	                        			<time></time>
+	                        		</div>
+	                        		<div class="deta_boxs">
+	                        			<mn total></mn>
+	                        		</div>
+	                        	</div>
+	                        </div>
 
 							<!-- 設備需求 -->
 							<div class="demand">
@@ -552,10 +571,9 @@
 								</ul>
 							</div>
 	                    </div>
-
-                        <div class="custodyBtn rftBtn">
+	                    <div class="custodyBtn rftBtn">
                         	<!-- 前往購買 -->
-                            <a href="#"><span class="btn btn-c-3 btn-m">前往購買</span></a>
+                            <a href="order_cart.html"><span class="btn btn-c-3 btn-m">前往購買</span></a>
                             <span>
 								<p>您的預訂享有7天內免費取消的保障</p>
 								<p>一個月內的預訂除外，請參閱<a href="#" target="_blank">平台取消條款</a></p>
@@ -563,7 +581,7 @@
 						</div>
 						<div class="custodyBtn rftBtn">
 							<!-- 提出申請 -->
-							<a href="#"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+							<a href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
                             <span>
 								<p>場地業主將於1-2工作天內回覆您的需求</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
@@ -571,7 +589,7 @@
 						</div>
 						<div class="custodyBtn rftBtn">
 							<!-- 提出申請 -->
-							<a href="#"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+							<a href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
                             <span>
 								<p>您的選購中包含無法即時確認的項目，將會一起提出申請，需等待回覆。場地主將於1-2工作天內回覆您的需求。</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
@@ -580,10 +598,11 @@
 	                </div>
 	            </div>
 
+
 	            <!-- 手機用價格方案 -->
 	            <div class="mobile-plan-stecla mobile">
 	                <div class="plan-box">
-	                    <p class="title">價格方案</p>
+	                    <p class="title">明細</p>
 	                    <div class="scroll">
 	                        <div class="appointment_Content">
 	                            <div class="appointment_photo">
@@ -592,7 +611,15 @@
 									</div>
 									<div class="app_text">藝文推廣中心三樓會議室（一）</div>
 								</div>
-		                        <div class="appointment_detail"></div>
+		                        <div class="appointment_detail">
+		                        	<div class="appointment_item" data-id="">
+		                        		<div class="appointment_deta">
+		                        			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+		                        			<time></time>
+		                        		</div>
+		                        		<mn total></mn>
+		                        	</div>
+		                        </div>
 	                        </div>
 	                        <!-- 設備需求 -->
 							<div class="demands">
@@ -630,14 +657,14 @@
 	                    </div>
 	                    <i class="btn btn-c-2 btn-s">查看明細</i>
 	                </a>
-	                <a href="" class="reservation"><span class="btn btn-c-3 btn-m">確認購買<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
-	                <!-- <a href="" class="reservation">提出申請</a>
-					<a href="" class="reservation">提出申請</a> -->
+	                <a href="order_cart.html" class="reservation"><span class="btn btn-c-3 btn-m">確認購買<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+	                <!-- <a href="order_cart.html" class="reservation"><span class="btn btn-c-3 btn-m">提出申請<i class="fa fa-angle-right" aria-hidden="true"></i></span></a> -->
 	            </div>
-	    	</main>
-	    	<!--/main-->
+	        </main>
+	        <!--/main-->
 
-		    <!-- top -->
+
+	        <!-- top -->
 		    <a href="javascript:;" class="gotop"></a>
 		    <footer class="cf search-mobile-hide">
 		        <div class="top desk">
@@ -793,7 +820,6 @@
 	    <script type="text/javascript" src="dist/js/laydate/laydate.js"></script>
 	    <!-- poshytip http://vadikom.com/demos/poshytip/-->
 	    <script type="text/javascript" src="dist/js/tip/jquery.poshytip.js"></script>
-	    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	    <script type="text/javascript" src="dist/js/jdatepicker.min_bear.js"></script>
 
 	    <script type="text/javascript">
@@ -805,39 +831,16 @@
 	            alignX: 'center',
 	            offsetY: 5,
 	            allowTipHover: false,
-	            fade: true,
+	            fade: false,
 	            slide: false
 	        });
-	        //選擇時段頁籤 手機板
-	        function ored() {
-	            if ($(this).width() <= 768) {
-	                $('.order_timeList').addClass('ord_mo');
-	                //$('.order_timeList li').removeClass('active');
-	                //$('.order_timeContent:eq(0),.order_timeList li:eq(0)').addClass('active');
-	                $('.order_timeList.ord_mo li').on('click', function() {
-	                    var st_current = $(this).index();
-	                    $('.order_timeList.ord_mo li').removeClass('active');
-	                    $(this).addClass('active');
-	                    $('.order_timeContent.active').removeClass('active');
-	                    $('.order_timeContent:eq(' + st_current + ')').addClass('active');
-	                    console.log(st_current);
-	                });
-	            } else if ($(this).width() > 768) {
-	                $('.order_timeList').removeClass('ord_mo');
-	                $('.order_timeList li,.order_timeContent').removeClass('active');
-
-	            }
-	        }
-	        ored();
-	        $(window).on('resize', function() {
-	            ored();
-	        });
 	        //日歷點擊
-	        $('li.general, li.fold').on('click', function() {
+	        $('li.general,li.fold').on('click', function() {
 	            if (!$(this).hasClass('active')) {
 	                $('li.general,li.fold').removeClass('active');
 	                $(this).addClass('active');
 	            } else {
+
 	                $('li.general,li.fold').removeClass('active');
 	                $(this).addClass('active');
 	            };
@@ -848,13 +851,27 @@
 	            }, 800);
 	        });
 	    </script>
+
+	    <script>
+	        // 選擇方案
+	        $(function() {
+	            $(".caseList ul li").click(function() {
+	                var n = $(this).index() + 1;
+	                $(".caseList ul li.active").removeClass("active");
+	                $(".caseList ul li:nth-child(" + n + ")").addClass("active");
+	                $(".caseRem ul li.active").removeClass("active");
+	                $(".caseRem ul li:nth-child(" + n + ")").addClass("active");
+	            });
+	        });
+	    </script>
+
 	    <script>
 	        $('.calendar').Jdatepicker({
 	            default_date: '2018-01-08', //預設起始日期(會執行起始日期點擊事件)
 	            defalut_click_event: function(e) {
 	                $('mn[ajx_event_obj]').html('');
-	                // $('.appointment_deta time').html($('.calendar').attr('select-date'));
-	                // selecttour();
+	                $('.appointment_deta time').html($('.calendar').attr('select-date'));
+	                selecttour();
 	            }, //預設每日點擊事件
 	            old_no_work: true, //預設日期之前不作用
 	            event_date: { //日期事件資料
@@ -863,15 +880,15 @@
 	                    price: '$2,800', //價格
 	                    order: true, //是否有閃電符號
 	                    click_event: function(e) {
-                            ajx_get('2018-01-19b');
-                        } //點擊處理事件
+	                            ajx_get('2018-01-19');
+	                        } //點擊處理事件
 	                },
 	                '2018-01-20': {
 	                    discount: '7折',
 	                    price: '$3,000',
 	                    order: true,
 	                    click_event: function(e) {
-	                        ajx_get('2018-01-20b');
+	                        ajx_get('2018-01-20');
 	                    }
 	                },
 	                '2018-01-21': {
@@ -897,7 +914,6 @@
 	                } else {
 	                    $(event.target).parentsUntil('ul').last().find('select').attr('disabled', 'disabled');
 	                }
-					selecttour();
 	            });
 	        });
 
@@ -912,17 +928,47 @@
 	                dataType: 'text',
 	                async: false,
 	                success: function(msg) {
-	                	$('#sec2').removeClass('_none');
-	                	$('.order_tiemBox').removeClass('_none');
-	                    $('.order_tiemBox').html(msg);
-	                    $("ul.period_content>li label").click(function() {
-	                        $(this).parent().parent().parent().find("ul.sub").toggle();
+	                	$('.orderInformation2').removeClass('_none');
+	                    $('mn[ajx_event_obj]').html(msg);
+	                    $("ul.period_content>li>div label").click(function() {
+	                    	console.log('hey');
+	                        $("ul.period_content>li select:eq(0)").removeAttr('disabled', 'disabled');
+	                        $(this).find('select').on('change', function(e) {
+	                            var cc = e.target;
+	                            if ($(cc).parent().parent().parent().parent().parent().parent().parent().find('input:checkbox:checked').length >= 1)
+	                                $(cc).parent().parent().parent().parent().parent().parent().parent().find("ul.sub").show();
+	                            else
+	                                $(cc).parent().parent().parent().parent().parent().parent().parent().find("ul.sub").hide();
+	                        });
 	                    });
+	                    $("ul.period_content>li>div > input").change(function() {
+	                    	console.log('hey1');
+	                        $("ul.period_content>li select:eq(0)").removeAttr('disabled', 'disabled');
+	                        $(this).find('select').on('change', function(e) {
+	                            var cc = e.target;
+	                            if ($(cc).parent().parent().parent().parent().parent().parent().parent().find('input:checkbox:checked').length >= 1)
+	                                $(cc).parent().parent().parent().parent().parent().parent().parent().find("ul.sub").show();
+	                            else
+	                                $(cc).parent().parent().parent().parent().parent().parent().parent().find("ul.sub").hide();
+	                        });
+
+	                    });
+	                    window.setInterval('soff()', 20);
 	                }
 	            });
 	            apnwork();
 	        }
 
+	        function soff() {
+	            $("ul.period_content>li>div label").each(function() {
+	                if ($(this).parent().parent().parent().find('input:checkbox:eq(0):checked').length <= 0) {
+	                    $(this).parent().parent().parent().find('select:eq(0)').attr('disabled', 'disabled').val('0');
+	                    aa = $(this).parent().parent().parent().find("ul.sub").hide();
+	                    aa.find('input:checkbox:checked').parent().parent().click();
+	                    selecttour();
+	                }
+	            });
+	        }
 	        //--物件事件綁定
 	        function apnwork() {
 	            $(apn).on('change', function() {
@@ -936,92 +982,76 @@
 
 	        //--計算總額
 	        var apn = '[data-name][data-price],[data-name][data-select]';
-	        // id, 名稱, 價格, 數量, 時間, 原價, 折扣
-	        function adtext(id, name, price, count, timerange, bprice, decode) {
-	            //$('.purchase_value-add-wrapper[total]').append('<li><div class="ia-wrapper"><div class="item">'+name+'</div><div class="amount">X '+count+'</div></div><div class="price"><span>TWD</span><span>'+price+'</span></div></li>');
-	            if (typeof(timerange) != "undefined" && timerange != null && timerange != '') {
-	            	// console.log(id + '__' + name + '__' + price + '__' + count + '__' + timerange + '__' + bprice + '__' + decode);
-		            var pc_id_elem = $('.appointment_Result appointment_item[data-id="'+id+'"]');
-		            var mb_id_elem = $('.mobile-plan-stecla.mobile .appointment_item[data-id="'+id+'"]');
 
-		            if(pc_id_elem.length == 0) {
-		            	$('.appointment_Result .appointment_detail').append('<div class="appointment_item" data-id="'+id+'"><div class="appointment_deta"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><time>'+id+'</time></div><div class="deta_boxs"><mn total></mn></div></div>')
-		            }
-		            if(mb_id_elem.length == 0) {
-		            	$('.mobile-plan-stecla.mobile .appointment_detail').append('<div class="appointment_item" data-id="'+id+'"><div class="appointment_deta"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><time>'+id+'</time></div><mn total></mn></div>')
-		            }
-		            var _class = " ";
+	        function adtext(name,price,count,timerange,bprice,decode){
+				//$('.purchase_value-add-wrapper[total]').append('<li><div class="ia-wrapper"><div class="item">'+name+'</div><div class="amount">X '+count+'</div></div><div class="price"><span>TWD</span><span>'+price+'</span></div></li>');
+
+				if (typeof(timerange)!="undefined" && timerange!=null && timerange!='') {
+					var pc_id_elem = $('.appointment_Result .appointment_item');
+	            	var mb_id_elem = $('.mobile-plan-stecla.mobile .appointment_item');
+					var _class = " ";
 	                if (bprice != null) _class += '_haveDiscount';
-	                pc_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><div class="program"><div class="time"><time>'+ timerange + '</time></div><div class="name"><span>' + name + '</span></div></div><div class="_prices">' + (bprice != null ? '<div class="discount"><span>TWD ' + bprice + '</span></div>' : '') + (price != null ? '<div class="rebate"><span>TWD ' + price + '</span></div>' : '') + (decode != null ? '<div class="sarebate"><span>' + decode + '</span></div>' : '') + '</div></div></div>');
-	                mb_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><time>' + timerange + '</time>'+ (bprice != null ? '<span class="discount">TWD ' + bprice + '</span>' : '') + (price != null ? '<div class="rebate">TWD ' + price + '</div>' : '') + '</div><div class="program"><b>' + name + '</b><div class="formula">' + (decode != null ? '<span class="sarebate">' + decode + '</span>' : '') + '</div></div></div>');
+					pc_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><div class="program"><div class="time"><time>'+ timerange + '</time></div><div class="name"><span>' + name + '</span></div></div><div class="_prices">' + (bprice != null ? '<div class="discount"><span>TWD ' + bprice + '</span></div>' : '') + (price != null ? '<div class="rebate"><span>TWD ' + price + '</span></div>' : '') + (decode != null ? '<div class="sarebate"><span>' + decode + '</span></div>' : '') + '</div></div></div>');
+					mb_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><time>' + timerange + '</time>'+ (bprice != null ? '<span class="discount">TWD ' + bprice + '</span>' : '') + (price != null ? '<div class="rebate">TWD ' + price + '</div>' : '') + '</div><div class="program"><b>' + name + '</b><div class="formula">' + (decode != null ? '<span class="sarebate">' + decode + '</span>' : '') + '</div></div></div>');
+				} else {
+					$('mn[total2]').append('<li><span>'+name+'X'+count+' </span></li>');
+				}
+			}
 
-	            } else {
-	                $('mn[total2]').append('<li><span>' + name + 'X' + count + ' </span></li>');
-	            }
-	        }
-
-	        function selecttour() {
-	            var post_fee = 3600;
-	            var total = 0;
-	            $('mn[total], mn[total2]').html('');
-	            console.log('123');
-	            $(apn).each(function(idx, obj) {
-	                if ($(obj).attr('data-select') != null && $(obj).attr('disabled') == null && $(obj).val() * 1 > 0) {
-	                    console.log('a');
-	                    if ($(obj).attr('data-odate') != null) {
-	                    	console.log('aa');
-	                        total += $(obj).val() * 1;
-	                        adtext( // id, 名稱, 價格, 數量, 時間, 原價, 折扣
-	                        	$(obj).parents('.order_timeContent').attr('data-id'),
-	                        	$(obj).attr('data-name'),
-	                        	$(obj).val(),
-	                        	1,
-	                        	$(obj).attr('data-odate'),
-	                        	$(obj).attr('data-bprice'),
-	                        	$(obj).attr('data-decode')
-                        	);
-	                    } else {
-	                    	console.log('ab');
-	                        total += $(obj).val() * 1;
-	                        adtext(
-	                        	$(obj).parents('.order_timeContent').attr('data-id'),
-	                        	$(obj).attr('data-name'),
-	                        	$(obj).val(),
-	                        	1
-	                        );
-	                    }
-
-	                } else if ($(obj).attr('data-price') != null && $(obj).filter(':visible').length > 0 && $(obj).attr('disabled') == null && $(obj).val() * 1 > 0) {
-	                	console.log('b');
-	                    total += $(obj).attr('data-price') * $(obj).val();
-	                    adtext(
-                    		$(obj).parents('.order_timeContent').attr('data-id'),
-                    		$(obj).attr('data-name'),
-	                    	$(obj).attr('data-price') * $(obj).val(),
-	                    	$(obj).val(),
-                        	$(obj).attr('data-odate'),
-                        	$(obj).attr('data-bprice'),
-                        	$(obj).attr('data-decode')
-	                    );
-
-	                } else if ($(obj).attr('data-price') != null && $(obj).filter(':checkbox').length > 0 && $(obj)[0].checked && $(obj).attr('data-odate') != null) {
-	                	console.log('c');
-	                    total += $(obj).attr('data-price') * 1;
-	                    adtext(
-                    		$(obj).parents('.order_timeContent').attr('data-id'),
-                    		$(obj).attr('data-name'),
-	                    	$(obj).attr('data-price') * 1,
-	                    	1,
-                        	$(obj).attr('data-odate'),
-                        	$(obj).attr('data-bprice') * 1,
-                        	$(obj).attr('data-decode')
-	                    );
-	                }
-	            });
-	            $('[totalprice_tn]').html(total);
-	            $('[post_fee]').html(post_fee);
-	            $('[totalprice]').html(total + post_fee);
-	        }
+	        function selecttour(){
+				var post_fee = 3600;
+				var total = 0;
+				$('mn[total],mn[total2]').html('');
+				$(apn).each(function(idx,obj){
+					if ($(obj).attr('data-select')!=null&&$(obj).attr('disabled')==null&&$(obj).val()*1>0){
+						if ($(obj).attr('data-odate')!=null){
+							total += $(obj).val()*1;
+							// 名稱, 價格, 數量, 時間, 原價, 折扣
+							adtext(
+								$(obj).attr('data-name'),
+								$(obj).val(),
+								1,
+								$(obj).attr('data-odate'),
+								$(obj).attr('data-bprice'),
+								$(obj).attr('data-decode')
+							);
+						}else{
+							total += $(obj).val()*1;
+							adtext(
+								$(obj).attr('data-name'),
+								$(obj).val(),
+								1,
+								$(obj).attr('data-odate'),
+								$(obj).attr('data-bprice'),
+								$(obj).attr('data-decode')
+							);
+						}
+					}else if ($(obj).attr('data-price')!=null&&$(obj).filter(':visible').length>0&&$(obj).attr('disabled')==null&&$(obj).val()*1>0){
+						total += $(obj).attr('data-price')*$(obj).val();
+						adtext(
+							$(obj).attr('data-name'),
+							$(obj).attr('data-price')*$(obj).val(),
+							$(obj).val(),
+							$(obj).attr('data-odate'),
+							$(obj).attr('data-bprice'),
+							$(obj).attr('data-decode')
+						);
+					}else if ($(obj).attr('data-price')!=null&&$(obj).filter(':checkbox').length>0&&$(obj)[0].checked&&$(obj).attr('data-odate')!=null){
+						total += $(obj).attr('data-price')*1;
+						adtext(
+							$(obj).attr('data-name'),
+							$(obj).attr('data-price')*1,
+							1,
+							$(obj).attr('data-odate'),
+							$(obj).attr('data-bprice'),
+							$(obj).attr('data-decode')
+						);
+					}
+				});
+				$('[totalprice_tn]').html(total);
+				$('[post_fee]').html(post_fee);
+				$('[totalprice]').html(total+post_fee);
+			}
 	        apnwork();
 
 	        $(window).on('scroll', function() {
