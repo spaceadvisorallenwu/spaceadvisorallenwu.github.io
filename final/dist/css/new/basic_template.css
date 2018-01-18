@@ -889,6 +889,11 @@
 #wrapper span._tip {
     display: inline-block;
     cursor: pointer;
+    padding: 0;
+}
+.tip-twitter {
+    margin-bottom: 90px;
+    margin-left: 3px;
 }
 /** END _tip **/
 

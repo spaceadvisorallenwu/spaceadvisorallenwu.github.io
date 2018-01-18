@@ -105,7 +105,7 @@
 .paymentInformation section {
     display: flex;
 }
-.paymentInformation h3 {
+.paymentInformation section h3 {
     font-size: 15px;
     background: #ddd;
     display: inline-block;
@@ -126,7 +126,7 @@
     align-items: center;
     color: #4e5059;
 }
-.paymentInformation h4 {
+.paymentInformation section > div ul li h4 {
     margin-right: 0;
     border-right: 1px solid #ddd;
     padding: 5px 0;
@@ -134,24 +134,24 @@
     max-width: 150px;
     line-height: normal;
 }
-.paymentInformation p {
+.paymentInformation section > div ul li p {
     width: 100%;
     padding-right: 20px;
     margin-left: 15px;
     font-weight: bold;
     line-height: normal;
 }
-.paymentInformation .list_info {
+.paymentInformation section .list_info {
     width: 40%;
 }
-.paymentInformation .list_cancel {
+.paymentInformation section .list_cancel {
     margin-left: 20px;
 }
-.paymentInformation .list_cancel h3,
-.paymentInformation .list_cancel li p {
+.paymentInformation section .list_cancel h3,
+.paymentInformation section .list_cancel li p {
     margin-left: 20px;
 }
-.paymentInformation .list_cancel li {
+.paymentInformation section .list_cancel li {
     border-left: 1px solid #ddd;
 }
 .paymentInformation section > div ul:last-child li p {
@@ -231,17 +231,17 @@
     .paymentInformation .list_info {
         width: 100%;
     }
-    .paymentInformation .list_cancel {
+    .paymentInformation section .list_cancel {
         margin-left: 0;
     }
-    .paymentInformation .list_cancel h3,
-    .paymentInformation .list_cancel li p {
+    .paymentInformation section .list_cancel h3,
+    .paymentInformation section .list_cancel li p {
         margin-left: 0;
     }
-    .paymentInformation .list_cancel h3 {
+    .paymentInformation section .list_cancel h3 {
         margin-top: 20px;
     }
-    .paymentInformation .list_cancel li {
+    .paymentInformation section .list_cancel li {
         border-left: 0;
     }
     .paymentInformation section > div {
@@ -257,14 +257,14 @@
     .paymentInformation section > div ul:last-child {
         margin-top: 0;
     }
-    .paymentInformation li {
+    .paymentInformation section > div ul li {
         margin-bottom: 0;
     }
-    .paymentInformation h4 {
+    .paymentInformation section > div ul li h4 {
         width: 30%;
         padding: 15px 0;
     }
-    .paymentInformation p {
+    .paymentInformation section > div ul li p {
         width: 90%;
         margin-left: 15px;
         padding-right: 0;
