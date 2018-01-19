@@ -86,10 +86,10 @@
     height: 60px;
     padding: 5px;
 }
-.order_time .orderContainer .calendar ul.day li .lightning {
+.order_time_hour .orderContainer .calendar ul.day li .lightning {
 
 }
-.order_time .orderContainer .calendar ul.day li .lightning:before {
+.order_time_hour .orderContainer .calendar ul.day li .lightning:before {
     content: "\f0e7";
     color: #ffde00;
     display: inline-block;
@@ -184,7 +184,7 @@
     color: #4e5059;
     font-size: 15px;
     height: 30px;
-    width: 70px;
+    width: 90px;
     padding: 0 30px 0 10px;
 }
 .order_time .equipment .col .assess .number select[disabled] {
@@ -199,6 +199,9 @@
     height: unset;
     display: none;
 }
+#wrapper.order_time .equipment .assess input[type=checkbox] {
+    display: block;
+}
 #wrapper.order_time .equipment .col .assess input[type=checkbox]+label {
     display: flex;
     align-items: center;
@@ -212,22 +215,35 @@
 #wrapper.order_time .assess input[type=checkbox]+label:after {
     /*content: unset;*/
     /*top: 0;*/
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin-right: 5px;
+    border-radius: 3px;
 }
 #wrapper.order_time .assess input[type=checkbox]+label:after {
     content: "\f00c";
     position: absolute;
     top: 25px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    font: normal normal normal 20px/20px FontAwesome;
+    width: 18px;
+    height: 18px;
+    font-family: FontAwesome;
     text-align: center;
     color: #fff;
-    transition: 0.2s;
+    transition: 0s;
     font-weight: normal;
+}
+#wrapper.order_time.order_time_period .assess input[type=checkbox]+label:after {
+    top: 7px;
+    font-size: 17px;
+    padding-left: 1px;
+}
+#wrapper.order_time.order_time_period li._item._havePlan2 .assess input[type=checkbox]+label:after {
+    top: 24px;
+}
+#wrapper.order_time .orderInformation4 .assess input[type=checkbox]+label:after {
+    color: #4e5059;
+    top: 4px;
 }
 .order_time .equipment .col .assess i {
     margin: 0 9px;
@@ -292,8 +308,7 @@
     padding: 0 5px;
     opacity: .8;
 }
-.order_time .order_timeList,
-.order_time .period_timeList {
+.order_time .order_timeList {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -305,16 +320,13 @@
     margin-right: 0;
 }
 .order_time .orderInformation2._none .order_timeList li,
-.order_time .orderInformation2._none .period_timeList li,
 .order_time .orderInformation2._none .order_tiemBox {
     display: none;
 }
-.order_time .orderInformation2._none .order_timeList:before,
-.order_time .orderInformation2._none .period_timeList:before {
+.order_time .orderInformation2._none .order_timeList:before {
     content: "請選擇日期";
 }
-.order_time .order_timeList li,
-.order_time .period_timeList li {
+.order_time .order_timeList li {
     width: 100%;
     font-size: 15px;
 }
@@ -327,14 +339,14 @@
     position: relative;
     cursor: pointer;
 }
-.order_time .order_tiemBox .order_timeContent li:hover {
+.order_time .order_tiemBox .order_timeContent li:not(._disable):hover {
     background: rgba(79, 110, 162, .2);
 }
 .order_time .order_tiemBox .order_timeContent li._active {
-    background: #4f6ea2;
+    background: #4f6ea2 !important;
     color: #fff;
 }
-.order_time .order_tiemBox .order_timeContent li._discount:after {
+.order_time .order_tiemBox .order_timeContent li._haveDiscount:after {
     content: attr(data-discount);
     position: absolute;
     top: 3px;
@@ -373,7 +385,7 @@
     font-size: 15px;
     margin-top: 5px;
 }
-.order_time .order_tiemBox .order_timeContent li._discount .order_money {
+.order_time .order_tiemBox .order_timeContent li._haveDiscount .order_money {
     color: #d76050;
 }
 #wrapper.order_time .appointment_Result .custodyBtn {
@@ -486,6 +498,7 @@
     height: 30px;
     width: 100%;
     padding: 0 30px 0 10px;
+    margin: 0;
 }
 .order_time_period .col .assess .plan select[disabled] {
     border-color: #ddd;
@@ -493,7 +506,10 @@
     cursor: default;
     opacity: .7;
 }
-.order_time_period .col .assess .preiodBox time.lightning:after {
+.order_time_period .col .assess .plan select.plan2 {
+    margin-top: 9px;
+}
+.order_time_period li._onlineb .col .assess .preiodBox time:after {
     content: "\f0e7";
     color: #ffde00;
     display: inline-block;
@@ -510,11 +526,14 @@
 .preiodBox .plan {
     padding-left: 0;
 }
-.period_content .period_content .prices {
+.period_content .prices {
     padding-left: 0;
     display: inline-flex;
     align-items: center;
     font-size: 15px;
+}
+.period_content .rebates .prices span {
+    padding: 0;
 }
 .period_content .rebates .prices .rebate {
     background: #d76050;
@@ -526,7 +545,17 @@
     opacity: .8;
     top: 0;
     right: 0;
-    margin-right: 5px;
+    margin-right: 9px;
+}
+.period_content .rebates:not(._haveDiscount) .prices .rebate {
+    display: none;
+}
+.period_content .rebates .prices .price {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 15px;
 }
 .period_content li {
     border-width: 1px;
@@ -540,15 +569,15 @@
     width: calc(100% - 38px);
 }
 .period_content .preiodBox .plan {
-    margin: 0 20px 0 30px;
+    margin: 0 20px;
 }
 .period_content .preiodBox .prices {
-    /*padding-left: 25px;*/
+    padding-left: 15px;
 }
-.order_time .period_timeList li:nth-child(2) {
+.order_time.order_time_period .order_timeList li:nth-child(2) {
     margin-left: 20px;
 }
-.order_time .period_timeList li:nth-child(3) {
+.order_time.order_time_period .order_timeList li:nth-child(3) {
     padding-left: 60px
 }
 
@@ -570,6 +599,12 @@
 */
 .period_content li select{margin-left:-10px;}
 .period_content .rebates .sub{ background-color:#fff; padding:5px 0; border-top:1px solid #d2d2d2;}
+
+.period_content li:not(._active) .sub,
+.period_content li._disable .sub,
+.period_content li._noSub .sub {
+    display: none;
+}
 .period_content .rebates .sub li{
     border-bottom:0;
     padding: 9px 0;
@@ -588,18 +623,52 @@
     display: flex;
     align-items: center;
 }
-.period_content .rebates .sub label div:nth-child(1) b{font-weight:normal;}
-.period_content .rebates .sub label div:nth-child(1) b:before{content:""; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; border:1px solid #4e5059; background-color:#4e5059;}
-.period_content .rebates .sub label div:nth-child(1) b:after{content:"\f00c"; position:absolute; top:2px; left:63px; display:inline-block; width:20px; height:20px; font:normal normal normal 20px/20px FontAwesome; text-align:center; color:#fff; transition:0.2s; opacity:0; font-weight:normal;}
-.period_content .rebates .sub label div:nth-child(1) input[type="checkbox"]:checked+b:after{opacity:1;}
-.period_content .rebates .sub label div:nth-child(2){width:35%;}
+.period_content .rebates .sub label div:nth-child(1) b {
+    font-weight:normal;
+    font-size: 15px;
+}
+.period_content .rebates .sub label div:nth-child(1) b:before{
+    content:"";
+    position:absolute;
+    top:2px;
+    left:63px;
+    display:inline-block;
+    width: 18px;
+    height: 18px;
+    border:1px solid #4e5059;
+    background-color:#4e5059;
+    border-radius: 5px;
+}
+.period_content .rebates .sub label div:nth-child(1) b:after {
+    content:"\f00c";
+    position:absolute;
+    top:2px;
+    left:63px;
+    display:inline-block;
+    font-family: FontAwesome;
+    text-align:center; color:#fff;
+    transition:0.2s;
+    opacity:0;
+    font-weight:normal;
+}
+.period_content .rebates .sub label div:nth-child(1) input[type="checkbox"]:checked+b:after{
+    opacity:1;
+    padding: 1px 0 0 2px;
+}
+.period_content .rebates .sub label div:nth-child(2){
+    width: 35%;
+    font-size: 15px;
+}
 .period_content .rebates .sub label div input[type="checkbox"]{
     border:0;
     width: unset;
     height: unset;
     display: none;
 }
-.period_content .rebates .sub label div:nth-child(3){padding-left:32px;}
+.period_content .rebates .sub label div:nth-child(3){
+    padding-left: 30px;
+    font-size: 15px;
+}
 
 
 
@@ -1112,6 +1181,22 @@
     overflow: hidden;
     margin-bottom: 20px;
 }
+/*.order_time main._chooseNo .appointment_detail
+.order_time main._chooseNo .demand,
+.order_time main._chooseNo .mobile-plan-stecla.mobile .demands,
+.order_time main._chooseNo .priceBox {
+    display: none;
+}*/
+.order_time main._chooseNo .appointment_Content .appointment_detail:before {
+    content: '尚未選擇時間';
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0;
+    font-size: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin: 0 9px;
+}
 .appointment_Result.result_pc .appointment_Content > div {
 
 }
@@ -1170,6 +1255,18 @@
 .appointment_detail .deta_boxs {
     padding: 9px;
 }
+.appointment_detail .deta_boxs .deta_box._haveSub > .deta_content {
+    margin-bottom: 5px;
+}
+.appointment_detail .deta_boxs._sub {
+    padding: 5px 0 0 9px;
+    border-left: 1px solid #DDD;
+    margin: 0 0 0 9px;
+}
+.appointment_detail .deta_boxs._sub:last-child {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
 .appointment_detail .deta_boxs .deta_box {
     padding: 9px 0;
     border-bottom: 1px solid #ddd;
@@ -1201,12 +1298,19 @@
 .appointment_detail .deta_boxs .deta_box .program .name span {
     width: unset;
     text-align: unset;
-    font-size: 13px;
+    font-size: 12px;
+}
+.appointment_detail .deta_boxs .deta_box .program .name span b {
+    font-size: 12px;
+    margin-left: 5px;
 }
 .appointment_detail .deta_boxs .deta_box ._prices {
     width: 70%;
     display: flex;
     flex-direction: column;
+}
+.appointment_detail .deta_content {
+    font-size: 15px;
 }
 .appointment_detail .deta_content ._prices > div {
     display: flex;
@@ -1216,14 +1320,14 @@
     width: auto;
     text-align: unset;
 }
-.appointment_detail .deta_content ._prices .discount {
+.appointment_detail .deta_content .discount {
     color: #ccc;
     margin: 0;
 }
-.appointment_detail .deta_content ._prices .rebate {
+.appointment_detail .deta_content .rebate {
     color: #4e5059;
 }
-.appointment_detail .deta_content ._prices .sarebate span {
+.appointment_detail .deta_content .sarebate span {
     position: relative;
     top: 0;
     left: 0;
@@ -1237,8 +1341,8 @@
     margin-right: 0;
     opacity: .8;
 }
-.appointment_detail .deta_box:not(._haveDiscount) .deta_content ._prices .discount,
-.appointment_detail .deta_box:not(._haveDiscount) .deta_content ._prices .sarebate {
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content .discount,
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content .sarebate {
     display: none;
 }
 .appointment_Result .appointment_Content .demand {
@@ -1246,6 +1350,10 @@
     padding: 9px;
     background: #fff;
     border-top: 1px solid #ddd;
+}
+.order_time main._noEquip .appointment_Result .appointment_Content .demand,
+.order_time main._noEquip .mobile-plan-stecla.mobile .demands {
+    display: none;
 }
 .appointment_Result .appointment_Content .demand h4 {
     margin: 0;
@@ -1490,6 +1598,9 @@
         padding: 0;
         overflow: hidden;
     }
+    .order_time.order_time_period .order_tiemBox {
+        border-radius: 5px;
+    }
     .order_time .order_tiemBox .order_timeContent {
         margin-right: 0;
         border: 0;
@@ -1514,6 +1625,15 @@
     .order_time_period .col .assess .plan select[disabled] {
         margin: 0;
     }
+    .order_time_period .period_content {
+        margin-top: 0;
+    }
+    .order_time_period .period_content .prices {
+        margin: 0 20px;
+    }
+    .order_time_period .period_content .preiodBox {
+        border-left: 1px solid #ddd;
+    }
     .order_time_period .period_content .preiodBox .plan {
         margin: 0 20px;
         width: auto;
@@ -1521,14 +1641,31 @@
     .order_time_period .period_content .rebates .sub label div:nth-child(1),
     .order_time_period .period_content .rebates .sub label div:nth-child(2),
     .order_time_period .period_content .rebates .sub label div:nth-child(3){width:100%; text-align:left; padding-left:80px;}
-    .order_time_period ul.period_content li{border-bottom:0;}
-    .order_time_period ul.period_content li:last-child{border-bottom: 1px solid #959595;}
+    .order_time_period ul.period_content li {
+        border: 0;
+        border-bottom: 1px solid #959595;
+        font-size: 15px;
+    }
+    .period_content .rebates .sub label div:nth-child(2) {
+        font-size: 13px;
+    }
+    .order_time_period ul.period_content li:last-child{
+        border-bottom: 0;
+    }
     .order_time_period .period_content .rebates .sub{padding:9px 0; background: #f3f3f3;}
     .order_time_period .period_content .rebates .sub label div:nth-child(1) b:before,
     .order_time_period .period_content .rebates .sub label div:nth-child(1) b:after{left:50px;}
     .order_time_period .period_content .rebates .sub li {
-        border:0; margin:0; padding:0;
-        margin-bottom: 5px;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 9px;
+    }
+    #wrapper.order_time.order_time_period .assess input[type=checkbox]+label:after {
+        top: 117px;
+    }
+    #wrapper.order_time.order_time_period li._item._havePlan2 .assess input[type=checkbox]+label:after {
+        top: 134px;
     }
     .order_time_period .period_content .rebates .sub li:last-child {
         margin-bottom: 0;
@@ -1544,8 +1681,18 @@
     .order_time_period .caseSelect .flexbox .caseList ul li {
         font-size: 13px;
     }
-    .order_time_period .period_timeList li {
+    .order_time.order_time_period .order_timeList li {
         display: none;
+    }
+    .order_time main._chooseNo .appointment_Content .appointment_detail:before {
+        border-top: 0;
+        margin: 0;
+    }
+    .order_time .appointment_detail .deta_boxs .deta_box._haveDiscount .deta_content {
+        display: block;
+    }
+    .order_time .appointment_detail .deta_boxs .deta_box .deta_content time {
+        width: 50%;
     }
     /** BEGIN order_time **/
 
@@ -1705,11 +1852,15 @@
         background: #f3f3f3;
     }
     .stepBox.fill_box .appointment_detail .deta_box {
-        padding: 20px 9px;
+        padding: 9px;
     }
     .stepBox.fill_box .appointment_detail .program {
         margin-bottom: 0;
         display: block;
+        margin-top: 5px;
+    }
+    .stepBox.fill_box .appointment_detail .deta_box._haveSub > .program {
+        margin-bottom: 5px;
     }
     .appointment_detail .program .sarebate {
         background: #d76050;
@@ -1727,6 +1878,7 @@
     .stepBox.fill_box .instant,
     .stepBox.fill_box .demands {
         padding: 20px 5% !important;
+        border-top: 1px solid #ddd;
     }
     .stepBox.fill_box .mobile-plan-stecla .plan-box .scroll li:last-child,
     .stepBox.fill_box .priceBox .valuation:last-child {
@@ -1734,7 +1886,6 @@
     }
     .stepBox.fill_box .demands {
         border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
     }
     /** END order_form **/
 

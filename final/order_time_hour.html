@@ -134,7 +134,7 @@
 
 
 	        <!--main-->
-	        <main>
+	        <main class="_chooseNo _noEquip">
 	            <!-- breadcrumb -->
 	            <div class="breadcrumb">
 	                <ul>
@@ -162,74 +162,7 @@
 	                <div class="orderContainer ">
 	                    <div id="sec1" class="orderInformation1">
 	                        <h2>選擇日期</h2>
-	                        <div class="calendar">
-	                            <div class="monweek">
-	                                <div class="month">
-	                                    <a href="javascript:;"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                                        <p>2017 四月</p>
-                                        <a href="javascript:;"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	                                </div>
-	                                <ul class="week">
-	                                    <li>日</li>
-	                                    <li>一</li>
-	                                    <li>二</li>
-	                                    <li>三</li>
-	                                    <li>四</li>
-	                                    <li>五</li>
-	                                    <li>六</li>
-	                                </ul>
-	                            </div>
-
-	                            <ul class="day">
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no"></li>
-	                                <li class="no">1</li>
-	                                <li class="no">2</li>
-	                                <li class="no">3</li>
-	                                <li class="no">4</li>
-	                                <li class="no">5</li>
-	                                <li class="no">6</li>
-	                                <li class="no">7</li>
-	                                <li class="no">8</li>
-	                                <li class="no">9</li>
-	                                <li class="no">10</li>
-	                                <li class="no">11</li>
-	                                <li class="no">12</li>
-	                                <li class="no">13</li>
-	                                <li class="no">14</li>
-	                                <li class="no">15</li>
-	                                <li class="no">16</li>
-	                                <li class="no">17</li>
-	                                <li class="no">18</li>
-	                                <li class="no">19</li>
-	                                <li class="no">20</li>
-	                                <!-- 點擊狀態是會加一個active的class  能點擊的只有可選取的部分-->
-	                                <!-- 一般狀態 -->
-									<li class="general">21<div class="money">$3,000</div></li>
-									<li class="general">22<div class="money">$3,000</div></li>
-									<li class="general">23<div class="money">$3,000</div></li>
-									<li class="general">24<i class="lightning"></i><div class="money">$70,000</div></li>
-									<!-- 折扣狀態 -->
-									<li class="fold">25<span>7折</span><div class="money">$2,100</div></li>
-									<li class="fold">26<span>7折</span><i class="lightning"></i><div class="money">$100,000</div></li>
-									<li class="fold">27<span>7折</span><div class="money">$2,100</div></li>
-									<li class="fold">28<i class="lightning"></i><span>7折</span><div class="money">$2,100</div></li>
-									<!-- 一般狀態 -->
-									<li class="general">29<i class="lightning"></i><div class="money">$3,000</div></li>
-									<li class="general">30<i class="lightning"></i><div class="money">$70,000</div></li>
-									<!-- 無 -->
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                                <li></li>
-	                            </ul>
-	                        </div>
+	                        <div class="calendar"></div>
 	                        <!-- /calendar -->
 	                        <div class="instant-tip">
 	                            <h1>即時預訂<i class="fa fa-bolt" aria-hidden="true"></i></h1>
@@ -262,9 +195,7 @@
 	                                </a>
 	                            </li>
 	                        </ul>
-	                        <div class="order_tiemBox">
-	                            <!-- 預設 不可能選擇狀態 -->
-	                        </div>
+	                        <div class="order_tiemBox" data-pid=""></div>
 	                    </div>
 	                    <div class="orderInformation3">
 	                        <h2>設備需求(免費提供)</h2>
@@ -272,25 +203,26 @@
 	                        	<div class="box needmore">
 			                        <div class="add">
 			                            <ul class="bonus">
-			                                <li>
+			                                <li data-price="10" data-name="投影機與螢幕 (TWD 10/組)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d1">
 															<input type="checkbox" id="d1">
 															<i><img src="dist/images/equipment_icon1.jpg"></i>
-															<span>投影機與螢幕 (TWD 0/組)</span>
+															<span>投影機與螢幕 (TWD 10/組)</span>
 														</label>
 														<div class="number">
-															<select data-price="100" data-name="投影機與螢幕 (TWD 0/組)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="10" data-name="無線麥克風 (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d2">
@@ -299,34 +231,36 @@
 															<span>無線麥克風 (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="100" data-name="無線麥克風 (TWD 0/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="有線麥克風 (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d3">
 															<input type="checkbox" id="d3">
 															<i><img src="dist/images/equipment_icon3.jpg"></i>
-															<span>有線麥克風 (TWD 10/支)</span>
+															<span>有線麥克風 (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="10" data-name="有線麥克風 (TWD 10/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="耳掛式麥克風A (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d4">
@@ -335,118 +269,125 @@
 															<span>耳掛式麥克風A (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="0" data-name="耳掛式麥克風A (TWD 0/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="耳掛式麥克風B (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d5">
 															<input type="checkbox" id="d5">
 															<i><img src="dist/images/equipment_icon2.jpg"></i>
-															<span>耳掛式麥克風B (TWD 5/支)</span>
+															<span>耳掛式麥克風B (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="5" data-name="耳掛式麥克風B (TWD 5/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="投影機與螢幕 (TWD 0/組)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d6">
 															<input type="checkbox" id="d6">
 															<i><img src="dist/images/equipment_icon1.jpg"></i>
-															<span>投影機與螢幕 (TWD 33/組)</span>
+															<span>投影機與螢幕 (TWD 0/組)</span>
 														</label>
 														<div class="number">
-															<select data-price="33" data-name="投影機與螢幕 (TWD 33/組)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="無線麥克風 (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d7">
 															<input type="checkbox" id="d7">
 															<i><img src="dist/images/equipment_icon2.jpg"></i>
-															<span>無線麥克風 (TWD 20/支)</span>
+															<span>無線麥克風 (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="20" data-name="耳掛式麥克風A (TWD 1000/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="有線麥克風 (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d8">
 															<input type="checkbox" id="d8">
 															<i><img src="dist/images/equipment_icon3.jpg"></i>
-															<span>有線麥克風 (TWD 10/支)</span>
+															<span>有線麥克風 (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="10" data-name="有線麥克風 (TWD 10/支)"  disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="耳掛式麥克風A (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d9">
 															<input type="checkbox" id="d9">
 															<i><img src="dist/images/equipment_icon1.jpg"></i>
-															<span>耳掛式麥克風A (TWD 1000/支)</span>
+															<span>耳掛式麥克風A (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="1000" data-name="耳掛式麥克風A (TWD 1000/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
 			                                    </div>
 			                                </li>
-			                                <li>
+			                                <li data-price="0" data-name="耳掛式麥克風B (TWD 0/支)">
 			                                    <div class="col">
 			                                        <span class="assess">
 														<label for="d10">
 															<input type="checkbox" id="d10">
 															<i><img src="dist/images/equipment_icon2.jpg"></i>
-															<span>耳掛式麥克風B (TWD 1/支)</span>
+															<span>耳掛式麥克風B (TWD 0/支)</span>
 														</label>
 														<div class="number">
-															<select data-price="1" data-name="耳掛式麥克風B (TWD 1/支)" disabled="disabled">
-																<option>100</option>
-																<option>20</option>
-																<option>10</option>
+															<select disabled="disabled">
+																<option value="0">請選擇</option>
+																<option value="100">100</option>
+																<option value="20">20</option>
+																<option value="10">10</option>
 															</select>
 														</div>
 													</span>
@@ -475,7 +416,7 @@
 	                    </div>
 	                    <!-- 前往購買 -->
 	                    <div class="custodyBtn onlineBtn">
-	                        <a href="order_cart.html"><span class="btn btn-c-3 btn-m">前往購買</span></a>
+	                        <a class="disable" href="order_cart.html"><span class="btn btn-c-3 btn-m">前往購買</span></a>
 	                        <span>
 								<p>您的預訂享有7天內免費取消的保障</p>
 								<p>一個月內的預訂除外，請參閱<a href="#" target="_blank">平台取消條款</a></p>
@@ -483,7 +424,7 @@
 	                    </div>
 	                    <!-- 提出申請 -->
 	                    <div class="custodyBtn rftBtn">
-	                        <a href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+	                        <a class="disable" href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
 	                        <span>
 								<p>場地業主將於1-2工作天內回覆您的需求</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
@@ -491,7 +432,7 @@
 	                    </div>
 	                    <!-- 提出申請 -->
 	                    <div class="custodyBtn rftBtn">
-	                        <a href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+	                        <a class="disable" href="order_cart.html"><span class="btn btn-c-3 btn-m">提出申請</span></a>
 	                        <span>
 								<p>您的選購中包含無法即時確認的項目，將會一起提出申請，需等待回覆。<br>
 									場地主將於1-2工作天內回覆您的需求。</p>
@@ -510,17 +451,7 @@
 								</div>
 								<div class="app_text">藝文推廣中心三樓會議室（一）</div>
 							</div>
-	                        <div class="appointment_detail">
-	                        	<div class="appointment_item" data-id="">
-	                        		<div class="appointment_deta">
-	                        			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-	                        			<time></time>
-	                        		</div>
-	                        		<div class="deta_boxs">
-	                        			<mn total></mn>
-	                        		</div>
-	                        	</div>
-	                        </div>
+	                        <div class="appointment_detail"></div>
 
 							<!-- 設備需求 -->
 							<div class="demand">
@@ -565,7 +496,7 @@
 
                         <div class="custodyBtn rftBtn">
                         	<!-- 前往購買 -->
-                            <a href="#"><span class="btn btn-c-3 btn-m">前往購買</span></a>
+                            <a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-m">前往購買</span></a>
                             <span>
 								<p>您的預訂享有7天內免費取消的保障</p>
 								<p>一個月內的預訂除外，請參閱<a href="#" target="_blank">平台取消條款</a></p>
@@ -573,7 +504,7 @@
 						</div>
 						<div class="custodyBtn rftBtn">
 							<!-- 提出申請 -->
-							<a href="#"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+							<a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-m">提出申請</span></a>
                             <span>
 								<p>場地業主將於1-2工作天內回覆您的需求</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
@@ -581,7 +512,7 @@
 						</div>
 						<div class="custodyBtn rftBtn">
 							<!-- 提出申請 -->
-							<a href="#"><span class="btn btn-c-3 btn-m">提出申請</span></a>
+							<a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-m">提出申請</span></a>
                             <span>
 								<p>您的選購中包含無法即時確認的項目，將會一起提出申請，需等待回覆。場地主將於1-2工作天內回覆您的需求。</p>
 								<p><b>發出需求不代表訂單成立，您暫時不會被收費！</b></p>
@@ -593,7 +524,7 @@
 	            <!-- 手機用價格方案 -->
 	            <div class="mobile-plan-stecla mobile">
 	                <div class="plan-box">
-	                    <p class="title">價格方案</p>
+	                    <p class="title">明細</p>
 	                    <div class="scroll">
 	                        <div class="appointment_Content">
 	                            <div class="appointment_photo">
@@ -602,15 +533,7 @@
 									</div>
 									<div class="app_text">藝文推廣中心三樓會議室（一）</div>
 								</div>
-		                        <div class="appointment_detail">
-		                        	<div class="appointment_item" data-id="">
-		                        		<div class="appointment_deta">
-		                        			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-		                        			<time></time>
-		                        		</div>
-		                        		<mn total></mn>
-		                        	</div>
-		                        </div>
+		                        <div class="appointment_detail"></div>
 	                        </div>
 	                        <!-- 設備需求 -->
 							<div class="demands">
@@ -651,8 +574,81 @@
 	                <a href="order_cart.html" class="reservation"><span class="btn btn-c-3 btn-m">確認購買<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
 	                 <!-- <a href="order_cart.html" class="reservation"><span class="btn btn-c-3 btn-m">提出申請<i class="fa fa-angle-right" aria-hidden="true"></i></span></a> -->
 	            </div>
+
+	            <div id="__template" style="display: none">
+
+	            	<div id="order_time_template">
+	            		<div class="order_timeContent [_CLASS]">
+							<ul>[_ITEM]</ul>
+						</div>
+	            	</div>
+	            	<div id="order_time_item_template">
+	            		<li class="[_CLASS]" data-discount="[_DISCOUNT]" data-cid="[_ID]">
+							<time>[_TIME]</time>
+							<div class="order_money">[_PRICE]</div>
+						</li>
+	            	</div>
+	            	<div id="cart_box_template">
+	            		<div class="appointment_item" data-pid="[_ID]">
+                    		<div class="appointment_deta">
+                    			<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                    			<time>[_TIME]</time>
+                    		</div>
+                    		<div class="deta_boxs">
+                    			<mn>[_ITEM]</mn>
+                    		</div>
+                    	</div>
+	            	</div>
+            		<div id="cart_box_pc_item_template">
+	            		<div class="[_CLASS]" data-cid="[_ID]">
+							<div class="deta_content">
+								<div class="program">
+									<div class="time">
+										<time>[_TIME]</time>
+									</div>
+									<div class="name">
+										<span>[_NAME]</span>
+									</div>
+								</div>
+								<div class="_prices">
+									<div class="discount">
+										<span>[_BPRICE]</span>
+									</div>
+									<div class="rebate">
+										<span>[_PRICE]</span>
+									</div>
+									<div class="sarebate">
+										<span>[_DISCOUNT]</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	            	</div>
+	            	<div id="cart_box_mb_item_template">
+	            		<div class="[_CLASS]" data-cid="[_ID]">
+							<div class="deta_content">
+								<time>[_TIME]</time>
+								<span class="discount">[_BPRICE]</span>
+								<div class="rebate">[_PRICE]</div>
+							</div>
+							<div class="program">
+								<b>[_NAME]</b>
+								<div class="formula">
+									<span class="sarebate">[_DISCOUNT]</span>
+								</div>
+							</div>
+						</div>
+	            	</div>
+	            	<div id="equip_item_template">
+	            		<li>
+	            			<span>[_NAME]X[_NUM]</span>
+	            		</li>
+	            	</div>
+
+	            </div>
 	    	</main>
 	    	<!--/main-->
+
 
 		    <!-- top -->
 		    <a href="javascript:;" class="gotop"></a>
@@ -837,50 +833,31 @@
 	                    $(this).addClass('active');
 	                    $('.order_timeContent.active').removeClass('active');
 	                    $('.order_timeContent:eq(' + st_current + ')').addClass('active');
-	                    console.log(st_current);
 	                });
 	            } else if ($(this).width() > 768) {
 	                $('.order_timeList').removeClass('ord_mo');
 	                $('.order_timeList li,.order_timeContent').removeClass('active');
-
 	            }
 	        }
 	        ored();
 	        $(window).on('resize', function() {
 	            ored();
 	        });
-	        //日歷點擊
-	        $('li.general, li.fold').on('click', function() {
-	            if (!$(this).hasClass('active')) {
-	                $('li.general,li.fold').removeClass('active');
-	                $(this).addClass('active');
-	            } else {
-	                $('li.general,li.fold').removeClass('active');
-	                $(this).addClass('active');
-	            };
-	            //點下往下移
-	            var heh = $('.orderInformation2 h2').height() + 30;
-	            $('html, body').animate({
-	                scrollTop: $(".orderInformation2").offset().top - heh
-	            }, 800);
-	        });
+
 	    </script>
 	    <script>
 	        $('.calendar').Jdatepicker({
-	            default_date: '2018-01-08', //預設起始日期(會執行起始日期點擊事件)
-	            defalut_click_event: function(e) {
-	                $('mn[ajx_event_obj]').html('');
-	                $('.appointment_deta time').html($('.calendar').attr('select-date'));
-	                // selecttour();
-	            }, //預設每日點擊事件
+	            default_date:'2018-01-19',//預設起始日期(會執行起始日期點擊事件)
+	            defalut_click_event: function(e) {}, //預設每日點擊事件
 	            old_no_work: true, //預設日期之前不作用
+	            disabled_date:['2018-01-18','2018-01-23~2018-01-24','2018-01-25~2999-01-28'],	//關閉作用日期
 	            event_date: { //日期事件資料
 	                '2018-01-19': { //日期
 	                    discount: '6折', //顯示折價
 	                    price: '$2,800', //價格
 	                    order: true, //是否有閃電符號
 	                    click_event: function(e) {
-                            ajx_get('2018-01-19b');
+	                    	doShowDetail('2018-01-19');
                         } //點擊處理事件
 	                },
 	                '2018-01-20': {
@@ -888,7 +865,7 @@
 	                    price: '$3,000',
 	                    order: true,
 	                    click_event: function(e) {
-	                        ajx_get('2018-01-20b');
+	                    	doShowDetail('2018-01-20');
 	                    }
 	                },
 	                '2018-01-21': {
@@ -896,143 +873,492 @@
 	                    price: '$3,500',
 	                    order: true,
 	                    click_event: function(e) {
-	                        alert('點擊事件觸發');
+	                    	doShowDetail('2018-01-21');
 	                    }
 	                },
 	                '2018-01-22': {
+	                	discount: '',
 	                    price: '$3,000',
-	                    order: true
+	                    order: true,
+	                    click_event: function(e) {
+	                    	doShowDetail('2018-01-22');
+	                    }
 	                },
 	            }
 	        });
 
-	        $('.equipment input:checkbox').each(function(idx, obj) {
-	            $(obj).parentsUntil('ul').last().find('select').attr('disabled', 'disabled');
-	            $(obj).on('click', function(event) {
-	                if ($(event.target)[0].checked == true) {
-	                    $(event.target).parentsUntil('ul').last().find('select').removeAttr('disabled');
-	                } else {
-	                    $(event.target).parentsUntil('ul').last().find('select').attr('disabled', 'disabled');
-	                }
-					selecttour();
-	            });
+	        var cart_array = []; // cart total info
+	        var equip_array = []; // cart equipment total info
+	        var cart_price = 0; // cart total price
+	        var equip_price = 0; // equip total price
+
+	        var _all_time_array = {
+				'06:00-07:00' : {
+					'name' : '上午',
+					'time' : '06:00-07:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'07:00-08:00' : {
+					'name' : '上午',
+					'time' : '07:00-08:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'08:00-09:00' : {
+					'name' : '上午',
+					'time' : '08:00-09:00',
+					'disable' : true,
+					'discount' : '6折',
+					'onlineb' : true,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'09:00-10:00' : {
+					'name' : '上午',
+					'time' : '09:00-10:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'10:00-11:00' : {
+					'name' : '上午',
+					'time' : '10:00-11:00',
+					'disable' : false,
+					'discount' : '',
+					'onlineb' : true,
+					'price' : '4,000',
+					'bprice' : '1,000'
+				},
+				'11:00-12:00' : {
+					'name' : '上午',
+					'time' : '11:00-12:00',
+					'disable' : false,
+					'discount' : '',
+					'onlineb' : true,
+					'price' : '5,000',
+					'bprice' : '1,000'
+				},
+				'12:00-13:00' : {
+					'name' : '下午',
+					'time' : '12:00-13:00',
+					'disable' : false,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'13:00-14:00' : {
+					'name' : '下午',
+					'time' : '13:00-14:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'14:00-15:00' : {
+					'name' : '下午',
+					'time' : '14:00-15:00',
+					'disable' : true,
+					'discount' : '6折',
+					'onlineb' : true,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'15:00-16:00' : {
+					'name' : '下午',
+					'time' : '15:00-16:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'16:00-17:00' : {
+					'name' : '下午',
+					'time' : '16:00-17:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : true,
+					'price' : '4,000',
+					'bprice' : '1,000'
+				},
+				'17:00-18:00' : {
+					'name' : '下午',
+					'time' : '17:00-18:00',
+					'disable' : false,
+					'discount' : '9折',
+					'onlineb' : true,
+					'price' : '5,000',
+					'bprice' : '1,000'
+				},
+				'18:00-19:00' : {
+					'name' : '傍晚',
+					'time' : '18:00-19:00',
+					'disable' : false,
+					'discount' : '6折',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'19:00-20:00' : {
+					'name' : '傍晚',
+					'time' : '19:00-20:00',
+					'disable' : false,
+					'discount' : '6折',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'20:00-21:00' : {
+					'name' : '傍晚',
+					'time' : '20:00-21:00',
+					'disable' : true,
+					'discount' : '6折',
+					'onlineb' : true,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'21:00-22:00' : {
+					'name' : '傍晚',
+					'time' : '21:00-22:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : false,
+					'price' : '2,000',
+					'bprice' : '1,000'
+				},
+				'22:00-23:00' : {
+					'name' : '傍晚',
+					'time' : '22:00-23:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : true,
+					'price' : '4,000',
+					'bprice' : '1,000'
+				},
+				'23:00-24:00' : {
+					'name' : '傍晚',
+					'time' : '23:00-24:00',
+					'disable' : true,
+					'discount' : '',
+					'onlineb' : true,
+					'price' : '5,000',
+					'bprice' : '1,000'
+				}
+			};
+
+			function cleanArray(actual) {
+			  	var newArray = new Array();
+			  	for (var i = 0; i < actual.length; i++) {
+			    	if (actual[i]) {
+			      		newArray.push(actual[i]);
+			    	}
+			  	}
+			  	return newArray;
+			}
+
+			// click time
+			$('#sec2').on('click', '._item', function(){
+	        	if($(this).hasClass('_disable')) return;
+	        	var pid = $(this).parents('.order_tiemBox').attr('data-pid');
+	        	var cid = $(this).attr('data-cid');
+
+	        	if ($(this).hasClass('_active')) {
+	        		while (cart_array[pid].indexOf(cid) !== -1) {
+					  	delete cart_array[pid][cart_array[pid].indexOf(cid)];
+					  	for (var obj in cart_array) {
+					  		cart_array[obj] = cleanArray(cart_array[obj]);
+					  	}
+					}
+	        	} else {
+		        	if (typeof cart_array[pid] != "undefined") {
+		        		cart_array[pid].push(cid);
+		        	} else {
+		        		cart_array[pid] = [cid];
+		        	}
+	        	}
+
+	        	doCheckCart();
 	        });
 
-	        function ajx_get(data_date) {
-	            var heh = $('.orderInformation2 h2').height() + 30;
-	            $('html, body').animate({
-	                scrollTop: $(".orderInformation2").offset().top - heh
-	            }, 800);
-	            $.ajax({
-	                url: data_date + ".txt",
-	                type: "GET",
-	                dataType: 'text',
-	                async: false,
-	                success: function(msg) {
-	                	$('.orderInformation2').removeClass('_none');
-	                    $('.order_tiemBox').html(msg);
-	                    $("ul.period_content>li label").click(function() {
-	                        $(this).parent().parent().parent().find("ul.sub").toggle();
-	                    });
-	                }
-	            });
-	            apnwork();
-	        }
-
-	        //--物件事件綁定
-	        function apnwork() {
-	            $(apn).on('change', function() {
-	                selecttour()
-	            }).on('blur', function() {
-	                selecttour()
-	            }).on('click', function() {
-	                selecttour()
-	            });
-	        }
-
-	        //--計算總額
-	        var apn = '[data-name][data-price],[data-name][data-select]';
-	        // 名稱, 價格, 數量, 時間, 原價, 折扣
-
-	        function adtext(name,price,count,timerange,bprice,decode){
-				//$('.purchase_value-add-wrapper[total]').append('<li><div class="ia-wrapper"><div class="item">'+name+'</div><div class="amount">X '+count+'</div></div><div class="price"><span>TWD</span><span>'+price+'</span></div></li>');
-
-				if (typeof(timerange)!="undefined" && timerange!=null && timerange!='') {
-					var pc_id_elem = $('.appointment_Result .appointment_item');
-	            	var mb_id_elem = $('.mobile-plan-stecla.mobile .appointment_item');
-					var _class = " ";
-	                if (bprice != null) _class += '_haveDiscount';
-					pc_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><div class="program"><div class="time"><time>'+ timerange + '</time></div><div class="name"><span>' + name + '</span></div></div><div class="_prices">' + (bprice != null ? '<div class="discount"><span>TWD ' + bprice + '</span></div>' : '') + (price != null ? '<div class="rebate"><span>TWD ' + price + '</span></div>' : '') + (decode != null ? '<div class="sarebate"><span>' + decode + '</span></div>' : '') + '</div></div></div>');
-					mb_id_elem.find('mn[total]').append('<div class="deta_box' + _class + '"><div class="deta_content"><time>' + timerange + '</time>'+ (bprice != null ? '<span class="discount">TWD ' + bprice + '</span>' : '') + (price != null ? '<div class="rebate">TWD ' + price + '</div>' : '') + '</div><div class="program"><b>' + name + '</b><div class="formula">' + (decode != null ? '<span class="sarebate">' + decode + '</span>' : '') + '</div></div></div>');
+	    	// switch equip number
+	    	$('.equipment').on('change', 'input:checkbox', function() {
+				var li_elem = $(this).parents('li');
+				var _name = (li_elem.attr('data-name'));
+	    		var select_elem = li_elem.find('.number').find('select');
+	    		if ($(this)[0].checked == true) {
+					select_elem.removeAttr('disabled');
 				} else {
-					$('mn[total2]').append('<li><span>'+name+'X'+count+' </span></li>');
+					select_elem.attr('disabled', 'disabled');
+					delete equip_array[_name]; // delete equip
 				}
-			}
+				li_elem.find('select').change();
+	    		var li_elem = $(this).parents('li');
+	    	});
+	    	$('.equipment').on('change', 'select', function() {
+	    		var val = $(this).val();
+	    		var li_elem = $(this).parents('li');
+	    		var _name = li_elem.attr('data-name');
+	    		if (!($(this).attr('disabled') == 'disabled' || val == '0')) {
+		    		var _price = li_elem.attr('data-price');
+	    			var _num = val;
+		    		equip_array[_name] = {
+		    			'name' : _name,
+		    			'price' : _price,
+		    			'num' : _num
+		    		}
+		    	} else {
+		    		delete equip_array[_name]; // delete equip
+		    	}
+	    		accessEquipList();
+	    	});
 
-	        function selecttour(){
-				var post_fee = 3600;
-				var total = 0;
-				$('mn[total],mn[total2]').html('');
-				$(apn).each(function(idx,obj){
-					if ($(obj).attr('data-select')!=null&&$(obj).attr('disabled')==null&&$(obj).val()*1>0){
-						if ($(obj).attr('data-odate')!=null){
-							total += $(obj).val()*1;
-							// 名稱, 價格, 數量, 時間, 原價, 折扣
-							adtext(
-								$(obj).attr('data-name'),
-								$(obj).val(),
-								1,
-								$(obj).attr('data-odate'),
-								$(obj).attr('data-bprice'),
-								$(obj).attr('data-decode')
-							);
-						}else{
-							total += $(obj).val()*1;
-							adtext(
-								$(obj).attr('data-name'),
-								$(obj).val(),
-								1,
-								$(obj).attr('data-odate'),
-								$(obj).attr('data-bprice'),
-								$(obj).attr('data-decode')
-							);
-						}
-					}else if ($(obj).attr('data-price')!=null&&$(obj).filter(':visible').length>0&&$(obj).attr('disabled')==null&&$(obj).val()*1>0){
-						total += $(obj).attr('data-price')*$(obj).val();
-						adtext(
-							$(obj).attr('data-name'),
-							$(obj).attr('data-price')*$(obj).val(),
-							$(obj).val(),
-							$(obj).attr('data-odate'),
-							$(obj).attr('data-bprice'),
-							$(obj).attr('data-decode')
-						);
-					}else if ($(obj).attr('data-price')!=null&&$(obj).filter(':checkbox').length>0&&$(obj)[0].checked&&$(obj).attr('data-odate')!=null){
-						total += $(obj).attr('data-price')*1;
-						adtext(
-							$(obj).attr('data-name'),
-							$(obj).attr('data-price')*1,
-							1,
-							$(obj).attr('data-odate'),
-							$(obj).attr('data-bprice'),
-							$(obj).attr('data-decode')
-						);
-					}
-				});
-				$('[totalprice_tn]').html(total);
-				$('[post_fee]').html(post_fee);
-				$('[totalprice]').html(total+post_fee);
-			}
-	        apnwork();
 
+	        function doShowDetail(__id) {
+	        	// scroll to
+        	 	var heh = $('.orderInformation2 h2').height() + 30;
+	            $('html, body').animate({ scrollTop: $(".orderInformation2").offset().top - heh }, 800);
+
+	            // check is this id
+	            var _pid = $('.order_tiemBox').attr('data-pid');
+	        	if (__id == _pid) return;
+	        	$('.order_tiemBox').attr('data-pid', __id);
+
+	        	// create template
+	        	var template_time_box = $('#__template #order_time_template').html();
+	        	var template_time_item = $('#__template #order_time_item_template').html();
+	        	var total_outer = "";
+	        	var _count = 0;
+	        	for (var i = 0; i < 3; i++) { // 上午, 下午, 晚上
+	        		var _template_outer = template_time_box;
+	        		var _array = "";
+	        		var total_item = "";
+	        		var _class1 = "";
+	        		if (i == 0) _class1 = 'active';
+
+    				for (var j = _count; j < _count+6; j++) { // 6個時段
+    					var _template_item = template_time_item;
+					  	var _cid = Object.keys(_all_time_array)[j];
+					  	var _class2 = "_item";
+					  	var obj = _all_time_array[Object.keys(_all_time_array)[j]];
+					  	var _name = obj['name'];
+					  	var _time = obj['time'];
+					  	var _disable = obj['disable'];
+					  	var _discount = obj['discount'];
+					  	var _onlineb = obj['onlineb'];
+					  	var _currency = 'TWD';
+					  	var _price = obj['price'];
+					  	var _bprice = obj['bprice'];
+					  	if (_disable) {
+					  		_class2 += ' _disable';
+				  		} else {
+						  	if (_discount != '' && _bprice != '') _class2 += ' _haveDiscount';
+						  	if (_onlineb == '1') _class2 += ' _onlineb';
+					  	}
+
+	        			_template_item = _template_item.replace(/\[_CLASS\]/g, _class2);
+	        			_template_item = _template_item.replace(/\[_ID\]/g, _cid);
+	        			_template_item = _template_item.replace(/\[_TIME\]/g, _time);
+	        			_template_item = _template_item.replace(/\[_DISCOUNT\]/g, _discount);
+	        			_template_item = _template_item.replace(/\[_PRICE\]/g, _currency + ' ' + _price);
+	        			total_item += _template_item;
+    				}
+    				_count += 6; // 一個循環
+
+	        		_template_outer = _template_outer.replace(/\[_CLASS\]/g, _class1);
+	        		_template_outer = _template_outer.replace(/\[_ITEM\]/g, total_item);
+	        		total_outer += _template_outer;
+	        	}
+	        	$('#sec2').find('.order_tiemBox').html(total_outer);
+	        	$('.orderInformation2').removeClass('_none'); // display
+	        	doCheckCart();
+	        }
+
+	        function doCheckCart() {
+				var _sec2_elem = $('#sec2');
+	        	for (var obj in cart_array) {
+	        		var obj_elem = _sec2_elem.find('.order_tiemBox[data-pid="'+obj+'"]');
+	        		obj_elem.find('.order_timeContent').find('._item').removeClass('_active');
+	        		for(var i = 0; i < cart_array[obj].length; i++) {
+	        			obj_elem.find('._item[data-cid="'+cart_array[obj][i]+'"]').addClass('_active');
+	        		}
+					if($.isEmptyObject(cart_array[obj])) delete cart_array[obj]; // delete pid
+	        	}
+
+	        	// sort date order
+			  	var keys = Object.keys(cart_array);
+			  	var len = keys.length;
+			  	var temp_array = [];
+				keys.sort();
+
+				for (var i = 0; i < len; i++) {
+				  	var _ki = keys[i];
+				  	var time_keys = cart_array[keys[i]];
+				  	var time_len = time_keys.length;
+				  	time_keys.sort();
+
+				  	temp_array[_ki] =  cart_array[_ki];
+				}
+				cart_array = temp_array;
+
+	        	accessCartList();
+	        }
+
+	        function accessCartList() {
+	        	var pc_cart_elem = $('.appointment_Result').find('.appointment_detail');
+	        	var mb_cart_elem = $('.mobile-plan-stecla.mobile').find('.appointment_detail');
+	        	var temp_cart_total = 0;
+
+	        	if (Object.keys(cart_array).length == 0) {
+	            	pc_cart_elem.empty();
+	            	mb_cart_elem.empty();
+	        	} else {
+		        	var pc_id_elem = $('.appointment_Result .appointment_item');
+	            	var mb_id_elem = $('.mobile-plan-stecla.mobile .appointment_item');
+	            	var template_cart_outer = $('#__template #cart_box_template').html();
+	            	var template_cart_pc_item = $('#__template #cart_box_pc_item_template').html();
+	            	var template_cart_mb_item = $('#__template #cart_box_mb_item_template').html();
+	            	var total_outer = "";
+	            	var total_outer_pc = "";
+	            	var total_outer_mb = "";
+
+	            	for (var obj in cart_array) {
+		            	var total_item_pc = "";
+		            	var total_item_mb = "";
+	            		var _template_cart_outer_pc = template_cart_outer;
+	            		var _template_cart_outer_mb = template_cart_outer;
+
+	            		var pid = obj;
+	            		var cid = cart_array[obj];
+	            		for (var obj2 in cid) {
+		            		var _template_cart_pc_item = template_cart_pc_item;
+		            		var _template_cart_mb_item = template_cart_mb_item;
+		            		var _id = cid[obj2];
+		            		var _array = _all_time_array[_id];
+		            		var _index = Object.keys(_all_time_array).indexOf(_id);
+		            		var _class = " deta_box";
+		            		var _name = _array['name'];
+		            		var _time = _array['time'];
+						  	var _discount = _array['discount'];
+						  	var _onlineb = _array['onlineb'];
+						  	var _currency = 'TWD';
+						  	var _price = _array['price'];
+						  	var _bprice = _array['bprice'];
+						  	if (_discount != '' && _bprice != '') _class += ' _haveDiscount';
+						  	if (_onlineb == '1') _class += ' _onlineb';
+
+		            		// pc
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_CLASS\]/g, _class);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_ID\]/g, _id);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_TIME\]/g, _time);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_NAME\]/g, _name);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_BPRICE\]/g, _currency + ' ' + _bprice);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_PRICE\]/g, _currency + ' ' + _price);
+		            		_template_cart_pc_item = _template_cart_pc_item.replace(/\[_DISCOUNT\]/g, _discount);
+
+		            		// mb
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_CLASS\]/g, _class);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_ID\]/g, _id);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_TIME\]/g, _time);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_NAME\]/g, _name);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_BPRICE\]/g, _currency + ' ' + _bprice);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_PRICE\]/g, _currency + ' ' + _price);
+		            		_template_cart_mb_item = _template_cart_mb_item.replace(/\[_DISCOUNT\]/g, _discount);
+
+		            		total_item_pc += _template_cart_pc_item;
+		            		total_item_mb += _template_cart_mb_item;
+
+		            		temp_cart_total += parseInt(_price.replace(/,/g, '')) // add to total
+		            	}
+		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_ID\]/g, pid);
+		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_TIME\]/g, pid);
+		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_ITEM\]/g, total_item_pc);
+		            	total_outer_pc += _template_cart_outer_pc;
+
+		            	_template_cart_outer_mb = _template_cart_outer_mb.replace(/\[_ID\]/g, pid);
+		            	_template_cart_outer_mb = _template_cart_outer_mb.replace(/\[_TIME\]/g, pid);
+		            	_template_cart_outer_mb = _template_cart_outer_mb.replace(/\[_ITEM\]/g, total_item_mb);
+		            	total_outer_mb += _template_cart_outer_mb;
+	            	}
+
+	            	// pc
+	            	pc_cart_elem.html(total_outer_pc);
+	            	// mb
+	            	mb_cart_elem.html(total_outer_mb);
+	            }
+
+            	cart_price = temp_cart_total; // add to total
+
+            	totalPrice(); // total price
+	        }
+
+	        function accessEquipList() {
+	    		var template_equip_item = $('#__template #equip_item_template').html();
+	    		var total_equip = '';
+	    		var temp_price_total = 0
+	    		for (var obj in equip_array) {
+	    			var _template_equip_item = template_equip_item;
+	    			var _array = equip_array[obj];
+		    		var _name = _array['name'];
+		    		var _price = _array['price'];
+		    		var _num = _array['num'];
+		    		_template_equip_item = _template_equip_item.replace(/\[_NAME\]/g, _name);
+		    		_template_equip_item = _template_equip_item.replace(/\[_NUM\]/g, _num);
+        			total_equip += _template_equip_item;
+        			temp_price_total += parseInt(_price.replace(/,/g, ''))*parseInt(_num);
+	    		}
+	    		$('mn[total2]').html(total_equip);
+
+	    		equip_price = temp_price_total; // add to total
+
+	    		totalPrice(); // total price
+	    	}
+
+	    	function switchChooseNo() {
+	    		var cart_length = Object.keys(cart_array).length;
+	    		var equip_length = Object.keys(equip_array).length;
+	    		if (cart_length == 0) {
+	    			$('main').addClass('_chooseNo');
+	    			$('.custodyBtn').find('a').addClass('disable');
+	    		} else {
+	    			$('main').removeClass('_chooseNo');
+	    			$('.custodyBtn').find('a').removeClass('disable');
+	    		}
+	    		if (equip_length == 0) {
+	    			$('main').addClass('_noEquip');
+	    		} else {
+	    			$('main').removeClass('_noEquip');
+	    		}
+	    	}
+
+	        function totalPrice() {
+	        	switchChooseNo();
+	        	var total_price = parseInt(cart_price + equip_price);
+	        	var total_fee_number = 10;
+	        	var total_fee = 0;
+	        	if (total_price > 0) {
+	        		total_fee = total_price*total_fee_number/100;
+	        	}
+
+				$('[totalprice_tn]').html(total_price);
+				$('[post_fee]').html(total_fee);
+				$('[totalprice]').html(total_price + total_fee);
+	        }
+
+	        // scroll event
 	        $(window).on('scroll', function() {
-
 	            if ($(this).scrollTop() >= $('.writeContent').position().top && ($('.orderInformation2').position().top >= $('.appointment_Result').position().top || $(this).scrollTop() <= $('.orderInformation2').position().top + $('.writeContent').position().top)) {
-	                //if ($('.orderInformation3').position().top<=$('.appointment_Result').position().top+$('.appointment_Result').height()&&$(this).scrollTop()>$('.writeContent').position().top+$('.appointment_Result').position().top){
-	                //	$('.appointment_Result').css('position','relative').css('top',$('.orderInformation3').position().top-$('.appointment_Result').height());
-	                //}else{
 	                $('.appointment_Result').css('position', 'relative').css('top', $(this).scrollTop() - $('.writeContent').position().top);
-	                //}
 	            } else if ($(this).scrollTop() <= $('.writeContent').position().top) {
 	                $('.appointment_Result').css('position', 'relative').css('top', '0');
 	            }

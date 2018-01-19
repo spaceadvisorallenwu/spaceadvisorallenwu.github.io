@@ -541,6 +541,7 @@ footer .bottom li:last-child a:last-child:hover img {
 .layui-laydate .layui-laydate-list li:hover,
 .layui-laydate .layui-laydate-content td.laydate-selected {
     background-color: rgba(215, 96, 80, .3);
+    display: none;
 }
 
 
