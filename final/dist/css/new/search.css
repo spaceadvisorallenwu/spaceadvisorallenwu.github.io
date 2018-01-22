@@ -19,9 +19,23 @@
 .search main > .search-box .first .input a {
     font-size: 15px;
 }
+.search.mapBox main > .search-box .first .input {
+    position: relative;
+    width: 100%;
+}
+.search.mapBox main > .search-box .first .input input {
+    width: 85%;
+}
+.search.mapBox main > .search-box .first .input a {
+    right: 0;
+    position: absolute;
+}
 .search main > .search-box .first .popular p,
 .search main > .search-box .first .popular a {
     font-size: 13px;
+}
+.search main > .search-box .first .popular a:hover {
+    text-decoration: underline;
 }
 .search main > .search-box .first a.add {
     font-size: 15px;
@@ -377,7 +391,7 @@
 }
 .search.mapBox .search-box.searchPopup .first {
     border: 0;
-    padding: 20px 7% 20px 0;
+    padding: 20px 5% 20px 0;
 }
 .mapBox .map {
     top: 80px;
@@ -414,9 +428,6 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: all .4s;
 }
-.search.mapBox main>.search-box .first .input {
-    width: 100%;
-}
 .placeList .text .info_1 {
     padding: 0;
 }
@@ -434,7 +445,8 @@
 }
 .search main>.search-box .search_bar>.content>ul>li input.price::placeholder,
 .search main>.search-box .search_bar>.content>ul>li>input::placeholder,
-.search.mapBox .search-box.searchPopup .content li.detatime input::placeholder {
+.search.mapBox .search-box.searchPopup .content li.detatime input::placeholder,
+.search.mapBox .search-box.searchPopup .first .input input::placeholder {
     color: #9c9c9c !important;
 }
 .placeList .text {

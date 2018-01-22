@@ -363,6 +363,7 @@
 }
 .index .brand-list .brand a {
     display: inline-block;
+    margin-bottom: 0;
 }
 .index .brand-list .brand a img {
     transition: all .4s;

@@ -32,6 +32,14 @@
 
 
 /** BEGIN site-list **/
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+    opacity: .5;
+}
+.slick-slider .slick-prev:hover,
+.slick-slider .slick-next:hover {
+    opacity: 1;
+}
 .site-list .site-box .slick-prev {
     left: -5%;
 }
@@ -722,7 +730,14 @@
 }
 /** BEGIN termsLink **/
 
-
+/** BEGIN 未分類 **/
+.search main > .search-box .search_bar > .content > ul > li .search_item_detail {
+    padding-top: 15px;
+}
+.event tr:last-child {
+    margin-bottom: 0;
+}
+/** END 未分類 **/
 
 /** BEGIN Box open **/
 .box.open .add {
@@ -853,8 +868,8 @@
     background-size: 10%;
 }
 #wrapper .sequence .sequence-click {
-    padding: 1px;
-    height: 35px;
+    /*padding: 1px;*/
+    /*height: 35px;*/
 }
 #wrapper .sequence .sequence-click a {
     border-color: rgba(78, 110, 157, .8);
@@ -874,8 +889,8 @@
     border-radius: 0 5px 5px 0;
 }
 #wrapper .sequence .sequence-click a.this {
-    border-right: 1px solid #fff;
-    background: #f3f3f3;
+    /*border-right: 1px solid #fff;*/
+    background: #ccc;
     color: #4e6e9d;
 }
 #wrapper .sequence .sequence-select li select.have {
