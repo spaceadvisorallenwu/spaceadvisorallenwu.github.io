@@ -874,8 +874,8 @@
 #wrapper .sequence .sequence-click a {
     border-color: rgba(78, 110, 157, .8);
     font-size: 15px;
-    line-height: 31px;
-    height: 31px;
+    line-height: 35px;
+    height: 35px;
 }
 #wrapper .sequence .sequence-click a:hover {
     /*background-color: rgba(78, 110, 157, .5);*/

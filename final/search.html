@@ -17,6 +17,10 @@
 		<link href="dist/css/slick-theme.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/colorbox.css" rel="stylesheet" type="text/css" media=""/>
 
+		<!-- money bar -->
+	 	<link rel="stylesheet" href="dist/css/jslider.css" type="text/css">
+	 	<link rel="stylesheet" href="dist/css/jslider.round.plastic.css" type="text/css">
+
 		<!-- STYLES -->
 		<link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/basic_template.css" rel="stylesheet" type="text/css" media=""/>
@@ -331,7 +335,20 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<input type="number" name="textfield" min="0"  placeholder="容納人數"/>
+												<!-- <input type="number" name="textfield" min="0"  placeholder="容納人數"/> -->
+												<p>容納人數</p>
+												<select name="select-people" id="select-people" class="_select">
+													<option value="0">容納人數</option>
+													<option>不限</option>
+													<option>1-10人</option>
+													<option>10-20人</option>
+													<option>20-30人</option>
+													<option>30-40人</option>
+													<option>40-60人</option>
+													<option>60-80人</option>
+													<option>80-100人</option>
+													<option>100人以上</option>
+												</select>
 											</li>
 											<li>
 												<p>座位排列</p>
@@ -480,11 +497,18 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<p id="money1">請輸入最低金額和最高金額</p>
-												TWD
-												<input type="number" name="money1" value="" min="0" placeholder="最低金額" class="price pricemo_min"> -
-												<input type="number" name="money1" value="" min="0" placeholder="最高金額" class="price pricemo_max">以上
-												<!-- <a href="javascript:;" class="price_mo_areaBtn">確認</a> -->
+												<div class="search_item_area money">
+													<p>請輸入最低金額和最高金額</p>
+													<div class="moneyPrice">
+														<span class="_currency">TWD</span>
+														<input id="priceFrom_m"  type="number" class="price price_min" min="0" step="500" placeholder="最低金額"/>
+														<span class="_dashLine">-</span>
+														<input id="priceTo_m" type="number" class="price price_max" min="0" step="500" placeholder="最高金額"/>
+													</div>
+													<span class="moneyBarBox">
+														<input id="moneyBar_m" type="slider" name="price" value="1000;100000" />
+													</span>
+												</div>
 											</li>
 											<li>
 												<p>優惠</p>
@@ -529,31 +553,29 @@
 									<div class="search_item_detail">
 										<ul>
 											<li>
-												<input type="number" name="textfield" id="textfield" min="0" placeholder="坪數"/>
+												<!-- <input type="number" name="textfield" id="textfield" min="0" placeholder="坪數"/> -->
+												<p>坪數</p>
+												<select name="select-footage" id="select-footage" class="_select">
+													<option value="0">坪數</option>
+													<option>不限</option>
+													<option>10坪以下</option>
+													<option>10-20坪</option>
+													<option>20-30坪</option>
+													<option>30-40坪</option>
+													<option>40-50坪</option>
+													<option>50坪以上</option>
+												</select>
 											</li>
 											<li>
 												<p>場地數量</p>
-												<select name="select" id="select">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
-													<option>13</option>
-													<option>14</option>
-													<option>15</option>
-													<option>16</option>
-													<option>17</option>
-													<option>18</option>
-													<option>19</option>
-													<option>20+</option>
+												<select name="select" id="select" class="_select">
+													<option value="0">場地數量</option>
+													<option>不限</option>
+													<option>1個</option>
+													<option>2個</option>
+													<option>3個</option>
+													<option>4個</option>
+													<option>5個以上</option>
 												</select>
 											</li>
 											<!-- <li>
@@ -950,14 +972,14 @@
 							<ul>
 								<li class="no">
 									<select name="select" id="select">
-										<option>價格</option>
+										<option value="0">價格</option>
 										<option>價格由高到低</option>
 										<option>價格由低到高</option>
 									</select>
 								</li>
 								<li>
 									<select name="select" id="select">
-										<option>評價星等</option>
+										<option value="0">評價星等</option>
 										<option>評價星等由高到低</option>
 										<option>評價星等由低到高</option>
 									</select>
@@ -986,8 +1008,8 @@
 				</div>
 				<div class="search-send mobile">
 					<div class="search-send-group">
-						<a class="btn btn-c-4 btn-m" href="">清除</a>
-						<a class="btn btn-c-3 btn-m" href="">搜尋</a>
+						<a class="btn btn-c-4 btn-m _clearBtn" href="javascript:;">全部清除</a>
+						<a class="btn btn-c-3 btn-m" href="javascript:;">搜尋</a>
 					</div>
 				</div>
 				<!-- ****桌機用搜尋bar**** -->
@@ -995,7 +1017,7 @@
 					<div class="first">
 						<div class="input">
 							<input type="text" name="textfield" id="textfield" placeholder="輸入關鍵字" />
-							<a href="">搜尋</a>
+							<a href="javascript:;">搜尋</a>
 						</div>
 						<div class="popular">
 							<p>熱門：</p>
@@ -1140,7 +1162,19 @@
 								</li>
 								<li>
 									<p>人數</p>
-									<input type="number" name="textfield" min="0" class="number_change" placeholder="容納人數"/>
+									<!-- <input type="number" name="textfield" min="0" class="number_change" placeholder="容納人數"/> -->
+									<select name="select-people" id="select-people" class="_select">
+										<option value="0">容納人數</option>
+										<option>不限</option>
+										<option>1-10人</option>
+										<option>10-20人</option>
+										<option>20-30人</option>
+										<option>30-40人</option>
+										<option>40-60人</option>
+										<option>60-80人</option>
+										<option>80-100人</option>
+										<option>100人以上</option>
+									</select>
 									<div class="search_off">
 										<div class="search_item short">
 											<div class="search_item_name" id="seat">座位排列</div>
@@ -1247,14 +1281,20 @@
 											<div class="search_item_name" id="money">金額</div>
 											<i class="fa fa-angle-down" aria-hidden="true"></i>
 										</div>
-										<div id="search_amount" class="search_item_detail">
+										<div id="search_amount" class="search_item_detail" ng-controller="MainCtrl" ng-app="ranger">
 											<div class="search_item_open short"></div>
 											<div class="search_item_area money">
+												<!-- <label><input type="checkbox" value="none">不限金額</label> -->
 												<p>請輸入最低金額和最高金額</p>
-												TWD
-												<input type="number" name="money" value="" class="price price_min" min="0" placeholder="最低金額" /> -
-												<input type="number" name="money" value="" class="price price_max" min="0" placeholder="最高金額" />以上
-												<a href="javascript:;" class="price_areaBtn">確認</a>
+												<div class="moneyPrice">
+													<span class="_currency">TWD</span>
+													<input id="priceFrom" type="number" class="price price_min" min="0" step="500" placeholder="最低金額"/>
+													<span class="_dashLine">-</span>
+													<input id="priceTo" type="number" class="price price_max" min="0" step="500" placeholder="最高金額"/>
+												</div>
+												<span class="moneyBarBox">
+													<input id="moneyBar" type="slider" name="price" value="1000;100000" />
+												</span>
 											</div>
 										</div>
 										<!-- /search_item_detail -->
@@ -1306,29 +1346,25 @@
 								</li>
 								<li>
 									<p>場地</p>
-									<input type="number" name="textfield" min="0" class="number_change" placeholder="坪數" />
-									<select name="select" id="select" class="room">
-										<option value="N">場地數量</option>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-										<option>11</option>
-										<option>12</option>
-										<option>13</option>
-										<option>14</option>
-										<option>15</option>
-										<option>16</option>
-										<option>17</option>
-										<option>18</option>
-										<option>19</option>
-										<option>20+</option>
+									<!-- <input type="number" name="textfield" min="0" class="number_change" placeholder="坪數" /> -->
+									<select name="select-footage" id="select-footage" class="_select">
+										<option value="0">坪數</option>
+										<option>不限</option>
+										<option>10坪以下</option>
+										<option>10-20坪</option>
+										<option>20-30坪</option>
+										<option>30-40坪</option>
+										<option>40-50坪</option>
+										<option>50坪以上</option>
+									</select>
+									<select name="select" id="select" class="room _select">
+										<option value="0">場地數量</option>
+										<option>不限</option>
+										<option>1個</option>
+										<option>2個</option>
+										<option>3個</option>
+										<option>4個</option>
+										<option>5個以上</option>
 									</select>
 									<!-- <input type="text"  class="number_change" placeholder="住宿間數"/> -->
 								</li>
@@ -1499,6 +1535,7 @@
 								</li>
 							</ul>
 						</div>
+						<div class="_clearBtn">全部清除</div>
 					</div>
 					<!-- /search_bar -->
 				</div>
@@ -1663,14 +1700,14 @@
 						<div class="sequence-select">
 							<ul>
 								<li>
-									<select name="select" id="select">
+									<select name="select" id="select" class="_select">
 										<option value="0">價錢</option>
 										<option value="1">價格由高到低</option>
 										<option value="2">價格由低到高</option>
 									</select>
 								</li>
 								<li>
-									<select name="select" id="select">
+									<select name="select" id="select" class="_select">
 										<option value="0">星等</option>
 										<option value="1">評價星等由高到低</option>
 										<option value="2">評價星等由低到高</option>
@@ -2375,6 +2412,14 @@
 				});
 			});
 		</script>
+		<!-- money bar -->
+		<script type="text/javascript" src="dist/js/jshashtable-2.1_src.js"></script>
+		<script type="text/javascript" src="dist/js/jquery.numberformatter-1.2.3.js"></script>
+		<script type="text/javascript" src="dist/js/tmpl.js"></script>
+		<script type="text/javascript" src="dist/js/jquery.dependClass-0.1.js"></script>
+		<script type="text/javascript" src="dist/js/draggable-0.1.js"></script>
+		<script type="text/javascript" src="dist/js/jquery.slider.js"></script>
+
 		<script type="text/javascript" src="dist/js/laydate/laydate.js"></script>
 		<script type="text/javascript">
 			//input框++
@@ -2450,25 +2495,25 @@
 			});
 
 			//money change_mo
-			$('.price_mo_areaBtn').on('click',function(){
-				if($(".price pricemo_min").val() == "" && $(".pricemo_max").val() == ""){
-					$(".price pricemo_min").parent().parent().removeClass('have');
-					$(".price pricemo_min").parent().parent().siblings().removeClass('have');
-					$("#money1").html(div_array["money1"]);
-				}else{
-					$(".price pricemo_min").parent().parent().addClass('have');
-					$(".price pricemo_min").parent().parent().siblings().addClass('have');
-					if($(".price pricemo_min").val() != "" && $(".pricemo_max").val() != ""){
-						if(parseInt($(".price pricemo_min").val()) > parseInt($(".pricemo_max").val())){
-							var amount = $(".pricemo_max").val();
-							$(".pricemo_max").val($(".price pricemo_min").val());
-							$(".price pricemo_min").val(amount);
-						}
-					}else if($(".price pricemo_min").val() == "") $(".price pricemo_min").val("0");
-					$("#money1").html($(".pricemo_min").val() + "~" + $(".pricemo_max").val());
-				}
-				$('.search_item_detail').removeClass('open');
-			});
+			// $('.price_mo_areaBtn').on('click',function(){
+			// 	if($(".price pricemo_min").val() == "" && $(".pricemo_max").val() == ""){
+			// 		$(".price pricemo_min").parent().parent().removeClass('have');
+			// 		$(".price pricemo_min").parent().parent().siblings().removeClass('have');
+			// 		$("#money1").html(div_array["money1"]);
+			// 	}else{
+			// 		$(".price pricemo_min").parent().parent().addClass('have');
+			// 		$(".price pricemo_min").parent().parent().siblings().addClass('have');
+			// 		if($(".price pricemo_min").val() != "" && $(".pricemo_max").val() != ""){
+			// 			if(parseInt($(".price pricemo_min").val()) > parseInt($(".pricemo_max").val())){
+			// 				var amount = $(".pricemo_max").val();
+			// 				$(".pricemo_max").val($(".price pricemo_min").val());
+			// 				$(".price pricemo_min").val(amount);
+			// 			}
+			// 		}else if($(".price pricemo_min").val() == "") $(".price pricemo_min").val("0");
+			// 		$("#money1").html($(".pricemo_min").val() + "~" + $(".pricemo_max").val());
+			// 	}
+			// 	$('.search_item_detail').removeClass('open');
+			// });
 
 			//selsect
 			$(".room").change(function(){
@@ -2483,6 +2528,7 @@
 			laydate.render({
 				elem: '#test6'
 				,range: true
+				,trigger: 'click'
 				,done: function(value, date, endDate){
 					if(value != ""){
 						$(".day").addClass("have");
@@ -2494,6 +2540,7 @@
 			laydate.render({
 				elem: '#test7'
 				,range: true
+				,trigger: 'click'
 			});
 			$("body").click(function(event){
 				if($(event.target).parents(".search_off").length == 0  ){
@@ -2503,6 +2550,7 @@
 			});//點擊其他地方關閉
 		</script>
 		<script type="text/javascript">
+			// allen
 			$('.sequence.desk .sequence-select select').on('change', function(){
 				if($(this).val() != '0') {
 					$(this).addClass('have');
@@ -2510,6 +2558,63 @@
 					$(this).removeClass('have');
 				}
 			});
+			$('select._select').on('change', function(){
+				if($(this).val() != '0') {
+					$(this).addClass('have');
+				} else {
+					$(this).removeClass('have');
+				}
+			});
+			$('._clearBtn').on('click', function(){
+				$('.search_item_detail input:checked').trigger('click');
+				$('select._select').val('0').trigger('change');
+				$('.first input').val('');
+				$('#test6').trigger('click');
+				$('#test7').trigger('click');
+				$('.laydate-btns-clear').trigger('click');
+				var money_min = $("#moneyBar").slider()['settings']['from'];
+				var money_max = $("#moneyBar").slider()['settings']['to'];
+				$("#moneyBar, #moneyBar_m").slider("value", money_min, money_max);
+			})
+
+			// money bar
+			$("#moneyBar, #moneyBar_m").slider({
+				from: 1000, // 最小金額
+				to: 100000, // 最大金額
+				step: 500, // 間格
+				smooth: true,
+				round: 0,
+				skin: "round_plastic",
+				  	onstatechange: function( value ){
+				  		var _from = this['settings']['from'];
+				  		var _to = this['settings']['to'];
+				  		var _p0 = this['o']['pointers']['0']['value']['origin'];
+				  		var _p1 = this['o']['pointers']['1']['value']['origin'];
+				  		var ary = {
+				  			'from':_from,
+				  			'to':_to,
+				  			'p0':_p0,
+				  			'p1':_p1
+				  		}
+				  		updateMoneyBar(ary);
+			  	}
+			});
+			function updateMoneyBar(_ary) {
+				$('.price.price_min').val(_ary['p0']);
+				$('.price.price_max').val(_ary['p1']);
+				if ((_ary['p0'] == _ary['from']) && (_ary['p1'] == _ary['to'])) {
+					$('#moneyBar').parents('.search_off').find('.search_item').removeClass('have');
+					$('#moneyBar').parents('.search_item_detail').removeClass('have');
+				} else {
+					$('#moneyBar').parents('.search_off').find('.search_item').addClass('have');
+					$('#moneyBar').parents('.search_item_detail').addClass('have');
+				}
+			}
+			$('.price.price_min, .price.price_max').on('change', function() {
+				var _min = $(this).parents('.money').find('.price.price_min').val();
+				var _max = $(this).parents('.money').find('.price.price_max').val();
+				$("#moneyBar, #moneyBar_m").slider("value", _min, _max);
+			})
 		</script>
 	</body>
 </html>

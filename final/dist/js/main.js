@@ -310,16 +310,18 @@ $(function(){
 
 $(function(){
 	// tip
-	$('span._tip').poshytip({
-		className: 'tip-twitter',
-		showTimeout: 1,
-		alignTo: 'target',
-		alignX: 'center',
-		offsetY: 5,
-		allowTipHover: false,
-		fade: true,
-		slide: false
-	});
+	if ($('span._tip').length > 0) {
+		$('span._tip').poshytip({
+			className: 'tip-twitter',
+			showTimeout: 1,
+			alignTo: 'target',
+			alignX: 'center',
+			offsetY: 5,
+			allowTipHover: false,
+			fade: true,
+			slide: false
+		});
+	}
 });
 
 

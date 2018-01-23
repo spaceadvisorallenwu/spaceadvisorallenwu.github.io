@@ -72,7 +72,8 @@
     font-size: 15px;
 }
 .theme_list .sequence .input input {
-	padding-left: 35px;
+	background-image: unset;
+    padding-left: 9px;
 }
 
 /** BEGIN hotelList **/
@@ -137,6 +138,9 @@
 	margin: 9px auto;
     padding: 0;
     font-size: 13px;
+}
+.themezoneBox .sequence .input a:hover {
+	background: #c63e2b;
 }
 
 @media only screen and (max-width: 980px) {

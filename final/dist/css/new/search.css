@@ -19,6 +19,9 @@
 .search main > .search-box .first .input a {
     font-size: 15px;
 }
+.search main > .search-box .first .input a:hover {
+    background: #c63e2b;
+}
 .search.mapBox main > .search-box .first .input {
     position: relative;
     width: 100%;
@@ -76,8 +79,20 @@
 .search.mapBox .search-box.searchPopup .content li.detatime .day.have input {
     color: #4e5059;
 }
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail {
+    padding: 15px;
+    height: 0;
+    visibility: hidden;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail.open {
+    height: auto;
+    visibility: visible;
+}
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area span {
     font-size: 15px;
+}
+.search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_county {
+    min-width: 580px;
 }
 .search main > .search-box .search_bar > .content > ul > li > p {
     font-size: 15px;
@@ -85,6 +100,7 @@
     border-right: 1px solid #ddd;
     margin-right: 20px;
     padding: 5px 0;
+    min-width: 55px;
     width: 55px;
 }
 .search main > .search-box .search_bar > .content > ul > li select,
@@ -95,6 +111,11 @@
     border: 1px solid #ccc;
     background-color: #fff;
 }
+.search main > .search-box .search_bar > .content > ul > li select._select.have {
+    background-color: #ccc;
+    border-color: #fff;
+    color: #4e5059;
+}
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_pepole,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential,
@@ -104,13 +125,13 @@
 }
 .search.mapBox .search-box.searchPopup .content > ul > li #search_star,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential {
-    left: 74px;
+    left: 75px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_place {
-    left: -187px;
+    left: -186px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_facility {
-    left: -72px;
+    left: -71px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail {
     left: 75px;
@@ -143,7 +164,7 @@
 .search.mapBox main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
-    left: 189px;
+    left: 190px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_plan {
     left: 305px;
@@ -246,8 +267,13 @@
     font-size: 15px;
 }
 .search .search-list li .place .text span.price .sarebate {
+    background: #d76050;
+    color: #fff;
     border-radius: 5px;
-    padding: 1px 5px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 0 5px;
+    opacity: .8;
 }
 .search .search-list li .place .text span.price b b {
     font-size: 30px;
@@ -336,6 +362,69 @@
     font-size: 13px;
     margin-bottom: 5px;
 }
+#wrapper.search .search_item_area.money .moneyPrice {
+    display: flex;
+    align-items: center;
+}
+#wrapper.search .search_item_area.money > p {
+    color: gray;
+    font-weight: normal;
+}
+#wrapper.search .search_item_area.money .moneyPrice span {
+    width: unset;
+    float: unset;
+    margin: 0;
+}
+#wrapper.search .search_item_area.money .moneyPrice ._currency {
+    padding-right: 9px;
+}
+#wrapper.search .search_item_area.money .moneyPrice ._dashLine {
+    padding: 0 9px;
+}
+#wrapper.search .search_item_area.money .price.price_min,
+#wrapper.search .search_item_area.money .price.price_max {
+    margin-right: 3px;
+    padding: 0 0 0 11px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 90px !important;
+    text-align: center;
+    font-size: 15px;
+}
+#wrapper.search .search_item_area.money .moneyBarBox {
+    display: inline-block;
+    width: auto;
+    padding: 0 9px;
+}
+#wrapper.search .search_item_area.money .jslider,
+#wrapper.search .search_item_area.money .jslider span {
+    line-height: normal;
+    float: unset;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    display: block;
+}
+#wrapper.search .search_item_area.money .jslider {
+    width: 240px;
+    padding-right: 0;
+    margin-top: 25px;
+}
+#wrapper.search .search_item_area.money .jslider .jslider-value {
+    top: -25px;
+    border-radius: 5px;
+}
+#wrapper.search .search_item_area.money .jslider .jslider-value span {
+    color: gray;
+    margin: 0;
+}
+/*#wrapper.search .search_item_area.money label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: normal;
+    height: 30px;
+}*/
 .search main>.search-box .search_bar>.content>ul>li input.price {
     border-radius: 0;
     width: 74px;
@@ -359,6 +448,8 @@
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item>i {
     top: 9px;
+    color: gray;
+    font-weight: bold;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_amount {
     width: 290px;
@@ -381,7 +472,26 @@
 }
 .search.mapBox .search-box.searchPopup .confirmBtn {
     padding-top: 9px;
-    width: 93%;
+    width: 95%;
+}
+.search.mapBox .search-box.searchPopup .confirmBtn a {
+    min-width: unset;
+    padding: 0;
+    font-size: 15px;
+    font-weight: normal;
+    border-radius: 0;
+    background: transparent;
+    color: gray;
+}
+.search.mapBox .search-box.searchPopup .confirmBtn a:hover {
+    background: transparent;
+    padding: 0;
+}
+.search.mapBox .search-box.searchPopup ._clearBtn {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    z-index: 9;
 }
 .search.mapBox .search-box.searchPopup .search_bar>.content>ul {
     width: 45%;
@@ -437,8 +547,11 @@
 .mapBox .pageList .listTxt {
     display: none;
 }
+.search.mapBox .search-box .search_bar .content {
+    position: relative;
+}
 .search.mapBox .search-box .search_bar>.content>ul>li .search_item.conditions {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
 .search.mapBox .search-box.searchPopup .content li.detatime input {
     width: 186px;
@@ -446,7 +559,8 @@
 .search main>.search-box .search_bar>.content>ul>li input.price::placeholder,
 .search main>.search-box .search_bar>.content>ul>li>input::placeholder,
 .search.mapBox .search-box.searchPopup .content li.detatime input::placeholder,
-.search.mapBox .search-box.searchPopup .first .input input::placeholder {
+.search.mapBox .search-box.searchPopup .first .input input::placeholder,
+.search .search-condition .first .input input::placeholder {
     color: #9c9c9c !important;
 }
 .placeList .text {
@@ -504,6 +618,19 @@
     line-height: 15px;
 }
 /** END mapSearch **/
+
+._clearBtn {
+    color: gray;
+    font-size: 15px;
+    margin-top: 9px;
+    display: inline-block;
+    cursor: pointer;
+}
+._clearBtn:hover {
+    color: #4e5059;
+    text-decoration: underline;
+}
+
 
 @media only screen and (max-width: 1200px){
     .placeList .text .info_1 span {
@@ -589,8 +716,15 @@
         height: 35px;
     }
     .search .search-condition .search_bar>ul>li select {
-        height: unset;
+        height: 25px;
         margin: 9px 0;
+        line-height: normal;
+        font-size: 15px;
+        background-image: url(../../images/selce_arrw02.png);
+        background-repeat: no-repeat;
+        background-size: 10.28px auto;
+        background-position: center right 8px;
+        text-decoration: none;
     }
     .search .site-list {
         margin-bottom: 0;
@@ -626,6 +760,24 @@
     }
     .search .search-list li .place .text span.price b b {
         font-size: 25px;
+    }
+    #wrapper.search .search_item_area.money .price.price_min,
+    #wrapper.search .search_item_area.money .price.price_max {
+        padding: 0;
+    }
+    #wrapper.search .search_item_area.money .moneyBox {
+        /*width: 90%;*/
+    }
+    #wrapper.search .search_item_area.money .jslider {
+        width: 300px;
+        margin-top: 30px;
+    }
+    #wrapper.search .search_item_area.money .jslider .jslider-value {
+        background: #fff;
+        top: -20px;
+    }
+    #wrapper.search .search_item_area.money .jslider .jslider-value span {
+        margin: 0;
     }
 
 

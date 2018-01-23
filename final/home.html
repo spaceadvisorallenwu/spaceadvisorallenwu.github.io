@@ -264,7 +264,19 @@
 								</div>
 								<!-- /search_item_detail -->
 							</div>
-							<input type="number" name="textfield" min="0" id="textfield" placeholder="容納人數" class="desk number_change" />
+							<!-- <input type="number" name="textfield" min="0" id="textfield" placeholder="容納人數" class="desk number_change" /> -->
+							<select name="select-people" id="select-people" class="_select">
+								<option value="0">容納人數</option>
+								<option>不限</option>
+								<option>1-10人</option>
+								<option>10-20人</option>
+								<option>20-30人</option>
+								<option>30-40人</option>
+								<option>40-60人</option>
+								<option>60-80人</option>
+								<option>80-100人</option>
+								<option>100人以上</option>
+							</select>
 							<div class="search-box desk">
 								<div class="search_item day">
 									<input type="text" class="layui-input" id="test6"  placeholder="日期" lay-key="7"  readonly>
@@ -978,6 +990,16 @@
 					$(".search_item").find('i').attr("class", "fa fa-angle-down");
 				}
 			});//點擊其他地方關閉
+		</script>
+		<script type="text/javascript">
+			// allen
+			$('select._select').on('change', function(){
+				if($(this).val() != '0') {
+					$(this).addClass('have');
+				} else {
+					$(this).removeClass('have');
+				}
+			});
 		</script>
 	</body>
 </html>
