@@ -89,7 +89,7 @@
 .order_time_hour .orderContainer .calendar ul.day li .lightning {
 
 }
-.order_time_hour .orderContainer .calendar ul.day li .lightning:before {
+.order_time .orderContainer .calendar ul.day li .lightning:before {
     content: "\f0e7";
     color: #ffde00;
     display: inline-block;
