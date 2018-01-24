@@ -134,41 +134,15 @@
 .spacer .vanueTag .vanueContent .tableBox .tableList td {
     font-size: 15px;
 }
-.spacer .pricePlan {
-    width: 100%;
-    max-width: unset;
-}
+
+
 .spacer .pricePlan h2 {
 	border-radius: 5px;
     overflow: hidden;
 }
-.spacer .priTitle span {
-	font-size: 15px;
-    /*display: flex;*/
-    /*align-items: center;*/
-}
-.spacer .pricePlan ul {
-	border-radius: 5px;
-	overflow: hidden;
-    background-color: #E9EAE9;
-    padding: 9px 20px;
-}
-.spacer .pricePlan .priTitle {
-    padding: 15px 0;
-}
-.spacer .pricePlan ul li {
-	border-bottom: 1px solid #ddd;
-}
-.spacer .pricePlan ul li:last-child {
-	border-bottom: 0;
-}
 .spacer .pricePlan .priTitle .svg.icon {
 	height: 17px;
 	top: 0;
-}
-.spacer .pricePlan .priContent {
-	left: 0;
-	padding-top: 0;
 }
 
 

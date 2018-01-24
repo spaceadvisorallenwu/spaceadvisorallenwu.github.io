@@ -80,8 +80,23 @@
 .theme_list .hotelList._boxStyle {
 	padding-bottom: 0;
 }
-.theme_list .hotelList .hotelImg {
-
+.theme_list .hotelList .hotelImg,
+.theme_list .site-box ._theme_item .hotelImg {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border: 1px solid #dedfdd;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.theme_list .hotelList .hotelImg img,
+.theme_list .site-box ._theme_item .hotelImg img {
+    width: auto;
+    height: 100%;
 }
 .theme_list .hotelList ul {
 	display: flex;
@@ -93,16 +108,36 @@
     margin-right: 0;
     padding: 0 20px;
 }
+.theme_list .site-list {
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+.theme_list .site-box ._theme_item {
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+.theme_list .hotelList li a,
+.theme_list .site-box ._theme_item a {
+	color: #4e5059;
+}
 .theme_list .hotelList li h3,
 .theme_list .hotelList .assess,
-.theme_list .hotelList .region {
+.theme_list .hotelList .region,
+.theme_list .site-box ._theme_item h3,
+.theme_list .site-box ._theme_item .assess,
+.theme_list .site-box ._theme_item .region {
 	margin-bottom: 9px;
 }
+.theme_list .site-box ._theme_item h3,
 .theme_list .hotelList li h3 {
 	font-size: 21px;
 }
 .theme_list .hotelList .assess,
-.theme_list .hotelList .region {
+.theme_list .hotelList .region,
+.theme_list .site-box ._theme_item .assess,
+.theme_list .site-box ._theme_item .region {
 	font-size: 15px;
 }
 .theme_list .hotelList .hotelImg {
@@ -115,17 +150,35 @@
 	align-items: center;
 	justify-content: center;
 }
-.theme_list .hotelList .hotelPay {
+.theme_list .hotelList .region i,
+.theme_list .site-box ._theme_item .region i {
+    margin-left: 9px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 19px;
+    background: url(../../images/themezone/prize_icon.png) top left no-repeat;
+}
+.theme_list .hotelList .hotelPay,
+.theme_list .site-box ._theme_item .hotelPay {
 	font-size: 15px;
 	margin-top: 9px;
 }
 .theme_list .hotelList .hotelPhoto {
 
 }
-.theme_list .hotelList .hotelPhoto img:first-child {
+.theme_list .hotelList .hotelPhoto img,
+.theme_list .site-box ._theme_item .hotelPhoto img {
+    max-width: 99px;
+    display: initial;
+    margin-right: -3px;
+}
+.theme_list .hotelList .hotelPhoto img:first-child,
+.theme_list .site-box ._theme_item .hotelPhoto img:first-child {
 	border-radius: 5px 0 0 5px;
 }
-.theme_list .hotelList .hotelPhoto img:last-child {
+.theme_list .hotelList .hotelPhoto img:last-child,
+.theme_list .site-box ._theme_item .hotelPhoto img:last-child {
 	border-radius: 0 5px 5px 0;
 }
 /** END hotelList **/

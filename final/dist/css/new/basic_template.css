@@ -919,6 +919,38 @@
 }
 /** END _tip **/
 
+
+/** BEGIN 展開內容的樣式 spacer.html & spacer_plan_basic.html **/
+#wrapper .pricePlan {
+    width: 100%;
+    max-width: unset;
+}
+#wrapper .pricePlan ul {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #E9EAE9;
+    padding: 9px 20px;
+}
+#wrapper .pricePlan ul li {
+    border-bottom: 1px solid #ddd;
+}
+#wrapper .pricePlan ul li:last-child {
+    border-bottom: 0;
+}
+#wrapper .pricePlan ul li .priTitle {
+    padding: 15px 0;
+}
+#wrapper .pricePlan ul li .priTitle span {
+    font-size: 15px;
+}
+#wrapper .pricePlan ul li .priContent {
+    left: 0;
+    padding-top: 0;
+}
+/** END 展開內容的樣式 spacer.html & spacer_plan_basic.html **/
+
+
+
 @media only screen and (max-width: 980px) {
     /** BEGIN navigation_bar **/
     .navigation_bar ul {
