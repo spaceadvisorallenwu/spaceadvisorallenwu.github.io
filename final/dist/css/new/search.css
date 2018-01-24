@@ -6,7 +6,7 @@
 }
 .search main > .search-box .first {
     /*border: 1px solid #ddd;*/
-    margin-bottom: 20px;
+    margin-bottom: 9px;
     background: #fff;
     padding: 9px 20px;
     display: flex;
@@ -73,6 +73,9 @@
     line-height: 35px;
     color: #9c9c9c;
 }
+.search main>.search-box {
+    padding: 20px 0;
+}
 .search main > .search-box .search_bar > .content > ul > li .search_item.have .search_item_name,
 .search main>.search-box .search_bar>.content>ul>li>input.have,
 .search main>.search-box .search_bar>.content>ul>li>select.have,
@@ -98,10 +101,10 @@
     font-size: 15px;
     font-weight: normal;
     border-right: 1px solid #ddd;
-    margin-right: 20px;
-    padding: 5px 0;
-    min-width: 55px;
-    width: 55px;
+    margin-right: 15px;
+    padding: 0;
+    min-width: 45px;
+    width: 45px;
 }
 .search main > .search-box .search_bar > .content > ul > li select,
 .search main > .search-box .search_bar > .content > ul > li > input,
@@ -138,6 +141,9 @@
     top: 42px;
     border-radius: 0 5px 5px 5px;
     border-color: #ccc;
+}
+.search.mapBox main > .search-box .search_bar > .content > ul > li .search-map.day {
+    margin: 0;
 }
 .search.mapBox main > .search-box .search_bar .search_in .search-map .search_item_detail {
     top: 34px;
@@ -458,13 +464,13 @@
 
 /** BEGIN mapSearch **/
 .search.mapBox .search-box {
-    padding: 20px 10%;
+    padding: 9px 10%;
 }
 .search.mapBox .sefix {
     margin-top: 35px;
 }
 .search.mapBox .search-box.searchPopup {
-    top: 168px;
+    top: 134px;
     width: 65%;
     padding-left: 10%;
     border-radius: 0;
@@ -513,8 +519,8 @@
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 .mapBox .map_plac {
-    padding-left: 10%;
-    margin-top: 40px;
+    padding: 110px 0 20px 10%;
+    margin-top: 0;
     margin-bottom: 0;
 }
 .mapBox .placeBox {
