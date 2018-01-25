@@ -1016,6 +1016,9 @@
 	.site_form-main._floor3 .site_project_content .file-upload-wrapper .btn {
 		width: 30%;
 	}
+	.bookList .bookTitle ._right .cancel a {
+		padding-left: 0;
+	}
 
 	/** BEGIN site_activity **/
 	.site_activity-up,
