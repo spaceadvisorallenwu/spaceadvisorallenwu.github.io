@@ -925,27 +925,59 @@
     width: 100%;
     max-width: unset;
 }
-#wrapper .pricePlan ul {
+#wrapper .pricePlan > ul {
     border-radius: 5px;
     overflow: hidden;
-    background-color: #E9EAE9;
-    padding: 9px 20px;
+    background-color: transparent;
+    padding: 0;
 }
-#wrapper .pricePlan ul li {
+#wrapper .pricePlan > ul > li {
+    background-color: #e9eae9;
+    padding: 0;
+}
+/*#wrapper .pricePlan > ul > li:last-child {
+    border-bottom: 0;
+}*/
+
+#wrapper .pricePlan > ul > li .priTitle,
+#wrapper .pricePlan > ul > li.open .priTitle {
+    background: transparent;
+}
+#wrapper .pricePlan > ul > li .priTitle {
+    width: 100%;
+    padding: 0 20px;
+}
+#wrapper .pricePlan > ul > li .priTitle span {
+    font-size: 15px;
+    position: relative;
+    padding-right: 0;
+    padding: 20px 0;
+}
+#wrapper .pricePlan > ul > li:not(.open) .priTitle span {
     border-bottom: 1px solid #ddd;
 }
-#wrapper .pricePlan ul li:last-child {
+#wrapper .pricePlan > ul > li:last-child .priTitle span {
     border-bottom: 0;
 }
-#wrapper .pricePlan ul li .priTitle {
-    padding: 15px 0;
+#wrapper .pricePlan > ul > li .priTitle span:after {
+    content: "\f077";
+    display: inline-block;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    right: 0;
+    position: absolute;
 }
-#wrapper .pricePlan ul li .priTitle span {
-    font-size: 15px;
+#wrapper .pricePlan > ul > li.open .priTitle span:after {
+    content: "\f078";
 }
-#wrapper .pricePlan ul li .priContent {
+#wrapper .pricePlan > ul > li .priContent {
     left: 0;
-    padding-top: 0;
+    margin: 0 20px;
+    padding: 0;
+}
+#wrapper .pricePlan > ul > li.open .priContent {
+    border-bottom: 1px solid #ddd;
 }
 /** END 展開內容的樣式 spacer.html & spacer_plan_basic.html **/
 

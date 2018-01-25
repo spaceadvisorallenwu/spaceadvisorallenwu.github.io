@@ -136,15 +136,14 @@
 }
 
 
-.spacer .pricePlan h2 {
+#wrapper.spacer .pricePlan h2 {
 	border-radius: 5px;
     overflow: hidden;
 }
-.spacer .pricePlan .priTitle .svg.icon {
+#wrapper.spacer .pricePlan > ul > li .priTitle .svg.icon {
 	height: 17px;
 	top: 0;
 }
-
 
 .spacer .syn_item1,
 .spacer .syn_item2,
@@ -334,14 +333,17 @@
 		padding: 0;
 	}
 
-	.spacer .pricePlan ul {
-	    padding: 9px;
+	#wrapper.spacer .pricePlan ul {
+	    /*padding: 9px;*/
 	}
-	.spacer .pricePlan .priTitle {
+	#wrapper.spacer .pricePlan > ul > li .priTitle {
 	    width: 100%;
 	}
+	#wrapper.spacer .pricePlan > ul > li .priContent {
+	    margin: 0;
+	}
 	.spacer .synthesis {
-		padding: 20px 9px;
+		padding: 0 9px;
 	}
 	.spacer .syn_item1 .add {
 	    height: 190px;
@@ -352,13 +354,32 @@
 		width: 100%;
 	}
 	.spacer .syn_item4 .priContent {
-		padding: 9px;
+		padding: 9px 0;
 	}
 	.spacer .syn_item4 .priContent img {
 	    width: 49%;
 	}
 	.spacer .syn_item4 ul li .priTitle {
-		/*padding: 9px 3px;*/
+		background: transparent;
+		padding: 9px 0;
+	}
+	.spacer .syn_item4 ul li .priTitle span {
+		font-size: 15px;
+		line-height: normal;
+		position: relative;
+	}
+	.spacer .syn_item4 ul li .priTitle span:after {
+		content: "\f077";
+	    display: inline-block;
+	    font-family: FontAwesome;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+        right: 0;
+	    position: absolute;
+	    bottom: 15px;
+	}
+	.spacer .syn_item4 ul li.open .priTitle span:after {
+	    content: "\f078";
 	}
 
 

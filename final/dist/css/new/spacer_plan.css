@@ -20,6 +20,8 @@
 }
 .spacer_plan .collect_banner .colImg {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .spacer_plan .collect_banner .colTxt .leftBtn,
@@ -79,7 +81,8 @@
 .spacer_plan .collectItem6,
 .spacer_plan .collectItem7,
 .spacer_plan .collectItem8Box,
-.spacer_plan .collectItem9 {
+.spacer_plan .collectItem9,
+.spacer_plan_basic .spaceList {
 	width: 100%;
 	max-width: unset;
 	margin-bottom: 40px;
@@ -224,7 +227,22 @@
 }
 /** END collectItem9 **/
 
+#wrapper.spacer_plan_basic .pricePlan > ul > li .priContent {
+    background: #fff;
+    border: 1px solid #e9eae9;
+    padding: 20px;
+    overflow: hidden;
+    margin: 0;
+}
+#wrapper.spacer_plan_basic .pricePlan > ul > li .priContent .collectItem7 {
+	margin: 0;
+}
+
 @media only screen and (max-width: 980px) {
+	.spacer_plan .collect_banner .colImg img {
+		width: auto;
+		height: 100%;
+	}
 	.spacer_plan .collect_banner .colTxtContent._boxStyle {
 	    flex-direction: column;
         width: 75%;
