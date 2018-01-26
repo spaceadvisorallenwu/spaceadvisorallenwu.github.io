@@ -950,12 +950,12 @@ input.form_ok:hover{background-color:#c63e2b;}
 /* end-頁碼 */
 
 /* 評價星等 */
-.star1{color:#f9d53d;}
-.star0{color:#d5d6d4;}
+/*.star1{color:#f9d53d;}
+.star0{color:#d5d6d4;}*/
 /* end-評價星等 */
 
 /* form樣式 */
-.wd_form select{border:0; -webkit-appearance:none; -moz-appearance:none; appearance:none; padding:0 30px 0 10px; background-image:url(../images/down-arrow.png); background-repeat:no-repeat; background-position:right 10px center; background-size:10px; }
+/*.wd_form select{border:0; -webkit-appearance:none; -moz-appearance:none; appearance:none; padding:0 30px 0 10px; background-image:url(../images/down-arrow.png); background-repeat:no-repeat; background-position:right 10px center; background-size:10px; }
 .wd_form select::-ms-expand{display:none;}
 .wd_form select[disabled]{border:0; -webkit-appearance:none; -moz-appearance:none; appearance:none; padding:0 30px 0 10px; background:url(../images/down-arrow-disable.png) no-repeat calc(100% - 10px) center; background-size:10px; }
 .wd_form input[type="checkbox"]{-webkit-appearance:none; -moz-appearance:none; appearance:none; display:none; height:auto;}
@@ -976,12 +976,12 @@ input.form_ok:hover{background-color:#c63e2b;}
 .wd_form.blue label input[type="radio"]+span{position:relative; padding:0 40px;}
 .wd_form.blue label input[type="radio"]+span:before{content:""; position:absolute; left:0; top:2px; display:inline-block; width:18px; height:18px; background-image:url(../images/radio-blue.png);}
 .wd_form.blue label input[type="radio"]+span:after{content:""; position:absolute; left:0; top:2px; display:inline-block; width:18px; height:18px; background-image:url(../images/radio-blue-checked.png); opacity:0;}
-.wd_form.blue label input[type="radio"]:checked+span:after{opacity:1;}
+.wd_form.blue label input[type="radio"]:checked+span:after{opacity:1;}*/
 /* end-form樣式 */
 
 
 /* 會員資料 */
-.member{margin-top:97px; font-size:16px; line-height:1.7em; letter-spacing:2px; color:#4e5059;}
+/*.member{margin-top:97px; font-size:16px; line-height:1.7em; letter-spacing:2px; color:#4e5059;}
 .member .mbr_photo{margin:40px 0 46px;}
 .member .mbr_photo .subject-title{padding-left:61px; background-position:23px center; margin-bottom:54px;}
 .member .mbr_photo>.flexbox{margin:0 23px;}
@@ -1063,7 +1063,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 .member div label input[type="radio"]:first-child{margin-left:0;}
 .member input[type="text"].input-field-error, .member input[type="password"].input-field-error, .member select.input-field-error{background-color:#f7dfdc; border:1px solid #f7dfdc;}
 .member .mbr_information .main-content a{margin-top:0; border-bottom:0; border-bottom:1px solid #4e6da1;}
-.member .mbr_information .main-content a.a-btn{border-bottom:none;}
+.member .mbr_information .main-content a.a-btn{border-bottom:none;}*/
 /* end-會員資料 */
 
 /* 收件匣 */
@@ -1213,7 +1213,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 /* end-比較清單 */
 
 /* 點數管理 */
-.bonus{margin-top:97px;}
+/*.bonus{margin-top:97px;}
 .bonus .bonus-information{flex-wrap:nowrap; margin-top:49px;}
 .bonus .bonus-information>div{flex:1; padding:6px 0; font-size:16px; line-height:24px; letter-spacing:2px; color:#d75f4f;}
 .bonus .bonus-information>div.bonus-info{text-align:right; color:#4f6da2;}
@@ -1250,7 +1250,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 	.bonus .bonus-buttons input{margin-bottom:10px;}
 	.bonus .pagebox{float:none; text-align:center;}
 }
-.bonus-banner img{width:auto; height:auto; max-width:100%;}
+.bonus-banner img{width:auto; height:auto; max-width:100%;}*/
 /* end-點數管理 */
 
 /* 點數管理-填寫評論 */
@@ -1299,7 +1299,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 /* end-點數管理-填寫評論 */
 
 /* 點數管理-點數兌換 */
-.bonus-quest{max-width:940px;}
+/*.bonus-quest{max-width:940px;}
 .bonus-quest .section01{margin:0 0 20px 30px;}
 .bonus-quest .section01 div{padding:13px 0; font-size:16px; line-height:24px; color:#4f6ea2;}
 .bonus-quest .section01 div:nth-child(2){display:inline-block; padding:7px 15px; font-size:14px; line-height:21px; color:#d76151; border:1px solid #d76151;}
@@ -1337,7 +1337,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 	.bonus-quest .section02 .mbr_information .optional-fill .main-content>div.bonus .col-left{width:100%; padding:20px 0 10px; line-height:1.8; justify-content:flex-start; text-align:left;}
 	.bonus-quest .mbr_information .optional-fill .main-content div.all .h-name br{display:none;}
 	.bonus-quest div label input[type="radio"]{margin:0 15px 0 20px;}
-} 
+} */
 /* end-點數管理-點數兌換 */
 
 /* end-2017-11-30 新增 */
@@ -1346,7 +1346,7 @@ input.form_ok:hover{background-color:#c63e2b;}
 /* 2018-01-17 新增 */
 
 /* 會員資料管理-驗證手機 */
-.verify{width:100%; max-width:424px;}
+/*.verify{width:100%; max-width:424px;}
 .verify .wrapper{margin:24px 60px; width:auto;}
 .verify .wrapper>div{margin-bottom:7px;}
 .verify .wrapper>div.veri-logo img{max-width:100%; width:auto; height:auto;}
@@ -1383,11 +1383,11 @@ input.form_ok:hover{background-color:#c63e2b;}
 	.verify .wrapper{margin:10px 20px;}
 	.wd_check .fa.fa-exclamation-circle{left:-20px;}
 	.verify .veri-mobile span.phone-number{margin:10px 0; width:100%;}
-}
+}*/
 /* end-會員資料管理-驗證手機 */
 
 /* 立即兌換-失敗-點數不足 */
-.exchange-fail-points{}
+/*.exchange-fail-points{}
 .lightbox h1{width:100%; font-size:30px; line-height:80px; color:#fff; text-align:center; letter-spacing:.1em;}
 .lightbox.fail h1{background-color:#d75f4f;}
 .lightbox.fail div.content{display:flex; width:100%; height:205px; font-size:20px; line-height:1.8; color:#333; text-align:center; align-items:center; justify-content:center;}
@@ -1404,11 +1404,11 @@ input.form_ok:hover{background-color:#c63e2b;}
 @media (max-width:360px){
 	.lightbox.success .content .exchange-info>div{width:100%;}
 	.lightbox.success .content .exchange-info .item{width:100%;}
-}
+}*/
 /* end-立即兌換-失敗-點數不足 */
 
 /* 查看評論-未訂購-查看 */
-.comment-noorder{}
+/*.comment-noorder{}
 .comment-noorder .lightbox .content{width:100%; padding:0 26px;}
 .comment-noorder .section01{display:flex; flex-wrap:wrap; padding:44px 0; border-bottom:1px solid #eaebe9;}
 .comment-noorder .section01 .comment-left, .comment-noorder .section01 .comment-right{width:50%;}
@@ -1460,18 +1460,18 @@ input.form_ok:hover{background-color:#c63e2b;}
 	.comment-noorder .section01 .comment-left .title{width:100%;}
 	.comment-noorder .section01 .comment-right img{margin-right:15px;}
 	.comment-noorder .section01 .comment-right .place-name{width:100%;}
-}
+}*/
 /* end-查看評論-未訂購-查看 */
 
 /* 查看評論-未訂購-編輯 */
-.comment-noorder.edit{}
+/*.comment-noorder.edit{}
 .comment-noorder.edit .lightbox.success .section03 h1{background-color:transparent; color:#4e5059;}
 .comment-noorder.edit .lightbox.success .section03 h2{margin:0 0 10px; font-weight:normal; font-size:20px; line-height:40px; letter-spacing:.1em; text-align:left;}
 .comment-noorder.edit .lightbox.success .section03 h2 span{font-size:16px; line-height:24px;}
 .comment-noorder.edit .lightbox.success .section03 .eval-star{display:inline-block; margin:0 10px 30px 0; font-size:26px; color:#f9d53e;}
 .comment-noorder.edit .lightbox.success .section03 .eval-star i{margin-right:10px;}
 .comment-noorder.edit .lightbox.success .section03 textarea{width:100%; height:176px; border:1px solid #e4e4e4; border-radius:6px;}
-.comment-noorder.edit .edit-eval-bn input[disabled="disabled"]{background-color:#83848a; color:#fff; cursor:default;}
+.comment-noorder.edit .edit-eval-bn input[disabled="disabled"]{background-color:#83848a; color:#fff; cursor:default;}*/
 /* end-查看評論-未訂購-編輯 */
 
 /* 查看評論-有訂購-查看 */

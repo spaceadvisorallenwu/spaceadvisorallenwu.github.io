@@ -863,13 +863,21 @@
     margin-bottom: 0;
 }
 #wrapper .comment .comment-list li .other {
+    width: calc(100% - 80px);
+    overflow: hidden;
+    float: right;
     display: flex;
     align-items: flex-end;
     margin-top: 9px;
-    /*padding-bottom: 9px;*/
-    /*border-bottom: 1px solid #ddd;*/
 }
 #wrapper .comment .comment-list li .other span.star {
+    width: 50%;
+    font-weight: normal;
+    color: #d5d6d4;
+    text-decoration: none;
+    text-align: right;
+    border: none;
+    float: left;
     font-size: 15px;
     line-height: normal;
 }
@@ -894,13 +902,15 @@
 }
 #wrapper .comment .comment-list li p.text {
     margin-left: 80px;
-    /*margin-top: 9px;*/
     padding: 0;
-    /*background: #f3f3f3;*/
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 5px;*/
     display: inline-block;
     text-align: justify;
+    font-size: 15px;
+    font-weight: normal;
+    color: #4e5059;
+    line-height: normal;
+    text-decoration: none;
+    clear: both;
 }
 /** END Comment **/
 
