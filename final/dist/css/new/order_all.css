@@ -1096,6 +1096,9 @@
     top: 3px;
     left: 2px;
 }
+.stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col.paper {
+    display: none;
+}
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .assess {
     flex-direction: column;
 }

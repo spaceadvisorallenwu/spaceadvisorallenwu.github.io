@@ -666,6 +666,9 @@
     top: 3px;
     left: 2px;
 }
+.additional_product_form .invoice_part .writeInput .lnvoiceField .col.paper {
+    display: none;
+}
 .additional_product_form .invoice_part .writeInput li .col.paper .assess {
     flex-direction: column;
 }
