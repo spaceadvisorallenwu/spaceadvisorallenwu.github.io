@@ -1,0 +1,2627 @@
+﻿/*
+ * 控制面版-場地主資料及最新消息
+ */
+.sitemanager-wrap{
+  max-width: 970px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  height: 290px;
+  margin-top: 20px;
+}
+.sitemanager{
+  float: left;
+  position: relative;
+  display: inline-block;
+  padding: 20px 10px;
+  max-width: 250px;
+  line-height: 30px;
+  margin-left: 60px;
+}
+.sitemanager .sitelogo{
+  text-align: center;
+}
+.sitemanager .sitename{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  color: #4D5059;
+  text-align: center;
+}
+.sitemanager .sitestar_yellow{
+  display: inline-block;
+  position: relative;
+  color: #F7D33D;
+}
+.sitemanager .sitestar_gray{
+  display: inline-block;
+  position: relative;
+  color: #D5D7D3;
+}
+.sitemanager .review{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D5059;
+  display: inline-block;
+  position: relative;
+}
+.sitemanager .hotelname{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  color: #4D5059;
+  line-height: 30px;
+}
+.sitemanager .preview_btn{
+  width: 120px;
+  height: 30px;
+  background-color: #4f6ea2;
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin:0 auto;
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #FFF;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.sitemanager .preview_btn a{
+  color: #FFF;
+}
+.sitemanager .preview_btn a:hover{
+  color: #FFF;
+}
+.sitemanager .preview_btn:hover{
+  color: #FFF;
+  background-color: #2d5392;
+}
+.sitemanager-news{
+  float: right;
+  position: relative;
+  max-width: 650px;
+  padding: 20px 0px;
+}
+.sitenews ul{
+  list-style-type: disc;
+}
+.sitenews li{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  line-height: 30px;
+}
+.sitenews li a{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  line-height: 30px;
+}
+.sitenews li a:hover{
+  text-decoration: underline;
+}
+.sitenews li:hover{
+  text-decoration: underline;
+}
+.sitenews li h1{
+ font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #D75F50;
+}
+.sitenews li h1:hover{
+ font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #D75F50;
+  text-decoration: underline;
+}
+/*
+ * Full menu is enabled on screens of 1024 pixels and higher
+ */
+@media screen and (max-width: 991px){
+  .sitemanager-wrap{
+    height: auto;
+  }
+  .sitemanager{
+    float: none;
+    display: inherit;
+    padding: 20px 20px;
+    width: 400px;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .sitemanager-news {
+    float: none;
+    max-width: inherit;
+  }
+  .sitenews li{
+    padding: 0px 10px;
+  }
+}
+
+/* 控制面版-上架6步驟
+ * 
+ */
+.newsite-wrap{
+  max-width: 970px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.newsite-title{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  color: #000000;
+}
+.newsite-step{
+  max-width: 970px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.newsite-step .steplist{
+  float: left;
+  position: relative;
+}
+.newsite-step .steplist:hover{
+  font-weight: bolder;
+}
+.newsite-step .step{
+  width: 50px;
+  height: 59px;
+  position: relative;
+  float: left;
+  margin-right:8px;
+  cursor: pointer;
+}
+.newsite-step .step .img-top{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.newsite-step .step:hover .img-top{
+  display: inline;
+}
+.newsite-step .step-text{
+  float: left;
+  position: relative;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D4F59;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+.newsite-step .step-text a{
+  color: #4D4F59;
+}
+.newsite-step .step-text a:hover{
+  font-weight: bolder;
+}
+@media screen and (max-width: 991px){
+  .newsite-step {
+    max-width: 250px;
+    margin-bottom: 45px;
+    height: 500px;
+    }
+  .newsite-title{
+    text-align: center;
+    }
+  .newsite-step .steplist {
+    padding: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 768px){
+  .newsite-step {
+    max-width: 150px;
+    margin-bottom: 45px;
+    height: 500px;
+    }
+  .newsite-title{
+    text-align: center;
+    }
+  .newsite-step .steplist {
+    padding: 10px 0px;
+    width: 280px;
+    }
+  .newsite-step .step-text {
+    margin-right: 0px;
+  }
+}
+
+/*控制面版-待處理訂單
+ *
+ */
+.order-content{
+  max-width: 970px;
+  margin: 0 auto;
+}
+.order-left-wrap{
+  max-width: 600px;
+  float: left;
+  position: relative;
+  margin-top: 85px;
+}
+.waitorder-wrap{
+  max-width: 600px;
+  margin-bottom: 45px;
+}
+.waitorder-title{
+  max-width: 600px;
+  background-color: #F3F3F3;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 30px;
+  color: #4D4F59;
+  padding: 15px 10px;
+  font-weight: 800;
+}
+.waitorder-text{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  color: #4D4F59;
+  margin-top: 10px;
+  font-weight: 800;
+}
+.waitorder-accordion{
+  width: 600px;
+  margin-top: 25px;
+}
+.member-pic{
+  width: 66px;
+  float: left;
+  margin-top: 15px;
+}
+.waitorder-info-wrap{
+  max-width: 350px;
+  display: inline-block;
+  position: relative;
+}
+.waitorder-infoplace-wrap{
+  max-width: 400px;
+  display: inline-block;
+  position: relative;
+}
+.member-name{
+  font-size: 18px;
+  font-weight: 300;
+  color: #4D5059;
+}
+.waitorder-name{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 15px;
+  color: #4D4F59;
+  display: inline-block;
+  position: relative;
+}
+.waitorder-time{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 15px;
+  color: #4D4F59;
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+}
+.waitorder-btn-wrap{
+  margin: 10px 0px 10px 70px;
+}
+.waitorder-btn{
+  width: 50px;
+  height: 28px;
+  background-color: #4f6ea2;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-top: 5px;
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  cursor: pointer;
+}
+.waitorder-btn a{
+  color: #FFF;
+}
+.waitorder-btn a:hover{
+  color: #FFF;
+}
+.waitorder-btn:hover{
+  color: #FFF;
+  background-color: #2d5392;
+}
+.waitorder-line{
+  border-bottom: 1px solid #9f9fa0;
+  padding: 10px 0px;
+  max-width: 630px;
+}
+.waitorder-more{
+  margin-top: 30px;
+}
+.waitorder-more a{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D4F59;
+}
+.waitorder-more a:hover{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 991px){
+    .order-left-wrap{
+      max-width: inherit;
+      float: none;
+      margin: 0 auto;
+      width: 600px;
+    }
+
+}
+@media screen and (max-width: 768px){
+    .order-content {
+    max-width: 320px;
+    }
+    .order-left-wrap {
+    margin-top: 20px;
+    float: none;
+    }
+    .waitorder-wrap{
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+    .member-pic {
+      top: -20px;
+    } 
+    .waitorder-line{
+      max-width: 300px;
+    }
+    .waitorder-infoplace-wrap{
+      max-width: inherit;
+      width: 200px;
+    }
+    .waitorder-accordion {
+      width: 320px;
+    }
+    .waitorder-name{
+      font-size: 13px;
+    }
+    .waitorder-time{
+      font-size: 13px;
+      padding-right: 0px; 
+    }
+}
+@media screen and (max-width: 480px){
+    .waitorder-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+    .waitorder-line {
+    max-width: 280px;
+    }
+    .cbp-ntaccordion .cbp-nttrigger {
+      max-width: 230px;
+    } 
+    .member-pic {
+    top: -20px;
+    } 
+    .waitorder-infoplace-wrap{
+      max-width: inherit;
+      width: 320px;
+    }
+    .waitorder-accordion {
+    width: 320px;
+    }
+    .waitorder-name{
+    font-size: 13px;
+    }
+    .waitorder-time{
+    font-size: 13px;
+    }
+}
+
+/* 控制面版-右側統計及廣告
+ * 
+ */
+.order-right-wrap{
+  max-width: 340px;
+  float: right;
+  position: relative;
+  margin-top: 85px;
+}
+.count-wrap{
+  width: 340px;
+  height: 250px;
+  background-color: #F3F3F3;
+}
+.count-list-horizontal{
+  width: 340px;
+  height: 90px;
+  position: relative;
+  margin: 0px 0px 17px;
+  padding-top: 18px;
+}
+.count-list{
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  padding: 0px 10px;
+  margin-right: 14px;
+}
+.count-list-bg{
+  width: 103px;
+  height: 103px;
+  position: absolute;
+  background-color: #FFF;
+  z-index: 0;
+  text-align: center;
+}
+.count-list-number{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 30px;
+  color: #4D4F59;
+  display: inline-block;
+  padding: 10px;
+  z-index: 3;
+}
+.count-list-number p{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 12px;
+  color: #4D4F59;
+  display: inline-block;
+  position: relative;
+}
+.count-list-text{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 12px;
+  color: #4D4F59;
+  padding: 0px 5px;
+}
+.advertisement-wrap{
+  max-width: 350px; 
+}
+.advertisement-pic{
+  width: 340px;
+  height: 250px;
+  background-color: #f3f3f3;
+  margin-top: 20px;
+}
+.advertisement-wrap img{
+  width: 360px;
+  height: 245px;
+  margin-top: 45px;
+}
+.importantnews-wrap{
+  width: 340px;
+  margin-top: 190px;
+}
+.importantnews-list{
+  background-color: #00a699;
+  border-radius: 5px;
+  width: 340px;
+  padding: 0px 10px;
+  margin-top: 20px;
+}
+.importantnews-star{
+  width:28px;
+  height: 28px;
+  color: #f1c40f;
+  display: inline-block;
+  position: relative;
+  padding-left: 10px; 
+}
+.importantnews-title{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  color: #FFF;
+  font-weight: 800;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+}
+.importantnews-text{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #FFF;
+  padding: 10px;
+  text-align: justify;
+  line-height: 20px;
+}
+#notifications {
+  cursor: pointer;
+  position: fixed;
+  right: 0px;
+  z-index: 9999;
+  bottom: 0px;
+  margin-bottom: 30px;
+  margin-right: 55px;
+  width: 340px;
+  padding: 0px 10px;  
+}
+#notifications h2{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 13px;
+  color: #FFF;
+  margin-top: 10px;
+  line-height: 20px;
+}
+.alert-danger{
+  color: #FFF;
+  background-color: #00a699;
+  border-radius: 5px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  border: 0px;
+}
+.alert-stop{
+  color: #FFF;
+  background-color: #00a699;
+  border-radius: 5px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+@media screen and (max-width: 991px){
+  .order-right-wrap {
+    margin-top: 0px;
+    margin: 0 auto;
+    float: none;
+    }
+}
+@media screen and (max-width: 768px){
+  .order-right-wrap {
+    max-width: 300px;
+    top: 20px;
+    margin: 0 auto;
+    float: none;
+    }
+  .importantnews-wrap{
+    width: 300px;
+    margin-top: 30px;
+   }
+   .importantnews-list {
+    width: 300px;
+    }
+   .count-wrap{
+    width: 300px;
+    height: 230px;
+    display: none;
+   }
+   .count-list {
+    width: 90px;
+    height: 90px;
+    padding: 0px 6px;
+    margin-right: 5px;
+    }
+   .count-list-bg {
+    width: 90px;
+    height: 90px;
+    }
+    .advertisement-pic {
+    width: 300px;
+    height: 200px;
+    }
+    #notifications {
+    margin-right: 0px;
+    }
+}
+
+/* 帳號及權限管理-註冊資訊
+ * 
+ */
+.notice-signup{
+  border-radius: 10px;
+  width: 100%;
+  border: 2px solid #9f9fa0;
+  margin-top: 50px;
+}
+.notice-titlewrap{
+  width: 220px;
+  padding: 10px 10px;
+}
+.notice-title-icon{
+  width: 30px;
+  height: 40px;
+  float: left;
+  position: relative;
+}
+.notice-title{
+  color: #4D4F59;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  float: left;
+  position: relative;
+  padding-left: 10px;
+  top: 15px;
+}
+.notice-text{
+  color: #4D4F59;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 13px;
+  padding: 40px 20px 20px 50px;
+  text-align: justify;
+  line-height: 20px;
+}
+.notice-text a{
+  color: #4D4F59;
+}
+.notice-text a:hover{
+  color: #4D4F59;
+  text-decoration: underline;
+}
+.signup-content-wrap{
+  width: 72%;
+  display: inline-block;
+  margin: 30px 0 0 2.5%;
+}
+.editinfo-content-wrap{
+  width: 72%;
+  display: inline-block;
+  margin: 30px 0 0 2.5%;
+}
+.signup-mainwrap{
+  margin-top: 10px;
+}
+.signup-maintitle {
+    width: 100%;
+    background-color: #F3F3F3;
+    font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+    font-size: 30px;
+    color: #4D4F59;
+    padding: 15px 10px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+}
+
+.signup-onewrap{
+  width: 100%;
+  padding: 15px 0px;
+  margin: 0 auto;
+}
+.signup-title{
+  width: 150px;
+  display: inline-block;
+  text-align: left;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  letter-spacing: 3px;
+  vertical-align: top;
+}
+.signup-text{
+  width: 75%;
+  text-align: left;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.signup-addresswrap{
+  position: relative;
+  width: 77%;
+  display: inline-block;
+}
+.signup-onewrap .accordion{
+  width: 80%; 
+  display: inline-block;
+}
+.signup-password{
+  width: 80%;
+  float: left;
+  position: relative;
+  padding: 10px 0px;
+}
+.signup-sendbtn{
+  float: left;
+  position: relative;
+  margin: 50px 10px;
+}
+.signup-sendbtn span{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #00A599;
+  height: 30px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  top: -80px;
+  left:-15px;
+  display:none;
+  padding:0 20px;
+}
+.signup-sendbtn span:after{
+  text-align: left;
+  float: left;
+  position: relative;
+  margin-top: 50px;
+}
+.signup-sendbtn input[type=submit].savesend {
+  width: 200px;
+  border-radius: 5px;
+  background-color: #4f6ea2;
+  border: none;
+  color: #FFF;
+  padding: 8px 0px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.signup-sendbtn input[type=submit].savesend:hover{
+  background-color: #2d5392;
+  display:block;
+}
+.signup-sendbtn input[type=submit].savesend:hover span{
+  display:block;
+}
+
+p{
+    float:left;
+    position:relative;
+    cursor:pointer;
+}
+
+p:hover span{
+    display:block;
+}
+
+@media screen and (max-width: 991px){
+  .signup-sendbtn input[type=submit].savesend {
+    margin: 20px 0 20px;
+    display: block;
+  }
+  .notice-signup{
+    display: none;
+  }
+  .signup-onewrap .accordion{width: 60%; display: inline-block;}
+}
+@media screen and (max-width: 768px){
+    .signup-sendbtn {
+    margin: 10px 10px;
+  }
+  .signup-sendbtn span{
+    top: -110px;
+  }
+}
+
+/*
+ * 帳號及權限管理-編輯資訊
+ */
+.limit-setup{
+  width:100%;
+  background-color: #f3f3f3;
+  padding: 15px;
+  overflow: hidden;
+}
+.limit-setup .title{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  font-weight: bolder;
+  margin: 10px 2.5% 20px 2%;
+}
+.limittext-list{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D5059;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 2.5%;
+  line-height: 25px;
+}
+.limittext-list li.head{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D5059;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 25px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.limittext-list li{
+  list-style-type: none;
+}
+.limittext-list li span{
+  color: #A9A9A9;
+}
+.limittext-list li a{
+  color: #4D5059;
+}
+.limittext-list li a:hover{
+  color: #A9A9A9;
+}
+@media screen and (max-width: 1199px){
+  .limit-setup .title{
+    margin: 10px 1.3% 20px 1.3%;
+  }
+  .limittext-list {
+    margin: 0 1.3%;
+  }
+}
+@media screen and (max-width: 991px){
+  .signup-maintitle {
+    width:100%;
+    padding: 10px 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .signup-onewrap{
+    width: 100%;
+  }
+  .signup-content-wrap{
+    float: none;
+    margin-left: 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .signup-mainwrap{
+  width: 100%;
+  margin: 0 0 25px 0;
+  }
+  .editinfo-content-wrap{
+  margin: 0;
+  width: 100%;
+  }
+  .limit-setup .title{
+    margin: 10px 1.7% 20px 1.7%;
+  }
+  .limittext-list {
+    margin: 0 1.7%;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .signup-title {
+    width: 100px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .signup-text {
+    /*width: 250px;*/
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  .signup-onewrap{
+    width: 100%;
+  }
+  .editinfo-content-wrap{
+  width: 100%;
+  margin: 0;
+  }
+  .limit-setup{
+  height: auto;
+  }
+  .limittext-list{
+    float: none;
+  }
+  .limit-setup .title{
+    margin: 10px 1.7% 20px 1.7%;
+  }
+  .limittext-list{
+    margin: 0 0 6% 1.7%;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 480px){
+  .limittext-list {
+    margin: 0 0 6% 1.7%;
+    width: 47%;
+  }
+  .signup-text{
+    width: 67%;
+  }
+}
+@media screen and (max-width: 420px){
+  .signup-title{
+    width: 100%;
+  }
+}
+
+/* 刊登場地與價格-場地主頁面編輯
+ * 
+ */
+.spaceowner-row{
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: none;
+}
+.spaceowner-row .nav-tabs{
+  border-bottom: 24px #4f6ea2 solid;
+  padding-left: 70px;
+}
+.spaceowner-row .active{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D5059;
+  border:none;
+}
+.spaceowner-row .nav-tabs > li {
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  display:block; 
+  margin-right:0; 
+  line-height:20px; 
+  font-size:18px; 
+  letter-spacing:2px;
+  border:none;
+  padding: 8px 0px 1px;
+}
+.spaceowner-row .nav-tabs > li > a {
+  background:url(../../view/images/tab-bg.png) no-repeat center bottom; 
+  background-size:contain; 
+  color:#4e5059; 
+  padding:8px 60px 2px; 
+  border:none; 
+}
+.spaceowner-row .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  background:url(../../view/images/tab-bg-active.png) no-repeat center bottom; 
+  background-size:contain; 
+  color:#FFF;
+  padding:8px 60px 2px;
+  border:none;  
+}
+.spaceowner-row .tab-content{
+  width: 100%;
+  margin: 0 auto;
+}
+.spaceowner-row .upload-photo{
+  border: 2px dashed #4f6ea2;
+  width: 100%;
+  height: 230px;
+  float: left;
+  text-align: center;
+}
+.spaceowner-row .add-row{
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.spaceowner-row .addicon{
+  text-align: center;
+}
+.spaceowner-row .addtext{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #999999;
+  line-height: 25px;
+  font-weight: bolder;
+  text-align: center;
+  }
+.spaceowner-row .addtext:hover{
+  text-decoration: underline;
+  }
+.spaceowner-row .add-btn{
+  background-image: url(../../view/images/spaceowner-c1.png);
+  margin: 0 auto;
+  width:94px;
+  height: 94px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 42px;
+  padding-top: 15px;
+  text-align: center;
+  font-weight: bolder;
+}
+.spaceowner-row .add-btn a{
+  color: #999999;
+}
+.spaceowner-row .add-btn a:hover{
+  color: #222;
+}
+.spaceowner-row .spacename-row{
+  padding-top: 290px;
+}
+.spaceowner-row .sitename {
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 20px;
+  color: #4D5059;
+  text-align: center;
+  font-weight: 400;
+}
+.spaceowner-row .hotelname {
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+.spaceowner-row .spacephoto-row{
+  width: 64%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.spaceowner-row .photolist{
+  float: left;
+  position: relative;
+  background-image: url(../../view/images/spaceowner_c2.jpg);
+  width: 83px;
+  height: 55px;
+  margin-left: 4px;
+}
+.spaceowner-row .edit-btn{
+  float: right;
+  position: relative;
+  background-color: #f3f3f3;
+  color: #000;
+  padding: 1px 3px 1px 5px;
+}
+.spaceowner-row .edit-btn:hover{
+  background-color: #4f6ea2;
+  color: #FFF;
+  border: none;
+  padding: 1px 3px 1px 5px;
+}
+
+.spaceowner-row .dropdown-items {
+    float: right;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+.spaceowner-row .dropdown {
+    position: relative;
+}
+.spaceowner-row .spacephoto .dropdown .spacephto-dropdown {
+    display: block;
+    color: #4D5059;
+    font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.spaceowner-row .dropdown .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+}
+.spaceowner-row .spacephoto .dropdown .dropdown-menu li {
+    border-width: 0;
+    display: block;
+    float: none;
+    color: #4D5059;
+    font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+    font-size: 14px;
+}
+.spaceowner-row .dropdown-items .dropdown-menu li {
+    border-left: 1px solid #fff;
+}
+.spaceowner-row .dropdown-menu > li > a {
+    padding: 3px 10px;
+    color: #333;
+    width: 80px;
+}
+.spaceowner-row .dropdown-menu > li > a:hover {
+    padding: 3px 10px;
+    width: 80px;
+    background-color: #4f6ea2;
+    color: #FFF;
+}
+.spaceowner-row .dropdown-menu{
+    min-width: 80px; 
+}
+.spaceowner-row .photolist-upload{
+  border: 1px dashed #4f6ea2;
+  width: 83px;
+  height: 55px;
+  float: left;
+  margin-left: 4px;
+  background-image: url(../../view/images/spaceowner-c3.png);
+  background-repeat: no-repeat;
+}
+.spaceowner-row .upload-text{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 6px 0px;
+}
+.spaceowner-row .spacetitle{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  float: left;
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  padding: 15px 0px 10px; 
+}
+.spaceowner-row .spacefiled-row{
+  max-width: 100%;
+  padding-top: 20px;
+}
+.spaceowner-row .spacefiled-title{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+  padding-top: 8px;
+}
+.bootstrap-frm input[type="text"].fixup-year{
+  width:15%;
+  float: left;
+  position: relative;
+  margin: 0 2% 0;
+}
+.bootstrap-frm textarea.spaceinfo-text{
+  width: 100%;
+  height: 150px;
+  padding: 12px 8px;
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.spaceowner-row .addfacility-row{
+  float: left;
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+}
+.spaceowner-row .addfacility-btn{
+  width: 30%;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+}
+.spaceowner-row .addfacility-btn a{
+  color: #4D5059;
+}
+.spaceowner-row .addfacility-btn a:hover{
+  color: #00A599;
+}
+.spaceowner-row .facility-row{
+  width: 100%;
+}
+.spaceowner-row .rowtitle-fullwrap{
+  width: 100%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+}
+.spaceowner-row .rowtitle-fullwrap-rwd{
+  width: 100%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+  display: none;
+}
+.spaceowner-row .rowtitle-leftwrap{
+  width: 40%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+}
+.spaceowner-row .rowtitle-rightwrap{
+  width: 60%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+}
+.spaceowner-row .rowtitle-leftwrap-rwd{
+  width: 100%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+  display: none;
+}  
+.spaceowner-row .rowtitle-rightwrap-rwd{
+  width: 100%;
+  background-color: #dadbdc;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px;
+  display: none;
+ }
+.spaceowner-row .rowtitle-1{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  font-weight: bolder;
+  float: left;
+  position: relative;
+  padding-right: 35.3%;
+}
+.spaceowner-row .rowtitle-2{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  font-weight: bolder;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .rowtitle-3{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  font-weight: bolder;
+  float: left;
+  position: relative;
+  width: 17.5%;
+}
+.spaceowner-row .rowtitle-4{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  font-weight: bolder;
+  float: left;
+  position: relative;
+  padding-right: 60%;
+}
+.spaceowner-row .rowtitle-5{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  font-weight: bolder;
+  float: left;
+  position: relative;
+}
+
+.spaceowner-row .rowtext-content{
+  width: 100%;
+}
+.spaceowner-row .rowtext-leftwrap{
+  width: 40%;
+  position: relative;
+  margin-top: 10px;
+}
+.spaceowner-row .rowtext-rightwrap{
+  width: 64.4%;
+  float: left;
+  position: relative;
+  margin-top: 22px;
+  margin-left: 25px;
+  padding-bottom: 20px;
+}
+.spaceowner-row .rowtext-service-rightwrap{
+  width: 63.7%;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 32px;
+  padding-bottom: 20px;
+}
+.spaceowner-row .facility-category{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  padding-left: 5px;
+  float: left;
+  position: relative;
+  line-height: 42px;
+}
+.spaceowner-row .facility-icon{
+  padding: 0px 10%;
+  float: left;
+  position: relative;
+  line-height: 42px;
+}
+.spaceowner-row .facility-namewrap{
+  float: left;
+  position: relative;
+}
+.spaceowner-row .facility-name{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  line-height: 42px;
+}
+.spaceowner-row .facility-amount{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  line-height: 42px;
+}
+.spaceowner-row .facility-price{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  line-height: 42px;
+  padding-left: 25px;
+}
+.spaceowner-row .facility-uploadpic{
+  border: 1px dashed #4f6ea2;
+  width: 115px;
+  height: 65px;
+  float: left;
+  background-image: url(../../view/images/spaceowner-c3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.spaceowner-row .facility-uploadtext{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  padding: 6px 0px;
+}
+.spaceowner-row .facility-uploadtext a{
+  color: #4D5059;
+}
+.spaceowner-row .facility-uploadtext a:hover{
+  color: #4D5059;
+}
+.spaceowner-row .facility-fieldrow{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.bootstrap-frm input[type="underline_text"].facilityfield{
+  width: 93.3%;
+  float: left;
+  position: relative;
+  margin-top: -10px;
+}
+.bootstrap-frm input[type="underline_text"].diningfield{
+  width: 340px;
+  float: left;
+  position: relative;
+  margin-top: -10px;
+}
+.bootstrap-frm input[type="underline_text"].diningpay-field{
+  width: 236px;
+  float: left;
+  position: relative;
+  margin-top: -10px;
+}
+.bootstrap-frm input[type="text"].facilityurl {
+  width: 93.3%;
+  float: left;
+  position: relative;
+  margin-top: 15px;
+}
+.spaceowner-row .equip-trashicon {
+  float: left;
+  position: relative;
+  width: 25px;
+  margin-left: 10px;
+}
+.spaceowner-row .equip-trashicon a{
+  color: #9a9a9a;
+}
+.spaceowner-row .equip-trashicon a:hover{
+  color: #4e5059;
+}
+
+/* 刊登場地與價格-場地主頁面編輯-餐廳資訊
+ * 
+ */
+.spaceowner-row .restaurant-row{
+  width: 100%;
+}
+.spaceowner-row .restaurant-namewrap{
+  width: 18%;
+  float: left;
+  position: relative;
+  margin-top: 20px;
+}
+.bootstrap-frm input[type="text"].restaurant-name{
+  width: 115px;
+  float: left;
+  position: relative;
+}
+
+.spaceowner-row .restaurant-infowrap{
+  width: 82%;
+  float: left;
+  position: relative;
+  margin-top: 20px;
+}
+
+.bootstrap-frm textarea.restaurant-infotext{
+  width: 94.7%;
+  height: 110px;
+  padding: 12px 8px;
+  border: 1px solid #ccc;
+  background-color: #FFF;
+  font-size: 14px;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .restaurant-listtrash{
+  float: left;
+  position: relative;
+}
+.spaceowner-row .restaurant-urlwrap{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.bootstrap-frm input[type="text"].restauranturl{
+  width: 95.6%;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+.spaceowner-row .address-title{
+  width: 100%;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .trafficinfo-wrap{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+}
+.spaceowner-row .address-latitude{
+  width: 77%;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/*0119-新增*/
+.bootstrap-frm input[type="text"].foodmenu{
+  width: 61%;
+  float: left;
+  position: relative;
+  margin-bottom: 10px;
+}
+.bootstrap-frm input[type="text"].foodprice{
+  float: left;
+  position: relative;
+  margin-bottom: 10px;
+  width: 230px;
+  margin: 0px 5px;
+}
+.spaceowner-row .foodfiled-row{
+  width: 330px;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .foodprice-text{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+.viewfile-btn{
+  border-radius: 5px;
+  background-color: #4f6ea2;
+  border: none;
+  color: #FFF;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+  padding: 5px 20px;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.viewfile-btn:hover{
+  background-color: #2d5392;
+}
+.checkupload-btn{
+  border-radius: 5px;
+  background-color: #d65f4f;
+  border: none;
+  color: #FFF;
+  padding: 5px 20px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.checkupload-btn:hover{
+  background-color: #9d0704;
+}
+
+@media screen and (max-width: 1199px){
+  .spaceowner-row .spacephoto-row {
+    width: 78%;
+  }
+  .rowtitle-rightwrap-rwd{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-leftwrap-rwd{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-fullwrap-rwd{
+    display:none; 
+  }
+  .spaceowner-content-wrap {
+    float: none;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .spaceowner-row .nav-tabs {
+    padding-left: 10px;
+  }
+  .spaceowner-row .facility-icon{
+    padding: 0px 5%;
+  }
+  .spaceowner-row .rowtitle-leftwrap {
+    width: 34%;
+  }
+  .spaceowner-row .rowtitle-rightwrap {
+    width: 66%;
+  }
+  .spaceowner-row .rowtitle-1 {
+    padding-right: 25%;
+  }
+  .spaceowner-row .rowtext-rightwrap {
+    width: 64.8%;
+    margin-left: 10px;
+    padding-bottom: 20px;
+   }
+   .spaceowner-row .restaurant-infowrap {
+    width: 80%;
+   }
+   .bootstrap-frm textarea.restaurant-infotext {
+    width: 93.4%;
+  }
+  .bootstrap-frm input[type="text"].restauranturl {
+    width: 93%;
+  }
+   .bootstrap-frm input[type="underline_text"].facilityfield {
+    width: 80%;
+  }
+  .spaceowner-row .facility-fieldrow {
+    width: 110%;
+  }
+  .bootstrap-frm input[type="text"].facilityurl {
+    width: 80%;
+  }
+  .spaceowner-row .rowtext-service-rightwrap {
+    width: 65.1%;
+    margin-left: 14px;
+  }
+}
+@media screen and (max-width: 991px){
+  .spaceowner-row .spacephoto-row {
+    width: 73%;
+  }
+  .rowtitle-rightwrap-rwd{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-leftwrap-rwd{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-fullwrap-rwd{
+    display:none; 
+  }
+  .spaceowner-content-wrap {
+    float: none;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .spaceowner-row .nav-tabs {
+    padding-left: 10px;
+  }
+  .spaceowner-row .facility-icon{
+    padding: 0px 5%;
+  }
+  .spaceowner-row .rowtitle-leftwrap {
+    width: 48%;
+  }
+  .spaceowner-row .rowtitle-rightwrap {
+    width: 52%;
+  }
+  .spaceowner-row .rowtitle-1 {
+    padding-right: 37%;
+  }
+  .spaceowner-row .rowtext-leftwrap {
+    width: auto;
+  }
+  .spaceowner-row .rowtext-rightwrap {
+    width: 51.6%;
+    margin-left: 10px;
+    padding-bottom: 20px;
+   }
+   .bootstrap-frm input[type="underline_text"].facilityfield {
+    width: 80%;
+  }
+  .spaceowner-row .facility-fieldrow {
+    width: 110%;
+  }
+  .bootstrap-frm input[type="text"].facilityurl {
+    width: 80%;
+  }
+  .spaceowner-row .rowtitle-3{
+    width: 27.1%;
+  }
+  .spaceowner-row .restaurant-namewrap {
+    width: 29%
+  }
+  .spaceowner-row .restaurant-infowrap {
+    width: 71%;
+  }
+  .bootstrap-frm textarea.restaurant-infotext {
+    width: 90.4%;
+  }
+  .spaceowner-row .rowtext-service-rightwrap {
+    width: 51%;
+    margin-left: 14px;
+  }
+}
+@media screen and (max-width: 768px){
+  .rowtitle-rightwrap-rwd{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-rightwrap {
+    display: none;
+  }
+  .spaceowner-row .rowtitle-leftwrap-rwd{
+    display: inherit;
+  }
+  .spaceowner-row .rowtitle-fullwrap-rwd{
+    display:none; 
+  }
+  .spaceowner-row .rowtitle-rightwrap-rwd{
+    display: inherit;
+  }
+  .spaceowner-content-wrap {
+    float: none;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .spaceowner-row .nav-tabs {
+    padding-left: 10px;
+  }
+  .spaceowner-row .spacephoto-row {
+    width: 61%;
+  }
+  .spaceowner-row .facility-icon{
+    padding: 0px 5%;
+  }
+  .spaceowner-row .rowtitle-leftwrap {
+    width: 100%;
+  }
+  .spaceowner-row .rowtitle-1 {
+    padding-right: 30%;
+  }
+  .spaceowner-row .rowtext-leftwrap {
+    width: auto;
+  }
+  .spaceowner-row .rowtext-rightwrap {
+    width: 100%;
+    margin-left: 0px;
+    padding-bottom: 20px;
+  }
+  .spaceowner-row .facility-namewrap {
+    width: 50%;
+  }
+   .spaceowner-row .facility-category,.spaceowner-row .facility-name {
+    font-size: 16px;
+    width: 31%;
+  }
+   .bootstrap-frm input[type="underline_text"].facilityfield {
+    width: 80%;
+  }
+  .spaceowner-row .facility-fieldrow {
+    width: 100%;
+  }
+  .bootstrap-frm input[type="text"].facilityurl {
+    width: 80%;
+  }
+  .spaceowner-row .rowtitle-3{
+    width: 27%;
+  }
+  .spaceowner-row .rowtitle-4{
+    padding-right: 0;
+  }
+  .spaceowner-row .restaurant-namewrap {
+    width: 29%
+  }
+  .spaceowner-row .restaurant-infowrap {
+    width: 71%;
+  }
+  .bootstrap-frm textarea.restaurant-infotext {
+    width: 88%;
+  }
+  .bootstrap-frm input[type="text"].restauranturl {
+    width: 91%;
+  }
+  .spaceowner-row .rowtext-service-rightwrap {
+    width: 100%;
+    margin-left: 14px;
+  }
+}
+@media screen and (max-width: 480px){
+  .spaceowner-row .rowtitle-rightwrap{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-fullwrap{
+    display:none; 
+  }
+  .spaceowner-row .rowtitle-rightwrap-rwd{
+    display: inherit;
+  }
+  .spaceowner-row .rowtitle-leftwrap-rwd{
+    display: inherit;
+  }
+ .spaceowner-row .rowtitle-fullwrap-rwd{
+    display:inherit; 
+  }
+   .spaceowner-content-wrap {
+    float: none;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .spaceowner-row .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background:none ;
+    color: #FFF;
+    padding: 8px 20px 2px;
+    background-color: #4f6ea2;
+   }
+  .spaceowner-row .nav-tabs > li > a{
+    background:none ;
+    padding: 8px 20px 2px;
+    background-color: #efeff0;
+  }
+  .spaceowner-row .nav-tabs {
+    padding-left: 10px;
+  }
+  .spaceowner-row .addfacility-btn {
+    width: 50%;
+  }
+   .spaceowner-row .spacephoto-row {
+    width: 100%;
+  }
+  .spaceowner-row .spacefiled-title{
+    width: 35%;
+    margin-top: 2%;
+  }
+  .bootstrap-frm input[type="text"].fixup-year {
+    width: 40%;
+    margin: 2% 2% 0;
+  }
+  .spaceowner-row .facility-icon{
+    padding: 0px 12%;
+  }
+  .spaceowner-row .rowtitle-leftwrap {
+    width: 100%;
+  }
+  .spaceowner-row .rowtitle-1 {
+    padding-right: 37%;
+  }
+  .spaceowner-row .rowtext-leftwrap {
+    width: auto;
+  }
+  .spaceowner-row .rowtext-rightwrap {
+    width:90%;
+    margin-left: 10px;
+    padding-bottom: 20px;
+   }
+   .bootstrap-frm input[type="underline_text"].facilityfield {
+    width: 80%;
+  }
+  .spaceowner-row .facility-fieldrow {
+    width: 110%;
+  }
+  .bootstrap-frm input[type="text"].facilityurl {
+    width: 80%;
+  }
+  .spaceowner-row .rowtitle-3{
+    width: 27.1%;
+  }
+  .spaceowner-row .restaurant-namewrap {
+    width: 100%
+  }
+  .spaceowner-row .restaurant-infowrap {
+    width: 98%;
+  }
+  .bootstrap-frm input[type="text"].restaurant-name {
+    margin: 3% 2% 5% 0%;
+  }
+  .bootstrap-frm textarea.restaurant-infotext {
+    width: 85%;
+  }
+  .spaceowner-row .restaurant-urlwrap {
+    width: 100%;
+  }
+  .bootstrap-frm input[type="text"].restauranturl {
+    width: 83%;
+  }
+  .spaceowner-row .rowtext-service-rightwrap {
+    width: 90%;
+    margin-left: 14px;
+  }
+  .spaceowner-row .spaceowner-endnotice {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px){
+  .spaceownerinfo {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .spaceownerinfo-floor {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .spaceownerinfo-floor .spacefloor {
+    margin-top: 4%;
+  }
+  .spaceowner-row .rowtitle-rightwrap{
+    display: none;
+  }
+  .spaceowner-row .rowtitle-fullwrap{
+    display:none; 
+  }
+  .spaceowner-row .rowtitle-rightwrap-rwd{
+    display: inherit;
+  }
+  .spaceowner-row .rowtitle-leftwrap-rwd{
+    display: inherit;
+  }
+ .spaceowner-row .rowtitle-fullwrap-rwd{
+    display:inherit; 
+  }
+   .spaceowner-content-wrap {
+    float: none;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+  .spaceowner-row .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background:none ;
+    color: #FFF;
+    padding: 8px 20px 2px;
+    background-color: #4f6ea2;
+   }
+  .spaceowner-row .nav-tabs > li > a{
+    background:none ;
+    padding: 8px 20px 2px;
+    background-color: #efeff0;
+  }
+  .spaceowner-row .nav-tabs {
+    padding-left: 10px;
+  }
+  .spaceowner-row .addfacility-btn {
+    width: 50%;
+  }
+   .spaceowner-row .spacephoto-row {
+    width: 100%;
+  }
+  .spaceowner-row .spacefiled-title{
+    width: 35%;
+    margin-top: 2%;
+  }
+  .bootstrap-frm input[type="text"].fixup-year {
+    width: 40%;
+    margin: 2% 2% 0;
+  }
+  .spaceowner-row .facility-icon{
+    padding: 0px 12%;
+  }
+  .spaceowner-row .rowtitle-leftwrap {
+    width: 100%;
+  }
+  .spaceowner-row .rowtitle-1 {
+    padding-right: 30%;
+  }
+  .spaceowner-row .rowtext-leftwrap {
+    width: auto;
+  }
+  .spaceowner-row .rowtext-rightwrap {
+    width:90%;
+    margin-left: 10px;
+    padding-bottom: 20px;
+   }
+   .bootstrap-frm input[type="underline_text"].facilityfield {
+    width: 80%;
+  }
+  .spaceowner-row .facility-fieldrow {
+    width: 110%;
+  }
+  .bootstrap-frm input[type="text"].facilityurl {
+    width: 80%;
+  }
+  .spaceowner-row .rowtitle-3{
+    width: 27.1%;
+  }
+  .spaceowner-row .restaurant-namewrap {
+    width: 100%
+  }
+  .spaceowner-row .restaurant-infowrap {
+    width: 98%;
+  }
+  .bootstrap-frm input[type="text"].restaurant-name {
+    margin: 3% 2% 5% 0%;
+  }
+  .bootstrap-frm textarea.restaurant-infotext {
+    width: 85%;
+  }
+  .spaceowner-row .restaurant-urlwrap {
+    width: 100%;
+  }
+  .bootstrap-frm input[type="text"].restauranturl {
+    width: 83%;
+  }
+  .spaceowner-row .rowtext-service-rightwrap {
+    width: 90%;
+    margin-left: 14px;
+  }
+  .spaceowner-row .spaceowner-endnotice {
+    width: 100%;
+  }
+  .spaceowner-row .facility-category, .spaceowner-row .facility-name {
+    font-size: 16px;
+    width: auto;
+   }
+   .spaceowner-row .facility-icon {
+    padding: 0px 7%;
+  }
+}
+
+
+.spaceowner-row .otherequip-text{
+  float: left;
+  position: relative;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  margin-left: 10px;
+  width: 120px;
+}
+.bootstrap-frm input[type="underline_text"].otherequipment{
+  width: 110px;
+  float: left;
+  position: relative;
+  margin-top: -10px;
+}
+.bootstrap-frm input[type="text"].fulladdress  {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+}
+.spaceowner-row .siteseo-title{
+  width: 100%;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  margin-top: 20px;
+}
+.spaceowner-row .siteseo-row{
+  width: 100%;
+}
+.spaceowner-row .siteseo-text{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.bootstrap-frm input[type="text"].siteseo {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+}
+
+/* 刊登場地與價格-產品頁面編輯
+ * 
+ */
+.productinfo-row{
+  width: 100%;
+  margin-top: 10px;
+}
+.spacelogo{
+  float: left;
+  position: relative;
+  margin-left: 10px;
+}
+.spacelogo img{
+  width: 95px;
+  height: 95px;
+}
+.spaceownerinfo{
+  width: 60%;
+  float: left;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.productinfo-row .producttitle{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  width: 700px;
+  margin-top: 15px;
+}
+.spaceownerinfo .spacename{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+}
+
+
+.bootstrap-frm input[type="text"].spacename {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.spaceownerinfo .spacename-notice{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #D75F4F;
+  line-height: 30px;
+}
+.spaceownerinfo-floor{
+  width: 15%;
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.spaceownerinfo-floor .spacefloor-wrap{
+  width: 75%;
+  float: left;
+  position: relative;
+}
+.spaceownerinfo-floor .spacefloor{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+  margin-top: 11%;
+  margin-left: 1%;
+}
+.bootstrap-frm select.spacefloor{
+  width: 100%;
+  float: left;
+  position: relative;
+  top: -7px;
+}
+/* 刊登場地與價格-場地主頁面編輯-設施資訊
+ * 
+ */
+.spaceowner-row .addfacility-row{
+  float: left;
+  position: relative;
+  margin-top: 0px;
+  width: 700px;
+}
+.spaceowner-row .addfacility-btn{
+  width: 300px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+}
+.spaceowner-row .addfacility-btn a{
+  color: #4D5059;
+  font-weight: 800;
+}
+.spaceowner-row .addfacility-btn a:hover{
+  color: #00A599;
+  font-weight: 800;
+}
+.spaceowner-row .addfacility-btn:hover{
+  color: #00A599;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.spaceowner-row .facility-row{
+  width: 100%;
+  float: left;
+}
+.spaceowner-row .facilitylist{
+  width: 330px;
+  float: left;
+  position: relative;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.spaceowner-row .facilitylist-title{
+  width: 300px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .equipment-row{
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+.spaceowner-row .equip-icon{
+  float: left;
+  position: relative;
+  width: 17px;
+  margin-right: 10px;
+}
+.spaceowner-row .equip-text{
+  float: left;
+  position: relative;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  margin-left: 10px;
+  width: 75px;
+}
+.spaceowner-row .equip-field{
+  float: left;
+  position: relative;
+  margin-left: 5px;
+}
+.bootstrap-frm input[type="underline_text"].equipment{
+  width: 180px;
+  float: left;
+  position: relative;
+  margin-top: -10px;
+}
+.bootstrap-frm input[type="text"].equipment{
+  width: 200px;
+  float: left;
+  position: relative;
+}
+
+/* 刊登場地與價格-管理您的場地-照片上傳
+ * 
+ */
+.productinfo-row .photolist-wrap{
+  width: 100%;
+  margin-top: 20px;
+}
+.productinfo-row .editphotolist{
+  height: 174px;
+  margin-left: 4px;
+  z-index: -1;
+  margin-bottom: 10px;
+}
+.productinfo-row .editphotolist img{
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.productinfo-row .photolist-row{
+  width: 32.1%;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+}
+.productinfo-row .photolist-upload{
+  margin-left: 4px;
+  border: 1px dashed #4f6ea2;
+  width: 100%;
+  height: 174px;
+  background-image: none;
+  padding: 20px 0px;
+}
+.productinfo-row .upload-text{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 6px 0px;
+}
+.bootstrap-frm input[type="text"].editupload {
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 0px;
+}
+.bootstrap-frm input[type="text"].uploadphoto {
+  width: 100%;
+  margin-right: 0px;
+}
+.productinfo-row .edit-btn{
+  float: right;
+  position: relative;
+  background-color: #f3f3f3;
+  color: #000;
+  padding: 1px 3px 1px 5px;
+}
+.productinfo-row .edit-btn:hover{
+  background-color: #4f6ea2;
+  color: #FFF;
+  border: none;
+  padding: 1px 3px 1px 5px;
+}
+.productinfo-row .dropdown-items {
+    float: right;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+.productinfo-row .dropdown {
+    position: relative;
+}
+.productinfo-row .spacephoto .dropdown .spacephto-dropdown {
+    display: block;
+    color: #4D5059;
+    font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.productinfo-row .dropdown .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+}
+.productinfo-row .spacephoto .dropdown .dropdown-menu li {
+    border-width: 0;
+    display: block;
+    float: none;
+    color: #4D5059;
+    font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+    font-size: 14px;
+}
+.productinfo-row .dropdown-items .dropdown-menu li {
+    border-left: 1px solid #fff;
+}
+.productinfo-row .dropdown-menu > li > a {
+    padding: 3px 10px;
+    color: #333;
+    width: 80px;
+}
+.productinfo-row .dropdown-menu > li > a:hover {
+    padding: 3px 10px;
+    width: 80px;
+    background-color: #4f6ea2;
+    color: #FFF;
+}
+.productinfo-row .dropdown-menu{
+    min-width: 80px; 
+}
+
+/* 刊登場地與價格-管理您的場地-適合用途
+ * 
+ */
+.spaceowner-row .used-row{
+  width: 100%;
+}
+.spaceowner-row .usedlist{
+  float: left;
+  position: relative;
+}
+.spaceowner-row .usedlist-title{
+  width: 100%;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  color: #4D5059;
+  float: left;
+  position: relative;
+}
+.spaceowner-row .purpose-row{
+  width: 20%;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+.spaceowner-row .purpose-row li{
+  margin-top: 5px;
+  list-style-type: none;
+}
+/* 刊登場地與價格-管理您的場地-銷售計價方式
+ * 
+ */
+.spaceowner-row .price-row{
+  width: 100%;
+  margin-top: 10px;
+}
+.spaceowner-row .price-row li{
+  margin-top: 5px;
+  list-style-type: none;
+  float: left;
+  position: relative;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+/* 刊登場地與價格-管理您的場地-注意提示
+ * 
+ */
+.editproduct-notice{
+  width: 100%;
+  background-color: #f3f3f3;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #D75F4F;
+  float: left;
+  position: relative;
+  padding: 4px 2px;
+  margin: 50px 0px 0px;
+ }
+
+ /* 刊登場地與價格-營業時間設定
+ * 
+ */
+
+.opentime-content-wrap {
+  width: 72%;
+  display: inline-block;
+  margin: 30px 0 0 2.5%;
+}
+.opentime-content-wrap .spacetitle{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  float: left;
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  padding: 15px 0px 10px;
+}
+.opentime-content-wrap .timeinfo-text{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+  font-weight: 600;
+}
+.opentime-content-wrap .timemodel-row{
+  width: 100%;
+  margin-top: 10px;
+}
+.opentime-content-wrap .timemodel-row li{
+  list-style-type: none;
+  margin-right: 20px;
+  float: left;
+  position: relative;
+}
+.opentime-content-wrap .timemodel-table{
+  width: 100%;
+  margin-top: 10px;
+}
+select.cleartime-set {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: -7px;
+}
+.table-bordered .timemodel{
+  width: 100%;
+}
+.opentime-content-wrap .timemodel-table-daily{
+  width: 100%;
+  margin-top: 10px;
+}
+select.time-set {
+    width: 40px;
+    float: left;
+    position: relative;
+}
+select.holiday-set {
+    width: 47px;
+    float: left;
+    position: relative;
+}
+.time-set-icon {
+    width: 15px;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+}
+table> td .timehover a {
+  background-color: #fff;
+}
+table> td .timehover a:hover {
+  background-color: #222;
+  color: #FFF;
+}
+.table-responsive {
+  overflow-y: visible !important;
+}
+.opentime-content-wrap .addnewdate-wrap{
+  margin-top: 10px;
+  height: auto;
+}
+.opentime-content-wrap .addnewdate-row{
+  float: left;
+  position: relative;
+  margin-top: 0px;
+  width: 50%;
+  margin-bottom: 30px;
+}
+.opentime-content-wrap .addnewdate-btn{
+  width: 300px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+.opentime-content-wrap .addnewdate-btn a{
+  color: #4D5059;
+  font-weight: 800;
+}
+.opentime-content-wrap .addnewdate-btn a:hover{
+  color: #00A599;
+  font-weight: 800;
+}
+.opentime-content-wrap .timeinfo-row{
+  float: left;
+  position: relative;
+  margin-top: 2px;
+  width: 100%;
+}
+.opentime-content-wrap .equip-trashicon{
+  float: left;
+  position: relative;
+  margin-top: 0px;
+  width: 100%;
+}
+.opentime-content-wrap .equip-trashicon {
+  float: left;
+  position: relative;
+  width: 25px;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+.opentime-content-wrap .equip-trashicon a{
+  color: #9a9a9a;
+}
+.opentime-content-wrap .equip-trashicon a:hover{
+  color: #4e5059;
+}
+.opentime-content-wrap .legalcancel-wrap {
+  max-width: 500px; 
+  float: left;
+  position: relative;
+}
+.opentime-content-wrap .legalcancel-row {
+  padding: 25px 0px;
+}
+.opentime-content-wrap .cancelinfo-text{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+}
+.opentime-content-wrap .cancelinfo-day{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  float: left;
+  position: relative;
+  margin-left: 15px;
+  text-align: center;
+}
+.bootstrap-frm input[type="text"].cancelfield {
+  width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -8px;
+  float: left;
+  position: relative;
+}
+
+
+@media (max-width: 1199px) {
+  .productinfo-row .photolist-row {
+    width: 31.8%;
+  }
+  .productinfo-row .photolist-upload {
+    height: 143px;
+  }
+  .productinfo-row .editphotolist {
+    height: 143px;
+  }
+}
+@media (max-width: 991px) {
+  .productinfo-row .photolist-row {
+    width: 31.9%;
+  }
+  .productinfo-row .photolist-upload {
+    height: 154px;
+  }
+  .productinfo-row .editphotolist {
+    height: 154px;
+  }
+  .spaceowner-row .purpose-row {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .productinfo-row .photolist-row {
+    width: 31%;
+  }
+  .productinfo-row .photolist-upload {
+    height: 149px;
+    padding: 5px 0px;
+  }
+  .spaceowner-row .addtext {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .productinfo-row .editphotolist {
+    height: 149px;
+  }
+  .spaceowner-row .purpose-row {
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .productinfo-row .photolist-row {
+    width: 31%;
+  }
+  .productinfo-row .photolist-upload {
+    height: 90px;
+    padding: 5px 0px;
+  }
+  .spaceowner-row .addtext {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .productinfo-row .editphotolist {
+    height: 90px;
+  }
+  .spaceowner-row .purpose-row {
+    width: 40%;
+  }
+}
+
+
+/*
+.rwd-table td:before {
+　display: none;
+}
+.rwd-table th, .rwd-table td {
+　display: table-cell;
+　padding: 0.25em 0.5em;
+}
+.rwd-table th:first-child, 
+.rwd-table td:first-child {
+　padding-left: 0;
+}
+.rwd-table th:last-child, 
+.rwd-table td:last-child {
+　padding-right: 0;
+}
+.rwd-table th, 
+.rwd-table td {
+　padding: 1em !important;
+}*/
+

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<title>開放即時預訂</title>
+<!--<base href="http://ec2-52-199-228-192.ap-northeast-1.compute.amazonaws.com/manage/" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="shortcut icon" href="view/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="view/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="view/javascript/jquery/jquery-2.js"></script>
+<script type="text/javascript" src="view/javascript/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+<script type="text/javascript" src="view/javascript/summernote/summernote-zh-TW.js"></script>
+<script src="view/javascript/jquery/datetimepicker/moment_002.js" type="text/javascript"></script>
+<script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.zh-TW.js" type="text/javascript"></script>
+<script src="view/javascript/common.js" type="text/javascript"></script>
+<script src="view/javascript/jquery/mainNav.js"></script>
+<script src="view/javascript/jquery/subnav.js"></script>
+<script src="view/javascript/jquery/jquery.cbpNTAccordion.min.js"></script>
+<script>
+  $( function() {
+    $( '.cbp-ntaccordion' ).cbpNTAccordion();
+
+  } );
+</script>
+<link href="view/stylesheet/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="view/javascript/fontawesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="view/javascript/summernote/summernote.css" rel="stylesheet" />
+<link href="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/global.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/layout.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/mainNav.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/member.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="view/stylesheet/hattie.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!-- ******************************************************************** -->
+<div id="container"> 
+  <!-- header start -->
+  <header> 
+    <!-- pushTopNav start -->
+    <div id="pushTopNav"> <a href="#" id="navToggle"><span>Mobile Btn</span></a>
+      <div class="container-fluid" id="header">
+        <div class="logo"><img src="view/images/space_advisor_fulllogo.svg" width="149px"></div>
+        <ul id="topnav">
+          <li class="site-about hidden-sm hidden-xs"> <a href="#">平台優勢</a> <a href="#">關於我們</a> </li>
+          <li class="dropdown site-language"> <a href="javascript:;" data-toggle="dropdown"><i class="fa fa-globe"></i></a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-animation lang">
+              <li><a href="JavaScript:;">繁体</a></li>
+              <li><a href="JavaScript:;">English</a></li>
+            </ul>
+          </li>
+          <li class="site-member"> <a href="#" class="mail"> <img src="view/images/i_mail.svg">
+            <div class="informer informer-warning">2</div>
+            </a> <a href="#" class="member"><img src="view/images/i_member.png"></a> </li>
+        </ul>
+      </div>
+    </div>
+    <!-- pushTopNav end --> 
+  </header>
+  <!-- header end --> 
+  <!-- menu start -->
+  <div class="container-fluid navBg">
+    <nav id="nav">
+      <ul>
+        <li class="mainNav"><a href="javascript:;">控制面板</a></li>
+        <li class="mainNav"><a href="javascript:;">帳號及權限管理</a></li>
+        <li class="mainNav"><a href="javascript:;">刊登場地與價格</a></li>
+        <li class="mainNav"><a href="javascript:;">可售日與折扣</a></li>
+        <li class="mainNav"><a href="javascript:;">訂單管理</a></li>
+        <li class="mainNav"><a href="javascript:;">收件匣</a></li>
+        <li class="mainNav"><a href="javascript:;">廣告管理</a></li>
+        <li class="mainNav"><a href="javascript:;">評價及管理報表</a></li>
+        <li class="mainNav hidden-lg visible-sm visible-xs"><a href="javascript:;">關於我們</a></li>
+        <li class="mainNav hidden-lg visible-sm visible-xs"><a href="javascript:;">平台優勢</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- menu end --> 
+  <!--pushContainer start-->
+  <div id="pushContainer">
+  <div id="content">
+    <div class="page-header">
+      <div class="openinghours">
+        <div class="grey">
+            <!-- openinghours-info-wrap start -->
+            <div class="opening_top_left">
+              <ul class="nav nav-tabs">
+                <li class="active mar-top10"> <a href="#">開放即時預訂</a></li>
+                <li><a href="#">銷售管理<br>單個場地月曆</a></li>
+                <li><a href="#">銷售管理<br>多個場地週曆</a></li>
+                <li><a href="#">銷售管理<br>全場地日曆</a></li>
+                <li class="mar-top10"><a href="#">促銷活動列表</a></li>
+              </ul>
+            </div>
+            <div class="opening_top_right">
+				<a href="#" class="img-video"><img src="view/images/video.png"></a>
+			</div>
+        </div>
+        <div class="container"> 
+              <div class="introduction">
+                <div class="ovhindn"> <img src="view/images/i_lightbulb.png" style="float: left;">
+                  <p class="title">各個場地銷售區間設定：『即時預訂Online Booking』『接收申請需求Request For Proposal』『關閉-不銷售』</p>
+                </div>
+                <p class="relate mar-left35">所有日期的場地狀態皆預設為RFP<br>
+                  可在此調整狀態為Online Booking或是不銷售。若需要調整短期間或是單日詳細狀態，可至”單場地月曆”進行設定。</p>
+              </div>
+				<div class="font24 mar-top20">設定最後接受預訂時間</div>
+				<div class="font16 mar-top20  display_line">
+					<div class="display_line_left">
+					  <label>活動前</label>
+					</div>
+					<div class="display_line_right mar-right10">
+					  <div class="selectdiv">
+						<select class="selectpicker form-control">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						  <option>6</option>
+						  <option>7</option>
+						  <option>8</option>
+						  <option>9</option>
+						  <option>10</option>
+						</select>
+					  </div>
+					</div>
+					<div class="display_line_left">
+					  <label>天不接受即時預定，</label>
+					</div>
+					<div class="display_line_right mar-right10 phone-mar-top10">
+					  <div class="selectdiv">
+						<select class="selectpicker form-control">
+						  <option>僅接受RFP</option>
+						  <option>關閉不銷售</option>
+						</select>
+					  </div>
+					</div>
+                  </div>
+                  <div class="font24 mar-top50">設定各場地開放預訂狀態</div>
+				  <div class="list mar-top20">
+				 
+					<table class="rwd-table">
+					  <tr>
+						<th style="width: 15%;">大宴會廳</th>
+						<th style="width: 35%;">狀態</th>
+						<th style="width: 35%;">區間</th>
+						<th style="width: 15%;"></th>
+					  </tr>
+					  <tr>
+						<td data-th="大宴會廳" class="img-center"><img src="view/images/hotel1.png" ></td>
+						<td data-th="狀態" class="aling-top "><div class="tabletitle mar-top20 ">未作設定的日期皆預設為RFP狀態</div>
+							<div class="ex-radio mar-top20">
+								<input type="radio" id="radio_one" name="radio_group"/>
+								<label for="radio_one">即時預訂(Online Booking) <img src="view/images/lighting.png"></label>
+							</div>
+							<div class="ex-radio">
+								<input type="radio" id="radio_two" name="radio_group" />
+								<label for="radio_two">關閉(不銷售) </label>
+							</div>
+						 </td>
+						<td data-th="區間" class="aling-top "><div class="selectwrap displayinline mar-top10 ">
+							<div class="display_line_left ">
+							  <label for="exampleInputEmail1" >選擇設定區間長短</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv">
+								<select class="selectpicker form-control">
+							      <option>請選擇</option>
+								  <option>3個月</option>
+								  <option>6個月(半年)</option>
+								  <option>12個月(一年)</option>
+								  <option>24個月(兩年)</option>
+								  <option>36個月(三年)</option>
+								</select>
+							  </div>
+							</div>
+						  </div>
+						  <div class="selectwrap">
+							<div class="display_line_left">
+							  <label for="exampleInputEmail1" >選擇區間開始日期</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv ">
+							    
+								<input type="text" placeholder="請選擇" class="selectpicker form-control datepicke scalender_form">
+							  </div>
+							</div>
+						  </div>
+						  <div class="font16 mar-top5">
+						    即時預訂：<br>2018/02/14-2021/02/16
+						  </div>
+						  <div class="font16 mar-top10">
+						    關閉(不銷售)：<br>2018/02/16-2021/02/16<br>2018/02/16-2021/02/16
+						  </div>
+						  </td>
+						<td class="btn-fix"><button type="button" class="btn btn-blue font16">儲存</button></div></td>
+					  </tr>
+					</table>
+				  </div>
+				  <div class="list mar-top20">
+					<table class="rwd-table">
+					  <tr>
+						<th style="width: 15%;">東方廳 - 貳</th>
+						<th style="width: 35%;">狀態</th>
+						<th style="width: 35%;">區間</th>
+						<th style="width: 15%;"></th>
+					  </tr>
+					  <tr>
+						<td data-th="東方廳 - 貳" class="img-center"><img src="view/images/hotel1.png" ></td>
+						<td data-th="狀態" class="aling-top "><div class="tabletitle mar-top20 ">未作設定的日期皆預設為RFP狀態</div>
+							<div class="ex-radio mar-top20">
+								<input type="radio" id="radio_one" name="radio_group"/>
+								<label for="radio_one">即時預訂(Online Booking) <img src="view/images/lighting.png"></label>
+							</div>
+							<div class="ex-radio">
+								<input type="radio" id="radio_two" name="radio_group" />
+								<label for="radio_two">關閉(不銷售) </label>
+							</div>
+						 </td>
+						<td data-th="區間" class="aling-top "><div class="selectwrap displayinline mar-top10 ">
+							<div class="display_line_left ">
+							  <label for="exampleInputEmail1" >選擇設定區間長短</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv">
+								<select class="selectpicker form-control">
+							      <option>請選擇</option>
+								  <option>3個月</option>
+								  <option>6個月(半年)</option>
+								  <option>12個月(一年)</option>
+								  <option>24個月(兩年)</option>
+								  <option>36個月(三年)</option>
+								</select>
+							  </div>
+							</div>
+						  </div>
+						  <div class="selectwrap">
+							<div class="display_line_left">
+							  <label for="exampleInputEmail1" >選擇區間開始日期</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv ">
+								<input type="text" placeholder="請選擇" class="selectpicker form-control datepicke scalender_form">
+							  </div>
+							</div>
+						  </div>
+						 
+						  </td>
+						<td class="btn-fix"><button type="button" class="btn btn-blue font16">儲存</button></td>
+					  </tr>
+					</table>
+				  </div>
+				  <div class="list mar-top20">
+					<table class="rwd-table">
+					  <tr>
+						<th style="width: 15%;">東方廳 - 陸</th>
+						<th style="width: 35%;">狀態</th>
+						<th style="width: 35%;">區間</th>
+						<th style="width: 15%;"></th>
+					  </tr>
+					  <tr>
+						<td data-th="東方廳 - 陸" class="img-center"><img src="view/images/hotel1.png"></td>
+						<td data-th="狀態" class="aling-top "><div class="tabletitle mar-top20 ">未作設定的日期皆預設為RFP狀態</div>
+							<div class="ex-radio mar-top20">
+								<input type="radio" id="radio_one" name="radio_group"/>
+								<label for="radio_one">即時預訂(Online Booking) <img src="view/images/lighting.png"></label>
+							</div>
+							<div class="ex-radio">
+								<input type="radio" id="radio_two" name="radio_group" />
+								<label for="radio_two">關閉(不銷售) </label>
+							</div>
+						 </td>
+						<td data-th="區間" class="aling-top "><div class="selectwrap displayinline mar-top10 ">
+							<div class="display_line_left ">
+							  <label for="exampleInputEmail1">選擇設定區間長短</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv">
+								<select class="selectpicker form-control">
+							      <option>請選擇</option>
+								  <option>3個月</option>
+								  <option>6個月(半年)</option>
+								  <option>12個月(一年)</option>
+								  <option>24個月(兩年)</option>
+								  <option>36個月(三年)</option>
+								</select>
+							  </div>
+							</div>
+						  </div>
+						  <div class="selectwrap">
+							<div class="display_line_left">
+							  <label for="exampleInputEmail1">選擇區間開始日期</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv ">
+								<input type="text" placeholder="請選擇" class="selectpicker form-control datepicke scalender_form">
+							  </div>
+							</div>
+						  </div>
+						  
+						  </td>
+						<td class="btn-fix"><button type="button" class="btn btn-blue font16">儲存</button></td>
+					  </tr>
+					</table>
+				  </div>
+				  <div class="list mar-top20">
+					<table class="rwd-table">
+					  <tr>
+						<th style="width: 15%;">文華閣</th>
+						<th style="width: 35%;">狀態</th>
+						<th style="width: 35%;">區間</th>
+						<th style="width: 15%;"></th>
+					  </tr>
+					  <tr>
+						<td data-th="文華閣" class="img-center"><img src="view/images/hotel1.png"></td>
+						<td data-th="狀態" class="aling-top "><div class="tabletitle mar-top20 ">未作設定的日期皆預設為RFP狀態</div>
+							<div class="ex-radio mar-top20">
+								<input type="radio" id="radio_one" name="radio_group"/>
+								<label for="radio_one">即時預訂(Online Booking) <img src="view/images/lighting.png"></label>
+							</div>
+							<div class="ex-radio">
+								<input type="radio" id="radio_two" name="radio_group" />
+								<label for="radio_two">關閉(不銷售) </label>
+							</div>
+						 </td>
+						<td data-th="區間" class="aling-top "><div class="selectwrap displayinline mar-top10 ">
+							<div class="display_line_left ">
+							  <label for="exampleInputEmail1">選擇設定區間長短</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv">
+								<select class="selectpicker form-control">
+							      <option>請選擇</option>
+								  <option>3個月</option>
+								  <option>6個月(半年)</option>
+								  <option>12個月(一年)</option>
+								  <option>24個月(兩年)</option>
+								  <option>36個月(三年)</option>
+								</select>
+							  </div>
+							</div>
+						  </div>
+						  <div class="selectwrap">
+							<div class="display_line_left">
+							  <label for="exampleInputEmail1">選擇區間開始日期</label>
+							</div>
+							<div class="display_line_right">
+							  <div class="selectdiv ">
+								<input type="text" placeholder="請選擇" class="selectpicker form-control datepicke scalender_form">
+							  </div>
+							</div>
+						  </div>
+						  <div class="font16 mar-top5">
+						    即時預訂：<br>2018/02/14-2021/02/16
+						  </div>
+						  
+						  </td>
+						<td class="btn-fix"><button type="button" class="btn btn-blue font16">儲存</button></td>
+					  </tr>
+					</table>
+				  </div>
+           
+        </div>
+        <!-- openinghours-info-wrap end --> 
+      </div>
+    </div>
+  </div>
+  <!-- footer start -->
+  <footer id="footer">
+    <div class="footer-wrap">
+      <div class="footer-menu">
+        <div class="footer-menu-list">
+          <div class="title">SpaceAdvisor</div>
+          <div class="footernav">
+            <li><a href="">關於我們</a></li>
+            <li><a href="">平台優勢</a></li>
+            <li><a href="">使用說明</a></li>
+            <li><a href="">人才招募</a></li>
+          </div>
+        </div>
+        <div class="footer-menu-list">
+          <div class="title">客服中心</div>
+          <div class="footernav">
+            <li><a href="">常見問題</a></li>
+            <li><a href="">聯絡我們</a></li>
+            <li><a href="">服務政策</a></li>
+            <li><a href="">隱私權條款</a></li>
+          </div>
+        </div>
+        <div class="footer-menu-list">
+          <div class="title">合作夥伴</div>
+          <div class="footernav">
+            <li><a href="">合作優勢</a></li>
+            <li><a href="">立即刊登場地</a></li>
+            <li><a href="">企業合作</a></li>
+            <li><a href="">經銷商計畫</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-wrap">
+        <div class="addresswrap">
+          <div class="soicallist">
+            <div class="soical-icon"> <a href="#"><img src="view/images/i_facebook.svg" width="30px" alt="Facebook"> <img src="view/images/i_facebook_color.svg"   width="30px" alt="Facebook" class="img-top"></a> </div>
+            <div class="soical-icon"> <a href="#"><img src="view/images/i_instagram.svg" width="30px" alt="Facebook"> <img src="view/images/i_instagram_color.svg"   width="30px" alt="Facebook" class="img-top"></a> </div>
+            <div class="soical-icon"> <a href="#"><img src="view/images/i_youtube.svg" width="30px" alt="Facebook"> <img src="view/images/i_youtube_color.svg"   width="30px" alt="Facebook" class="img-top"></a> </div>
+            <div class="soical-icon"> <a href="#"><img src="view/images/i_line.svg" width="30px" alt="Facebook"> <img src="view/images/i_line_color.svg"   width="30px" alt="Facebook" class="img-top"></a> </div>
+          </div>
+          <div class="allright-list">
+            <div class="address-text"> 台北市信義區信義路5段7號24F D1 (101大樓) </div>
+            <div class="allright-text">© SpaceAdvisor 2017 All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- footer end --> 
+  <script type="text/javascript">
+	$('.datepicke').datetimepicker({
+				pickTime: false,
+                format: 'YYYY/MM/DD',
+				language: 'zh-TW'
+            });
+    $('.toggle').click(function(e) {
+        e.preventDefault();
+      
+        var $this = $(this);
+      
+        if ($this.next().hasClass('show')) {
+            $this.next().removeClass('show');
+        } else {
+            $this.parent().parent().find('li .inner').removeClass('show');
+            $this.parent().parent().find('li .inner');
+            $this.next().toggleClass('show');
+        }
+    });
+		
+		
+    </script> 
+</div>
+<!--pushContainer end-->
+</div>
+<!-- ******************************************************************** -->
+</body>
+</html>

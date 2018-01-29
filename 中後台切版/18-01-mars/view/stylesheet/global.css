@@ -1,0 +1,708 @@
+﻿.logo{
+  padding: 10px 10px 10px 18px;
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+}
+#topnav{
+  float: right;
+  text-align: right;
+  display: block;
+  width: 60%;
+  padding: 16px 10px 8px 10px;
+}
+#topnav li{
+  display: inline-block;
+}
+.site-language{
+  margin: 0 10px 0 0;
+  vertical-align: bottom;
+}
+.site-language a{
+  color: #4D5059;
+  width: 100%;
+}
+.site-language li{
+  width: 100%;
+}
+.site-language a:hover{
+  color: #4F6EA2;
+}
+.site-language i{
+  font-size: 25px; 
+}
+.site-member{
+}
+.site-member a{margin: 0 5px; display: inline-block; position: relative;}
+.site-member a img{max-width: 100%}
+.site-member a.mail{width: 25px; vertical-align: bottom;}
+.site-member a.member{width: 33px; vertical-align: baseline;}
+.x-navigation .xn-icon-button .informer {
+    left: auto;
+    bottom: auto;
+    right: 1px;
+    top: 5px;
+}
+.informer.informer-warning {
+    background: #4F6EA2;
+}
+.informer {
+    font-size: 11px;
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    padding: 0px 7px;
+    right: -6px;
+    top: -9px;
+    color: #FFF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.informer a{
+    color: #FFF;
+}
+.site-about{
+  margin: 0 10px;
+  vertical-align: bottom;
+}
+.site-about a{
+  color: #4D5059;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 10px;
+}
+.site-about a:hover ,.site-about a:focus{
+  color: #4F6EA2;
+}
+/*側導航
+ * 
+ */
+.signup-info-wrap {
+    width: 25%;
+    margin: 30px auto 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+.signup-nav-wrap{
+  display: inline-block;
+  width: 100%;
+}
+#subnav { }
+.subnavList{
+  color: #999999;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bolder;
+  /*width: 250px;*/
+}
+.subnavList li{
+  list-style-type: none;
+  border: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+  color: #9a9a9a;
+}
+.subnavList li a{
+  color: #9a9a9a;
+  display: block;
+}
+.subnavList li:hover{
+  color: #4D4F59;
+  background-color: #f3f3f3;
+}
+.subnavList li.current{
+  color: #4D4F59;
+  background-color: #f3f3f3;
+}
+.subnavList a:hover,
+/*a:active*/ {
+  display: block;
+  background-color: #f3f3f3;
+  color: #4D4F59;
+}
+.subnavList a.selected, .subnavList a.selected:link,
+a.selected:active {
+  display: block;
+  background-color: #f3f3f3;
+  color: #4D4F59;
+}
+.subnavList a.selected:hover,
+a.selected:active {
+  display: block;
+  background-color: #f3f3f3;
+  color: #4D4F59;
+}
+/*側導航END
+ * 
+ */
+/*燈泡提示Start
+ * 
+ */
+ul {
+  list-style: none;
+  padding: 0;
+}
+  
+ul .inner {
+  overflow: hidden;
+  display: none;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D4F59;
+  margin-top: 15px;
+}
+ul .inner li{
+  float: left;
+  position: relative;
+  width: 20%;
+  padding: 10px 0px;
+}
+ul .date-inner {
+  overflow: hidden;
+  display: none;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D4F59;
+  margin-top: 15px;
+}
+ul .dingplan {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D4F59;
+  margin-top: 15px;
+}      
+ul .show {
+    /*display: block;*/
+}      
+li a.toggle {
+  display: block;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D5059;
+  letter-spacing: 1px;
+}
+li a.toggle:hover{
+  text-decoration: underline;
+}
+/*
+ * 頁籤展開
+ */
+.cbp-ntaccordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cbp-ntsubaccordion {
+  list-style: none;
+}
+
+.cbp-ntaccordion .cbp-nttrigger{
+  cursor: pointer;
+  float: left;
+  margin-left: 5px;
+  max-width: 540px;
+  margin-top: 25px;
+} 
+.cbp-ntaccordion h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #4D5059;
+  max-width: 550px;
+}
+
+.cbp-ntaccordion h4 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  padding: 0.5em 0 0.5em;
+  margin: 0 0 0.5em;
+}
+
+.cbp-ntaccordion h5 {
+  font-size: 1.2em;
+  color: #aaa;
+  padding: 0.5em 0 0.5em;
+  margin: 0 0 0.5em;
+}
+
+.cbp-ntaccordion .cbp-ntcontent p {
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 15px;
+  color: #4D4F59;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  padding-left: 70px;
+  text-align: justify;
+}
+
+/* Initial height is zero */
+.cbp-ntaccordion .cbp-ntcontent {
+  height: 0;
+  overflow: hidden;
+}
+
+/* When open, set height to auto */
+.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+.no-js .cbp-ntaccordion .cbp-ntcontent {
+  height: auto;
+  max-width: 630px;
+}
+/* 刊登場地與價格-管理您的場地-新增設備跳窗
+ * 
+ */
+.modal,
+.modal-box {
+  z-index: 900;
+}
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+.modal input[type="text"] {
+width: 100%;
+border-radius: 6px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;    
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+border: 1px solid #C6C8C7;
+height: 35px;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+}
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: .3s;
+  animation-timing-function: ease-out;
+}
+.modal-body {
+  background: #FFF;
+  padding: 0px;
+}
+.close-modal {
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 999;
+}
+
+/* Animation */
+@-webkit-keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+@keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+/* 刊登場地與價格-管理您的場地-新增設備跳窗
+ * 
+ */
+ #inline_content{
+  width: 100%;
+  height: 500px;
+ }
+.addnew-equipment-wrap{
+  background-color: #FFF;
+ }
+.equipment-title{
+  background-color: #4f6ea1;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFF;
+  padding: 10px 0px;
+ }
+.equipment-content{
+  width: 87%;
+  margin: 0 auto;
+ }
+
+.equipment-content .choose-row{
+  width: 87%;
+  margin: 0 auto;
+  padding-top: 2%;
+  /*display: none;*/
+ }
+.equipment-content .choose-title{
+font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+font-size: 16px;
+font-weight: bolder;
+color: #4D4F59;
+float: left;
+position: relative;
+}
+.equipment-content .choose-radio{
+font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+font-size: 16px;
+color: #4D4F59;
+float: left;
+position: relative;
+margin-left: 30px;
+padding-left: 10px;
+}
+.bootstrap-frm input[type="text"].search-input{
+width: 279px;
+margin: 10px 0px; 
+border-radius: 6px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;    
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+border: 1px solid #C6C8C7;
+height: 35px;
+}
+.chooselist-content{
+  width: 87%;
+  margin: 0 auto;
+  margin-top: 6%;
+  height: 290px;
+ }
+.chooselist-content .listtitle-row{
+  margin-top: 20px;
+}
+
+.chooselist-content .list-title{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  color: #4D4F59;
+  font-weight: 800;
+  width: 60%;
+  float: left;
+  position: relative;
+}
+.chooselist-content .list-choosedtitle{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  color: #4D4F59;
+  font-weight: 800;
+  float: left;
+  position: relative;
+  margin-left: 21%;
+}
+.chooselist-content .chooselist-wrap{
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+.chooselist-content .left-form-group{
+  width: 250px;
+}
+
+.chooselist-content .chooselist-select{
+  height: 210px;
+  margin-bottom: 30px;
+}
+.chooselist-content .choose-btn-wrap{
+  float: left;
+  position: relative;
+  margin-top: 85px;
+  padding: 0 30px;
+}
+.chooselist-content .choose-btn{
+  background-color: #00a699;
+  width: 75px;
+  border-radius: 4px;
+  padding: 9px 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+.chooselist-content .choose-btn:hover{
+  background-color: #b8b8b8;
+  width: 75px;
+  border-radius: 4px;
+  padding: 9px 15px;
+  text-align: center;
+}
+.chooselist-content .addother-equipment {
+  margin-bottom: 20px;
+}
+.chooselist-content .addother-equipment a{
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  color: #4D4F59;
+}
+.chooselist-content .addother-equipment a:hover{
+  color: #00a699;
+}
+.equipment-savebtn-wrap{
+  width: 87%;
+  margin: 0 auto;
+}
+.equipment-savebtn {
+ text-align: center;
+}
+.equipment-savebtn a{
+  border-radius: 5px;
+  background-color: #4f6ea2;
+  color: #FFF;
+  padding: 8px 50px;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+.equipment-savebtn a:hover{
+  background-color: #2d5392;
+}
+
+/* Aditional Styles */
+.modal-trigger, button {
+  top: 50%;
+  text-decoration: none;
+}
+.modal-trigger {
+  position: relative;
+}
+button {
+  border: 1px solid #333333;
+  outline: none;
+  color: #333333;
+}
+
+
+@media screen and (max-width: 991px){
+.logo{
+    position: absolute;
+    left: 50%;
+    margin: 0px 0 0 -82px;
+}
+#topnav{
+  float: right;
+  text-align: right;
+  display: block;
+  width: 200px;
+  padding: 16px 10px 8px 10px;
+}
+/*側導航
+     * 
+     */
+    .signup-info-wrap{
+     width: 100%;
+     margin: 0;
+    }
+    #subnav { padding: 0; position: relative;  width: 100%; margin-top: 16px;  margin-bottom: 16px; box-sizing: border-box; }
+    .subnavTitle { margin-top: 15px; padding: 15px 15px; color: #fff; font-size: 15px;  cursor: pointer; background: #4E5059; }
+    .subnavTitle [class*='fa-'] { position: absolute; font-size: 12px; color: #fff; top: 20px; }
+    .subnavTitle .fa-plus {  right: 30px; }
+    .subnavTitle .fa-minus { right: 30px; display: none; }
+    .subnavList { margin: 0; width: 100%; display: none; background-color: rgb(255, 255, 255); padding: 0; line-height: 27px;}
+    .subnavList li { margin: 0; padding-left: 15px; padding: 0; display: block; text-align: left;}
+    .subnavList a { display: block; color: #2D2D2D;  padding: 13px; box-sizing: border-box; }
+    .subnavList a:hover{ text-decoration: none;  background: #f3f3f3; color: #000; }
+    }
+  .chooselist-content {
+    width: 65%;
+    margin-left: 5%;
+  }
+  .ms-container {
+    width: 150%;
+  }
+  .chooselist-content .list-choosedtitle {
+    margin-left: 22.25%;
+  }
+}
+@media screen and (max-width: 768px){
+  .chooselist-content {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .ms-container {
+    width: 148%;
+  }
+  .chooselist-content .list-title {
+    width: 50%;
+  }
+  .chooselist-content .list-choosedtitle {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 480px){
+.site-language{
+  margin: 0 5px 0 0;
+}
+.site-member a.member{
+  width: 29px;
+}
+.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+    .cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+    .no-js .cbp-ntaccordion .cbp-ntcontent {
+      max-width: 290px;
+    }
+}
+@media screen and (max-width: 420px){
+.site-member a.member{
+  display: none;
+}
+}
+
+
+/*Footer*/
+.footer-wrap{
+  width: 100%;
+  background-color: #71737b;
+}
+.footer-menu{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0px;
+}
+.footer-menu-list{
+  width: 150px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin-right: 170px;
+}
+.footer-menu .title{
+  color: #FFF;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+.footer-menu .footernav{
+  text-align: left;
+  margin-top: 15px;
+}
+.footer-menu .footernav li{
+  list-style-type: none;
+  color: #FFF;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+}
+.footer-menu .footernav li a{
+  color: #FFF;
+}
+.footer-menu .footernav li a:hover{
+  color: #aaaaab;
+}
+.copyright-wrap{
+  width: 100%;
+  background-color: #4e5059;
+  padding: 10px 0px;
+}
+.addresswrap{
+  max-width:970px;
+  margin: 0 auto;
+  height: 30px;
+}
+.allright-list{
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+.address-text{
+  color: #FFF;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 12px;
+}
+.allright-text{
+    color: #FFF;
+  font-family: brandon-grotesque, 'microsoft jhenghei', Arial, sans-serif;
+  font-size: 10px;
+  text-align: left;
+}
+.soicallist{
+  float: right;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.soical-icon{
+  display: inline-block;
+  position: relative;
+}
+.soical-icon .img-top{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.soical-icon:hover .img-top{
+    display: inline-block;
+}
+@media screen and (max-width: 991px){
+  .footer-menu{
+  display: none;
+  }
+  .addresswrap{
+  max-width:300px;
+  margin: 0 auto;
+  padding-left: 0px; 
+  height: 90px;
+  }
+  .allright-list{
+  float: none;
+    margin-top: 10px;
+  }
+  .soicallist{
+  float: none;
+  margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px){
+  .footer-menu{
+  display: none;
+  }
+  .addresswrap{
+  max-width:300px;
+  margin: 0 auto;
+  padding-left: 0px; 
+  height: 90px;
+  }
+  .allright-list{
+  float: none;
+    margin-top: 10px;
+  }
+  .soicallist{
+  float: none;
+  margin-top: 10px;
+  }
+}
