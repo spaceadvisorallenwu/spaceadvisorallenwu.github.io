@@ -37,18 +37,19 @@
     border-radius: 0 5px 5px 0;
 }
 .stepPhoto._boxStyle {
-    padding: 0;
-    height: 80px;
-    width: 50%;
-    margin-top: 40px;
+    height: 70px;
+    width: 42%;
+    margin-top: 0;
+    padding: 5px;
     overflow: hidden;
 }
 .stepPhoto._boxStyle img {
     width: 90%;
     height: auto;
-    padding: 5px;
 }
-
+#wrapper:not(.order_time) .stepPhoto._boxStyle {
+    display: none;
+}
 
 /** BEGIN order_time **/
 .order_time .orderContainer h2 {
@@ -129,12 +130,15 @@
 }
 .order_time .instant-tip h1 {
     font-weight: bold;
-    margin-bottom: 5px;
+    /*margin-bottom: 5px;*/
 }
 .order_time .instant-tip h1 i {
     color: #ffde00;
     font-size: 17px;
     margin-left: 5px;
+}
+.order_time .instant-tip p {
+    font-size: 13px;
 }
 .order_time .orderInformation1,
 .order_time .orderInformation2,
@@ -387,6 +391,23 @@
 }
 .order_time .order_tiemBox .order_timeContent li._haveDiscount .order_money {
     color: #d76050;
+}
+/*#wrapper.order_time ._outerBox1 {
+    position: relative;
+    width: 100%;
+}*/
+#wrapper.order_time ._outerBox {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+#wrapper.order_time .appointment_Result {
+    position: relative;
+}
+#wrapper.order_time .appointment_Result._active {
+    position: fixed;
+    top: 65px;
 }
 #wrapper.order_time .appointment_Result .custodyBtn {
     display: flex;

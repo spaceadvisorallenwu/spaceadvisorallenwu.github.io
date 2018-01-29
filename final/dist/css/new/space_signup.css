@@ -194,9 +194,8 @@
 .app_step2 .application_explanation {
     margin: 0 auto;
     letter-spacing: 0;
-}
-.app_step2 .application_explanation {
-	padding: 40px;
+	padding: 20px;
+	line-height: normal;
 }
 .app_step2 .custodyBtn {
     margin: 40px auto 0;

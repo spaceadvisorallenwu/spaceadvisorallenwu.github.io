@@ -169,9 +169,9 @@
 							</ul>
 						</div>
 					</div>
-					<!-- 公司資料登記 -->
+					<!-- 公司登記資料 -->
 					<div class="app_stepItem2">
-						<h2>公司資料登記</h2>
+						<h2>公司登記資料</h2>
 						<div class="appInput">
 							<ul>
 								<li class="apInput1 ">
@@ -187,22 +187,6 @@
 								<li class="apInput3 ">
 									<h4>營利事業統一編號：</h4>
 									<input type="text" placeholder="統一編號">
-								</li>
-								<li class="apInput4 ">
-									<h4>公司電話：</h4>
-									<select>
-										<option>+886</option>
-									</select>
-									<input type="tel" placeholder="公司電話">
-								</li>
-								<li class="apInput5 ">
-									<h4>通訊地址：</h4>
-									<div class="twzipcode _app1">
-										<select>
-											<option>台灣</option>
-										</select>
-									</div>
-									<input type="text" placeholder="完整地址">
 								</li>
 							</ul>
 						</div>
@@ -225,7 +209,7 @@
 								</li>
 								<li class="apInput3 ">
 									<h4>公司營業地址：</h4>
-									<div class="twzipcode _app2">
+									<div class="twzipcode">
 										<select>
 											<option>台灣</option>
 										</select>
@@ -494,7 +478,7 @@
 		<script type="text/javascript" src="dist/js/twzipcode/jquery.twzipcode.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('.twzipcode._app1, .twzipcode._app2').twzipcode();
+				$('.twzipcode').twzipcode();
 			});
 		</script>
 	</body>

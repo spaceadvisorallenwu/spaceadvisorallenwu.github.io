@@ -182,56 +182,56 @@
 	                                    <li class="active">
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 場地租金
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 全日會議專案
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 半日會議專案
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 餐飲低消
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 婚宴
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 尾牙春酒
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 謝師宴
 	                                        </p>
 	                                    </li>
 	                                    <li>
 	                                        <p>備註：
 	                                            <br> 以租金計算費用
-	                                            <a href="spacer_plan.html">&lt;詳細內容&gt;</a>
+	                                            <a href="spacer_plan.html" target="_blank">&lt;詳細內容&gt;</a>
 	                                            <br> 生日派對
 	                                        </p>
 	                                    </li>
@@ -245,7 +245,7 @@
 	                        <!-- /calendar -->
 
 	                        <div class="instant-tip">
-	                            <h1>即時預訂<img src="dist/images/lightning.png" alt=""/></h1>
+	                            <h1>即時預訂<i class="fa fa-bolt" aria-hidden="true"></i></h1>
 	                            <p>如果該場地已開啟即時預訂功能，那麼您不需要獲得場地主的批准就可以預訂。
 	                                <br> 一旦訂單送出並完成付款，即代表已預定成功。
 	                                <br> 訂單成立後，您可以在收件匣的問答通知與場地主討論活動相關事宜。
@@ -264,7 +264,6 @@
 	                        <div class="notice_txt">
 	                            <ul>
 	                                <li><i class="fa fa-exclamation-circle error" aria-hidden="true"></i>請注意！您所選擇的兩個時段方案不同，中間可能有換場佈所需的時間，請於訂單成立後與場地主再次確認。</li>
-	                                <li><i class="fa fa-exclamation-circle error" aria-hidden="true"></i>請依據<a href="spacer_plan.html" target="_blank">場地容納表</a>選擇人數，付款後無法減少人數/桌數，若須增加數量，請於訂單成立後，於訂單管理中加購。</li>
 	                            </ul>
 	                        </div>
 	                    </div>
@@ -513,6 +512,7 @@
 	                </div>
 
 	                <!-- 右邊 -->
+	                <div class="_outerBox">
 	                <div class="appointment_Result result_pc">
 	                    <div class="appointment_Content">
 	                        <div class="appointment_photo">
@@ -589,6 +589,7 @@
 							</span>
                         </div>
 	                </div>
+		            </div>
 	            </div>
 
 
@@ -828,86 +829,6 @@
 	    <script type="text/javascript" src="dist/js/main_bear.js"></script>
 	    <script type="text/javascript" src="dist/js/jquery.flexslider.js"></script>
 	    <script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
-	    <script type="text/javascript" src="dist/js/slick.js"></script>
-	    <script type="text/javascript">
-	        //精選場地
-	        $(function() {
-	            $('.site-box').slick({
-	                dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 3,
-	                slidesToScroll: 3,
-	                autoplay: true,
-	                autoplaySpeed: 50000,
-	                responsive: [{
-	                    breakpoint: 1250,
-	                    settings: {
-	                        slidesToShow: 2,
-	                        slidesToScroll: 2
-	                    }
-	                }, {
-	                    breakpoint: 880,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	        //熱門情報
-	        $(function() {
-	            $('.information-box').slick({
-	                // dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 4,
-	                slidesToScroll: 2,
-	                responsive: [{
-	                    breakpoint: 1250,
-	                    settings: {
-	                        slidesToShow: 3,
-	                        slidesToScroll: 1
-	                    }
-	                }, {
-	                    breakpoint: 980,
-	                    settings: {
-	                        slidesToShow: 2,
-	                        slidesToScroll: 1
-	                    }
-	                }, {
-	                    breakpoint: 880,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	        //精選品牌
-	        $(function() {
-	            $('.brand-box').slick({
-	                // dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 5,
-	                slidesToScroll: 5,
-	                responsive: [{
-	                    breakpoint: 980,
-	                    settings: {
-	                        slidesToShow: 3,
-	                        slidesToScroll: 3
-	                    }
-	                }, {
-	                    breakpoint: 480,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	    </script>
 
 	    <script type="text/javascript" src="dist/js/dan.js"></script>
 	    <script type="text/javascript" src="dist/js/slick.js"></script>
@@ -1669,13 +1590,55 @@
 				$('.orderInformation2').removeClass('_none'); // display
 	        }
 
+
 	        // scroll event
+	        var lastScrollTop = 0;
+	        var cartElem = $('.appointment_Result');
+	        var headerHeight = $('header').height();
+	        var detectFirstTop = $('.orderContainer').offset().top;
+	        var detectTop_offset = $('#sec2').offset().top;
+	        var detectTop_position = $('#sec2').position().top;
 	        $(window).on('scroll', function() {
-	            if ($(this).scrollTop() >= $('.writeContent').position().top && ($('.orderInformation2').position().top >= $('.appointment_Result').position().top || $(this).scrollTop() <= $('.orderInformation2').position().top + $('.writeContent').position().top)) {
-	                $('.appointment_Result').css('position', 'relative').css('top', $(this).scrollTop() - $('.writeContent').position().top);
-	            } else if ($(this).scrollTop() <= $('.writeContent').position().top) {
-	                $('.appointment_Result').css('position', 'relative').css('top', '0');
-	            }
+	        	var st = $(this).scrollTop();
+	        	var detectCount = st+headerHeight;
+	        	var cartTop = cartElem.offset().top;
+	        	if (st > lastScrollTop){
+					// downscroll
+					// console.log("downscroll");
+
+					console.log(detectCount);
+					console.log(cartTop);
+					console.log(detectTop_offset);
+					if (detectCount > cartTop) {
+						if (!cartElem.hasClass('_active')) {
+							console.log('1')
+							cartElem.addClass('_active');
+							cartElem.css({'top' : '65px'});
+						}
+					}
+					if (detectCount >= detectTop_offset) {
+						if (cartElem.hasClass('_active')) {
+							console.log('2')
+							cartElem.removeClass('_active');
+							cartElem.css({'top' : detectTop_position + 'px'});
+						}
+					}
+		     	} else {
+		          	// upscroll
+					// console.log("upscroll");
+
+					if (detectCount < detectTop_offset && !cartElem.hasClass('_active')) {
+						console.log('3')
+						cartElem.addClass('_active');
+						cartElem.css({'top' : '65px'});
+					}
+					if (detectCount < detectFirstTop && cartElem.hasClass('_active')) {
+						console.log('4')
+						cartElem.removeClass('_active');
+						cartElem.css({'top' : 'unset'});
+					}
+		     	}
+	        	lastScrollTop = st; // initial
 	        });
 	    </script>
 	</body>

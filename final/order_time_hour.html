@@ -443,6 +443,7 @@
 
 
 	                <!-- 右邊 -->
+	                <div class="_outerBox">
 	                <div class="appointment_Result result_pc">
 	                    <div class="appointment_Content">
 	                        <div class="appointment_photo">
@@ -519,6 +520,7 @@
 							</span>
                         </div>
 	                </div>
+		            </div>
 	            </div>
 
 	            <!-- 手機用價格方案 -->
@@ -719,86 +721,6 @@
 	    <script type="text/javascript" src="dist/js/main_bear.js"></script>
 	    <script type="text/javascript" src="dist/js/jquery.flexslider.js"></script>
 	    <script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
-	    <script type="text/javascript" src="dist/js/slick.js"></script>
-	    <script type="text/javascript">
-	        //精選場地
-	        $(function() {
-	            $('.site-box').slick({
-	                dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 3,
-	                slidesToScroll: 3,
-	                autoplay: true,
-	                autoplaySpeed: 50000,
-	                responsive: [{
-	                    breakpoint: 1250,
-	                    settings: {
-	                        slidesToShow: 2,
-	                        slidesToScroll: 2
-	                    }
-	                }, {
-	                    breakpoint: 880,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	        //熱門情報
-	        $(function() {
-	            $('.information-box').slick({
-	                // dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 4,
-	                slidesToScroll: 2,
-	                responsive: [{
-	                    breakpoint: 1250,
-	                    settings: {
-	                        slidesToShow: 3,
-	                        slidesToScroll: 1
-	                    }
-	                }, {
-	                    breakpoint: 980,
-	                    settings: {
-	                        slidesToShow: 2,
-	                        slidesToScroll: 1
-	                    }
-	                }, {
-	                    breakpoint: 880,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	        //精選品牌
-	        $(function() {
-	            $('.brand-box').slick({
-	                // dots: true,
-	                // infinite: false,
-	                speed: 300,
-	                slidesToShow: 5,
-	                slidesToScroll: 5,
-	                responsive: [{
-	                    breakpoint: 980,
-	                    settings: {
-	                        slidesToShow: 3,
-	                        slidesToScroll: 3
-	                    }
-	                }, {
-	                    breakpoint: 480,
-	                    settings: {
-	                        slidesToShow: 1,
-	                        slidesToScroll: 1
-	                    }
-	                }]
-	            });
-	        });
-	    </script>
 
 	    <script type="text/javascript" src="dist/js/dan.js"></script>
 	    <script type="text/javascript" src="dist/js/slick.js"></script>
@@ -1355,13 +1277,55 @@
 				$('[totalprice]').html(total_price + total_fee);
 	        }
 
+
 	        // scroll event
+	        var lastScrollTop = 0;
+	        var cartElem = $('.appointment_Result');
+	        var headerHeight = $('header').height();
+	        var detectFirstTop = $('.orderContainer').offset().top;
+	        var detectTop_offset = $('#sec2').offset().top;
+	        var detectTop_position = $('#sec2').position().top;
 	        $(window).on('scroll', function() {
-	            if ($(this).scrollTop() >= $('.writeContent').position().top && ($('.orderInformation2').position().top >= $('.appointment_Result').position().top || $(this).scrollTop() <= $('.orderInformation2').position().top + $('.writeContent').position().top)) {
-	                $('.appointment_Result').css('position', 'relative').css('top', $(this).scrollTop() - $('.writeContent').position().top);
-	            } else if ($(this).scrollTop() <= $('.writeContent').position().top) {
-	                $('.appointment_Result').css('position', 'relative').css('top', '0');
-	            }
+	        	var st = $(this).scrollTop();
+	        	var detectCount = st+headerHeight;
+	        	var cartTop = cartElem.offset().top;
+	        	if (st > lastScrollTop){
+					// downscroll
+					// console.log("downscroll");
+
+					console.log(detectCount);
+					console.log(cartTop);
+					console.log(detectTop_offset);
+					if (detectCount > cartTop) {
+						if (!cartElem.hasClass('_active')) {
+							console.log('1')
+							cartElem.addClass('_active');
+							cartElem.css({'top' : '65px'});
+						}
+					}
+					if (detectCount >= detectTop_offset) {
+						if (cartElem.hasClass('_active')) {
+							console.log('2')
+							cartElem.removeClass('_active');
+							cartElem.css({'top' : detectTop_position + 'px'});
+						}
+					}
+		     	} else {
+		          	// upscroll
+					// console.log("upscroll");
+
+					if (detectCount < detectTop_offset && !cartElem.hasClass('_active')) {
+						console.log('3')
+						cartElem.addClass('_active');
+						cartElem.css({'top' : '65px'});
+					}
+					if (detectCount < detectFirstTop && cartElem.hasClass('_active')) {
+						console.log('4')
+						cartElem.removeClass('_active');
+						cartElem.css({'top' : 'unset'});
+					}
+		     	}
+	        	lastScrollTop = st; // initial
 	        });
 	    </script>
 	</body>
