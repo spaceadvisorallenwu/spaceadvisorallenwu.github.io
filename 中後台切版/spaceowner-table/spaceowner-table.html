@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<title>場地容納人數表</title>
+<!--<base href="http://ec2-52-199-228-192.ap-northeast-1.compute.amazonaws.com/manage/" />-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="shortcut icon" href="view/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="view/images/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="view/javascript/jquery/jquery-2.js"></script>
+<script type="text/javascript" src="view/javascript/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="view/javascript/summernote/summernote.js"></script>
+<script type="text/javascript" src="view/javascript/summernote/summernote-zh-TW.js"></script>
+<!--<script type="text/javascript" src="view/javascript/jquery/datetimepicker/moment_002.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.js"></script>-->
+<script type="text/javascript" src="view/javascript/common.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/mainNav.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/subnav.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/jquery.cbpNTAccordion.min.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/login.js"></script>
+<script type="text/javascript" src="view/javascript/jquery/jquery.multi-select.js"></script>
+<script src="https://cdn.rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+<!-- Mars 新增 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+  $( function() {
+    $( '.cbp-ntaccordion' ).cbpNTAccordion();
+
+  } );
+</script>
+<link type="text/css" rel="stylesheet" href="view/stylesheet/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="view/javascript/fontawesome/css/font-awesome.min.css"/>
+<link type="text/css" rel="stylesheet" href="view/javascript/summernote/summernote.css"/>
+<link type="text/css" rel="stylesheet" href="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.css"/>
+<link type="text/css" rel="stylesheet" href="view/stylesheet/form.css"/>
+<link type="text/css" rel="stylesheet" href="view/stylesheet/stylesheet.css"/>
+<link type="text/css" rel="stylesheet" href="view/stylesheet/global.css" />
+<link type="text/css" rel="stylesheet" href="view/stylesheet/layout.css" />
+<link type="text/css" rel="stylesheet" href="view/stylesheet/mainNav.css"/>
+<link type="text/css" rel="stylesheet" href="view/stylesheet/member.css" />
+<link type="text/css" rel="stylesheet" href="view/stylesheet/multi-select.css">
+<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<!-- Mars新增 -->
+<link type="text/css" rel="stylesheet" href="view/stylesheet/mars_style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    .tooltip .arrow{
+        display: none;
+    }
+    .tooltip-inner{
+        border: none;
+        font-size: 15px;
+        font-family: 微軟正黑體, Arial, 新細明體;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .subnavList li a:hover{text-decoration: none;}
+</style>
+
+</head>
+<body>
+<!-- ******************************************************************** -->  
+<div id="container">
+    <!-- header start -->
+    <header>
+        <!-- pushTopNav start -->
+        <div id="pushTopNav">
+            <a href="#" id="navToggle"><span>Mobile Btn</span></a>
+            <div class="container-fluid" id="header">
+                <div class="logo">
+                    <img src="view/images/space_advisor_fulllogo.svg" width="149px">
+                </div>
+                <ul id="topnav">
+                    <li class="site-about hidden-sm hidden-xs">
+                        <a href="#">平台優勢</a>
+                        <a href="#">關於我們</a>
+                    </li>
+                    <li class="dropdown site-language">
+                        <a href="javascript:;" data-toggle="dropdown"><i class="fa fa-globe"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation lang">
+                            <li><a href="JavaScript:;">繁体</a></li>
+                            <li><a href="JavaScript:;">English</a></li>
+                        </ul>
+                    </li>
+                    <li class="site-member">
+                        <a href="#" class="mail">
+                            <img src="view/images/i_mail.svg">
+                            <div class="informer informer-warning">2</div>
+                        </a>  
+                        <a href="#" class="member"><img src="view/images/i_member.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- pushTopNav end -->
+    </header>
+    <!-- header end -->
+    <!-- menu start -->
+    <div class="container-fluid navBg">
+        <nav id="nav">
+            <ul>
+                <li class="mainNav"><a href="javascript:;">控制面板</a></li>
+                <li class="mainNav"><a href="javascript:;">帳號及權限管理</a></li>
+                <li class="mainNav"><a href="javascript:;">刊登場地與價格</a></li>
+                <li class="mainNav"><a href="javascript:;">可售日與折扣</a></li>
+                <li class="mainNav"><a href="javascript:;">訂單管理</a></li>
+                <li class="mainNav"><a href="javascript:;">收件匣</a></li>
+                <li class="mainNav"><a href="javascript:;">廣告管理</a></li>
+                <li class="mainNav"><a href="javascript:;">評價及管理報表</a></li>
+                <li class="mainNav hidden-lg visible-sm visible-xs"><a href="javascript:;">關於我們</a></li>
+                <li class="mainNav hidden-lg visible-sm visible-xs"><a href="javascript:;">平台優勢</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- menu end -->
+    <!--pushContainer start-->
+    <div id="pushContainer">
+        <div id="content">
+            <div class="opening_top_right">
+                <a href="#" class="img-video"><img src="view/images/video.png"></a>
+            </div>
+            <!-- container start -->
+            <div class="container">
+                <!-- signup-info-wrap start -->
+                <div class="signup-info-wrap"> 
+                    <div class="signup-nav-wrap">
+                        <div id="subnav">
+                            <div class="subnavTitle hidden-lg visible-sm visible-xs">
+                                <i class="fa fa-plus"></i>
+                                <i class="fa fa-minus"></i>
+                                <span> 分類</span>
+                            </div>
+                            <ul class="subnavList">
+                                <li><a href="#">場地主頁面編輯</a></li>
+                                <li><a href="#">營業時間設定</a></li>
+                                <li><a href="#">管理您的場地</a></li>
+                                <li><a href="#" class="selected">場地容納人數表</a></li>
+                                <li><a href="#">您的價格方案</a></li>
+                                <li><a href="#">場地&方案連結</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- signup-info-wrap end -->
+                <!-- XXXXX-content-wrap start 場地容納人數表-->
+                <div class="editinfo-content-wrap">
+                    <div class="spaceowner-row">
+                        <div class="signup-maintitle">場地容納人數表
+                        </div>
+                        <form name="form1" id="form1" action="" method="post" class="bootstrap-frm" onSubmit="return checkRFields(this);">
+                            <div class="tab-content">
+                                <div id="chinese" class="tab-pane fade in active">
+                                    <div class="addnewdate-wrap"> 
+                                        <div class="addnewdate-row"></div>
+                                        <div class="table_16p">
+                                            請在以下表格填入場地尺寸以及各類型排法可容納的最高人數/桌數，並上傳各樓層及各桌型排法平面圖。<br>
+                                            <span class="sp_pro_txt_rad">提醒 : 表格內限填半形阿拉伯數字</span>
+                                        </div>
+                                    </div>
+                                    <div class="addnewdate-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="english" class="tab-pane fade"></div>
+                    </div>
+                </div>
+                <!-- 表格 -->
+                <div class="sp_table_box tab-content" id="table_scrollbar">
+                    <table class="tg" style="width:200%;">
+                        <colgroup>
+                        <col style="width: 140px">
+                        <col style="width: 110px;">
+                        <col style="width: 75px">
+                        <col style="width: 75px">
+                        <col style="width: 75px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        <col style="width: 162px">
+                        </colgroup>
+                        <tr class="th_align_cen">
+                            <th class="tg-yw40">場地名稱/樓層</th>
+                            <th class="tg-yw40">長x寬</th>
+                            <th class="tg-yw40">高</th>
+                            <th class="tg-yw40">面積</th>
+                            <th class="tg-yw40">面積</th>
+                            <th class="tg-yw4l tab_bg_f3f3f3"><img src="view/images/icon_table_01.svg" width="85"><br>圓桌</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_02.svg" width="85"><br>自助餐式</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_06.svg" width="85"><br>雞尾酒式</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_07.svg" width="85"><br>劇院式</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_03.svg" width="85"><br>教室型</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_04.svg" width="85"><br>分組型</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_05.svg" width="85"><br>U字型</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_08.svg" width="85"><br>口字型</th>
+                            <th class="tg-yw4l"><img src="view/images/icon_table_09.svg" width="85"><br>董事會型</th>
+                        </tr>
+                        <tr class="th_align_cen">
+                            <td class="tg-yw42" style="text-align: left;">單位</td>
+                            <td class="tg-yw42">m</td>
+                            <td class="tg-yw42">m</td>
+                            <td class="tg-yw42">ping</td>
+                            <td class="tg-yw42">㎡</td>
+                            <td class="tg-yw42 tab_bg_f3f3f3">桌</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                            <td class="tg-yw42">人</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-xik7 tg-yw42" colspan="14">
+                                <span class="tab_title">一樓</span>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此樓層平面圖">
+                                    <div class="tooltip" role="tooltip">
+                                        <div class="arrow"></div>
+                                        <div class="tooltip-inner"></div>
+                                    </div>
+                                    <button class="tab_btn" type="submit" value="">上傳</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">東方廳-壹</td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="10" class="inp_nb_right"/>x
+                                <input type="text" placeholder="20" class="inp_nb_left"/>
+                            </td>
+                            <td class="tg-yw43"><input type="text" placeholder="4" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="60" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="200" class="inp_nb_left"/></td>
+                            <td class="tg-yw43 tab_bg_f3f3f3">
+                                <input type="text" placeholder="10" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="80" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">東方廳-貳</td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="0.00" class="inp_nb_right"/>x
+                                <input type="text" placeholder="0.00" class="inp_nb_left"/>
+                            </td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43 tab_bg_f3f3f3">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                        </tr>
+                        <!--  -->
+                        <tr>
+                            <td class="tg-xik7 tg-yw42" colspan="14">
+                                <span class="tab_title">二樓</span>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="預覽圖">
+                                    <div class="tooltip" role="tooltip">
+                                        <div class="arrow"></div>
+                                        <div class="tooltip-inner"></div>
+                                    </div>
+                                    <button class="tab_btn" type="submit" value="">重新上傳</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-yw4l">大宴會廳</td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="0.00" class="inp_nb_right"/>x
+                                <input type="text" placeholder="0.00" class="inp_nb_left"/>
+                            </td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43"><input type="text" placeholder="0.00" class="inp_nb_left"/></td>
+                            <td class="tg-yw43 tab_bg_f3f3f3">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                            <td class="tg-yw43">
+                                <input type="text" placeholder="請輸入數字" class="inp_text"/>
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="上傳此廳別/桌型的平面圖">
+                                <input class="tab_btn" type="submit" value="上傳">
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="signup-sendbtn">
+                    <a href=""><input class="table_ent_btn" type="submit" value="上一步>繼續新增場地" name=""></a>
+                </div>
+                <div class="signup-sendbtn">
+                    <p><input class="table_ent_btn" type="submit" value="下一步>新增價格方案" name=""><span>第4步驟！ 已完成超過一半囉！</span></p>
+                </div>
+                <div class="signup-sendbtn">
+                    <input class="table_ent_btn" type="button" value="儲存" style="width: 180px;">
+                </div>
+            </div>
+        </div>
+        <!-- XXXXX-content-wrap end -->
+    </div>
+    <!-- container end -->
+</div>
+<!-- footer start -->
+<footer id="footer">
+    <div class="footer-wrap">
+        <div class="footer-menu">
+            <div class="footer-menu-list">
+                <div class="title">SpaceAdvisor</div>
+                <div class="footernav">
+                    <li><a href="">關於我們</a></li>
+                    <li><a href="">平台優勢</a></li>
+                    <li><a href="">使用說明</a></li>
+                    <li><a href="">人才招募</a></li>
+                </div>
+            </div>
+            <div class="footer-menu-list">
+                <div class="title">客服中心</div>
+                <div class="footernav">
+                    <li><a href="">常見問題</a></li>
+                    <li><a href="">聯絡我們</a></li>
+                    <li><a href="">服務政策</a></li>
+                    <li><a href="">隱私權條款</a></li>
+                </div>
+            </div>
+            <div class="footer-menu-list">
+                <div class="title">合作夥伴</div>
+                <div class="footernav">
+                    <li><a href="">合作優勢</a></li>
+                    <li><a href="">立即刊登場地</a></li>
+                    <li><a href="">企業合作</a></li>
+                    <li><a href="">經銷商計畫</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="addresswrap">
+                <div class="soicallist">
+                    <div class="soical-icon">
+                        <a href="#">
+                            <img src="view/images/i_facebook.svg" width="30px" alt="Facebook">
+                            <img src="view/images/i_facebook_color.svg"   width="30px" alt="Facebook" class="img-top">
+                        </a>
+                    </div>
+                    <div class="soical-icon">
+                        <a href="#">
+                            <img src="view/images/i_instagram.svg" width="30px" alt="Facebook">
+                            <img src="view/images/i_instagram_color.svg"   width="30px" alt="Facebook" class="img-top">
+                        </a>
+                    </div>
+                    <div class="soical-icon">
+                        <a href="#">
+                            <img src="view/images/i_youtube.svg" width="30px" alt="Facebook">
+                            <img src="view/images/i_youtube_color.svg"   width="30px" alt="Facebook" class="img-top">
+                        </a>
+                    </div>
+                    <div class="soical-icon">
+                        <a href="#">
+                            <img src="view/images/i_line.svg" width="30px" alt="Facebook">
+                            <img src="view/images/i_line_color.svg"   width="30px" alt="Facebook" class="img-top">
+                        </a>
+                    </div>
+                </div>
+                <div class="allright-list">
+                    <div class="address-text">
+                        台北市信義區信義路5段7號24F D1 (101大樓)
+                    </div>
+                    <div class="allright-text">© SpaceAdvisor 2017 All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+      $('#example').tooltip(options)
+    })
+    </script>
+    <script>
+    /*$(document).ready(function(){
+        // light 
+        $('[data-toggle="tooltip"]').tooltip(); 
+        // modal跳窗  
+        $(".modal-trigger").click(function(e){
+      e.preventDefault();
+      dataModal = $(this).attr("data-modal");
+      $("#" + dataModal).css({"display":"block"});
+    });
+
+    $(".close-modal, .modal-sandbox").click(function(){
+      $(".modal").css({"display":"none"});
+    }); 
+    }); */
+    // run pre selected options
+     $('.searchable').multiSelect({
+      selectableHeader: "<input type='text' name='search-input' class='search-input' autocomplete='off' placeholder='請輸入 \"小型舞台\"'>",
+      selectionHeader: "<input type='text' name='search-input' class='search-input' autocomplete='off' placeholder='請輸入 \"小型舞台\"'>",
+      afterInit: function(ms){
+        var that = this,
+            $selectableSearch = that.$selectableUl.prev(),
+            $selectionSearch = that.$selectionUl.prev(),
+            selectableSearchString = '#'+that.$container.attr('id')+' .ms-elem-selectable:not(.ms-selected)',
+            selectionSearchString = '#'+that.$container.attr('id')+' .ms-elem-selection.ms-selected';
+        that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+        .on('keydown', function(e){
+          if (e.which === 40){
+            that.$selectableUl.focus();
+            return false;
+          }
+        });
+        that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+        .on('keydown', function(e){
+          if (e.which == 40){
+            that.$selectionUl.focus();
+            return false;
+          }
+        });
+      },
+      afterSelect: function(){
+        this.qs1.cache();
+        this.qs2.cache();
+      },
+      afterDeselect: function(){
+        this.qs1.cache();
+        this.qs2.cache();
+      }
+    });
+    </script>
+    <script type="text/javascript">
+    /*$('.toggle').click(function(e) {
+        e.preventDefault();
+      
+        var $this = $(this);
+      
+        if ($this.next().hasClass('show')) {
+            $this.next().removeClass('show');
+        } else {
+            $this.parent().parent().find('li .inner').removeClass('show');
+            $this.parent().parent().find('li .inner');
+            $this.next().toggleClass('show');
+        }
+    });*/
+    </script>
+    <script type="text/javascript">
+      $('.date-own').datepicker({
+         minViewMode: 2,
+         format: 'yyyy'
+       });
+      $("#datepicker").datepicker( {
+        format: "mm-yyyy",
+        viewMode: "months", 
+        minViewMode: "months"
+      });
+  </script>
+  </div>
+  <!--pushContainer end-->
+</div>
+<!-- ******************************************************************** --> 
+</body></html>
