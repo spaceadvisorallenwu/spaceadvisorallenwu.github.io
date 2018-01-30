@@ -146,6 +146,9 @@
 	            </div>
 	            <!--step步驟 -->
 	            <div class="orderstep _boxStyle">
+	            	<div class="stepPhotoInside">
+		                <img src="dist/images/step_pic_1.png" title="" alt="">
+		            </div>
 	                <ul>
 						<li class="active"><b>1.</b><span>選擇/確認時間</span></li>
 						<li><b>2.</b><span>填寫付款資訊</span></li>
@@ -153,9 +156,9 @@
 					</ul>
 	            </div>
 	            <!-- step圖 -->
-	            <div class="stepPhoto _boxStyle">
+	            <!-- <div class="stepPhoto _boxStyle">
 	                <img src="dist/images/step_pic.jpg" title="" alt="">
-	            </div>
+	            </div> -->
 
 	            <div class="writeContent _boxStyle">
 	                <!-- 左邊 -->
@@ -614,10 +617,10 @@
 								</div>
 								<div class="_prices">
 									<div class="discount">
-										<span>[_BPRICE]</span>
+										<span>[_PRICE]</span>
 									</div>
 									<div class="rebate">
-										<span>[_PRICE]</span>
+										<span>[_BPRICE]</span>
 									</div>
 									<div class="sarebate">
 										<span>[_DISCOUNT]</span>
@@ -630,8 +633,8 @@
 	            		<div class="[_CLASS]" data-cid="[_ID]">
 							<div class="deta_content">
 								<time>[_TIME]</time>
-								<span class="discount">[_BPRICE]</span>
-								<div class="rebate">[_PRICE]</div>
+								<span class="discount">[_PRICE]</span>
+								<div class="rebate">[_BPRICE]</div>
 							</div>
 							<div class="program">
 								<b>[_NAME]</b>
@@ -855,9 +858,9 @@
 					'name' : '上午',
 					'time' : '10:00-11:00',
 					'disable' : false,
-					'discount' : '',
+					'discount' : '1折',
 					'onlineb' : true,
-					'price' : '4,000',
+					'price' : '10,000',
 					'bprice' : '1,000'
 				},
 				'11:00-12:00' : {
@@ -989,6 +992,19 @@
 			  	return newArray;
 			}
 
+			// do comma on number
+			function formatNumber(num) {
+		        num += '';
+		        var x = num.split('.');
+		        var x1 = x[0];
+		        var x2 = x.length > 1 ? '.' + x[1] : '';
+		        var rgx = /(\d+)(\d{3})/;
+		        while (rgx.test(x1)) {
+		            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+		        }
+		        return x1 + x2;
+		    }
+
 			// click time
 			$('#sec2').on('click', '._item', function(){
 	        	if($(this).hasClass('_disable')) return;
@@ -1081,10 +1097,14 @@
 					  	var _currency = 'TWD';
 					  	var _price = obj['price'];
 					  	var _bprice = obj['bprice'];
+					  	var _tempPrice = _price;
 					  	if (_disable) {
 					  		_class2 += ' _disable';
 				  		} else {
-						  	if (_discount != '' && _bprice != '') _class2 += ' _haveDiscount';
+						  	if (_discount != '' && _bprice != '') {
+						  		_class2 += ' _haveDiscount';
+						  		_tempPrice = _bprice;
+						  	}
 						  	if (_onlineb == '1') _class2 += ' _onlineb';
 					  	}
 
@@ -1092,7 +1112,7 @@
 	        			_template_item = _template_item.replace(/\[_ID\]/g, _cid);
 	        			_template_item = _template_item.replace(/\[_TIME\]/g, _time);
 	        			_template_item = _template_item.replace(/\[_DISCOUNT\]/g, _discount);
-	        			_template_item = _template_item.replace(/\[_PRICE\]/g, _currency + ' ' + _price);
+	        			_template_item = _template_item.replace(/\[_PRICE\]/g, _currency + ' ' + _tempPrice);
 	        			total_item += _template_item;
     				}
     				_count += 6; // 一個循環
@@ -1176,7 +1196,13 @@
 						  	var _currency = 'TWD';
 						  	var _price = _array['price'];
 						  	var _bprice = _array['bprice'];
-						  	if (_discount != '' && _bprice != '') _class += ' _haveDiscount';
+						  	var _correctPrice = 0;
+						  	if (_discount != '' && _bprice != '') {
+						  		_class += ' _haveDiscount';
+						  		_correctPrice += _bprice;
+						  	} else {
+						  		_correctPrice += _price;
+						  	}
 						  	if (_onlineb == '1') _class += ' _onlineb';
 
 		            		// pc
@@ -1200,7 +1226,7 @@
 		            		total_item_pc += _template_cart_pc_item;
 		            		total_item_mb += _template_cart_mb_item;
 
-		            		temp_cart_total += parseInt(_price.replace(/,/g, '')) // add to total
+		            		temp_cart_total += parseInt(_correctPrice.replace(/,/g, '')) // add to total
 		            	}
 		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_ID\]/g, pid);
 		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_TIME\]/g, pid);
@@ -1269,12 +1295,12 @@
 	        	var total_fee_number = 10;
 	        	var total_fee = 0;
 	        	if (total_price > 0) {
-	        		total_fee = total_price*total_fee_number/100;
+	        		total_fee = Math.round(total_price*total_fee_number/100);
 	        	}
 
-				$('[totalprice_tn]').html(total_price);
-				$('[post_fee]').html(total_fee);
-				$('[totalprice]').html(total_price + total_fee);
+				$('[totalprice_tn]').html(formatNumber(total_price));
+				$('[post_fee]').html(formatNumber(total_fee));
+				$('[totalprice]').html(formatNumber(total_price + total_fee));
 	        }
 
 
@@ -1289,23 +1315,18 @@
 	        	var st = $(this).scrollTop();
 	        	var detectCount = st+headerHeight;
 	        	var cartTop = cartElem.offset().top;
-	        	if (st > lastScrollTop){
+	        	if (st > lastScrollTop) {
 					// downscroll
 					// console.log("downscroll");
 
-					console.log(detectCount);
-					console.log(cartTop);
-					console.log(detectTop_offset);
 					if (detectCount > cartTop) {
 						if (!cartElem.hasClass('_active')) {
-							console.log('1')
 							cartElem.addClass('_active');
 							cartElem.css({'top' : '65px'});
 						}
 					}
 					if (detectCount >= detectTop_offset) {
 						if (cartElem.hasClass('_active')) {
-							console.log('2')
 							cartElem.removeClass('_active');
 							cartElem.css({'top' : detectTop_position + 'px'});
 						}
@@ -1315,12 +1336,10 @@
 					// console.log("upscroll");
 
 					if (detectCount < detectTop_offset && !cartElem.hasClass('_active')) {
-						console.log('3')
 						cartElem.addClass('_active');
 						cartElem.css({'top' : '65px'});
 					}
 					if (detectCount < detectFirstTop && cartElem.hasClass('_active')) {
-						console.log('4')
 						cartElem.removeClass('_active');
 						cartElem.css({'top' : 'unset'});
 					}

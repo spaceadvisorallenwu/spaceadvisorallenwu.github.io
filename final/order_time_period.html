@@ -146,6 +146,9 @@
 	            </div>
 	            <!--step步驟 -->
 	            <div class="orderstep _boxStyle">
+	            	<div class="stepPhotoInside">
+		                <img src="dist/images/step_pic_1.png" title="" alt="">
+		            </div>
 	                <ul>
 						<li class="active"><b>1.</b><span>選擇/確認時間</span></li>
 						<li><b>2.</b><span>填寫付款資訊</span></li>
@@ -153,9 +156,9 @@
 					</ul>
 	            </div>
 	            <!-- step圖 -->
-	            <div class="stepPhoto _boxStyle">
+	            <!-- <div class="stepPhoto _boxStyle">
 	                <img src="dist/images/step_pic.jpg" title="" alt="">
-	            </div>
+	            </div> -->
 
 	            <div class="writeContent _boxStyle">
 	                <!-- 左邊 -->
@@ -653,7 +656,7 @@
             			<ul class="period_content [_CLASS]">[_ITEM]</ul>
 	            	</div>
 	            	<div id="order_period_item_template">
-						<li class="[_CLASS] rebates" data-cid="[_ID]" data-plan1="" data-plan2="">
+						<li class="[_CLASS] rebates" data-cid="[_ID]" data-plan1="" data-plan2="" data-plan3="">
 							<div class="col">
 								<span class="assess">
 									<input type="checkbox" id="[_ID]" [_INPUT_DISABLE]>
@@ -675,8 +678,8 @@
 						</li>
 	            	</div>
 	            	<div id="order_period_item_select_template">
-	            		<div class="planSelect">
-							<select class="[_CLASS]" [_SELECT_DISABLE]>[_OPTION]</select>
+	            		<div class="planSelect [_DCLASS]">
+							<select class="[_SCLASS]" [_SELECT_DISABLE]>[_OPTION]</select>
 						</div>
 	            	</div>
 	            	<div id="order_period_item_select_option_template">
@@ -694,8 +697,6 @@
 							</label>
 						</li>
 	            	</div>
-
-
 	            	<div id="cart_box_template">
 	            		<div class="appointment_item" data-pid="[_ID]">
                     		<div class="appointment_deta">
@@ -720,10 +721,10 @@
 								</div>
 								<div class="_prices">
 									<div class="discount">
-										<span>[_BPRICE]</span>
+										<span>[_PRICE]</span>
 									</div>
 									<div class="rebate">
-										<span>[_PRICE]</span>
+										<span>[_BPRICE]</span>
 									</div>
 									<div class="sarebate">
 										<span>[_DISCOUNT]</span>
@@ -737,8 +738,8 @@
 	            		<div class="[_CLASS]" data-cid="[_ID]">
 							<div class="deta_content">
 								<time>[_TIME]</time>
-								<span class="discount">[_BPRICE]</span>
-								<div class="rebate">[_PRICE]</div>
+								<span class="discount">[_PRICE]</span>
+								<div class="rebate">[_BPRICE]</div>
 							</div>
 							<div class="program">
 								<b>[_NAME]</b>
@@ -920,9 +921,9 @@
 							'name' : '場地租金方案A',
 							'value' : '1',
 							'disable' : false,
-							'discount' : '',
+							'discount' : '1折',
 							'onlineb' : false,
-							'price' : '5,000',
+							'price' : '10,000',
 							'bprice' : '1,000'
 						},
 						'場地租金方案B' : {
@@ -931,27 +932,53 @@
 							'disable' : false,
 							'discount' : '',
 							'onlineb' : true,
-							'price' : '3,000',
-							'bprice' : '1,000',
+							'price' : '',
+							'bprice' : '',
 							'select2' : {
-								'50人' : {
-									'name' : '50人',
+								'桌1' : {
+									'name' : '桌1',
 									'value' : '1',
 									'disable' : false,
 									'discount' : '5折',
-									'price' : '2,000',
-									'bprice' : '1,000'
+									'price' : '',
+									'bprice' : '',
+									'select3' : {
+										'50人' : {
+											'name' : '50人',
+											'value' : '1',
+											'disable' : false,
+											'discount' : '5折',
+											'price' : '2,999',
+											'bprice' : '1,999'
+										},
+										'75人' : {
+											'name' : '75人',
+											'value' : '2',
+											'disable' : false,
+											'discount' : '',
+											'price' : '3,499',
+											'bprice' : '2,199'
+										},
+										'100人' : {
+											'name' : '100人',
+											'value' : '3',
+											'disable' : true,
+											'discount' : '5折',
+											'price' : '3,399',
+											'bprice' : '2,999'
+										}
+									}
 								},
-								'75人' : {
-									'name' : '75人',
+								'桌2' : {
+									'name' : '桌2',
 									'value' : '2',
 									'disable' : false,
 									'discount' : '',
 									'price' : '3,500',
 									'bprice' : '2,000'
 								},
-								'100人' : {
-									'name' : '100人',
+								'桌3' : {
+									'name' : '桌3',
 									'value' : '3',
 									'disable' : true,
 									'discount' : '5折',
@@ -1082,6 +1109,19 @@
 			    return arr;
 			}
 
+			// do comma on number
+			function formatNumber(num) {
+		        num += '';
+		        var x = num.split('.');
+		        var x1 = x[0];
+		        var x2 = x.length > 1 ? '.' + x[1] : '';
+		        var rgx = /(\d+)(\d{3})/;
+		        while (rgx.test(x1)) {
+		            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+		        }
+		        return x1 + x2;
+		    }
+
 			// switch equip number
 	    	$('.equipment').on('change', 'input:checkbox', function() {
 				var li_elem = $(this).parents('li');
@@ -1120,12 +1160,30 @@
 				var _id = li_elem.attr('data-cid');
 				var _stat = $(this).is(':checked');
 				if (_stat) {
-					li_elem.find('select.plan1').prop('disabled', false);
 					li_elem.addClass('_active');
-					li_elem.find('select.plan1').change();
+
+					// var current_plan1_id = li_elem.attr('data-plan1');
+					var current_plan2_id = li_elem.attr('data-plan2');
+					var current_plan3_id = li_elem.attr('data-plan3');
+					if (current_plan2_id != '') {
+						if (current_plan3_id != '') {
+							li_elem.find('select.plan1').prop('disabled', false);
+							li_elem.find('select.plan2').prop('disabled', false);
+							li_elem.find('select.plan3').prop('disabled', false);
+							li_elem.find('select.plan3').change();
+						} else {
+							li_elem.find('select.plan1').prop('disabled', false);
+							li_elem.find('select.plan2').prop('disabled', false);
+							li_elem.find('select.plan2').change();
+						}
+					} else {
+						li_elem.find('select.plan1').prop('disabled', false);
+						li_elem.find('select.plan1').change();
+					}
 				} else {
 					li_elem.find('select.plan1').prop('disabled', true);
 					li_elem.find('select.plan2').prop('disabled', true);
+					li_elem.find('select.plan3').prop('disabled', true);
 					li_elem.removeClass('_active');
 					doCheckSelect(li_elem);
 				}
@@ -1154,22 +1212,22 @@
 			$('#sec2').on('change', '.order_tiemBox .period_content ._item select.plan1', function(){
 				var _plan1_id = $('option:selected', this).attr('data-id');
 				var li_elem = $(this).parents('._item');
-				var current_plan1_id = li_elem.attr('data-plan1');
-				var current_plan2_id = li_elem.attr('data-plan2');
 				var _cid = li_elem.attr('data-cid');
-				var _value = $(this).val();
-				if (li_elem.find('.plan2').length > 0) li_elem.find('.plan2').remove();
-				// if (current_plan1_id != _plan1_id) li_elem.attr('data-plan1', _plan1_id);
+				// remove select section for rebuild
+				if (li_elem.find('.planSelect._s2').length > 0) li_elem.find('.planSelect._s2').remove();
+
 				li_elem.attr('data-plan1', _plan1_id);
 				li_elem.attr('data-plan2', '');
 				li_elem.removeClass('_havePlan2');
+				li_elem.removeClass('_havePlan3');
 
-				// do select2
+				// do show select2
 				var _select = _all_period_array[_cid]['selects'][_plan1_id];
 				if (typeof _select['select2'] != "undefined") {
 					var template_period_item_select = $('#__template #order_period_item_select_template').html();
 					var template_period_item_select_option = $('#__template #order_period_item_select_option_template').html();
 					var _select2 = _select['select2'];
+					var _div2_class = ' _s2';
 					var _select2_class = ' plan2';
 					var _select2_disable = '';
 					var _temp_options = '';
@@ -1180,7 +1238,7 @@
 						var _option2_obj = _select2[option2];
 						var _option2_name = _option2_obj['name'];
 						var _option2_value = _option2_obj['value'];
-						var _option2_disable = _option2_obj['disable'];
+						var _option2_disable = (_option2_obj['disable'])?'disabled':'';
 
 						_template_select_option = _template_select_option.replace(/\[_ID\]/g, _option2_id);
 				  		_template_select_option = _template_select_option.replace(/\[_NAME\]/g, _option2_name);
@@ -1189,7 +1247,8 @@
 				  		_temp_options += _template_select_option;
 					}
 
-					template_period_item_select = template_period_item_select.replace(/\[_CLASS\]/g, _select2_class);
+					template_period_item_select = template_period_item_select.replace(/\[_DCLASS\]/g, _div2_class);
+					template_period_item_select = template_period_item_select.replace(/\[_SCLASS\]/g, _select2_class);
 				  	template_period_item_select = template_period_item_select.replace(/\[_OPTION\]/g, _temp_options);
 				  	template_period_item_select = template_period_item_select.replace(/\[_select_disable\]/g, _select2_disable);
 				  	li_elem.find('select.plan1').after(template_period_item_select);
@@ -1199,12 +1258,63 @@
 					doCheckSelect(li_elem);
 				}
 			});
+			// select plan2
 			$('#sec2').on('change', '.order_tiemBox .period_content ._item select.plan2', function(){
 				var _plan2_id = $('option:selected', this).attr('data-id');
 				var li_elem = $(this).parents('._item');
+				var _cid = li_elem.attr('data-cid');
+				var current_plan1_id = li_elem.attr('data-plan1');
+
+				// remove plan3 for rebuild
+				if (li_elem.find('.plan3').length > 0) li_elem.find('.plan3').remove();
+
 				li_elem.attr('data-plan2', _plan2_id);
-				doCheckSelect(li_elem);
+				li_elem.attr('data-plan3', '');
+				li_elem.removeClass('_havePlan3');
+
+				// do show select3
+				var _select = _all_period_array[_cid]['selects'][current_plan1_id]['select2'][_plan2_id];
+				if (typeof _select['select3'] != "undefined") {
+					var template_period_item_select = $('#__template #order_period_item_select_template .planSelect').html();
+					var template_period_item_select_option = $('#__template #order_period_item_select_option_template').html();
+
+					var _select3 = _select['select3'];
+					var _select3_class = ' plan3';
+					var _select3_disable = '';
+					var _temp_options = '';
+
+					for(var option3 in _select3) {
+						var _template_select_option = template_period_item_select_option;
+						var _option3_id = option3;
+						var _option3_obj = _select3[option3];
+						var _option3_name = _option3_obj['name'];
+						var _option3_value = _option3_obj['value'];
+						var _option3_disable = (_option3_obj['disable'])?'disabled':'';
+
+						_template_select_option = _template_select_option.replace(/\[_ID\]/g, _option3_id);
+				  		_template_select_option = _template_select_option.replace(/\[_NAME\]/g, _option3_name);
+				  		_template_select_option = _template_select_option.replace(/\[_VALUE\]/g, _option3_value);
+				  		_template_select_option = _template_select_option.replace(/\[_option_disable\]/g, _option3_disable);
+				  		_temp_options += _template_select_option;
+					}
+
+					template_period_item_select = template_period_item_select.replace(/\[_SCLASS\]/g, _select3_class);
+				  	template_period_item_select = template_period_item_select.replace(/\[_OPTION\]/g, _temp_options);
+				  	template_period_item_select = template_period_item_select.replace(/\[_select_disable\]/g, _select3_disable);
+				  	li_elem.find('select.plan2').after(template_period_item_select);
+				  	li_elem.addClass('_havePlan3');
+				  	li_elem.find('select.plan3').change();
+				} else {
+					doCheckSelect(li_elem);
+				}
 			});
+			// select plan3
+			$('#sec2').on('change', '.order_tiemBox .period_content ._item select.plan3', function(){
+				var _plan3_id = $('option:selected', this).attr('data-id');
+				var li_elem = $(this).parents('._item');
+				li_elem.attr('data-plan3', _plan3_id);
+				doCheckSelect(li_elem);
+			})
 			function doCheckSelect(elem) {
 				var $elem = elem;
 				var _pid = $elem.parents('.order_tiemBox').attr('data-pid');
@@ -1216,14 +1326,16 @@
 				if ($elem.hasClass('_active')) {
 					var _attrPlan1 = $elem.attr('data-plan1');
 					var _attrPlan2 = $elem.attr('data-plan2');
+					var _attrPlan3 = $elem.attr('data-plan3');
 					var _plan = _all_period_array[_cid]['selects'][_attrPlan1];
+
 					if (_attrPlan2 != '') {
-						_plan['select2'][_attrPlan2]['onlineb'] = _plan['onlineb'];
-						_plan = _plan['select2'][_attrPlan2];
+						if (_attrPlan3 != '') _plan = _plan['select2'][_attrPlan2]['select3'][_attrPlan3];
+						else _plan = _plan['select2'][_attrPlan2];
 					}
 
 					_discount = _plan['discount'];
-					_price = _plan['price'];
+					_price = (_discount != '')?_plan['bprice']:_plan['price'];
 					_onlineb = _plan['onlineb'];
 
 					if (typeof cart_array[_pid] != "undefined") {
@@ -1236,6 +1348,7 @@
 					}
 					cart_array[_pid][_cid]['plan1'] = _attrPlan1;
 					cart_array[_pid][_cid]['plan2'] = _attrPlan2;
+					cart_array[_pid][_cid]['plan3'] = _attrPlan3;
 				} else {
 					delete cart_array[_pid][_cid];
 					if (Object.keys(cart_array[_pid]).length == 0)
@@ -1271,8 +1384,6 @@
 	        	var mb_cart_elem = $('.mobile-plan-stecla.mobile').find('.appointment_detail');
 	        	var temp_cart_total = 0;
 
-	        	// console.log(cart_array);
-
 				if (Object.keys(cart_array).length == 0) {
 	            	pc_cart_elem.empty();
 	            	mb_cart_elem.empty();
@@ -1301,22 +1412,52 @@
 		            		var _id_list = cid[_id];
 		            		var _plan1 = _id_list['plan1'];
 		            		var _plan2 = _id_list['plan2'];
-		            		var _array = _all_period_array[_id]['selects'][_plan1];
+		            		var _plan3 = _id_list['plan3'];
+		            		var _array_plan1 = _all_period_array[_id]['selects'][_plan1]; // allen
+		            		var _array_plan2 = (_plan2 != '')?_array_plan1['select2'][_plan2]:'';
+		            		var _array_plan3 = (_plan2 != '' && _plan3 != '')?_array_plan2['select3'][_plan3]:'';
 		            		var _array_name = _all_period_array[_id]['selects'][_plan1]['name'];
 		            		var _array_time = _all_period_array[_id]['time'];
-		            		_array_name = (_plan2 != '')?_array_name+'<b>'+_plan2+'</b>':_array_name;
+		            		// if (_plan2 != '') {
+		            		// 	if (_plan3 != '') _array_name = _array_name+'<b>'+_plan2+_plan3+'</b>';
+			            	// 	else _array_name = _array_name+'<b>'+_plan2+'</b>';
+		            		// }
+		            		// _array_name = (_plan2 != '')?_array_name+'<b>'+_plan2+'</b>':_array_name;
 
 		            		// var _index = Object.keys(_all_period_array).indexOf(_id);
 		            		var _class = " deta_box";
 		            		var _name = _array_name;
 		            		var _time = _array_time;
-						  	var _discount = _array['discount'];
-						  	var _onlineb = _array['onlineb'];
+						  	var _discount = _array_plan1['discount'];
+						  	var _onlineb = _array_plan1['onlineb'];
 						  	var _currency = 'TWD';
-						  	var _price = _array['price'];
-						  	var _bprice = _array['bprice'];
-						  	if (_discount != '' && _bprice != '') _class += ' _haveDiscount';
+						  	var _price = _array_plan1['price'];
+						  	var _bprice = _array_plan1['bprice'];
+						  	var _correctPrice = 0;
+
+						  	if (_plan2 != '') {
+		            			if (_plan3 != '') {
+		            				_array_name = _array_name+'<b>'+_plan2+'/'+_plan3+'</b>';
+		            				_discount = _array_plan3['discount'];
+		            				_price = _array_plan3['price'];
+		            				_bprice = _array_plan3['bprice'];
+			            		} else {
+			            			_array_name = _array_name+'<b>'+_plan2+'</b>';
+			            			_discount = _array_plan2['discount'];
+			            			_price = _array_plan2['price'];
+			            			_bprice = _array_plan2['bprice'];
+			            		}
+			            		_name = _array_name;
+		            		}
+
+						  	if (_discount != '' && _bprice != '') {
+						  		_class += ' _haveDiscount';
+						  		_correctPrice += _bprice;
+						  	} else {
+						  		_correctPrice += _price;
+						  	}
 						  	if (_onlineb == '1') _class += ' _onlineb';
+
 
 						  	var total_sub_item_pc = '';
 						  	var total_sub_item_mb = '';
@@ -1387,7 +1528,7 @@
 		            		total_item_pc += _template_cart_pc_item;
 		            		total_item_mb += _template_cart_mb_item;
 
-		            		temp_cart_total += parseInt(_price.replace(/,/g, '')) // add to total
+		            		temp_cart_total += parseInt(_correctPrice.replace(/,/g, '')) // add to total
 		            	}
 		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_ID\]/g, pid);
 		            	_template_cart_outer_pc = _template_cart_outer_pc.replace(/\[_TIME\]/g, pid);
@@ -1439,12 +1580,12 @@
 	        	var total_fee_number = 10;
 	        	var total_fee = 0;
 	        	if (total_price > 0) {
-	        		total_fee = total_price*total_fee_number/100;
+	        		total_fee = Math.round(total_price*total_fee_number/100);
 	        	}
 
-				$('[totalprice_tn]').html(total_price);
-				$('[post_fee]').html(total_fee);
-				$('[totalprice]').html(total_price + total_fee);
+				$('[totalprice_tn]').html(formatNumber(total_price));
+				$('[post_fee]').html(formatNumber(total_fee));
+				$('[totalprice]').html(formatNumber(total_price + total_fee));
 	        }
 
 	        function switchChooseNo() {
@@ -1524,6 +1665,7 @@
 					  		var _selects = obj['selects'];
 				        	var _template_period_item_select = template_period_item_select;
 				        	var template_period_item_select_option = $('#__template #order_period_item_select_option_template').html();
+				        	var _div_class = ' _s1';
 				        	var _select_class = ' plan1';
 				        	var _temp_options = '';
 
@@ -1542,7 +1684,8 @@
 						  		_temp_options += _template_select_option;
 						  	}
 
-						  	_template_period_item_select = _template_period_item_select.replace(/\[_CLASS\]/g, _select_class);
+						  	_template_period_item_select = _template_period_item_select.replace(/\[_DCLASS\]/g, _div_class);
+						  	_template_period_item_select = _template_period_item_select.replace(/\[_SCLASS\]/g, _select_class);
 						  	_template_period_item_select = _template_period_item_select.replace(/\[_OPTION\]/g, _temp_options);
 						  	_template_period_item_select = _template_period_item_select.replace(/\[_select_disable\]/g, _select_disable);
 						  	_temp_selects += _template_period_item_select;
@@ -1582,7 +1725,7 @@
 				  	_template_item = _template_item.replace(/\[_SUB\]/g, _temp_subs);
         			total_item += _template_item;
 				}
-				// console.log(total_item);
+
 				_template_outer = _template_outer.replace(/\[_CLASS\]/g, _class1);
         		_template_outer = _template_outer.replace(/\[_ITEM\]/g, total_item);
         		total_outer += _template_outer;
@@ -1602,23 +1745,18 @@
 	        	var st = $(this).scrollTop();
 	        	var detectCount = st+headerHeight;
 	        	var cartTop = cartElem.offset().top;
-	        	if (st > lastScrollTop){
+	        	if (st > lastScrollTop) {
 					// downscroll
 					// console.log("downscroll");
 
-					console.log(detectCount);
-					console.log(cartTop);
-					console.log(detectTop_offset);
 					if (detectCount > cartTop) {
 						if (!cartElem.hasClass('_active')) {
-							console.log('1')
 							cartElem.addClass('_active');
 							cartElem.css({'top' : '65px'});
 						}
 					}
 					if (detectCount >= detectTop_offset) {
 						if (cartElem.hasClass('_active')) {
-							console.log('2')
 							cartElem.removeClass('_active');
 							cartElem.css({'top' : detectTop_position + 'px'});
 						}
@@ -1628,12 +1766,10 @@
 					// console.log("upscroll");
 
 					if (detectCount < detectTop_offset && !cartElem.hasClass('_active')) {
-						console.log('3')
 						cartElem.addClass('_active');
 						cartElem.css({'top' : '65px'});
 					}
 					if (detectCount < detectFirstTop && cartElem.hasClass('_active')) {
-						console.log('4')
 						cartElem.removeClass('_active');
 						cartElem.css({'top' : 'unset'});
 					}

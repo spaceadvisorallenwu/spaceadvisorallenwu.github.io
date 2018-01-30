@@ -2,12 +2,35 @@
 /** BEGIN all_order **/
 .orderstep._boxStyle {
     margin: 20px auto;
-    border: 1px solid #ddd;
-    padding: 1px;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+}
+.orderstep .stepPhotoInside {
+    width: 30%;
+    max-width: 270px;
+    display: inline-flex;
+    align-items: center;
+    max-height: 51px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #b81814;
+    padding: 0 9px;
+    margin-right: 3px;
+}
+.orderstep .stepPhotoInside img {
+    width: 100%;
+    border-radius: 5px;
     overflow: hidden;
 }
 .orderstep ul {
     display: flex;
+    border: 1px solid #ddd;
+    padding: 1px;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
 }
 .orderstep ul li {
     border-right: 1px solid #ddd;
@@ -47,7 +70,7 @@
     width: 90%;
     height: auto;
 }
-#wrapper:not(.order_time) .stepPhoto._boxStyle {
+#wrapper .stepPhoto._boxStyle {
     display: none;
 }
 
@@ -197,14 +220,18 @@
     cursor: default;
     opacity: .7;
 }
-#wrapper.order_time .assess input[type=checkbox] {
-    /*display: inline-block;*/
+#wrapper.order_time .order_tiemBox .assess input[type=checkbox] {
+    display: inline-block;
     width: unset;
     height: unset;
-    display: none;
+    /*display: none;*/
+    margin: 0;
+    margin-right: 9px;
 }
 #wrapper.order_time .equipment .assess input[type=checkbox] {
-    display: block;
+    display: inline-block;
+    width: unset;
+    height: unset;
 }
 #wrapper.order_time .equipment .col .assess input[type=checkbox]+label {
     display: flex;
@@ -214,6 +241,7 @@
     width: 100%;
     /*display: inline-flex;*/
     /*align-items: center;*/
+    line-height: normal;
 }
 #wrapper.order_time .assess input[type=checkbox]+label:before,
 #wrapper.order_time .assess input[type=checkbox]+label:after {
@@ -223,6 +251,9 @@
     height: 18px;
     margin-right: 5px;
     border-radius: 3px;
+
+
+    display: none;/** checkbox style hidden **/
 }
 #wrapper.order_time .assess input[type=checkbox]+label:after {
     content: "\f00c";
@@ -236,6 +267,9 @@
     color: #fff;
     transition: 0s;
     font-weight: normal;
+
+
+    display: none;/** checkbox style hidden **/
 }
 #wrapper.order_time.order_time_period .assess input[type=checkbox]+label:after {
     top: 7px;
@@ -498,12 +532,22 @@
 
 
 
-.order_time_period .col .assess {
+.order_time_period li._item .col .assess {
     display: flex;
     align-items: center;
     width: 100%;
 }
-.order_time_period .col .assess .plan select {
+.order_time_period li._item._havePlan2 .col .assess .plan > .planSelect._s1 .planSelect._s2 {
+    margin-top: 9px;
+}
+.order_time_period li._item._havePlan3 .col .assess .plan > .planSelect._s1 .planSelect._s2 {
+    display: flex;
+    align-items: center;
+}
+.order_time_period li._item._havePlan3 .col .assess .plan > .planSelect._s1 .planSelect._s2 .plan3 {
+    margin-left: 5px;
+}
+.order_time_period li._item .col .assess .plan select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -521,16 +565,13 @@
     padding: 0 30px 0 10px;
     margin: 0;
 }
-.order_time_period .col .assess .plan select[disabled] {
+.order_time_period li._item .col .assess .plan select[disabled] {
     border-color: #ddd;
     background-color: #ddd;
     cursor: default;
     opacity: .7;
 }
-.order_time_period .col .assess .plan select.plan2 {
-    margin-top: 9px;
-}
-.order_time_period li._onlineb .col .assess .preiodBox time:after {
+.order_time_period li._item._onlineb .col .assess .preiodBox time:after {
     content: "\f0e7";
     color: #ffde00;
     display: inline-block;
@@ -567,6 +608,7 @@
     top: 0;
     right: 0;
     margin-right: 9px;
+    margin-top: -5px;
 }
 .period_content .rebates:not(._haveDiscount) .prices .rebate {
     display: none;
@@ -640,7 +682,9 @@
     align-items: center;
 }
 .period_content .rebates .sub label div:nth-child(1){
-    width:33%; position:relative; padding-left:90px;
+    width:33%;
+    position: relative;
+    padding-left: 70px;
     display: flex;
     align-items: center;
 }
@@ -659,6 +703,8 @@
     border:1px solid #4e5059;
     background-color:#4e5059;
     border-radius: 5px;
+
+    display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(1) b:after {
     content:"\f00c";
@@ -671,10 +717,14 @@
     transition:0.2s;
     opacity:0;
     font-weight:normal;
+
+    display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(1) input[type="checkbox"]:checked+b:after{
     opacity:1;
     padding: 1px 0 0 2px;
+
+    display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(2){
     width: 35%;
@@ -684,7 +734,10 @@
     border:0;
     width: unset;
     height: unset;
-    display: none;
+    display: inline-block;
+    /*display: none;*/
+    margin: 0;
+    margin-right: 9px;
 }
 .period_content .rebates .sub label div:nth-child(3){
     padding-left: 30px;
@@ -1344,9 +1397,14 @@
     width: auto;
     text-align: unset;
 }
-.appointment_detail .deta_content .discount {
+.appointment_detail .deta_box .deta_content .discount {
+    text-decoration: line-through;
     color: #ccc;
     margin: 0;
+}
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content .discount {
+    text-decoration: none;
+    color: #4e5059;
 }
 .appointment_detail .deta_content .rebate {
     color: #4e5059;
@@ -1365,7 +1423,7 @@
     margin-right: 0;
     opacity: .8;
 }
-.appointment_detail .deta_box:not(._haveDiscount) .deta_content .discount,
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content .rebate,
 .appointment_detail .deta_box:not(._haveDiscount) .deta_content .sarebate {
     display: none;
 }
@@ -1595,6 +1653,16 @@
 
 
     /** BEGIN order_time **/
+    .orderstep._boxStyle {
+        flex-direction: column;
+    }
+    .orderstep .stepPhotoInside {
+        width: 100%;
+        max-width: unset;
+        padding: 5px 80px;
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
     .order_time .orderContainer .calendar ul.day li {
         height: 70px;
         padding: 3px;
@@ -1664,14 +1732,20 @@
     }
     .order_time_period .period_content .rebates .sub label div:nth-child(1),
     .order_time_period .period_content .rebates .sub label div:nth-child(2),
-    .order_time_period .period_content .rebates .sub label div:nth-child(3){width:100%; text-align:left; padding-left:80px;}
+    .order_time_period .period_content .rebates .sub label div:nth-child(3) {
+        width: 100%;
+        text-align: left;
+        padding-left: 80px;
+        font-size: 15px;
+    }
     .order_time_period ul.period_content li {
         border: 0;
         border-bottom: 1px solid #959595;
         font-size: 15px;
     }
-    .period_content .rebates .sub label div:nth-child(2) {
-        font-size: 13px;
+    .order_time_period .period_content .rebates .sub label div:nth-child(2),
+    .order_time_period .period_content .rebates .sub label div:nth-child(3) {
+        margin-left: 22px;
     }
     .order_time_period ul.period_content li:last-child{
         border-bottom: 0;
@@ -1717,6 +1791,12 @@
     }
     .order_time .appointment_detail .deta_boxs .deta_box .deta_content time {
         width: 50%;
+    }
+    .order_time_period li._item .col .assess {
+        justify-content: space-between;
+    }
+    #wrapper.order_time .order_tiemBox .assess input[type=checkbox] {
+        margin: 0 -15px 0 20px;
     }
     /** BEGIN order_time **/
 
