@@ -15,6 +15,8 @@
 .notice_system .systemContent > h2 > i {
 	margin-right: 5px;
 }
+
+/* 上Banner, CSS
 .notice_system .systemContent .systemBanner {
     margin-bottom: 20px;
 }
@@ -22,6 +24,7 @@
 	border-radius: 5px;
 	overflow: hidden;
 }
+*/
 .notice_system .author {
 	display: flex;
 	align-items: center;
@@ -65,9 +68,18 @@
     margin-top: 0;
     margin-bottom: 20px;
 }
+/* 下Banner, CSS
 .systemAd {
 	margin-top: 0;
 }
+.systemAd a {
+    float: left;
+    width: 24.495%;
+    margin: 0 0.66% 0.6% 0;
+}
+.systemAd a img {
+    width: 100%;
+}*/
 
 .notice_system .systemContent {
 	margin-top: 20px;

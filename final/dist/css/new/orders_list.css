@@ -71,7 +71,7 @@
 }
 .bookList .buttons .comment .comment_list div {
     position: relative;
-    background-color: #fff;
+    /*background-color: #fff;*/
 }
 .bookList .buttons .comment .comment_list div a {
     display: inline-block;
@@ -89,6 +89,10 @@
 }
 .bookList .buttons .comment .comment_list div a:hover {
     background-color: #ccc;
+}
+.bookList .buttons .comment .comment_list div:last-child a {
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
 }
 
 
@@ -197,7 +201,7 @@
     .bookList .buttons {
         border-top: 1px solid #ddd;
         padding: 20px 9px;
-        margin-bottom: 0;
+        margin: 0;
     }
     .bookList .buttons .comment,
     .bookList .buttons .payment,

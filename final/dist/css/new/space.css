@@ -273,8 +273,8 @@
 }
 .meeting .outline .star,
 .meeting .outline .three span {
-    padding-right: 15px;
-    font-size: 13px;
+    padding-right: 7px;
+    font-size: 12px;
     height: 23px;
     display: flex;
     flex-direction: row;
@@ -283,6 +283,9 @@
 }
 .meeting .outline .three span:last-child {
     padding-right: 0;
+}
+.meeting .outline .three span i {
+    margin-right: 2px;
 }
 .meeting .outline .three ._area b {
     margin-top: -5px;

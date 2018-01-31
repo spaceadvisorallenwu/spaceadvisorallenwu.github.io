@@ -11,6 +11,16 @@
 .tremsContent h3 {
 	font-size: 17px;
 }
+.termsLink a {
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    text-align: center;
+    padding: 9px 30px;
+    font-size: 17px;
+    line-height: normal;
+    font-weight: normal;
+}
 
 @media only screen and (max-width: 980px) {
 	.termsLink {
@@ -19,7 +29,7 @@
 		padding: 0;
 	}
 	.termsLink a {
-		padding: 0 0 9px;
+		padding: 5px 9px;
     	font-size: 15px;
 	}
 	.tremsContent {

@@ -4,7 +4,7 @@ $(function(){
 		$(this).parents('.bookList').find('.paymentInformation').toggle();
 	});
 	$('.bookList .buttons .comment .btn').click(function(){
-		$('.bookList .buttons .comment .comment_list').toggle();
+		$(this).parents('.comment').find('.comment_list').toggle();
 	});
 	$('#style-open1').click(function() {
 		$('.style-other1').slideToggle(0);

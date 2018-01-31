@@ -248,7 +248,7 @@
 
 /* 問答記錄-發送訊息 */
 .send-message {
-    margin: 40px 97px 150px;
+    margin: 40px 97px 100px;
     line-height: normal;
     color: #4e5059;
 }
@@ -316,10 +316,10 @@
     margin: 0;
 }
 .message-list .dialog.question {
-	margin: 0 96px 40px;
+	margin: 0 96px 20px;
 }
 .message-list .dialog.answer {
-	margin: 0 96px 40px;
+	margin: 0 96px 60px;
 }
 .dialog.question .d-photo {
     position: absolute;

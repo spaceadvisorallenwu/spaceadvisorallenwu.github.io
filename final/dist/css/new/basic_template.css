@@ -331,6 +331,10 @@
     background: #e9e9e9;
     color: gray;
 }
+.bookList .detailTable-left {
+    width: 28%;
+    max-width: 300px;
+}
 .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
     background: #f3f3f3;
     font-size: 13px;
@@ -367,7 +371,8 @@
     text-align: center;
     padding: 9px 20px;
 }
-.bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a {
+.buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
+.bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
     width: 80px;
     display: flex !important;
     font-size: 12px;
@@ -380,21 +385,43 @@
     margin: 3px 0;
     letter-spacing: 0;
 }
-.bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a:hover {
+.buyBox .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:hover,
+.bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:hover {
     background: #fff;
     color: #4e5059 !important;
 }
-.bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
-    margin-left: 3px;
+.buyBox .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
+.bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span {
+    /*margin-left: 3px;*/
     color: #4e5059;
     font-size: 12px;
 }
-.bookList .detailTable-row.detailTable-content .detailTable-cell:last-child {
+.bookList[data-stat="checking"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a,
+.bookList[data-stat="notyetpay"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a,
+.bookList[data-stat="reject"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a,
+.bookList[data-stat="expired"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a,
+.bookList[data-stat="cancel"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
+    cursor: not-allowed;
+    background: #f3f3f3;
+}
+.bookList[data-stat="checking"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
+.bookList[data-stat="notyetpay"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
+.bookList[data-stat="reject"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
+.bookList[data-stat="expired"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
+.bookList[data-stat="cancel"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span {
+    color: #ccc;
+}
+.buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child {
     padding-left: 0;
     padding-right: 0;
 }
+.bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(1),
+.bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(2),
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
-    padding-left: 20px;
+    width: 19%;
+}
+.bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
+    width: 21%;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .tableTxt {
     display: flex;
@@ -440,6 +467,7 @@
     padding: 0;
     font-size: 15px;
     line-height: normal;
+    width: 100%;
 }
 .bookList .detailTable-cell .tableTxt.siteName {
     padding: 0;
@@ -587,6 +615,12 @@
 }
 .bookList._style1 .detailTable-left .detailTable-row:last-child .detailTable-cell {
     display: flex;
+}
+.bookList .detailTable-right {
+    display: table-cell;
+    height: 100px;
+    width: 110px;
+    border-left: 2px solid #f3f3f3;
 }
 /** END booklist **/
 
@@ -1045,6 +1079,16 @@
     }
     /** END navigation_bar **/
 
+    /* BEGIN Nav tabs */
+    #wrapper .nav-tabs {
+        margin-bottom: 20px;
+    }
+    #wrapper .nav-tabs > li a {
+        padding: 5px 9px;
+        font-size: 13px;
+    }
+    /* END Nav tabs */
+
     /** BEGIN site-list **/
     .site-list .site a {
         width: 90%;
@@ -1080,6 +1124,8 @@
     .bookList .detailTable {
         border: 0;
         border-radius: 0;
+        display: flex;
+        flex-direction: column;
     }
     .bookList .bookTitle {
         padding: 9px;
@@ -1159,17 +1205,29 @@
         flex-direction: row;
         border: 0;
     }
-    .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a {
+    .bookList .detailTable-right {
+        width: 100%;
+        height: 100%;
+        border-left: 0;
+        margin-bottom: 9px;
+    }
+    .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon {
+        flex-direction: row;
+    }
+    .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
+    .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
         margin-right: 20px;
         width: 30%;
         padding: 9px;
         text-align: center;
         background: #fff;
     }
-    .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a:last-child {
+    .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a:last-child,
+    .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:last-child {
         margin-right: 0;
     }
-    .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a span {
+    .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a span,
+    .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span {
         padding-left: 0;
         font-size: 13px;
     }
