@@ -1,9 +1,9 @@
 //index 類型收合用
 $(function(){
-	$('.bookList .buttons .payment .btn').click(function() {
+	$('.bookList .buttons .payment:not(.disable) .btn').click(function() {
 		$(this).parents('.bookList').find('.paymentInformation').toggle();
 	});
-	$('.bookList .buttons .comment .btn').click(function(){
+	$('.bookList .buttons .comment:not(.disable) .btn').click(function(){
 		$(this).parents('.comment').find('.comment_list').toggle();
 	});
 	$('#style-open1').click(function() {

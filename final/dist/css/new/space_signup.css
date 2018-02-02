@@ -166,6 +166,13 @@
 	margin-left: 0;
 	margin-right: 0;
 }
+.app_stepItem4 li:nth-child(1) input {
+	width: 15%;
+    max-width: calc(300px / 2 - 5px);
+}
+.app_stepItem4 li:nth-child(1) input:last-child {
+	margin-left: 9px;
+}
 .app_stepBox input,
 .app_stepBox select,
 .app_stepBox textarea {
@@ -248,8 +255,9 @@
 		padding: 20px 0;
 	}
 	.applicationStep {
-		margin: 20px auto 0;
-		padding: 0;
+	    margin: 20px auto 0;
+	    padding: 0;
+	    width: 90%;
 	}
 	.applicationStep li {
 	    font-size: 15px;
@@ -261,6 +269,9 @@
 	}
 	.applicationStep span {
 	    top: -28px;
+	}
+	.app_stepBox._boxStyle {
+		padding: 20px 0 0;
 	}
 	.addAdvaContent ul {
 		flex-direction: column;
@@ -322,6 +333,14 @@
 		width: 100%;
 		max-width: unset;
 	}
+	.app_stepItem4 li:nth-child(1) input {
+		width: 100%;
+		max-width: unset;
+	}
+	.app_stepItem4 li:nth-child(1) input:last-child {
+		margin-left: 0;
+		margin-top: 9px;
+	}
 	.app_stepBox .warning_error h4 {
 		padding-left: 0;
 		/*width: calc(100% - 25px);*/
@@ -339,6 +358,9 @@
 		margin-bottom: 0;
 		flex-direction: column;
 		flex-flow: wrap;
+	}
+	.applicationBox .twzipcode {
+		flex-direction: column;
 	}
 	.applicationBox .twzipcode._app1,
 	.applicationBox .twzipcode._app2,
