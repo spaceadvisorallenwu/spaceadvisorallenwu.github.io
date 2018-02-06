@@ -1130,6 +1130,9 @@
     .bookList .bookTitle {
         padding: 9px;
     }
+    .bookList .detailTable-left {
+        max-width: unset;
+    }
     .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
         font-size: 15px;
         line-height: normal;

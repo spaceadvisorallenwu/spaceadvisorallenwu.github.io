@@ -123,22 +123,22 @@
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_area {
-    left: 75px;
-    top: 42px;
+    left: 60px;
+    top: 37px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li #search_star,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_preferential {
-    left: 75px;
+    left: 60px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_place {
-    left: -186px;
+    left: -201px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_facility {
-    left: -71px;
+    left: -86px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail {
-    left: 75px;
-    top: 42px;
+    left: 60px;
+    top: 38px;
     border-radius: 0 5px 5px 5px;
     border-color: #ccc;
 }
@@ -152,10 +152,10 @@
     border-color: #ccc;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
-    left: 295px;
+    left: 280px;
 }
 .search.mapBox main>.search-box .search_bar>.content>ul>li .search_item_detail#search_time {
-    left: 271px;
+    left: 256px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail>.search_item_area p.title {
     font-size: 15px;
@@ -165,22 +165,22 @@
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_pepole,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_preferential {
-    left: 190px;
+    left: 175px;
 }
 .search.mapBox main>.search-box .search_bar>.content>ul>li .search_item_detail#search_hotel,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_mrt {
-    left: 190px;
+    left: 175px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_plan {
-    left: 305px;
+    left: 290px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_place {
-    left: -186px;
+    left: -201px;
     border-radius: 5px;
 }
 .search main>.search-box .search_bar>.content>ul>li .search_item_detail#search_facility {
-    left: -76px;
+    left: -91px;
     border-radius: 5px;
 }
 .search .site-list {
