@@ -1030,9 +1030,16 @@
 #wrapper .pricePlan > ul > li.open .priTitle {
     background: transparent;
 }
+#wrapper .pricePlan > ul > li.open .priContent {
+    display: block;
+}
 #wrapper .pricePlan > ul > li .priTitle {
     width: 100%;
     padding: 0 20px;
+}
+#wrapper .pricePlan > ul > li:hover .priTitle {
+    background: #ddd;
+    font-weight: bold;
 }
 #wrapper .pricePlan > ul > li .priTitle span {
     font-size: 15px;
@@ -1068,6 +1075,91 @@
 }
 /** END 展開內容的樣式 spacer.html & spacer_plan_basic.html **/
 
+/** BEGIN plan-list-item **/
+.plan-list-box .plan-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.plan-list-box .plan-list .plan-list-item {
+    margin-bottom: 20px;
+    padding-right: 9px;
+    width: calc(100% / 3);
+    display: inline-flex;
+}
+.plan-list-box .plan-list .plan-list-item a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.plan-list-box .plan-list .plan-list-item .pli-pic {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+.plan-list-box .plan-list .plan-list-item .pli-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #000;
+    opacity: .6;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+.plan-list-box .plan-list .plan-list-item a:hover .pli-mask {
+    opacity: .35;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+.plan-list-box .plan-list .plan-list-item .pli-img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.plan-list-box .plan-list .plan-list-item .pli-flag {
+    display: block;
+    width: auto;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -7px auto 0;
+    opacity: .9;
+}
+.plan-list-box .plan-list .plan-list-item .pli-info {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+}
+.plan-list-box .plan-list .plan-list-item .pli-info .pli-label {
+    margin-bottom: 5px;
+}
+.plan-list-box .plan-list .plan-list-item .pli-info .pli-title {
+    margin-bottom: 21px;
+}
+.plan-list-box .plan-list .plan-list-item .pli-info .pli-price {
+    font-size: 17px;
+}
+/** END plan-list-item **/
 
 
 @media only screen and (max-width: 980px) {
@@ -1112,6 +1204,9 @@
     .site-list .site .text .info_2 span.star,
     .site-list .site .text .info_2 span.price {
         font-size: 12px;
+    }
+    .site-list .site .text .info_2 span.star {
+        width: 52%;
     }
     /** END site-list **/
 
@@ -1450,4 +1545,13 @@
         background: inherit;
     }
     /** END Search menu **/
+
+    /** BEGIN plan-list-item **/
+    .plan-list-box .plan-list {
+        flex-direction: column;
+    }
+    .plan-list-box .plan-list .plan-list-item {
+        width: 100%;
+    }
+    /** END plan-list-item **/
 }

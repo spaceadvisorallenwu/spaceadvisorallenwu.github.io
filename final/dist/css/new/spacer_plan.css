@@ -59,6 +59,11 @@
 .spacer_plan .collect_banner .colTxt .valueList b {
 	margin-bottom: 0;
 }
+.spacer_plan .collect_banner .colTxt .valueList b:after,
+#wrapper.spacer_plan_basic .pricePlan > ul > li .priTitle span b:after {
+	content: "起";
+	margin-left: 3px;
+}
 .spacer_plan .collect_banner .colTxt .valueList span {
 	font-size: 15px;
     line-height: normal;
@@ -82,7 +87,10 @@
 .spacer_plan .collectItem7,
 .spacer_plan .collectItem8Box,
 .spacer_plan .collectItem9,
-.spacer_plan_basic .spaceList {
+.spacer_plan .collectItem10,
+.spacer_plan .collectItem11,
+.spacer_plan .collectItem12,
+.spacer_plan .spaceList {
 	width: 100%;
 	max-width: unset;
 	margin-bottom: 40px;
@@ -99,13 +107,29 @@
     line-height: normal;
     font-size: 15px;
 }
-.spacer_plan .collectItem1 .choice {
+.spacer_plan .collectItem1 .illustrate > div {
+	margin-bottom: 9px;
+}
+.spacer_plan .collectItem1 .illustrate > div > ol li {
+    background: unset;
+    padding: 0;
+    list-style: disc;
+    margin-left: 21px;
+    margin-bottom: 5px;
+    line-height: normal;
+    font-size: 15px;
+}
+.spacer_plan .collectItem1 .illustrate > div > span {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+/*.spacer_plan .collectItem1 .choice {
 	background-image: url(../../images/spacer_plan/meal_icon.png);
 	font-size: 15px;
 	letter-spacing: 0;
 	line-height: normal;
 	padding-left: 25px;
-}
+}*/
 /** END collectItem1 **/
 
 /** BEGIN collectItem2 **/
@@ -119,7 +143,9 @@
     padding: 0;
     list-style: disc;
     margin-left: 21px;
-    margin-bottom: 9px;
+    margin-bottom: 5px;
+    line-height: normal;
+    font-size: 15px;
 }
 /** END collectItem2 **/
 
@@ -227,16 +253,148 @@
 }
 /** END collectItem9 **/
 
-#wrapper.spacer_plan_basic .pricePlan > ul > li .priContent {
+#wrapper .pricePlan > ul > li .priContent {
     background: #fff;
     border: 1px solid #e9eae9;
     padding: 20px;
     overflow: hidden;
     margin: 0;
 }
-#wrapper.spacer_plan_basic .pricePlan > ul > li .priContent .collectItem7 {
+#wrapper .pricePlan > ul > li .priContent .collectItem7 {
 	margin: 0;
 }
+#wrapper.spacer_plan_basic .pricePlan > ul > li .priTitle span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#wrapper.spacer_plan_basic .pricePlan > ul > li .priTitle span b {
+	margin-right: 30px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+
+/** BEGIN collectItem10 & collectItem11 **/
+.collectItem10 .collectTxt {
+}
+.collectItem10 .pTable,
+.collectItem11 .pTable {
+	border: 1px solid #ddd;
+    border-radius: 5px;
+    border-collapse: separate;
+    line-height: normal;
+    overflow: hidden;
+}
+.collectItem11 .pTable {
+	margin-bottom: 20px;
+}
+
+.collectItem11 .pTable tbody {
+	display: flex;
+}
+.collectItem10 .pTable .pTableHead,
+.collectItem11 .pTable thead {
+    background-color: #4f6ea2;
+    color: #fff;
+}
+.collectItem10 .pTable .pTableHead th {
+    min-width: 125px;
+    padding: 5px 0;
+}
+.collectItem11 .pTable thead .pTableHead th {
+	padding: 9px 20px;
+}
+.collectItem10 .pTable .pTableHead .pTableTh > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.collectItem11 .pTable .pTableBody {
+    display: flex;
+    flex-direction: column;
+}
+.collectItem10 .pTable .pTableBody td,
+.collectItem11 .pTable .pTableBody td {
+	border-right: 1px solid #ddd;
+	padding: 9px;
+	text-align: center;
+}
+.collectItem11 .pTable .pTableBody td {
+	padding: 9px 20px;
+	text-align: left;
+}
+.collectItem11 .pTable .pTableBody td > div {
+	display: flex;
+	justify-content: space-between;
+}
+.collectItem11 .pTable .pTableBody td > div span:first-child {
+	margin-right: 9px;
+	font-weight: bold;
+}
+.collectItem11 .pTable .pTableBody td > div span:last-child {
+
+}
+.collectItem10 .pTable .pTableBody:last-child td,
+.collectItem11 .pTable .pTableBody td {
+	border-top: 1px solid #ddd;
+}
+.collectItem11 .pTable .pTableBody td:first-child {
+	border-top: 0;
+}
+.collectItem10 .pTable .pTableBody .pTableTd._disable,
+.collectItem11 .pTable .pTableBody .pTableTd._disable {
+	background: #f3f3f3;
+}
+.collectItem10 .pTable .pTableBody:last-child .pTableTdTitle,
+.collectItem10 .pTable .pTableBody .pTableTd._haveDiscount,
+.collectItem11 .pTable .pTableBody .pTableTd._haveDiscount {
+	color: #d76050;
+}
+.collectItem10 .pTable .pTableBody td:last-child,
+.collectItem11 .pTable .pTableBody:last-child td {
+	border-right: 0;
+}
+/** END collectItem10 & collectItem11 **/
+
+/** BEGIN collectItem12 **/
+.collectItem12 .collectTxt ul li {
+	display: flex;
+	align-items: center;
+}
+.collectItem12 .collectTxt ul li > div:nth-child(2):before {
+	content: ",";
+	margin-right: 5px;
+}
+.collectItem12 .collectTxt ul li > div:nth-child(3):before {
+	content: "+";
+	margin: 0 5px;
+}
+/** END collectItem12 **/
+
+/** BEGIN plan-list-box **/
+.plan-list-box .plan-list {
+	display: inline-block;
+}
+.plan-list-box .plan-list .plan-list-item {
+	width: auto;
+    display: flex;
+    padding: 0 17px;
+}
+.plan-list-box .plan-list .plan-list-item .pli-pic {
+ 	border-radius: 0;
+}
+.plan-list-box .plan-list .plan-list-item .pli-spacer {
+	text-align: center;
+	padding: 3px 0;
+    font-size: 15px;
+    background: #f3f3f3;
+    color: #4e5059;
+    letter-spacing: 0;
+}
+/** END plan-list-box **/
+
 
 @media only screen and (max-width: 980px) {
 	.spacer_plan .collect_banner .colImg img {
@@ -317,6 +475,34 @@
 	    padding-right: 5px;
 	}
 	/** END collectItem8 **/
+
+	/** BEGIN collectItem10 **/
+	.collectItem10 .collectTxt {
+		overflow: scroll;
+	}
+	.collectItem10 .pTable .pTableHead .pTableTh {
+		min-width: 120px;
+	}
+	.collectItem10 .pTable .pTableHead .pTableTdTitle,
+	.collectItem10 .pTable .pTableBody .pTableTdTitle {
+		min-width: 60px;
+	 	/*position: absolute;
+    	left: 5%;*/
+	}
+	.collectItem11 .pTable {
+		width: 100%;
+	}
+	.collectItem11 .pTable tbody {
+		display: block;
+	}
+	.collectItem11 .pTable .pTableBody td {
+		border-right: 0;
+	}
+	/** END collectItem10 & collectItem11 **/
+
+	.spacer_plan .collectIContent .pricePlan h2 {
+		margin: 0 0 3px;
+	}
 }
 
 
