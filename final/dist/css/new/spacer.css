@@ -47,6 +47,12 @@
     display: block;
 	margin: 9px 0;
 }
+.spacer .synthesis .syn_item2 > span:before {
+    content: "(";
+}
+.spacer .synthesis .syn_item2 > span:after {
+    content: ")";
+}
 .spacer .synthesis > div:last-child {
 	padding-bottom: 0;
 	margin-bottom: 0;

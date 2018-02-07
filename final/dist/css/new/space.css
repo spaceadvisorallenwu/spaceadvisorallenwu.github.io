@@ -344,7 +344,12 @@
     display: block;
     margin-bottom: 9px;
 }
-
+.meeting .device .content-720 .box span:before {
+    content: "(";
+}
+.meeting .device .content-720 .box span:after {
+    content: ")";
+}
 .meeting .array .content-720 {
     padding-bottom: 20px;
 }
