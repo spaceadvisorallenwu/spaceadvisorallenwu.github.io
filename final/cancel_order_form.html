@@ -8,7 +8,7 @@
 		<meta name="copyright" content="本網頁著作SpaceAdvisor所有">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link href="dist/images/icon.ico" type="image/x-icon" rel="shortcut icon"/>
-		<title>訂購 - 填寫資料</title>
+		<title>取消訂單-填寫資料</title>
 		<link href="dist/css/font-awesome.min.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/main.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/banner.css" rel="stylesheet" type="text/css" media=""/>
@@ -136,15 +136,7 @@
 						<li><a href="">首頁</a></li>
 						<li><a href="">會議室一覽</a></li>
 						<li><a href="">會議室資訊</a></li>
-						<li><a href="">場地預訂</a></li>
-					</ul>
-				</div>
-				<!--step步驟 -->
-				<div class="orderstep _boxStyle">
-					<ul>
-						<li><b>1.</b><span>選擇/確認時間</span></li>
-						<li class="active"><b>2.</b><span>填寫付款資訊</span></li>
-						<li><b>3.</b><span>預定完成</span></li>
+						<li><a href="">場地取消訂購</a></li>
 					</ul>
 				</div>
 				<!-- step圖 -->
@@ -156,7 +148,7 @@
 					<div class="writeContainer">
 						<!-- 訂購人資訊 -->
 						<div class="writeInformation1">
-							<h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i>訂購人資訊</h2>
+							<h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i>取消資訊</h2>
 							<ul class="writeInput">
 								<!-- 錯誤時請加上 class warning_error -->
 								<li class="warning_error">
@@ -179,88 +171,7 @@
 									<h4>Email：</h4>
 									<input type="email" placeholder="內建會員email">
 								</li>
-								<li class="">
-									<div class="col">
-										<div class="aslabe">
-											<span class="assess">
-												<input type="checkbox" id="c1">
-												<label for="c1" class="p">
-													<span>記錄此訂購資訊為常用資料</span>
-												</label>
-											</span>
-										</div>
-									</div>
-								</li>
 							</ul>
-						</div>
-						<!-- 活動資訊 -->
-						<div class="writeInformation2">
-							<h2><i class="fa fa-clock-o" aria-hidden="true"></i>活動資訊</h2>
-							<ul class="writeInput part2">
-								<li class="">
-									<h4>舉辦公司：</h4>
-									<input type="text" placeholder="請填寫舉辦公司">
-								</li>
-								<li class="">
-									<h4>活動性質：</h4>
-									</small>
-									<select>
-										<option>請選擇</option>
-									</select>
-								</li>
-							</ul>
-							<ul class="writeInput part2">
-								<li class="">
-									<h4>產業別：</h4>
-									<select>
-										<option>請選擇</option>
-									</select>
-								</li>
-								<li class="">
-									<h4>科別：</h4>
-									<select>
-										<option>請選擇</option>
-									</select>
-									<div class="info">
-										<p>貼心提醒-當天同一時段有其他XX科會議於此舉辦。如您仍選購，則表示您已了解並接受。</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<!-- 折扣碼 -->
-						<div class="writeInformation3">
-							<h2><i class="fa fa-money" aria-hidden="true"></i>折扣碼</h2>
-							<p>請輸入優惠折購代碼，不同的日期可以同時使用不同的折扣代碼。</p>
-							<ul class="writeInput part3">
-								<li>
-									<h4>折扣代碼</h4>
-									<div class="amount_input correct">
-										<i></i>
-										<input type="text">
-									</div>
-									<div class="amount_select">
-										<select>
-											<option>2017/04/30</option>
-										</select>
-									</div>
-									<div class="amount_money">折扣 TWD 3,000</div>
-								</li>
-								<li>
-									<h4>折扣代碼</h4>
-									<div class="amount_input error">
-										<i></i>
-										<input type="text">
-									</div>
-								</li>
-								<li>
-									<h4>折扣代碼</h4>
-									<div class="amount_input">
-										<i></i>
-										<input type="text">
-									</div>
-								</li>
-							</ul>
-							<a href="javascript:;" class="increase">添加<i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 						</div>
 						<!-- 付款方式 -->
 						<div class="writeInformation4">
@@ -477,9 +388,9 @@
 								</li>
 							</ul>
 						</div>
-						<!-- 確認購買 -->
+						<!-- 確認取消 -->
 						<div class="custodyBtn">
-							<a href="#"><span class="btn btn-c-3 btn-l">確認購買</span></a>
+							<a href="#"><span class="btn btn-c-3 btn-l">確認取消</span></a>
 							<span>
 								<p><b>一個月內的預訂無法享有7日內免費取消，詳細規則請參閱</b><a href="#" target="_blank">場地取消條款</a>。</p>
 								<p>我已詳細閱讀，並同意接受<a href="#" target="_blank">場地取消條款</a>及<a href="#" target="_blank">使用條款</a>內容。</p>
@@ -502,7 +413,7 @@
 										<time>2017/04/26 (三)</time>
 									</div>
 									<div class="deta_boxs">
-										<div class="deta_box _haveDiscount">
+										<div class="deta_box"><!-- class加入 _haveDiscount 即會有折扣樣式產生 -->
 											<div  class="deta_content">
 												<div class="program">
 													<div class="time"><time>08:00-12:00</time></div>
@@ -512,32 +423,6 @@
 													<div class="discount"><span>TWD 3,000</span></div>
 													<div class="rebate"><span>TWD 2,100</span></div>
 													<div class="sarebate"><span>7折</span></div>
-												</div>
-											</div>
-										</div>
-										<div class="deta_box">
-											<div  class="deta_content">
-												<div class="program">
-													<div class="time"><time>12:00-13:30</time></div>
-													<div class="name"><span>連續時段贈送一小時</span></div>
-												</div>
-												<div class="_prices">
-													<div class="discount"><span></span></div>
-													<div class="rebate"><span>TWD 0</span></div>
-													<div class="sarebate"><span></span></div>
-												</div>
-											</div>
-										</div>
-										<div class="deta_box">
-											<div  class="deta_content">
-												<div class="program">
-													<div class="time"><time>13:30-17:00</time></div>
-													<div class="name"><span>一生一世方案/30桌</span></div>
-												</div>
-												<div class="_prices">
-													<div class="discount"><span></span></div>
-													<div class="rebate"><span>TWD 30,000</span></div>
-													<div class="sarebate"><span></span></div>
 												</div>
 											</div>
 										</div>
@@ -583,7 +468,7 @@
 											<b>小計</b>
 											<div>
 												<span>TWD</span>
-												<span>21,000</span>
+												<span>6,000</span>
 											</div>
 										</div>
 									</li>
@@ -591,17 +476,8 @@
 										<div class="valuaBox">
 											<b>服務費</b>
 											<div>
-												<span>+TWD</span>
-												<span>3,000</span>
-											</div>
-										</div>
-									</li>
-									<li class="valuation">
-										<div class="valuaBox">
-											<b>04/30 折扣</b>
-											<div>
-												<span>-TWD</span>
-												<span>3,000</span>
+												<span>TWD</span>
+												<span>600</span>
 											</div>
 										</div>
 									</li>
@@ -610,17 +486,12 @@
 											<b>總價</b>
 											<div>
 												<span>TWD</span>
-												<span>24,000</span>
+												<span>6,600</span>
 											</div>
 										</div>
 									</li>
 								</ul>
 							</div>
-						</div>
-						<!-- 即時預定 -->
-						<div class="instant">
-							<h3>即時預定<i class="fa fa-bolt _online" aria-hidden="true"></i></h3>
-							<p>不需要獲得廠地主批准就可以直接預定，訂單送出並完成付款，即代表已預定成功。</p>
 						</div>
 					</div>
 				</div>
@@ -640,7 +511,7 @@
 									<div class="appointment_deta">
 										<time>2017/04/26 (三)</time>
 									</div>
-									<div class="deta_box">
+									<div class="deta_box"><!-- class加入 _haveDiscount 即會有折扣樣式產生 -->
 										<div  class="deta_content">
 											<time>08:00~12:00 </time>
 											<span class="discount">TWD 3,000</span>
@@ -654,18 +525,6 @@
 										</div>
 									</div>
 									<hr>
-									<div class="deta_box">
-										<div  class="deta_content">
-											<time>08:00~12:00 </time>
-											<span>TWD 3,000</span>
-										</div>
-										<div class="program">
-											<b>場地租金方案</b>
-											<div class="formula">
-												<i></i>
-											</div>
-										</div>
-									</div>
 									<div class="appointment_deta">
 										<time>2017/04/30 (三)</time>
 									</div>
@@ -676,9 +535,6 @@
 										</div>
 										<div class="program">
 											<b>場地租金方案</b>
-											<div class="formula">
-												<i></i>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -698,39 +554,27 @@
 									<b>小計</b>
 									<div>
 										<span>TWD</span>
-										<span>21,000</span>
+										<span>6,000</span>
 									</div>
 								</div>
 								<div class="valuation">
 									<b>服務費</b>
 									<div>
 										<span>TWD</span>
-										<span>21,000</span>
+										<span>600</span>
 									</div>
 								</div>
-								<div class="valuation">
-									<b>04/30 折扣</b>
-									<div>
-										<span class="allowance">-TWD</span>
-										<span>3,000</span>
-									</div>
-								</div>
-							</div>
-							<!-- 即時預定 -->
-							<div class="instant">
-								<h3>即時預定</h3>
-								<p>不需要獲得廠地主批准就可以直接預定，一旦訂單送出並完成付款，即代表已預定成功</p>
 							</div>
 						</div>
 					</div>
 					<a class="first">
 						<div>
 							<p>總價</p>
-							<p>TWD 19,100</p>
+							<p>TWD 6,600</p>
 						</div>
 						<i class="btn btn-c-2 btn-s">查看明細</i>
 					</a>
-					<a href="" class="reservation"><span class="btn btn-c-3 btn-m">確認購買<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+					<a href="" class="reservation"><span class="btn btn-c-3 btn-m">確認取消<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
 				</div>
 			</main>
 			<!--/main-->
@@ -803,98 +647,7 @@
 		<script type="text/javascript" src="dist/js/main.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.flexslider.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
-		<script type="text/javascript" src="dist/js/slick.js"></script>
-		<script type="text/javascript">
-			//精選場地
-			$(function(){
-				$('.site-box').slick({
-					dots: true,
-					// infinite: false,
-					speed: 300,
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					autoplay: true,
-					autoplaySpeed: 50000,
-					responsive: [
-						{
-							breakpoint: 1250,
-							settings: {
-								slidesToShow: 2,
-								slidesToScroll: 2
-							}
-						},
-						{
-							breakpoint: 880,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1
-							}
-						}
-					]
-				});
-			});
 
-			//熱門情報
-			$(function(){
-				$('.information-box').slick({
-					// dots: true,
-					// infinite: false,
-					speed: 300,
-					slidesToShow: 4,
-					slidesToScroll: 2,
-					responsive: [
-						{
-							breakpoint: 1250,
-							settings: {
-								slidesToShow: 3,
-								slidesToScroll: 1
-							}
-						},
-						{
-							breakpoint: 980,
-							settings: {
-								slidesToShow: 2,
-								slidesToScroll: 1
-							}
-						},
-						{
-							breakpoint: 880,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1
-							}
-						}
-					]
-				});
-			});
-
-			//精選品牌
-			$(function(){
-				$('.brand-box').slick({
-					// dots: true,
-					// infinite: false,
-					speed: 300,
-					slidesToShow: 5,
-					slidesToScroll: 5,
-					responsive: [
-						{
-							breakpoint: 980,
-							settings: {
-								slidesToShow: 3,
-								slidesToScroll: 3
-							}
-						},
-						{
-							breakpoint: 480,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1
-							}
-						}
-					]
-				});
-			});
-		</script>
 		<script type="text/javascript" src="dist/js/dan.js"></script>
 		<script type="text/javascript" src="dist/js/slick.js"></script>
 		<script type="text/javascript" src="dist/js/imgLiquid.js"></script>

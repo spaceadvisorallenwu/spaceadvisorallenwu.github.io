@@ -1268,15 +1268,17 @@
 	            if(! $(this).hasClass('open')){
                		price_li.removeClass('open');
 	               	$(this).addClass('open');
-	               	price_content.stop().slideUp(function(){
-	                  	$(this).removeAttr('style');
-	               	});
-	               	$(this).children('.priContent').stop().slideDown(300);
+	               	// price_content.stop().slide(function(){
+	                //   	$(this).removeAttr('style');
+	               	// });
+	               	price_content.hide();
+	               	$(this).children('.priContent').show();
 	            }else{
 	               	price_li.removeClass('open');
-	               	price_content.stop().slideUp(function(){
-	                  	$(this).removeAttr('style');
-	               	});
+	               	// price_content.stop().slide(function(){
+	                //   	$(this).removeAttr('style');
+	               	// });
+	               	price_content.hide();
 	            }
          	});
 		</script>

@@ -960,6 +960,10 @@
     width: 100%;
     background-color: #fff;
 }
+.stepBox.fill_box .writeContent .writeInput li.warning_error input,
+.stepBox.fill_box .writeContent .writeInput li.warning_error select {
+    background-color: #f7dfdc;
+}
 .stepBox.fill_box .writeContent .writeInput.part3 li input,
 .stepBox.fill_box .writeContent .writeInput.part3 li select {
     height: 30px;
@@ -1424,7 +1428,8 @@
     opacity: .8;
 }
 .appointment_detail .deta_box:not(._haveDiscount) .deta_content .rebate,
-.appointment_detail .deta_box:not(._haveDiscount) .deta_content .sarebate {
+.appointment_detail .deta_box:not(._haveDiscount) .deta_content .sarebate,
+.appointment_detail .deta_box:not(._haveDiscount) .program .sarebate {
     display: none;
 }
 .appointment_Result .appointment_Content .demand {
@@ -1642,6 +1647,15 @@
     }
     .orderstep li:last-child {
         border-bottom: 0;
+    }
+    .orderstep ul li:nth-child(1) {
+        width: 36%;
+    }
+    .orderstep ul li:nth-child(2) {
+        width: 34%;
+    }
+    .orderstep ul li:nth-child(3) {
+        width: 30%;
     }
     .orderstep span:nth-child(3) {
         margin-left: 0;
