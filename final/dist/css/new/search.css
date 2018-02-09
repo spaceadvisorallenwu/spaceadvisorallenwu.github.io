@@ -566,7 +566,8 @@
 .search main>.search-box .search_bar>.content>ul>li>input::placeholder,
 .search.mapBox .search-box.searchPopup .content li.detatime input::placeholder,
 .search.mapBox .search-box.searchPopup .first .input input::placeholder,
-.search .search-condition .first .input input::placeholder {
+.search .search-condition .first .input input::placeholder,
+.search main>.search-box .search_bar>.content>ul>li .search_item input::placeholder {
     color: #9c9c9c !important;
 }
 .placeList .text {
@@ -760,6 +761,13 @@
     .search .search-list li .place .text a.title {
         margin-bottom: 5px;
     }
+    .search .search-list li .place .text a.title {
+        font-size: 21px;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: normal;
+        -webkit-line-clamp: unset;
+    }
     .search .search-list li .place .ecentTime_box .evt,
     .search .search-list li .place .text span.price {
         margin-top: 5px;
@@ -818,6 +826,13 @@
         line-height: unset;
         text-align: left;
         margin-bottom: 9px;
+    }
+    .mapBox .map_plac {
+        padding: 20px;
+    }
+    .mapBox .placeBox>ul>li {
+        width: 100%;
+        padding-right: 0;
     }
     /** END mapSearch **/
 }

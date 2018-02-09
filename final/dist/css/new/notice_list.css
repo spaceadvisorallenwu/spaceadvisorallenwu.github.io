@@ -161,7 +161,7 @@
     font-weight: bold;
 }
 .notice_list_system .inbox-list ul li a div.ib-logo-date > ._name {
-    width: 75%;
+    width: 63%;
 }
 .inbox-list ul li a div.ib-logo-date > ._time {
     margin-top: 5px;
@@ -296,6 +296,12 @@
 	}
     .inbox .pagebox {
         text-align: center;
+    }
+    #wrapper .nav-tabs > li a {
+        font-size: 17px;
+    }
+    #wrapper .nav-tabs > li.active a {
+        font-weight: bold;
     }
 }
 

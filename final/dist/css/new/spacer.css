@@ -172,6 +172,10 @@
 	height: 17px;
 	top: 0;
 }
+#wrapper.spacer .pricePlan > ul > li .priContent {
+	margin: 0;
+    padding: 0 20px;
+}
 
 .spacer .syn_item1,
 .spacer .syn_item2,
@@ -468,7 +472,8 @@ font-size: 13px;
 	    width: 100%;
 	}
 	#wrapper.spacer .pricePlan > ul > li .priContent {
-	    margin: 0 20px;
+        padding: 0 20px;
+    	margin: 0;
 	}
 	.spacer .synthesis {
 		padding: 0 9px;

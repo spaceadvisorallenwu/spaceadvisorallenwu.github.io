@@ -229,6 +229,9 @@
 .verify .veri-tips a:hover {
     text-decoration: underline;
 }
+._occupation.warning_error {
+    margin-left: 30px;
+}
 @media (max-width: 400px) {
     .verify ._content {
         margin: 20px 30px;
@@ -238,10 +241,10 @@
     .verify ._content {
         margin: 10px 20px;
     }
-     .verify .veri-mobile span.phone-number {
+    /*.verify .veri-mobile span.phone-number {
         margin: 10px 0;
         width: 100%;
-    }
+    }*/
 }
 /* end-會員資料管理-驗證手機 */
 
@@ -280,6 +283,7 @@ li input {
     border: 1px solid #ddd;
     height: 44px;
     margin-bottom: 0;
+    width: 100%;
 }
 .warning_error input {
     display: inline-block;

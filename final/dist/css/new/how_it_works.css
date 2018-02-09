@@ -19,7 +19,7 @@
 }
 .instructionStep .insLine {
     left: 50%;
-    top: 43%;
+    top: 37%;
     max-width: 600px;
     height: 9px;
 }
@@ -76,7 +76,10 @@
     font-size: unset;
     background: unset;
 }
-
+.instructionsBox .btximg .btx {
+	line-height: normal;
+	letter-spacing: 0;
+}
 @media only screen and (max-width: 980px) {
 	.instructionsBox main h2,
 	.instructionsBox main h3 {
@@ -121,7 +124,7 @@
 		left: 10px;
 	}
 	.instructionStep .insLine {
-		top: 48%;
+		top: 42%;
 		height: 5px;
 	}
 	.initem3 .instrPhoto {

@@ -33,7 +33,7 @@
 }
 .addAdvaContent .addadImg {
     width: 70px;
-    margin: 20px auto;
+    margin: 9px auto;
 }
 .addAdvaContent .addadImg img {
 	width: 100%;
@@ -45,20 +45,56 @@
 	width: 25%;
 }
 .addAdvaContent .addadTxt h3 {
+	text-align: center;
 	font-size: 21px;
 	font-weight: bold;
+	line-height: normal;
+	margin-bottom: 9px;
 }
 .addAdvaContent .addadTxt p {
     font-size: 15px;
     letter-spacing: 0;
-    line-height: 31px;
+    line-height: normal;
+}
+.addAdvaVenue {
+    text-align: center;
+    line-height: normal;
+    color: #4e5059;
+}
+.addAdvaVenue._boxStyle {
+	padding-top: 0;
+}
+.addAdvaVenue .custodyBtn {
+    margin: 0px 0 60px 0;
+}
+.addAdvaVenue .addvaLine {
+    margin-bottom: 45px;
+    background: url(../../images/application/or_line.jpg) left center repeat-x;
+}
+.addAdvaVenue .addvaLine div {
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+    padding: 0 15px;
+    color: #a6a7ac;
+    font-size: 20px;
+    font-weight: bold;
 }
 .addAdvaVenue h3 {
 	font-size: 21px;
 	font-weight: bold;
+	line-height: normal;
+	margin-bottom: 9px;
 }
 .addAdvaVenue p {
 	font-size: 15px;
+    letter-spacing: 0;
+}
+.addAdvaVenue p a {
+    color: #4f6ea2;
+}
+.addAdvaVenue p a:hover {
+    text-decoration: underline;
 }
 .addvaBrand .addvaBrandList {
 	margin: 0 auto;
@@ -85,14 +121,13 @@
 	letter-spacing: 0;
 }
 .appSynopsis .appSynopsisTxt h3 {
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);*/
 	font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
     line-height: normal;
 }
 .appSynopsis .appSynopsisTxt p{
 	font-size: 17px;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .15);
 	line-height: normal;
 }
 .application_explanation {
@@ -182,10 +217,8 @@
 }
 .applicationBox main h2 {
     font-size: 21px;
-    letter-spacing: 0;
     line-height: normal;
-    padding: 9px 0;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 }
 .applicationBox main h2:before {
 	/*content: '';*/
@@ -279,7 +312,7 @@
 	.addAdvaContent li {
 		width: 100%;
 	    border-bottom: 1px solid #ddd;
-	    padding-bottom: 40px;
+	    padding-bottom: 20px;
 	}
 	.addAdvaContent li:last-child {
 		border: 0;

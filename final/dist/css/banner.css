@@ -79,8 +79,6 @@ html[xmlns] .slides {
 	background: #fff;
 	border: 0px;
 	position: relative;
-	
-	
 /*	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	-o-border-radius: 0;
@@ -238,15 +236,14 @@ html[xmlns] .slides {
 	cursor: default;
 }
 
-
 @media screen and (max-width: 980px) {
-.flex-viewport {
-	max-height: 500px;
-}
-.flexslider .slides > li {
-	height: 500px;
-}
-.flex-direction-nav{
-	display: none;
-}
+	.flex-viewport {
+		max-height: 500px;
+	}
+	.flexslider .slides > li {
+		height: 500px;
+	}
+	.flex-direction-nav{
+		display: none;
+	}
 }/*max-width: 980px*/

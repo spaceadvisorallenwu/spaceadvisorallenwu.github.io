@@ -116,7 +116,7 @@
 }
 .purchase_value-add-list-title {
 	background-color: #f3f3f3;
-	padding: 13px 0;
+	padding: 9px 0;
 }
 .accordionTitle,
 .accordion__Heading {
@@ -124,8 +124,10 @@
     margin: 0 20px;
     text-align: left;
     font-weight: normal;
-    padding: 5px 0 5px 9px;
-    display: block;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    position: relative;
     text-decoration: none;
     color: #4e5059;
     font-size: 17px;
@@ -159,6 +161,8 @@
     font-weight: bold;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+    position: absolute;
+    right: 20px;
 	/*-webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -936,7 +940,8 @@
 	.purchase_value-add h1 {
 		padding: 15px 9px;
 	}
-	.accordionTitle, .accordion__Heading {
+	.accordionTitle,
+    .accordion__Heading {
 		margin: 0 9px;
 	}
 	.purchase_program-main {

@@ -15,9 +15,6 @@
       <link href="dist/css/jquery.mmenu.css" rel="stylesheet" type="text/css" media=""/>
       <link href="dist/css/slick.css" rel="stylesheet" type="text/css" media=""/>
       <link href="dist/css/slick-theme.css" rel="stylesheet" type="text/css" media=""/>
-      <link href="dist/css/colorbox.css" rel="stylesheet" type="text/css" media=""/>
-      <!-- dan -->
-      <link href="dist/css/main_dan.css" rel="stylesheet" type="text/css" media=""/>
 
       <!-- STYLES -->
       <link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media=""/>
@@ -775,7 +772,6 @@
 
       <script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="dist/js/main.js"></script>
-      <script type="text/javascript" src="dist/js/jquery.flexslider.js"></script>
       <script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
       <script type="text/javascript" src="dist/js/slick.js"></script>
       <script type="text/javascript">
@@ -807,68 +803,7 @@
                ]
             });
          });
-         //熱門情報
-         $(function(){
-            $('.information-box').slick({
-               // dots: true,
-               // infinite: false,
-               speed: 300,
-               slidesToShow: 4,
-               slidesToScroll: 2,
-               responsive: [
-                  {
-                     breakpoint: 1250,
-                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                     }
-                  },
-                  {
-                     breakpoint: 980,
-                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                     }
-                  },
-                  {
-                     breakpoint: 880,
-                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                     }
-                  }
-               ]
-            });
-         });
-         //精選品牌
-         $(function(){
-            $('.brand-box').slick({
-               // dots: true,
-               // infinite: false,
-               speed: 300,
-               slidesToShow: 5,
-               slidesToScroll: 5,
-               responsive: [
-                  {
-                     breakpoint: 980,
-                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                     }
-                  },
-                  {
-                     breakpoint: 480,
-                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                     }
-                  }
-               ]
-            });
-         });
       </script>
-      <script type="text/javascript" src="dist/js/laydate/laydate.js"></script>
-      <!-- 1225 javascript -->
       <script type="text/javascript">
          //input框++
          var div_array = [];
@@ -878,7 +813,6 @@
          });
          $(':input').on('click',function(){
             if($(this).attr("type") == "checkbox"){
-               // var search_item = $(this).parents('.search_off').children('.search_item');
                var search_item = $(this).parents('.search_item_detail').prev();
                var search_item_detail = $(this).parents('.search_item_detail');
                search_item.addClass('have');

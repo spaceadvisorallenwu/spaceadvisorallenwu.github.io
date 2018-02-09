@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 .meberContent {
     color: #4e5059;
+    background: #fff;
     width: unset;
     max-width: 450px;
     margin: 40px auto;

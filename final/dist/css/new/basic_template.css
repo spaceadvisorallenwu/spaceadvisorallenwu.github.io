@@ -65,6 +65,7 @@
     color: #4f6ea1;
     background-color: transparent;
     border: 0;
+    font-weight: bold;
 }
 #wrapper .nav-tabs > li.active > a,
 #wrapper .nav-tabs > li:hover > a {
@@ -160,6 +161,9 @@
 }
 
 
+.site-list .site {
+    padding-bottom: 0;
+}
 .site-list .site .text {
     border: 0;
     text-align: left;
@@ -177,9 +181,6 @@
     display: block;
     -webkit-line-clamp: unset;
 }
-.site-list .site {
-    padding-bottom: 0;
-}
 .site-list .site a {
     display: inline-block;
     border: 1px solid #ddd;
@@ -188,6 +189,7 @@
 }
 .site-list .site .all {
     position: relative;
+    max-width: 350px;
 }
 .site-list .site span.pic {
     background: #f3f3f3;
@@ -250,7 +252,7 @@
     text-align: right;
 }
 .site-list .site .text span.price {
-    line-height: 15px;
+    /*line-height: 15px;*/
 }
 .site-list a.more {
     margin: 20px auto;
@@ -374,21 +376,21 @@
 .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
 .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
     width: 80px;
-    display: flex !important;
+    display: flex;
     font-size: 12px;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
+    color: #4e5059;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 3px 9px;
     margin: 3px 0;
     letter-spacing: 0;
 }
-.buyBox .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:hover,
+.buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a:hover,
 .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:hover {
     background: #fff;
-    color: #4e5059 !important;
 }
 .buyBox .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span,
 .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span {
@@ -509,6 +511,7 @@
     width: 100%;
     text-align: justify;
     font-size: 15px;
+    line-height: normal;
 }
 .bookList .demand h4 {
     font-weight: bold;
@@ -936,6 +939,7 @@
 }
 #wrapper .comment .comment-list li p.text {
     margin-left: 80px;
+    width: calc(100% - 80px);
     padding: 0;
     display: inline-block;
     text-align: justify;
@@ -945,6 +949,7 @@
     line-height: normal;
     text-decoration: none;
     clear: both;
+    word-wrap: break-word;
 }
 /** END Comment **/
 
@@ -1032,6 +1037,13 @@
 }
 #wrapper .pricePlan > ul > li.open .priContent {
     display: block;
+    border-bottom: 1px solid #ddd;
+}
+#wrapper .pricePlan > ul > li:last-child.open .priContent {
+    border-bottom: 0;
+}
+#wrapper .pricePlan > ul > li.open .priContent > div:last-child {
+    margin-bottom: 0;
 }
 #wrapper .pricePlan > ul > li .priTitle {
     width: 100%;
@@ -1069,9 +1081,6 @@
     left: 0;
     margin: 0 20px;
     padding: 0;
-}
-#wrapper .pricePlan > ul > li.open .priContent {
-    border-bottom: 1px solid #ddd;
 }
 /** END 展開內容的樣式 spacer.html & spacer_plan_basic.html **/
 
@@ -1334,7 +1343,7 @@
         padding: 9px;
         border-radius: 0;
         border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        /*border-bottom: 1px solid #ddd;*/
     }
     .bookList .stepBox .price b {
         width: 100%;
@@ -1347,6 +1356,9 @@
         padding: 9px !important;
         margin: 0;
         border-bottom: 0;
+    }
+    .bookList .demand .deTxt {
+        font-size: 13px;
     }
     .bookList .buyprice {
         margin: 0;
@@ -1467,6 +1479,9 @@
     #wrapper .bonus li {
         width: 100%;
     }
+    #wrapper .bonus li:last-child {
+        margin-bottom: 0;
+    }
     #wrapper .bonus span {
         width: 100%;
     }
@@ -1490,6 +1505,7 @@
         border-bottom: 0;
     }
     #wrapper .comment .comment-list li p.text {
+        width: 100%;
         margin-left: 0;
         font-size: 15px;
         text-align: justify;

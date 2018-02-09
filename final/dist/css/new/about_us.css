@@ -46,5 +46,8 @@
 	.ab_item1 {
 		padding: 0;
 	}
+	.aboutBox .ma_banner .mo_banner img {
+		border-radius: 5px;
+	}
 }
 /** END about_us **/

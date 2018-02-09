@@ -13,11 +13,8 @@
 		<link href="dist/css/jquery.mmenu.css" rel="stylesheet" type="text/css" media="" />
 		<link href="dist/css/jquery-ui.css" rel="stylesheet" type="text/css" media="" />
 		<link href="dist/css/bootstrap_bear.css" rel="stylesheet" type="text/css" media="" />
-		<link href="dist/css/liquidcarousel.css" rel="stylesheet" type="text/css" media="" />
 		<link href="dist/css/main.css" rel="stylesheet" type="text/css" media="" />
 		<link href="dist/css/banner.css" rel="stylesheet" type="text/css" media="" />
-
-		<link href="dist/css/main_dan.css" rel="stylesheet" type="text/css" media="" />
 
 		<!-- STYLES -->
 		<link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media="" />
@@ -243,28 +240,24 @@
 		<script type="text/javascript" src="dist/js/jquery-ui.js"></script>
 		<script type="text/javascript" src="dist/js/bootstrap_bear.js"></script>
 		<script type="text/javascript" src="dist/js/main.js"></script>
-		<script type="text/javascript" src="dist/js/jquery.flexslider.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
-		<script type="text/javascript" src="dist/js/jquery.mousewheel.pack_bear.js?v=3.1.3"></script>
-		<script type="text/javascript" src="dist/js/jquery.fancybox.pack_bear.js?v=2.1.5"></script>
-		<link rel="stylesheet" type="text/css" href="dist/css/jquery.fancybox_bear.css?v=2.1.5" media="screen" />
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('.fancybox').fancybox();
-			});
-		</script>
-		<!-- <script type="text/javascript" src="dist/js/main-2_bear.js"></script> -->
 		<script>
 			function checkBtn() {
-				if ($('.section03 ._choiceStar').attr('data-star') != 0 && $('.section03 textarea').val().length > 50) {
+				if ($('.section03 ._choiceStar').attr('data-star') != 0 && $('.section03 textarea').val().length >= 50) {
+					$('.edit-eval-bn input:button').removeClass('btn-c-disable');
 					$('.edit-eval-bn input:button').removeAttr('disabled')[0].onclick = function() {
-						$('.section02:last').find('div.evalute').html($('.section03 div.eval-star').html());
-						$('.section02:last').find('.words').html($('.section03 textarea').val());
-						$('.section03 .fa-star').removeClass('fa-star').addClass('fa-star-o');
-						$('.section03 textarea').val('');
+						var _starElem = $('.section03 ._choiceStar');
+						var _star = _starElem.attr('data-star');
+						var _textElem = $('.section03 textarea');
+						var _text = _textElem.val();
+						$('.section02.comment').find('.star').find('._star').attr('class', '').addClass('_star').addClass('_star_'+_star);
+						$('.section02.comment').find('.text').html(_text);
+						_starElem.attr('data-star', 0);
+						_textElem.val('');
 						checkBtn();
 					};
 				} else {
+					$('.edit-eval-bn input:button').addClass('btn-c-disable');
 					$('.edit-eval-bn input:button').attr('disabled', 'disabled')[0].onclick = function() {};
 				}
 			}

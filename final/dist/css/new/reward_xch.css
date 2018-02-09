@@ -71,15 +71,24 @@ main {
 	display: none !important;
 }
 @media (max-width: 980px) {
+    .lightbox h1 {
+        font-size: 21px;
+        padding: 9px;
+    }
 	.lightbox._success .content .txt {
 		text-align: left;
+        font-size: 17px;
 	}
 	.lightbox._fail div.content {
 		text-align: left;
 		padding: 0 20px;
+        font-size: 17px;
 	}
 	.lightbox._success .content .exchange-info .item ._title {
 		width: 130px;
 		min-width: 130px;
 	}
+    .lightbox._success .content .exchange-info .item {
+        font-size: 15px;
+    }
 }

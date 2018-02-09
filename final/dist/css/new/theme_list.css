@@ -104,9 +104,15 @@
 }
 .theme_list .hotelList li {
     width: 25%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     margin-right: 0;
-    padding: 0 20px;
+    padding: 9px 20px;
+    border: 1px solid transparent;
+}
+.theme_list .hotelList li:hover {
+	border-color: #ddd;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+	border-radius: 5px;
 }
 .theme_list .site-list {
     border-bottom: 1px solid #ddd;
@@ -141,7 +147,7 @@
 	font-size: 15px;
 }
 .theme_list .hotelList .hotelImg {
-	margin-bottom: 20px;
+	margin-bottom: 9px;
 	width: 120px;
 	height: 120px;
 }

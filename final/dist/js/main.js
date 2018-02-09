@@ -1,48 +1,40 @@
 $(function(){
-//top
-	$(".gotop").click(function() {
-		$("html,body").animate({ scrollTop: 0 }, 1000);
-		return false;
-	});
-});
+	// gotop
+	if ($(".gotop").length > 0) {
+		$(".gotop").click(function() {
+			$("html,body").animate({ scrollTop: 0 }, 1000);
+			return false;
+		});
+	}
 
-$(function(){
-  $("#menu").mmenu({
-               "extensions": [
-                  "fx-menu-zoom",
-                  "fx-panels-zoom",
-                  "pagedim-black"
-               ],
-               "offCanvas": {
-                  "position": "right"
-               }
-  });
-});
-
-//mobile頭部搜尋用
-$(function(){
+	// mb 漢堡選單內容
+	if ($(".__mb #menu").length > 0) {
+		$(".__mb #menu").mmenu({
+			"extensions": [
+				"fx-menu-zoom",
+				"fx-panels-zoom",
+				"pagedim-black"
+			],
+			"offCanvas": {
+				"position": "right"
+			}
+		});
+	}
+	//mobile頭部搜尋用
 	var windowHeight = $(window).height();
 	var windowWidth = $(window).width();
-
-	// $(window).resize(function() {
-	// 	if(windowHeight == $(window).height() && windowWidth != $(window).width()){
-	// 		if($(window).width() >= 980 ){
-	// 			$('header > .content > .search').hide();
-	// 		}
-	// 	}
-	// });
 	$('header .__mb .search #search').click(function() {
 		$('header .__mb .search').toggleClass('search-open');
 	});
-});
-
-$(function() {
-	$(".flexslider").flexslider({
-		animation: "slide",
-		slideshowSpeed: 5000, //展示时间间隔ms
-		animationSpeed: 1500, //滚动时间ms
-		touch: true //是否支持触屏滑动
-	});
+	// home.html
+	if ($(".index .flexslider").length > 0) {
+		$(".index .flexslider").flexslider({
+			animation: "slide",
+			slideshowSpeed: 5000, //展示时间间隔ms
+			animationSpeed: 1500, //滚动时间ms
+			touch: true //是否支持触屏滑动
+		});
+	}
 });
 
 //index 類型收合用
@@ -95,7 +87,7 @@ $(function(){
 	$(function(){
 		// 用來顯示大圖片用
 		var $showImage = $('#show-image');
-	 
+
 		// 當滑鼠移到 .abgne 中的某一個超連結時
 		$('.abgne a.pic').click(function(){
 			// 把 #show-image 的 src 改成被移到的超連結的位置
@@ -130,7 +122,7 @@ $(function(){
 		$('#sequence-open').hide();
 		$('#condition-open').toggle() // allen
 	});//搜尋條件
-    windowWidth = $(window).width();
+	windowWidth = $(window).width();
 	$(window).resize(function() {
 		if($(this).width() >= 980 ){
 			$('body').css({'height': 'auto'});
@@ -174,25 +166,6 @@ $(function(){
 		}
 		windowWidth = $(window).width();
 	});
-
-	// $(window).resize(function() {
-	// 	if(windowWidth != $(window).width()){
-	// 		if($(window).width() >= 980 ){
-	// 			$('body').css({'height': 'auto'});
-	// 		}else{
-	// 			if($(window).width() <= 980){
-	// 				$('#condition-open').hide();
-	// 				$('#condition').removeClass('this');
-	// 				$('#condition > i').attr("class", "fa fa-angle-down");
-	// 				$('#sequence-open').hide();
-	// 				$('#sequence').removeClass('this');
-	// 				$('#sequence > i').attr("class", "fa fa-angle-down");
-	// 				$('.search-send').hide();
-	// 			}
-	// 		}
-	// 	}
-	// 	windowWidth = $(window).width();
-	// });
 
 	$(".search-condition").css({ height: windowHeight - 207 + 'px' });
 
@@ -300,11 +273,165 @@ $(function(){
 	$('.mobile-plan > .plan-box > .scroll > ul > li > div > i, .mobile-plan > .plan-box > .scroll > ul > li > div > .price').click(function() {
 		$(this).parent().siblings('.text').toggle();
 	});
-    $(window).on('resize', function() {
+	$(window).on('resize', function() {
 		var windowHeight = $(window).height();
 		$(".mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
 		$(".mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
     });
+});
+
+$(document).ready(function() {
+	if ($(".placeList .pic ul").length > 0) {
+		$('.placeList .pic ul').slick({
+			dots:  false,
+			arrows: true,
+
+			autoplaySpeed: 3500,
+			infinite: true,
+			speed: 600,
+			cssEase: 'ease',
+			//vertical: true,
+			pauseOnHover: false,
+		});
+	}
+
+	/*更多條件開關*/
+	$('.search.mapBox .conditions, .search.mapBox .confirmBtn a').on('click',function(event){ // allen
+		event.stopPropagation();
+		if(!$('.search-box.searchPopup').hasClass('on')){
+			$('.search-box.searchPopup').addClass('on');
+			$('body,html').css({'overflow':'hidden'});
+			$('.search-box.searchPopup').fadeIn();
+			$(this).find('i').attr("class", "fa fa-angle-up");
+			}else{
+			$('body,html').css({'overflow':''});
+			$('.search-box.searchPopup').removeClass('on');
+			$('.search_item_detail').removeClass('open');
+			$('.search-box.searchPopup').fadeOut();
+			$(this).find('i').attr("class", "fa fa-angle-down");
+		}
+	});
+
+	$('.contclose').on('click',function(){
+		$('body,html').css({'overflow':''});
+		$('.search-box.searchPopup').removeClass('on');
+		$('.search_item_detail').removeClass('open');
+		$('.search-box.searchPopup').fadeOut();
+	});
+
+//meeting 手機 價格方案用
+
+		var windowHeight = $(window).height();
+		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 88 + 'px' });  // allen
+		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 128 + 'px' });  // allen
+
+		$('.stepBox .mobile-plan-stecla > a.first').click(function() { // allen
+			$(this).toggleClass('this');
+			if($(this).hasClass('this')){
+				$(this).find('i').html('確定明細');
+				$('body,html').css({'overflow': 'hidden'});
+			}else{
+				$(this).find('i').html('查看明細');
+				$('body,html').css({'overflow': ''});
+			}
+			$('.stepBox .mobile-plan-stecla > .plan-box').toggle();
+		});
+		$('.stepBox .mobile-plan-stecla > .plan-box > .scroll > ul > li > div > i').click(function() {
+			$(this).parent().siblings('.text').slideToggle();
+		});
+	$(window).on('resize', function() {
+		var windowHeight = $(window).height();
+		$(".stepBox .mobile-plan-stecla > .plan-box").css({ height: windowHeight - 116 + 'px' });
+		$(".stepBox .mobile-plan-stecla > .plan-box > .scroll").css({ height: windowHeight - 166 + 'px' });
+	});
+	windowWidth = $(window).width();
+	$(window).resize(function() {
+		if(windowWidth != $(window).width() && $(window).width() <= 980 ){
+			$('body,html').css({'overflow': ''});
+		}else{
+		}
+	});
+
+	//四大保證 advantage.php
+	$('.advantageTag li').on('click', function() {
+		var st_current = $(this).index();
+		$('.advantageTag li').removeClass('active');
+		$(this).addClass('active');
+		$('.advantageContent.active').removeClass('active');
+		$('.advantageContent:eq(' + st_current + ')').addClass('active');
+		console.log(st_current);
+	});
+
+	//職缺列表 recruiting.php
+	$('.vacancylist li').on('click',function(){
+		if(!$(this).hasClass('active')){
+			$('.vacancylist li').removeClass('active');
+			$(this).addClass('active');
+			$('.vacancylist .vacContent').hide();
+			$(this).children('.vacContent').show();
+		}else{
+			$('.vacancylist li').removeClass('active');
+			$('.vacancylist .vacContent').hide();
+		}
+	});
+
+
+	//instructions.php
+	$('.instructionsBox .sumber>li').on('click',function(){
+		var su_li = $('.instructionsBox .sumber>li'),
+			su_content =$('.instructionsBox .sumber .sumContent');
+
+		if(! $(this).hasClass('open')){
+			su_li.removeClass('open');
+			$(this).addClass('open');
+			su_content.stop().slideUp(function(){
+				$(this).removeAttr('style');
+			});
+			$(this).children('.sumContent').stop().slideDown(300);
+		}else{
+			su_li.removeClass('open');
+			su_content.stop().slideUp(function(){
+				$(this).removeAttr('style');
+			});
+		}
+	});
+	//application_1.php
+	$('.applicationBox .sumber>li').on('click',function(){
+
+		var su_li = $('.applicationBox .sumber>li'),
+			su_content =$('.applicationBox .sumber .sumContent');
+
+		if(! $(this).hasClass('open')){
+			su_li.removeClass('open');
+			$(this).addClass('open');
+			su_content.stop().slideUp(function(){
+				$(this).removeAttr('style');
+			});
+			$(this).children('.sumContent').stop().slideDown(300);
+		}else{
+			su_li.removeClass('open');
+			su_content.stop().slideUp(function(){
+				$(this).removeAttr('style');
+			});
+		}
+	});
+
+	//svg
+	function myDraw(path, url, x, y, w, h, id){
+		//create clipPath Element
+		var clippath = document.createElementNS("http://www.w3.org/2000/svg","clipPath");
+		clippath.setAttribute("id", id);
+		svgcanv.appendChild(clippath);
+
+		//draw the path
+		var cp=paper.path(path).translate(x, y).attr({stroke: 0});
+		$(cp.node).appendTo('#'+id+'');
+
+		//assoc clipPath with image
+		var img = paper.image(url,x,y,w,h);//.attr({fill:"#111",opacity:0.7});
+		img.node.setAttribute("clip-path","url(#"+id+")");
+		img.node.setAttribute("class",id);
+	}
 });
 
 
@@ -324,5 +451,77 @@ $(function(){
 	}
 });
 
+$(function(){
+	// 訂單列表頁, 收合付款資訊
+	$('.bookList .buttons .payment:not(.disable) .btn').click(function() {
+		$(this).parents('.bookList').find('.paymentInformation').toggle();
+	});
+	// 訂單列表頁, 收合付款資訊
+	$('.bookList .buttons .comment:not(.disable) .btn').click(function(){
+		$(this).parents('.comment').find('.comment_list').toggle();
+	});
 
+	/** BEGIN additional_product_list.js 做列表收合 **/
+	//uses classList, setAttribute, and querySelectorAll
+	//if you want this to work in IE8/9 youll need to polyfill these
+	(function(){
+		var d = document,
+		accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+		setAria,
+		setAccordionAria,
+		switchAccordion,
+		touchSupported = ('ontouchstart' in window),
+		pointerSupported = ('pointerdown' in window);
+
+		skipClickDelay = function(e){
+			e.preventDefault();
+			e.target.click();
+		}
+		setAriaAttr = function(el, ariaType, newProperty){
+			el.setAttribute(ariaType, newProperty);
+		};
+		setAccordionAria = function(el1, el2, expanded){
+			switch(expanded) {
+				case "true":
+					setAriaAttr(el1, 'aria-expanded', 'true');
+					setAriaAttr(el2, 'aria-hidden', 'false');
+					break;
+				case "false":
+					setAriaAttr(el1, 'aria-expanded', 'false');
+					setAriaAttr(el2, 'aria-hidden', 'true');
+					break;
+				default:
+					break;
+			}
+		};
+		//function
+		switchAccordion = function(e) {
+			// console.log("triggered");
+			e.preventDefault();
+			var thisAnswer = e.target.parentNode.nextElementSibling;
+			var thisQuestion = e.target;
+			if(thisAnswer.classList.contains('is-collapsed')) {
+				setAccordionAria(thisQuestion, thisAnswer, 'true');
+			} else {
+				setAccordionAria(thisQuestion, thisAnswer, 'false');
+			}
+			thisQuestion.classList.toggle('is-collapsed');
+			thisQuestion.classList.toggle('is-expanded');
+			thisAnswer.classList.toggle('is-collapsed');
+			thisAnswer.classList.toggle('is-expanded');
+
+			thisAnswer.classList.toggle('animateIn');
+		};
+		for (var i=0,len=accordionToggles.length; i<len; i++) {
+			if(touchSupported) {
+				accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+			}
+			if(pointerSupported){
+				accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+			}
+			accordionToggles[i].addEventListener('click', switchAccordion, false);
+		}
+	})();
+	/** END additional_product_list.js **/
+})
 
