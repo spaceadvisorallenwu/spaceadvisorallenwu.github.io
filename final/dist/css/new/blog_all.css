@@ -278,6 +278,7 @@
 	margin-right: 9px;
     padding: 3px 9px;
     font-size: 15px;
+    background: #fff;
 }
 .blog_post .subscription .subscription_inner .sub_input a {
     font-size: unset;

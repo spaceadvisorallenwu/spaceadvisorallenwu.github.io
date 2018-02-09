@@ -279,6 +279,10 @@
 #wrapper.order_time.order_time_period li._item._havePlan2 .assess input[type=checkbox]+label:after {
     top: 24px;
 }
+#wrapper.order_time .orderInformation4 .assess input[type=checkbox] {
+    display: block;
+    width: auto;
+}
 #wrapper.order_time .orderInformation4 .assess input[type=checkbox]+label:after {
     color: #4e5059;
     top: 4px;
@@ -1235,6 +1239,9 @@
     margin: 0;
     letter-spacing: 0;
 }
+.stepBox.fill_box .writeContent .custodyBtn:last-child {
+    margin-bottom: 0;
+}
 .stepBox.fill_box .writeContent .custodyBtn a {
     background: transparent;
     padding: 0;
@@ -1831,6 +1838,7 @@
     /** BEGIN order_form **/
     .stepBox.fill_box .writeContent._boxStyle {
         padding-top: 20px;
+        padding-bottom: 0;
     }
     .stepBox.fill_box .writeContent .writeInput {
         flex-direction: column;
