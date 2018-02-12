@@ -264,12 +264,15 @@ header a.member {
     border: 0;
 }
 header a.logo {
-    width: 120px;
+    /*width: 120px;*/
+    width: 153px;
     height: unset;
-    margin: 3px 0 0 0;
+    margin: 0;
 }
 header a.logo img {
 	width: 100%;
+    margin-top: 2px;
+    display: flex;
 }
 header .content select,
 .mm-list > li:nth-last-child(2),
@@ -576,12 +579,16 @@ footer .bottom li:last-child a:last-child:hover img {
     .breadcrumb {
         padding: 9px 5%;
     }
+
     /** BEGIN Header **/
 	header .content {
 		padding-right: 0;
 	    width: auto;
 	    padding-left: 5%;
 	}
+    header a.logo {
+        width: 145px;
+    }
 	header a.menu-mobile {
 		font-size: 17px;
         width: 44px;
@@ -716,12 +723,14 @@ footer .bottom li:last-child a:last-child:hover img {
             font-size: 12px;
             color: #fff;
             line-height: normal;
-            text-align: center;
             border-radius: 50%;
             background-color: #d76050;
             position: absolute;
             top: -5px;
             right: -12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mm-list ._isLogin li.compare b {
             width: 18px;
@@ -730,13 +739,15 @@ footer .bottom li:last-child a:last-child:hover img {
             font-size: 12px;
             color: #fff;
             line-height: normal;
-            text-align: center;
             border-radius: 50%;
             background-color: #d76050;
             text-align: center;
             display: inline-block;
             margin-left: 4px;
             margin-top: -5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         /** END isLogin **/
 	/** END Header **/
