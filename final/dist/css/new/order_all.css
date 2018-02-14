@@ -3,9 +3,11 @@
 .orderstep._boxStyle {
     margin: 20px auto;
     padding: 0;
-    border: 0;
     display: flex;
     align-items: center;
+}
+.orderstep b {
+    font-weight: normal;
 }
 .orderstep .stepPhotoInside {
     width: 30%;
@@ -33,6 +35,9 @@
     width: 100%;
 }
 .orderstep ul li {
+    text-align: center;
+    float: left;
+    width: 33.33333%;
     border-right: 1px solid #ddd;
     padding: 11px;
     font-size: 21px;
@@ -43,6 +48,9 @@
     align-items: center;
     opacity: .55;
     border-radius: 2px;
+}
+.orderstep ul li:last-child {
+    border: none;
 }
 .orderstep ul li.active {
     background: #4f6ea2;
@@ -60,6 +68,9 @@
     border-radius: 0 5px 5px 0;
 }
 .stepPhoto._boxStyle {
+    clear: both;
+    background: #b61d1a;
+    text-align: center;
     height: 70px;
     width: 42%;
     margin-top: 0;
@@ -1542,6 +1553,9 @@
 /** END order_form **/
 
 /** BEGIN order_complete **/
+.stepContent {
+    width: 100%;
+}
 .stepContainer._boxStyle {
     margin-top: 20px;
 }
@@ -1550,6 +1564,7 @@
     padding: 0;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 .stepContainer .stepConTxt > div {
     width: 100%;
@@ -1560,6 +1575,9 @@
     margin-right: 9px;
 }
 .stepContainer .stepConTxt h2 {
+    color: #4e5059;
+    margin: 0;
+    padding: 0;
     font-size: 21px;
     margin-bottom: 0;
     text-align: justify;
@@ -1671,6 +1689,9 @@
     }
     .orderstep ul li span {
         text-align: left;
+    }
+    .stepPhoto {
+        display: none;
     }
 
 

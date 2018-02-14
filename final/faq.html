@@ -388,39 +388,34 @@
 				var  qa_li = $('.qaList'),
 				qa_content =$('.qaBox .qaContent'),
 				qa_all = $('.qaBox .qaContent,.qaBox .sumber .sumContent');
-				if(! $(this).hasClass('active')){
+				if (!$(this).hasClass('active')) {
 					qa_li.removeClass('active');
 					$(this).addClass('active');
-					qa_content.stop().slideUp(function(){
-						$(this).removeAttr('style');
-					});
-					$(this).children('.qaContent').stop().slideDown(300);
-				}else{
+					qa_content.hide();
+					// $(this).children('.qaContent').stop().slideDown(300);
+					$(this).children('.qaContent').show();
+					scrollToElemFront($(this));
+				} else {
 					qa_li.removeClass('active');
-					$('.sumber>li').removeClass('open');
-					qa_all.stop().slideUp(function(){
-						$(this).removeAttr('style');
-					});
+					$('.sumber > li').removeClass('open');
+					qa_all.hide();
 				}
 			});
 
 			//常見問題 內層
-			$('.qaBox .sumber>li').on('click',function(event){
+			$('.qaBox .sumber>li').on('click',function(event) {
 				event.stopPropagation();
 				var  su_li = $('.qaBox .sumber>li'),
 				su_content =$('.qaBox .sumber .sumContent');
-				if(! $(this).hasClass('open')){
+				if (!$(this).hasClass('open')) {
 				su_li.removeClass('open');
 				$(this).addClass('open');
-					su_content.stop().slideUp(function(){
-						$(this).removeAttr('style');
-					});
-					$(this).children('.sumContent').stop().slideDown(300);
-				}else{
+					su_content.hide();
+					// $(this).children('.sumContent').stop().slideDown(300);
+					$(this).children('.sumContent').show();
+				} else {
 					su_li.removeClass('open');
-					su_content.stop().slideUp(function(){
-						$(this).removeAttr('style');
-					});
+					su_content.hide();
 				}
 			});
 		</script>

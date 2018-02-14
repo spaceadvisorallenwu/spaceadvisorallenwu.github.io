@@ -10,11 +10,11 @@
 		<link href="dist/images/icon.ico" type="image/x-icon" rel="shortcut icon"/>
 		<title>場地頁</title>
 		<link href="dist/css/font-awesome.min.css" rel="stylesheet" type="text/css" media=""/>
-		<link href="dist/css/main.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/jquery.mmenu.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/slick.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/slick-theme.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/colorbox.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/main.css" rel="stylesheet" type="text/css" media=""/>
 
 		<!-- 套件 -->
 		<link rel="stylesheet" type="text/css" href="dist/js/gl/styles/glDatePicker.darkneon.css">
@@ -141,20 +141,8 @@
 				<div class="banner">
 					<div class="banner-box">
 						<div class="panorama" style="background-image:url(dist/images/desk_banner_01.jpg)">
-							<div class="guide_box">
-								<div class="guide_btn">導 覽<br>Guide</div>
-								<div class="guide_container">
-									<div class="floorplan"><img src="dist/images/floorplan.png"></div>
-									<div class="options">
-										<span class="active">一樓</span>
-										<span>二樓</span>
-										<span>三樓</span>
-										<span>室外</span>
-									</div>
-								</div>
-							</div>
 							<a href="javascript:;"><img src="dist/images/icon_meeting04.png" alt="" title=""></a>
-							<iframe  src="https://www.youtube.com/embed/m5-KNWdVVc0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+							<iframe src="http://www.3dspace.com.tw/~focus/0013-AAB0007/" frameborder="0" allowfullscreen></iframe>
 						</div>
 						<!-- /panorama -->
 						<div class="pic">
@@ -165,22 +153,10 @@
 										<div class="item"><img src="dist/images/banner01.jpg"/></div>
 										<div class="item"><img src="dist/images/banner02.jpg"/></div>
 										<div class="item"><img src="dist/images/banner03.jpg"/></div>
-										<div class="item"><img src="dist/images/banner01.jpg"/></div>
-										<div class="item"><img src="dist/images/banner02.jpg"/></div>
-										<div class="item"><img src="dist/images/banner03.jpg"/></div>
-										<div class="item"><img src="dist/images/banner01.jpg"/></div>
-										<div class="item"><img src="dist/images/banner02.jpg"/></div>
-										<div class="item"><img src="dist/images/banner03.jpg"/></div>
 									</div>
 									<div class="banner_show">
 										<!-- small photo -->
 										<div class="slider-nav">
-											<div class="item"><img src="dist/images/banner01.jpg"/></div>
-											<div class="item"><img src="dist/images/banner02.jpg"/></div>
-											<div class="item"><img src="dist/images/banner03.jpg"/></div>
-											<div class="item"><img src="dist/images/banner01.jpg"/></div>
-											<div class="item"><img src="dist/images/banner02.jpg"/></div>
-											<div class="item"><img src="dist/images/banner03.jpg"/></div>
 											<div class="item"><img src="dist/images/banner01.jpg"/></div>
 											<div class="item"><img src="dist/images/banner02.jpg"/></div>
 											<div class="item"><img src="dist/images/banner03.jpg"/></div>
@@ -1197,21 +1173,6 @@
 				});
 			});//手機用
 		</script>
-		<script type="text/javascript">
-			$('.guide_box .guide_btn').on('click', function(){
-				$(this).parents('.guide_box').addClass('open').delay(10).queue(function(next){
-				    $(this).addClass("hover");
-				    next();
-				});
-			})
-			$('.guide_box .guide_container').on('mouseover', function(){
-				$(this).parents('.guide_box').addClass('hover');
-			})
-			$('.guide_box .guide_container').on('mouseout', function(){
-				$(this).parents('.guide_box').removeClass('hover');
-			})
-		</script>
-
 		<script type="text/javascript" src="dist/js/jquery.mousewheel.pack_bear.js?v=3.1.3"></script>
 		<script type="text/javascript" src="dist/js/jquery.fancybox.pack_bear.js?v=2.1.5"></script>
 		<link rel="stylesheet" type="text/css" href="dist/css/jquery.fancybox_bear.css?v=2.1.5" media="screen" />

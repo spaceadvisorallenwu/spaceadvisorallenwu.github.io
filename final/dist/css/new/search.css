@@ -650,6 +650,9 @@
     }
 }
 @media only screen and (max-width: 980px) {
+    .search.mapBox .search-box.searchPopup.on {
+        display: none;
+    }
     .search main {
         margin-top: 124px;
     }

@@ -213,6 +213,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    padding-right: 20px;
 }
 .mbr_information .required-fill .main-content ul li h4,
 .mbr_information .optional-fill .main-content ul li h4 {
@@ -226,8 +227,7 @@
 }
 .mbr_information .required-fill .main-content ul li section,
 .mbr_information .optional-fill .main-content ul li section {
-    width: 70%;
-    max-width: 350px;
+    width: 100%;
 }
 .mbr_information .required-fill .main-content ul li._pwd,
 .mbr_information .required-fill .main-content ul li._email,
@@ -301,10 +301,10 @@
     padding: 3px 9px;
 }
 .mbr_information .optional-fill .main-content ul li._address ._address1 {
-    width: calc(100% - 21px);
+    width: 100%;
 }
 .mbr_information .optional-fill .main-content ul li._address ._address2 {
-    width: calc(100% - 161px);
+    width: calc(100% - 139px);
 }
 .mbr_information .optional-fill .main-content ul li._notifyActivity,
 .mbr_information .optional-fill .main-content ul li._notifySystem {
@@ -326,34 +326,34 @@
 
 
 
-.mbr_information .required-fill .main-content>div {
+.mbr_information .required-fill .main-content > div {
     width: 47.53%;
 }
-.mbr_information .required-fill .main-content>div:nth-child(2n+2) {
+.mbr_information .required-fill .main-content > div:nth-child(2n+2) {
     width: 44.86%;
 }
-.mbr_information .required-fill .main-content>div .col-left {
+.mbr_information .required-fill .main-content > div .col-left {
     width: 110px;
     position: relative;
 }
-.mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-left {
+.mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-left {
     width: 90px;
     position: relative;
     white-space: nowrap;
 }
-.mbr_information .required-fill .main-content>div .col-right {
+.mbr_information .required-fill .main-content > div .col-right {
     width: calc(100% - 110px);
 }
-.mbr_information .required-fill .main-content>div .col-right .tips {
+.mbr_information .required-fill .main-content > div .col-right .tips {
     width: 100%;
 }
-.mbr_information .required-fill .main-content>div .col-right .unverified {
+.mbr_information .required-fill .main-content > div .col-right .unverified {
     margin-right: 25px;
 }
-.mbr_information .required-fill .main-content>div .col-right .verified {
+.mbr_information .required-fill .main-content > div .col-right .verified {
     margin-right: 25px;
 }
-.mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-right {
+.mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-right {
     width: calc(100% - 90px);
 }
 .mbr_information .required-fill .main-content .mobile01 {
@@ -369,34 +369,34 @@
     margin-bottom: 10px;
 }
 @media (max-width: 800px) {
-    .mbr_information .required-fill .main-content>div {
+    .mbr_information .required-fill .main-content > div {
         width: 100%;
     }
-     .mbr_information .required-fill .main-content>div:nth-child(2n+2) {
+     .mbr_information .required-fill .main-content > div:nth-child(2n+2) {
         width: 100%;
     }
-     .mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-left {
+     .mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-left {
         width: 110px;
     }
-     .mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-right {
+     .mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-right {
         width: calc(100% - 110px);
     }
 }
 @media (max-width: 500px) {
-    .mbr_information .required-fill .main-content>div .col-left {
+    .mbr_information .required-fill .main-content > div .col-left {
         width: 100%;
     }
-     .mbr_information .required-fill .main-content>div .col-right {
+     .mbr_information .required-fill .main-content > div .col-right {
         width: 100%;
     }
-     .mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-left {
+     .mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-left {
         width: 100%;
     }
-     .mbr_information .required-fill .main-content>div:nth-child(2n+2) .col-right {
+     .mbr_information .required-fill .main-content > div:nth-child(2n+2) .col-right {
         width: 100%;
     }
 }
-.mbr_information .optional-fill .main-content>div {
+.mbr_information .optional-fill .main-content > div {
     width: 46.2%;
     margin-bottom: 27px;
 }
@@ -404,23 +404,23 @@
     width: 100%;
     margin-bottom: 27px;
 }
-.mbr_information .optional-fill .main-content>div .col-left {
+.mbr_information .optional-fill .main-content > div .col-left {
     width: 110px;
     position: relative;
 }
-.mbr_information .optional-fill .main-content>div.aside-r .col-left {
+.mbr_information .optional-fill .main-content > div.aside-r .col-left {
     width: 162px;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
 }
-.mbr_information .optional-fill .main-content>div .col-right {
+.mbr_information .optional-fill .main-content > div .col-right {
     width: calc(100% - 110px);
 }
-.mbr_information .optional-fill .main-content>div.aside-r .col-right {
+.mbr_information .optional-fill .main-content > div.aside-r .col-right {
     width: calc(100% - 162px);
 }
-.mbr_information .optional-fill .main-content>div.all .col-right.address .add-field {
+.mbr_information .optional-fill .main-content > div.all .col-right.address .add-field {
     width: calc(25% - 13px);
 }
 .mbr_information .flexbox>div.wd_check .col-left .fa.fa-exclamation-circle {
@@ -435,8 +435,8 @@
 .mbr_information .flexbox>div.wd_check.wd_err .col-right input[type="text"] {
     background-color: #f7dfdc;
 }
-.mbr_information .optional-fill .main-content>div input,
-.mbr_information .optional-fill .main-content>div select {
+.mbr_information .optional-fill .main-content > div input,
+.mbr_information .optional-fill .main-content > div select {
     color: #999;
 }
 .mbr_information .bn.bn-red {
@@ -451,25 +451,25 @@
     letter-spacing: .1em;
 }
 @media (max-width: 800px) {
-    .mbr_information .optional-fill .main-content>div {
+    .mbr_information .optional-fill .main-content > div {
         width: 100%;
     }
-     .mbr_information .optional-fill .main-content>div .col-left {
+     .mbr_information .optional-fill .main-content > div .col-left {
         width: 130px;
     }
-     .mbr_information .optional-fill .main-content>div.aside-r .col-left {
+     .mbr_information .optional-fill .main-content > div.aside-r .col-left {
         width: 130px;
         position: relative;
         white-space: nowrap;
         overflow: hidden;
     }
-     .mbr_information .optional-fill .main-content>div .col-right {
+     .mbr_information .optional-fill .main-content > div .col-right {
         width: calc(100% - 130px);
     }
-     .mbr_information .optional-fill .main-content>div.aside-r .col-right {
+     .mbr_information .optional-fill .main-content > div.aside-r .col-right {
         width: calc(100% - 130px);
     }
-     .mbr_information .optional-fill .main-content>div.all .col-right.address {
+     .mbr_information .optional-fill .main-content > div.all .col-right.address {
         width: 100%;
     }
 }
@@ -477,17 +477,17 @@
     .mbr_information .optional-fill .main-content .address div.all {
         margin-bottom: 0;
     }
-     .mbr_information .optional-fill .main-content>div.all .col-right.address .add-field {
+     .mbr_information .optional-fill .main-content > div.all .col-right.address .add-field {
         width: 100%;
         margin-bottom: 10px;
     }
-     .mbr_information .optional-fill .main-content>div.all .col-right.address {
+     .mbr_information .optional-fill .main-content > div.all .col-right.address {
         margin-bottom: 35px;
     }
-     .mbr_information .optional-fill .main-content>div .col-right {
+     .mbr_information .optional-fill .main-content > div .col-right {
         width: 100%;
     }
-     .mbr_information .optional-fill .main-content>div.aside-r .col-right {
+     .mbr_information .optional-fill .main-content > div.aside-r .col-right {
         width: 100%;
     }
 }
@@ -495,9 +495,17 @@
 .member input[type="password"],
 .member select {
     width: 100%;
-    /*margin-bottom: 8px;*/
     padding: 3px 9px;
     border: 1px solid #ddd;
+    background-color: #fff;
+}
+.member select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 25px;
+    background: url(../../images/selce_arrw02.png) no-repeat scroll right center transparent;
+    background-position: center right 8px;
 }
 .member input[disabled] {
     position: relative;
@@ -709,25 +717,12 @@
     padding-right: 5px;
     width: 25px;
 }
-.warning_error input {
+.member .warning_error input {
     background: #f7dfdc;
 }
 input::-webkit-input-placeholder {
     color: #9c9c9c !important;
 }
-/*.app_stepBox li {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-flow: wrap;
-}
-.app_stepBox h4 {
-    font-size: 15px;
-    line-height: normal;
-    width: 145px;
-    margin-right: 20px;
-    text-align: justify;
-}*/
 
 .site-title {
     font-weight: bold;
@@ -777,11 +772,11 @@ input::-webkit-input-placeholder {
         width: 100%;
         flex-direction: column;
         margin-bottom: 15px;
+        padding-right: 0;
     }
     .mbr_information .required-fill .main-content ul li section,
     .mbr_information .optional-fill .main-content ul li section {
         width: 100%;
-        max-width: unset;
     }
     .mbr_information .optional-fill .main-content ul li._address .twzipcode._app {
         flex-direction: column;
@@ -791,7 +786,7 @@ input::-webkit-input-placeholder {
         width: 100%;
     }
     .mbr_information .optional-fill .main-content ul li._address .twzipcode._app select {
-        margin-bottom: 5px;
+        margin-bottom: 9px;
         margin-right: 0;
     }
     .mbr_information .required-fill .main-content ul li._pwd ._pwd1,
@@ -810,5 +805,6 @@ input::-webkit-input-placeholder {
     .mbr_information .optional-fill .main-content ul li h4 {
         line-height: normal;
         margin-bottom: 3px;
+        width: 100%;
     }
 }

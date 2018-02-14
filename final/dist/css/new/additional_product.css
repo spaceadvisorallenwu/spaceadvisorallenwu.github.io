@@ -244,7 +244,7 @@
 	/*margin: 0 5px;*/
 }
 .purchase_program .purchase_program-left .purchase_program-title002 {
-	flex: 1.4;
+	flex: 1;
 	text-align: left;
 	/*margin: 0 5px;*/
 }
@@ -262,7 +262,7 @@
 /** BEGIN 時間加價購 **/
 .purchase_program .purchase_time-right {
 	float: right;
-	max-width: 410px;
+	width: 350px;
 }
 .purchase_program-main .increase {
     font-size: 15px;
@@ -301,7 +301,7 @@
 	background-color: #fff;
 	cursor: pointer;
 	border: 1px solid #ccc;
-	padding: 0 30px 0 10px;
+	padding: 0 30px 0 9px;
 }
 .wd_form select::-ms-expand {
 	display: none;
@@ -404,9 +404,14 @@
     padding-right: 9px;
 }
 .value-add-cart .amount {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: calc(100% - 250px);
     padding-right: 9px;
+}
+.value-add-cart .valist .amount:not(._notCount):before {
+    content: "x";
+    margin-right: 5px;
 }
 .value-add-cart .price {
     display: inline-flex;
@@ -482,21 +487,26 @@
 	display: none;
 }
 .value-add-cart .purchase_vasum {
-	background-color: #4f6ea1;
-}
-.value-add-cart .purchase_vasum .wrapper {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    color: #fff;
-    width: 100%;
+
 }
 .value-add-cart .purchase_vasum .wrapper,
 .value-add-cart .purchase_vasum div.tamount {
     font-size: 17px;
 }
-.value-add-cart .purchase_vasum span {
-	font-size: 15px;
+.value-add-cart .purchase_vasum .wrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 9px 20px;
+    color: #fff;
+    width: 100%;
+    background-color: #4f6ea1;
+}
+.value-add-cart .purchase_vasum .wrapper.fee {
+    background-color: #f3f3f3;
+    color: #4e5059;
+    border-top: 1px solid #ddd;
+    padding: 9px 20px;
+    width: 100%;
 }
 .value-add-cart .purchase_vasum div.thead {
 	float: left;

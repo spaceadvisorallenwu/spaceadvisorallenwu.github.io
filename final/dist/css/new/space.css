@@ -1,90 +1,193 @@
 @charset 'UTF-8';
 /** BEGIN Space **/
-.meeting .banner._boxStyle {
-    width: 80%;
-    border-radius: 5px;
+.meeting .banner {
+    width: 100%;
     overflow: hidden;
+    position: relative;
 }
 .meeting .banner .banner-box {
+    width: 100%;
+    height: 435px;
     overflow: hidden;
+    position: relative;
+}
+.meeting .banner .banner-box .panorama {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.meeting .banner .banner-box .panorama a {
+    display: block;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%
+}
+.meeting .banner .banner-box .panorama a img {
+    width: 100%;
+    height: auto;
+}
+.meeting .banner .banner-box .panorama iframe {
+    display: none;
+    width: 100%;
+    height: 435px;
+}
+.meeting .banner .banner-box .pic {
+    display: none;
+    width: 100%;
+    height: 100%
+}
+.meeting .banner .banner-box .pic .picBg {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.meeting .banner .banner-box .pic .picBg .picBox {
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+.meeting .banner .banner-box .video {
+    display: none;
+    width: 100%;
+    height: 100%
+}
+.meeting .banner .banner-box .video iframe {
+    width: 100%;
+    height: 435px;
+}
+.meeting .banner .banner-box .panorama,
+.meeting .banner .banner-box .pic,
+.meeting .banner .banner-box .video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
 }
 .meeting .banner .banner-nav {
-    margin-top: 0;
-    background: #222;
-    /*padding: 20px 0;*/
-    /*background: 0;*/
-}
-.meeting .banner .banner-nav > div {
-    display: inline-flex;
-    width: unset;
-    /*background: #fff;
-    border-radius: 5px;
     overflow: hidden;
-    border: 1px solid #ddd;
-    padding: 1px;*/
+    text-align: center;
+    cursor: pointer;
+    background: #222;
+}
+.meeting .banner .banner-nav div {
+    margin: 0 auto;
+    display: inline-flex;
 }
 .meeting .banner .banner-nav a {
+    display: block;
     padding: 37px 20px 7px;
-    line-height: unset;
-    border-right: 0;
-    /*background-color: #f3f3f3;*/
+    font-size: 12px;
+    color: #d65f4f;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    background-repeat: no-repeat;
     background-size: 35px auto;
-    /*border-left: 1px solid #ddd;*/
+    background-position: center top;
+    float: left;
 }
-.meeting .banner .banner-nav a:hover {
-    border-left-color: #f3f3f3;
-    background-color: rgba(215, 96, 80, .9);
-}
+.meeting .banner .banner-nav a:hover,
 .meeting .banner .banner-nav a.this {
+    color: #fff;
     background-color: rgba(215, 96, 80, .9);
 }
-.meeting .banner .banner-nav a:first-child {
-    border: 0;
-    /*border-radius: 5px 0 0 5px;*/
+.meeting .banner .banner-nav a.panorama {
+    background-image: url("../../images/icon_meeting01.png");
 }
-.meeting .banner .banner-nav a:last-child {
-    /*border-radius: 0 5px 5px 0;*/
+.meeting .banner .banner-nav a.panorama:hover {
+    background-image: url("../../images/icon_meeting01_ro.png");
 }
+.meeting .banner .banner-nav a.panorama.this {
+    background-image: url("../../images/icon_meeting01_ro.png");
+}
+.meeting .banner .banner-nav a.pic {
+    background-image: url("../../images/icon_meeting02.png");
+}
+.meeting .banner .banner-nav a.pic:hover {
+    background-image: url("../../images/icon_meeting02_ro.png");
+}
+.meeting .banner .banner-nav a.pic.this {
+    background-image: url("../../images/icon_meeting02_ro.png");
+}
+.meeting .banner .banner-nav a.video {
+    background-image: url("../../images/icon_meeting03.png");
+}
+.meeting .banner .banner-nav a.video:hover {
+    background-image: url("../../images/icon_meeting03_ro.png");
+}
+.meeting .banner .banner-nav a.video.this {
+    background-image: url("../../images/icon_meeting03_ro.png");
+}
+
+
+
+
 .meeting .anchor {
+    width: 100%;
     background: #fff;
     height: 57px;
     position: absolute;
-}
-.meeting .anchor .nav {
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #ddd;
-    padding: 0;
-    height: unset;
     z-index: 9;
 }
-.meeting .anchor .nav ul>li {
+.meeting .anchor .nav {
+    width: 100%;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #ddd;
+    z-index: 9;
+}
+.meeting .anchor .nav ul > li {
+    float: left;
     margin-left: 9px;
-    padding: 0;
     position: relative;
     display: inline-flex;
 }
-.meeting .anchor .nav ul>li:first-child {
+.meeting .anchor .nav ul > li:first-child {
     margin-left: 0;
 }
-.meeting .anchor .nav ul>li a {
+.meeting .anchor .nav ul > li a {
     font-size: 15px;
     font-weight: 500;
+    color: rgba(78, 80, 89, .7);
+    line-height: 1.3;
+    text-decoration: none;
+    cursor: pointer;
     padding: 15px 21px 15px;
     border-bottom: 2px solid #f3f3f3;
-    color: rgba(78, 80, 89, .7);
 }
-.meeting .anchor .nav ul>li a:hover,
-.meeting .anchor .nav ul>li a.this {
+.meeting .anchor .nav ul > li a:hover,
+.meeting .anchor .nav ul > li a.this {
     border-bottom-color: #4e5059;
     color: #4e5059;
 }
 .meeting .anchor .content {
     width: 80%;
     max-width: unset;
+    position: relative;
+    margin: 0 auto;
 }
 .meeting .anchor .day-plan {
     width: 310px;
+    overflow: hidden;
+    padding-bottom: 30px;
+    *zoom: 1;
     background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 10%;
     border: 1px solid #ddd;
     border-radius: 0 0 5px 5px;
     z-index: 9;
@@ -94,15 +197,14 @@
 }
 .meeting .anchor .day-plan p.price {
     height: 52px;
-    line-height: 52px;
-    /*background-color: rgba(78, 80, 89, 1);*/
-    /*margin: 3px 5px;*/
-    /*border-radius: 5px;*/
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #ddd;
     font-size: 15px;
     font-weight: normal;
-    background-color: #ddd;
     color: #4e5059;
-    padding: 0 15px;
+    line-height: 52px;
+    text-decoration: none;
     transition: background-color .3s;
 }
 .meeting .anchor._fixed .day-plan {
@@ -118,13 +220,11 @@
 .meeting .anchor .day-plan p.name {
     padding: 15px;
     font-size: 17px;
+    font-weight: normal;
     background: #fff;
+    color: #000;
     line-height: normal;
-    /*margin: 5px;*/
-    /*border-radius: 5px;*/
-    /*border: 1px solid #ccc;*/
-    /*border-right-width: 2px;
-    border-bottom-width: 2px;*/
+    text-decoration: none;
 }
 .meeting .layui-laydate-static {
     width: 100%;
@@ -136,7 +236,7 @@
     border-top: 0;
 }
 .meeting .anchor .day-plan a.next {
-    width: unset;
+    margin-bottom: 20px;
     padding: 0;
     background-color: #fff;
 }
@@ -186,7 +286,6 @@
     color: #d76050;
     border-color: #d76050;
 }
-
 .meeting .outline.content {
     overflow: hidden;
     margin-top: 60px;
@@ -205,10 +304,15 @@
 }
 .meeting .content-720 {
     width: 100%;
+    max-width: 720px;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
+    overflow: hidden;
 }
 .meeting .outline span.brand {
+    min-height: 85px;
+    overflow: hidden;
+    position: relative;
     display: flex;
     align-content: center;
     margin-bottom: 20px;
@@ -239,6 +343,13 @@
     flex-direction: column;
     justify-content: center;
 }
+.meeting .outline span.brand p {
+    overflow: hidden;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+    float: right;
+}
 .meeting .outline span.brand p.name,
 .meeting .outline span.brand p.title {
     width: 100%;
@@ -252,34 +363,46 @@
 }
 .meeting .outline span.brand p.title {
     font-size: 30px;
-    margin-bottom: 0;
 }
 .meeting .outline p.no {
     color: rgba(78, 80, 89, .5);
     text-align: left;
     font-size: 13px;
-    margin-bottom: 9px;
-}
-.meeting .outline .star {
-    height: unset;
-}
-.meeting .outline .star b {
-    margin-left: 0;
-}
-.meeting .outline .three {
-    display: inline-flex;
-    align-items: center;
-    float: unset;
+    line-height: normal;
+    margin-bottom: 5px;
 }
 .meeting .outline .star,
 .meeting .outline .three span {
     padding-right: 7px;
-    font-size: 12px;
-    height: 23px;
+    font-size: 13px;
     display: flex;
     flex-direction: row;
     align-items: center;
     line-height: normal;
+    overflow: hidden;
+    font-weight: normal;
+    color: #4e5059;
+}
+.meeting .outline .star {
+    overflow: hidden;
+    width: 100%;
+    font-weight: normal;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.meeting .outline .star b {
+    color: #4e5059;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+.meeting .outline .three {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.meeting .outline .three span {
+    max-width: calc(100% / 3 - 4px);
 }
 .meeting .outline .three span:last-child {
     padding-right: 0;
@@ -291,25 +414,43 @@
     margin-top: -5px;
 }
 .meeting .outline .share {
-    width: unset;
     display: flex;
     align-items: center;
-    height: 23px;
 }
 .meeting .outline .share a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% auto;
     border-radius: 5px;
 }
 .meeting .outline .share a:first-child {
     margin-right: 5px;
 }
+.meeting .outline .share a.fb {
+    background-image: url(../../images/icon_fb03.png);
+}
+.meeting .outline .share a.line {
+    background-image: url(../../images/icon_line03.png);
+}
 .meeting .content-720 .title-box {
     width: 20%;
     font-size: 15px;
-    /*font-weight: normal;*/
+    overflow: hidden;
+    font-weight: bold;
+    color: #4e5059;
+    line-height: normal;
+    text-decoration: none;
+    float: left;
 }
+
 .meeting .content-720 .box {
+    overflow: hidden;
+    font-weight: normal;
+    color: #4e5059;
+    text-decoration: none;
+    float: right;
     width: 80%;
-    /*border-left: 1px solid #ddd;*/
     padding: 0 0 5px 20px;
     font-size: 15px;
     line-height: normal;
@@ -323,6 +464,12 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+.meeting .content-720 .box a.more i {
+    margin-left: 5px;
+}
+.meeting .content-720 .box a.more:hover {
+    text-decoration: underline;
+}
 .meeting .device .content-720,
 .meeting .about .content-720,
 .meeting .comment .star > p,
@@ -334,11 +481,27 @@
     background-image: url(../../images/avator.jpg);
     background-size: contain;
 }
-.meeting .anchor .day-plan span a.heart {
-    background-image: url("../../images/icon_heart_black.png");
+.meeting .device {
+    overflow: hidden;
 }
-.meeting .anchor .day-plan span a.add {
-    background-image: url("../../images/icon_add_black.png");
+.meeting .device li {
+    margin-bottom: 9px;
+    padding-left: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #4e5059;
+    text-decoration: none;
+    width: calc(100% / 4);
+    height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    background-image: url(../../images/icon_device.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    float: left;
 }
 .meeting .device .content-720 .box span {
     display: block;
@@ -357,41 +520,80 @@
 .meeting .clause {
     background: #fff;
     border-bottom: 0;
+    overflow: hidden;
+}
+.meeting .clause {
+    overflow: hidden;
 }
 .meeting .clause .title-box i {
     display: none;
 }
+
+
+
+
+.meeting .price-plan ul {
+    overflow: hidden;
+}
 .meeting .price-plan ul p.name {
     margin: 20px 0 9px;
+    padding-left: 10px;
+    border-left: 5px #4e6e9d solid;
     font-size: 15px;
+    font-weight: normal;
+    color: #4e6e9d;
+    line-height: normal;
+    text-decoration: none;
 }
 .meeting .price-plan ul:first-child p.name {
     margin-top: 0;
 }
 .meeting .price-plan ul li {
+    overflow: hidden;
     padding-left: 20px;
     margin-bottom: 9px;
+    position: relative;
 }
 .meeting .price-plan ul li div {
-    margin-bottom: 0;
-}
-.meeting .price-plan ul li div p.program {
-    width: 40%;
+    overflow: hidden;
 }
 .meeting .price-plan ul li div p.program,
 .meeting .price-plan ul li div p.price {
     cursor: pointer;
 }
+.meeting .price-plan ul li div p.program {
+    width: 40%;
+    font-size: 15px;
+    line-height: normal;
+    float: left;
+}
+.meeting .price-plan ul li div p.program i {
+    margin-left: 5px;
+    color: #d65f4f;
+    cursor: pointer;
+}
 .meeting .price-plan ul li div p.price {
     width: 40%;
     font-size: 12px;
+    font-weight: normal;
+    color: #4e5059;
+    line-height: 1.3;
+    text-decoration: none;
+    text-align: right;
+    float: left;
+}
+.meeting .price-plan ul li div p.price b {
+    color: #d65f4f;
 }
 .meeting .price-plan ul li div p.price b b {
     font-size: 21px;
 }
 .meeting .price-plan ul li div a.select {
-    border: 0;
     min-width: 65px;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
 }
 .meeting .price-plan ul li.active div a.select {
     background: gray !important;
@@ -404,12 +606,13 @@
     content: "已選擇";
 }
 .meeting .price-plan ul li .text {
+    display: none;
+    overflow: hidden;
     padding: 5px 9px;
     font-size: 13px;
     line-height: normal;
     border-radius: 5px;
     background: #f3f3f3;
-    /*border: 1px solid #ddd;*/
     margin: 3px 0 9px;
 }
 .meeting .mobile-plan .plan-box .scroll li .text a,
@@ -519,79 +722,8 @@
     text-align: center;
 }
 
-.space .panorama .guide_box {
-
-}
-.space .panorama .guide_box .guide_btn {
-    position: absolute;
-    right: 35px;
-    bottom: 35px;
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: normal;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    color: #222;
-    cursor: pointer;
-    overflow: hidden;
-}
-.space .panorama .guide_box .guide_btn:hover {
-    background: rgba(255, 255, 255, 1);
-    transition: all .4s;
-}
-.space .panorama .guide_box.open .guide_btn {
+.meeting .site-list a.more {
     display: none;
-}
-.space .panorama .guide_box .guide_container {
-    position: absolute;
-    right: 0;
-    max-width: 450px;
-    height: 100%;
-    background: rgba(0, 0, 0, .7);
-    display: none;
-    flex-direction: column;
-    opacity: .6;
-    transform: translateX(80%);
-    transition: .4s;
-}
-.space .panorama .guide_box.open .guide_container {
-    display: flex;
-}
-.space .panorama .guide_box.hover .guide_container {
-    transform: translateX(0%);
-    opacity: 1;
-    transition: .4s;
-}
-.space .panorama .guide_box .guide_container .floorplan {
-
-}
-.space .panorama .guide_box .guide_container .floorplan img {
-    height: 385px;
-    min-width: 300px;
-}
-.space .panorama .guide_box .guide_container .options {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-.space .panorama .guide_box .guide_container .options span {
-    color: #b3b3b3;
-    margin-right: 9px;
-    font-size: 17px;
-    cursor: pointer;
-}
-.space .panorama .guide_box .guide_container .options span.active,
-.space .panorama .guide_box .guide_container .options span:hover {
-    color: #FFF;
-    text-shadow: 0 0 15px #fff;
 }
 
 @media only screen and (max-width: 980px) {
@@ -606,11 +738,51 @@
         width: 90%;
         margin: 0 auto 20px;
     }
+    .meeting .price-plan {
+        display: none;
+    }
+    .meeting .outline p.no {
+        margin-bottom: 5px;
+    }
+    .meeting .outline .star,
+    .meeting .outline .three span {
+        margin-bottom: 5px;
+        height: unset;
+        padding: 0;
+        font-size: 15px;
+        width: 100%;
+    }
+    .meeting .outline .star {
+    }
+    .meeting .outline .three {
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    .meeting .outline .three span {
+    }
+    .meeting .outline .share {
+        width: 100%;
+        margin-bottom: 9px;
+        float: none;
+        text-align: left;
+    }
+    .meeting .outline .share a {
+        width: 30px;
+        height: 30px;
+    }
+    .meeting .outline .link {
+        overflow: hidden;
+    }
+    .meeting .outline .link > div,
+    .meeting .anchor .day-plan ._others > div {
+        font-size: 15px;
+    }
     .meeting .outline span.brand {
         margin: 11px 0;
     }
     .meeting .outline span.brand p.title {
         font-size: 25px;
+        font-weight: bold;
     }
     .meeting .outline span.brand ._spaceAvator {
         min-width: 70px;
@@ -629,15 +801,37 @@
     .meeting .anchor {
         height: 41px;
     }
+    .meeting .anchor-mobile .nav {
+        height: auto;
+        overflow: hidden;
+    }
+    .meeting .anchor-mobile .nav ul > li {
+        padding-right: 15px;
+    }
+
+    .meeting .banner .banner-box,
+    .meeting .banner .banner-box .video iframe,
+    .meeting .banner .banner-box .panorama iframe {
+        height: 300px;
+    }
+    .meeting .banner .banner-box .panorama a {
+        width: 60px;
+        height: 60px;
+    }
     .meeting .banner .banner-nav {
         /*padding: 15px;*/
     }
-    .meeting .banner .banner-nav > div {
+    .meeting .banner .banner-nav div {
         width: 100%;
+        margin: 0 auto;
     }
     .meeting .banner .banner-nav a {
-        padding: 37px 9px 11px;
+        display: block;
         width: calc(100% / 3);
+        padding: 0;
+        padding: 37px 9px 11px;
+        border-right: 1px #4e5059 solid;
+        font-size: 0.8em;
     }
     .meeting .outline .three {
         align-items: flex-start;
@@ -672,9 +866,19 @@
         width: 100%;
         margin-bottom: 9px;
     }
+    .meeting .content-720 .box a.more {
+        margin-top: 9px;
+    }
     .meeting .device li {
-        line-height: normal;
         font-size: 15px;
+        line-height: normal;
+        width: calc(100% / 3);
+        height: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
     .meeting .comment .something {
         flex-direction: column;
@@ -799,9 +1003,9 @@
         border: 1px solid #ddd;
         border-radius: 5px;
     }
-
-    .space .panorama .guide_box {
-        display: none;
+    .meeting .banner .banner-box .pic .picBg,
+    .meeting .banner .banner-box .pic .picBg .picBox {
+        background: none !important;
     }
 }
 /** END Space **/

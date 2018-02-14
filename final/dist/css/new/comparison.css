@@ -159,12 +159,6 @@
     width: 240px;
     flex-shrink: 0;
 }
-.compare .cs-list .main {
-    flex-wrap: nowrap;
-    width: calc(100% - 240px);
-    overflow-x: scroll;
-    overflow-y: visible;
-}
 .compare .cs-list .cs-rec {
     position: relative;
     width: 180px;
@@ -199,10 +193,48 @@
 	border-radius: 5px 0 0 0;
 }
 .compare .cs-list .cs-rec .cs-body {
-    font-size: 14px;
+    font-size: 15px;
+}
+.compare .cs-list .main {
+    flex-wrap: nowrap;
+    width: calc(100% - 240px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.compare .cs-list .main .cs-rec .cs-body > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore {
+    flex-direction: column;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore._show ._part {
+    display: none;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore:not(._show) ._more {
+    visibility: hidden;
+    height: 0;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore ._btn {
+    font-size: 13px;
+    color: #4e6e9d;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore ._btn i {
+    margin-left: 5px;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore._show ._btn i:before {
+    content: "\f0d8";
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore ._btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.compare .cs-list .main .cs-rec .cs-body > div._doMore ._btn:hover i {
+    text-decoration: none;
 }
 .compare .cs-list .cs-rec.item .cs-body {
-    font-size: 16px;
+    font-size: 15px;
 }
 .compare .cs-list .cs-rec.item .cs-body select {
     font-size: 13px;

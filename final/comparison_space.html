@@ -169,7 +169,13 @@
 											<div class="cs-body">
 												<div class="cs-title">場地資訊</div>
 												<div>評價星等</div>
-												<div>場地排列規劃</div>
+												<div>場地排列規劃
+													<div class="wd_form">
+														<select>
+															<option>場地排列</option>
+														</select>
+													</div>
+												</div>
 												<div>場地類型</div>
 												<div>價格方案
 													<div class="wd_form">
@@ -185,7 +191,6 @@
 												<div>面積/高度</div>
 												<div>設備</div>
 												<div class="cs-title">場地主資訊</div>
-												<div>房間總數</div>
 												<div>交通資訊</div>
 												<div>設施</div>
 												<div>餐飲資訊</div>
@@ -213,10 +218,9 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
-												<div>鄰近公車</div>
+												<div class="_doMore">距離火車站自由之丘10分鐘的步行路程，田園調布距離火車站有9分鐘的步行路程，由於臉對臉的帶計數器的廚房了吧，還可以利用作為開張的酒吧和咖啡館節日的審判距離火車站自由之丘10分鐘的步行路程，田園調布距離火車站有9分鐘的步行路程，由於臉對臉的帶計數器的廚房了吧，還可以利用作為開張的酒吧和咖啡館節日的審判</div>
 												<div>無障礙廁所</div>
-												<div>咖啡茶水</div>
+												<div class="_doMore">咖/咖啡/咖啡茶/咖啡茶水/水/水茶/水茶啡/水茶啡咖</div>
 												<div>30天前 扣10%手續費
 													<br> 20天前 扣30%手續費
 													<br> 10天前 扣50%手續費
@@ -247,7 +251,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -279,7 +282,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -311,7 +313,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -343,7 +344,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -375,7 +375,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -407,7 +406,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -439,7 +437,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -471,7 +468,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -503,7 +499,6 @@
 												<div>50坪 / 3米</div>
 												<div>麥克風、投影機</div>
 												<div class="cs-title"></div>
-												<div>300間</div>
 												<div>鄰近公車</div>
 												<div>無障礙廁所</div>
 												<div>咖啡茶水</div>
@@ -597,17 +592,48 @@
 		<script type="text/javascript" src="dist/js/main.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
 		<script>
+
+			// build more
+			$('._doMore').each(function(idx, obj) {
+				var len = $(obj).text().length;
+				var text = $(obj).text();
+				var maxLen = 10;
+				if (len > maxLen) {
+					var part = text.substring(0, maxLen);
+					var partMore = '<span class="_part">' + part + '...</span><span class="_more">' + text + '</span><span class="_btn">瞭解更多<i class="fa fa-caret-down" aria-hidden="true"></i></span>';
+					$(obj).html(partMore);
+				}
+			});
+			// more click
+			$('._doMore').on('click', '._btn', function() {
+				var parentElem = $(this).parents('._doMore');
+				var _no = parentElem.attr('data-no');
+				var _origh = parentElem.attr('data-origh');
+				if (parentElem.hasClass('_show')) {
+					parentElem.removeClass('_show');
+					$('div[data-no=' + _no + ']').css('height', _origh);
+				} else {
+					parentElem.attr('data-origh', parentElem.height());
+					parentElem.addClass('_show');
+				}
+				parentElem.css('height', 'auto');
+				processH();
+			})
+
 			//關聯欄位取等高
-			var field_height = 0;
-			$('.cs-rec>div.cs-head>div').each(function(idx, obj) {
-				if ($(obj).height() > field_height) field_height = $(obj).height();
-			}).css('height', field_height + 'px');
-			for (i = 1; i < 16; i++) {
+			function processH() {
 				var field_height = 0;
-				$('.cs-rec>div.cs-body>div:nth-child(' + i + ')').each(function(idx, obj) {
+				$('.cs-rec > div.cs-head > div').each(function(idx, obj) {
 					if ($(obj).height() > field_height) field_height = $(obj).height();
-				}).css('height', field_height + 24 + 'px');
+				}).css('height', field_height + 'px');
+				for (i = 1; i < 16; i++) {
+					var field_height = 0;
+					$('.cs-rec > div.cs-body > div:nth-child(' + i + ')').each(function(idx, obj) {
+						if ($(obj).height() > field_height) field_height = $(obj).height();
+					}).css('height', field_height + 24 + 'px').attr('data-no', i);
+				}
 			}
+			processH();
 		</script>
 		<script>
 			//jQuery UI - 拖曳排序

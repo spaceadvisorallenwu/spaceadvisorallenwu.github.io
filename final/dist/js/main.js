@@ -67,13 +67,9 @@ $(function(){
 		}
 	});//搜尋bar縮合
 
-	$('.search_in>li').click(function(){
+	$('.search_in > li').click(function(){
 		 $('.search-box.searchPopup').removeClass('on');//map.php 更多條件用
 	});//其他
-
-	$('.sequence-click > a').click(function(){
-		$(this).toggleClass('this');
-	});//篩選點選樣式
 
 	$(function(){
 		$('.search-list > ul > li > .place > .text > i.plan').click(function(){
@@ -173,10 +169,6 @@ $(function(){
 		$(this).toggleClass('this')
 		$(this).siblings('.search_item_detail').slideToggle();
 	});//點擊標題打開內容
-
-	$('li.switch > span').click(function(){
-		$(this).toggleClass('on');
-	});//搜尋排列開關
 });
 
 //場地列表 i標籤點擊變色
@@ -396,7 +388,7 @@ $(document).ready(function() {
 		}
 	});
 	//application_1.php
-	$('.applicationBox .sumber>li').on('click',function(){
+	$('.applicationBox .sumber > li').on('click',function(){
 
 		var su_li = $('.applicationBox .sumber>li'),
 			su_content =$('.applicationBox .sumber .sumContent');
@@ -502,6 +494,7 @@ $(function(){
 			var thisQuestion = e.target;
 			if(thisAnswer.classList.contains('is-collapsed')) {
 				setAccordionAria(thisQuestion, thisAnswer, 'true');
+				scrollToElemFront($(thisQuestion), 100);
 			} else {
 				setAccordionAria(thisQuestion, thisAnswer, 'false');
 			}
@@ -512,11 +505,11 @@ $(function(){
 
 			thisAnswer.classList.toggle('animateIn');
 		};
-		for (var i=0,len=accordionToggles.length; i<len; i++) {
+		for (var i = 0,len = accordionToggles.length; i < len; i++) {
 			if(touchSupported) {
 				accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
 			}
-			if(pointerSupported){
+			if(pointerSupported) {
 				accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
 			}
 			accordionToggles[i].addEventListener('click', switchAccordion, false);
@@ -525,3 +518,28 @@ $(function(){
 	/** END additional_product_list.js **/
 })
 
+// do comma on number
+function formatNumber(num) {
+    num += '';
+    var x = num.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
+function scrollToElemFront(elem, additional, speed, wrap) {
+    var wrap = wrap || $('html, body');
+    var speed = speed || 200;
+    var elem_offset_top = elem.position().top;
+    var additional = additional || -50;
+    wrap.animate({
+        scrollTop: elem_offset_top + additional
+    }, {
+        duration: speed,
+        easing: 'linear'
+    });
+}

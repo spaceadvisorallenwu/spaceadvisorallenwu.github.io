@@ -205,28 +205,6 @@
 								</ul>
 							</div>
 						</div>
-						<div class="edit-eval-bn _edit">
-							<a href="javascript:;"><span class="btn btn-c-3 btn-m">編輯評論</span></a>
-						</div>
-						<div class="section03">
-							<h1>編輯評論</h1>
-							<h2>您對於這間場地的整體評價</h2>
-							<div class="_choiceStar" data-star="0" data-hover="0">
-								<div class="eval-star">
-									<i class="fa fa-star-o" aria-hidden="true" data-order="1"></i>
-									<i class="fa fa-star-o" aria-hidden="true" data-order="2"></i>
-									<i class="fa fa-star-o" aria-hidden="true" data-order="3"></i>
-									<i class="fa fa-star-o" aria-hidden="true" data-order="4"></i>
-									<i class="fa fa-star-o" aria-hidden="true" data-order="5"></i>
-								</div>
-								<div class="remtxt"></div>
-							</div>
-							<h2>您的評論內容(內文不得少於50個字)</h2>
-							<textarea placeholder="評論"></textarea>
-							<div class="edit-eval-bn _finish">
-								<input type="button" value="完成" disabled class="btn btn-c-3 btn-m btn-c-disable">
-							</div>
-						</div>
 					</div>
 				</div>
 			</main>
@@ -240,47 +218,5 @@
 		<script type="text/javascript" src="dist/js/bootstrap_bear.js"></script>
 		<script type="text/javascript" src="dist/js/main.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
-		<script>
-			function checkBtn() {
-				if ($('.section03 ._choiceStar').attr('data-star') != 0 && $('.section03 textarea').val().length >= 50) {
-					$('.edit-eval-bn input:button').removeClass('btn-c-disable');
-					$('.edit-eval-bn input:button').removeAttr('disabled')[0].onclick = function() {
-						var _starElem = $('.section03 ._choiceStar');
-						var _star = _starElem.attr('data-star');
-						var _textElem = $('.section03 textarea');
-						var _text = _textElem.val();
-						$('.section02.comment').find('.star').find('._star').attr('class', '').addClass('_star').addClass('_star_'+_star);
-						$('.section02.comment').find('.text').html(_text);
-						_starElem.attr('data-star', 0);
-						_textElem.val('');
-						checkBtn();
-					};
-				} else {
-					$('.edit-eval-bn input:button').addClass('btn-c-disable');
-					$('.edit-eval-bn input:button').attr('disabled', 'disabled')[0].onclick = function() {};
-				}
-			}
-
-			$('.eval-star i').mouseenter(function() {
-				var _elem = $(this).parents('._choiceStar');
-				_elem.attr('data-hover', $(this).attr('data-order'));
-				_elem.addClass('_hover');
-			}).mouseleave(function() {
-				var _elem = $(this).parents('._choiceStar');
-				_elem.removeClass('_hover');
-		        _elem.attr('data-hover', 0);
-		    }).click(function(){
-		    	var _elem = $(this).parents('._choiceStar');
-		    	_elem.attr('data-star', $(this).attr('data-order'));
-		    	checkBtn();
-		    })
-
-		    $('.reward_cmt .section03').on('keyup', 'textarea', function(){
-		    	checkBtn();
-		    })
-		    $('.reward_cmt').on('click', '.edit-eval-bn._edit', function(){
-		    	$('main').addClass('_doEdit');
-		    })
-		</script>
 	</body>
 </html>

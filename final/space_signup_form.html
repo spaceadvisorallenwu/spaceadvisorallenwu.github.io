@@ -144,17 +144,11 @@
 						<div class="appInput">
 							<ul>
 								<!-- 錯誤時請加上 class warning_error -->
-								<li class="apInput1 warning_error">
+								<li class="apInput warning_error _email">
 									<h4>帳號：</h4>
-									<input type="email" placeholder="Email">
-								</li>
-								<li class="apInput2">
-									<h4>登入密碼：</h4>
-									<input type="text" placeholder="英文字母加數字">
-								</li>
-								<li class="apInput3">
-									<h4>重複以上密碼：</h4>
-									<input type="password" placeholder="重複輸入密碼">
+									<section>
+										<input type="email" placeholder="Email">
+									</section>
 								</li>
 							</ul>
 						</div>
@@ -164,19 +158,25 @@
 						<h2>公司登記資料</h2>
 						<div class="appInput">
 							<ul>
-								<li class="apInput1 ">
+								<li class="apInput _company">
 									<h4>公司：</h4>
-									<input type="text" placeholder="中文名稱">
+									<section>
+										<input type="text" placeholder="中文名稱">
+									</section>
 								</li>
-								<li class="apInput2 ">
+								<li class="apInput _companyType">
 									<h4>營業類型：</h4>
-									<select>
-										<option>請選擇</option>
-									</select>
+									<section>
+										<select>
+											<option>請選擇</option>
+										</select>
+									</section>
 								</li>
-								<li class="apInput3 ">
+								<li class="apInput _companyNo">
 									<h4>營利事業統一編號：</h4>
-									<input type="text" placeholder="統一編號">
+									<section>
+										<input type="text" placeholder="統一編號">
+									</section>
 								</li>
 							</ul>
 						</div>
@@ -186,25 +186,31 @@
 						<h2>帳號設定與聯繫資料</h2>
 						<div class="appInput">
 							<ul>
-								<li class="apInput1 ">
+								<li class="apInput _companyBrand">
 									<h4>對外品牌名稱：</h4>
-									<input type="text" placeholder="中文名稱">
+									<section>
+										<input type="text" placeholder="中文名稱">
+									</section>
 								</li>
-								<li class="apInput2 ">
+								<li class="apInput _companyTel">
 									<h4>公司通訊電話：</h4>
-									<select>
-										<option>+886</option>
-									</select>
-									<input type="tel" placeholder="號碼">
-								</li>
-								<li class="apInput3 ">
-									<h4>公司營業地址：</h4>
-									<div class="twzipcode">
-										<select>
-											<option>台灣</option>
+									<section>
+										<select class="_cCodes">
+											<option>+886</option>
 										</select>
-									</div>
-									<input type="text" placeholder="完整地址">
+										<input type="tel" placeholder="號碼">
+									</section>
+								</li>
+								<li class="apInput _companyAddress">
+									<h4>公司營業地址：</h4>
+									<section>
+										<div class="twzipcode">
+											<select>
+												<option>台灣</option>
+											</select>
+										</div>
+										<input type="text" placeholder="完整地址">
+									</section>
 								</li>
 							</ul>
 						</div>
@@ -214,31 +220,46 @@
 						<h2>主要聯絡人</h2>
 						<div class="appInput">
 							<ul>
-								<li class="apInput1 ">
+								<li class="apInput _contact">
 									<h4>主要聯絡人：</h4>
-									<input type="text" placeholder="中文姓">
-									<input type="text" placeholder="中文名">
+									<section>
+										<input type="text" placeholder="中文姓">
+										<input type="text" placeholder="中文名">
+									</section>
 								</li>
-								<li class="apInput2 ">
+								<li class="apInput _department">
 									<h4>部門：</h4>
-									<select>
-										<option>請選擇</option>
-									</select>
+									<section>
+										<select>
+											<option>請選擇</option>
+										</select>
+									</section>
 								</li>
-								<li class="apInput3 ">
+								<li class="apInput _companyJob">
+									<h4>職稱：</h4>
+									<section>
+										<input type="text" placeholder="職務名稱">
+									</section>
+								</li>
+								<li class="apInput _tel">
 									<h4>電話：</h4>
-									<select>
-										<option>+886</option>
-									</select>
-									<input class="inp1" type="tel" placeholder="號碼">
-									<input class="inp2" type="tel" placeholder="分機號碼">
+									<section>
+										<select class="_cCodes">
+											<option>+886</option>
+										</select>
+										<input class="inp0 _aCodes" type="tel" placeholder="區碼">
+										<input class="inp1 _phone" type="tel" placeholder="號碼">
+										<input class="inp2 _ext" type="tel" placeholder="分機">
+									</section>
 								</li>
-								<li class="apInput4 ">
+								<li class="apInput _mobile">
 									<h4>行動電話：</h4>
-									<select>
-										<option>+886</option>
-									</select>
-									<input type="tel" placeholder="號碼">
+									<section>
+										<select class="_cCodes">
+											<option>+886</option>
+										</select>
+										<input type="tel" placeholder="號碼">
+									</section>
 								</li>
 							</ul>
 						</div>
@@ -248,32 +269,36 @@
 						<h2>問卷調查</h2>
 						<div class="appInput">
 							<ul>
-								<li class="apInput1 ">
+								<li class="apInput">
 									<h4>如何得知本站：</h4>
-									<select>
-										<option>請選擇</option>
-									</select>
+									<section>
+										<select>
+											<option>請選擇</option>
+										</select>
+									</section>
 								</li>
-								<li class="apInput2 ">
+								<li class="apInput">
 									<h4>願意收到本站提供之活動訊息：</h4>
-									<div>
-										<div class="col">
-											<span class="assess">
-												<input type="radio" value="1" id="i1" name="staging">
-												<label for="i1" class="p lang_31">是</label>
-											</span>
+									<section>
+										<div>
+											<div class="col">
+												<span class="assess">
+													<input type="radio" value="1" id="i1" name="staging">
+													<label for="i1" class="p lang_31">是</label>
+												</span>
+											</div>
+											<div class="col">
+												<span class="assess">
+													<input type="radio" value="1" id="i2" name="staging">
+													<label for="i2" class="p lang_31">否</label>
+												</span>
+											</div>
 										</div>
-										<div class="col">
-											<span class="assess">
-												<input type="radio" value="1" id="i2" name="staging">
-												<label for="i2" class="p lang_31">否</label>
-											</span>
-										</div>
-									</div>
+									</section>
 								</li>
-								<li class="apInput3 ">
+								<li class="apInput">
 									<h4>我已仔細閱讀並明瞭<span class="aqlink"><a class="fancybox fancybox.iframe terms" href="terms.html?iniframe=1">服務條款</a>、<a class="fancybox fancybox.iframe privacy" href="privacy.html?iniframe=1">隱私權聲明</a>：</span></h4>
-									<div>
+									<section>
 										<div class="col">
 											<span class="assess">
 												<input type="radio" value="2" id="a1" name="agree">
@@ -286,7 +311,7 @@
 												<label for="a2" class="p lang_31">否</label>
 											</span>
 										</div>
-									</div>
+									</section>
 								</li>
 							</ul>
 						</div>

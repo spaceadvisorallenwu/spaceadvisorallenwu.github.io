@@ -177,14 +177,16 @@
 /** BEGIN collectItem4 **/
 .spacer_plan .collectItem4 .mealBtn {
 	padding-top: 0;
-	margin-bottom: 9px;
+	margin-bottom: 5px;
 }
 .spacer_plan .collectItem4 .meal_icon1,
 .spacer_plan .collectItem4 .meal_icon2 {
-	font-size: 15px;
+	font-size: 13px;
 	line-height: normal;
 	margin-right: 0;
-	padding-left: 25px;
+	padding-left: 22px;
+    background-repeat: no-repeat;
+    background-size: auto 11px;
 }
 .spacer_plan .collectItem4 .meal_icon1:hover,
 .spacer_plan .collectItem4 .meal_icon2:hover {
@@ -192,11 +194,9 @@
 }
 .spacer_plan .collectItem4 .meal_icon1 {
 	background-image: url(../../images/spacer_plan/meal_icon.png);
-	margin-right: 20px;
 }
 .spacer_plan .collectItem4 .meal_icon2 {
 	background-image: url(../../images/spacer_plan/meal_icon2.png);
-	padding-left: 20px;
 }
 /** END collectItem4 **/
 
@@ -406,10 +406,12 @@
         width: 75%;
         padding: 15px 0;
 	}
-	.spacer_plan .collect_banner .colTxt h2,
-	.spacer_plan .collect_banner .colTxt .valueList b {
+	.spacer_plan .collect_banner .colTxt h2 {
 		font-size: 21px;
 		margin-bottom: 5px;
+	}
+	.spacer_plan .collect_banner .colTxt .valueList b {
+		font-size: 15px;
 	}
 	.spacer_plan .collect_banner .colTxt .valueList span {
 		font-size: 13px;

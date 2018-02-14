@@ -39,14 +39,26 @@
     font-size: unset;
     background: unset;
 }
-
+.aboutBox.about_us {
+    color: #4e5059;
+}
+.aboutBox.about_us main {
+    margin-bottom: 0;
+}
 
 @media only screen and (max-width: 980px) {
 	.ab_item3,
 	.ab_item1 {
 		padding: 0;
 	}
-	.aboutBox .ma_banner .mo_banner img {
+	.abContent {
+		font-size: 15px;
+	    line-height: 24px;
+	}
+	.aboutBox.about_us .ba_txt {
+        padding: 0 20px;
+    }
+	.aboutBox.about_us .ma_banner .mo_banner img {
 		border-radius: 5px;
 	}
 }

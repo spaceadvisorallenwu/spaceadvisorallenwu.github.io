@@ -5,9 +5,6 @@
     width: 80%;
     margin: 40px auto 0;
     max-width: unset;
-    /*border: 1px solid #ddd;*/
-    /*padding: 2px;*/
-    /*border-radius: 9px;*/
     padding-bottom: 20px;
 }
 .applicationStep ul {
@@ -110,10 +107,7 @@
     padding: 20px 0;
 }
 .appSynopsis {
-	/*-webkit-filter: grayscale(50%);*/
-    /*filter: gray;*/
     height: 180px;
-    /*border: 1px solid #ddd;*/
     background: unset;
 }
 .appSynopsis .appSynopsisTxt {
@@ -121,7 +115,6 @@
 	letter-spacing: 0;
 }
 .appSynopsis .appSynopsisTxt h3 {
-	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);*/
 	font-size: 30px;
     margin-bottom: 9px;
     line-height: normal;
@@ -134,27 +127,46 @@
 	padding: 40px;
 	margin-top: 20px;
 }
-.sumber>li .sumTitle span,
-.sumber>li .sumContent span {
+.sumber > li .sumTitle span,
+.sumber > li .sumContent span {
 	font-weight: normal;
+}
+.applicationBox main h2 {
+    font-size: 21px;
+    line-height: normal;
+}
+.app_stepBox li {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.app_stepBox li:last-child {
+	margin-bottom: 0;
+}
+.app_stepBox .appInput {
+    width: 100%
+}
+.app_stepBox li.apInput input,
+.app_stepBox li.apInput select,
+.app_stepBox li.apInput textarea {
+	width: 100%;
+	color: #4e5059;
+	font-size: 15px;
+    border: 1px solid #ddd;
+}
+.app_stepBox li.apInput section {
+	flex: 1;
+	max-width: 300px;
+}
+.applicationBox .apInput input {
+	width: 100%;
 }
 .applicationBox .twzipcode {
 	display: flex;
     margin: 9px 0;
 }
-.applicationBox .app_stepItem2 .apInput5 input,
-.applicationBox .app_stepItem3 .apInput3 input {
-	width: 100%;
-	max-width: unset;
-}
-.applicationBox .twzipcode > select,
-.applicationBox .twzipcode > input {
-	width: 100% !important;
-	margin-right: 9px !important;
-}
-.applicationBox .twzipcode > input {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+.applicationBox .twzipcode select {
+	margin-right: 5px;
 }
 .app_stepBox {
 	/*padding: 0;*/
@@ -179,50 +191,60 @@
     padding-right: 5px;
     width: 25px;
 }
-.app_stepBox li {
+.app_stepBox li.apInput {
 	display: flex;
 	width: 100%;
 	align-items: center;
 	flex-flow: wrap;
 }
-.app_stepBox h4 {
+.app_stepBox li.apInput h4 {
 	font-size: 15px;
     line-height: normal;
-    width: 145px;
+    width: 150px;
     margin-right: 20px;
     text-align: justify;
 }
-.app_stepBox input,
-.app_stepBox select,
-.apInput2 select:nth-child(2),
-.app_stepItem4 li:nth-child(2) select {
-	width: 30%;
-	max-width: 300px;
-	margin-left: 0;
+.app_stepBox li.apInput._companyTel section,
+.app_stepBox li.apInput._tel section,
+.app_stepBox li.apInput._mobile section {
+	display: flex;
+	align-items: center;
+}
+.app_stepBox li.apInput section ._cCodes {
+	width: 100px;
+	margin-right: 5px;
+	flex: 1;
+}
+.app_stepBox li.apInput._companyAddress h4 {
+	width: 100%;
 	margin-right: 0;
 }
-.app_stepItem4 li:nth-child(1) input {
-	width: 15%;
-    max-width: calc(300px / 2 - 5px);
+.app_stepBox li.apInput._companyAddress section {
+	max-width: unset;
 }
-.app_stepItem4 li:nth-child(1) input:last-child {
-	margin-left: 9px;
+.app_stepBox li.apInput._contact section {
+	display: flex;
+	align-items: center;
 }
-.app_stepBox input,
-.app_stepBox select,
-.app_stepBox textarea {
-	color: #4e5059;
-	font-size: 15px;
-    border: 1px solid #ddd;
+.app_stepBox li.apInput._contact section input {
+	width: 100%;
+	margin-right: 5px;
 }
-.applicationBox main h2 {
-    font-size: 21px;
-    line-height: normal;
-    margin-bottom: 9px;
+.app_stepBox li.apInput._contact section input:last-child {
+	margin-right: 0;
 }
-.applicationBox main h2:before {
-	/*content: '';*/
+.app_stepBox li.apInput._tel section {
+
 }
+.app_stepBox li.apInput._tel section ._aCodes,
+.app_stepBox li.apInput._tel section ._ext {
+	width: 50px;
+}
+.app_stepBox li.apInput._tel section ._phone {
+	margin: 0 5px;
+}
+
+
 .app_step1 .custodyBtn a,
 .app_step2 .custodyBtn a {
     letter-spacing: 0;
@@ -249,38 +271,31 @@
 	margin-bottom: 40px;
 	color: #4e5059;
 }
-.app_stepItem2 .apInput4 select,
-.app_stepItem3 .apInput2 select:nth-child(2),
-.app_stepItem4 li:nth-child(3) select,
-.app_stepItem4 li:nth-child(3) .inp2,
-.app_stepItem4 li:nth-child(4) select {
-	width: 10%;
-	max-width: 81px;
-    margin-right: 9px;
-}
-.app_stepItem2 .apInput4 input,
-.app_stepItem3 .apInput2 input,
-.app_stepItem4 li:nth-child(3) .inp1,
-.app_stepItem4 li:nth-child(4) input {
-	width: 20%;
-	max-width: 210px;
-	margin-left: 0;
-}
-.app_stepItem2 .apInput5,
-.app_stepItem3 .apInput3 {
-	display: block;
-}
-.app_stepItem4 li:nth-child(3) .inp1 {
-	margin-right: 9px;
-}
 .app_stepItem5 .aqlink {
 	vertical-align: unset;
 }
-.col .assess {
+/*.col .assess {
     font-size: 15px;
+}*/
+.app_stepItem5 a {
+    color: #4f6ea2;
 }
-.apInput2 select {
-	margin-bottom: 0;
+.app_stepItem5 a:hover {
+    text-decoration: underline;
+}
+.app_stepItem5 .aqlink {
+    display: inline-block;
+    vertical-align: middle;
+}
+.app_stepItem5 .col {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px 0 0;
+    font-size: 1rem;
+}
+.app_stepItem5 .col .assess input[type=radio]+label:after,
+.app_stepItem5 .col .assess input[type=checkbox]+label:after {
+    background: #4f6ea2 !important;
 }
 
 @media only screen and (max-width: 980px) {
@@ -330,7 +345,6 @@
 		font-size: 15px;
 	    line-height: 25px;
 	}
-
 	.application_explanation {
 		padding: 20px;
 		margin: 20px auto;
@@ -342,58 +356,52 @@
 	.applicationStep ul {
 		padding: 20px;
 	}
-	.app_stepItem2 .apInput4 select,
-	.app_stepItem3 .apInput2 select:nth-child(2),
-	.app_stepItem4 li:nth-child(3) select,
-	.app_stepItem4 li:nth-child(3) .inp2,
-	.app_stepItem4 li:nth-child(4) select {
-		width: 100%;
-		max-width: unset;
-	    margin-right: 0;
-	}
-	.app_stepItem2 .apInput4 input,
-	.app_stepItem3 .apInput2 input,
-	.app_stepItem4 li:nth-child(3) .inp1,
-	.app_stepItem4 li:nth-child(4) input {
-		width: 100%;
-		max-width: unset;
-		margin-left: 0;
-	}
-	.app_stepBox input,
-	.app_stepBox select,
-	.apInput2 select:nth-child(2),
-	.app_stepItem4 li:nth-child(2) select {
-		width: 100%;
-		max-width: unset;
-	}
-	.app_stepItem4 li:nth-child(1) input {
-		width: 100%;
-		max-width: unset;
-	}
-	.app_stepItem4 li:nth-child(1) input:last-child {
-		margin-left: 0;
-		margin-top: 9px;
-	}
-	.app_stepBox .warning_error h4 {
-		padding-left: 0;
-		/*width: calc(100% - 25px);*/
-	}
-	.app_stepBox h4,
-	.app_stepBox input,
-	.app_stepBox select,
-	.app_stepBox textarea {
-		margin-bottom: 0;
-	}
-	.app_stepBox .app_stepItem5 h4 {
-		margin-right: 0;
-	}
-	.app_stepBox li {
+	.app_stepBox li.apInput {
 		margin-bottom: 0;
 		flex-direction: column;
 		flex-flow: wrap;
+		margin-bottom: 9px;
+	}
+	.app_stepBox li.apInput h4 {
+		margin-bottom: 3px;
+	    margin-right: 0;
+	    text-align: left;
+	}
+	.app_stepBox li.apInput section {
+		max-width: unset;
+	}
+	.applicationBox .apInput input,
+	.applicationBox .apInput select,
+	.applicationBox .apInput textarea,
+	.app_stepBox li.apInput._tel section ._phone {
+		margin-bottom: 9px;
+	}
+	.app_stepBox li.apInput:last-child,
+	.applicationBox .apInput input:last-child,
+	.applicationBox .apInput select:last-child,
+	.applicationBox .apInput textarea:last-child {
+		margin-bottom: 0;
+	}
+	.app_stepBox li.apInput._companyTel section,
+	.app_stepBox li.apInput._tel section,
+	.app_stepBox li.apInput._mobile section,
+	.app_stepBox li.apInput._contact section {
+		display: block;
+	}
+	.app_stepBox li.apInput section ._cCodes {
+		width: 100%;
+		margin-right: 0;
+	}
+	.app_stepBox li.apInput._tel section ._phone,
+	.app_stepBox li.apInput._tel section ._ext {
+		margin-left: 0;
+	}
+	.app_stepBox .warning_error h4 {
+		padding-left: 0;
 	}
 	.applicationBox .twzipcode {
 		flex-direction: column;
+		margin-top: 0;
 	}
 	.applicationBox .twzipcode._app1,
 	.applicationBox .twzipcode._app2,
@@ -402,18 +410,6 @@
 	    margin-left: 0;
 	    width: 100%;
 	    margin-top: 0;
-	}
-	.app_stepBox li,
-	.app_stepItem2 .apInput4 select,
-	.app_stepItem3 .apInput2 select,
-	.app_stepItem4 .apInput3 select,
-	.app_stepItem4 .apInput3 .inp1,
-	.app_stepItem4 .apInput4 select,
-	.applicationBox .twzipcode select {
-		margin-bottom: 13px;
-	}
-	.app_stepItem3 .apInput2 input {
-		margin-left: 0;
 	}
 	.app_stepBox .app_stepItem5 li > div {
 		width: 100%;
