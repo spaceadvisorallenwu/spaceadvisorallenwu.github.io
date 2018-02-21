@@ -193,6 +193,7 @@
 .site-list .site {
     position: relative;
     text-align: center;
+    letter-spacing: 0;
 }
 .site-list .site .text {
     text-align: left;
@@ -277,41 +278,30 @@
     display: inline-flex;
     width: 100%;
     align-items: center;
-}
-.site-list .site .text span.star {
-    display: inline-block;
-    width: 45%;
-    height: 20px;
-    overflow: hidden;
-    font-weight: normal;
-    color: #d5d6d4;
-    line-height: normal;
-    text-decoration: none;
-}
-.site-list .site .text span.star b {
-    color: #4e5059;
-    font-weight: normal;
-}
-.site-list .site .text span.price {
-    display: inline-block;
-    width: 50%;
-    height: 25px;
-    overflow: hidden;
-    font-weight: normal;
-    color: #4e5059;
-    line-height: normal;
-    text-decoration: none;
-    text-align: right;
-}
-.site-list .site .text span.price b {
-    font-size: 17px;
+    justify-content: space-between;
 }
 .site-list .site .text .info_2 span.star,
 .site-list .site .text .info_2 span.price {
     line-height: normal;
-    height: auto;
-    width: 50%;
+    height: 20px;
     font-size: 13px;
+    text-decoration: none;
+    font-weight: normal;
+    overflow: hidden;
+    display: inline-block;
+}
+.site-list .site .text .info_2 span.star {
+    color: #d5d6d4;
+}
+.site-list .site .text .info_2 span.star b {
+    color: #4e5059;
+    font-weight: normal;
+}
+.site-list .site .text .info_2 span.price {
+    color: #4e5059;
+}
+.site-list .site .text .info_2 span.price b {
+    font-size: 17px;
 }
 .site-list a.more {
     display: table;

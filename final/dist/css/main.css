@@ -3318,58 +3318,6 @@ table {
     font-size: 14px;
     color: #4e5059;
 }
-.detailTable {
-    font-size: 0.875rem;
-    width: 100%
-}
-.detailTable .tableList {
-    float: left;
-    line-height: 22px;
-}
-.detailTable .tableList:nth-child(1) {
-    width: 26%
-}
-.detailTable .tableList:nth-child(1) .tablePhoto,
-.detailTable .tableList:nth-child(1) .tableTxt {
-    display: table;
-    vertical-align: middle;
-    height: 100%;
-    width: 50%;
-    float: left;
-}
-.detailTable .tableList:nth-child(1) .tablePhoto div,
-.detailTable .tableList:nth-child(1) .tablePhoto img,
-.detailTable .tableList:nth-child(1) .tableTxt div,
-.detailTable .tableList:nth-child(1) .tableTxt img {
-    display: table-cell;
-    vertical-align: middle;
-}
-.detailTable .tableList:nth-child(1) .tableTxt {
-    text-align: center;
-    height: 120px;
-}
-.detailTable .tableList:nth-child(2) .table_td,
-.detailTable .tableList:nth-child(3) .table_td,
-.detailTable .tableList:nth-child(4) .table_td {
-    padding: 10px;
-}
-.detailTable .tableList:nth-child(2) {
-    width: 22%;
-    border-left: 5px solid #efeff0;
-}
-.detailTable .tableList:nth-child(3) {
-    width: 22%
-}
-.detailTable .tableList:nth-child(4) {
-    width: 20%
-}
-.detailTable .tableList:nth-child(5) {
-    width: 10%;
-    border-left: 5px solid #efeff0;
-}
-.detailTable .tableList:nth-child(5) .table_th {
-    text-indent: -10000px;
-}
 .detailTable .table_th {
     display: none;
     line-height: 25px;
@@ -9057,8 +9005,8 @@ i.ranking3 {
     margin: 31px 0;
 }
 .vanueTag .tableBox {
-    padding: 16px 0;
-    border-top: 2px solid #a6a7ac;
+    /*padding: 16px 0;*/
+    border-top: 1px solid #a6a7ac;
 }
 .vanueTag .vanueContent {
     display: none;
@@ -9066,99 +9014,13 @@ i.ranking3 {
 .vanueTag .vanueContent.active {
     display: block;
 }
-.vanueTag .vanueContent .table_title,
-.vanueTag .vanueContent .tableContent {
-    border-bottom: 2px solid #a6a7ac;
-}
-.vanueTag .vanueContent .tdTitle {
-    margin: 14px 0 15px 0;
-    text-align: left;
-    color: #4f6ea2;
-}
-.vanueTag .vanueContent .tdTitle b {
-    padding: 4px 9px;
-    margin-right: 6px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    color: #fff;
-    background: #4f6ea2;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-}
-.vanueTag .vanueContent .table_title {
-    margin-bottom: -13px;
-}
-.vanueTag .vanueContent .tableList:nth-child(even) {
-    background: #d5d6d4;
-}
-.vanueTag .vanueContent table {
-    font-size: 1rem;
-    width: 100%;
-    border: none;
-    text-align: center;
-    letter-spacing: 1px;
-}
-.vanueTag .vanueContent table a {
-    color: #4e5059;
-}
-.vanueTag .vanueContent table a:hover {
-    text-decoration: underline;
-}
-.vanueTag .vanueContent table .hall a {
-    color: #4f6ea2;
-}
-.vanueTag .vanueContent th {
-    vertical-align: top;
-    line-height: 22px;
-    width: 86px;
-    padding-bottom: 16px;
-}
-.vanueTag .vanueContent th.ta_ha1 {
-    padding-top: 72px;
-}
-.vanueTag .vanueContent th small {
-    font-size: 0.875rem;
-}
-.vanueTag .vanueContent td {
-    padding: 11px 0;
-    width: 86px;
-}
-.vanueBox {
-    max-width: 1035px;
-    margin: 0 auto;
-    padding: 31px 0;
-}
-.vanueList {
-    width: 100%
-}
-.vanueList li {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.500rem;
-    letter-spacing: 2px;
-    margin-right: 31px;
-}
-.vanueList li a {
-    color: #4e5059;
-}
-.vanueList li.active a {
-    color: #d65f4f;
-}
 .vanueContent {
-    padding-top: 23px;
+    padding-top: 20px;
 }
 .pricePlan {
     width: 100%;
     max-width: 1035px;
     margin: 0 auto;
-}
-.pricePlan h2 {
-    font-size: 1.500rem;
-    text-align: left;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
 }
 .pricePlan .priContent {
     display: none;
