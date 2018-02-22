@@ -36,7 +36,6 @@
     height: auto;
 }
 .meeting .banner .banner-box .panorama iframe {
-    display: none;
     width: 100%;
     height: 435px;
 }

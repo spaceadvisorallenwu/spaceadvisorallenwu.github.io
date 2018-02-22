@@ -142,7 +142,7 @@
 					<div class="banner-box">
 						<div class="panorama" style="background-image:url(dist/images/desk_banner_01.jpg)">
 							<a href="javascript:;"><img src="dist/images/icon_meeting04.png" alt="" title=""></a>
-							<iframe src="http://www.3dspace.com.tw/~focus/0013-AAB0007/" frameborder="0" allowfullscreen></iframe>
+							<iframe data-src="http://www.3dspace.com.tw/~focus/0013-AAB0007/"></iframe>
 						</div>
 						<!-- /panorama -->
 						<div class="pic">
@@ -1038,7 +1038,9 @@
 
 			//720環景show
 			$('.panorama a').on('click',function(){
-				$('.panorama iframe').show();
+				var panoramaElem = $(this).parents('.panorama');
+				panoramaElem.find('iframe').attr('src', panoramaElem.find('iframe').attr('data-src'))
+				panoramaElem.css('background-image', 'none');
 				$(this).hide();
 			});
 

@@ -54,6 +54,7 @@
 }
 .flexbox.multi-align-center {
     align-content: center;
+    width: 60%;
 }
 .flexbox.multi-align-full {
     align-content: stretch;
@@ -199,14 +200,12 @@
     height: 70px;
     border-radius: 50%;
 }
-.site-owner-reminder .s-info {
-    margin-right: 80px;
-}
 .site-owner-reminder .s-info .info-01 {
     flex-wrap: nowrap;
+    margin-bottom: 5px;
 }
 .site-owner-reminder .s-info .info-01 .verified {
-    margin-right: 6px;
+    margin-right: 5px;
 }
 .site-owner-reminder .s-info .info-02 ._avgComment span {
 	padding: 0 5px;

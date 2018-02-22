@@ -392,6 +392,7 @@
     justify-content: center;
     align-items: center;
     width: 170px;
+    margin-top: -2px;
 }
 .site-period .site_nav-tabs > li.active > a,
 .site-period .site_nav-tabs > li > a:hover {
@@ -427,6 +428,7 @@
 	margin: 5px 0;*/
 	display: flex;
 	align-items: center;
+	font-size: 15px;
 }
 .site_participate .site_participate-field02 {
 	width: 180px;
@@ -449,7 +451,8 @@
 	width: 100px;
 }
 .site_table {
-	margin: 10px 0;
+	margin-top: 9px;
+	font-size: 15px;
 }
 .site_table-contect-main {
     background: #f3f3f3;
@@ -994,7 +997,47 @@
 .value-add .value-add-list-wrapper {
 	padding: 9px 20px;
 }
+.site-value-add.additional_product .pricePlan {
 
+}
+.site-value-add.additional_product .pricePlan ._list {
+	margin-top: 9px;
+}
+.site-value-add.additional_product .pricePlan ._switch {
+	font-size: 15px;
+	display: inline-block;
+	line-height: normal;
+}
+.site-value-add.additional_product .pricePlan ._switch ._have span:before {
+	content: "展開";
+}
+.site-value-add.additional_product .pricePlan._show ._switch ._have span:before {
+	content: "收合";
+}
+.site-value-add.additional_product .pricePlan ._switch ._have span:after {
+    content: "\f106";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.site-value-add.additional_product .pricePlan._show ._switch ._have span:after {
+	content: "\f107";
+}
+.site-value-add.additional_product .pricePlan ._switch ._have:hover,
+.site-value-add.additional_product .pricePlan ._switch ._none a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.site-value-add.additional_product .pricePlan._haveAdditional ._switch ._none,
+.site-value-add.additional_product .pricePlan:not(._haveAdditional) ._switch ._have,
+.site-value-add.additional_product .pricePlan:not(._show) ._list {
+	display: none;
+}
 
 /* 餐飲加價購 */
 
@@ -1113,7 +1156,7 @@
     	justify-content: space-between;
 	}
 	.site-period .site_nav-tabs li {
-		width: 33%;
+		width: 33.33%;
 	}
 	.site-period .site_nav-tabs > li > a {
 		background: none;

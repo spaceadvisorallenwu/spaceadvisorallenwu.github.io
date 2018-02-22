@@ -350,6 +350,7 @@
 }
 .bookList .bookTitle h2 {
     font-size: 21px;
+    font-weight: bold;
 }
 .bookList .bookTitle ._bookStats {
     margin-left: 11px;
@@ -543,10 +544,6 @@
     font-size: 12px;
     margin-right: 3px;
 }
-.bookList .detailTable-cell .buyIcon a.composeBtn:before,
-.bookList .detailTable-cell .buyIcon a.detailBtn:before {
-    content: unset;
-}
 .bookList .detailTable-left .detailTable-cell.recipBox .tableTxt,
 .bookList .detailTable-cell .tableTxt span,
 .bookList .detailTable-cell .tableTxt span,
@@ -674,6 +671,10 @@
 .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
     display: table-cell;
 }
+.order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+.additional_product_history .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+    display: flex;
+}
 .bookList._style1 .detailTable-left .detailTable-row:last-child .detailTable-cell {
     display: flex;
 }
@@ -683,7 +684,12 @@
     width: 110px;
     border-left: 2px solid #f3f3f3;
 }
-.bookList._noOperate .detailTable-right {
+.bookList._noOperate .detailTable-right,
+.bookList:not(._haveAdditional) .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a.additionalBtn,
+._isAdditional .bookList .detailTable-mid .detailTable-heading .detailTable-cell:last-child,
+._isAdditional .bookList .detailTable-mid .detailTable-content .detailTable-cell:last-child,
+._isAdditional .bookList .demand,
+._isAdditional .bookList .buyprice {
     display: none;
 }
 /** END booklist **/
@@ -893,8 +899,7 @@
     display: block !important;
 }
 .box a.more {
-    margin-top: 5px;
-    font-size: 13px;
+    font-size: 15px;
     display: table;
     color: #4e6e9d;
     cursor: pointer;
@@ -1098,7 +1103,7 @@
 }
 #wrapper .pricePlan > ul > li.open .priContent {
     display: block;
-    border-bottom: 0;
+    border-bottom: 1px solid #ddd;
 }
 #wrapper .pricePlan > ul > li:last-child.open .priContent {
     border-bottom: 1px solid #ddd;
@@ -1110,8 +1115,10 @@
 #wrapper .pricePlan > ul > li .priTitle {
     width: 100%;
     padding: 0 20px;
+    position: relative;
 }
-#wrapper .pricePlan > ul > li:hover .priTitle {
+#wrapper .pricePlan > ul > li:hover .priTitle,
+#wrapper .pricePlan > ul > li.open .priTitle {
     background: #ddd;
     font-weight: bold;
 }
@@ -1127,16 +1134,17 @@
 #wrapper .pricePlan > ul > li:last-child .priTitle span {
     border-bottom: 0;
 }
-#wrapper .pricePlan > ul > li .priTitle span:after {
+#wrapper .pricePlan > ul > li .priTitle:after {
     content: "\f077";
     display: inline-block;
     font-family: FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    right: 0;
+    right: 20px;
+    top: 20px;
     position: absolute;
 }
-#wrapper .pricePlan > ul > li.open .priTitle span:after {
+#wrapper .pricePlan > ul > li.open .priTitle:after {
     content: "\f078";
 }
 #wrapper .pricePlan > ul > li .priContent {
@@ -1245,6 +1253,9 @@
     /* BEGIN Nav tabs */
     #wrapper .nav-tabs {
         margin-bottom: 20px;
+    }
+    #wrapper .nav-tabs > li {
+        width: 100%;
     }
     #wrapper .nav-tabs > li a {
         padding: 5px 9px;
@@ -1384,7 +1395,7 @@
     }
     .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
     .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
-        margin-right: 20px;
+        margin-right: 9px;
         width: 30%;
         padding: 9px;
         text-align: center;
@@ -1480,6 +1491,22 @@
     }
     .bookList._style1 .detailTable-cell .tableTxt.siteName {
         border-bottom-width: 1px;
+    }
+    .order_complete .bookList .detailTable-heading .detailTable-cell,
+    .additional_product_history .bookList .detailTable-heading .detailTable-cell {
+        color: #435059;
+        font-size: 15px;
+        line-height: normal;
+        padding: 9px 0;
+    }
+    .order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
+    .additional_product_history .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
+        flex-direction: column;
+    }
+    .order_complete .bookList .detailTable-cell .tableTxt.siteName,
+    .additional_product_history .bookList .detailTable-cell .tableTxt.siteName {
+        border-bottom-width: 1px;
+        margin: 9px 0 0;
     }
     /* END booklist _style1 */
 

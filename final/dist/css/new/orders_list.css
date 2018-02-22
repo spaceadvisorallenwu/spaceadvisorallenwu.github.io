@@ -57,7 +57,6 @@
 .bookList .buttons > div:last-child {
     margin-right: 0;
 }
-
 .bookList .buttons .comment {
     display: inline-block;
     position: relative;
@@ -75,7 +74,6 @@
 }
 .bookList .buttons .comment .comment_list div {
     position: relative;
-    /*background-color: #fff;*/
 }
 .bookList .buttons .comment .comment_list div a {
     display: inline-block;

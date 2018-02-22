@@ -111,7 +111,7 @@
 	content: attr(data-text);
 }
 .bookList .detailTable-cell .tableTxt.buyIcon > div input[type="checkbox"] {
-	margin: 0 0 0 30px;
+	margin: 0 0 0 15px;
 	height: unset;
 }
 .bookList .detailTable-cell .tableTxt.buyIcon ._part label {

@@ -1392,11 +1392,10 @@
     flex-direction: column;
 }
 .appointment_detail .deta_boxs .deta_box .program .time time {
-
+    line-height: 18px;
 }
 .appointment_detail .deta_boxs .deta_box .program .name span {
     width: unset;
-    text-align: unset;
     font-size: 12px;
 }
 .appointment_detail .deta_boxs .deta_box .program .name span b {
@@ -1458,6 +1457,8 @@
     background: #fff;
     border-top: 1px solid #ddd;
 }
+#wrapper._isAdditional .appointment_Result .appointment_Content .demand,
+#wrapper._isAdditional.stepBox.fill_box .mobile-plan-stecla.mobile .demands,
 .order_time main._noEquip .appointment_Result .appointment_Content .demand,
 .order_time main._noEquip .mobile-plan-stecla.mobile .demands {
     display: none;
@@ -1536,6 +1537,7 @@
 }
 .stepBox.fill_box .price li .valuaBox {
     display: flex;
+    align-items: center;
     flex-direction: row;
     float: unset;
     width: unset;
@@ -1557,7 +1559,6 @@
     width: 100%;
 }
 .stepContainer._boxStyle {
-    margin-top: 20px;
 }
 .stepContainer .stepConTxt {
     background-image: unset;
@@ -1646,9 +1647,6 @@
 .detailTable-left .detailTable-inner .detailTable-row.detailTable-heading {
     background: #f3f3f3;
 }
-.order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
-    display: flex;
-}
 .order_complete .stepContainer > .custodyBtn {
     display: flex;
     width: 100%;
@@ -1664,6 +1662,15 @@
     margin-right: 9px;
 }
 /** END order_complete **/
+
+/** BEGIN order_cancel **/
+#wrapper:not(._isAdditional) .part_item.cart_part {
+    display: none;
+}
+._isAdditional .part_item.cart_part {
+    margin-top: 20px;
+}
+/** END order_cancel **/
 
 @media only screen and (max-width: 980px) {
     .orderstep ul li {
@@ -2005,12 +2012,10 @@
         background: #f3f3f3;
     }
     .stepBox.fill_box .appointment_detail .deta_box {
-        padding: 9px;
+        margin: 5px 9px;
     }
     .stepBox.fill_box .appointment_detail .program {
-        margin-bottom: 0;
         display: block;
-        margin-top: 5px;
     }
     .stepBox.fill_box .appointment_detail .deta_box._haveSub > .program {
         margin-bottom: 5px;
@@ -2030,7 +2035,7 @@
     .stepBox.fill_box .priceBox,
     .stepBox.fill_box .instant,
     .stepBox.fill_box .demands {
-        padding: 20px 5% !important;
+        padding: 9px 18px !important;
         border-top: 1px solid #ddd;
     }
     .stepBox.fill_box .mobile-plan-stecla .plan-box .scroll li:last-child,
@@ -2082,19 +2087,6 @@
         margin-left: 0;
         font-size: 13px;
     }
-    .order_complete .bookList .detailTable-heading .detailTable-cell {
-        color: #435059;
-        font-size: 15px;
-        line-height: normal;
-        padding: 9px 0;
-    }
-    .order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
-        flex-direction: column;
-    }
-    .order_complete .bookList .detailTable-cell .tableTxt.siteName {
-        border-bottom-width: 1px;
-        margin: 9px 0 0;
-    }
     /** END order_complete **/
 
     .stepBox.fill_box .writeContent .writeInput.part4 .staging .col .assess > input[type=radio]+label:before,
@@ -2108,6 +2100,15 @@
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .assess input[type=radio]+label:after,
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .assess input[type=checkbox]+label:after {
         top: 11px;
+    }
+
+    .mobile-plan-stecla.mobile .appointment_detail .deta_content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile-plan-stecla.mobile .appointment_detail .deta_box .deta_content time {
+        max-width: 200px;
+        line-height: normal;
     }
 }
 /** END all_order **/

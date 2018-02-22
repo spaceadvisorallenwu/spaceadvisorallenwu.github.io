@@ -17,6 +17,7 @@
 		<link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/basic_template.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/order_all.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/new/additional_product.css" rel="stylesheet" type="text/css" media=""/>
 	</head>
 	<body>
 		<div id="wrapper" class="stepBox order_complete">
@@ -341,8 +342,8 @@
 
 						<!-- btn -->
 						<div class="custodyBtn _boxStyle">
-							<a href="#"><span class="btn btn-c-3 btn-l">訂單管理</span></a>
-							<a href="#"><span class="btn btn-c-3 btn-l">繼續選購</span></a>
+							<a href="orders_list_cancel.html"><span class="btn btn-c-3 btn-l">訂單管理</span></a>
+							<a href="search.html"><span class="btn btn-c-3 btn-l">繼續選購</span></a>
 						</div>
 					</div>
 				</div>
@@ -418,5 +419,27 @@
 		<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="dist/js/main.js"></script>
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
+		<script type="text/javascript">
+			// detect is additional product
+			function getUrlVars() {
+			    var vars = [], hash;
+			    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			    for (var i = 0; i < hashes.length; i++) {
+			        hash = hashes[i].split('=');
+			        vars.push(hash[0]);
+			        vars[hash[0]] = hash[1];
+			    }
+			    return vars;
+			}
+			var isAdditional = getUrlVars()["additional"];
+			if (isAdditional == '1') {
+				$('head').find('title').html('取消加購-完成取消');
+				$('#wrapper').addClass('_isAdditional');
+				$('.stepContainer .stepConTxt').find('h2').html('加購已成功取消');
+				$('.stepContainer .stepConTxt').find('.number').html('您取消的加購編號為：<span>10262016</span>')
+				$('.bookList').after('<!-- 超值加購列表 --><div class="part_item cart_part"><div class="value-add"><div class="value-add-cart _have"><div class="site-value-add-vatitle purchase_value-add-background"><div class="purchase_value-add-wrapper"><div class="ia-wrapper"><div class="item">超值加購項目</div><div class="amount"></div></div><div class="price">金額</div></div></div><div class="valist"><ul class="purchase_value-add-wrapper" total=""><li><div class="ia-wrapper"><div class="item">投影機與螢幕 (TWD 1,000/組)</div><div class="amount">100</div></div><div class="price"><span>TWD</span><span>100,000</span></div></li><li><div class="ia-wrapper"><div class="item">低卡路里套餐A</div><div class="amount">300</div></div><div class="price"><span>TWD</span><span>108,000</span></div></li><li><div class="ia-wrapper"><div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div><div class="amount">100</div></div><div class="price"><span>TWD</span><span>18,000</span></div></li><li><div class="ia-wrapper"><div class="item">台北文華東方-比翼廳A</div><div class="amount _notCount">2017年03月25日 08:00～12:00</div></div><div class="price"><span>TWD</span><span>1,000</span></div></li></ul></div><!-- 加購總金額 --><div class="purchase_vasum"><div class="wrapper fee"><div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div><div class="tamount">TWD<mn feeprice>1,500</mn></div></div><div class="wrapper"><div class="thead">加購總金額</div><div class="tamount">TWD<mn totalprice="">237,000</mn></div></div></div><!-- 加購總金額 end --></div></div></div>')
+				$('.custodyBtn').html('<a href="additional_product_history.html"><span class="btn btn-c-3 btn-l">查看加購紀錄</span></a>');
+			}
+		</script>
 	</body>
 </html>

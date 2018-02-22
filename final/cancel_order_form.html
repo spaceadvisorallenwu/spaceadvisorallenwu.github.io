@@ -20,6 +20,7 @@
 		<!-- STYLES -->
 		<link href="dist/css/new/basic.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/order_all.css" rel="stylesheet" type="text/css" media=""/>
+
 	</head>
 	<body>
 		<div id="wrapper" class="stepBox fill_box">
@@ -383,7 +384,7 @@
 						</div>
 						<!-- 確認取消 -->
 						<div class="custodyBtn">
-							<a href="#"><span class="btn btn-c-3 btn-l">確認取消</span></a>
+							<a href="cancel_order_complete.html" class="_nextBtn"><span class="btn btn-c-3 btn-l">確認取消</span></a>
 							<span>
 								<p><b>一個月內的預訂無法享有7日內免費取消，詳細規則請參閱</b><a href="#" target="_blank">場地取消條款</a>。</p>
 								<p>我已詳細閱讀，並同意接受<a href="#" target="_blank">場地取消條款</a>及<a href="#" target="_blank">使用條款</a>內容。</p>
@@ -421,7 +422,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="appointment_item">
+								<!-- <div class="appointment_item">
 									<div class="appointment_deta">
 										<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
 										<time>2017/04/26 (三)</time>
@@ -441,7 +442,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 							<!-- 設備需求 -->
@@ -517,7 +518,7 @@
 											</div>
 										</div>
 									</div>
-									<hr>
+									<!-- <hr>
 									<div class="appointment_deta">
 										<time>2017/04/30 (三)</time>
 									</div>
@@ -529,7 +530,7 @@
 										<div class="program">
 											<b>場地租金方案</b>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<!-- 設備需求 -->
@@ -567,7 +568,7 @@
 						</div>
 						<i class="btn btn-c-2 btn-s">查看明細</i>
 					</a>
-					<a href="" class="reservation"><span class="btn btn-c-3 btn-m">確認取消<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+					<a href="cancel_order_complete.html" class="reservation _nextBtn"><span class="btn btn-c-3 btn-m">確認取消<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
 				</div>
 			</main>
 			<!--/main-->
@@ -643,12 +644,37 @@
 		<script type="text/javascript" src="dist/js/jquery.mmenu.min.js"></script>
 		<script type="text/javascript" src="dist/js/tip/jquery.poshytip.js"></script>
 		<script type="text/javascript">
-			//添加
+			// detect is additional product
+			function getUrlVars() {
+			    var vars = [], hash;
+			    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			    for (var i = 0; i < hashes.length; i++) {
+			        hash = hashes[i].split('=');
+			        vars.push(hash[0]);
+			        vars[hash[0]] = hash[1];
+			    }
+			    return vars;
+			}
+			var isAdditional = getUrlVars()["additional"];
+			if (isAdditional == '1') {
+				$('head').find('title').html('取消加購-填寫資料');
+				$('#wrapper').addClass('_isAdditional');
+				$('.writeInformation1').find('h2').html('<i class="fa fa-calendar-check-o" aria-hidden="true"></i>加購取消資訊');
+				$('._nextBtn').attr('href', 'cancel_order_complete.html?additional=1');
+				var additionalPCElem = $('.appointment_Result.result_pc').find('.appointment_detail').find('.appointment_item').find('.deta_boxs');
+				var additionalPCItem = '<div class="deta_box"><div class="deta_content"><div class="program"><div class="time"><time>投影機與螢幕 (TWD 1,000/組)</time></div><div class="name"><span>x100</span></div></div><div class="_prices"><div class="discount"><span>TWD 100,000</span></div></div></div></div><div class="deta_box"><div class="deta_content"><div class="program"><div class="time"><time>低卡路里套餐A</time></div><div class="name"><span>x300</span></div></div><div class="_prices"><div class="discount"><span>TWD 108,000</span></div></div></div></div><div class="deta_box"><div class="deta_content"><div class="program"><div class="time"><time>台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</time></div><div class="name"><span>x100</span></div></div><div class="_prices"><div class="discount"><span>TWD 18,000</span></div></div></div></div><div class="deta_box"><div class="deta_content"><div class="program"><div class="time"><time>台北文華東方-比翼廳A</time></div><div class="name"><span>2017年03月25日 08:00～12:00</span></div></div><div class="_prices"><div class="discount"><span>TWD 1,000</span></div></div></div></div>';
+				additionalPCElem.html(additionalPCItem);
+				var additionalMBElem = $('.mobile-plan-stecla.mobile').find('.appointment_detail');
+				var additionalMBItem = '<div class="deta_box"><div class="deta_content"><time>投影機與螢幕 (TWD 1,000/組)</time><span class="discount">TWD 100,000</span></div><div class="program"><b>x100</b></div></div><div class="deta_box"><div class="deta_content"><time>低卡路里套餐A</time><span class="discount">TWD 108,000</span></div><div class="program"><b>x300</b></div></div><div class="deta_box"><div class="deta_content"><time>台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</time><span class="discount">TWD 18,000</span></div><div class="program"><b>x100</b></div></div><div class="deta_box"><div class="deta_content"><time>台北文華東方-比翼廳A</time><span class="discount">TWD 1,000</span></div><div class="program"><b>2017年03月25日 08:00～12:00</b></div></div>';
+				additionalMBElem.find('.deta_box').remove();
+				additionalMBElem.append(additionalMBItem);
+			}
+
+			//添加 折扣代碼
 			$('.increase').on('click',function(){
 				$('.writeInformation3').children('ul').append('<li><h4>折扣代碼</h4><div class="amount_input"><i></i><input type="text"></div></li>');
 			});
-		</script>
-		<script type="text/javascript">
+
 			$('.part4>li').on('click',function(){
 				if(!$(this).hasClass('active')){
 					$('.part4 li').removeClass('active');

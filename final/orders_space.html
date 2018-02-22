@@ -20,6 +20,7 @@
 		<link href="dist/css/new/basic_orders.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/basic_template.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/orders_space.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/new/additional_product.css" rel="stylesheet" type="text/css" media=""/>
 	</head>
 	<body>
 		<div id="wrapper" class="orders_space">
@@ -147,7 +148,7 @@
 									</div>
 									<div class="_right">
 										<div class="recdate">下單日期<span>2017年04月12日</span></div>
-										<div class="cancel"><a href="javascript:;" onclick="alert('請注意，每筆訂單每日僅可變更/取消一次');">取消訂單</a></div>
+										<div class="cancel"><a href="javascript:;" onclick="alert('請注意，每筆訂單每日僅可變更/取消一次'); window.location='orders_cancel.html';">取消訂單</a></div>
 									</div>
 								</div>
 								<div class="detailTable">
@@ -317,57 +318,445 @@
 					<!-- 超值加購 -->
 					<div class="site-value _boxStyle">
 						<div class="site-title"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>超值加購</div>
-						<div class="value-add site-value-add site-width">
+						<div class="value-add site-value-add site-width additional_product">
 							<div class="site-value-add-contect">
-								<span>超值加購：</span>
-								<div class="site-description04">超值加購採<span class="site-description02">『單一退換服務』</span>，如您發現加購內容需要修改，或是其他因素欲取消加購，請至<訂單管理>取消加購訂單再重新下標。</div>
+								<div class="site-description04">超值加購的商品若需部分取消則須以訂單為單位進行取消；若需新增項目可另新增一加購訂單。距活動開始7日以上，可隨時取消或變更，無任何手續費；距活動開始7日內，則不可再進行變更。</div>
 							</div>
 							<!-- 超值加購列表 -->
-							<div class="value-add-list">
-								<div class="site-value-add-vatitle value-add-list-background">
-									<div class="wrapper">
-										<div class="ia-wrapper">
-											<div class="item">超值加購項目</div>
-											<div class="amount">數量</div>
+							<div class="pricePlan spaceList _haveAdditional"><!-- 拿掉 _haveAdditional 則顯示無任何加購紀錄 -->
+								<div class="_switch">
+									<div class="_have"><span class="btn btn-c-2 btn-s">加購紀錄</span></div>
+									<div class="_none">尚無任何加購紀錄，<a href="additional_product_list.html">點此前往加購</a></div>
+								</div>
+								<div class="_list">
+									<div class="_item bookList _style1" data-stat="expired">
+										<div class="bookTitle">
+											<div class="_left">
+												<div class="recno">加購編號<span>113504103</span></div>
+												<div class="recstate"><span>未付款，已過期</span></div>
+											</div>
+											<div class="_right">
+												<div class="recdate">加購日期<span>2017年04月12日</span></div>
+											</div>
 										</div>
-										<div class="price">金額</div>
+										<!-- 超值加購列表 -->
+										<div class="part_item cart_part">
+											<div class="value-add">
+												<div class="value-add-cart _have">
+													<div class="site-value-add-vatitle purchase_value-add-background">
+														<div class="purchase_value-add-wrapper">
+															<div class="ia-wrapper">
+																<div class="item">超值加購項目</div>
+																<div class="amount"></div>
+															</div>
+															<div class="price">金額</div>
+														</div>
+													</div>
+													<div class="valist">
+														<ul class="purchase_value-add-wrapper" total="">
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">投影機與螢幕 (TWD 1,000/組)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>100,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">低卡路里套餐A</div>
+																	<div class="amount">300</div>
+																</div>
+																<div class="price"><span>TWD</span><span>108,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>18,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳A</div>
+																	<div class="amount _notCount">2017年03月25日 08:00～12:00</div>
+																</div>
+																<div class="price"><span>TWD</span><span>1,000</span></div>
+															</li>
+														</ul>
+													</div>
+													<!-- 加購總金額 -->
+													<div class="purchase_vasum">
+														<div class="wrapper fee">
+															<div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div>
+															<div class="tamount">TWD<mn feeprice>1,500</mn></div>
+														</div>
+														<div class="wrapper">
+															<div class="thead">加購總金額</div>
+															<div class="tamount">TWD<mn totalprice="">237,000</mn></div>
+														</div>
+													</div>
+													<!-- 加購總金額 end -->
+												</div>
+											</div>
+										</div>
+										<div class="buttons">
+											<div class="payment">
+												<span class="btn btn-c-2 btn-sm">付款資訊</span>
+											</div>
+											<div class="contact">
+												<a href="javascript:;"><span class="btn btn-c-2 btn-sm">聯繫場地主</span></a>
+											</div>
+										</div>
+										<!-- 付款資訊 -->
+										<div class="part_item payInfo_part paymentInformation">
+											<!-- 1.付款資料atm已付款 -->
+											<div class="list_info">
+												<ul>
+													<li>
+														<h4>轉帳銀行</h4>
+														<p>國泰世華(013)</p>
+													</li>
+													<li>
+														<h4>轉帳帳號</h4>
+														<p>311561748960032</p>
+													</li>
+													<li class="cutoff">
+														<h4>付款截止日</h4>
+														<p>2017/03/20(五)<b>請於付款截止日內付款，超過日期未付款視同取消此訂單</b></p>
+													</li>
+												</ul>
+												<a href="#">查看發票</a>
+											</div>
+											<!-- 取消加購 -->
+											<div class="part_item custodyBtn site_button">
+												<a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-sm">此筆加購尚未付款，已過期</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="_item bookList _style1" data-stat="notyetpay">
+										<div class="bookTitle">
+											<div class="_left">
+												<div class="recno">加購編號<span>113504103</span></div>
+												<div class="recstate"><span>訂單已成立，請於03/20前付款</span></div>
+											</div>
+											<div class="_right">
+												<div class="recdate">加購日期<span>2017年04月12日</span></div>
+											</div>
+										</div>
+										<!-- 超值加購列表 -->
+										<div class="part_item cart_part">
+											<div class="value-add">
+												<div class="value-add-cart _have">
+													<div class="site-value-add-vatitle purchase_value-add-background">
+														<div class="purchase_value-add-wrapper">
+															<div class="ia-wrapper">
+																<div class="item">超值加購項目</div>
+																<div class="amount"></div>
+															</div>
+															<div class="price">金額</div>
+														</div>
+													</div>
+													<div class="valist">
+														<ul class="purchase_value-add-wrapper" total="">
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">投影機與螢幕 (TWD 1,000/組)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>100,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">低卡路里套餐A</div>
+																	<div class="amount">300</div>
+																</div>
+																<div class="price"><span>TWD</span><span>108,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>18,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳A</div>
+																	<div class="amount _notCount">2017年03月25日 08:00～12:00</div>
+																</div>
+																<div class="price"><span>TWD</span><span>1,000</span></div>
+															</li>
+														</ul>
+													</div>
+													<!-- 加購總金額 -->
+													<div class="purchase_vasum">
+														<div class="wrapper fee">
+															<div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div>
+															<div class="tamount">TWD<mn feeprice>1,500</mn></div>
+														</div>
+														<div class="wrapper">
+															<div class="thead">加購總金額</div>
+															<div class="tamount">TWD<mn totalprice="">237,000</mn></div>
+														</div>
+													</div>
+													<!-- 加購總金額 end -->
+												</div>
+											</div>
+										</div>
+										<div class="buttons">
+											<div class="payment">
+												<span class="btn btn-c-2 btn-sm">付款資訊</span>
+											</div>
+											<div class="contact">
+												<a href="javascript:;"><span class="btn btn-c-2 btn-sm">聯繫場地主</span></a>
+											</div>
+										</div>
+										<!-- 付款資訊 -->
+										<div class="part_item payInfo_part paymentInformation">
+											<!-- 1.付款資料atm已付款 -->
+											<div class="list_info">
+												<ul>
+													<li>
+														<h4>轉帳銀行</h4>
+														<p>國泰世華(013)</p>
+													</li>
+													<li>
+														<h4>轉帳帳號</h4>
+														<p>311561748960032</p>
+													</li>
+													<li class="cutoff">
+														<h4>付款截止日</h4>
+														<p>2017/03/20(五)<b>請於付款截止日內付款，超過日期未付款視同取消此訂單</b></p>
+													</li>
+												</ul>
+												<a href="#">查看發票</a>
+											</div>
+											<!-- 取消加購 -->
+											<div class="part_item custodyBtn site_button">
+												<a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-sm">此筆加購尚未付款</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="_item bookList _style1" data-stat="cancel">
+										<div class="bookTitle">
+											<div class="_left">
+												<div class="recno">加購編號<span>113504103</span></div>
+												<div class="recstate"><span>取消加購</span></div>
+											</div>
+											<div class="_right">
+												<div class="recdate">加購日期<span>2017年04月12日</span></div>
+											</div>
+										</div>
+										<!-- 超值加購列表 -->
+										<div class="part_item cart_part">
+											<div class="value-add">
+												<div class="value-add-cart _have">
+													<div class="site-value-add-vatitle purchase_value-add-background">
+														<div class="purchase_value-add-wrapper">
+															<div class="ia-wrapper">
+																<div class="item">超值加購項目</div>
+																<div class="amount"></div>
+															</div>
+															<div class="price">金額</div>
+														</div>
+													</div>
+													<div class="valist">
+														<ul class="purchase_value-add-wrapper" total="">
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">投影機與螢幕 (TWD 1,000/組)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>100,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">低卡路里套餐A</div>
+																	<div class="amount">300</div>
+																</div>
+																<div class="price"><span>TWD</span><span>108,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>18,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳A</div>
+																	<div class="amount _notCount">2017年03月25日 08:00～12:00</div>
+																</div>
+																<div class="price"><span>TWD</span><span>1,000</span></div>
+															</li>
+														</ul>
+													</div>
+													<!-- 加購總金額 -->
+													<div class="purchase_vasum">
+														<div class="wrapper fee">
+															<div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div>
+															<div class="tamount">TWD<mn feeprice>1,500</mn></div>
+														</div>
+														<div class="wrapper">
+															<div class="thead">加購總金額</div>
+															<div class="tamount">TWD<mn totalprice="">237,000</mn></div>
+														</div>
+													</div>
+													<!-- 加購總金額 end -->
+												</div>
+											</div>
+										</div>
+										<div class="buttons">
+											<div class="payment">
+												<span class="btn btn-c-2 btn-sm">付款資訊</span>
+											</div>
+											<div class="contact">
+												<a href="javascript:;"><span class="btn btn-c-2 btn-sm">聯繫場地主</span></a>
+											</div>
+										</div>
+										<!-- 付款資訊 -->
+										<div class="part_item payInfo_part paymentInformation">
+											<!-- 1.付款資料atm已付款 -->
+											<div class="list_info">
+												<ul>
+													<li>
+														<h4>信用卡</h4>
+														<p>**** **** **** **** 0984</p>
+													</li>
+													<li>
+														<h4>付款方式</h4>
+														<p>國泰世華銀行 信用卡6期-0利率 每期10,000元x6期</p>
+													</li>
+													<li>
+														<h4>付款日期</h4>
+														<p>2017/03/20(五)</p>
+													</li>
+													<li>
+														<h4>付款總額</h4>
+														<p>TWD 60,000</p>
+													</li>
+												</ul>
+												<a href="#">查看發票</a>
+											</div>
+											<!-- 取消加購 -->
+											<div class="part_item custodyBtn site_button">
+												<a class="disable" href="javascript:;"><span class="btn btn-c-3 btn-sm">此筆加購已取消</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="_item bookList _style1" data-stat="paid">
+										<div class="bookTitle">
+											<div class="_left">
+												<div class="recno">加購編號<span>113504103</span></div>
+												<div class="recstate"><span>已付款</span></div>
+											</div>
+											<div class="_right">
+												<div class="recdate">加購日期<span>2017年04月12日</span></div>
+											</div>
+										</div>
+										<!-- 超值加購列表 -->
+										<div class="part_item cart_part">
+											<div class="value-add">
+												<div class="value-add-cart _have">
+													<div class="site-value-add-vatitle purchase_value-add-background">
+														<div class="purchase_value-add-wrapper">
+															<div class="ia-wrapper">
+																<div class="item">超值加購項目</div>
+																<div class="amount"></div>
+															</div>
+															<div class="price">金額</div>
+														</div>
+													</div>
+													<div class="valist">
+														<ul class="purchase_value-add-wrapper" total="">
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">投影機與螢幕 (TWD 1,000/組)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>100,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">低卡路里套餐A</div>
+																	<div class="amount">300</div>
+																</div>
+																<div class="price"><span>TWD</span><span>108,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div>
+																	<div class="amount">100</div>
+																</div>
+																<div class="price"><span>TWD</span><span>18,000</span></div>
+															</li>
+															<li>
+																<div class="ia-wrapper">
+																	<div class="item">台北文華東方-比翼廳A</div>
+																	<div class="amount _notCount">2017年03月25日 08:00～12:00</div>
+																</div>
+																<div class="price"><span>TWD</span><span>1,000</span></div>
+															</li>
+														</ul>
+													</div>
+													<!-- 加購總金額 -->
+													<div class="purchase_vasum">
+														<div class="wrapper fee">
+															<div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div>
+															<div class="tamount">TWD<mn feeprice>1,500</mn></div>
+														</div>
+														<div class="wrapper">
+															<div class="thead">加購總金額</div>
+															<div class="tamount">TWD<mn totalprice="">237,000</mn></div>
+														</div>
+													</div>
+													<!-- 加購總金額 end -->
+												</div>
+											</div>
+										</div>
+										<div class="buttons">
+											<div class="payment">
+												<span class="btn btn-c-2 btn-sm">付款資訊</span>
+											</div>
+											<div class="contact">
+												<a href="javascript:;"><span class="btn btn-c-2 btn-sm">聯繫場地主</span></a>
+											</div>
+										</div>
+										<!-- 付款資訊 -->
+										<div class="part_item payInfo_part paymentInformation">
+											<!-- 1.付款資料atm已付款 -->
+											<div class="list_info">
+												<ul>
+													<li>
+														<h4>信用卡</h4>
+														<p>**** **** **** **** 0984</p>
+													</li>
+													<li>
+														<h4>付款方式</h4>
+														<p>國泰世華銀行 信用卡6期-0利率 每期10,000元x6期</p>
+													</li>
+													<li>
+														<h4>付款日期</h4>
+														<p>2017/03/20(五)</p>
+													</li>
+													<li>
+														<h4>付款總額</h4>
+														<p>TWD 60,000</p>
+													</li>
+												</ul>
+												<a href="#">查看發票</a>
+											</div>
+											<!-- 取消加購 -->
+											<div class="part_item custodyBtn site_button">
+												<a href="additional_product_cancel.html"><span class="btn btn-c-3 btn-sm">取消此筆加購</span></a>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="valist">
-									<ul class="value-add-list-wrapper site-value-add-width site_equipment-background" total>
-										<li>
-											<div class="ia-wrapper">
-												<div class="item">設備/投影機與螢幕</div>
-												<div class="amount">100組</div>
-											</div>
-											<div class="price"><span>TWD</span><span>100,000</span></div>
-										</li>
-										<li>
-											<div class="ia-wrapper">
-												<div class="item">餐飲/低卡洛里套餐</div>
-												<div class="amount">300份</div>
-											</div>
-											<div class="price"><span>TWD</span><span>108,000</span></div>
-										</li>
-										<li>
-											<div class="ia-wrapper">
-												<div class="item">方案/桌數</div>
-												<div class="amount">100份</div>
-											</div>
-											<div class="price"><span>TWD</span><span>18,000</span></div>
-										</li>
-										<li>
-											<div class="ia-wrapper">
-												<div class="item">台北文華東方-比翼廳A</div>
-												<div class="amount">2017年03月25日 08:00～12:00</div>
-											</div>
-											<div class="price"><span>TWD</span><span>1,000</span></div>
-										</li>
-									</ul>
-								</div>
-								<div class="font-block">
-									<textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea>
-								</div>
+							</div>
+							<div class="font-block">
+								<textarea placeholder="請在這裡輸入其他選項的內容，或是備註特別要求..." class="font-block-field"></textarea>
 							</div>
 						</div>
 					</div>
@@ -1509,8 +1898,8 @@
 					<div class="site-description _boxStyle">請最慢於距離活動<span class="site-description02">10個工作天前</span>填寫場地管理，如無特別需求，將直接<span class="site-description02">套用預設值</span>。<br>以上內容在按下<確認送出>後將由場地主為您安排。如有其他需求，請至<span class="site-description04">聯繫場地主</span>。祝您活動順利！</div>
 					<!-- 按鈕 -->
 					<div class="site-management-button _boxStyle">
-						<div class="site-management-button01"><a class="store-icon postlink bg_color_03" data-toggle="modal" data-target="#myModal01"><span class="btn btn-c-3 btn-l">儲存草稿</span></a></div>
-						<div class="site-management-button02"><a class="store-icon postlink" data-toggle="modal" data-target="#myModal02"><span class="btn btn-c-1 btn-l">確認送出</span></a></div>
+						<div class="site-management-button01"><a class="store-icon postlink bg_color_03" data-toggle="modal" data-target="#myModal01"><span class="btn btn-c-3 btn-m">儲存草稿</span></a></div>
+						<div class="site-management-button02"><a class="store-icon postlink" data-toggle="modal" data-target="#myModal02"><span class="btn btn-c-1 btn-m">確認送出</span></a></div>
 						<div class="site-management-button03"><a href="javascript:;" title="轉存pdf"></a></div>
 					</div>
 					<!-- 按鈕 end -->
@@ -1780,6 +2169,21 @@
 				  	}
 			}(jQuery));
 			$('input.site_field02[type=file]').customFile();
+
+			//超值加購
+         	$('.spaceList li .spaceTitle').on('click',function() {
+	            var price_li = $('.spaceList li');
+	            var this_li = $(this).parents('li');
+	            var price_content = $('.spaceList .priContent');
+
+	            if (!this_li.hasClass('open')) {
+               		price_li.removeClass('open');
+	               	this_li.addClass('open');
+	               	scrollToElemFront(this_li, -100);
+	            } else {
+	               	price_li.removeClass('open');
+	            }
+         	});
 		</script>
 	</body>
 </html>

@@ -146,14 +146,8 @@
     margin-top: 0;
 }
 .compare ._content {
-	margin-top: 89px;
+	margin-top: 88px;
 	position: relative;
-}
-
-.compare .comparesite-wrapper {
-}
-.compare .cs-list {
-    /*margin-bottom: 75px;*/
 }
 .compare .cs-list .aside {
     width: 240px;
@@ -354,9 +348,6 @@
     }
     .compare .cs-list .main {
         width: calc(100% - 150px);
-    }
-    #wrapper .nav-tabs > li {
-        width: 100%;
     }
     #wrapper .nav-tabs > li a {
         font-size: 17px;

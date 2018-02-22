@@ -36,6 +36,7 @@
     justify-content: center;
 }
 
+
 .spacer .description h2,
 .spacer .pricePlan h2,
 .spacer .synthesis h2 {
@@ -43,6 +44,14 @@
     letter-spacing: 0;
     margin: 9px 0;
     text-align: left;
+}
+.spacer .synthesis {
+    width: 100%;
+    background: #f3f3f3;
+    line-height: normal;
+}
+.synthesis h3 {
+    font-weight: bold;
 }
 .spacer .synthesis .syn_item2 > span {
     display: block;
@@ -76,9 +85,6 @@
 .spacer .vanueTag._media .site-album {
     width: calc(100% / 3);
     padding: 0 9px;
-}
-.spacer .vanueTag._media .site-list:last-child {
-	margin-top: 40px;
 }
 .spacer .vanueTag._media .site-album .media {
     border-radius: 5px;
@@ -257,11 +263,14 @@
     padding: 0 20px;
 }
 
-.spacer .syn_item1,
-.spacer .syn_item2,
-.spacer .syn_item3 {
+.syn_item1,
+.syn_item2,
+.syn_item3 {
+    margin: 0 auto;
+    border-bottom: 1px solid #D5D6D4;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 	width: 100%;
-	max-width: unset;
 }
 .spacer .synthesis {
 	margin: 40px 0;
@@ -325,36 +334,12 @@ font-size: 13px;
     border-left: 1px solid #ccc;
     padding-left: 9px;
 }
-/*住宿資訊, CSS
-.spacer .syn_item4 {
-	width: 100%;
-	max-width: unset;
+.spacer .syn_item1 .add {
+    height: 125px;
 }
-.spacer .syn_item4 {
-	padding-bottom: 0;
-	margin-bottom: 0;
+.spacer .syn_item2 .add {
+    height: 115px;
 }
-.spacer .syn_item4 ul {
-	border-radius: 5px;
-	overflow: hidden;
-}
-.spacer .syn_item4 ul li {
-	border-bottom: 1px solid #ddd;
-}
-.spacer .syn_item4 ul li:last-child {
-	border-bottom: 0;
-}
-.spacer .syn_item4 ul li .priTitle {
-	padding: 9px;
-}
-.spacer .syn_item4 .priContent {
-	padding: 20px;
-}
-.spacer .syn_item4 .priContent img {
-	overflow: hidden;
-	border-radius: 5px;
-}*/
-
 .spacer .comment {
 	width: 100%;
 	max-width: unset;

@@ -448,9 +448,13 @@ $(function(){
 	$('.bookList .buttons .payment:not(.disable) .btn').click(function() {
 		$(this).parents('.bookList').find('.paymentInformation').toggle();
 	});
-	// 訂單列表頁, 收合付款資訊
+	// 訂單列表頁, 收合評論資訊
 	$('.bookList .buttons .comment:not(.disable) .btn').click(function(){
 		$(this).parents('.comment').find('.comment_list').toggle();
+	});
+	// 場地管理頁, 收合加購資訊
+	$('.orders_space .site-value-add.additional_product .pricePlan ._switch ._have').click(function(){
+		$(this).parents('.pricePlan').toggleClass('_show');
 	});
 
 	/** BEGIN additional_product_list.js 做列表收合 **/

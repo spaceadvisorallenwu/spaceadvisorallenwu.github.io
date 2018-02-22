@@ -8,7 +8,7 @@
 		<meta name="copyright" content="本網頁著作SpaceAdvisor所有">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link href="dist/images/icon.ico" type="image/x-icon" rel="shortcut icon"/>
-		<title>訂單-取消訂單</title>
+		<title>訂單-加購取消</title>
 		<link href="dist/css/font-awesome.min.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/jquery.mmenu.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/jquery-ui.css" rel="stylesheet" type="text/css" media=""/>
@@ -20,10 +20,11 @@
 		<link href="dist/css/new/basic_orders.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/basic_template.css" rel="stylesheet" type="text/css" media=""/>
 		<link href="dist/css/new/orders_cancel.css" rel="stylesheet" type="text/css" media=""/>
+		<link href="dist/css/new/additional_product.css" rel="stylesheet" type="text/css" media=""/>
 	</head>
 
 	<body>
-		<div id="wrapper" class="orders_cancel">
+		<div id="wrapper" class="orders_cancel _isAdditional">
 			<header class="cf">
 				<div class="content cf">
 					<a href="home.html" class="logo">
@@ -144,12 +145,11 @@
 				-->
 				<div class="site-management _boxStyle" data-type="2">
 					<!-- 取消訂單 -->
-					<div class="site-cancel-title"><h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i>取消訂單</h2></div>
+					<div class="site-cancel-title"><h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i>取消加購</h2></div>
 					<!-- 一筆場地 -->
 					<div class="site">
-						<div class="site-cancel-contect">準備取消此訂單前，請您再次確認已詳細閱讀<a href="javascript:;">場地取消條款</a>。</div>
 						<!-- 訂單的一筆資料 -->
-						<div class="bookList _style1" data-id="1" data-stat="paid">
+						<div class="bookList _style1 _noOperate" data-id="1" data-stat="paid">
 							<div class="bookTitle">
 								<div class="_left">
 									<div class="recno">訂單編號<span>113504103</span></div>
@@ -190,10 +190,8 @@
 											<div class="detailTable-cell">時間</div>
 											<div class="detailTable-cell">方案/桌數</div>
 											<div class="detailTable-cell">價位</div>
-											<div class="detailTable-cell">操作</div>
 										</div>
-										<!-- 有人數或桌數的變更，class加上 _havePartChange 會顯示 -->
-										<div class="detailTable-row detailTable-content _havePartChange">
+										<div class="detailTable-row detailTable-content">
 											<div class="detailTable-cell" data-title="時間">
 												<h4>時間</h4>
 												<div class="tableTxt">
@@ -220,16 +218,6 @@
 															<span class="currency">TWD</span>
 															<span>21,000</span>
 														</div>
-													</div>
-												</div>
-											</div>
-											<div class="detailTable-cell" data-title="操作">
-												<div class="tableTxt buyIcon">
-													<div class="_whole">
-														<input type="checkbox" name="_del_radio_0" id="_del_whole_0"><label for="_del_whole_0" data-text="整筆取消"></label>
-													</div>
-													<div class="_part">
-														<input type="checkbox" name="_del_radio_0" id="_del_part_1"><label for="_del_part_1" data-text="桌數變更"><input type="number" name="del_part_detail" min="0" value="30"></label>
 													</div>
 												</div>
 											</div>
@@ -264,22 +252,74 @@
 													</div>
 												</div>
 											</div>
-											<div class="detailTable-cell" data-title="連結">
-												<div class="tableTxt buyIcon">
-													<div class="_whole">
-														<input type="checkbox" name="_del_radio_1" id="_del_whole_1"><label for="_del_whole_1">整筆取消</label>
-													</div>
-												</div>
-											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 取消訂單 end -->
-					<!-- 備註 -->
-					<div class="site_remark">
+					<!-- 超值加購列表 -->
+               		<div class="part_item cart_part">
+               			<div class="value-add">
+               				<div class="value-add-cart _have">
+								<div class="site-value-add-vatitle purchase_value-add-background">
+									<div class="purchase_value-add-wrapper">
+										<div class="ia-wrapper">
+											<div class="item">超值加購項目</div>
+											<div class="amount"></div>
+										</div>
+										<div class="price">金額</div>
+									</div>
+								</div>
+								<div class="valist">
+									<ul class="purchase_value-add-wrapper" total="">
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">投影機與螢幕 (TWD 1,000/組)</div>
+												<div class="amount">100</div>
+											</div>
+											<div class="price"><span>TWD</span><span>100,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">低卡路里套餐A</div>
+												<div class="amount">300</div>
+											</div>
+											<div class="price"><span>TWD</span><span>108,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">台北文華東方-比翼廳一生一世方案 (TWD 10,000/桌)</div>
+												<div class="amount">100</div>
+											</div>
+											<div class="price"><span>TWD</span><span>18,000</span></div>
+										</li>
+										<li>
+											<div class="ia-wrapper">
+												<div class="item">台北文華東方-比翼廳A</div>
+												<div class="amount _notCount">2017年03月25日 08:00～12:00</div>
+											</div>
+											<div class="price"><span>TWD</span><span>1,000</span></div>
+										</li>
+									</ul>
+								</div>
+								<!-- 加購總金額 -->
+								<div class="purchase_vasum">
+									<div class="wrapper fee">
+										<div class="thead">服務費（方案5%/時間10%/設備15%/餐食20%/其他25%）</div>
+										<div class="tamount">TWD<mn feeprice>1,500</mn></div>
+									</div>
+									<div class="wrapper">
+										<div class="thead">加購總金額</div>
+										<div class="tamount">TWD<mn totalprice="">237,000</mn></div>
+									</div>
+								</div>
+								<!-- 加購總金額 end -->
+							</div>
+		          		</div>
+		          	</div>
+					<!-- 取消條款 -->
+					<div class="part_item remark_part site_remark">
 						<div class="site_remark-description">
 							<i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>超值加購採<b>『單一退換服務』</b>如您發現加購內容需要修改，或是其他因素欲取消加購，請取消加購訂單再重新下標。</span>
 						</div>
@@ -449,7 +489,7 @@
 						var cancel_type = $('.site-management').attr('data-type');
 						switch(cancel_type) {
 						    case '1':
-						        window.location = "cancel_order_form.html";
+						        window.location = "cancel_order_form.html?additional=1";
 						        break;
 
 						    case '2':
@@ -459,7 +499,7 @@
 						    case '0':
 						    default:
 						        alert('取消成功');
-						        window.location = "orders_list_cancel.html";
+						        window.location = "additional_product_cancel.html";
 						}
 					}
 					return;

@@ -10,20 +10,14 @@
     width: 80%;
     margin: 0 auto;
     max-width: 1100px;
-    padding-top: 0;
+    margin-top: 44px;
+    padding-top: 40px;
 }
 .collectionBox .placeBox > ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-}
-.collectionBox .placeBox > ul > li {
-	width: calc(100% / 3 - 20px);
-	margin-right: 20px;
-	margin-bottom: 20px;
-    float: unset;
-    padding: 0;
 }
 .collectionBox .placeBox .site-list {
 	padding: 0;
@@ -55,6 +49,7 @@
 	}
 	.collectionBox .placeBox._boxStyle {
 	    width: 90%;
+	    padding-top: 20px;
 	}
 	.collectionBox .placeBox .site-list {
 		flex-direction: column;
