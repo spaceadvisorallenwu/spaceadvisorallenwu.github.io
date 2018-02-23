@@ -1,7 +1,18 @@
 @charset 'UTF-8';
 /** BEGIN collect_banner **/
+.spacer_plan .collect_banner {
+    width: 100%;
+    letter-spacing: 1px;
+}
+.spacer_plan .collect_banner .colImg img {
+	width: 100%;
+}
 .spacer_plan .collect_banner .colTxt {
-	padding: 0;
+    position: relative;
+    width: 100%;
+    background: #fe9abe;
+    margin-top: -2px;
+    color: #fff;
 }
 .spacer_plan .collect_banner .colTxtContent {
     display: flex;
@@ -26,9 +37,10 @@
 
 .spacer_plan .collect_banner .colTxt .leftBtn,
 .spacer_plan .collect_banner .colTxt .rightBtn {
-	background: unset;
-	width: unset;
-	height: unset;
+	position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .spacer_plan .collect_banner .colTxt .leftBtn:before,
 .spacer_plan .collect_banner .colTxt .rightBtn:before {
@@ -56,8 +68,19 @@
 	font-size: 30px;
     line-height: normal;
 }
+.spacer_plan .collect_banner .colTxt h2 {
+    width: 45%;
+    text-align: left;
+    margin: 0;
+    color: #fff;
+}
+.spacer_plan .collect_banner .colTxt .valueList {
+    width: 50%;
+    text-align: right;
+}
 .spacer_plan .collect_banner .colTxt .valueList b {
 	margin-bottom: 0;
+	display: block;
 }
 .spacer_plan .collect_banner .colTxt .valueList b:after,
 #wrapper.spacer_plan_basic .pricePlan > ul > li .priTitle span b:after {
@@ -77,6 +100,7 @@
 	margin-bottom: 9px;
 	font-size: 21px;
     line-height: normal;
+    text-align: left;
 }
 .spacer_plan .collectItem1,
 .spacer_plan .collectItem2,
@@ -85,6 +109,7 @@
 .spacer_plan .collectItem5,
 .spacer_plan .collectItem6,
 .spacer_plan .collectItem7,
+.spacer_plan .collectItem8,
 .spacer_plan .collectItem8Box,
 .spacer_plan .collectItem9,
 .spacer_plan .collectItem10,
@@ -93,7 +118,7 @@
 .spacer_plan .spaceList {
 	width: 100%;
 	max-width: unset;
-	margin-bottom: 40px;
+    margin: 0 auto 40px;
 	line-height: normal;
 }
 
@@ -133,9 +158,11 @@
 /** END collectItem1 **/
 
 /** BEGIN collectItem2 **/
+.spacer_plan .collectItem2 .collectTxt {
+    width: 100%
+}
 .spacer_plan .collectItem2 ol,
 .spacer_plan .collectItem2 ul {
-	margin-left: 0;
 }
 .spacer_plan .collectItem2 li {
     /*background-image: url(../../images/spacer_plan/collecttxt_disc.png);*/
@@ -150,34 +177,53 @@
 /** END collectItem2 **/
 
 /** BEGIN collectItem3 **/
+.spacer_plan .package {
+    width: 100%
+}
 .spacer_plan .package li {
 	display: flex;
-    align-items: center;
+	align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
+
 .spacer_plan .package .packImg {
 	margin-right: 20px;
+    width: 22%;
+    max-width: 222px;
 }
 .spacer_plan .package .packImg img {
+	width: 100%;
 	border-radius: 5px;
 }
 .spacer_plan .package .packTxt {
-
+    width: 76%;
+    font-size: 15px;
+    line-height: normal;
 }
 .spacer_plan .package .packTxt h3 {
     font-size: 17px;
     line-height: normal;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 .spacer_plan .package .packTxt p {
-	line-height: normal;
+    line-height: normal;
     font-size: 13px;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 /** END collectItem3 **/
 
 /** BEGIN collectItem4 **/
 .spacer_plan .collectItem4 .mealBtn {
-	padding-top: 0;
 	margin-bottom: 5px;
+    clear: both;
+    width: 100%;
 }
 .spacer_plan .collectItem4 .meal_icon1,
 .spacer_plan .collectItem4 .meal_icon2 {
@@ -187,16 +233,20 @@
 	padding-left: 22px;
     background-repeat: no-repeat;
     background-size: auto 11px;
+    display: inline-block;
+    vertical-align: top;
+    color: #d76050;
 }
 .spacer_plan .collectItem4 .meal_icon1:hover,
 .spacer_plan .collectItem4 .meal_icon2:hover {
 	color: #c63e2b;
+    text-decoration: underline;
 }
 .spacer_plan .collectItem4 .meal_icon1 {
-	background-image: url(../../images/spacer_plan/meal_icon.png);
+	background: url(../../images/spacer_plan/meal_icon.png) left center no-repeat;
 }
 .spacer_plan .collectItem4 .meal_icon2 {
-	background-image: url(../../images/spacer_plan/meal_icon2.png);
+	background: url(../../images/spacer_plan/meal_icon2.png) left center no-repeat;
 }
 /** END collectItem4 **/
 
@@ -220,6 +270,7 @@
 .spacer_plan .collectItem8 {
     padding: 20px;
     border-radius: 5px;
+    background: #f3f3f3;
 }
 .spacer_plan .collectItem8 .collectItem8Box {
 	margin-bottom: 0;
@@ -241,15 +292,19 @@
 }
 .spacer_plan .collectItem8 .coPhoto li img {
 	border-radius: 5px;
+	width: 100%
 }
 /** END collectItem8 **/
 
 /** BEGIN collectItem9 **/
 .spacer_plan .collectItem9 {
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
 }
 .spacer_plan .collectItem9 .content {
 	padding-bottom: 0;
+	padding: 0;
+    width: 100%;
+    max-width: 100%
 }
 /** END collectItem9 **/
 
@@ -277,6 +332,7 @@
 
 /** BEGIN collectItem10 & collectItem11 **/
 .collectItem10 .collectTxt {
+	overflow: scroll;
 }
 .collectItem10 .pTable,
 .collectItem11 .pTable {
@@ -299,7 +355,7 @@
     color: #fff;
 }
 .collectItem10 .pTable .pTableHead th {
-    min-width: 125px;
+    min-width: 123px;
     padding: 5px 0;
 }
 .collectItem11 .pTable thead .pTableHead th {
@@ -356,6 +412,10 @@
 .collectItem11 .pTable .pTableBody:last-child td {
 	border-right: 0;
 }
+.collectItem10 .pTable .pTableHead .pTableTdTitle,
+.collectItem10 .pTable .pTableBody .pTableTdTitle {
+    min-width: 70px;
+}
 /** END collectItem10 & collectItem11 **/
 
 /** BEGIN collectItem12 **/
@@ -409,6 +469,14 @@
 	.spacer_plan .collect_banner .colTxt h2 {
 		font-size: 21px;
 		margin-bottom: 5px;
+        float: none;
+        width: 100%;
+	}
+	.spacer_plan .collect_banner .colTxt .valueList {
+		line-height: normal;
+		text-align: left;
+		float: none;
+		width: 100%;
 	}
 	.spacer_plan .collect_banner .colTxt .valueList b {
 		font-size: 15px;
@@ -440,12 +508,15 @@
 	}
 	.spacer_plan .package .packImg {
 		margin: 0;
-	}
+        width: 100%;
+        max-width: 100%;
+    }
 	.spacer_plan .package .packImg img {
 		border-radius: 0;
 	}
 	.spacer_plan .package .packTxt {
 		padding: 9px;
+		width: 100%
 	}
 	/** END collectItem3 **/
 
@@ -479,9 +550,6 @@
 	/** END collectItem8 **/
 
 	/** BEGIN collectItem10 **/
-	.collectItem10 .collectTxt {
-		overflow: scroll;
-	}
 	.collectItem10 .pTable .pTableHead .pTableTh {
 		min-width: 120px;
 	}
@@ -506,19 +574,3 @@
 		margin: 0 0 3px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

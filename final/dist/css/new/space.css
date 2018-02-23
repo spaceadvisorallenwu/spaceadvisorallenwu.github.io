@@ -261,8 +261,10 @@
     font-size: 13px;
     cursor: pointer;
 }
-#wrapper i.heart,
-#wrapper i.add {
+#wrapper .content-720 i.heart,
+#wrapper .content-720 i.add,
+#wrapper .day-plan  i.heart,
+#wrapper .day-plan  i.add {
     color: #4e5059;
     border-color: #4e5059;
     border-width: 3px;
@@ -455,7 +457,7 @@
     line-height: normal;
 }
 .meeting .content-720 .box .add {
-    height: 4em;
+    height: 4.3em;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     overflow: hidden;
@@ -583,6 +585,7 @@
 }
 .meeting .price-plan ul li div p.price b {
     color: #d65f4f;
+    margin-right: 1px;
 }
 .meeting .price-plan ul li div p.price b b {
     font-size: 21px;
@@ -699,20 +702,30 @@
 }
 .meeting .position {
     padding: 40px 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
 }
 .meeting .position .content {
     width: 80%;
-    max-width: unset;
-}
-.meeting .position p.title {
     font-size: 15px;
-    margin-bottom: 9px;
+    line-height: 24px;
+    margin: 0 auto;
+    z-index: 1;
 }
 .meeting .position p {
     font-size: 15px;
+    color: #4e5059;
+    line-height: normal;
+    text-decoration: none;
+}
+.meeting .position p.title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 9px;
 }
 .meeting .position iframe {
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 9px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -893,10 +906,14 @@
     .meeting .position {
         padding: 40px 0 0;
     }
+    .meeting .position p {
+        padding: 0 5%;
+    }
     .meeting .position .content {
         width: 100%;
     }
     .meeting .position iframe {
+        height: 300px;
         border-radius: 0;
     }
     .meeting .mobile-plan {

@@ -974,6 +974,7 @@
     top: 0;
     width: 100%;
     background-color: #fff;
+    font-weight: normal;
 }
 .stepBox.fill_box .writeContent .writeInput li.warning_error input,
 .stepBox.fill_box .writeContent .writeInput li.warning_error select {
@@ -1159,10 +1160,23 @@
     left: 27px;
     width: calc(100% - 27px);
     margin: 5px 0 0 0;
-    padding: 20px;
+    padding: 9px 20px;
+    background: #f3f3f3;
+    position: relative;
+    display: none;
+}
+.stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField b {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col {
     display: flex;
+    margin-bottom: 9px;
+}
+.stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col:last-child {
+    margin-bottom: 0;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col b {
     line-height: normal;
@@ -1174,11 +1188,13 @@
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:before,
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
-    top: 2px
+    top: 2px;
+    border: 1px solid #4f6ea2;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=radio]+label:after,
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
     top: 5px;
+    background: #4f6ea2;
 }
 .stepBox.fill_box .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess label:before,
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
@@ -1189,61 +1205,19 @@
     top: 3px;
     left: 2px;
 }
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col.paper {
-    display: none;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .assess {
-    flex-direction: column;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .assess input[type=radio]+label:before {
-    top: 2px;
-    margin-right: 9px;
-}
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col input,
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .lnvoiceField input {
     margin-top: 5px;
 }
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
-    width: 30%;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding-left: 0;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input input {
-    padding: 0;
-    height: auto;
-    padding: 3px;
-    text-align: center;
-    margin-top: 0;
-    margin-right: 5px;
-    border-radius: 5px;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input input:last-child {
-    margin-right: 0;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
-    top: 0;
-    margin-right: 5px;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
-    width: 100%;
-}
-.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .add_input input {
-    margin-top: 0;
-}
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .ground {
     margin-bottom: 9px;
+}
+.stepBox.fill_box .writeContent .writeInformation5 .writeInput li .ground:last-child {
+    margin-bottom: 0;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .lnvoiceField .insele {
     border: 0;
     width: 100%;
-    margin-top: 5px;
 }
 .stepBox.fill_box .writeContent .custodyBtn {
     padding: 0;
@@ -1909,21 +1883,6 @@
     }
     .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField {
         padding: 9px;
-    }
-    .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .assess > div {
-        flex-direction: column;
-    }
-    .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input {
-        width: 100%;
-    }
-    .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .add_input {
-        margin-left: 0;
-    }
-    .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col.paper .exact_input span {
-        top: -4px;
-    }
-    .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .ground {
-        margin-bottom: 0;
     }
     .stepBox.fill_box .writeContent .writeInput.part4 .col_content, .stepBox.fill_box .writeContent .writeInput.part5 .col_content {
         width: 93%;

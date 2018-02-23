@@ -225,8 +225,11 @@
 #wrapper.search .search-list li .place .showbox-all i.heart,
 #wrapper.search .search-list li .place .showbox-all i.add {
     right: 15px;
+    position: absolute;
 }
 .search .search-list li .place .showbox-all .showbox img {
+    width: 295px;
+    height: 200px;
     border-radius: 5px;
 }
 .search .search-list li .place .text a.title {
@@ -662,80 +665,6 @@
     .search .search-mobile {
         top: 79px;
     }
-    .search .search-condition {
-        padding: 20px 5%;
-    }
-    .search .search-condition .first {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .search .search-condition .first .input input {
-        font-size: 15px;
-        width: 100%;
-    }
-    .search .search-condition .first .input a {
-        display: none;
-    }
-    .search .search-condition .first .popular {
-        margin: 20px 0;
-        font-size: 15px;
-    }
-    .search .search-condition .search_bar>ul>li,
-    .search .search-condition .search_bar>ul>li:first-child {
-        border-color: #f3f3f3;
-    }
-    .search .search-condition .search_bar>ul>li:last-child {
-        border-bottom: 0;
-    }
-    .search .search-condition .search_bar>ul>li>p {
-        margin: 9px 0;
-        padding: 3px 9px;
-        border-radius: 9px;
-        background: #f3f3f3;
-        font-size: 15px;
-    }
-    .search .search-condition .search_bar>ul>li>p.this {
-        border-bottom: 0;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail {
-        width: 100%;
-        padding: 0 9px;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li {
-        font-size: 15px;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li p {
-        font-size: 15px;
-        padding-bottom: 0;
-        margin-bottom: 9px;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li span {
-        margin-bottom: 9px;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li span input[type="checkbox"]+label {
-        font-size: 13px;
-        border-color: #ccc;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li span input[type="checkbox"]:checked+label {
-        background: #4f6ea2;
-        border-color: #4f6ea2;
-    }
-    .search .search-condition .search_bar>ul>li .search_item_detail li select {
-        line-height: normal;
-        font-size: 15px;
-        height: 35px;
-    }
-    .search .search-condition .search_bar>ul>li select {
-        height: 25px;
-        margin: 9px 0;
-        line-height: normal;
-        font-size: 15px;
-        background-image: url(../../images/selce_arrw02.png);
-        background-repeat: no-repeat;
-        background-size: 10.28px auto;
-        background-position: center right 8px;
-        text-decoration: none;
-    }
     .search .site-list {
         margin-bottom: 0;
         padding-top: 20px;
@@ -795,6 +724,19 @@
     }
     #wrapper.search .search_item_area.money .jslider .jslider-value span {
         margin: 0;
+    }
+    #wrapper.search .search-condition .search_bar > ul > li .search_item_detail li {
+        border-bottom: 1px #ccc dashed;
+    }
+    #wrapper.search .search-condition .search_bar > ul > li .search_item_detail li select {
+        border: 1px #ccc solid;
+    }
+    #wrapper.search .search-condition .search_bar > ul > li .search_item_detail li:last-child {
+        border-bottom: none;
+    }
+    #wrapper.search .search-list li .place .showbox-all .showbox img {
+        width: 100%;
+        height: auto;
     }
 
 

@@ -2,12 +2,12 @@
 .notice_system .systemContent {
 	margin-top: 44px;
 }
-.notice_system .systemContent > h2:before {
-    content: unset;
-}
 .notice_system .systemContent > h2 {
+    color: #4f6ea2;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px solid #4e6da1;
     font-size: 21px;
-    letter-spacing: 0;
     line-height: normal;
     padding: 9px 0;
     margin-bottom: 20px;
@@ -16,15 +16,6 @@
 	margin-right: 5px;
 }
 
-/* 上Banner, CSS
-.notice_system .systemContent .systemBanner {
-    margin-bottom: 20px;
-}
-.notice_system .systemContent .systemBanner img {
-	border-radius: 5px;
-	overflow: hidden;
-}
-*/
 .notice_system .author {
 	display: flex;
 	align-items: center;
@@ -33,6 +24,7 @@
 }
 .notice_system .author .authorImg {
 	width: 65px;
+    height: 62px;
 }
 .notice_system .author .authorImg img {
 	width: 100%;
@@ -54,14 +46,17 @@
 }
 .notice_system .author .authorTxt time {
 	font-size: 13px;
-    margin-top: -5px;
+    margin-top: -3px;
     display: block;
 }
 .notice_system .authorContent {
 	padding: 0;
+    width: 100%;
 }
 .notice_system .authorContent h2 {
 	font-size: 21px;
+    text-align: left;
+    font-weight: normal;
     line-height: normal;
     margin-bottom: 20px;
 }
@@ -69,23 +64,16 @@
 	font-size: 15px;
     margin-top: 0;
     margin-bottom: 20px;
+    word-break: break-all;
+    line-height: normal;
 }
-/* 下Banner, CSS
-.systemAd {
-	width: 100%;
+.authorContent .system_editor a {
+    color: #4e5059;
+    text-decoration: underline;
 }
-.systemAd a {
-    float: left;
-    width: 24.495%;
-    margin: 0 .66% .6% 0;
+.authorContent .system_editor a:hover {
+    text-decoration: none;
 }
-.systemAd a img {
-    width: 100%;
-}
-.systemAd a:nth-child(4n) {
-    margin-right: 0;
-}*/
-
 .notice_system .systemContent {
 	margin-top: 20px;
 }

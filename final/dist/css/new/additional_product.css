@@ -659,10 +659,23 @@
     left: 27px;
     width: 60%;
     margin: 5px 0 0 0;
-    padding: 20px;
+    padding: 9px 20px;
+    background: #f3f3f3;
+    position: relative;
+    display: none;
+}
+.additional_product_form .invoice_part .writeInput .lnvoiceField b {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
 }
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col {
     display: flex;
+    margin-bottom: 9px;
+}
+.additional_product_form .invoice_part .writeInput .lnvoiceField .col:last-child {
+    margin-bottom: 0;
 }
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col b {
     line-height: normal;
@@ -674,11 +687,13 @@
 }
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=radio]+label:before,
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
-    top: 2px
+    top: 2px;
+    border: 1px solid #4f6ea2;
 }
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=radio]+label:after,
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
     top: 5px;
+    background: #4f6ea2;
 }
 .additional_product_form .writeInformation1 .writeInput li:nth-child(2) .assess label:before,
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:before {
@@ -689,61 +704,19 @@
     top: 3px;
     left: 2px;
 }
-.additional_product_form .invoice_part .writeInput .lnvoiceField .col.paper {
-    display: none;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .assess {
-    flex-direction: column;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .assess > div {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .assess input[type=radio]+label:before {
-    top: 2px;
-    margin-right: 9px;
-}
 .additional_product_form .invoice_part .writeInput li .col input,
 .additional_product_form .invoice_part .writeInput li .lnvoiceField input {
     margin-top: 5px;
 }
-.additional_product_form .invoice_part .writeInput li .col.paper .exact_input {
-    width: 30%;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding-left: 0;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .exact_input input {
-    padding: 0;
-    height: auto;
-    padding: 3px;
-    text-align: center;
-    margin-top: 0;
-    margin-right: 5px;
-    border-radius: 5px;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .exact_input input:last-child {
-    margin-right: 0;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .exact_input span {
-    top: 0;
-    margin-right: 5px;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .add_input {
-    width: 100%;
-}
-.additional_product_form .invoice_part .writeInput li .col.paper .add_input input {
-    margin-top: 0;
-}
 .additional_product_form .invoice_part .writeInput li .ground {
     margin-bottom: 9px;
+}
+.additional_product_form .invoice_part .writeInput li .ground:last-child {
+    margin-bottom: 0;
 }
 .additional_product_form .invoice_part .writeInput li .lnvoiceField .insele {
     border: 0;
     width: 100%;
-    margin-top: 5px;
     background: #fff;
     border-radius: 5px;
 }
@@ -799,6 +772,7 @@
     top: 0;
     width: 100%;
     background-color: #fff;
+    font-weight: normal;
 }
 .additional_product_form .part_item input::placeholder {
 	color: #c7c9c8 !important;
@@ -1177,15 +1151,6 @@
     	width: calc(100% - 27px);
     	padding: 9px;
     }
-	.additional_product_form .invoice_part .writeInput li .col.paper .assess > div {
-	    flex-direction: column;
-	}
-	.additional_product_form .invoice_part .writeInput li .col.paper .add_input {
-		margin-left: 0;
-	}
-    .additional_product_form .invoice_part .writeInput li .col.paper .exact_input {
-    	width: 100%;
-	}
 	.additional_product_form .custodyBtn {
 		border-top: 1px solid #ddd;
     	padding-top: 20px;
@@ -1214,14 +1179,4 @@
         border: 1px solid #ddd;
         margin-bottom: 3px;
     }
-    /*
-    .bookList .bookTitle,
-    .bookList .bookTitle ._left {
-        flex-direction: column;
-    }
-    .bookList .bookTitle ._right {
-        margin-top: 5px;
-        text-align: left;
-        justify-content: flex-start;
-    }*/
 }

@@ -369,42 +369,33 @@ $(document).ready(function() {
 
 
 	//instructions.php
-	$('.instructionsBox .sumber>li').on('click',function(){
+	$('.instructionsBox .sumber > li').on('click',function(){
 		var su_li = $('.instructionsBox .sumber>li'),
-			su_content =$('.instructionsBox .sumber .sumContent');
+			su_content = $('.instructionsBox .sumber .sumContent');
 
 		if(! $(this).hasClass('open')){
 			su_li.removeClass('open');
 			$(this).addClass('open');
-			su_content.stop().slideUp(function(){
-				$(this).removeAttr('style');
-			});
-			$(this).children('.sumContent').stop().slideDown(300);
+			su_content.hide();
+			$(this).children('.sumContent').show();
 		}else{
 			su_li.removeClass('open');
-			su_content.stop().slideUp(function(){
-				$(this).removeAttr('style');
-			});
+			su_content.hide();
 		}
 	});
 	//application_1.php
 	$('.applicationBox .sumber > li').on('click',function(){
-
-		var su_li = $('.applicationBox .sumber>li'),
-			su_content =$('.applicationBox .sumber .sumContent');
+		var su_li = $('.applicationBox .sumber > li'),
+			su_content = $('.applicationBox .sumber .sumContent');
 
 		if(! $(this).hasClass('open')){
 			su_li.removeClass('open');
 			$(this).addClass('open');
-			su_content.stop().slideUp(function(){
-				$(this).removeAttr('style');
-			});
-			$(this).children('.sumContent').stop().slideDown(300);
+			su_content.hide();
+			$(this).children('.sumContent').show();
 		}else{
 			su_li.removeClass('open');
-			su_content.stop().slideUp(function(){
-				$(this).removeAttr('style');
-			});
+			su_content.hide();
 		}
 	});
 

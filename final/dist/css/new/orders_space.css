@@ -997,8 +997,8 @@
 .value-add .value-add-list-wrapper {
 	padding: 9px 20px;
 }
-.site-value-add.additional_product .pricePlan {
-
+#wrapper .site-value-add.additional_product .pricePlan {
+	margin-bottom: 9px;
 }
 .site-value-add.additional_product .pricePlan ._list {
 	margin-top: 9px;

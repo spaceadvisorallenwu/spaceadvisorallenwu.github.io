@@ -338,6 +338,7 @@
 .blog_post .leftContent header {
     position: static;
     overflow: initial;
+    height: auto;
 }
 .blog_post .leftContent header h2 {
 	text-align: left;

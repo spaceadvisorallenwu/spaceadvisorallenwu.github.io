@@ -393,34 +393,37 @@ font-size: 13px;
 #wrapper .comment .comment-list li {
 	margin: 20px 0;
 }
-#wrapper i.heart,
-#wrapper i.add {
-	right: 15px;
-}
 
 .spacer .position {
 	padding: 20px;
 	border-radius: 5px;
+    overflow: hidden;
+    background-color: #f3f3f3;
 }
 .spacer .position .content {
     width: 100%;
     max-width: unset;
     line-height: normal;
+    font-size: 15px;
+    margin: 0 auto;
+    z-index: 1;
 }
 .spacer .position .content h2 {
     font-size: 21px;
     margin-bottom: 9px;
-    letter-spacing: 0;
+    text-align: left;
 }
 .spacer .position .box {
 	margin-bottom: 20px;
 }
 .spacer .position iframe {
+    width: 100%;
+    margin-top: 9px;
 	border-radius: 5px;
 	overflow: hidden;
 }
 .spacer .position .add {
-	height: 160px;
+	height: 165px;
 }
 
 /** BEGIN moreSpacer **/
@@ -592,6 +595,9 @@ font-size: 13px;
     }
     .spacer .position .box {
     	margin-bottom: 9px;
+    }
+    .spacer .position iframe {
+        height: 300px;
     }
 
     .spacer .syn_item3 .box .r_list .r_item {
