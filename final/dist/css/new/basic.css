@@ -330,7 +330,7 @@ body:not(.isLogin) ._isLogin {
 }
 #wrapper > header a.cart,
 #wrapper > header a.mail {
-    margin: 14px 15px 0 0;
+    margin: 13px 15px 0 0;
 }
 #wrapper > header a.cart i,
 #wrapper > header a.mail i {
@@ -844,24 +844,7 @@ footer .bottom li:last-child a:last-child:hover img {
 @media only screen and (max-width: 1100px){}
 /** END header **/
 @media all and (max-width:1040px) {
-    #wrapper > header nav li a {
-        font-size: 16px;
-    }
-    #wrapper > header a.cart {
-        margin-top: 15px;
-        font-size: 16px;
-    }
-    #wrapper > header select {
-        height: 25px;
-        margin-top: 13px;
-        font-size: 16px;
-    }
-    #wrapper > header a.mail {
-        font-size: 22px;
-    }
-    #wrapper > header a.activity {
-        font-size: 16px;
-    }
+
 }
 /** END header **/
 

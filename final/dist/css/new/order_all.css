@@ -1128,20 +1128,6 @@
     top: 5px;
     left: 3px;
 }
-.stepBox.fill_box .writeContent .writeInformation4 .writeInput li .staging .instalment {
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background: #fff;
-    padding: 1px;
-    overflow: hidden;
-}
-.stepBox.fill_box .writeContent .writeInformation4 .writeInput li .staging .instalment span {
-    line-height: normal;
-}
-.stepBox.fill_box .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
-    border-right: 1px solid #ddd;
-    background: #f3f3f3;
-}
 .stepBox.fill_box .writeContent .writeInformation5 h2 {
     background-image: unset;
 }
@@ -1205,6 +1191,50 @@
     top: 3px;
     left: 2px;
 }
+
+/** BEGIN paper **/
+.writeContent .writeInput li .col.paper {
+    display: none !important;
+}
+.writeContent .writeInput li .col.paper .assess {
+    flex-direction: column;
+}
+.writeContent .writeInput li .col.paper .assess > div {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.writeContent .writeInput li .col.paper .assess input[type=radio]+label:before {
+    top: 2px;
+    margin-right: 9px;
+}
+.writeContent .writeInput li .col.paper .exact_input {
+    width: 30%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.writeContent .writeInput li .col.paper .exact_input input {
+    padding: 0;
+    height: auto;
+    padding: 3px;
+    text-align: center;
+    margin-top: 0;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.writeContent .writeInput li .col.paper .exact_input span {
+    margin-right: 5px;
+    position: relative;
+}
+.writeContent .writeInput li .col.paper .add_input {
+    width: 100%;
+}
+.writeContent .writeInput li .col.paper .add_input input {
+    margin-top: 0;
+}
+/** END paper **/
+
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .col input,
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput li .lnvoiceField input {
     margin-top: 5px;
@@ -1646,6 +1676,7 @@
 }
 /** END order_cancel **/
 
+
 @media only screen and (max-width: 980px) {
     .orderstep ul li {
         font-size: 13px;
@@ -1874,16 +1905,23 @@
         padding: 5px 9px;
         margin-top: 9px;
     }
-    .stepBox.fill_box .writeContent .writeInformation4 .writeInput li .staging .instalment span {
-        padding: 5px 0;
-    }
-    .stepBox.fill_box .writeContent .writeInformation4 .writeInput li .staging .instalment span:nth-child(1) {
-        width: 45%;
-        margin-right: 5px;
-    }
     .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField {
         padding: 9px;
     }
+
+    /** BEGIN paper **/
+    .writeContent .writeInput li .col.paper .assess > div {
+        flex-direction: column;
+    }
+    .writeContent .writeInput li .col.paper .exact_input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .writeContent .writeInput li .col.paper .add_input {
+        margin-left: 0;
+    }
+    /** END paper**/
+
     .stepBox.fill_box .writeContent .writeInput.part4 .col_content, .stepBox.fill_box .writeContent .writeInput.part5 .col_content {
         width: 93%;
     }
@@ -2048,7 +2086,7 @@
     }
     /** END order_complete **/
 
-    .stepBox.fill_box .writeContent .writeInput.part4 .staging .col .assess > input[type=radio]+label:before,
+    /*.stepBox.fill_box .writeContent .writeInput.part4 .staging .col .assess > input[type=radio]+label:before,
     .stepBox.fill_box .writeContent .writeInput.part4 .staging .col .assess > input[type=checkbox]+label:before,
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .col .assess > input[type=radio]+label:before,
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .col .assess > input[type=checkbox]+label:before {
@@ -2059,7 +2097,7 @@
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .assess input[type=radio]+label:after,
     .stepBox.fill_box .writeContent .writeInput.part5 .staging .assess input[type=checkbox]+label:after {
         top: 11px;
-    }
+    }*/
 
     .mobile-plan-stecla.mobile .appointment_detail .deta_content {
         display: flex;

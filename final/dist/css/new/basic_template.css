@@ -163,7 +163,7 @@
 }
 .site-list .site .all {
     position: relative;
-    max-width: 350px;
+    max-width: 300px;
 }
 .site-list .site span.pic {
     display: block;
@@ -172,6 +172,7 @@
     position: relative;
     background: #f3f3f3;
     width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 5px 5px 0 0;
 }
@@ -901,6 +902,12 @@
     color: #4e6e9d;
     cursor: pointer;
 }
+.box a.more i {
+    margin-left: 5px;
+}
+.box a.more:hover {
+    text-decoration: underline;
+}
 .box:not(.needmore) a.more {
     display: none;
 }
@@ -946,7 +953,10 @@
 
 /** BEGIN Comment **/
 #wrapper .comment .star ul {
+    display: none;
     padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
 }
 #wrapper .comment .star > p {
     font-size: 15px;
@@ -961,9 +971,9 @@
     margin-bottom: 20px;
 }
 #wrapper .comment .comment-list li {
+    overflow: hidden;
     margin: 20px 9px;
-    padding-top: 0;
-    /*border-bottom: 1px dashed #ddd;*/
+    padding: 0 0 30px 0;
 }
 #wrapper .comment .comment-list li:last-child {
     border-bottom: 0;
@@ -989,17 +999,17 @@
     line-height: normal;
 }
 #wrapper .comment .comment-list li .other span.left {
-    font-size: unset;
-    padding: 0;
+    width: 50%;
+    font-weight: normal;
+    color: #4e5059;
+    text-decoration: none;
+    float: left;
     line-height: normal;
 }
 #wrapper .comment .comment-list li .other span.left p {
-    height: unset;
     font-size: 15px;
     background: #fff;
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 5px;*/
-    /*padding: 0 9px;*/
+    overflow: hidden;
     display: inline-flex;
 }
 #wrapper .comment .comment-list li .other span.left time {
@@ -1020,6 +1030,20 @@
     text-decoration: none;
     clear: both;
     word-wrap: break-word;
+}
+#wrapper .comment .comment-list li span.pic {
+    display: block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    background-image: url(../../images/avator.jpg);
+    background-size: contain;
+}
+#wrapper .comment .comment-list li span.pic img {
+    width: 100%;
+    height: auto;
 }
 /** END Comment **/
 
@@ -1381,9 +1405,6 @@
 .qaBox .sumber > li.open .sumTitle:before {
     background: #4f6ea2;
 }
-
-
-
 .qaBox .qaLink {
     margin-top: 32px;
     width: 100%;
@@ -1398,6 +1419,69 @@
 }
 /** END qaBox**/
 
+/** BEGIN staging **/
+.staging {
+    display: none;
+    margin: 9px 0 0 30px;
+}
+.staging .col .assess input[type=radio]+label:before,
+.staging .col .assess input[type=checkbox]+label:before {
+    border: 1px solid #4f6ea2 !important;
+}
+.staging .col .assess input[type=radio]+label:after,
+.staging .col .assess input[type=checkbox]+label:after {
+    background: #4f6ea2 !important;
+}
+.staging .instalment {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    width: calc(100% - 23px);
+    max-width: 330px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 1px;
+    overflow: hidden;
+}
+.staging .instalment span {
+    display: block;
+    float: left;
+    width: 57%;
+    line-height: normal;
+}
+.staging .instalment span:nth-child(1) {
+    border-right: 1px solid #ddd;
+    background: #f3f3f3;
+    width: 43%;
+}
+.staging .col:nth-child(2) {
+    margin-top: -3px;
+}
+/** END staging **/
+
+
+.inline_content {
+    background: none;
+}
+.svg.icon {
+    fill: #74767d;
+    height: 26px;
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+    width: auto;
+}
+.ie9 img[src$=".svg"] {
+    width: 100%
+}
+
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    img[src$=".svg"] {
+        width: 100%
+    }
+}
 @media only screen and (max-width: 980px) {
     /** BEGIN navigation_bar **/
     .navigation_bar ul {
@@ -1744,6 +1828,10 @@
         padding-left: 0;
         margin-bottom: 9px;
     }
+    #wrapper .comment .star li {
+        width: 100%;
+        text-align: left;
+    }
     #wrapper .comment .star li:last-child {
         margin-bottom: 0;
     }
@@ -1759,6 +1847,10 @@
         font-size: 15px;
         text-align: justify;
         margin-top: 9px;
+    }
+    #wrapper .comment .comment-list li span.pic {
+        width: 50px;
+        height: 50px;
     }
     /** END Comment **/
 
@@ -1792,11 +1884,18 @@
         border-right: 1px solid #ddd;
     }
     #wrapper .search-condition {
+        display: none;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: #fff;
         padding: 20px 5%;
+        z-index: 9;
     }
     #wrapper .search-condition .first {
         width: 100%;
         margin: 0 auto;
+        overflow: hidden;
     }
     #wrapper .search-condition .first .input {
         overflow: hidden;
@@ -1823,6 +1922,9 @@
     #wrapper .search-condition .first .popular {
         margin: 20px 0;
         font-size: 15px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
     }
     #wrapper .search-condition .search_bar {
         overflow: hidden;
@@ -1841,6 +1943,7 @@
         border-top: none;
     }
     #wrapper .search-condition .search_bar > ul > li > p {
+        border-bottom: none;
         font-weight: normal;
         color: #4e5059;
         line-height: normal;
@@ -1851,6 +1954,41 @@
         border-radius: 9px;
         background: #f3f3f3;
         font-size: 15px;
+    }
+    #wrapper .search-condition .search_bar > ul > li._switch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #wrapper .search-condition .search_bar > ul > li._switch span {
+        display: inline-block;
+        width: 55px;
+        height: 30px;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-right: 2%;
+        background-color: #ccc;
+        border-radius: 20px;
+        position: relative;
+        float: right;
+    }
+    #wrapper .search-condition .search_bar > ul > li._switch span i {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        transition: all .3s ease-in-out;
+    }
+    #wrapper .search-condition .search_bar > ul > li._switch.have span {
+        background-color: #4f6ea2;
+    }
+    #wrapper .search-condition .search_bar > ul > li._switch.have span i {
+        left: 27px;
     }
     #wrapper .search-condition .search_bar > ul > li > p i {
         float: right;
@@ -1981,5 +2119,10 @@
         text-align: justify;
     }
     /** END qaBox **/
+
+    /** BEGIN staging **/
+
+
+    /** END staging **/
 
 }

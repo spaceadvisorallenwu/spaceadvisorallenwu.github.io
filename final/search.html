@@ -2403,38 +2403,32 @@
 				var this_id = $(this).attr("id");
 				div_array[this_id] = $(this).html();
 			});
-			$(':input').on('click',function(){
-				if($(this).attr("type") == "checkbox"){
-				var search_item = $(this).parents('.search_off').children('.search_item');
-				var search_item_detail = $(this).parents('.search_item_detail');
-				search_item.addClass('have');
-				search_item_detail.addClass('have');
-
-				var checkbox_name = $(this).attr("name");
-				var div_name = checkbox_name.replace("[]","");
-				var checkbox_value = "";
-				var i = 0;
-					$("input[name='"+ checkbox_name +"']").each(function(){
-						if($(this).prop("checked") == true){
-							if(i == 0) checkbox_value = $(this).val();
+			$('.search-box.desk input').on('click',function(){
+				if ($(this).attr("type") == "checkbox") {
+					var search_item = $(this).parents('.search_off').children('.search_item');
+					var search_item_detail = $(this).parents('.search_item_detail');
+					search_item.addClass('have');
+					search_item_detail.addClass('have');
+					var checkbox_name = $(this).attr("name");
+					var div_name = checkbox_name.replace("[]","");
+					var checkbox_value = "";
+					var i = 0;
+					$ (".search-box.desk input[name='"+ checkbox_name +"']").each(function() {
+						if ($(this).prop("checked") == true) {
+							if(i == 0) {
+								checkbox_value = $(this).val();
+							}
 							i++;
 						}
 					});
-					if(i > 1) checkbox_value = checkbox_value + "+";
-					if(i == 0){
+					if (i > 1) checkbox_value = checkbox_value + "+";
+					if (i == 0) {
 						$("#" + div_name).html(div_array[div_name]);
-					search_item.removeClass('have');
-					search_item_detail.removeClass('have');
-					}else $("#" + div_name).html(checkbox_value);
-				}
-			});
-
-			//input change
-			$(".number_change").change(function(){
-				if($(this).val() == '' || $(this).val() == '0'){
-					$(this).removeClass('have');
-				}else{
-					$(this).addClass('have');
+						search_item.removeClass('have');
+						search_item_detail.removeClass('have');
+					} else {
+						$("#" + div_name).html(checkbox_value);
+					}
 				}
 			});
 		</script>

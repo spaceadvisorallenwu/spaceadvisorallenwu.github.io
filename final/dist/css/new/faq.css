@@ -1,9 +1,5 @@
 @charset 'UTF-8';
 /** BEGIN topBox **/
-.top_Search,
-.fill_question {
-	display: none;
-}
 .topBox .qaBox {
 	border-top: 0;
 	width: 60%;

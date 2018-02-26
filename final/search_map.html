@@ -1899,7 +1899,7 @@
 				var this_id = $(this).attr("id");
 				div_array[this_id] = $(this).html();
 			});
-			$(':input').on('click',function(){
+			$('.search-box.desk input').on('click',function(){
 				if($(this).attr("type") == "checkbox"){
 					var search_item = $(this).parents('.search-map').find('.search_item');
 					var search_item_detail = $(this).parents('.search_item_detail');
@@ -1909,80 +1909,24 @@
 					var div_name = checkbox_name.replace("[]","");
 					var checkbox_value = "";
 					var i = 0;
-					$("input[name='"+ checkbox_name +"']").each(function(){
+					$ (".search-box.desk input[name='"+ checkbox_name +"']").each(function() {
 						if($(this).prop("checked") == true){
-							if(i == 0) checkbox_value = $(this).val();
+							if(i == 0) {
+								checkbox_value = $(this).val();
+							}
 							i++;
 						}
 					});
-
-					if(i > 1) checkbox_value = checkbox_value + "+";
-					if(i == 0){
+					if (i > 1) checkbox_value = checkbox_value + "+";
+					if (i == 0) {
 						$("#" + div_name).html(div_array[div_name]);
 						search_item.removeClass('have');
 						search_item_detail.removeClass('have');
-					}else $("#" + div_name).html(checkbox_value);
-				}
-			});
-			//input change
-			$(".number_change").change(function(){
-				if($(this).val() ==''){
-					$(this).removeClass('have');
-				}else{
-					$(this).addClass('have');
-				}
-			});
-			//捷運
-			// $(".input_change").change(function(){
-			// 	if($(this).val() ==''){
-			// 		$(this).parent().removeClass('have');
-			// 	}else{
-			// 		$(this).parent().addClass('have');
-			// 	}
-			// });
-
-			//money change
-			$('.price_areaBtn').on('click',function(){
-				if($(".price_min").val() == "" && $(".price_max").val() == ""){
-					$(".price_min").parent().parent().removeClass('have');
-					$(".price_min").parent().parent().siblings().removeClass('have');
-					$("#money").html(div_array["money"]);
-				}else{
-					$(".price_min").parent().parent().addClass('have');
-					$(".price_min").parent().parent().siblings().addClass('have');
-					if($(".price_min").val() != "" && $(".price_max").val() != ""){
-					if(parseInt($(".price_min").val()) > parseInt($(".price_max").val())){
-						var amount = $(".price_max").val();
-						$(".price_max").val($(".price_min").val());
-						$(".price_min").val(amount);
+					} else {
+						$("#" + div_name).html(checkbox_value);
 					}
-					}else if($(".price_min").val() == "") $(".price_min").val("0");
-					$("#money").html($(".price_min").val() + "~" + $(".price_max").val());
 				}
-				$('.search_item_detail').removeClass('open');
 			});
-
-			//money change_mo
-			$('.price_mo_areaBtn').on('click',function(){
-				if($(".price pricemo_min").val() == "" && $(".pricemo_max").val() == ""){
-					$(".price pricemo_min").parent().parent().removeClass('have');
-					$(".price pricemo_min").parent().parent().siblings().removeClass('have');
-					$("#money1").html(div_array["money1"]);
-				}else{
-					$(".price pricemo_min").parent().parent().addClass('have');
-					$(".price pricemo_min").parent().parent().siblings().addClass('have');
-					if($(".price pricemo_min").val() != "" && $(".pricemo_max").val() != ""){
-					if(parseInt($(".price pricemo_min").val()) > parseInt($(".pricemo_max").val())){
-						var amount = $(".pricemo_max").val();
-						$(".pricemo_max").val($(".price pricemo_min").val());
-						$(".price pricemo_min").val(amount);
-					}
-					}else if($(".price pricemo_min").val() == "") $(".price pricemo_min").val("0");
-					$("#money1").html($(".pricemo_min").val() + "~" + $(".pricemo_max").val());
-				}
-				$('.search_item_detail').removeClass('open');
-			});
-
 			//selsect
 			$(".room").change(function(){
 				if($(this).val() != "N") $(this).addClass('have');

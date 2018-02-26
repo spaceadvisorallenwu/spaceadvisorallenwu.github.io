@@ -610,6 +610,9 @@ aside .popular .popuImg {
     border-radius: 5px;
     overflow: hidden;
 }
+aside .popular .popuImg img {
+    width: 100%;
+}
 aside .popular li:hover .popuImg {
     opacity: .8;
     transition: .4s;
@@ -783,8 +786,13 @@ aside .fb_box {
 
 	/** BEGIN siderbar **/
 	aside {
+        float: none;
 		margin-left: 0;
     	width: 100%;
 	}
+    aside .popular .popuTxt .sort {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
 	/** END siderbar **/
 }
