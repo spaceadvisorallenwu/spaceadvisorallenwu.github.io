@@ -118,9 +118,9 @@
 .vacancylist li.active .vacTitle {
     color: #fff;
     background: url(../../images/recruiting/list_arrw_2.png) #4f6ea2 right center no-repeat;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
 .vacancylist li.active .vacTitle span {
     border: none;

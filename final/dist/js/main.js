@@ -361,6 +361,7 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			$('.vacancylist .vacContent').hide();
 			$(this).children('.vacContent').show();
+			scrollToElemFront($(this));
 		}else{
 			$('.vacancylist li').removeClass('active');
 			$('.vacancylist .vacContent').hide();

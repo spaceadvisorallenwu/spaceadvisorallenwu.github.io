@@ -87,7 +87,7 @@
 	padding-top: 0;
 }
 .addAdvaVenue .custodyBtn {
-    margin: 0px 0 60px 0;
+    margin: 0 0 60px 0;
 }
 .addAdvaVenue .addvaLine {
     margin-bottom: 45px;
@@ -319,6 +319,7 @@
 	padding: 20px;
 	line-height: normal;
 	font-size: 15px;
+	width: 100%;
 }
 .app_step2 .custodyBtn {
     margin: 40px auto 0;
@@ -349,7 +350,7 @@
 }
 .app_stepItem5 .col .assess input[type=radio]+label:after,
 .app_stepItem5 .col .assess input[type=checkbox]+label:after {
-    background: #4f6ea2 !important;
+    background: #4f6ea2;
 }
 
 .application_sent {

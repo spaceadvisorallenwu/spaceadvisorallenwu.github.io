@@ -1,14 +1,5 @@
 @charset 'UTF-8';
 /* 共用樣式 */
-/*.subject-title {
-    background: url(../images/site-title-icon.png) no-repeat left center;
-    font-size: 30px;
-    line-height: 55px;
-    color: #4f6ea2;
-    border-bottom: 1px solid #4e6da1;
-    padding: 0 0 0 38px;
-    letter-spacing: 2px;
-}*/
 .flexbox {
     display: flex;
     flex-wrap: wrap;
@@ -299,21 +290,12 @@ main:not(._doEdit) .lightbox .section03 {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.reward_cmt .lightbox .section03 textarea::-webkit-input-placeholder {
-    color: #9c9c9c !important;
-}
 .reward_cmt .edit-eval-bn input[disabled="disabled"] {
     background-color: #83848a;
     color: #fff;
     cursor: default;
 }
 /* end-查看評論-未訂購-編輯 */
-
-
-
-
-
-
 
 main {
 	margin: 0;
@@ -415,7 +397,7 @@ main {
     display: inline-block;
     width: 70px;
     height: 23px;
-    padding: 3px 0px;
+    padding: 3px 0;
     background-color: #4f6da2;
     font-size: 13px;
     line-height: normal;

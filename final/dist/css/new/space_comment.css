@@ -224,7 +224,7 @@
     display: inline-block;
     width: 70px;
     height: 23px;
-    padding: 3px 0px;
+    padding: 3px 0;
     background-color: #4f6da2;
     font-size: 13px;
     line-height: normal;
@@ -276,17 +276,12 @@
     content: "很棒";
 }
 
-
 .bonus-comment ._content .section03 textarea {
-    /*margin-bottom: 40px;*/
     width: 100%;
     height: 176px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 9px;
-}
-.bonus-comment ._content .section03 textarea::-webkit-input-placeholder {
-    color: #9c9c9c !important;
 }
 .bonus-comment ._content .section04 .wd_form {
     display: flex;

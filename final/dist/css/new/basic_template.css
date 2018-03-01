@@ -2,8 +2,8 @@
 /** BEGIN navigation_bar **/
 .navigation_bar {
     width: 100%;
-    background: #4E5059;
-    overflow-y: hidden !important;
+    background: #4e5059;
+    overflow-y: hidden;
     position: fixed;
     top: 44px;
     z-index: 9;
@@ -287,8 +287,8 @@
     border: 4px solid #fff;
     color: #fff;
     opacity: .8;
-    text-shadow: 0px 0px 2px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2), 0px 0px 1px 1px rgba(0,0,0,0.2) inset;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2), 0 0 1px 1px rgba(0, 0, 0, .2) inset;
 }
 
 #wrapper i.heart {
@@ -417,7 +417,7 @@
 .bookList .detailTable {
     -webkit-display: table;
     display: table;
-    font-size: 0.875rem;
+    font-size: 15px;
     border-collapse: initial;
     height: 100%;
     width: 100%;
@@ -1446,7 +1446,7 @@
     color: #fff;
     font-size: 2.000rem;
     text-shadow: #030303 2px 1px 4px;
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     font-weight: bold;
     line-height: 45px;
 }
@@ -1536,16 +1536,16 @@
 }
 .qaBox .sumber > li .sumContent {
     display: none;
-    margin-top: 10px;
-    font-size: 0.875rem;
+    margin-top: 9px;
+    font-size: 15px;
     color: #4e5059;
-    line-height: 34px;
+    line-height: normal;
     font-weight: normal;
 }
 .qaBox .sumber > li .sumContent:before {
     content: 'A';
     background: #4f6ea2;
-    top: 0px;
+    top: 0;
 }
 .qaBox .sumber > li.open .sumTitle {
     background: url(../../images/top/top_arrw_2.png) right 7px no-repeat;
@@ -1559,8 +1559,8 @@
     text-align: center;
 }
 .qaBox .qaLink a {
-    color: #4E5059;
-    font-size: 0.938rem;
+    color: #4e5059;
+    font-size: 15px;
 }
 .qaBox .qaLink a:hover {
     text-decoration: underline;

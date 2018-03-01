@@ -159,10 +159,6 @@
     -webkit-font-smoothing: antialiased;
     position: absolute;
     right: 20px;
-	/*-webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;*/
 }
 .additional_product .accordionTitleActive:before,
 .additional_product .accordionTitle.is-expanded:before {
@@ -345,9 +341,6 @@
     line-height: normal;
     padding: 0 9px;
     max-width: 155px;
-}
-.additional_product .site_food-main ul li .purchase_food input::placeholder {
-	color: #c7c9c8 !important;
 }
 .additional_product .site_food-main ul li .site_food-participate {
     line-height: normal;
@@ -694,7 +687,7 @@
     border-radius: 5px;
 }
 .additional_product_form .invoice_part .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
-    background: transparent !important;
+    background: transparent;
     top: 3px;
     left: 2px;
 }
@@ -767,9 +760,6 @@
     width: 100%;
     background-color: #fff;
     font-weight: normal;
-}
-.additional_product_form .part_item input::placeholder {
-	color: #c7c9c8 !important;
 }
 .additional_product_form .custodyBtn > span {
     font-size: 13px;
@@ -888,7 +878,7 @@
 .site_remark .site_remark-description {
 	font-size: 15px;
     color: #d65f4f;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: normal;
 }
 .site_remark .site_remark-description i {

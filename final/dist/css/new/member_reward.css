@@ -120,16 +120,15 @@
 }
 .member_reward ._content .bonus-information {
     flex-wrap: nowrap;
-    /*margin-top: 49px;*/
 }
-.member_reward ._content .bonus-information>div {
+.member_reward ._content .bonus-information > div {
     flex: 1;
     font-size: 15px;
     line-height: normal;
     color: #d75f4f;
     margin-bottom: 5px;
 }
-.member_reward ._content .bonus-information>div.bonus-info {
+.member_reward ._content .bonus-information > div.bonus-info {
     text-align: right;
     color: #4f6da2;
 }
@@ -137,11 +136,11 @@
     .member_reward ._content .bonus-information {
         flex-wrap: wrap;
     }
-    .member_reward ._content .bonus-information>div {
+    .member_reward ._content .bonus-information > div {
         flex: none;
         width: 100%;
     }
-    .member_reward ._content .bonus-information>div.bonus-info {
+    .member_reward ._content .bonus-information > div.bonus-info {
         text-align: left;
     }
 }
@@ -171,13 +170,13 @@
     background-color: #f3f3f3;
     border-bottom: 0;
 }
-.member_reward ._content ul.nodata li.head>div {
+.member_reward ._content ul.nodata li.head > div {
     width: 100%;
 }
-.member_reward ._content ul.datalist li>div {
+.member_reward ._content ul.datalist li > div {
     width: 25%;
     text-align: center;
-    padding: 15px 9px;
+    padding: 9px;
     font-size: 15px;
     line-height: normal;
 }
@@ -185,26 +184,24 @@
     background-color: #f3f3f3;
     border-bottom: 1px solid #ccc;
 }
-.member_reward ._content ul.datalist li.head>div:nth-child(1) {
+.member_reward ._content ul.datalist li.head > div:nth-child(1) {
     padding-left: 30px;
 }
-.member_reward ._content ul li>div:nth-child(1) {
+.member_reward ._content ul li > div:nth-child(1) {
     text-align: center;
-    padding-left: 30px;
 }
-.member_reward ._content ul li.head>div {
+.member_reward ._content ul li.head > div {
     text-align: center;
-    font-size: 17px;
-    padding: 20px;
+    font-size: 15px;
+    padding: 9px;
 }
-.member_reward ._content ul li>div span:nth-child(1) {
+.member_reward ._content ul li > div span:nth-child(1) {
     display: none;
 }
-.member_reward ._content ul li>div span a {
-    margin-top: 3px;
+.member_reward ._content ul li > div span a {
     display: block;
 }
-.member_reward ._content ul li>div span a:hover {
+.member_reward ._content ul li > div span a:hover {
     text-decoration: underline;
 }
 .member_reward ._content .bonus-buttons {
@@ -239,27 +236,27 @@
     .member_reward ._content ul.datalist li.head {
         display: none;
     }
-    .member_reward ._content ul.datalist li>div {
+    .member_reward ._content ul.datalist li > div {
         display: flex;
         align-items: flex-start;
         width: 100%;
     }
-    .member_reward ._content ul li>div span {
+    .member_reward ._content ul li > div span {
         display: inline-block;
         width: calc(100% - 100px);
         text-align: center;
     }
-    .member_reward ._content ul.datalist li>div,
-    .member_reward ._content ul li>div:nth-child(1) {
+    .member_reward ._content ul.datalist li > div,
+    .member_reward ._content ul li > div:nth-child(1) {
         padding: 5px 9px;
     }
-    .member_reward ._content ul li>div span:nth-child(1) {
+    .member_reward ._content ul li > div span:nth-child(1) {
         display: inline-block;
         width: 100px;
         font-weight: bold;
         text-align: left;
     }
-    .member_reward ._content ul li>div span a {
+    .member_reward ._content ul li > div span a {
         margin-left: 15px;
     }
     .member_reward ._content .bonus-buttons {

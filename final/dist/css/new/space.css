@@ -252,7 +252,7 @@
     *zoom: 1;
     background: #fff;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 10%;
     border: 1px solid #ddd;
     border-radius: 0 0 5px 5px;
@@ -994,7 +994,7 @@
         padding: 0;
         padding: 37px 9px 11px;
         border-right: 1px #4e5059 solid;
-        font-size: 0.8em;
+        font-size: 12px;
     }
     .meeting .outline .three {
         align-items: flex-start;

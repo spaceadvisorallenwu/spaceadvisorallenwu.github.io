@@ -291,9 +291,6 @@
     height: 108px;
     padding-left: 0;
 }
-.dialog .d-box textarea::-webkit-input-placeholder {
-	color: #9c9c9c !important;
-}
 .dialog .d-box .head {
 	padding: 9px 0;
     border-bottom: 1px solid #ddd;

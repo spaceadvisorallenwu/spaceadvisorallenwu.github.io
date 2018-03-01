@@ -191,7 +191,7 @@
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail {
     opacity: 0;
     min-width: 260px;
-    border: 1px #abacaf solid;
+    border: 1px #ccc solid;
     background-color: #fff;
     position: absolute;
     z-index: -1;
@@ -283,7 +283,7 @@
     float: right;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking .example i {
-    transition: all 0.5s;
+    transition: all .5s;
     position: absolute;
     left: 0;
     width: 17px;
@@ -307,11 +307,11 @@
     min-width: 660px;
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_time {
-    left: 280px;
+    left: 279px;
     width: 300px;
 }
 .search.mapBox main > .search-box .search_bar > .content > ul > li .search_item_detail#search_time {
-    left: 256px;
+    left: 255px;
 }
 .search main > .search-box .search_bar > .content > ul > li > p {
     display: inline-block;
@@ -374,7 +374,7 @@
     margin-right: 9px;
 }
 .search.mapBox .search-box .search_bar > .content > ul > li .search_item_detail {
-    left: 0px;
+    left: 0;
 }
 .search.mapBox .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_open {
     width: 105px;
@@ -398,7 +398,7 @@
     width: 100%
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_facility {
-    left: -86px;
+    left: -87px;
     width: 660px;
 }
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_facility .search_item_open {
@@ -420,7 +420,7 @@
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_pepole,
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_hotel,
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_preferential {
-    left: 175px;
+    left: 174px;
 }
 .search.mapBox main > .search-box .search_bar > .content > ul > li .search_item_detail#search_hotel,
 .search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail#search_plan,
@@ -428,7 +428,7 @@
     left: 174px;
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_plan {
-    left: 290px;
+    left: 288px;
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_place {
     left: -201px;
@@ -444,7 +444,7 @@
     left: 260px;
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail#search_facility {
-    left: -91px;
+    left: -92px;
     width: 660px;
     border-radius: 5px;
 }
@@ -543,9 +543,7 @@
 .search .search-list {
     overflow: hidden;
     padding-top: 20px;
-}
-.search .search-list ul {
-    background: rgba(0, 0, 0, .01);
+    padding-bottom: 0;
 }
 .search .search-list > ul > li {
     border-radius: 5px;
@@ -753,7 +751,7 @@
     display: block;
     width: 95px;
     height: 64px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .6);
     font-size: 24px;
     font-weight: normal;
     color: #fff;
@@ -835,10 +833,10 @@
     background: url(../../images/eve_icon2.png) top left no-repeat;
 }
 .search .search-list li .place._lastTime .evt_icon {
-    border-color: rgba(214, 95, 79, 0.8) transparent transparent transparent;
+    border-color: rgba(214, 95, 79, .8) transparent transparent transparent;
 }
 .search .search-list li .place._earlyBird .evt_icon {
-    border-color: rgba(78, 110, 159, 0.8) transparent transparent transparent;
+    border-color: rgba(78, 110, 159, .8) transparent transparent transparent;
 }
 
 .search .search-list li .place .ecentTime_box {
@@ -935,13 +933,6 @@
     color: gray;
     margin: 0;
 }
-/*#wrapper.search .search_item_area.money label {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    line-height: normal;
-    height: 30px;
-}*/
 .search main > .search-box .search_bar > .content > ul > li input.price {
     border-radius: 0;
     width: 74px;
@@ -1011,7 +1002,7 @@
     position: fixed;
     height: 100vh;
     z-index: 999;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, .85);
     padding: 0 0 0 10%;
     top: 134px;
     width: 65%;
@@ -1088,7 +1079,7 @@
     border-radius: 5px;
     position: absolute;
     top: 10px;
-    right: 15%;
+    right: 10%;
     border: 1px solid #ddd;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
@@ -1096,7 +1087,7 @@
     text-decoration: underline;
 }
 .mapBox .map a.search_item .search_item_name {
-    background: url(../../images/profound_icon.png) 0px 13px no-repeat;
+    background: url(../../images/profound_icon.png) 0 13px no-repeat;
     padding-left: 25px;
 }
 .mapBox .map a.search_item .search_item_name span {
@@ -1143,9 +1134,9 @@
     overflow: hidden;
 }
 .placeList:hover {
-    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
     transition: all .4s;
 }
 .placeList a {

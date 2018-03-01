@@ -35,7 +35,7 @@
 .event_item3 span,
 .event_item4 span {
     display: inline-block;
-    margin: 0px 3.8%;
+    margin: 0 3.8%;
     position: relative;
     top: 19px;
 }
@@ -165,11 +165,11 @@
 }
 .event_item5 li {
     font-weight: bold;
-    font-size: 0.938rem;
+    font-size: 15px;
     color: #1f1f1f;
     width: 100%;
-    margin-bottom: 23px;
-    line-height: 22.5px;
+    margin-bottom: 9px;
+    line-height: normal;
 }
 
 

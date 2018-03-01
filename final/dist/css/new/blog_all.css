@@ -271,7 +271,7 @@
 .blog .infor_item3 ul li:nth-child(4),
 .blog .infor_item3 ul li:nth-child(5),
 .blog .infor_item3 ul li:nth-child(6) {
-    margin-top: 0.5%;
+    margin-top: .5%;
     margin-right: 1%
 }
 .blog .infor_item3 ul li:nth-child(6) {
@@ -466,20 +466,6 @@
     background: #fff;
 }
 
-.blog_post .subscription .subscription_inner .sub_input input::-webkit-input-placeholder {
-    color: #9c9c9c !important;
-}
-.blog_post .subscription .subscription_inner .sub_input input:-ms-input-placeholder {
-    color: #9c9c9c !important;
-}
-.blog_post .subscription .subscription_inner .sub_input input::-moz-placeholder {
-    color: #9c9c9c !important;
-    opacity: 1;
-}
-.blog_post .subscription .subscription_inner .sub_input input:-moz-placeholder {
-    color: #9c9c9c !important;
-    opacity: 1;
-}
 .blog_post .subscription .subscription_inner .sub_input a {
     text-align: center;
     display: inline-block;
@@ -509,8 +495,6 @@
 .blog_post .information_editor img {
     max-width: 100%;
 }
-
-
 
 .blog_post .similar {
     width: 100%;
@@ -568,8 +552,6 @@
     opacity: .8;
 }
 /** END blog_post **/
-
-
 
 /** BEGIN siderbar **/
 aside {
@@ -781,8 +763,6 @@ aside .fb_box {
    		width: calc(98% / 2)
    	}
 	/** END blog_post **/
-
-
 
 	/** BEGIN siderbar **/
 	aside {

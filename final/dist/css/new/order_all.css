@@ -564,6 +564,7 @@
 }
 .order_time .orderInformation4 .col .assess input[type=checkbox]+label {
     font-size: 15px;
+    color: #4e5059;
 }
 /** END orderInformation4 **/
 
@@ -660,7 +661,7 @@
     background: rgba(79, 110, 162, .2);
 }
 .order_time .order_tiemBox .order_timeContent li._active {
-    background: #4f6ea2 !important;
+    background: #4f6ea2;
     color: #fff;
 }
 .order_time .order_tiemBox .order_timeContent li._haveDiscount:after {
@@ -742,63 +743,63 @@
 .order_time.order_time_period .order_timeList li:nth-child(3) {
     padding-left: 18px;
 }
-.order_time_period .caseSelect{
-    margin-bottom:55px;
+.order_time_period .caseSelect {
+    margin-bottom: 55px;
 }
-.order_time_period .caseSelect .flexbox{
-    display:flex;
-     flex-wrap:wrap;
+.order_time_period .caseSelect .flexbox {
+    display: flex;
+     flex-wrap: wrap;
 }
-.order_time_period .caseSelect .flexbox .caseList{
-    width:58.7%;
+.order_time_period .caseSelect .flexbox .caseList {
+    width: 58.7%;
 }
-.order_time_period .caseSelect .flexbox .caseList ul{
-    display:flex;
-    flex-wrap:wrap;
+.order_time_period .caseSelect .flexbox .caseList ul {
+    display: flex;
+    flex-wrap: wrap;
 }
-.order_time_period .caseSelect .flexbox .caseList ul li{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#f3f3f3;
-    margin:0 4px 5px 0;
-    padding:0 10px;
-    width:calc((100% - 15px) / 4);
+.order_time_period .caseSelect .flexbox .caseList ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    margin: 0 4px 5px 0;
+    padding: 0 9px;
+    width: calc((100% - 15px) / 4);
     height: 58px;
     font-size: 15px;
-    text-align:center;
+    text-align: center;
     cursor: pointer;
     border-radius: 5px;
     line-height: normal;
 }
-.order_time_period .caseSelect .flexbox .caseList ul li:nth-child(4n+4){
-    margin-right:0;
+.order_time_period .caseSelect .flexbox .caseList ul li:nth-child(4n+4) {
+    margin-right: 0;
 }
 .order_time_period .caseSelect .flexbox .caseList ul li.active,
 .order_time_period .caseSelect .flexbox .caseList ul li:hover{
-    background-color:#4f6ea2;
-    color:#fff;
+    background-color: #4f6ea2;
+    color: #fff;
 }
-.order_time_period .caseSelect .flexbox .caseRem{
-    width:38.56%;
-    margin-left:2.74%;
-    background-color:#f3f3f3;
+.order_time_period .caseSelect .flexbox .caseRem {
+    width: 38.56%;
+    margin-left: 2.74%;
+    background-color: #f3f3f3;
     font-size: 15px;
-    line-height:20px;
-    color:#4e5059;
-    padding:10px;
-    height:121px;
-    overflow-y:auto;
+    line-height: normal;
+    color: #4e5059;
+    padding: 9px;
+    height: 121px;
+    overflow-y: auto;
     border-radius: 5px;
 }
 .order_time_period .caseSelect .flexbox .caseRem ul li:not(.active){
-    display:none;
+    display: none;
 }
 .order_time_period .caseSelect .flexbox .caseRem a{
-    color:#4f6ea2;
+    color: #4f6ea2;
 }
 .order_time_period .caseSelect .flexbox .caseRem a:hover{
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 
@@ -905,7 +906,8 @@
     margin: 0;
     width: auto;
     font-size: 15px;
-    margin-left: 28px;
+    margin-left: 38px;
+    color: #4e5059;
 }
 .period_content .rebates._haveDiscount .prices .price {
     color: #d76050;
@@ -969,9 +971,9 @@
     align-items: center;
 }
 .period_content .rebates .sub label div:nth-child(1){
-    width:33%;
+    width: 26%;
     position: relative;
-    padding-left: 70px;
+    padding-left: 50px;
     display: flex;
     align-items: center;
 }
@@ -994,31 +996,33 @@
     display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(1) b:after {
-    content:"\f00c";
-    position:absolute;
-    top:2px;
-    left:63px;
-    display:inline-block;
+    content: "\f00c";
+    position: absolute;
+    top: 2px;
+    left: 63px;
+    display: inline-block;
     font-family: FontAwesome;
-    text-align:center; color:#fff;
-    transition:0.2s;
-    opacity:0;
-    font-weight:normal;
+    text-align: center;
+    color: #fff;
+    transition: .2s;
+    opacity: 0;
+    font-weight: normal;
 
     display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(1) input[type="checkbox"]:checked+b:after{
-    opacity:1;
+    opacity: 1;
     padding: 1px 0 0 2px;
 
     display: none;/** checkbox style hidden **/
 }
 .period_content .rebates .sub label div:nth-child(2){
-    width: 35%;
+    width: 36%;
     font-size: 15px;
+    margin-left: 40px;
 }
 .period_content .rebates .sub label div input[type="checkbox"]{
-    border:0;
+    border: 0;
     width: unset;
     height: unset;
     display: inline-block;
@@ -1027,8 +1031,8 @@
     margin-right: 9px;
 }
 .period_content .rebates .sub label div:nth-child(3){
-    padding-left: 30px;
     font-size: 15px;
+    margin-left: 30px;
 }
 .order_time_period .notice_txt{
     font-size: 15px;
@@ -1043,13 +1047,13 @@
     margin: 9px 0;
 }
 .order_time_period .notice_txt ul li i.error{
-    color:#d76050;
+    color: #d76050;
     font-size: 15px;
     margin-right: 5px;
 }
 .order_time_period .notice_txt ul li a{
-    color:#4f6ea2;
-    text-decoration:underline;
+    color: #4f6ea2;
+    text-decoration: underline;
 }
 /** END order_time **/
 
@@ -1110,7 +1114,6 @@
 
 /** BEGIN order_form **/
 .stepBox.fill_box .writeContent .writeInput li .col {
-    font-size: 15px;
     margin: 0;
 }
 .stepBox.fill_box .writeContent .writeContainer h2 {
@@ -1232,6 +1235,9 @@
 .stepBox.fill_box .writeContent .writeInformation1 .writeInput:last-child,
 .stepBox.fill_box .writeContent .writeInformation2 .writeInput:last-child {
     margin-bottom: 0;
+}
+.stepBox.fill_box .writeContent .writeInformation1 .writeInput:last-child li:last-child .col {
+    margin-top: 30px;
 }
 .stepBox.fill_box .writeContent .writeInformation1 .writeInput li:nth-child(2) .assess {
     margin: 0;
@@ -1485,7 +1491,7 @@
     border-radius: 5px;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField .col .assess input[type=checkbox]+label:after {
-    background: transparent !important;
+    background: transparent;
     top: 3px;
     left: 2px;
 }
@@ -2155,6 +2161,7 @@
         margin-bottom: 0;
         padding: 6px 0;
         background: #e5e5e5;
+        color: #4e5059;
     }
     .order_time_period .period_content .preiodBox .plan {
         display: block;
@@ -2162,6 +2169,9 @@
         padding: 9px 0;
         margin: 0 20px;
         width: auto;
+    }
+    .period_content .rebates .prices .price {
+        margin-left: 0;
     }
     .order_time_period .period_content .rebates .sub label div:nth-child(1),
     .order_time_period .period_content .rebates .sub label div:nth-child(2),
@@ -2339,7 +2349,7 @@
     }
     .stepBox.fill_box .writeContent .custodyBtn.onlineBtn {
         text-align: center;
-        margin: 40px 0 0px 0;
+        margin: 40px 0 0 0;
     }
     .stepBox.fill_box .writeContent .custodyBtn a {
         display: none;

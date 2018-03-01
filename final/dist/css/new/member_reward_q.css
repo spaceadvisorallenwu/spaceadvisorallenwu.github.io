@@ -191,6 +191,7 @@
     font-size: 15px;
     /*letter-spacing: .08em;*/
     color: #4e5059;
+    background: #fff;
 }
 .bonus-quest input[disabled] {
     position: relative;
@@ -523,10 +524,6 @@
 .warning_error input {
     background: #f7dfdc;
 }
-input::-webkit-input-placeholder {
-    color: #9c9c9c !important;
-}
-
 
 .mbr_information .required-fill .main-content ul li._gender ._gender1,
 .mbr_information .optional-fill .main-content ul li._imHost ._imHost1 {

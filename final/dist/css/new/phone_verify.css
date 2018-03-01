@@ -1,14 +1,5 @@
 @charset 'UTF-8';
 /* 共用樣式 */
-/*.subject-title {
-    background: url(../../images/site-title-icon.png) no-repeat left center;
-    font-size: 30px;
-    line-height: 55px;
-    color: #4f6ea2;
-    border-bottom: 1px solid #4e6da1;
-    padding: 0 0 0 38px;
-    letter-spacing: 2px;
-}*/
 .flexbox {
     display: flex;
     flex-wrap: wrap;
@@ -64,11 +55,6 @@
 .flexbox.multi-align-between {
     justify-content: space-between;
 }
-/*.wrapper1040 {
-    width: 94%;
-    max-width: 1040px;
-    margin: 0 auto;
-}*/
 .bn {
     display: inline-block;
     width: 175px;
@@ -220,10 +206,6 @@
 .verify .veri-ok button {
     width: 100%;
 }
-/*.verify .veri-ok button[disabled] {
-    background-color: #838489;
-    cursor: not-allowed;
-}*/
 .verify .veri-tips {
     margin-top: 20px;
     text-align: center;
@@ -274,21 +256,12 @@
 main {
     margin: 0 auto;
 }
-input::-webkit-input-placeholder {
-    color: #9c9c9c !important;
-}
 .phone_verify .veri-input,
 .phone_verify .veri-mobile,
 .phone_verify .veri-buttons button,
 .phone_verify .veri-ok {
     margin-bottom: 9px;
 }
-/*.veri-input li {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 9px;
-}*/
 .warning_error i {
     display: inline-block;
 }
@@ -316,6 +289,4 @@ li input {
 }
 .verify .veri-mobile span.phone-number.warning_error {
     margin-left: 32px;
-    /*width: calc(100% - 150px);*/
 }
-

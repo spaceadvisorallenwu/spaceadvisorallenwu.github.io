@@ -80,7 +80,7 @@
 .meberInput .warning_error i:before {
     color: #d76050;
     content: "\f06a";
-    display: inline-block !important;
+    display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -154,7 +154,7 @@
     vertical-align: top;
     border: none;
     margin-right: 0;
-    background: url(../../images/etick_icon_1.png) 0px 0px no-repeat;
+    background: url(../../images/etick_icon_1.png) 0 0 no-repeat;
 }
 .forget_password .col .assess input[type=checkbox]+label:after {
     display: inline-block;
@@ -162,7 +162,7 @@
     top: 1px;
     content: no-close-quote;
     margin-right: 0;
-    background: url(../../images/etick_icon_2.png) 0px 0px no-repeat;
+    background: url(../../images/etick_icon_2.png) 0 0 no-repeat;
 }
 .forget_password a:hover {
     text-decoration: underline;

@@ -720,9 +720,6 @@
 .member .warning_error input {
     background: #f7dfdc;
 }
-input::-webkit-input-placeholder {
-    color: #9c9c9c !important;
-}
 
 .site-title {
     font-weight: bold;
