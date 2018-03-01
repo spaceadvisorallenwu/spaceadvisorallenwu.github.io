@@ -163,7 +163,7 @@
 }
 .site-list .site .all {
     position: relative;
-    max-width: 300px;
+    max-width: 350px;
 }
 .site-list .site span.pic {
     display: block;
@@ -172,7 +172,6 @@
     position: relative;
     background: #f3f3f3;
     width: 100%;
-    max-width: 300px;
     height: auto;
     border-radius: 5px 5px 0 0;
 }
@@ -327,6 +326,16 @@
 
 
 /** BEGIN booklist **/
+.sitePhoto {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.siteName {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
 .bookList._notOnline ._rfp,
 .bookList:not(._notOnline) ._online,
 .bookList.expired ._rfp,
@@ -339,6 +348,20 @@
     overflow: hidden;
     line-height: normal;
 }
+.bookList .sitePhoto-pic {
+    width: 121px;
+    height: 100%;
+    background: #f3f3f3;
+    -webkit-display: table;
+    display: table;
+}
+.bookList .sitePhoto-pic img {
+    width: 100%
+}
+.bookList .sitePhoto-pic .sitePo {
+    display: table-cell;
+    vertical-align: middle;
+}
 .bookList .bookTitle {
     background: #fff;
     padding: 0 0 3px;
@@ -346,18 +369,34 @@
     align-items: center;
     margin: 0;
 }
+.bookList .bookTitle h2,
+.bookList .bookTitle i,
+.bookList .bookTitle a {
+    display: inline-block;
+    vertical-align: middle;
+}
 .bookList .bookTitle h2 {
+    margin: 0;
+    text-align: left;
     font-size: 21px;
     font-weight: bold;
 }
 .bookList .bookTitle ._bookStats {
-    margin-left: 11px;
+    margin-left: 9px;
+}
+.bookList .bookTitle ._bookStats i {
+    margin-right: 3px;
+}
+.bookList .bookTitle ._bookStats i._online {
+    color: #ffde00;
+    font-weight: bold;
 }
 .bookList .bookTitle .fa-flash:before,
 .bookList .bookTitle .fa-bolt:before {
     font-size: 15px;
 }
 .bookList .bookTitle .status {
+    display: inline-block;
     font-size: 12px;
     padding: 0;
     border: 0;
@@ -376,23 +415,60 @@
     border: 0;
 }
 .bookList .detailTable {
+    -webkit-display: table;
+    display: table;
+    font-size: 0.875rem;
+    border-collapse: initial;
+    height: 100%;
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ddd;
     overflow: hidden;
+    margin: 0 auto;
 }
 .bookList .detailTable .original {
+    text-decoration: line-through;
     margin-bottom: 0;
 }
-.bookList .detailTable-heading .detailTable-cell {
+.bookList .detailTable-inner {
+    display: table;
+    width: 100%;
+}
+.bookList .detailTable-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.bookList .detailTable-cell h4 {
+    display: none;
+}
+
+/** BEGIN detailTable-heading **/
+.bookList .detailTable-row.detailTable-heading {
+    height: 25px;
+}
+.bookList .detailTable-row.detailTable-heading .detailTable-cell {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
     font-size: 13px;
     border-bottom: 1px solid #f3f3f3;
     background: #e9e9e9;
     color: gray;
 }
+/** END detailTable-heading **/
+
+/** BEGIN detailTable-left **/
 .bookList .detailTable-left {
+    display: table-cell;
+    height: 100px;
+    border-right: 4px solid #efeff0;
     width: 28%;
     max-width: 300px;
+}
+.bookList .detailTable-left .detailTable-inner {
+    display: table;
+    width: 100%;
+    height: 100%;
 }
 .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
     background: #f3f3f3;
@@ -417,6 +493,18 @@
 .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal span {
     margin-left: 3px;
 }
+/** END detailTable-left **/
+
+/** BEGIN detailTable-mid **/
+.bookList .detailTable-mid {
+    display: table-cell;
+    height: 100px;
+}
+.bookList .detailTable-mid .detailTable-inner {
+    height: 100%
+}
+/** END detailTable-mid **/
+
 .bookList .sitePhoto-pic .sitePo {
     background: #fff;
     padding: 5px;
@@ -426,9 +514,23 @@
     border-radius: 5px;
     border: 1px solid #f3f3f3;
 }
+.bookList .detailTable-row {
+    display: table-row;
+    vertical-align: middle;
+    height: 100%;
+}
 .bookList .detailTable-row.detailTable-content .detailTable-cell {
     text-align: center;
     padding: 9px 20px;
+    border-bottom: 4px solid #efeff0;
+}
+.bookList .detailTable-row.detailTable-content:last-child .detailTable-cell {
+    border-bottom: 0;
+}
+
+/** BEGIN detailTable-right **/
+.bookList .detailTable-right .detailTable-inner {
+    height: 100%;
 }
 .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
 .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
@@ -441,9 +543,10 @@
     color: #4e5059;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 3px 9px;
+    /*padding: 3px 9px;*/
     margin: 3px 0;
     letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
 }
 .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a:hover,
 .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a:hover {
@@ -470,9 +573,16 @@
 .bookList[data-stat="cancel"] .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a span {
     color: #ccc;
 }
+/** END detailTable-right **/
+
+.bookList .detailTable-row.detailTable-content .detailTable-cell:last-child {
+    border-left: 4px solid #efeff0;
+    width: 16%;
+}
 .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child {
     padding-left: 0;
     padding-right: 0;
+    width: 16%;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(1),
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(2),
@@ -481,6 +591,13 @@
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) {
     width: 21%;
+}
+.bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) span {
+    display: inline-block;
+    vertical-align: top;
+}
+.bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .original span {
+    text-decoration: line-through;
 }
 .bookList .detailTable-row.detailTable-content .detailTable-cell:nth-child(3) .tableTxt {
     display: flex;
@@ -529,10 +646,17 @@
     width: 100%;
 }
 .bookList .detailTable-cell .tableTxt.siteName {
-    padding: 0;
+    position: relative;
+}
+.bookList .detailTable-cell .tableTxt .sarebate {
+    display: inline-block;
+    text-align: center;
 }
 .bookList .detailTable-cell .tableTxt .currency {
     margin-right: 9px;
+}
+.bookList .detailTable-cell .tableTxt span {
+    display: block;
 }
 .bookList .detailTable-cell .buyIcon a span {
     text-indent: unset;
@@ -588,6 +712,7 @@
     background: #f3f3f3;
     border-radius: 5px;
     padding: 15px 9px;
+    text-align: right;
 }
 .bookList .buyprice .price li,
 .bookList .buyprice .price .total {
@@ -605,15 +730,22 @@
     margin-bottom: 0;
 }
 .bookList .buyprice .price .total b,
-.bookList .buyprice .price .total span,
-.bookList .buyprice .price .total span:nth-child(3) {
+.bookList .buyprice .price .total span {
     font-size: 15px;
 }
 .bookList .buyprice .price li .valuaBox {
-    float: unset;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.bookList .buyprice .price li .valuaBox span {
+    width: 31%;
+}
+.bookList .buyprice .price b,
+.bookList .buyprice .price span {
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
 }
 .bookList .buyprice .price b {
     width: 60%;
@@ -638,9 +770,23 @@
     background: transparent;
     padding: 0;
     width: 25%;
+    display: inline-block;
 }
 .bookList .custodyBtn a span {
     width: 100%;
+}
+.bookList .detailTable-left .detailTable-cell.recipBox {
+    width: 100%;
+}
+.bookList .detailTable-left .detailTable-cell.recipBox .tableTxt {
+    width: 100%;
+}
+.bookList .detailTable-left .detailTable-cell.recipBox h4 {
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    background: #efeff0;
+    border-top: 2px solid #959595;
 }
 .bookList.expired .detailTable-left,
 .bookList.expired .detailTable-cell,
@@ -652,12 +798,12 @@
 .bookList.expired .detailTable-row.detailTable-heading .detailTable-cell:last-child {
     font-size: 13px;
     border-bottom: 1px solid #f3f3f3;
-    background: #f3f3f3 !important;
+    /*background: #f3f3f3;*/
     color: gray;
 }
 .bookList.expired .detailTable-inner,
 .bookList.expired .detailTable-left .detailTable-cell.recipBox {
-    background: #fff !important;
+    background: #fff;
 }
 .bookList.expired .detailTable-row.detailTable-content:last-child .detailTable-cell:last-child {
     border-left: 2px solid #f3f3f3;
@@ -885,9 +1031,6 @@
 /** BEGIN 未分類 **/
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail {
     padding-top: 15px;
-}
-.event tr:last-child {
-    margin-bottom: 0;
 }
 /** END 未分類 **/
 
@@ -1157,7 +1300,9 @@
 #wrapper .pricePlan > ul > li .priTitle {
     width: 100%;
     padding: 0 20px;
+    margin: 0 auto;
     position: relative;
+    cursor: pointer;
 }
 #wrapper .pricePlan > ul > li:hover .priTitle,
 #wrapper .pricePlan > ul > li.open .priTitle {
@@ -1165,6 +1310,9 @@
     font-weight: bold;
 }
 #wrapper .pricePlan > ul > li .priTitle span {
+    width: 100%;
+    display: block;
+    line-height: normal;
     font-size: 15px;
     position: relative;
     padding-right: 0;
@@ -1472,6 +1620,7 @@
     top: 2px;
     margin-left: 5px;
     width: auto;
+    vertical-align: unset;
 }
 .ie9 img[src$=".svg"] {
     width: 100%
@@ -1542,6 +1691,14 @@
         overflow: hidden;
         border: 1px solid #ddd;
     }
+    .bookList .sitePhoto-pic {
+        width: 100%;
+        height: auto !important;
+        max-width: 285px;
+        margin: 0 auto;
+        display: block;
+        background: none;
+    }
     .bookList .detailTable {
         border: 0;
         border-radius: 0;
@@ -1551,13 +1708,43 @@
     .bookList .bookTitle {
         padding: 9px;
     }
+    .bookList .detailTable-left,
+    .bookList .detailTable-inner,
+    .bookList .detailTable-row,
+    .bookList .detailTable-cell,
+    .bookList .detailTable-mid,
+    .bookList .sitePhoto {
+        width: 100%;
+        display: block;
+    }
+    .bookList .detailTable-cell h4,
+    .bookList .detailTable-cell .tableTxt {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+    }
     .bookList .detailTable-left {
         max-width: unset;
+        height: 100%;
+        border: 0;
+    }
+    .bookList .detailTable-left .siteName {
+        border-bottom: 4px solid #efeff0;
+        margin-bottom: 9px;
+        padding-bottom: 20px;
+    }
+    .bookList .detailTable-heading {
+        display: none;
+    }
+    .bookList .detailTable-left .detailTable-heading {
+        height: auto;
+        display: block;
     }
     .bookList .detailTable-left .detailTable-heading .detailTable-cell.reciprocal {
         font-size: 15px;
         line-height: normal;
         padding: 9px 0;
+        height: auto;
     }
     .bookList .detailTable-left .detailTable-cell.recipBox h4 {
         border-top: 1px solid #ddd;
@@ -1629,6 +1816,9 @@
         flex-direction: row;
         border: 0;
     }
+    .bookList .detailTable-mid {
+        height: 100%;
+    }
     .bookList .detailTable-right {
         width: 100%;
         height: 100%;
@@ -1636,13 +1826,14 @@
         margin-bottom: 9px;
     }
     .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon {
+        display: flex;
         flex-direction: row;
     }
     .buyBox .bookList .detailTable-row.detailTable-content .detailTable-cell:last-child a,
     .bookList .detailTable-right .detailTable-row .detailTable-cell .tableTxt.buyIcon a {
         margin-right: 9px;
         width: 30%;
-        padding: 9px;
+        padding: 5px 9px;
         text-align: center;
         background: #fff;
     }
@@ -1670,7 +1861,7 @@
         padding: 9px;
     }
     .bookList .demand {
-        padding: 9px !important;
+        padding: 9px;
         margin: 0;
         border-bottom: 0;
     }
@@ -1730,12 +1921,15 @@
         font-size: 15px;
         line-height: normal;
         padding: 9px 0;
+        letter-spacing: 5px;
+        height: auto;
     }
     .bookList._style1 .detailTable-left .detailTable-row:last-child .detailTable-cell {
         flex-direction: column;
     }
     .bookList._style1 .detailTable-cell .tableTxt.siteName {
         border-bottom-width: 1px;
+        margin-top: 20px;
     }
     .order_complete .bookList .detailTable-heading .detailTable-cell,
     .additional_product_history .bookList .detailTable-heading .detailTable-cell {
@@ -1743,6 +1937,7 @@
         font-size: 15px;
         line-height: normal;
         padding: 9px 0;
+        height: auto;
     }
     .order_complete .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell,
     .additional_product_history .bookList .detailTable-left .detailTable-row:last-child .detailTable-cell {
@@ -2121,8 +2316,10 @@
     /** END qaBox **/
 
     /** BEGIN staging **/
-
-
     /** END staging **/
-
+}
+@-moz-document url-prefix() {
+    .detailTable-mid {
+        height: 100%
+    }
 }

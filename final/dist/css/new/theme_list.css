@@ -73,6 +73,9 @@
     height: 7px;
 	background-size: contain;
 }
+.theme_list .sequence-select .search_item i:before {
+    content: unset;
+}
 .theme_list .sequence-select .search_item_open {
 	width: 118px;
     height: 4px;
@@ -82,11 +85,11 @@
     left: -1px;
     background: #fff;
 }
-.theme_list .sequence-select .search_item_area {
+.theme_list .sequence-select .search_item_area.address {
     overflow: hidden;
 }
-.theme_list .sequence-select .search_item_area span {
-    width: 14% !important;
+.theme_list .sequence-select .search_item_area.address span {
+    width: calc(100% / 7);
     margin-bottom: 5px;
     padding-right: 9px;
     font-size: 15px;
@@ -96,7 +99,7 @@
     text-decoration: none;
     float: left;
 }
-.theme_list .sequence-select .search_item_area span input {
+.theme_list .sequence-select .search_item_area.address span input {
     display: inline-block;
     height: auto;
     line-height: 20px;

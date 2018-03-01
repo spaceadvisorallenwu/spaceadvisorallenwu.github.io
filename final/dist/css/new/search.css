@@ -109,9 +109,6 @@
 .search main > .search-box .first a.add:hover {
     text-decoration: underline;
 }
-.search main > .search-box .first a.add:hover i {
-    text-decoration: none;
-}
 .search main > .search-box .first a.add i {
     font-size: 15px;
     padding-right: 5px;
@@ -232,9 +229,8 @@
     font-size: 15px;
     width: 50%;
     margin-bottom: 5px;
-    padding-right: 10px;
+    padding-right: 9px;
     font-weight: normal;
-    color: #4e5059;
     line-height: normal;
     text-decoration: none;
     float: left;
@@ -242,6 +238,16 @@
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_area span input {
     display: inline-block;
     height: auto;
+}
+.search main > .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_area.address span {
+    width: calc(100% / 7);
+}
+.search main > .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_area.event tr {
+    display: block;
+    margin-bottom: 20px;
+}
+.search main > .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_area.event tr:last-child {
+    margin-bottom: 0;
 }
 .search main > .search-box .search_bar > .content > ul > li .search_item_detail > .search_item_area p.title {
     margin-bottom: 9px;
@@ -725,6 +731,7 @@
     width: 295px;
     overflow: hidden;
     float: left;
+    margin-top: 9px;
 }
 .search .search-list li .place .down .abgne a {
     display: block;
@@ -896,7 +903,7 @@
     padding: 0 0 0 11px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 90px !important;
+    width: 90px;
     text-align: center;
     font-size: 15px;
     height: 30px;
@@ -952,7 +959,6 @@
     background-color: #ccc;
     border-color: #fff;
 }
-.number_change.have,
 .search.mapBox .search-box.searchPopup .content li.detatime .day.have input {
     background-color: #ccc;
 }
@@ -1183,14 +1189,6 @@
     margin-right: 9px;
     letter-spacing: -1px;
 }
-.search main > .search-box .search_bar > .content > ul > li input.price::placeholder,
-.search main > .search-box .search_bar > .content > ul > li>input::placeholder,
-.search.mapBox .search-box.searchPopup .content li.detatime input::placeholder,
-.search.mapBox .search-box.searchPopup .first .input input::placeholder,
-.search .search-condition .first .input input::placeholder,
-.search main > .search-box .search_bar > .content > ul > li .search_item input::placeholder {
-    color: #9c9c9c !important;
-}
 .placeList .text {
     width: 100%;
     margin: 0 auto;
@@ -1406,20 +1404,21 @@
     .search .search-list li .place .text {
         margin-top: 9px;
     }
-    .search .search-list li .place .text p.no,
-    .search .search-list li .place .text a.title {
-        margin-bottom: 5px;
-    }
     .search .search-list li .place .text a.title {
         float: none;
         width: 100%;
         height: auto;
         font-size: 21px;
+        margin-top: 5px;
+        margin-bottom: 0;
         text-overflow: unset;
         line-height: normal;
         display: -webkit-box;
         -webkit-line-clamp: unset;
         -webkit-box-orient: vertical;
+    }
+    .search .search-list li .place .text p.no {
+        margin-bottom: 5px;
     }
     .search .search-list li .place .ecentTime_box .evt,
     .search .search-list li .place .text span.price {

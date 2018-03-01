@@ -1,4 +1,32 @@
 @charset 'UTF-8';
+/** BEGIN **/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+.mapBox .placeBox,.search.mapBox .search-box,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking b,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking p,.search.mapBox .search-box.searchPopup .confirmBtn,.stepContent,.stepContainer,.detailTable,.stepBox .price,.writeContent,.writeInformation1,.writeInformation2,.writeInformation3,.writeInformation4,.writeInformation5,.staging .instalment,.lnvoiceField,.appointment_Result .demand li,.appointment_Content .appointment_photo,.orderContainer .monweek,.order_timeList,.order_tiemBox,.equipment,.orderInformation4,.period_content,.buyContent,.tremsContent,.addAdvaContent,.addAdvaVenue,.addvaBrand .addvaBrandList,.app_stepBox .appInput,.advantageTag,.team,.vacancylist,.qaBox,.instructionStep,.instructionFlow_Box,.information_content,.infor_item2,.infor_item3 ul,.popular li,.leftContent header .assort,.share_icon,.subscription,.similar,.event_item2,.event_item3,.event_item4,.event_item5,.collect_banner .colTxtContent,.package,.collectItem8,.themezoneBox .sequence,.hotelList,.vanueHeader,.description,.vanueTag,.vanueBox,.synthesis {
+    zoom: 1;
+}
+.mapBox .placeBox:before,.search.mapBox .search-box:before,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking b:before,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking p:before,.search.mapBox .search-box.searchPopup .confirmBtn:before,.stepContent:before,.stepContainer:before,.detailTable:before,.stepBox .price:before,.writeContent:before,.writeInformation1:before,.writeInformation2:before,.writeInformation3:before,.writeInformation4:before,.writeInformation5:before,.staging .instalment:before,.lnvoiceField:before,.appointment_Result .demand li:before,.appointment_Content .appointment_photo:before,.orderContainer .monweek:before,.order_timeList:before,.order_tiemBox:before,.equipment:before,.orderInformation4:before,.period_content:before,.buyContent:before,.tremsContent:before,.addAdvaContent:before,.addAdvaVenue:before,.addvaBrand .addvaBrandList:before,.app_stepBox .appInput:before,.advantageTag:before,.team:before,.vacancylist:before,.qaBox:before,.instructionStep:before,.instructionFlow_Box:before,.information_content:before,.infor_item2:before,.infor_item3 ul:before,.popular li:before,.leftContent header .assort:before,.share_icon:before,.subscription:before,.similar:before,.event_item2:before,.event_item3:before,.event_item4:before,.event_item5:before,.collect_banner .colTxtContent:before,.package:before,.collectItem8:before,.themezoneBox .sequence:before,.hotelList:before,.vanueHeader:before,.description:before,.vanueTag:before,.vanueBox:before,.synthesis:before,.mapBox .placeBox:after,.search.mapBox .search-box:after,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking b:after,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking p:after,.search.mapBox .search-box.searchPopup .confirmBtn:after,.stepContent:after,.stepContainer:after,.detailTable:after,.stepBox .price:after,.writeContent:after,.writeInformation1:after,.writeInformation2:after,.writeInformation3:after,.writeInformation4:after,.writeInformation5:after,.staging .instalment:after,.lnvoiceField:after,.appointment_Result .demand li:after,.appointment_Content .appointment_photo:after,.orderContainer .monweek:after,.order_timeList:after,.order_tiemBox:after,.equipment:after,.orderInformation4:after,.period_content:after,.buyContent:after,.tremsContent:after,.addAdvaContent:after,.addAdvaVenue:after,.addvaBrand .addvaBrandList:after,.app_stepBox .appInput:after,.advantageTag:after,.team:after,.vacancylist:after,.qaBox:after,.instructionStep:after,.instructionFlow_Box:after,.information_content:after,.infor_item2:after,.infor_item3 ul:after,.popular li:after,.leftContent header .assort:after,.share_icon:after,.subscription:after,.similar:after,.event_item2:after,.event_item3:after,.event_item4:after,.event_item5:after,.collect_banner .colTxtContent:after,.package:after,.collectItem8:after,.themezoneBox .sequence:after,.hotelList:after,.vanueHeader:after,.description:after,.vanueTag:after,.vanueBox:after,.synthesis:after {
+    content: "";
+    display: table;
+    height: 0;
+    overflow: hidden;
+}
+.mapBox .placeBox:after,.search.mapBox .search-box:after,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking b:after,.search.mapBox .search-box.searchPopup .content > ul > li .search_item_detail.booking p:after,.search.mapBox .search-box.searchPopup .confirmBtn:after,.stepContent:after,.stepContainer:after,.detailTable:after,.stepBox .price:after,.writeContent:after,.writeInformation1:after,.writeInformation2:after,.writeInformation3:after,.writeInformation4:after,.writeInformation5:after,.staging .instalment:after,.lnvoiceField:after,.appointment_Result .demand li:after,.appointment_Content .appointment_photo:after,.orderContainer .monweek:after,.order_timeList:after,.order_tiemBox:after,.equipment:after,.orderInformation4:after,.period_content:after,.buyContent:after,.tremsContent:after,.addAdvaContent:after,.addAdvaVenue:after,.addvaBrand .addvaBrandList:after,.app_stepBox .appInput:after,.advantageTag:after,.team:after,.vacancylist:after,.qaBox:after,.instructionStep:after,.instructionFlow_Box:after,.information_content:after,.infor_item2:after,.infor_item3 ul:after,.popular li:after,.leftContent header .assort:after,.share_icon:after,.subscription:after,.similar:after,.event_item2:after,.event_item3:after,.event_item4:after,.event_item5:after,.collect_banner .colTxtContent:after,.package:after,.collectItem8:after,.themezoneBox .sequence:after,.hotelList:after,.vanueHeader:after,.description:after,.vanueTag:after,.vanueBox:after,.synthesis:after {
+    clear: both;
+}
+/** END **/
+
 *,
 *:before,
 *:after {
@@ -31,16 +59,89 @@ input, select, textarea {
 input::placeholder,
 select::placeholder,
 textarea::placeholder {
+    color: #c7c9c8;
+    color: #9c9c9c;
+}
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #c7c9c8;
+    color: #9c9c9c;
+}
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #c7c9c8;
+    color: #9c9c9c;
+}
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #c7c9c8;
+    color: #9c9c9c;
+}
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #c7c9c8;
     color: #9c9c9c;
 }
 img,
 iframe {
     vertical-align: middle;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr,th,td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+}
+select::-ms-expand {
+    display: none;
+}
+ol,ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
 
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+    height: 0;
+    overflow: hidden;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+}
+.content {
+    width: 90%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.pc_banner,
 .desk {
     display: block;
 }
+.mo_banner,
 .mobile,
 .__mb  {
     display: none;
@@ -237,11 +338,115 @@ span._star._star_5:before {
 .assess input[type=checkbox]+label {
     color: #4e5059;
 }
+.col {
+    font-size: 15px;
+    text-align: left;
+}
+.col .assess {
+    width: 15%;
+    margin-right: 9px;
+    margin: 0;
+}
 .col .assess input[type=checkbox]+label:after {
     font-size: 15px;
     color: #4f6ea2;
     background: transparent;
     top: 3px;
+}
+.assess input[type=radio],
+.assess input[type=checkbox] {
+    width: 17px;
+    display: none;
+    margin-right: 5px;
+}
+.assess input[type=radio]+label,
+.assess input[type=checkbox]+label {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    width: 100%
+}
+.col .assess input[type=radio]+label:before,
+.col .assess input[type=checkbox]+label:before {
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+    border: 1px solid #4f6ea2;
+}
+.assess input[type=radio]+label:before,
+.assess input[type=radio]+label:after,
+.assess input[type=checkbox]+label:before,
+.assess input[type=checkbox]+label:after {
+    display: inline-block;
+    content: '';
+    vertical-align: 0.1ex;
+    border-radius: 50%;
+    line-height: 16px;
+}
+.assess input[type=radio]+label:before,
+.assess input[type=checkbox]+label:before {
+    width: 17px;
+    height: 17px;
+    background: #ffffff;
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+}
+.col .assess input[type=radio]+label:after,
+.col .assess input[type=checkbox]+label:after {
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+    background: url(../images/check.png) 0px -20px no-repeat;
+    top: 3px;
+    left: 0px;
+}
+.assess input[type=radio]:checked+label:after,
+.assess input[type=checkbox]:checked+label:after {
+    opacity: 1;
+}
+.assess input[type=radio]+label:after,
+.assess input[type=checkbox]+label:after {
+    width: 10px;
+    height: 10px;
+    background-color: #6bad3d;
+    position: absolute;
+    top: 11px;
+    left: 4px;
+    opacity: 0;
+}
+.assess input[type=radio]+label:before,
+.assess input[type=radio]+label:after,
+.assess input[type=checkbox]+label:before,
+.assess input[type=checkbox]+label:after {
+    display: inline-block;
+    content: '';
+    vertical-align: 0.1ex;
+    border-radius: 50%;
+    line-height: 16px;
+}
+.assess input[type=checkbox]+label {
+    width: auto;
+    color: #4f6ea2;
+}
+.assess input[type=checkbox]+label:before,
+.assess input[type=checkbox]+label:after {
+    border-radius: 0;
+}
+.col .assess input[type=checkbox]+label:after {
+    background: #4f6ea2;
+    top: 4px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    content: "\f00c"
 }
 
 
@@ -852,10 +1057,12 @@ footer .bottom li:last-child a:last-child:hover img {
     input, select, textarea {
         height: 35px;
     }
+    .mo_banner,
     .mobile,
     .__mb {
         display: initial;
     }
+    .pc_banner,
     .desk,
     .__pc {
         display: none;

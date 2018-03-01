@@ -670,11 +670,6 @@
 				additionalMBElem.append(additionalMBItem);
 			}
 
-			//添加 折扣代碼
-			$('.increase').on('click',function(){
-				$('.writeInformation3').children('ul').append('<li><h4>折扣代碼</h4><div class="amount_input"><i></i><input type="text"></div></li>');
-			});
-
 			$('.part4>li').on('click',function(){
 				if(!$(this).hasClass('active')){
 					$('.part4 li').removeClass('active');

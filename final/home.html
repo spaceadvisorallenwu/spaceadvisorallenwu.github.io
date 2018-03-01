@@ -263,7 +263,6 @@
 								</div>
 								<!-- /search_item_detail -->
 							</div>
-							<!-- <input type="number" name="textfield" min="0" id="textfield" placeholder="容納人數" class="desk number_change" /> -->
 							<select name="select-people" id="select-people" class="_select">
 								<option value="0">容納人數</option>
 								<option>不限</option>
@@ -957,14 +956,6 @@
 					search_item.removeClass('have');
 					search_item_detail.removeClass('have');
 					}else $("#" + div_name).html(checkbox_value);
-				}
-			});
-			//input change
-			$(".number_change").change(function(){
-				if($(this).val() == '' || $(this).val() == '0'){
-					$(this).removeClass('have');
-				}else{
-					$(this).addClass('have');
 				}
 			});
 			</script>

@@ -1,5 +1,126 @@
 @charset 'UTF-8';
 /** BEGIN all_order **/
+
+.writeInput.part4 .col .assess input[type=radio]+label:before,
+.writeInput.part4 .col .assess input[type=checkbox]+label:before,
+.writeInput.part5 .col .assess input[type=radio]+label:before,
+.writeInput.part5 .col .assess input[type=checkbox]+label:before {
+    border: 1px solid #d76050;
+}
+.writeInput.part4 .col .assess input[type=radio]+label:after,
+.writeInput.part4 .col .assess input[type=checkbox]+label:after,
+.writeInput.part5 .col .assess input[type=radio]+label:after,
+.writeInput.part5 .col .assess input[type=checkbox]+label:after {
+    width: 12px;
+    height: 12px;
+    background: #d76050;
+    top: 8px;
+    left: 4px;
+}
+.writeInput.part3 li i {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.writeInput.part3 .correct i:before {
+    content: "\f058";
+    color: #4cc176;
+}
+.writeInput.part3 .error i:before {
+    content: "\f057";
+    color: #ec0e22;
+}
+
+/** BEGIN writeContent **/
+.writeContent {
+    position: relative;
+}
+.writeContent select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../../images/lanrrw.png") no-repeat scroll right center transparent;
+}
+.writeContent .custodyBtn a,
+.writeContent .custodyBtn span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.writeContent .custodyBtn span b {
+    color: #d76050;
+    font-weight: normal;
+}
+.writeContent .custodyBtn span a {
+    color: #4f6ea2;
+    vertical-align: initial;
+}
+.writeContent .custodyBtn span a:hover {
+    text-decoration: underline;
+}
+
+.writeContent .writeContainer {
+    width: 68%;
+    max-width: 693px;
+    float: left;
+}
+/** END writeContent **/
+
+/** BEGIN appointment_Result **/
+.appointment_Result {
+    float: right;
+    width: 100%;
+    max-width: 295px;
+}
+.appointment_Result .demand h4,
+.appointment_Result .demand .deTxt,
+.appointment_Result .demand li {
+    width: 100%;
+    font-size: 15px;
+}
+/** END appointment_Result **/
+
+/** BEGIN appointment_detail **/
+.appointment_detail time,
+.appointment_detail span {
+    display: inline-block;
+    vertical-align: top;
+}
+.appointment_detail .program b {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: normal;
+}
+.appointment_detail .program .formula {
+    float: right;
+    width: 45%;
+    text-align: right;
+}
+.appointment_detail .program .formula i {
+    cursor: pointer;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #b9babd;
+    display: none;
+}
+.appointment_detail .program .formula i:before {
+    content: "\f059"
+}
+/** END appointment_detail **/
+
 .orderstep._boxStyle {
     margin: 20px auto;
     padding: 0;
@@ -86,9 +207,17 @@
 }
 
 /** BEGIN order_time **/
+.order_time .orderContainer {
+    width: 68%;
+    max-width: 693px;
+    float: left;
+}
 .order_time .orderContainer h2 {
+    text-align: left;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #d76050;
     font-size: 21px;
-    letter-spacing: 0;
     color: #d76050;
     border-bottom-color: #d76050;
     display: flex;
@@ -96,33 +225,130 @@
     padding: 5px 9px;
     background: unset;
 }
-.order_time .orderInformation1 .calendar {
-    border: 0;
+.order_time .orderContainer h2:before {
+    content: "\f274";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 21px;
 }
-.order_time .orderContainer .monweek {
+.order_time .orderContainer .oder_mo {
+    display: none;
+}
+
+/** BEGIN calendar **/
+.order_time .orderContainer .calendar {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 0 20px;
+}
+.order_time .orderContainer .calendar .monweek {
     width: 100%;
     border: 1px solid gray;
     border-radius: 5px 5px 0 0;
 }
-.order_time .orderInformation1 .calendar .month {
+.order_time .orderContainer .calendar .month {
+    padding: 15px 15px;
+    font-weight: bold;
+    color: #4e5059;
+    line-height: normal;
+    text-decoration: none;
+    text-align: center;
     font-size: 17px;
 }
+.order_time .orderContainer .calendar .month p {
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+}
+.order_time .orderContainer .calendar .month a {
+    display: inline-block;
+    color: #4e5059;
+    float: left;
+}
+.order_time .orderContainer .calendar .month a:last-child {
+    float: right;
+}
+.order_time .orderContainer .calendar .month a:hover {
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, .14);
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, .14);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .14);
+    transition: all .5s;
+}
+.order_time .orderContainer .calendar li {
+    width: calc(100% / 7);
+    text-align: center;
+    float: left;
+}
 .order_time .orderContainer .calendar ul.week li {
+    color: #979797;
+    line-height: 2;
+    text-decoration: none;
+    font-weight: normal;
     font-size: 15px;
 }
-.order_time .calendar ul.day {
+.order_time .orderContainer .calendar ul.day {
+    display: inline-block;
+    overflow: hidden;
     border: 1px solid gray;
     border-radius: 0 0 5px 5px;
     border-top: 0;
 }
 .order_time .orderContainer .calendar ul.day li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px #e6e6e6 solid;
+    border-right: 1px #e6e6e6 solid;
+    font-weight: bold;
+    color: #4e5059;
+    text-decoration: none;
+    position: relative;
+    text-align: left;
     font-size: 15px;
     line-height: normal;
     height: 60px;
     padding: 5px;
 }
-.order_time_hour .orderContainer .calendar ul.day li .lightning {
-
+.order_time .orderContainer .calendar ul.day li.no {
+    color: #dce0e0;
+    background-color: #f3f3f3;
+}
+.order_time .orderContainer .calendar ul.day li.active {
+    background: #4f6ea2;
+    color: #fff;
+}
+.order_time .orderContainer .calendar ul.day li.active .money {
+    color: #fff;
+}
+.order_time .orderContainer .calendar ul.day li.general,
+.order_time .orderContainer .calendar ul.day li.fold {
+    cursor: pointer;
+}
+.order_time .orderContainer .calendar ul.day li .money {
+    font-size: 15px;
+    margin-top: 9px;
+    font-weight: normal;
+}
+.order_time .orderContainer .calendar ul.day li.fold .money {
+    color: #d76050;
+}
+.order_time .orderContainer .calendar ul.day li.fold span {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    right: 5px;
+    background: #d76050;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 0 5px;
+    opacity: .8;
+    text-align: center;
 }
 .order_time .orderContainer .calendar ul.day li .lightning:before {
     content: "\f0e7";
@@ -134,21 +360,18 @@
     -webkit-font-smoothing: antialiased;
     margin-left: 5px;
 }
-.order_time .orderContainer .calendar ul.day li.fold span {
-    top: 5px;
-    right: 5px;
-    background: #d76050;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 12px;
-    line-height: normal;
-    padding: 0 5px;
-    opacity: .8;
+.order_time .orderContainer .calendar ul.day li:nth-child(36),
+.order_time .orderContainer .calendar ul.day li:nth-child(37),
+.order_time .orderContainer .calendar ul.day li:nth-child(38),
+.order_time .orderContainer .calendar ul.day li:nth-child(39),
+.order_time .orderContainer .calendar ul.day li:nth-child(40),
+.order_time .orderContainer .calendar ul.day li:nth-child(41),
+.order_time .orderContainer .calendar ul.day li:nth-child(42),
+.order_time .orderContainer .calendar ul.day li:nth-child(43) {
+    border-bottom: none;
 }
-.order_time .orderContainer .calendar ul.day li .money {
-    font-size: 15px;
-    margin-top: 9px;
-}
+/** END calendar **/
+
 .order_time .orderContainer .calendar ul.day li.general:hover,
 .order_time .orderContainer .calendar ul.day li.fold:hover,
 .order_time .order_tiemBox .order_timeContent .choose a:hover,
@@ -182,6 +405,9 @@
 #wrapper.order_time .custodyBtn {
     margin-bottom: 40px;
 }
+.order_time .orderInformation2 h2:before {
+    content: "\f017";
+}
 .order_time .orderInformation3 h2:before {
     content: "\f07a";
 }
@@ -208,11 +434,65 @@
     align-items: center;
     width: 100%;
 }
+#wrapper.order_time .order_tiemBox .assess input[type=checkbox] {
+    display: inline-block;
+    width: unset;
+    height: unset;
+    /*display: none;*/
+    margin: 0;
+    margin-right: 9px;
+}
+.period_content li .assess input[type=checkbox]+label {
+    width: 100%;
+    /*display: inline-flex;*/
+    /*align-items: center;*/
+    line-height: normal;
+}
+#wrapper.order_time .assess input[type=checkbox]+label:before,
+#wrapper.order_time .assess input[type=checkbox]+label:after {
+    /*content: unset;*/
+    /*top: 0;*/
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border-radius: 3px;
+    display: none;/** checkbox style hidden **/
+}
+#wrapper.order_time .assess input[type=checkbox]+label:after {
+    content: "\f00c";
+    position: absolute;
+    top: 25px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-family: FontAwesome;
+    text-align: center;
+    color: #fff;
+    transition: 0s;
+    font-weight: normal;
+    display: none;/** checkbox style hidden **/
+}
+#wrapper.order_time.order_time_period .assess input[type=checkbox]+label:after {
+    top: 7px;
+    font-size: 17px;
+    padding-left: 1px;
+}
+#wrapper.order_time.order_time_period li._item._havePlan2 .assess input[type=checkbox]+label:after {
+    top: 24px;
+}
+
+/** BEGIN equipment **/
+.order_time .equipment {
+    width: 100%;
+}
+.order_time .equipment .col {
+    margin-top: 0;
+}
 .order_time .equipment .col .assess .number select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url(../../images/down-arrow.png);
+    background: url(../../images/down-arrow.png) no-repeat scroll right -18px transparent;
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
     background-size: 10px;
@@ -231,14 +511,6 @@
     cursor: default;
     opacity: .7;
 }
-#wrapper.order_time .order_tiemBox .assess input[type=checkbox] {
-    display: inline-block;
-    width: unset;
-    height: unset;
-    /*display: none;*/
-    margin: 0;
-    margin-right: 9px;
-}
 #wrapper.order_time .equipment .assess input[type=checkbox] {
     display: inline-block;
     width: unset;
@@ -248,47 +520,22 @@
     display: flex;
     align-items: center;
 }
-.period_content li .assess input[type=checkbox]+label {
+.order_time .equipment .col .assess i {
+    margin: 0 9px;
+    display: inline-flex;
+}
+.order_time .orderInformation3 .equipment .box .add {
+    height: calc(39px * 6);
+    overflow: hidden;
+}
+/** END equipment **/
+
+/** BEGIN orderInformation4 **/
+.order_time .orderInformation4 {
     width: 100%;
-    /*display: inline-flex;*/
-    /*align-items: center;*/
-    line-height: normal;
 }
-#wrapper.order_time .assess input[type=checkbox]+label:before,
-#wrapper.order_time .assess input[type=checkbox]+label:after {
-    /*content: unset;*/
-    /*top: 0;*/
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    border-radius: 3px;
-
-
-    display: none;/** checkbox style hidden **/
-}
-#wrapper.order_time .assess input[type=checkbox]+label:after {
-    content: "\f00c";
-    position: absolute;
-    top: 25px;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    font-family: FontAwesome;
-    text-align: center;
-    color: #fff;
-    transition: 0s;
-    font-weight: normal;
-
-
-    display: none;/** checkbox style hidden **/
-}
-#wrapper.order_time.order_time_period .assess input[type=checkbox]+label:after {
-    top: 7px;
-    font-size: 17px;
-    padding-left: 1px;
-}
-#wrapper.order_time.order_time_period li._item._havePlan2 .assess input[type=checkbox]+label:after {
-    top: 24px;
+.order_time .orderInformation4 .col {
+    margin-top: 0;
 }
 #wrapper.order_time .orderInformation4 .assess input[type=checkbox] {
     display: block;
@@ -298,31 +545,37 @@
     color: #4e5059;
     top: 4px;
 }
-.order_time .equipment .col .assess i {
-    margin: 0 9px;
-    display: inline-flex;
-}
-.order_time .orderInformation3 .equipment .box .add {
-    height: calc(39px * 6);
-    overflow: hidden;
-}
 .order_time .orderInformation4 > p {
     font-size: 15px;
     line-height: normal;
     margin-bottom: 9px;
+    width: 100%;
+}
+.order_time .orderInformation4 a {
+    color: #4f6ea2;
+}
+.order_time .orderInformation4 a:hover {
+    text-decoration: underline;
 }
 .order_time .orderInformation4 .col .assess {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .order_time .orderInformation4 .col .assess input[type=checkbox]+label {
     font-size: 15px;
 }
+/** END orderInformation4 **/
+
+/** BEGIN orderInformation5 **/
 .order_time .orderInformation5 h2:before {
     content: "\f274";
 }
-.order_time .orderInformation5 p {
+.order_time .orderInformation5 > p {
     font-size: 15px;
+    line-height: normal;
+    margin-bottom: 9px;
+    width: 100%;
 }
 #wrapper.order_time .orderInformation5 textarea {
     padding: 10px 8px;
@@ -334,7 +587,10 @@
     border: none;
     border-radius: 5px;
 }
+/** END orderInformation5 **/
+
 .order_time .order_tiemBox {
+    width: 100%;
     margin-top: 9px;
     display: flex;
     justify-content: space-between;
@@ -346,6 +602,7 @@
     width: 100%;
     max-width: unset;
     margin-right: 20px;
+    float: left;
 }
 .order_time .order_tiemBox .order_timeContent:last-child {
     margin-right: 0;
@@ -362,6 +619,7 @@
     opacity: .8;
 }
 .order_time .order_timeList {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -380,8 +638,13 @@
     content: "請選擇日期";
 }
 .order_time .order_timeList li {
+    position: relative;
+    float: left;
     width: 100%;
     font-size: 15px;
+}
+.order_time .order_timeList li a {
+    color: #4e5059;
 }
 .order_time .order_tiemBox .order_timeContent li {
     border-bottom: 1px solid #ddd;
@@ -391,6 +654,7 @@
     letter-spacing: 0;
     position: relative;
     cursor: pointer;
+    text-align: center;
 }
 .order_time .order_tiemBox .order_timeContent li:not(._disable):hover {
     background: rgba(79, 110, 162, .2);
@@ -481,11 +745,6 @@
 .order_time_period .caseSelect{
     margin-bottom:55px;
 }
-.order_time_period .caseSelect h2:before{
-    content:"\f274";
-     display:inline-block;
-     font:normal normal normal 14px/1 FontAwesome;
-}
 .order_time_period .caseSelect .flexbox{
     display:flex;
      flex-wrap:wrap;
@@ -544,9 +803,6 @@
 
 
 
-
-
-
 .order_time_period li._item .col .assess {
     display: flex;
     align-items: center;
@@ -566,7 +822,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url(../../images/down-arrow.png);
+    background: url(../../images/down-arrow.png) no-repeat scroll right 6px transparent;
     background-repeat: no-repeat;
     background-position: calc(100% - 10px) center;
     background-size: 10px;
@@ -596,12 +852,26 @@
     -webkit-font-smoothing: antialiased;
     margin-left: 5px;
 }
-.preiodBox {
-    display: flex;
-    align-items: center;
+
+.period_content {
+    margin-top: 5px;
+    width: 100%
 }
-.preiodBox .plan {
-    padding-left: 0;
+.period_content li {
+    border-bottom: 1px solid #e1e1e0;
+}
+.period_content li:hover {
+    background: #f3f3f3;
+}
+.period_content li:hover.not_choose {
+    background: none;
+}
+.period_content li.not_choose .col {
+    opacity: .35;
+}
+.period_content li .col {
+    padding: 9px 0 9px 9px;
+    margin: 0;
 }
 .period_content .prices {
     padding-left: 0;
@@ -610,6 +880,8 @@
     font-size: 15px;
 }
 .period_content .rebates .prices span {
+    position: relative;
+    display: inline-block;
     padding: 0;
 }
 .period_content .rebates .prices .rebate {
@@ -623,7 +895,6 @@
     top: 0;
     right: 0;
     margin-right: 9px;
-    margin-top: -5px;
 }
 .period_content .rebates:not(._haveDiscount) .prices .rebate {
     display: none;
@@ -634,23 +905,40 @@
     margin: 0;
     width: auto;
     font-size: 15px;
+    margin-left: 28px;
 }
-.period_content li {
-    border-width: 1px;
+.period_content .rebates._haveDiscount .prices .price {
+    color: #d76050;
+    margin-left: 0;
 }
 .period_content .rebates .prices b {
     font-size: 15px;
     font-weight: normal;
 }
 .period_content .preiodBox {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
     letter-spacing: 0;
     width: calc(100% - 38px);
 }
+.period_content .preiodBox h4 {
+    display: none;
+}
+.period_content .preiodBox time {
+    position: relative;
+    width: 26%;
+    color: #4e5059;
+}
 .period_content .preiodBox .plan {
+    padding-left: 0;
     margin: 0 20px;
+    width: 36%;
 }
 .period_content .preiodBox .prices {
-    padding-left: 15px;
+    padding-left: 5px;
 }
 .order_time.order_time_period .order_timeList li:nth-child(2) {
     margin-left: 20px;
@@ -659,22 +947,6 @@
     padding-left: 60px
 }
 
-
-
-/*
-.preiodBox time.lightning:after{content:""; display:inline-block; width:11px; height:16px; margin-left:5px; background-image:url(../../images/lightning.png); background-size:contain;}
-.period_content li select{color:#4f6ea2; font-size:16px; background:url(../../images/ore_arrd.png) no-repeat scroll right -28px;}
-.period_content li select[disabled="disabled"]{color:#cacacd; background:url(../../images/ore_arrd.png) no-repeat scroll right -69px;}
-.preiodBox span{font:12px/17px "Microsoft JhengHei"; padding:0 4px;}
-.period_content .preiodBox .prices{position:relative; padding-left:42px;}
-.period_content .rebates .prices .rebate{position:absolute; left:0; top:3px; right:auto;}
-.preiodBox .prices{padding-left:0;}
-.period_content .not_choose .col{opacity:1;}
-.period_content{margin-top:0;}
-.period_content li{border-bottom:1px solid #e1e1e0;}
-.order_timeList li{width:calc(30% + 52px); max-width:243px; }
-.order_timeList li:last-child{width:30%; max-width:191px;}
-*/
 .period_content li select{margin-left:-10px;}
 .period_content .rebates .sub{ background-color:#fff; padding:5px 0; border-top:1px solid #d2d2d2;}
 
@@ -758,9 +1030,6 @@
     padding-left: 30px;
     font-size: 15px;
 }
-
-
-
 .order_time_period .notice_txt{
     font-size: 15px;
     line-height: normal;
@@ -782,28 +1051,23 @@
     color:#4f6ea2;
     text-decoration:underline;
 }
-
 /** END order_time **/
-
-
-
-
-
-
-
-
-
 
 /** BEGIN order_cart **/
 .buyContent._boxStyle {
     padding-top: 20px;
 }
+.buyContent .bookList .custodyBtn {
+    text-align: right;
+}
 .buyContent .title {
     margin: 20px 0;
+    width: 100%;
 }
 .buyContent .title h2 {
-    letter-spacing: 0;
-    background: #fff;
+    text-align: left;
+    font-weight: normal;
+    margin: 0 0 9px 0;
     padding: 5px 9px;
     font-size: 21px;
     color: #4e5059;
@@ -819,19 +1083,38 @@
     font-size: 13px;
     text-align: right;
     padding: 0 9px;
+    margin: 0 auto;
 }
 .buyContent .title .titTxt i {
     margin-right: 3px;
+}
+.buyContent .title .titTxt b,
+.buyContent .title .titTxt .fa-shopping-cart:before {
+    color: #d76050;
+}
+.buyContent .title .titTxt a {
+    font-size: 15px;
+    color: #4e5059;
+}
+.buyContent .title .titTxt a:hover {
+    text-decoration: underline;
+}
+.buyContent .noproduct {
+    display: none;
+    text-align: center;
+    font-size: 21px;
+    color: #ccc;
+    padding: 50px 0;
 }
 /** END order_cart **/
 
 /** BEGIN order_form **/
 .stepBox.fill_box .writeContent .writeInput li .col {
     font-size: 15px;
+    margin: 0;
 }
 .stepBox.fill_box .writeContent .writeContainer h2 {
     font-size: 21px;
-    letter-spacing: 0;
     color: #4f6ea2;
     border-bottom: 1px solid #4f6ea2;
     display: flex;
@@ -853,6 +1136,7 @@
 .stepBox.fill_box .writeContent .writeInformation3,
 .stepBox.fill_box .writeContent .writeInformation4,
 .stepBox.fill_box .writeContent .writeInformation5 {
+    clear: both;
     margin-bottom: 40px;
 }
 .stepBox.fill_box .writeContent .writeInput {
@@ -867,6 +1151,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 .stepBox.fill_box .writeContent .writeInput li.warning_error h4 {
     margin-bottom: 5px;
@@ -901,6 +1186,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    position: relative;
 }
 .stepBox.fill_box .writeContent .writeInput small {
     margin-bottom: 0;
@@ -990,10 +1276,11 @@
     border-radius: 5px;
     background: #f3f3f3;
     padding: 9px;
-    margin-bottom: 9px;
+    margin: 9px 0;
 }
 .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li {
     width: 100%;
+    max-width: 100%;
     flex-direction: row;
     align-items: center;
     background: transparent;
@@ -1006,8 +1293,16 @@
 .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li h4 {
     margin: 0 9px;
 }
-.stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 .amount_input, .writeInput.part3 .amount_select {
-    border: 0;
+.stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 .amount_input,
+.stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 .amount_select {
+    position: relative;
+    width: 100%;
+    max-width: 156px;
+    border-radius: 5px;
+    background: #fff;
+}
+.stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 .amount_select {
+    margin: 0 9px;
 }
 .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li h4,
 .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_input,
@@ -1097,6 +1392,7 @@
 .stepBox.fill_box .writeContent .writeInput.part4 .col_content,
 .stepBox.fill_box .writeContent .writeInput.part5 .col_content {
     width: 97%;
+    display: inline-block;
 }
 .stepBox.fill_box .writeContent .writeInput.part4 .col_content h4,
 .stepBox.fill_box .writeContent .writeInput.part5 .col_content h4 {
@@ -1106,7 +1402,7 @@
 }
 .stepBox.fill_box .writeContent .writeInput.part4 .col_content img,
 .stepBox.fill_box .writeContent .writeInput.part5 .col_content img {
-    top: 0;
+    position: relative;
     margin-left: 5px;
     max-height: 22px;
 }
@@ -1121,15 +1417,17 @@
     display: inline-block;
     margin-top: 5px;
 }
+.stepBox.fill_box .writeContent .writeInput.part4 .col_content b {
+    display: block;
+    color: #d76050;
+    font-weight: normal;
+}
 .stepBox.fill_box .writeContent .writeInput.part4 .col .assess input[type=radio]+label:after,
 .stepBox.fill_box .writeContent .writeInput.part4 .col .assess input[type=checkbox]+label:after,
 .stepBox.fill_box .writeContent .writeInput.part5 .col .assess input[type=radio]+label:after,
 .stepBox.fill_box .writeContent .writeInput.part5 .col .assess input[type=checkbox]+label:after {
     top: 5px;
     left: 3px;
-}
-.stepBox.fill_box .writeContent .writeInformation5 h2 {
-    background-image: unset;
 }
 .stepBox.fill_box .writeContent .writeInformation5 .writeInput {
     flex-direction: column;
@@ -1262,10 +1560,6 @@
     padding: 0;
     margin: 0;
 }
-.stepBox.fill_box .writeContent .custodyBtn a span {
-    margin: 0;
-    width: unset;
-}
 .stepBox.fill_box .writeContent .custodyBtn > span {
     font-size: 13px;
     line-height: normal;
@@ -1283,6 +1577,7 @@
     background: #f3f3f3;
     overflow: hidden;
     margin-bottom: 20px;
+    width: 100%;
 }
 /*.order_time main._chooseNo .appointment_detail
 .order_time main._chooseNo .demand,
@@ -1313,6 +1608,7 @@
 .appointment_Content .appointment_photo .app_pic {
     margin-right: 9px;
     width: 38%;
+    max-width: 90px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1px;
@@ -1428,12 +1724,15 @@
 .appointment_detail .deta_box > .deta_content .discount {
     text-decoration: line-through;
     color: #ccc;
+    float: right;
 }
 .appointment_detail .deta_box:not(._haveDiscount) .deta_content .discount {
     text-decoration: none;
     color: #4e5059;
 }
 .appointment_detail .deta_content .rebate {
+    width: 100%;
+    text-align: right;
     color: #4e5059;
 }
 .appointment_detail .deta_content .sarebate span {
@@ -1460,6 +1759,7 @@
     padding: 9px;
     background: #fff;
     border-top: 1px solid #ddd;
+    line-height: normal;
 }
 #wrapper._isAdditional .appointment_Result .appointment_Content .demand,
 #wrapper._isAdditional.stepBox.fill_box .mobile-plan-stecla.mobile .demands,
@@ -1479,7 +1779,6 @@
     margin-bottom: 3px;
 }
 .appointment_Result .appointment_Content .demand .deTxt li span {
-    float: unset;
     width: 100%;
 }
 .appointment_Result .appointment_Content .priceBox {
@@ -1493,14 +1792,19 @@
 .stepBox.fill_box .appointment_Result .price {
     width: 100%;
     background: #fff;
+    font-size: 15px;
 }
 .appointment_Result.result_pc .instant {
+    margin-top: 20px;
+    background: #f3f3f3;
     border-radius: 5px;
     padding: 9px;
     font-size: 13px;
     line-height: normal;
 }
 .appointment_Result.result_pc .instant h3 {
+    display: block;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 .appointment_Result.result_pc .instant h3:after {
@@ -1543,8 +1847,6 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    float: unset;
-    width: unset;
 }
 .stepBox.fill_box .price li .valuaBox > b {
     width: 55%;
@@ -1678,6 +1980,19 @@
 
 
 @media only screen and (max-width: 980px) {
+    .writeContent .writeContainer {
+        width: 100%;
+        max-width: 100%
+    }
+    .result_pc {
+        display: none;
+    }
+
+    .demands h4 {
+        font-size: 15px;
+        margin-bottom: 9px;
+    }
+
     .orderstep ul li {
         font-size: 13px;
         padding: 9px 5px;
@@ -1706,8 +2021,6 @@
         display: none;
     }
 
-
-
     /** BEGIN order_time **/
     .orderstep._boxStyle {
         flex-direction: column;
@@ -1719,32 +2032,56 @@
         margin-right: 0;
         margin-bottom: 3px;
     }
+
+    /** BEGIN calendar **/
+    .order_time .orderContainer {
+        width: 100%;
+        max-width: 100%
+    }
     .order_time .orderContainer .calendar ul.day li {
         height: 70px;
         padding: 3px;
     }
     .order_time .orderContainer .calendar ul.day li.fold span {
+        position: relative;
         top: 5px;
         left: 0;
         padding: 0;
-        width: auto;
+        width: 100%;
     }
     .order_time .orderContainer .calendar ul.day li .money {
         display: none;
     }
     .order_timeList span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #f3f3f3;
         border-radius: 5px 5px 0 0;
         padding: 9px;
         overflow: hidden;
     }
-    .ord_mo li.active span {
+    .order_time .orderContainer .oder_mo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .order_time .orderContainer li.active .oder_mo+span {
+        background: #fff;
+        border: 1px solid #959595;
+        border-bottom: none;
+        position: relative;
+        top: 1px;
         font-weight: bold;
     }
     .order_time .order_tiemBox {
         margin-top: 0;
         border-radius: 0 0 5px 5px;
-        padding: 0;
         overflow: hidden;
+        border: 1px solid #959595;
     }
     .order_time.order_time_period .order_tiemBox {
         border-radius: 5px;
@@ -1753,10 +2090,21 @@
         margin-right: 0;
         border: 0;
         border-radius: 0;
+        max-width: 100%;
+        display: none;
+    }
+    .order_time .order_tiemBox .order_timeContent.active {
+        display: block;
     }
     #wrapper.order_time .bonus .assess {
         flex-direction: column;
     }
+    .order_time .order_timeList li a {
+        width: 100%;
+        display: block;
+    }
+
+    /** BEGIN equipment **/
     .order_time .equipment .col .assess .number,
     .order_time .equipment .col .assess .number select {
         width: 100%;
@@ -1767,6 +2115,8 @@
     .order_time .orderInformation3 .equipment .box .add {
         height: calc(68px * 6);
     }
+    /** END equipment **/
+
     #wrapper.order_time .writeContent .custodyBtn > span {
         width: 100%;
     }
@@ -1776,13 +2126,40 @@
     .order_time_period .period_content {
         margin-top: 0;
     }
+    .order_time_period .period_content time,
+    .order_time_period .period_content .prices {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 9px 0;
+    }
     .order_time_period .period_content .prices {
         margin: 0 20px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .order_time_period .period_content .preiodBox {
+        float: right;
         border-left: 1px solid #ddd;
+        display: inline-block;
+    }
+    .order_time_period .period_content label {
+        text-align: center;
+    }
+    .order_time_period .period_content .preiodBox h4 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 6px 0;
+        background: #e5e5e5;
     }
     .order_time_period .period_content .preiodBox .plan {
+        display: block;
+        text-align: center;
+        padding: 9px 0;
         margin: 0 20px;
         width: auto;
     }
@@ -1798,13 +2175,18 @@
         border: 0;
         border-bottom: 1px solid #959595;
         font-size: 15px;
+        background: #f3f3f3;
+    }
+    .order_time_period ul.period_content li:last-child{
+        border-bottom: 0;
+    }
+    .order_time_period ul.period_content li .col {
+        padding: 0;
     }
     .order_time_period .period_content .rebates .sub label div:nth-child(2),
     .order_time_period .period_content .rebates .sub label div:nth-child(3) {
         margin-left: 22px;
-    }
-    .order_time_period ul.period_content li:last-child{
-        border-bottom: 0;
+        font-size: 13px;
     }
     .order_time_period .period_content .rebates .sub{padding:9px 0; background: #f3f3f3;}
     .order_time_period .period_content .rebates .sub label div:nth-child(1) b:before,
@@ -1856,15 +2238,32 @@
     }
     /** BEGIN order_time **/
 
-
-
-
     /** BEGIN order_cart **/
     .buyBox .buyContent._boxStyle {
         padding-bottom: 0;
     }
     .buyContent .title {
         margin-top: 0;
+    }
+    .buyBox .bookList .detailTable,
+    .buyBox .bookList .demand,
+    .buyBox .bookList .custodyBtn {
+        width: 100%
+    }
+    .buyBox .detailTable-heading .detailTable-cell {
+        display: none;
+    }
+    .buyBox .detailTable-heading .detailTable-cell.reciprocal {
+        display: block;
+    }
+    .buyBox .detailTable-left .detailTable-cell.recipBox h4 {
+        display: block !important;
+    }
+    .buyBox .detailTable-row.detailTable-content .detailTable-cell:last-child {
+        text-align: center;
+    }
+    .buyBox .bookList .demand h4 {
+        width: 100%
     }
     /** END order_cart **/
 
@@ -1900,10 +2299,19 @@
         width: 100%;
         padding: 3px 0;
     }
+    .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_input,
+    .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_select,
+    .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
+        width: 100%;
+        max-width: 100%
+    }
+    .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_select {
+        margin-top: 5px;
+    }
     .stepBox.fill_box .writeContent .writeInformation3 .writeInput.part3 li .amount_money {
         font-size: 15px;
         padding: 5px 9px;
-        margin-top: 9px;
+        margin-top: 5px;
     }
     .stepBox.fill_box .writeContent .writeInformation5 .writeInput .lnvoiceField {
         padding: 9px;
@@ -1929,19 +2337,57 @@
         border-top: 1px solid #ddd;
         padding-top: 20px;
     }
-    .fill_box footer {
-        margin-bottom: 0;
+    .stepBox.fill_box .writeContent .custodyBtn.onlineBtn {
+        text-align: center;
+        margin: 40px 0 0px 0;
+    }
+    .stepBox.fill_box .writeContent .custodyBtn a {
+        display: none;
     }
 
 
     .mobile-plan-stecla {
-        box-shadow: unset;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
         z-index: 12;
     }
+    .mobile-plan-stecla .plan-box {
+        display: none;
+        width: 100%;
+        background-color: #fff;
+    }
+    .mobile-plan-stecla .plan-box .scroll {
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    .mobile-plan-stecla .plan-box .scroll ul {
+        overflow: hidden;
+    }
+    .mobile-plan-stecla .plan-box .scroll li {
+        overflow: hidden;
+        margin-bottom: 9px;
+        font-size: 15px;
+    }
     .mobile-plan-stecla .plan-box p.title {
+        padding: 9px 0;
+        background-color: #4e5059;
+        font-size: 1em;
+        font-weight: normal;
+        color: #fff;
+        line-height: normal;
+        text-decoration: none;
+        text-align: center;
+        position: relative;
         top: 6px;
     }
     .mobile-plan-stecla a.first {
+        overflow: hidden;
+        background-color: #fff;
+        font-weight: normal;
+        line-height: normal;
+        text-decoration: none;
         padding: 9px 5%;
         display: flex;
         width: 100%;
@@ -1953,12 +2399,20 @@
         padding: 0;
     }
     .mobile-plan-stecla a.first div p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        height: auto;
         line-height: normal;
         font-size: 13px;
     }
     .mobile-plan-stecla a.first i,
     .mobile-plan-stecla a.first i:hover {
-        border-color: #4f6ea2;
+        border: 1px #4f6ea2 solid;
+        position: relative;
         background: #fff !important;
         color: #4f6ea2 !important;
         width: 25%;
@@ -1971,21 +2425,21 @@
         background: #4f6ea2 !important;
         color: #fff !important;
     }
-    .mobile-plan-stecla a.reservation,
-    .mobile-plan-stecla a.ref_btn {
+    .mobile-plan-stecla a.reservation {
+        font-weight: normal;
+        line-height: normal;
+        text-decoration: none;
+        text-align: center;
         font-size: 15px;
         width: 100%;
         padding: 0;
-        background: #fff;
     }
-    .mobile-plan-stecla a.reservation span,
-    .mobile-plan-stecla a.ref_btn span {
+    .mobile-plan-stecla a.reservation span {
         width: 100%;
         border-radius: 0 !important;
         padding: 9px !important;
     }
-    .mobile-plan-stecla a.reservation span i,
-    .mobile-plan-stecla a.ref_btn span i {
+    .mobile-plan-stecla a.reservation span i {
         margin-left: 9px;
     }
     .stepBox.fill_box .writeContent .custodyBtn > span {
@@ -2004,6 +2458,7 @@
     }
     .stepBox.fill_box .appointment_Content {
         padding-top: 9px;
+        background: none;
     }
     .stepBox.fill_box .appointment_detail .appointment_deta {
         background: #f3f3f3;
@@ -2027,13 +2482,28 @@
         opacity: .8;
     }
     .appointment_detail hr {
-        margin: 0
+        display: block;
+        width: 100%;
+        border: none;
+        background: #cacacc;
+        height: 1px;
+        margin: 9px;
     }
     .stepBox.fill_box .priceBox,
     .stepBox.fill_box .instant,
     .stepBox.fill_box .demands {
-        padding: 9px 18px !important;
+        padding: 9px 18px;
         border-top: 1px solid #ddd;
+        margin-top: 0;
+    }
+    .fill_box .mobile-plan-stecla .plan-box .scroll {
+        border: none;
+    }
+    .stepBox.fill_box .priceBox .valuation {
+        margin-bottom: 9px;
+    }
+    .stepBox.fill_box .priceBox .valuation div {
+        float: right;
     }
     .stepBox.fill_box .mobile-plan-stecla .plan-box .scroll li:last-child,
     .stepBox.fill_box .priceBox .valuation:last-child {
@@ -2103,6 +2573,9 @@
         display: flex;
         justify-content: space-between;
     }
+    /*.appointment_detail .deta_content span {
+        float: right;
+    }*/
     .mobile-plan-stecla.mobile .appointment_detail .deta_box .deta_content time {
         max-width: 200px;
         line-height: normal;

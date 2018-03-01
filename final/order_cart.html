@@ -1203,8 +1203,6 @@
 					//取得移除項目的數量
 					innter = $('.detailTable-inner'),
 					detailInnter = parentEls.parent(innter).children('.detailTable-row.detailTable-content');
-					//console.log(detailInnter.length);
-					//console.log(parentEls.length);
 
 					if(detailInnter.length > 1){
 						parentEls.remove();
@@ -1214,26 +1212,20 @@
 						parentEls.parents('.bookList').remove();
 					}
 				});
-
 				//過期商品
 				$('.expired .detailBtn').bind('click',function(event){
 					event.stopPropagation();
-					var detailTable2 = $('.detailTable-row.detailTable-content'),
-					parentEls2 = $(this).parents(detailTable2);
-					innter2 = $('.detailTable-inner'),
-					detailInnter2 = parentEls2.parent(innter2).children('.detailTable-row.detailTable-content');
-					if(detailInnter2.length == 1){
+					if ($('.bookList.expired').length == 0) {
 						$('.noproduct').show();
 						$('.buyContent .title .titTxt a').remove();
-						$('.expired .detailTable').remove();
+						$('.expired').empty();
 					}
 				})
-
 				//清除全部
 				$('.buyContent .title .titTxt a').on('click',function(){
 					$(this).remove();
 					$('.noproduct').show();
-					$('.expired .detailTable').remove();
+					$('.expired').empty();
 				});
 			});
 		</script>

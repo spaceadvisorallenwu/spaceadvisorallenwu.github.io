@@ -296,6 +296,7 @@
     border-top: 0;
 }
 .meeting .anchor .day-plan a.next {
+    display: table;
     margin: 20px auto;
     padding: 0;
     background-color: #fff;
