@@ -332,31 +332,29 @@ main {
     margin-bottom: 9px;
 }
 ._s3 ._content ._item._1 ._c_title ._img {
-    background-image: url(../images/s3/_1.png);
+    background-image: url(../images/s3/1.png);
 }
 ._s3 ._content ._item._1:hover ._c_title ._img {
-    background-image: url(../images/s3/_1h.png);
+    background-image: url(../images/s3/1h.png);
 }
 ._s3 ._content ._item._2 ._c_title ._img {
-    background-image: url(../images/s3/_2.png);
+    background-image: url(../images/s3/2.png);
 }
 ._s3 ._content ._item._2:hover ._c_title ._img {
-    background-image: url(../images/s3/_2h.png);
+    background-image: url(../images/s3/2h.png);
 }
 ._s3 ._content ._item._3 ._c_title ._img {
-    background-image: url(../images/s3/_3.png);
+    background-image: url(../images/s3/3.png);
 }
 ._s3 ._content ._item._3:hover ._c_title ._img {
-    background-image: url(../images/s3/_3h.png);
+    background-image: url(../images/s3/3h.png);
 }
 ._s3 ._content ._item._4 ._c_title ._img {
-    background-image: url(../images/s3/_4.png);
+    background-image: url(../images/s3/4.png);
 }
 ._s3 ._content ._item._4:hover ._c_title ._img {
-    background-image: url(../images/s3/_4h.png);
+    background-image: url(../images/s3/4h.png);
 }
-
-
 ._s3 ._content ._item ._list {
     font-size: 16px;
     line-height: 27px;
